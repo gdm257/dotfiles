@@ -1099,8 +1099,8 @@ tasks:
             # - kanata-tray
             - gdm257/mykeymap-beta
             # - komokana
-            - gdm257/dotenvx
-            - ps-dotenv
+            # - gdm257/dotenvx
+            # - ps-dotenv
             # - psfzf
             - starship
             # - oh-my-posh
