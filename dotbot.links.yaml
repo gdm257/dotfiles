@@ -1,6 +1,7 @@
 - defaults:
     link:
       type: symlink
+      relink: true
       create: true
       glob: true
 - link: {"~/": apps/*}
