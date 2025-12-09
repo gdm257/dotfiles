@@ -12,6 +12,8 @@
 /apps/scoop/persist/doublecmd/settings/tabs.xml
 #!/apps/scoop/persist/mpv.net-dw
 !/apps/scoop/persist/mykeymap-beta
+!/apps/scoop/persist/commandtrayhost
+/apps/scoop/persist/commandtrayhost/*.cache
 /apps/scoop/shims
 /apps/scoop/workspace
 
