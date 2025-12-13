@@ -1,0 +1,56 @@
+# Example dotbot configuration using the age plugin
+# This demonstrates various ways to use dotbot-age
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+# For git clone installation:
+- plugins:
+    - dotbot-age/age.py
+
+# OR for pip installation:
+# - plugins:
+#     - dotbot_age.age
+
+- age:
+    # Simple format - target: source
+    ~/.config/vpn/config: secrets/vpn/config.age
+
+    # Full configuration with all options
+    ~/.ssh/config:
+      source: secrets/ssh-config.age
+      identity: ~/.age/identities/ssh
+      mode: "600"
+
+    # Using recipients instead of identity file
+    ~/.config/myapp/tokens:
+      source: secrets/api-tokens.age
+      recipients:
+        - age1ql3z7hjy54pw3hyww5p5v06xfjpxxjwzkhxj4nt7p8l3j8g8p9dsqypza4p
+
+    # Multiple files with different configurations
+    ~/.config/app1/secrets:
+      source: configs/app1/secrets.age
+      identity: ~/.age/identities/app1
+
+    ~/.config/app2/secrets:
+      source: configs/app2/secrets.age
+      identity: ~/.age/identities/app2
+
+    ~/bin/secure-script:
+      source: scripts/secure-script.age
+      mode: "755"
+
+    # Using custom age binary
+    ~/.local/share/app/secret:
+      source: custom/secret.age
+      binary: /usr/local/bin/age
+
+- link:
+    # Regular dotbot symlinks
+    ~/.vimrc: vimrc
+    ~/.bashrc: bashrc
