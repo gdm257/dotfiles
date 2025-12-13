@@ -1,3 +1,5 @@
+# Dotfiles
+
 ## Common
 ```
 # Windows Activation
@@ -45,3 +47,18 @@ dotbot -v -c ./dotbot.links.yaml
 powershell -c "irm bun.com/install.ps1 | iex" # bun
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex" # uv
 ```
+
+# Command-line cheatsheet
+
+There are many tools to take note for command-line:
+
+- Blog (e.g. Medium, Wordpress, Hexo)
+- Note-taking application (e.g. Notion, Obsidian, VNote)
+- Code snippets (e.g. VSCode snippets, IDEA snippets, GitHub gist)
+- Cheatsheet tool (e.g. navi, cheat, tldr)
+- Task runner (e.g. just, task, make)
+
+After thousands of notes, I realize **task runner** is the best choice for **CLI**. Finally I choose [task](https://taskfile.dev/), a YAML-based task runner, which has excellent cross-platform experience and powerful features.
+
+> [!TIP]
+> It's allowed to write sensitive environment variables to `.local.env` file that taskfile auto reads.
