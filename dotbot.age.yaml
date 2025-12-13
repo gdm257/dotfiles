@@ -4,3 +4,6 @@
     "~/.config/ruler/ruler.toml":
         source: private/ruler.toml.age
         identity: private/key.txt
+    "~/.claude/settings.json":
+        source: private/claude.settings.json.age
+        identity: private/key.txt
