@@ -9,8 +9,7 @@
         repo: https://github.com/kkzzhizhou/scoop-apps
       - name: gdm257
         repo: https://github.com/gdm257/scoop-257
-      - name: SM
+      - name: sm
         repo: https://github.com/okibcn/ScoopMaster
     apps:
-      - uv
-      - bun
+      - mise
