@@ -4,3 +4,10 @@ env_file = ".env"
 npm.bun = true
 pipx.uvx = true
 python.uv_venv_auto = true
+
+[tools]
+bun = "latest"
+task = "latest"
+uv = "latest"
+yazi = "latest"
+zellij = {version="latest", os=["linux", "macos"]}
