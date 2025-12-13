@@ -1,4 +1,5 @@
 - plugins:
+    - dotbot-plugins/dotbot-age/age.py
     - dotbot-plugins/dotbot-apt/apt.py
     - dotbot-plugins/dotbot-crontab/crontab.py
     - dotbot-plugins/dotbot-dnf/dnf.py

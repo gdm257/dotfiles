@@ -1,0 +1,6 @@
+- plugins:
+    - dotbot-plugins/dotbot-age/age.py
+- age:
+    "~/.config/ruler/ruler.toml":
+        source: private/ruler.toml.age
+        identity: private/key.txt

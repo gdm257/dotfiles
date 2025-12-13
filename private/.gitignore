@@ -1,0 +1,7 @@
+age.key
+key.txt
+*
+!.gitignore
+!README.md
+!pubkey.txt
+!*.age
