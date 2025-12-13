@@ -3,5 +3,6 @@
       type: symlink
       create: true
       glob: true
-- link: {force: true, "~/": libraries/*}
-- link: {force: true, "~/": libraries/.*}
+      relink: true
+      force: true
+- link: {"~/": libraries/*}
