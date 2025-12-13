@@ -15,7 +15,7 @@
 	url = https://github.com/zknx/dotbot-winget.git
 [submodule "dotbot-plugins/dotbot-scoop"]
 	path = dotbot-plugins/dotbot-scoop
-	url = https://github.com/JamJar00/dotbot-scoop.git
+	url = https://github.com/gdm257/dotbot-scoop.git
 [submodule "dotbot-plugins/dotbot-golang"]
 	path = dotbot-plugins/dotbot-golang
 	url = https://github.com/delicb/dotbot-golang.git
