@@ -3,6 +3,19 @@
 [git]
 private-commits = '''description(glob:'private:*') | description(glob:'local:*')'''
 
+[snapshot]
+auto-track = '''
+  all()
+  ~ (
+    mise.local.toml
+    | CLAUDE.local.md | .claude/settings.local.json
+    | age.key | key.txt
+  )
+'''
+
+[remotes."origin"]
+auto-track-bookmarks = "glob:*"
+
 [ui]
 show-cryptographic-signatures = true
 editor = "vim"
