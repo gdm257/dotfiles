@@ -1,5 +1,6 @@
 [settings]
 experimental = true
+# npm.package_manager = "bun" # require mise v2025.12.7+
 npm.bun = true
 pipx.uvx = true
 python.uv_venv_auto = true

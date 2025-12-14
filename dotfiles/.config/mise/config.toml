@@ -1,12 +1,14 @@
 [settings]
 experimental = true
 env_file = ".env"
-npm.bun = true
+npm.package_manager = "pnpm" # npm, pnpm, bun (require mise 2025.12.7+)
 pipx.uvx = true
 python.uv_venv_auto = true
 
 [tools]
 bun = "latest"
+node = {version="lts", postinstall="corepack enable"}
+pnpm = "latest"
 uv = "latest"
 "ubi:pkgxdev/pkgx" = "latest"
 "ubi:marwanhawari/stew" = "latest"
@@ -22,7 +24,7 @@ zellij = {version="latest", os=["linux", "macos"]}
 
 "go:github.com/charmbracelet/freeze" = "latest"
 
-"npm:neoss" = "latest"
+"npm:neoss" = {version="latest", os=["linux"]}
 "npm:whistle" = "latest"
 "npm:@devcontainers/cli" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
@@ -30,6 +32,7 @@ zellij = {version="latest", os=["linux", "macos"]}
 "npm:@fission-ai/openspec" = "latest"
 "npm:@intellectronica/ruler" = "latest"
 "npm:openskills" = "latest"
+"npm:happy-coder" = "latest"
 "npm:repomix" = "latest"
 
 "pipx:isd" = {version="latest", os=["linux", "macos"]}
