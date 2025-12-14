@@ -172,9 +172,13 @@ tasks:
             # - trae-cn
             # - trae
             # - cursor
+            # - gdm257/claude-squad
             # - opencode
             # - crush
             # - codex
+            # - gdm257/goose
+            # - gdm257/goose-desktop
+            # - cc-switch
             - vim
             # - vimtutor
             - neovim
