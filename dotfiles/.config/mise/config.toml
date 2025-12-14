@@ -7,7 +7,45 @@ python.uv_venv_auto = true
 
 [tools]
 bun = "latest"
-task = "latest"
 uv = "latest"
+"ubi:pkgxdev/pkgx" = "latest"
+"ubi:marwanhawari/stew" = "latest"
+task = "latest"
 yazi = "latest"
 zellij = {version="latest", os=["linux", "macos"]}
+
+# "dotnet:dotnet-repl" = "latest"
+# "dotnet:Microsoft.dotnet-interactive" = "latest"
+
+"cargo:sd" = "latest"
+"cargo:binsider" = {version="latest", os=["linux", "macos"]}
+
+"go:github.com/charmbracelet/freeze" = "latest"
+
+"npm:neoss" = "latest"
+"npm:whistle" = "latest"
+"npm:@devcontainers/cli" = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@modelcontextprotocol/inspector" = "latest"
+"npm:@fission-ai/openspec" = "latest"
+"npm:@intellectronica/ruler" = "latest"
+"npm:openskills" = "latest"
+"npm:repomix" = "latest"
+
+"pipx:isd" = {version="latest", os=["linux", "macos"]}
+"pipx:git+https://github.com/gdm257/magnetizer.git" = "main"
+"pipx:fonttools" = { version = "latest", extras = "ufo,lxml,woff,unicode" }
+"pipx:rexi" = "latest"
+"pipx:httpie" = "latest"
+"pipx:ssh-audit" = "latest"
+"pipx:p115qrcode" = "latest"
+"pipx:asciinema" = "latest"
+"pipx:gita" = "latest"
+"pipx:git-filter-repo" = "latest"
+"pipx:harlequin" = { version = "latest", extras = "postgres,mysql,bigquery,trino,odbc,s3" }
+"pipx:iredis" = "latest"
+"pipx:marimo" = { version = "latest", extras = "recommended" }
+"pipx:juv" = "latest"
+"pipx:ptpython" = "latest"
+"pipx:code2flow" = "latest"
+"pipx:git+https://github.com/karpathy/rendergit.git" = "master"

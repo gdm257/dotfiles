@@ -1,0 +1,3 @@
+[tools]
+"pipx:radon" = "latest"
+"pipx:datamodel-code-generator" = { version = "latest", extras = "http" }

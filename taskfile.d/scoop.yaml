@@ -234,8 +234,9 @@ tasks:
             # - robo3t
             # - NoSQLBooster-for-MongoDB
             - jj
+            - jjui
             - vizjj
-            # - jjui
+            # - gdm257/gg
             # - lazyjj
             - git
             - bit
