@@ -26,6 +26,7 @@ zellij = {version="latest", os=["linux", "macos"]}
 
 "npm:neoss" = {version="latest", os=["linux"]}
 "npm:whistle" = "latest"
+"npm:jj-stack" = "latest"
 "npm:@devcontainers/cli" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@modelcontextprotocol/inspector" = "latest"
