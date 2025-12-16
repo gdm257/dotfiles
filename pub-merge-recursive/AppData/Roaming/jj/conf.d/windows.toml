@@ -14,7 +14,7 @@ email = "gdm@disroot.org"
 sign-on-push = true
 # Configure signing backend as before, but lazily signing only on push
 [signing]
-behavior = "drop" # drop, keep, own, force
+behavior = "keep" # drop, keep, own, force
 backend = "ssh"
 # key = "~/.ssh/keys.d/gdm257_sign_ed25519.pub"
 key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICXLvOF9mX9N80IjkHimhAQRr+0WIdzwW1IkOQoFB0NK"
