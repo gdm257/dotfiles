@@ -3,16 +3,16 @@
     {
       "enabled": true,
       "name": "MyKeymap",
-      "path": "C:\\home\\default\\scoop\\apps\\mykeymap-beta\\current\\",
+      "path": "C:\\Users\\demo\\scoop\\apps\\mykeymap-beta\\current\\",
       "cmd": "MyKeymap.exe",
-      "working_directory": "C:\\home\\default\\scoop\\apps\\mykeymap-beta\\current",
+      "working_directory": "C:\\Users\\demo\\scoop\\apps\\mykeymap-beta\\current",
       "addition_env_path": "",
       "use_builtin_console": false,
       "is_gui": false
     },
     {
       // 下面8个一个不能少
-      "enabled": false, // 是否当CommandTrayHost启动时，自动开始运行
+      "enabled": true, // 是否当CommandTrayHost启动时，自动开始运行
       "name": "embyToLocalPlayer", // 系统托盘菜单名字
       "path": "C:\\Users\\demo\\scoop\\apps\\EmbyToLocalPlayer\\current\\python_embed", // cmd的exe所在目录,相对路径是可以的，参考目录是CommandTrayHost.exe所在目录
       "cmd": "python.exe embyToLocalPlayer.py", // cmd命令，必须含有.exe
@@ -138,13 +138,8 @@
   "lang": "auto", // zh-CN en-US https://msdn.microsoft.com/en-us/library/cc233982.aspx
   "groups": [
     // groups的值是一个数组，可以有两种类型，一种为数值，一种为object。object代表下级菜单。object必须有name字段
-    {
-      "name": "kcptun", // 分级菜单的名字
-      "groups": [
-        0, // 编号，是configs的编号。数组下标，从0开始
-        1
-      ]
-    },
+    0,
+    1,
     {
       "name": "shadowsocks",
       "groups": [
