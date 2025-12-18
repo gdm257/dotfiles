@@ -31,6 +31,7 @@ zellij = {version="latest", os=["linux", "macos"]}
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@modelcontextprotocol/inspector" = "latest"
 "npm:@fission-ai/openspec" = "latest"
+"npm:cc-sdd" = "latest"
 "npm:@intellectronica/ruler" = "latest"
 "npm:openskills" = "latest"
 "npm:happy-coder" = "latest"
