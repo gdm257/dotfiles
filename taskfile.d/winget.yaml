@@ -43,6 +43,7 @@ tasks:
             # - Canonical.Ubuntu.2204
             # - jtroo.kanata_gui
             # - Xmarmalade.AlistHelper
+            # - Anthropic.Claude
             # - Codeium.Windsurf
             - WEIFENG2333.VideoCaptioner
 
