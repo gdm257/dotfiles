@@ -188,7 +188,7 @@ tasks:
             # - emacs
             - hexyl
             # - lapce
-            - jupyterlab-desktop
+            # - jupyterlab-desktop
             - android-studio
             # - recaf
             # - rstudio
@@ -1102,7 +1102,7 @@ tasks:
             - tealdeer
             # - kanata
             # - kanata-tray
-            - gdm257/mykeymap-beta
+            - gdm257/mykeymap
             # - komokana
             # - gdm257/dotenvx
             # - ps-dotenv
@@ -1251,6 +1251,7 @@ tasks:
             # - ScummVM
             # - xenia
             - LDPlayer-Portable
+            - onscripteryuri
             - onscripter-w
             - onscripter-jh
             - onscripter-ru

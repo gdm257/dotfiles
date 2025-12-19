@@ -3,9 +3,9 @@
     {
       "enabled": true,
       "name": "MyKeymap",
-      "path": "C:\\Users\\demo\\scoop\\apps\\mykeymap-beta\\current\\",
+      "path": "C:\\Users\\demo\\scoop\\apps\\mykeymap\\current\\",
       "cmd": "MyKeymap.exe",
-      "working_directory": "C:\\Users\\demo\\scoop\\apps\\mykeymap-beta\\current",
+      "working_directory": "C:\\Users\\demo\\scoop\\apps\\mykeymap\\current",
       "addition_env_path": "",
       "use_builtin_console": false,
       "is_gui": false

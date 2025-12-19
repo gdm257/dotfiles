@@ -11,6 +11,7 @@
 /apps/scoop/persist/doublecmd/settings/history.xml
 /apps/scoop/persist/doublecmd/settings/tabs.xml
 #!/apps/scoop/persist/mpv.net-dw
+!/apps/scoop/persist/mykeymap
 !/apps/scoop/persist/mykeymap-beta
 !/apps/scoop/persist/commandtrayhost
 /apps/scoop/persist/commandtrayhost/*.cache
@@ -43,6 +44,3 @@
 !.kopiaignore
 
 *.log
-# pixi environments
-.pixi/*
-!.pixi/config.toml
