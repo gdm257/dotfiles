@@ -231,7 +231,7 @@ tasks:
             # - sqlyog-community
             # - falcon-sql-client
             # - beekeeper-studio
-            # - sqlitebrowser
+            - sqlitebrowser
             # - sqlitestudio
             # - sqlite
             # - studio-3t
@@ -239,8 +239,8 @@ tasks:
             # - NoSQLBooster-for-MongoDB
             - jj
             - jjui
-            - vizjj
-            # - gdm257/gg
+            # - vizjj
+            - gdm257/gg
             # - lazyjj
             - git
             - bit
