@@ -1,14 +1,14 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 
 [git]
-private-commits = '''description(glob:'private:*') | description(glob:'local:*')'''
+private-commits = '''description(glob:'private*:*') | description(glob:'local*:*')'''
 
 [snapshot]
 auto-track = '''
   all()
   ~ (
     mise.local.toml
-    | CLAUDE.local.md | .claude/settings.local.json
+    | CLAUDE.local.md | .claude/settings.local.json | .mcp.json
     | age.key | key.txt
   )
 '''

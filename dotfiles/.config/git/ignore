@@ -1,5 +1,6 @@
 mise.local.toml
 CLAUDE.local.md
 **/.claude/settings.local.json
+.mcp.json
 age.key
 key.txt
