@@ -52,5 +52,6 @@ zellij = {version="latest", os=["linux", "macos"]}
 "pipx:marimo" = { version = "latest", extras = "recommended" }
 "pipx:juv" = "latest"
 "pipx:ptpython" = "latest"
+"pipx:skill-seekers" = "latest"
 "pipx:code2flow" = "latest"
 "pipx:git+https://github.com/karpathy/rendergit.git" = "master"

@@ -25,6 +25,7 @@ includes:
   cargo: {taskfile: './taskfile.d/cargo.yaml', optional: true}
   cheatsheet: {taskfile: './taskfile.d/cheatsheet.yaml', optional: true}
   choco: {taskfile: './taskfile.d/choco.yaml', optional: true}
+  claude: {taskfile: './taskfile.d/claude.yaml', optional: true}
   coolify: {taskfile: './taskfile.d/coolify.yaml', optional: true}
   dotnet: {taskfile: './taskfile.d/dotnet.yaml', optional: true}
   git: {taskfile: './taskfile.d/git.yaml', optional: true}

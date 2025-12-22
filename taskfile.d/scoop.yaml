@@ -481,7 +481,8 @@ tasks:
             # - jid
             # - openapi-tui
             # - csview
-            # - jq xq
+            - jq
+            # - xq
             - yq
             # - fq
             # - dasel
@@ -925,7 +926,7 @@ tasks:
             - tcptunnel
             - portforwarder
             # - webhook
-            - trafficmonitor
+            # - trafficmonitor
             - winnfsd
             - gdm257/oauth2l
             - main/oauth2c
@@ -1043,6 +1044,8 @@ tasks:
             # - nssm
             # - activitywatch
             - tai
+            - gdm257/lite-monitor
+            - gdm257/task-explorer
             - memreduct
             - runasdate
             - locale-emulator

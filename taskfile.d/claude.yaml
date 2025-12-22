@@ -1,0 +1,33 @@
+version: '3'
+
+tasks:
+
+  install:
+    platforms: [windows]
+    desc: 'Install app <APP>'
+    requires:
+      vars:
+        - APP
+    cmds:
+      - claude plugin marketplace add {{.APP}}
+
+  marketplace:install:
+    platforms: [windows]
+    internal: true
+    requires:
+      vars:
+        - APPS
+    cmds:
+      - for: {var: APPS, as: APP}
+        task: install
+        vars:
+          APP: '{{.APP}}'
+
+  marketplace:curated-list:
+    platforms: [windows]
+    cmds:
+      - task: marketplace:install
+        vars:
+          APPS:
+            - anthropics/skills
+            - ComposioHQ/awesome-claude-skills

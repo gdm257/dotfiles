@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>586</Left>
-      <Top>134</Top>
+      <Left>638</Left>
+      <Top>178</Top>
       <Width>1105</Width>
       <Height>676</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -619,6 +619,7 @@
     <HotDir Name="mambaforge" Path="C:\Users\demo\mambaforge\envs"/>
     <HotDir Name="micromamba" Path="C:\Users\demo\micromamba\envs"/>
     <HotDir Name="miniconda" Path="C:\Users\demo\miniconda3\envs"/>
+    <HotDir Name="openskills" Path="C:\Users\demo\.agent\skills"/>
     <HotDir Name="pdm" Path="C:\Users\demo\AppData\Local\pdm\pdm"/>
     <HotDir Name="pipx" Path="C:\Users\demo\.local\pipx"/>
     <HotDir Name="pyapp" Path="C:\Users\demo\AppData\Local\pyapp"/>
