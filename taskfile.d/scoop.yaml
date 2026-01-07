@@ -117,6 +117,7 @@ tasks:
             # - openjdk9 openjdk8-redhat openjdk11 openjdk17
             - maven
             - gradle
+            - main/jdtls
             - adb
             # - netbeans-portable
             # - kotlin
@@ -148,6 +149,7 @@ tasks:
             - luajit
             - lua51
             - luarocks
+            - main/lua-language-server
             - haskell
             # - stack
             - go
@@ -173,7 +175,8 @@ tasks:
             # - trae
             # - cursor
             # - gdm257/claude-squad
-            # - opencode
+            - main/claude-code
+            - opencode-desktop
             # - crush
             # - codex
             # - gdm257/goose
@@ -244,6 +247,7 @@ tasks:
             # - lazyjj
             - git
             - bit
+            # - gdm257/worktrunk
             - gitui
             # - gitu
             # - lazygit
@@ -326,6 +330,7 @@ tasks:
             - ariang-native
             - rclone
             - rclone-browser
+            - gdm257/clouddrive2
             # - winfsp-np-beta
             - croc
             # - cwRsync
@@ -436,6 +441,7 @@ tasks:
             # - DriveSnapShot
             # - syncthing
             # - watchexec
+            - watchman
             - kopiaui
             # - mc
             # - cryptomator
@@ -472,8 +478,8 @@ tasks:
             - ugrep
             - ag
             # - ack
-            # - sd
-            - sad
+            - main/sd
+            # - sad
             # - ruplacer
             - bat
             - csvlens
@@ -628,6 +634,7 @@ tasks:
             # - wavetone
             # - xnviewmp
             # - ScreenToGif
+            - venera
             # - tachidesk-server
             - tachidesk-jui
             # - suwayomi-jui
@@ -1158,6 +1165,7 @@ tasks:
             # - hibit-uninstaller-portable
             # - registry-explorer
             - dismplusplus
+            - Bootice_kkzzhizhou
             # - optimizer
             # - sophiapp
             - wpd
@@ -1328,8 +1336,12 @@ tasks:
       - task: install:bulk
         vars:
           APPS:
+            # - uutils-coreutils
             - busybox
-            - uutils-coreutils
+            # - vim
+            - file
+            - curl
+            - wget
             - sysinternals
             # - sysinternals_ScoopInstaller
             # - gaojitools

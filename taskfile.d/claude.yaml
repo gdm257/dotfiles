@@ -29,5 +29,5 @@ tasks:
       - task: marketplace:install
         vars:
           APPS:
-            - anthropics/skills
+            - gdm257/cc-plugins
             - ComposioHQ/awesome-claude-skills

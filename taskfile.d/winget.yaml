@@ -78,14 +78,18 @@ tasks:
             - Microsoft.DotNet.DesktopRuntime.7
             - Microsoft.DotNet.DesktopRuntime.8
             - Microsoft.DotNet.DesktopRuntime.9
+            - Microsoft.DotNet.DesktopRuntime.10
+            - Microsoft.DotNet.AspNetCore.3_1
+            - Microsoft.DotNet.AspNetCore.5
+            - Microsoft.DotNet.AspNetCore.6
+            - Microsoft.DotNet.AspNetCore.7
+            - Microsoft.DotNet.AspNetCore.8
+            - Microsoft.DotNet.AspNetCore.9
+            - Microsoft.DotNet.AspNetCore.10
             # - Microsoft.DotNet.Framework.DeveloperPack_4
             - Microsoft.XNARedist
             # - Microsoft.DirectX
-            # - *Microsoft.DotNet.SDK.3_1*
-            # - Microsoft.DotNet.SDK.5
-            # - *Microsoft.DotNet.SDK.6*
-            # - Microsoft.DotNet.SDK.7
-            # - *Microsoft.DotNet.SDK.8*
+            - Microsoft.DotNet.SDK.10
             # - Microsoft.WindowsSDK
             # - *Microsoft.WindowsApplicationDriver*
             # - *Microsoft.WebDeploy*

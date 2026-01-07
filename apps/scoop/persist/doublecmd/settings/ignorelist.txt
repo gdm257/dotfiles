@@ -3,3 +3,5 @@ System Volume Information
 ntuser.*
 pagefile.sys
 swapfile.sys
+.pnpm-store
+.ventoyignore

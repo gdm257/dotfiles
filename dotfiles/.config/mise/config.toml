@@ -16,22 +16,23 @@ task = "latest"
 yazi = "latest"
 zellij = {version="latest", os=["linux", "macos"]}
 
-# "dotnet:dotnet-repl" = "latest"
-# "dotnet:Microsoft.dotnet-interactive" = "latest"
+"dotnet:dotnet-repl" = "latest"
+"dotnet:Microsoft.dotnet-interactive" = "latest"
+"dotnet:csharp-ls" = "latest"
 
-"cargo:sd" = "latest"
 "cargo:binsider" = {version="latest", os=["linux", "macos"]}
 
 "go:github.com/charmbracelet/freeze" = "latest"
+"go:golang.org/x/tools/gopls" = "v0.21.0"
 
 "npm:neoss" = {version="latest", os=["linux"]}
 "npm:whistle" = "latest"
 "npm:jj-stack" = "latest"
 "npm:@devcontainers/cli" = "latest"
-"npm:@anthropic-ai/claude-code" = "latest"
+# "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@modelcontextprotocol/inspector" = "latest"
-"npm:@fission-ai/openspec" = "latest"
-"npm:cc-sdd" = "latest"
+# "npm:cc-sdd" = "latest"
+"npm:@gdm257/cc-sdd" = "latest"
 "npm:@intellectronica/ruler" = "latest"
 "npm:openskills" = "latest"
 "npm:happy-coder" = "latest"
