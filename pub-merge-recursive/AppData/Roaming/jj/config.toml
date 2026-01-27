@@ -4,6 +4,7 @@
 private-commits = '''description(glob:'private*:*') | description(glob:'local*:*')'''
 
 [snapshot]
+auto-update-stale = true
 auto-track = '''
   all()
   ~ (
@@ -15,6 +16,10 @@ auto-track = '''
 
 [remotes."origin"]
 auto-track-bookmarks = "glob:*"
+
+# [fsmonitor]
+# backend = "watchman" # it may slow down jj command
+# watchman.register-snapshot-trigger = true # watchman installation required
 
 [ui]
 show-cryptographic-signatures = true
