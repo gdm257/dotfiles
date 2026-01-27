@@ -21,6 +21,16 @@
       "is_gui": false
     },
     {
+      "enabled": true,
+      "name": "OpenCode",
+      "path": "C:\\Users\\demo\\scoop\\shims\\",
+      "cmd": "opencode.exe serve --log-level INFO --port 4096",
+      "working_directory": "C:\\Users\\demo\\scoop\\apps\\opencode-desktop\\current",
+      "addition_env_path": "",
+      "use_builtin_console": false,
+      "is_gui": false
+    },
+    {
       // 下面8个一个不能少
       "enabled": true, // 是否当CommandTrayHost启动时，自动开始运行
       "name": "embyToLocalPlayer", // 系统托盘菜单名字
@@ -164,7 +174,7 @@
       "name": "empty test" // 可以没有groups，但是不能没有name
     }
   ],
-  "enable_groups": true, // 启用分组菜单
+  "enable_groups": false, // 启用分组菜单
   "groups_menu_symbol": "+", // 分组菜单标志
   "left_click": [0, 1], // 左键单击显示/隐藏程序 configs序号，从0开始. 空数组或者注释掉，则显示CommandTrayHost本体
   "enable_cache": true, // 启用cache
