@@ -31,3 +31,5 @@ tasks:
           APPS:
             - gdm257/cc-plugins
             - ComposioHQ/awesome-claude-skills
+            - VoltAgent/awesome-claude-code-subagents
+            - wshobson/agents

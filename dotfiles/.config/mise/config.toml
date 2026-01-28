@@ -8,6 +8,7 @@ python.uv_venv_auto = true
 [tools]
 bun = "latest"
 node = {version="lts", postinstall="corepack enable"}
+dart = "latest"
 pnpm = "latest"
 uv = "latest"
 "ubi:pkgxdev/pkgx" = "latest"
@@ -53,6 +54,7 @@ zellij = {version="latest", os=["linux", "macos"]}
 "pipx:marimo" = { version = "latest", extras = "recommended" }
 "pipx:juv" = "latest"
 "pipx:ptpython" = "latest"
+"pipx:pyright" = "latest"
 "pipx:skill-seekers" = "latest"
 "pipx:code2flow" = "latest"
 "pipx:git+https://github.com/karpathy/rendergit.git" = "master"

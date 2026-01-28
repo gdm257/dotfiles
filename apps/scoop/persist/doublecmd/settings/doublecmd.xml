@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>638</Left>
-      <Top>178</Top>
+      <Left>609</Left>
+      <Top>305</Top>
       <Width>1105</Width>
       <Height>676</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -259,7 +259,7 @@
     </Editor>
     <Viewer>
       <Name>Courier New</Name>
-      <Size>12</Size>
+      <Size>13</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Viewer>
@@ -739,12 +739,14 @@
     <HotDir Name="Mica For Everyone" Path="C:\Users\demo\AppData\Local\Mica For Everyone"/>
     <HotDir Name="navi" Path="C:\Users\demo\AppData\Roaming\navi"/>
     <HotDir Name="opencode" Path="C:\Users\demo\.config\opencode"/>
+    <HotDir Name="opencode-workspaces" Path="C:\Users\demo\.local\share\opencode\worktree"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\Documents\PowerShell"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\AppData\Roaming\Microsoft\Windows\PowerShell"/>
     <HotDir Name="PowerShell History" Path="C:\Users\demo\AppData\Roaming\Microsoft\Windows\PowerShell"/>
     <HotDir Name="qwen code" Path="C:\Users\demo\.qwen"/>
     <HotDir Name="rubick" Path="C:\Users\demo\AppData\Roaming\rubick"/>
     <HotDir Name="RustDesk" Path="C:\Users\demo\AppData\Roaming\RustDesk"/>
+    <HotDir Name="Services" Path="C:\Users\demo\scoop\apps\commandtrayhost\current"/>
     <HotDir Name="ssh" Path="C:\Users\demo\.ssh"/>
     <HotDir Name="SSH Keys" Path="C:\Users\demo\Documents\OpenSSH\keys.d"/>
     <HotDir Name="starship" Path="C:\Users\demo\.config"/>
