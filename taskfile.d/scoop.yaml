@@ -257,6 +257,8 @@ tasks:
             # - gitbutler
             # - git-town
             # - git-sync
+            # - gdm257/gitea-mirror
+            - gickup
             - git-lfs
             - lfs-dal
             - git-credential-manager

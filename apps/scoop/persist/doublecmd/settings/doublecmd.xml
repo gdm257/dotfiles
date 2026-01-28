@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>609</Left>
-      <Top>305</Top>
+      <Left>562</Left>
+      <Top>190</Top>
       <Width>1105</Width>
       <Height>676</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -628,7 +628,7 @@
     <HotDir Name="Qt Designer" Path="C:\Users\demo\.designer"/>
     <HotDir Name="rancher-desktop" Path="C:\Users\demo\AppData\Local\rancher-desktop"/>
     <HotDir Name="ruler" Path="C:\Users\demo\.config\ruler"/>
-    <HotDir Name="repos" Path="C:\Users\demo\Documents\repos\git"/>
+    <HotDir Name="repos" Path="C:\Users\demo\codebase"/>
     <HotDir Name="scoop" Path="C:\Users\demo\scoop"/>
     <HotDir Name="stack" Path="C:\sr"/>
     <HotDir Name="Taskfile.d" Path="C:\Users\demo\Documents\repos\Iac"/>
@@ -639,8 +639,10 @@
     <HotDir Name="xpipe" Path="C:\Users\demo\.xpipe"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Download" Path=""/>
+    <HotDir Name="123pan" Path="C:\Users\demo\AppData\Roaming\123pan"/>
     <HotDir Name="archived" Path="C:\Users\demo\.local\state\archived"/>
     <HotDir Name="alist-helper" Path="C:\Users\demo\AppData\Roaming\dev.xmarmalade.alisthelper"/>
+    <HotDir Name="CloudDrive2" Path="C:\Users\demo\Waytech\CloudDrive2"/>
     <HotDir Name="choco" Path="C:\ProgramData\chocolatey\lib"/>
     <HotDir Name="Flexget" Path="C:\Users\demo\.flexget"/>
     <HotDir Name="OpenList Desktop" Path="C:\Users\demo\AppData\Roaming\OpenList Desktop"/>
@@ -722,6 +724,7 @@
     <HotDir Name="Billfish" Path="C:\Users\demo\AppData\Roaming\Billfish"/>
     <HotDir Name="白描" Path="C:\Users\demo\AppData\Roaming\com.uzero.baimiaowin"/>
     <HotDir Name="krita" Path="C:\Users\demo\AppData\Roaming\krita"/>
+    <HotDir Name="venera" Path="C:\Users\demo\AppData\Roaming\com.github.wgh136\venera"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Shell" Path=""/>
     <HotDir Name="clink" Path="C:\Users\demo\AppData\Local\clink"/>
@@ -740,6 +743,7 @@
     <HotDir Name="navi" Path="C:\Users\demo\AppData\Roaming\navi"/>
     <HotDir Name="opencode" Path="C:\Users\demo\.config\opencode"/>
     <HotDir Name="opencode-workspaces" Path="C:\Users\demo\.local\share\opencode\worktree"/>
+    <HotDir Name="opencode.desktop" Path="C:\Users\demo\AppData\Roaming\ai.opencode.desktop"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\Documents\PowerShell"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\AppData\Roaming\Microsoft\Windows\PowerShell"/>
     <HotDir Name="PowerShell History" Path="C:\Users\demo\AppData\Roaming\Microsoft\Windows\PowerShell"/>
