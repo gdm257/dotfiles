@@ -374,6 +374,9 @@
       "mypy *": "allow",
       "pytest": "allow",
       "pytest *": "allow",
+      "vitest *": "allow",
+      "bunx vitest *": "allow",
+      "npx vitest *": "allow",
       "go test*": "allow",
       // allow builds
       "go build*": "allow",
