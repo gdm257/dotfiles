@@ -1,9 +1,21 @@
 - plugins:
     - dotbot-plugins/dotbot-age/age.py
 - age:
+    "~/.config/git-sync/config.yaml":
+        source: private/git-sync.yaml.age
+        identity: private/key.txt
     "~/.config/ruler/ruler.toml":
         source: private/ruler.toml.age
         identity: private/key.txt
     "~/.claude/settings.json":
         source: private/claude.settings.json.age
+        identity: private/key.txt
+    "private/gickup-public.yaml":
+        source: private/gickup-public.yaml.age
+        identity: private/key.txt
+    "private/gickup-private.yaml":
+        source: private/gickup-private.yaml.age
+        identity: private/key.txt
+    "private/gickup-stars.yaml":
+        source: private/gickup-stars.yaml.age
         identity: private/key.txt
