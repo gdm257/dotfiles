@@ -21,7 +21,7 @@
       "is_gui": false
     },
     {
-      "enabled": true,
+      "enabled": false,
       "name": "OpenCode",
       "path": "C:\\Users\\demo\\scoop\\shims\\",
       "cmd": "opencode.exe serve --log-level INFO --port 4096",
