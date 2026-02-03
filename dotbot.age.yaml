@@ -10,6 +10,9 @@
     "~/.claude/settings.json":
         source: private/claude.settings.json.age
         identity: private/key.txt
+    "~/.wakatime.cfg":
+        source: private/.wakatime.cfg.age
+        identity: private/key.txt
     "private/gickup-public.yaml":
         source: private/gickup-public.yaml.age
         identity: private/key.txt
