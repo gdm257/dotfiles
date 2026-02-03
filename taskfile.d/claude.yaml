@@ -30,6 +30,23 @@ tasks:
         vars:
           APPS:
             - gdm257/cc-plugins
+            - anthropics/claude-plugins-official
             - ComposioHQ/awesome-claude-skills
             - VoltAgent/awesome-claude-code-subagents
             - wshobson/agents
+            - antfu/skills
+            - vercel-labs/skills
+            - vercel-labs/agent-skills
+            - softaworks/agent-toolkit
+            - jeffallan/claude-skills
+            - supabase/agent-skills
+            - expo/skills
+            - hyf0/vue-skills
+            - vercel-labs/next-skills
+            - cloudai-x/threejs-skills
+            - adithya-s-k/manim_skill
+            - remotion-dev/skills
+            - slidevjs/slidev
+            - better-auth/skills
+            - resend/resend-skills
+            - browser-use/browser-use

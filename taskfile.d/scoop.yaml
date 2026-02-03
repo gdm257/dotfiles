@@ -166,6 +166,9 @@ tasks:
             - AutoHotkey2-Portable
             - openmodelica
             - scilab
+            - opencode-desktop
+            - gdm257/opencode-worktree
+            # - gdm257/ocx
             # - idea-portable
             # - imhex
             - vscode
@@ -176,7 +179,6 @@ tasks:
             # - cursor
             # - gdm257/claude-squad
             - main/claude-code
-            - opencode-desktop
             # - crush
             # - codex
             # - gdm257/goose
@@ -533,13 +535,13 @@ tasks:
             - zeal
             # - zed
             # - zed-opengl
-            - notepad4
+            # - notepad4
             # - notepad--
             # - notepadnext
             # - notepadplusplus
             # - islide
             # - vscode-portable
-            # - emeditor
+            - emeditor
             # - sublime-text
             # - notepad2-mod
             # - notepad3

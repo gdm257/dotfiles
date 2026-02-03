@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>562</Left>
-      <Top>190</Top>
+      <Left>265</Left>
+      <Top>182</Top>
       <Width>1105</Width>
       <Height>676</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -744,6 +744,7 @@
     <HotDir Name="opencode" Path="C:\Users\demo\.config\opencode"/>
     <HotDir Name="opencode-workspaces" Path="C:\Users\demo\.local\share\opencode\worktree"/>
     <HotDir Name="opencode.desktop" Path="C:\Users\demo\AppData\Roaming\ai.opencode.desktop"/>
+    <HotDir Name="opencode-cache" Path="C:\Users\demo\.cache\opencode"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\Documents\PowerShell"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\AppData\Roaming\Microsoft\Windows\PowerShell"/>
     <HotDir Name="PowerShell History" Path="C:\Users\demo\AppData\Roaming\Microsoft\Windows\PowerShell"/>
