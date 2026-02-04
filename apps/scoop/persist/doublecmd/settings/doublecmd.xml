@@ -603,6 +603,7 @@
     <HotDir Name="continue" Path="C:\Users\demo\.continue"/>
     <HotDir Name="conda" Path="C:\Users\demo\.conda"/>
     <HotDir Name="conda" Path="C:\Users\demo\AppData\Local\conda\conda"/>
+    <HotDir Name="codebase" Path="C:\Users\demo\codebase"/>
     <HotDir Name="Git Credential Manager" Path="C:\Users\demo\AppData\Local\Microsoft\Credentials"/>
     <HotDir Name="git-sync" Path="C:\Users\demo\git-backups"/>
     <HotDir Name="hatch" Path="C:\Users\demo\AppData\Local\hatch"/>
