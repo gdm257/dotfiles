@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>265</Left>
-      <Top>182</Top>
+      <Left>558</Left>
+      <Top>332</Top>
       <Width>1105</Width>
       <Height>676</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -597,6 +597,7 @@
     <HotDir Name="彼女と俺と恋人と。" Path="C:\Users\demo\Saved Games\WillPlus\彼女と俺と恋人と。"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-DevOps" Path=""/>
+    <HotDir Name="bun" Path="C:\Users\demo\.bun"/>
     <HotDir Name="chat2db" Path="C:\Users\demo\AppData\Roaming\chat2db"/>
     <HotDir Name="chat2db" Path="C:\Users\demo\.chat2db"/>
     <HotDir Name="cline" Path="C:\Users\demo\.cline"/>
@@ -604,6 +605,7 @@
     <HotDir Name="conda" Path="C:\Users\demo\.conda"/>
     <HotDir Name="conda" Path="C:\Users\demo\AppData\Local\conda\conda"/>
     <HotDir Name="codebase" Path="C:\Users\demo\codebase"/>
+    <HotDir Name="crawl4ai" Path="C:\Users\demo\.crawl4ai"/>
     <HotDir Name="Git Credential Manager" Path="C:\Users\demo\AppData\Local\Microsoft\Credentials"/>
     <HotDir Name="git-sync" Path="C:\Users\demo\git-backups"/>
     <HotDir Name="hatch" Path="C:\Users\demo\AppData\Local\hatch"/>
@@ -675,6 +677,7 @@
     <HotDir Name="Robo 3T" Path="C:\Users\demo\.3T"/>
     <HotDir Name="Redisinsight" Path="C:\Users\demo\.redisinsight-preview"/>
     <HotDir Name="sshd" Path="C:\ProgramData\ssh"/>
+    <HotDir Name="Whistle-client" Path="C:\Users\demo\AppData\Roaming\Whistle"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Audio" Path=""/>
     <HotDir Name="AIMP Internal Playlists" Path="C:\Users\demo\scoop\apps\aimp\current\Profile\PLS"/>
@@ -694,8 +697,8 @@
     <HotDir Name="-Text" Path=""/>
     <HotDir Name="anytype" Path="C:\Users\demo\AppData\Roaming\anytype"/>
     <HotDir Name="AppFlowy" Path="C:\Users\demo\AppData\Roaming\io.appflowy\AppFlowy"/>
-    <HotDir Name="Doom Emacs" Path="C:\Users\demo\.emacs.d"/>
-    <HotDir Name="Emacs" Path="C:\Users\demo\.emacs.d"/>
+    <HotDir Name="Doom Emacs" Path="C:\Users\demo\AppData\Roaming\.doom.d"/>
+    <HotDir Name="Emacs" Path="C:\Users\demo\AppData\Roaming\.emacs.d"/>
     <HotDir Name="espanso" Path="C:\Users\demo\AppData\Roaming\espanso"/>
     <HotDir Name="eudic" Path="C:\Users\demo\AppData\Roaming\Francochinois\eudic"/>
     <HotDir Name="Fonts" Path="C:\Users\demo\AppData\Local\Microsoft\Windows\Fonts"/>
@@ -743,8 +746,9 @@
     <HotDir Name="Mica For Everyone" Path="C:\Users\demo\AppData\Local\Mica For Everyone"/>
     <HotDir Name="navi" Path="C:\Users\demo\AppData\Roaming\navi"/>
     <HotDir Name="opencode" Path="C:\Users\demo\.config\opencode"/>
-    <HotDir Name="opencode-workspaces" Path="C:\Users\demo\.local\share\opencode\worktree"/>
+    <HotDir Name="opencode-state" Path="C:\Users\demo\.local\share\opencode"/>
     <HotDir Name="opencode.desktop" Path="C:\Users\demo\AppData\Roaming\ai.opencode.desktop"/>
+    <HotDir Name="chrome-devtools-mcp-userdata" Path="C:\Users\demo\.cache\chrome-devtools-mcp"/>
     <HotDir Name="opencode-cache" Path="C:\Users\demo\.cache\opencode"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\Documents\PowerShell"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\AppData\Roaming\Microsoft\Windows\PowerShell"/>

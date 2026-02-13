@@ -31,6 +31,7 @@ tasks:
           APPS:
             - gdm257/cc-plugins
             - anthropics/claude-plugins-official
+            - zhangyanxs/repo2skill
             - ComposioHQ/awesome-claude-skills
             - VoltAgent/awesome-claude-code-subagents
             - wshobson/agents

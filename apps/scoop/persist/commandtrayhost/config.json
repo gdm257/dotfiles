@@ -2,20 +2,20 @@
   "configs": [
     {
       "enabled": true,
-      "name": "MyKeymap",
-      "path": "C:\\Users\\demo\\scoop\\apps\\mykeymap\\current\\",
-      "cmd": "MyKeymap.exe",
-      "working_directory": "C:\\Users\\demo\\scoop\\apps\\mykeymap\\current",
+      "name": "CloudDrive2",
+      "path": "C:\\Users\\demo\\scoop\\apps\\clouddrive2\\current\\",
+      "cmd": "clouddrive.exe",
+      "working_directory": "C:\\Users\\demo\\scoop\\apps\\clouddrive2\\current",
       "addition_env_path": "",
       "use_builtin_console": false,
       "is_gui": false
     },
     {
-      "enabled": true,
-      "name": "CloudDrive2",
-      "path": "C:\\Users\\demo\\scoop\\apps\\clouddrive2\\current\\",
-      "cmd": "clouddrive.exe",
-      "working_directory": "C:\\Users\\demo\\scoop\\apps\\clouddrive2\\current",
+      "enabled": false,
+      "name": "Emacs",
+      "path": "C:\\Users\\demo\\scoop\\shims\\",
+      "cmd": "emacs.exe --daemon",
+      "working_directory": "C:\\Users\\demo\\scoop\\apps\\emacs\\current",
       "addition_env_path": "",
       "use_builtin_console": false,
       "is_gui": false
@@ -72,6 +72,16 @@
       "kill_timeout": 200, // 执行关闭操作时，先尝试通知程序自己关闭然后等多少ms，然后再杀进程，默认是200ms
       "exclusion_id": 1, // 互斥id，要求是大于0的整数。相同的互斥id启动时，会先杀掉其他
       "kill_process_tree": false // 杀进程的时候同时杀掉其子进程，用于nginx. 为true时,kill_timeout无效
+    },
+    {
+      "enabled": true,
+      "name": "MyKeymap",
+      "path": "C:\\Users\\demo\\scoop\\apps\\mykeymap\\current\\",
+      "cmd": "MyKeymap.exe",
+      "working_directory": "C:\\Users\\demo\\scoop\\apps\\mykeymap\\current",
+      "addition_env_path": "",
+      "use_builtin_console": false,
+      "is_gui": false
     },
     {
       "name": "kcptun 1081 8.8.8.1:12346",

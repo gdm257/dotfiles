@@ -23,37 +23,21 @@ zellij = {version="latest", os=["linux", "macos"]}
 
 "cargo:binsider" = {version="latest", os=["linux", "macos"]}
 
-"go:github.com/charmbracelet/freeze" = "latest"
 "go:golang.org/x/tools/gopls" = "v0.21.0"
 
 "npm:neoss" = {version="latest", os=["linux"]}
-"npm:whistle" = "latest"
 "npm:jj-stack" = "latest"
-"npm:@devcontainers/cli" = "latest"
-# "npm:@anthropic-ai/claude-code" = "latest"
-"npm:@modelcontextprotocol/inspector" = "latest"
 "npm:cc-sdd" = "latest"
 "npm:@intellectronica/ruler" = "latest"
-"npm:openskills" = "latest"
-"npm:happy-coder" = "latest"
-"npm:repomix" = "latest"
+# "npm:openskills" = "latest"
+"npm:@gdm257/openskills" = "latest"
+"npm:@modelcontextprotocol/inspector" = "latest"
 
 "pipx:isd" = {version="latest", os=["linux", "macos"]}
 "pipx:git+https://github.com/gdm257/magnetizer.git" = "main"
 "pipx:fonttools" = { version = "latest", extras = "ufo,lxml,woff,unicode" }
-"pipx:rexi" = "latest"
 "pipx:httpie" = "latest"
-"pipx:ssh-audit" = "latest"
 "pipx:p115qrcode" = "latest"
-"pipx:asciinema" = "latest"
-"pipx:gita" = "latest"
-"pipx:git-filter-repo" = "latest"
-"pipx:harlequin" = { version = "latest", extras = "postgres,mysql,bigquery,trino,odbc,s3" }
-"pipx:iredis" = "latest"
 "pipx:marimo" = { version = "latest", extras = "recommended" }
-"pipx:juv" = "latest"
 "pipx:ptpython" = "latest"
 "pipx:pyright" = "latest"
-"pipx:skill-seekers" = "latest"
-"pipx:code2flow" = "latest"
-"pipx:git+https://github.com/karpathy/rendergit.git" = "master"

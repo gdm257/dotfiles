@@ -6,13 +6,9 @@
   },
   "keybinds": {
     "leader": "ctrl+x",
-    // "input_submit": "shift+enter,ctrl+enter",
-    // "input_newline": "enter,ctrl+j",
-    // "input_clear": "ctrl+c",
-    // "messages_page_up": "pgup,alt+s",
-    // "messages_page_down": "pgdown,alt+f",
-    // "messages_half_page_up": "ctrl+alt+u,alt+e",
-    // "messages_half_page_down": "ctrl+alt+d,alt+d",
+    "input_submit": "enter",
+    "input_clear": "ctrl+q",
+    "input_newline": "shift+return,ctrl+return,alt+return,ctrl+j",
   },
   "autoupdate": true,
   "watcher": {
@@ -23,36 +19,13 @@
       ".jj/**",
     ]
   },
-  "disabled_providers": ["openai"],
+  "compaction": {
+    "auto": true,
+    "prune": true,
+  },
+  "small_model": "ark/kimi-k2.5",
+  "disabled_providers": ["anthropic", "openai", "opencode"],
   "provider": {
-    // "aichat": {
-    //   "npm": "@ai-sdk/openai-compatible",
-    //   "name": "aichat",
-    //   "options": {
-    //     "baseURL": "http://localhost:8000/v1",
-    //   },
-    //   "models": {
-    //     "default": {
-    //       "name": "default",
-    //       "reasoning": true,
-    //     },
-    //     "cherryin:x-ai/grok-code-fast-1": {
-    //       "name": "grok-code-fast-1",
-    //     },
-    //   },
-    // },
-    // "cherry-studio": {
-    //   "npm": "@ai-sdk/openai-compatible",
-    //   "name": "Cherry Studio",
-    //   "options": {
-    //     "baseURL": "http://localhost:23333/v1",
-    //   },
-    //   "models": {
-    //     "ppio:qwen/qwen3-30b-a3b-fp8": {
-    //       "name": "qwen3-30b",
-    //     },
-    //   },
-    // },
     "ark": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "ark",
@@ -62,9 +35,16 @@
       "models": {
         "ark-code-latest": {
           "name": "auto",
+          "options": {
+            "thinking": {"type": "enabled"}, // If model supports thinking, it must output thinking
+          },
         },
         "deepseek-v3.2": {
           "name": "deepseek-v3.2",
+          "limit": {
+            "context": 99000,
+            "output": 32000,
+          },
         },
         "doubao-seed-code": {
           "name": "doubao-seed-code",
@@ -77,12 +57,32 @@
         },
         "kimi-k2-thinking": {
           "name": "kimi-k2-thinking",
-          "options": {
-            "thinking": {"type": "enabled"},
+        },
+      },
+    },
+    "zhipuai-coding-plan": {
+      "models": {
+        "glm-5": {
+          "name": "GLM-5",
+          "limit": {
+            "context": 199000,
+            "output": 128000,
           },
         },
       },
     },
+    // "cherry-studio": {
+    //   "npm": "@ai-sdk/openai-compatible",
+    //   "name": "Cherry Studio",
+    //   "options": {
+    //     "baseURL": "http://localhost:23333/v1",
+    //   },
+    //   "models": {
+    //     "ppio:qwen/qwen3-30b-a3b-fp8": {
+    //       "name": "qwen3-30b",
+    //     },
+    //   },
+    // },
   },
   "instructions": [
     ".kiro/steering/*.md",
@@ -107,9 +107,10 @@
   "plugin": [
     // lock version to speedup boot
     // "@franlol/opencode-md-table-formatter@0.0.3",
-    "@tarquinen/opencode-dcp@1.2.8",
     "opencode-add-dir@1.1.0",
     "opencode-wakatime@1.1.1", // ~/.wakatime.cfg
+    "@tarquinen/opencode-dcp@1.2.8",
+    // "@zenobius/opencode-skillful",
     // "jj-opencode@0.2.0",
   ],
   "agent": {},
@@ -157,6 +158,11 @@
       // allow rm
       "rmdir *": "allow",
       "mv *": "allow",
+      // allow shell
+      "sleep *": "allow",
+      "timeout *": "allow",
+      "true": "allow",
+      "false": "allow",
       // allow search
       "go doc *": "allow",
       "pydoc *": "allow",
@@ -186,8 +192,6 @@
       "date": "allow",
       "date *": "allow",
       // allow list
-      "sleep *": "allow",
-      "timeout *": "allow",
       "which *": "allow",
       "where *": "allow",
       "cd *": "allow",
@@ -226,6 +230,16 @@
       "tail *": "allow",
       "wc": "allow",
       "wc *": "allow",
+      "base64": "allow",
+      "base64 *": "allow",
+      "md5sum": "allow",
+      "md5sum *": "allow",
+      "sha1sum": "allow",
+      "sha1sum *": "allow",
+      "sha256sum": "allow",
+      "sha256sum *": "allow",
+      "sha512sum": "allow",
+      "sha512sum *": "allow",
       "mediainfo *": "allow",
       // allow creation
       "mkdir *": "allow",
@@ -234,8 +248,12 @@
       "cp *": "allow",
       "mv *": "allow",
       "echo *": "allow",
+      "atac": "allow",
       "atac *": "allow",
+      "sort": "allow",
       "sort *": "allow",
+      "uniq": "allow",
+      "uniq *": "allow",
       "tr *": "allow",
       "sed *": "allow",
       "sd *": "allow",
@@ -261,6 +279,7 @@
       "7z *": "allow",
       "unzip *": "allow",
       // allow vcs
+      "git *": "allow",
       "git diff*": "allow",
       "git diff*": "allow",
       "git log*": "allow",
@@ -277,6 +296,8 @@
       "git fetch*": "allow",
       "git cherry-pick *": "allow",
       "git worktree list*": "allow",
+      "git clone *": "allow",
+      "jj *": "allow",
       "jj --help": "allow",
       "jj * --help": "allow",
       "jj help*": "allow",

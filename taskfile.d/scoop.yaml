@@ -118,10 +118,12 @@ tasks:
             - maven
             - gradle
             - main/jdtls
+            - main/android-clt
             - adb
             # - netbeans-portable
             # - kotlin
             - apktool
+            - flutter
             - nuget
             - ilspy
             # - dnspy
@@ -167,8 +169,9 @@ tasks:
             - openmodelica
             - scilab
             - opencode-desktop
-            - gdm257/opencode-worktree
+            # - gdm257/opencode-worktree
             # - gdm257/ocx
+            # - gdm257/skillshare
             # - idea-portable
             # - imhex
             - vscode
@@ -177,13 +180,13 @@ tasks:
             # - trae-cn
             # - trae
             # - cursor
-            # - gdm257/claude-squad
             - main/claude-code
             # - crush
             # - codex
             # - gdm257/goose
             # - gdm257/goose-desktop
             # - cc-switch
+            # - gdm257/claude-squad
             - vim
             # - vimtutor
             - neovim
@@ -615,6 +618,7 @@ tasks:
             - Krita-Portable
             # - inkscape
             - pixieditor
+            - lunacy
             - qgis
             - geogebra
             - umbrello
@@ -887,7 +891,7 @@ tasks:
             # - ipscan
             # - shadowsocks-uri-generator
             # - quicksetdns
-            - DNSControlCLI-Portable
+            # - DNSControlCLI-Portable
             # - apache
             # - nginx
             # - caddy
@@ -928,6 +932,7 @@ tasks:
             # - keploy
             - postman
             # - hoppscotch
+            - gdm257/whistle
             - wireshark
             # - termshark
             # - fiddler
@@ -965,8 +970,8 @@ tasks:
             # - brave-beta
             - tor-browser
             # - HackBrowserData
-            - geckodriver
-            - chromedriver
+            # - geckodriver
+            # - chromedriver
             # - DataGrip-portable@2020.1.5-201.8538.4
             # - sqlitestudio
             # - sftpgo
