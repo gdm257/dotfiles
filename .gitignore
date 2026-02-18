@@ -32,6 +32,8 @@
 /pub-merge-recursive/AppData/Local/*
 /pub-merge-recursive/AppData/LocalLow/*
 /pub-merge-recursive/AppData/Roaming/*
+!/pub-merge-recursive/AppData/Roaming/.emacs.d
+!/pub-merge-recursive/AppData/Roaming/.doom.d
 !/pub-merge-recursive/AppData/Roaming/jj
 
 /state/*
