@@ -8,8 +8,10 @@ auto-update-stale = true
 auto-track = '''
   all()
   ~ (
-    mise.local.toml
-    | CLAUDE.local.md | .claude/settings.local.json | .mcp.json
+    *.local.*
+    | root-glob:"*.bak" | root-glob:".*/*.bak"
+    | root-glob:"opencode.json"
+    | CLAUDE.local.md | root-glob:".claude/settings.local.json" | root-glob:".mcp.json"
     | age.key | key.txt
   )
 '''

@@ -1,6 +1,9 @@
-mise.local.toml
+*.local.*
+/*.bak
+/.*/*.bak
+/opencode.json
 CLAUDE.local.md
-**/.claude/settings.local.json
-.mcp.json
+/.claude/settings.local.json
+/.mcp.json
 age.key
 key.txt
