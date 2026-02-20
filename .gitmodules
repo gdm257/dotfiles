@@ -1,8 +1,8 @@
-[submodule "dotfiles/.doom.d"]
-	path = dotfiles/.doom.d
+[submodule "pub-merge-recursive/AppData/Roaming/.doom.d"]
+	path = pub-merge-recursive/AppData/Roaming/.doom.d
 	url = https://github.com/gdm257/doom-emacs-config.git
-[submodule "dotfiles/.emacs.d"]
-	path = dotfiles/.emacs.d
+[submodule "pub-merge-recursive/AppData/Roaming/.emacs.d"]
+	path = pub-merge-recursive/AppData/Roaming/.emacs.d
 	url = https://github.com/hlissner/doom-emacs.git
 [submodule "dotfiles/vimfiles"]
 	path = dotfiles/vimfiles
