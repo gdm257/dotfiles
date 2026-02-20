@@ -1,5 +1,8 @@
 *.local.*
 .lazy.lua
+.nvim.lua
+.nvimrc
+.exrc
 /*.bak
 /.*/*.bak
 /opencode.json

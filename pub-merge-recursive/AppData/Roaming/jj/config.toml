@@ -10,6 +10,7 @@ auto-track = '''
   ~ (
     *.local.*
     | .lazy.lua
+    | .nvim.lua | .nvimrc | .exrc
     | root-glob:"*.bak" | root-glob:".*/*.bak"
     | root-glob:"opencode.json"
     | CLAUDE.local.md | root-glob:".claude/settings.local.json" | root-glob:".mcp.json"
