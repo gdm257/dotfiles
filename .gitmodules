@@ -46,3 +46,6 @@
 [submodule "dotbot-plugins/dotbot-includes"]
 	path = dotbot-plugins/dotbot-includes
 	url = https://github.com/vanduc2514/dotbot-includes.git
+[submodule "pub-merge-recursive/AppData/Local/nvim"]
+	path = pub-merge-recursive/AppData/Local/nvim
+	url = https://github.com/gdm257/lazyvim-config.git

@@ -30,6 +30,7 @@
 !/private
 
 /pub-merge-recursive/AppData/Local/*
+!/pub-merge-recursive/AppData/Local/nvim
 /pub-merge-recursive/AppData/LocalLow/*
 /pub-merge-recursive/AppData/Roaming/*
 !/pub-merge-recursive/AppData/Roaming/.emacs.d
