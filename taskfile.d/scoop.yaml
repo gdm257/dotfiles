@@ -633,6 +633,7 @@ tasks:
             # - keycastow
             # - nohboard
             - gdm257/livedraw
+            # - drawpen
             - tesseract
             - tesseract-languages
             - pixpin
