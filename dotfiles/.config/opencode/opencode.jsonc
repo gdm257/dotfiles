@@ -59,17 +59,8 @@
         },
       },
     },
-    "zhipuai-coding-plan": {
-      "models": {
-        "glm-5": {
-          "name": "GLM-5",
-          "limit": {
-            "context": 199000,
-            "output": 128000,
-          },
-        },
-      },
-    },
+    // "zhipuai-coding-plan": {
+    // },
     // "cherry-studio": {
     //   "npm": "@ai-sdk/openai-compatible",
     //   "name": "Cherry Studio",
@@ -410,8 +401,12 @@
       "tsc *": "allow",
       "vite": "allow",
       "vite *": "allow",
+      "webpack": "allow",
+      "webpack *": "allow",
       "esbuild": "allow",
       "esbuild *": "allow",
+      "gulp": "allow",
+      "gulp *": "allow",
       "flutter build *": "allow",
       "py_compile *": "allow",
       "python -m py_compile *": "allow",
@@ -459,6 +454,9 @@
       "powershell -Command *": "deny",
       "openspec sync*": "deny",
       "openspec init*": "deny",
+      // deny bad running style
+      "./node_module/.bin/*": "deny",
+      "node_module/.bin/*": "deny",
       // deny
       "pip *": "deny",
       "python -m pip *": "deny",
