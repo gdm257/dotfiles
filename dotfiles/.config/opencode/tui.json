@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "theme": "cobalt2",
+  "keybinds": {
+    "leader": "alt+x,ctrl+x",
+    "input_submit": "enter",
+    "input_newline": "shift+return,ctrl+return,alt+return,ctrl+j"
+  },
+  "scroll_speed": 2
+}

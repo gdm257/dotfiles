@@ -1,14 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "cobalt2", // cobalt2 zenburn // kanagawa synthwave84 monokai opencode
-  "tui": {
-    "scroll_speed": 2,
-  },
-  "keybinds": {
-    "leader": "alt+x,ctrl+x",
-    "input_submit": "enter",
-    "input_newline": "shift+return,ctrl+return,alt+return,ctrl+j",
-  },
   "autoupdate": true,
   "watcher": {
     "ignore": [
