@@ -366,8 +366,8 @@ tasks:
             - baidupcs-go
             - localsend
             # - FileCentipede
-            - ipfs-desktop
-            # - kubo
+            # - ipfs-desktop
+            - kubo
             - gdm257/fav
             # - FileCentipede
             # - termscp

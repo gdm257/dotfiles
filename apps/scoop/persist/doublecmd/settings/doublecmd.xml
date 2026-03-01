@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>558</Left>
-      <Top>332</Top>
+      <Left>405</Left>
+      <Top>167</Top>
       <Width>1105</Width>
       <Height>676</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -584,6 +584,7 @@
     <HotDir Name="XDG Data" Path="C:\Users\demo\.local\share"/>
     <HotDir Name="-Game" Path=""/>
     <HotDir Name="EmuDeck" Path="C:\Emulation"/>
+    <HotDir Name="Enter the Gungeon" Path="C:\Users\demo\AppData\LocalLow\Dodge Roll\Enter the Gungeon"/>
     <HotDir Name="Genshin" Path="C:\Users\demo\AppData\LocalLow\miHoYo\原神"/>
     <HotDir Name="ludusavi-backup" Path="C:\Users\demo\ludusavi-backup"/>
     <HotDir Name="osu lazer" Path="C:\Users\demo\AppData\Roaming\osu"/>
@@ -672,6 +673,7 @@
     <HotDir Name="clashtui" Path="C:\Users\demo\AppData\Roaming\clashtui"/>
     <HotDir Name="Edge" Path="C:\Users\demo\AppData\Local\Microsoft\Edge"/>
     <HotDir Name="hosts" Path="C:\Windows\system32\drivers\etc"/>
+    <HotDir Name="ipfs" Path="C:\Users\demo\.ipfs"/>
     <HotDir Name="Mailspring" Path="C:\Users\demo\AppData\Roaming\Mailspring"/>
     <HotDir Name="Parsec" Path="C:\Users\demo\AppData\Roaming\Parsec"/>
     <HotDir Name="Robo 3T" Path="C:\Users\demo\.3T"/>
