@@ -180,13 +180,15 @@ tasks:
             # - trae-cn
             # - trae
             # - cursor
-            - main/claude-code
+            # - main/claude-code
             # - crush
             # - codex
             # - gdm257/goose
             # - gdm257/goose-desktop
             # - cc-switch
             # - gdm257/claude-squad
+            - gdm257/sudocode
+            - gdm257/auto-claude
             - vim
             # - vimtutor
             - neovim
@@ -1016,9 +1018,9 @@ tasks:
             # - pidgin
             # - chatbox
             # - ChatALL-Portable
-            # - aichat
+            - main/aichat
             # - mcp-linker
-            - rivet
+            # - rivet
             # - tutanota
             # - dns-jumper
             - gns3

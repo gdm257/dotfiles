@@ -34,6 +34,7 @@ tasks:
             # - ElementLabs.LMStudio
             # - ChidiWilliams.Buzz
             - kangfenmao.CherryStudio
+            - Pencil.Desktop
             # - kapitainsky.RcloneBrowser
             # - FastCopy.FastCopy
             # - Falcosoft.SoundfontMidiPlayer
@@ -44,7 +45,7 @@ tasks:
             # - Canonical.Ubuntu.2204
             # - jtroo.kanata_gui
             # - Xmarmalade.AlistHelper
-            # - Anthropic.Claude
+            - Anthropic.Claude
             # - Codeium.Windsurf
             - WEIFENG2333.VideoCaptioner
 

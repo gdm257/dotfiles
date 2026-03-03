@@ -29,8 +29,10 @@ tasks:
       - task: marketplace:install
         vars:
           APPS:
+            - wakatime/claude-code-wakatime
             - gdm257/cc-plugins
             - anthropics/claude-plugins-official
+            - sudocode-ai/sudocode
             - zhangyanxs/repo2skill
             - ComposioHQ/awesome-claude-skills
             - VoltAgent/awesome-claude-code-subagents
