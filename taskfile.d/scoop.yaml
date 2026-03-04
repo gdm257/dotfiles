@@ -188,7 +188,8 @@ tasks:
             # - cc-switch
             # - gdm257/claude-squad
             - gdm257/sudocode
-            - gdm257/auto-claude
+            # - gdm257/auto-claude
+            - gdm257/rulesync
             - vim
             # - vimtutor
             - neovim
