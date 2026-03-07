@@ -189,6 +189,7 @@ tasks:
             # - gdm257/claude-squad
             - gdm257/sudocode
             # - gdm257/auto-claude
+            - beads
             - gdm257/rulesync
             - vim
             # - vimtutor

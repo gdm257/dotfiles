@@ -633,7 +633,7 @@
     <HotDir Name="rancher-desktop" Path="C:\Users\demo\AppData\Local\rancher-desktop"/>
     <HotDir Name="ruler" Path="C:\Users\demo\.config\ruler"/>
     <HotDir Name="repos" Path="C:\Users\demo\codebase"/>
-    <HotDir Name="sudocode" Path="C:\Users\demo\.config\sudocode\"/>
+    <HotDir Name="sudocode" Path="C:\Users\demo\.config\sudocode"/>
     <HotDir Name="scoop" Path="C:\Users\demo\scoop"/>
     <HotDir Name="stack" Path="C:\sr"/>
     <HotDir Name="Taskfile.d" Path="C:\Users\demo\Documents\repos\Iac"/>
