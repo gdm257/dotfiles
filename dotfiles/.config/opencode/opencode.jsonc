@@ -1,17 +1,39 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": true,
-  "watcher": {
-    "ignore": [
-      "node_modules/**",
-      "dist/**",
-      ".git/**",
-      ".jj/**",
-    ]
-  },
-  "compaction": {
-    "auto": true,
-    "prune": true,
+  "formatter": {
+    "oxfmt": {
+      "disabled": true,
+    },
+    "oxfmt-custom": {
+      "command": ["bunx", "oxfmt", "$FILE"],
+      "extensions": [
+        ".js",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".mts",
+        ".cts",
+        ".jsx",
+        ".tsx",
+        ".mdx",
+        ".md",
+        ".html",
+        ".vue",
+        ".hbs",
+        ".css",
+        ".scss",
+        ".less",
+        ".json",
+        ".jsonc",
+        ".json5",
+        ".yaml",
+        ".yml",
+        ".toml",
+        ".graphql",
+        ".gql",
+      ],
+    },
   },
   "small_model": "ark/kimi-k2.5",
   "disabled_providers": ["anthropic", "openai", "opencode"],
@@ -26,7 +48,7 @@
         "ark-code-latest": {
           "name": "auto",
           "options": {
-            "thinking": {"type": "enabled"}, // If model supports thinking, it must output thinking
+            "thinking": { "type": "enabled" }, // If model supports thinking, it must output thinking
           },
         },
         "deepseek-v3.2": {
@@ -69,6 +91,7 @@
     ".kiro/steering/*.md",
     "packages/*/AGENTS.md",
     "CLAUDE.local.md",
+    ".claude/rules/**.md",
     // ".cursor/rules/*.md", ".cursorrules",
     // ".windsurf/rules/*.md", "global_rules.md",
     // ".kilocode/rules/*.md", ".kilocode/rules/memory-bank/*.md",
@@ -86,13 +109,10 @@
     "CONTRIBUTING.md",
   ],
   "plugin": [
-    // lock version to speedup boot
-    // "@franlol/opencode-md-table-formatter@0.0.3",
+    // Lock version to speedup boot
     "opencode-add-dir@1.1.0",
     "opencode-wakatime@1.1.1", // ~/.wakatime.cfg
     "@tarquinen/opencode-dcp@1.2.8",
-    // "@zenobius/opencode-skillful",
-    // "jj-opencode@0.2.0",
   ],
   "agent": {},
   "command": {},
@@ -124,7 +144,7 @@
     "patch": "allow",
     "write": "allow",
     "edit": {
-      "*": "allow"
+      "*": "allow",
     },
     "todoread": "allow",
     "todowrite": "allow",
@@ -227,7 +247,6 @@
       "touch *": "allow",
       "ln *": "allow",
       "cp *": "allow",
-      "mv *": "allow",
       "echo *": "allow",
       "atac": "allow",
       "atac *": "allow",
@@ -261,8 +280,6 @@
       "unzip *": "allow",
       // allow vcs
       "git *": "allow",
-      "git diff*": "allow",
-      "git diff*": "allow",
       "git log*": "allow",
       "git shortlog*": "allow",
       "git diff*": "allow",
