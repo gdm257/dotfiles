@@ -1,0 +1,53 @@
+version: "3"
+
+tasks:
+  install:
+    desc: "Install app <REPO>"
+    requires:
+      vars:
+        - REPO
+    cmds:
+      - openskills install -g -u {{.REPO}}
+
+  skills:install:
+    internal: true
+    requires:
+      vars:
+        - REPOS
+    cmds:
+      - for: { var: REPOS, as: REPO }
+        task: install
+        vars:
+          REPO: "{{.REPO}}"
+
+  skills:curated-list:
+    cmds:
+      - task: skills:install
+        vars:
+          REPOS:
+            # Enabled by default
+            - gdm257/cc-plugins
+            - sudocode-ai/sudocode
+            - zhangyanxs/repo2skill
+            # Collection
+            - anthropics/claude-plugins-official
+            - ComposioHQ/awesome-claude-skills
+            - VoltAgent/awesome-claude-code-subagents
+            - wshobson/agents
+            - antfu/skills
+            - vercel-labs/skills
+            - vercel-labs/agent-skills
+            - softaworks/agent-toolkit
+            - jeffallan/claude-skills
+            # Specific tool
+            - supabase/agent-skills
+            - expo/skills
+            - hyf0/vue-skills
+            - vercel-labs/next-skills
+            - cloudai-x/threejs-skills
+            - adithya-s-k/manim_skill
+            - remotion-dev/skills
+            - slidevjs/slidev
+            - better-auth/skills
+            - resend/resend-skills
+            - browser-use/browser-use
