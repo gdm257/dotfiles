@@ -140,18 +140,21 @@
       "*.key": "deny",
       "age.key": "deny",
       "key.txt": "deny",
+      ".sudocode/issues.jsonl": "deny",
+      ".sudocode/specs.jsonl": "deny",
     },
     "patch": "allow",
     "write": "allow",
     "edit": {
       "*": "allow",
+      ".sudocode/issues.jsonl": "deny",
+      ".sudocode/specs.jsonl": "deny",
     },
     "todoread": "allow",
     "todowrite": "allow",
     "task": "allow",
     "skill": {
       "*": "allow",
-      "experimental-*": "deny",
     },
     "bash": {
       // fallback
