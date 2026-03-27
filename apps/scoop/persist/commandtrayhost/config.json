@@ -24,8 +24,18 @@
       "enabled": false,
       "name": "OpenCode",
       "path": "C:\\Users\\demo\\scoop\\shims\\",
-      "cmd": "opencode.exe serve --log-level INFO --port 4096",
+      "cmd": "opencode.exe serve --hostname 0.0.0.0 --port 4096 --log-level INFO",
       "working_directory": "C:\\Users\\demo\\scoop\\apps\\opencode-desktop\\current",
+      "addition_env_path": "",
+      "use_builtin_console": false,
+      "is_gui": false
+    },
+    {
+      "enabled": true,
+      "name": "sudocode",
+      "path": "C:\\Users\\demo\\scoop\\shims\\",
+      "cmd": "sudocode.exe server --port 3000",
+      "working_directory": "C:\\Users\\demo\\codebase",
       "addition_env_path": "",
       "use_builtin_console": false,
       "is_gui": false
