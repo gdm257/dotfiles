@@ -1,7 +1,11 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 
 [git]
-private-commits = '''description(glob:'private*:*') | description(glob:'local*:*')'''
+private-commits = '''
+  description(glob:'private*:*')
+  | description(glob:'local*:*')
+  | description(glob:'ci(local):*')
+'''
 
 [snapshot]
 auto-update-stale = true
