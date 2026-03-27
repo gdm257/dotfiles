@@ -945,7 +945,7 @@ tasks:
             # - stairspeedtest-reborn
             # - CloudflareSpeedTest
             - tcptunnel
-            - portforwarder
+            # - portforwarder
             # - webhook
             # - trafficmonitor
             - winnfsd
@@ -1061,6 +1061,7 @@ tasks:
             # - procs
             # - gotop
             - commandtrayhost
+            # - gdm257/dsc
             - winsw
             # - nssm
             # - activitywatch
@@ -1361,6 +1362,8 @@ tasks:
             # - gaojitools
             # - fufu-tools
             - officebox
+            - joytokey
+            - antimicrox
             - ludusavi
             - playnite
             - gdm257/vnite
