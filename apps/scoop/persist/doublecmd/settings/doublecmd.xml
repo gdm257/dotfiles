@@ -623,7 +623,10 @@
     <HotDir Name="mambaforge" Path="C:\Users\demo\mambaforge\envs"/>
     <HotDir Name="micromamba" Path="C:\Users\demo\micromamba\envs"/>
     <HotDir Name="miniconda" Path="C:\Users\demo\miniconda3\envs"/>
+    <HotDir Name="OpenPackage" Path="C:\Users\demo\.openpackage\"/>
     <HotDir Name="openskills" Path="C:\Users\demo\.agent\skills"/>
+    <HotDir Name="openspec" Path="C:\Users\demo\AppData\Roaming\openspec\"/>
+    <HotDir Name="pencil" Path="C:\Users\demo\.pencil\"/>
     <HotDir Name="pdm" Path="C:\Users\demo\AppData\Local\pdm\pdm"/>
     <HotDir Name="pipx" Path="C:\Users\demo\.local\pipx"/>
     <HotDir Name="pyapp" Path="C:\Users\demo\AppData\Local\pyapp"/>
