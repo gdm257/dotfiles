@@ -19,6 +19,7 @@
 **/.pkg-cache/
 **/.qwen/tmp/
 **/.qwen/installation_id
+**/Waytech/CloudDrive2/file_buffer_cache/*
 **/Games/Heroic/*
 **/scoop/apps/*
 **/scoop/buckets/*

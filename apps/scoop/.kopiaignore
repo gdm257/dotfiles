@@ -1,6 +1,11 @@
 # ==== persist ====
+**/persist/android-clt/
+**/persist/android-sdk/
+**/persist/asciidocfx/
 **/catsxp/Cache/*
+**/clash-party/data/logs/*
 Ditto.db
+**/doublecmd/settings/*.log
 **/Emby/programdata/cache/
 **/emby/programdata/cache/
 FSViewer.db
@@ -12,9 +17,11 @@ FSViewer.db
 **/nodejs-lts/
 Everything.db
 **/ppsspp/memstick/PSP/GAME/*
+**/playnite/browsercache/*
 **/steamapps/common/
 **/steamapps/downloading/
 **/steamapps/music/
+**/tai/Log/*
 **/tealdear/cache/*
 **/telegram/tdata/user_data*/
 **/virtualbox-with-extension-pack-np/
