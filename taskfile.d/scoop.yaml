@@ -864,6 +864,7 @@ tasks:
             # - gdm257/nsmusics
             - retrieval-based-voice-conversion-webui
             # - Buzz_dodorz
+            - gdm257/awesome-scores
 
   install:curated-list:network:
     platforms: [windows]
@@ -1384,6 +1385,7 @@ tasks:
             - starward
             - game-cheats-manager
             - gdm257/project-86
+            - gdm257/GriefSyndrome
             # - project-86-launcher
             - golly
             - lizzieyzy
