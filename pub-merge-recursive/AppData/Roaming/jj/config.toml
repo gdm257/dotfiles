@@ -13,6 +13,7 @@ auto-track = '''
   all()
   ~ (
     *.local.*
+    | .kopiaignore
     | .lazy.lua
     | .nvim.lua | .nvimrc | .exrc
     | root-glob:"*.bak" | root-glob:".*/*.bak"

@@ -1,4 +1,5 @@
 *.local.*
+.kopiaignore
 .lazy.lua
 .nvim.lua
 .nvimrc

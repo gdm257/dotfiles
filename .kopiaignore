@@ -1,4 +1,5 @@
 # ==== Home ====
+**/.config/opencode/log/*
 **/.local/share/wezterm/gui-sock*
 **/.cache/
 **/.crawl4ai/cache/
