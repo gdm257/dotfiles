@@ -59,6 +59,8 @@ tasks:
               URL: https://github.com/kkzzhizhou/scoop-apps
             - NAME: gdm257
               URL: https://github.com/gdm257/scoop-257
+            - NAME: lfs
+              URL: https://github.com/gdm257/scoop-lfs
             - NAME: SM
               URL: https://github.com/okibcn/ScoopMaster
             # - NAME: lemon
