@@ -1,5 +1,7 @@
 # ==== persist ====
+**/awesome-books/data/*
 **/awesome-scores/data/*
+**/awesome-sf/data/*
 **/persist/android-clt/
 **/persist/android-sdk/
 **/persist/asciidocfx/
@@ -17,14 +19,21 @@ FSViewer.db
 **/MeGUI/update_cache/*
 **/nodejs-lts/
 Everything.db
+**/openlist-desktop/logs/*
 **/ppsspp/memstick/PSP/GAME/*
 **/playnite/browsercache/*
-**/steamapps/common/
+**/persist/qbittorrent-portable/profile/qBittorrent/cache/
+**/steamapps/common/*
 **/steamapps/downloading/
-**/steamapps/music/
+**/steamapps/music/*
+**/steamapps/temp/
+**/steamapps/workshop/*
 **/tai/Log/*
 **/tealdear/cache/*
+**/telegram/tdata/emoji/
 **/telegram/tdata/user_data*/
+**/telegram/tdata/webview/
+**/persist/tor-browser/
 **/virtualbox-with-extension-pack-np/
 **/persist/volta/
 **/vscode/data/

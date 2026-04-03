@@ -1,5 +1,5 @@
 # ==== Home ====
-**/.config/opencode/log/*
+**/.config/opencode/logs/*
 **/.local/share/wezterm/gui-sock*
 **/.cache/
 **/.crawl4ai/cache/
@@ -55,15 +55,29 @@
 **/AppData/Local/nvim-data/
 **/AppData/Local/rancher-desktop/
 **/AppData/Local/restic/
+**/AppData/Local/Steam/htmlcache/
 **/AppData/LocalLow/Temp/
+**/AppData/Roaming/Adobe/CCX Welcome/
+**/AppData/Roaming/DM Pro6/Chrome/
+**/AppData/Roaming/DM Pro6/Log/*
 **/AppData/Roaming/itch/apps/
+**/AppData/Roaming/OpenList Desktop/data/log/*
+**/AppData/Roaming/OpenList Desktop/data/temp/
 **/AppData/Roaming/Tencent/WeMeet/Global/
 **/AppData/Roaming/Tencent/WeChat/XPlugin/*
+**/AppData/Roaming/Tencent/WXWork/FlutterPlugins/*
+**/AppData/Roaming/Tencent/WXWork/Log/*
+**/AppData/Roaming/Tencent/WXWork/wmpf_Applet/*
+**/AppData/Roaming/Tencent/xwechat/xplugin/*
 **/AppData/Roaming/Listary/UserProfile/Cache/
 **/AppData/Roaming/yesplaymusic/Cache/
+**/BaiduYunKernel/
+**/CherryStudio/logs/*
+**/pdm/pdm/Logs/*
 **/Typora/Cache/
 **/Typora/Code Cache/
 **/Typora/GPUCache/
+**/Lens/logs/*
 **/Mega Limited/MEGAsync/logs/
 **/Mega Limited/MEGAsync/update/
 **/YACReader/*/Cache/
@@ -84,6 +98,9 @@ Everything.db
 **/steamapps/common/
 **/steamapps/downloading/
 **/steamapps/music/
+
+# ==== Common ====
+**/User Data/Crashpad/*
 
 # ==== Whitelist ====
 !**/Roaming/CherryStudio/
