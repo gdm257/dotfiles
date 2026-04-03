@@ -48,6 +48,7 @@ tasks:
             - Anthropic.Claude
             # - Codeium.Windsurf
             - WEIFENG2333.VideoCaptioner
+            - ItchIo.Itch
 
   install:curated-list:global:
     platforms: [windows]

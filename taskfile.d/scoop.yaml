@@ -539,6 +539,7 @@ tasks:
             # - appflowy
             # - bookxnote
             - BookXNotePro
+            - lfs/awesome-books
             # - xournalpp
             # - rendevoz
             # - imewlconverter
@@ -867,6 +868,7 @@ tasks:
             - retrieval-based-voice-conversion-webui
             # - Buzz_dodorz
             - gdm257/awesome-scores
+            - lfs/awesome-sf
 
   install:curated-list:network:
     platforms: [windows]
@@ -1257,7 +1259,6 @@ tasks:
             - qemu
             - gdm257/EmuDeck
             # - pegasus
-            # - steam-rom-manager
             # - cemu-dev
             # - xemu
             # - yuzu
@@ -1370,17 +1371,18 @@ tasks:
             - antimicrox
             - ludusavi
             - playnite
+            - steam-rom-manager
             - gdm257/vnite
             - gdm257/WinDeckHelper
             # - Hen3
             - thprac
             - steam
             - steam-deck-tools
-            - HeroicGameLauncher-Portable
+            # - HeroicGameLauncher-Portable
             # - EpicGamesLauncher-Portable
             # - GOGGalaxy-Portable
             - gog-galaxy
-            - itch
+            # - itch
             - watt-toolkit
             # - snap-hutao
             # - collapse

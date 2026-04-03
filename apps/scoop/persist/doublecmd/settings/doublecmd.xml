@@ -586,6 +586,7 @@
     <HotDir Name="EmuDeck" Path="C:\Emulation"/>
     <HotDir Name="Enter the Gungeon" Path="C:\Users\demo\AppData\LocalLow\Dodge Roll\Enter the Gungeon"/>
     <HotDir Name="Genshin" Path="C:\Users\demo\AppData\LocalLow\miHoYo\原神"/>
+    <HotDir Name="itch" Path="C:\Users\demo\AppData\Roaming\itch\apps"/>
     <HotDir Name="ludusavi-backup" Path="C:\Users\demo\ludusavi-backup"/>
     <HotDir Name="osu lazer" Path="C:\Users\demo\AppData\Roaming\osu"/>
     <HotDir Name="osu! stable" Path="C:\Users\demo\AppData\Local\osu!"/>
