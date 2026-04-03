@@ -99,8 +99,5 @@ Everything.db
 **/steamapps/downloading/
 **/steamapps/music/
 
-# ==== Common ====
-**/User Data/Crashpad/*
-
 # ==== Whitelist ====
 !**/Roaming/CherryStudio/
