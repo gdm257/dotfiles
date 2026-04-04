@@ -26,9 +26,9 @@ tasks:
             - JRSoftware.InnoSetup
             # - Espanso.Espanso
             # - SublimeHQ.SublimeText.3
-            - ZedIndustries.Zed
+            # - ZedIndustries.Zed
             # - ByteDance.Trae
-            - 123.123pan
+            # - 123.123pan
             - 115.115Chrome
             # - Ollama.Ollama
             # - ElementLabs.LMStudio
@@ -45,10 +45,11 @@ tasks:
             # - Canonical.Ubuntu.2204
             # - jtroo.kanata_gui
             # - Xmarmalade.AlistHelper
-            - Anthropic.Claude
+            - Anthropic.ClaudeCode
             # - Codeium.Windsurf
-            - WEIFENG2333.VideoCaptioner
+            # - WEIFENG2333.VideoCaptioner
             - ItchIo.Itch
+            - ModOrganizer2.modorganizer
 
   install:curated-list:global:
     platforms: [windows]
@@ -132,7 +133,7 @@ tasks:
             # - *ZeroTier.ZeroTierOne*
             # - *Parsec.Parsec*
             # - LizardByte.Sunshine
-            - tailscale.tailscale
+            # - tailscale.tailscale
             # - Billfish.Billfish
             # - WilbertBerendsen.Frescobaldi
             # - Hitencent.JisuPDF
@@ -145,7 +146,7 @@ tasks:
             # - Posit.RStudio
             - Valve.SteamLink
             - EpicGames.EpicGamesLauncher
-            - Stellarium.Stellarium
+            # - Stellarium.Stellarium
             # - *HeidelbergUniversity.GaiaSky*
             # - SURF.eduVPNClient
             # - MysteriumNetwork.Mysterium
@@ -168,7 +169,7 @@ tasks:
             # - CodingWondersSoftware.DISMTools.Stable
             # - CrystalDewWorld.CrystalDiskMark.ShizukuEdition
             # - EFDSoftware.HDTunePro
-            - HDDGURU.HDDLLFTool
+            # - HDDGURU.HDDLLFTool
             - MichaelTippach.ASIO4ALL
             # - VB-Audio.Voicemeeter.Banana
             # - VB-Audio.Voicemeeter.Potato

@@ -340,7 +340,7 @@ tasks:
             # - youtube-dl-gui
             - yt-dlp
             - gallery-dl
-            - ariang-native
+            # - ariang-native
             - rclone
             - rclone-browser
             - gdm257/clouddrive2
@@ -359,7 +359,7 @@ tasks:
             # - hfs
             # - sftpgo
             # - dukto
-            - dufs
+            # - dufs
             - officetoolplus
             # - lky-officetools
             # - qbittorrent-portable
@@ -387,7 +387,7 @@ tasks:
       - task: install:bulk
         vars:
           APPS:
-            - ntfs2btrfs
+            # - ntfs2btrfs
             - unar
             - lessmsi
             - age
@@ -417,7 +417,7 @@ tasks:
             - winrar
             # - code2prompt
             - everything
-            - gdm257/listary5
+            # - gdm257/listary5
             # - listary
             # - orange
             # - spacesniffer
@@ -431,6 +431,15 @@ tasks:
             # - duplicati
             - diskgenius
             - testdisk
+            # - diskinfo
+            - as-ssd
+            - crystaldiskmark
+            - crystaldiskmark-shizuku-edition
+            - crystaldiskmark-aoi-edition
+            # - CrystalDiskMark-TsukumoTokka
+            - crystaldiskinfo-shizuku-edition
+            # - hdtune
+            # - ssdlife
             - smartmontools
             - SymlinkCreator
             # - VeraCrypt-Portable
@@ -507,7 +516,8 @@ tasks:
             # - dasel
             - xidel
             # - dsq
-            - q
+            # - q
+            - sq
             # - miller
             # - pup
             - pandoc
@@ -629,6 +639,7 @@ tasks:
             - lunacy
             - qgis
             - geogebra
+            - stellarium
             - umbrello
             # - ascii-image-converter
             # - irfanview
@@ -858,7 +869,6 @@ tasks:
             # - mp3tag-portable
             # - spleeter-gui
             # - polyglot
-            - cuetools
             - yesplaymusic
             # - feeluown
             # - keyfinder
@@ -996,7 +1006,8 @@ tasks:
             - moonlight
             - sunshine
             # - scrcpy
-            - qtscrcpy
+            # - qtscrcpy
+            - escrcpy
             # - ZeroTier
             # - mongodb-compass-isolated
             # - nps-server
@@ -1004,6 +1015,7 @@ tasks:
             # - rathole
             - iperf3
             # - tailscale
+            - gdm257/astral
             - naiveproxy
             - traefik
             - gdm257/zoraxy
@@ -1052,7 +1064,7 @@ tasks:
             # - hiddify-next
             # - hiddify-next_noql-net
             # - teleport
-            - hostctl
+            # - hostctl
 
   install:curated-list:process:
     platforms: [windows]
@@ -1060,20 +1072,21 @@ tasks:
       - task: install:bulk
         vars:
           APPS:
+            - gdm257/task-explorer
             - openark
-            - bottom
+            # - bottom
             - btop
             # - ntop
             # - procs
             # - gotop
             - commandtrayhost
             # - gdm257/dsc
-            - winsw
+            # - main/winsw
+            # - winsw-alpha
             # - nssm
             # - activitywatch
             - tai
             - gdm257/lite-monitor
-            - gdm257/task-explorer
             - memreduct
             - runasdate
             - locale-emulator
@@ -1131,6 +1144,7 @@ tasks:
             # - cheat
             # - tldr
             - tealdeer
+            - ztools
             # - kanata
             # - kanata-tray
             - gdm257/mykeymap
@@ -1231,15 +1245,6 @@ tasks:
             - cpu-z
             - gpu-z
             - ssd-z
-            # - diskinfo
-            - as-ssd
-            - crystaldiskmark
-            - crystaldiskmark-shizuku-edition
-            - crystaldiskmark-aoi-edition
-            # - CrystalDiskMark-TsukumoTokka
-            - crystaldiskinfo-shizuku-edition
-            # - hdtune
-            # - ssdlife
             - ddu
 
   install:curated-list:layer:
@@ -1367,30 +1372,32 @@ tasks:
             # - gaojitools
             # - fufu-tools
             - officebox
-            - joytokey
+            # - joytokey
             - antimicrox
             - ludusavi
             - playnite
-            - steam-rom-manager
-            - gdm257/vnite
-            - gdm257/WinDeckHelper
+            # - steam-rom-manager
+            - gdm257/ReinaManager
+            # - gdm257/vnite
+            # - gdm257/WinDeckHelper
             # - Hen3
             - thprac
             - steam
-            - steam-deck-tools
+            - SGDBoop
+            # - steam-deck-tools
             # - HeroicGameLauncher-Portable
             # - EpicGamesLauncher-Portable
             # - GOGGalaxy-Portable
             - gog-galaxy
             # - itch
-            - watt-toolkit
+            # - watt-toolkit
             # - snap-hutao
             # - collapse
             - starward
             - game-cheats-manager
+            - vortex
             - gdm257/project-86
             - gdm257/GriefSyndrome
-            # - project-86-launcher
             - golly
             - lizzieyzy
             - katrain
