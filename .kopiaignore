@@ -29,6 +29,7 @@
 **/VirtualBox VMs/*
 
 # ==== Libraries ====
+**/libraries/Downloads/*
 **/WXWork/*/Cache/
 **/HiSuite/ROM/*
 **/MuseScore4/SoundFonts/*
