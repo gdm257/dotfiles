@@ -1,6 +1,35 @@
+# Stateless Project
+
+| State                       | Source of Truth                   | Backup          | Is Elegant |
+| --------------------------- | --------------------------------- | --------------- | ---------- |
+| ACG                         | 115                               | 123             | no         |
+| Games                       | steam, epic, gog, itch, scoop-lfs | -               | yes        |
+| Mods                        | nexus                             | TODO            |            |
+| Saves                       | online, ludusavi                  | kopia           | yes        |
+| LLMs                        | hugging face                      | TODO            |            |
+| Datasets                    | dolthub                           | TODO            | yes        |
+| Applications (Linux)        | home-manager, pkg, x-cmd          | public registry | yes        |
+| Applications (Windows)      | scoop, winget, chocolatey         | public registry | yes        |
+| Applications (Android)      | obtainium                         | public registry | yes        |
+| Applications (Python)       | mise                              | pypi            | yes        |
+| Applications (JS)           | mise                              | npmjs.org       | yes        |
+| Applications Configurations | dotfiles (this repo)              | -               | yes        |
+| Applications Cache          | kopia                             | -               | yes        |
+| Joplin                      | webdav                            | -               | yes        |
+| Obsidian                    | git                               | -               | yes        |
+| `caldav://`                 | disroot                           | TODO            |            |
+| `git://`                    | github                            | TODO            |            |
+| `mail://`                   | disroot                           | TODO            |            |
+| `s3://`                     | cloudflare r2                     | -               | yes        |
+| `vcard://`                  | disroot                           | TODO            |            |
+| `webdav://`                 | koofr, 123                        | TODO            |            |
+| Bangumi                     | online                            | bangumi-data    | yes        |
+| Bilibili                    | online                            | TODO            |            |
+
 # Dotfiles
 
 ## Common
+
 ```
 # Windows Activation
 Set-ExecutionPolicy Bypass -Scope Process -Force
@@ -29,6 +58,7 @@ mise activate
 ```
 
 ## Recover
+
 ```powershell
 dotbot -v -c ./dotbot.registry.yaml
 dotbot -v -c ./dotbot.once.lib.yaml
@@ -36,6 +66,7 @@ dotbot -v -c ./dotbot.links.yaml
 ```
 
 ## From Scratch
+
 ```powershell
 dotbot -v -c ./dotbot.registry.yaml
 dotbot -v -c ./dotbot.once.lib.yaml
@@ -43,6 +74,7 @@ dotbot -v -c ./dotbot.links.yaml
 ```
 
 ## Optional Installation
+
 ```powershell
 powershell -c "irm bun.com/install.ps1 | iex" # bun
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex" # uv
