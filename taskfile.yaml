@@ -35,6 +35,7 @@ includes:
   nix: {taskfile: './taskfile.d/nix.yaml', optional: true}
   npm: {taskfile: './taskfile.d/npm.yaml', optional: true}
   pipx: {taskfile: './taskfile.d/pipx.yaml', optional: true}
+  playnite: {taskfile: './taskfile.d/playnite.yaml', optional: true}
   powershell: {taskfile: './taskfile.d/powershell.yaml', optional: true, aliases: [pwsh, ps]}
   rclone: {taskfile: './taskfile.d/rclone.yaml', optional: true}
   reg: {taskfile: './taskfile.d/reg.yaml', optional: true}

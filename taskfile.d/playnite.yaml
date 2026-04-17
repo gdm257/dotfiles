@@ -1,0 +1,59 @@
+version: "3"
+
+tasks:
+  install:curated-list:
+    platforms: [windows]
+    cmds:
+      - task: install:bulk
+        vars:
+          ADDONS:
+            # ==== Theme ====
+            - ThemeOptions_904cbf3b-573f-48f8-9642-0a09d05c64ef
+            - Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad
+            - Solaris_b6e50d04-24ae-4ecd-bd3a-080367930992
+            # ==== Library Addons ====
+            # - SteamLibrary_Builtin
+            - f15771cd-b6d7-4a3d-9b8e-08786a13d9c7 # Non-Steam Sync
+            # - EpicGamesLibrary_Builtin
+            # - GogLibrary_Builtin
+            # - ItchioLibrary_Builtin
+            - VirtualLibrary
+            # ==== Metadata Addons ====
+            - Bangumi_fea02b9a-ab77-47e3-8fb1-6512c9261fbe
+            - DLsiteMetadata_db03c8d9-645a-4359-aafb-01cda945f301
+            - ESMetadata_71f952a8-4763-41e3-9934-7fe02a1e33d4
+            - FanzaMetadata_db03c8d9-645a-4359-aafb-01cda945f301
+            - GOGMetadata
+            # - IGDBMetadata_Builtin
+            - playnite-metadatalocal-plugin
+            - PCGamingWikiMetadata_c038558e-427b-4551-be4c-be7009ce5a8d
+            - Steam_Tags_Importer_01b67948-33a1-42d5-bd39-e4e8a226d215
+            - SteamGridDB_Playnite_Metadata
+            - Universal_Steam_Metadata
+            - VNDBNexus_39229206-1199-4fee-a014-e8478ea4cd77
+            # ==== Generic Addons ====
+            - Yalgrin_SteamCollectionImporter
+            - playnite-systemchecker-plugin
+            - SunshineAppExport
+            - mtkennerly.ludusavi
+
+  install:bulk:
+    platforms: [windows]
+    internal: true
+    requires:
+      vars:
+        - ADDONS
+    cmds:
+      - for: { var: ADDONS, as: ADDON }
+        task: install
+        vars:
+          ADDON: "{{.ADDON}}"
+
+  install:
+    platforms: [windows]
+    desc: "Install an addon [ADDON SOURCE] -- [ADDON]"
+    ignore_error: true
+    vars:
+      _ADDON: "{{if .ADDON}}{{.ADDON}}{{else if .CLI_ARGS}}{{.CLI_ARGS}}{{else}}--help{{end}}"
+    cmds:
+      - start playnite://playnite/installaddon/{{._ADDON}}
