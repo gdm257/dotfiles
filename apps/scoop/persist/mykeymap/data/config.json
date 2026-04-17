@@ -7,6 +7,7 @@
       "hotkey": "*capslock",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "*'": [
           {
@@ -281,6 +282,7 @@
       "hotkey": "*f",
       "parentID": 5,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "*a": [
           {
@@ -442,6 +444,7 @@
       "hotkey": "*space",
       "parentID": 5,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "*d": [
           {
@@ -477,6 +480,7 @@
       "hotkey": "*j",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "*,": [
           {
@@ -655,6 +659,7 @@
       "hotkey": "f",
       "parentID": 0,
       "delay": 100,
+      "disableAt": "",
       "hotkeys": {
         "*,": [
           {
@@ -833,6 +838,7 @@
       "hotkey": "*3",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "*/": [
           {
@@ -1019,6 +1025,7 @@
       "hotkey": "*tab",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "singlePress": [
           {
@@ -1037,6 +1044,7 @@
       "hotkey": "*space",
       "parentID": 0,
       "delay": 30,
+      "disableAt": "",
       "hotkeys": {
         "*'": [
           {
@@ -1301,6 +1309,7 @@
       "hotkey": "*.",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "*a": [
           {
@@ -1495,6 +1504,7 @@
       "hotkey": ";",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "*,": [
           {
@@ -1657,6 +1667,7 @@
       "hotkey": "rbutton",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "*LButton": [
           {
@@ -1731,6 +1742,7 @@
       "hotkey": "xbutton1",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "*c": [
           {
@@ -1781,6 +1793,7 @@
       "hotkey": "customHotkeys",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "!'": [
           {
@@ -1823,6 +1836,7 @@
       "hotkey": "capslockAbbr",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         "bb": [
           {
@@ -2055,6 +2069,7 @@
       "hotkey": "semicolonAbbr",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {
         ",": [
           {
@@ -2169,15 +2184,17 @@
       "hotkey": "settings",
       "parentID": 0,
       "delay": 0,
+      "disableAt": "",
       "hotkeys": {}
     }
   ],
   "options": {
-    "mykeymapVersion": "2.0-beta32",
+    "mykeymapVersion": "2.0-beta33",
     "windowGroups": [
       {
         "id": -1,
-        "name": "🚫 Exclude"
+        "name": "🚫 Exclude",
+        "value": "Blasphemous\nahk_class UnityWndClass\nahk_exe Blasphemous.exe\nDARK SOULS™: REMASTERED\nahk_class DARK SOULS\nahk_exe DarkSoulsRemastered.exe"
       },
       {
         "id": 0,
