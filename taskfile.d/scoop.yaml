@@ -22,6 +22,40 @@ tasks:
           NAME: "{{.BUCKET.NAME}}"
           URL: "{{.BUCKET.URL}}"
 
+  config:set:
+    platforms: [windows]
+    internal: true
+    requires:
+      vars:
+        - KEY
+        - VALUE
+    cmds:
+      - scoop config '{{.KEY}}' '{{.VALUE}}'
+
+  config:bulk:
+    platforms: [windows]
+    internal: true
+    requires:
+      vars:
+        - CONFIGS
+    cmds:
+      - for: { var: CONFIGS, as: CONFIG }
+        task: config:set
+        vars:
+          KEY: "{{.CONFIG.KEY}}"
+          VALUE: "{{.CONFIG.KEY}}"
+
+  config:curated-list:
+    platforms: [windows]
+    cmds:
+      - task: config:bulk
+        vars:
+          CONFIGS:
+            - {KEY: aria2-enabled, VALUE: true}
+            - {KEY: debug, VALUE: true}
+            - {KEY: use_sqlite_cache, VALUE: true}
+            - {KEY: use_lessmsi, VALUE: true}
+
   install:
     platforms: [windows]
     desc: "Install an app [APP GLOBAL SKIP] -- [APP]"
@@ -170,6 +204,13 @@ tasks:
             - AutoHotkey2-Portable
             - openmodelica
             - scilab
+            # - main/zeroclaw
+            # - main/ironclaw
+            # - picoclaw
+            - gdm257/open-pencil
+            # - gdm257/aionui
+            - gdm257/paseo
+            - gdm257/pi
             - opencode-desktop
             # - gdm257/opencode-worktree
             # - gdm257/ocx
@@ -185,6 +226,7 @@ tasks:
             # - main/claude-code
             # - crush
             # - codex
+            # - main/goose-cli
             # - gdm257/goose
             # - gdm257/goose-desktop
             # - cc-switch
@@ -410,8 +452,8 @@ tasks:
             # - broot
             # - lf
             # - file
-            - 7zip
-            # - nanazip
+            # - main/7zip
+            - main/nanazip
             # - nanazip_DoveBoy
             # - bandizip6
             - winrar
@@ -1375,6 +1417,8 @@ tasks:
             # - joytokey
             - antimicrox
             - ludusavi
+            - mo2
+            - vortex
             - playnite
             # - steam-rom-manager
             - gdm257/ReinaManager
@@ -1395,7 +1439,6 @@ tasks:
             # - collapse
             - starward
             - game-cheats-manager
-            - vortex
             - gdm257/project-86
             - gdm257/GriefSyndrome
             - golly

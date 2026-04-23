@@ -7,7 +7,7 @@ python.uv_venv_auto = true
 
 [tools]
 bun = "latest"
-node = {version="lts", postinstall="corepack enable"}
+node = { version = "lts", postinstall = "corepack enable" }
 dart = "latest"
 pnpm = "latest"
 uv = "latest"
@@ -15,25 +15,26 @@ uv = "latest"
 "ubi:marwanhawari/stew" = "latest"
 task = "latest"
 yazi = "latest"
-zellij = {version="latest", os=["linux", "macos"]}
+zellij = { version = "latest", os = ["linux", "macos"] }
 
 "dotnet:dotnet-repl" = "latest"
 "dotnet:Microsoft.dotnet-interactive" = "latest"
 "dotnet:csharp-ls" = "latest"
 
-"cargo:binsider" = {version="latest", os=["linux", "macos"]}
+"cargo:binsider" = { version = "latest", os = ["linux", "macos"] }
 
 "go:golang.org/x/tools/gopls" = "v0.21.0"
 
-"npm:neoss" = {version="latest", os=["linux"]}
+"npm:neoss" = { version = "latest", os = ["linux"] }
 "npm:jj-stack" = "latest"
 "npm:cc-sdd" = "latest"
 "npm:@intellectronica/ruler" = "latest"
 # "npm:openskills" = "latest"
 "npm:@gdm257/openskills" = "latest"
 "npm:@modelcontextprotocol/inspector" = "latest"
+"npm:openclaw" = "latest"
 
-"pipx:isd" = {version="latest", os=["linux", "macos"]}
+"pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/gdm257/magnetizer.git" = "main"
 "pipx:fonttools" = { version = "latest", extras = "ufo,lxml,woff,unicode" }
 "pipx:httpie" = "latest"
@@ -41,3 +42,4 @@ zellij = {version="latest", os=["linux", "macos"]}
 "pipx:marimo" = { version = "latest", extras = "recommended" }
 "pipx:ptpython" = "latest"
 "pipx:pyright" = "latest"
+"pipx:graphifyy" = "latest"

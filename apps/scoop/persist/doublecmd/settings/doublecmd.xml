@@ -158,10 +158,10 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>405</Left>
-      <Top>167</Top>
-      <Width>1105</Width>
-      <Height>676</Height>
+      <Left>647</Left>
+      <Top>307</Top>
+      <Width>1106</Width>
+      <Height>677</Height>
       <PixelsPerInch>120</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>99.8996990972919</Splitter>
@@ -610,6 +610,7 @@
     <HotDir Name="crawl4ai" Path="C:\Users\demo\.crawl4ai"/>
     <HotDir Name="Git Credential Manager" Path="C:\Users\demo\AppData\Local\Microsoft\Credentials"/>
     <HotDir Name="git-sync" Path="C:\Users\demo\git-backups"/>
+    <HotDir Name="goose" Path="C:\Users\demo\AppData\Roaming\Block\goose"/>
     <HotDir Name="hatch" Path="C:\Users\demo\AppData\Local\hatch"/>
     <HotDir Name="home" Path="C:\Users\demo"/>
     <HotDir Name="jj" Path="C:\Users\demo\AppData\Roaming\jj"/>
@@ -624,6 +625,7 @@
     <HotDir Name="mambaforge" Path="C:\Users\demo\mambaforge\envs"/>
     <HotDir Name="micromamba" Path="C:\Users\demo\micromamba\envs"/>
     <HotDir Name="miniconda" Path="C:\Users\demo\miniconda3\envs"/>
+    <HotDir Name="openclaw" Path="C:\Users\demo\.openclaw"/>
     <HotDir Name="OpenPackage" Path="C:\Users\demo\.openpackage"/>
     <HotDir Name="openskills" Path="C:\Users\demo\.agent\skills"/>
     <HotDir Name="openspec" Path="C:\Users\demo\AppData\Roaming\openspec"/>

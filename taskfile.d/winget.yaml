@@ -31,7 +31,7 @@ tasks:
             # - 123.123pan
             - 115.115Chrome
             # - Ollama.Ollama
-            # - ElementLabs.LMStudio
+            - ElementLabs.LMStudio
             # - ChidiWilliams.Buzz
             - kangfenmao.CherryStudio
             - Pencil.Desktop
@@ -49,7 +49,6 @@ tasks:
             # - Codeium.Windsurf
             # - WEIFENG2333.VideoCaptioner
             - ItchIo.Itch
-            - ModOrganizer2.modorganizer
 
   install:curated-list:global:
     platforms: [windows]
@@ -186,6 +185,7 @@ tasks:
             - Bandisoft.Honeyview
             # - GOG.Galaxy
             - Canva.Affinity
+            # - ModOrganizer2.modorganizer
 
   install:bulk:
     platforms: [windows]
