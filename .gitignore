@@ -6,6 +6,7 @@
 /apps/scoop/cache
 /apps/scoop/modules
 /apps/scoop/persist/*
+/apps/scoop/scoop.db
 !/apps/scoop/persist/doublecmd
 /apps/scoop/persist/doublecmd/settings/plugins
 /apps/scoop/persist/doublecmd/settings/history.xml

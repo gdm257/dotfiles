@@ -17,6 +17,8 @@
 **/.marscode/logs/
 **/.mobvibe/cache/
 **/.openpackage/cache/
+**/.openclaw/logs/*
+**/.openclaw/tasks/*
 **/.pkg-cache/
 **/.qwen/tmp/
 **/.qwen/installation_id
@@ -26,6 +28,7 @@
 **/scoop/buckets/*
 **/scoop/cache/*
 **/scoop/modules/*
+**/scoop/scoop.db
 **/VirtualBox VMs/*
 
 # ==== Libraries ====
