@@ -1,0 +1,9 @@
+{
+  "last_update": "2026-04-30T01:42:24.7929846+09:00",
+  "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
+  "scoop_branch": "master",
+  "aria2-enabled": true,
+  "use_lessmsi": true,
+  "use_sqlite_cache": true,
+  "debug": true
+}

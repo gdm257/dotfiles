@@ -24,7 +24,7 @@
 !/dotfiles
 /dotfiles/.config/argocd
 /dotfiles/.config/bin
-/dotfiles/.config/scoop
+/dotfiles/.config/opencode/package-lock.json
 
 /libraries/*
 
