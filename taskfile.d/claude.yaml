@@ -31,4 +31,5 @@ tasks:
           APPS:
             - wakatime/claude-code-wakatime
             - gdm257/cc-plugins
+            - Piebald-AI/claude-code-lsps
             - anthropics/claude-plugins-official

@@ -158,8 +158,11 @@ tasks:
             - adb
             # - netbeans-portable
             # - kotlin
+            - gdm257/kotlin-lsp
             - apktool
-            - flutter
+            # - flutter
+            - flutter-cn
+            - main/ruby
             - nuget
             - ilspy
             # - dnspy
@@ -1177,6 +1180,7 @@ tasks:
             - tssh
             # - mosh-client
             - powershell
+            - main/powershelleditorservices
             # - PSWinUtil
             - chafa
             - resvg
