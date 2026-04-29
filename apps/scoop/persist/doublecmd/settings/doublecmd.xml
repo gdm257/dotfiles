@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>647</Left>
-      <Top>307</Top>
+      <Left>431</Left>
+      <Top>243</Top>
       <Width>1106</Width>
       <Height>677</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -745,6 +745,7 @@
     <HotDir Name="claude" Path="C:\Users\demo\.claude"/>
     <HotDir Name="crush" Path="C:\Users\demo\AppData\Local\crush"/>
     <HotDir Name="codex" Path="C:\Users\demo\.codex"/>
+    <HotDir Name="Claude-cowork-3p" Path="C:\Users\demo\AppData\Local\Claude-3p"/>
     <HotDir Name="dotenvx" Path="C:\Users\demo\AppData\Roaming\dotenvx"/>
     <HotDir Name="direnv" Path="C:\Users\demo\.config\direnv"/>
     <HotDir Name="direnv-allow" Path="C:\Users\demo\.local\share\direnv"/>
