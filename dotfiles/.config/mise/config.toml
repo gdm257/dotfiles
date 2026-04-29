@@ -28,6 +28,8 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "npm:neoss" = { version = "latest", os = ["linux"] }
 "npm:jj-stack" = "latest"
 "npm:cc-sdd" = "latest"
+"npm:claude-code-workflow" = "latest"
+"npm:@mindfoldhq/trellis" = "beta"
 "npm:@intellectronica/ruler" = "latest"
 # "npm:openskills" = "latest"
 "npm:@gdm257/openskills" = "latest"

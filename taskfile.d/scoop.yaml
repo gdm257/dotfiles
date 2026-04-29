@@ -268,7 +268,7 @@ tasks:
             # - mysql57
             # - mysql8
             # - mongodb
-            # - dolt
+            - dolt
             - protobuf
             - another-redis-desktop-manager
             # - tiny-rdm
@@ -303,7 +303,7 @@ tasks:
             # - lazyjj
             - git
             - bit
-            # - gdm257/worktrunk
+            - main/worktrunk
             - gitui
             # - gitu
             # - lazygit
@@ -619,7 +619,7 @@ tasks:
             # - koodo-reader
             # - latex
             # - msys2
-            # - marktext
+            - marktext
             # - logseq
             # - github
             # - oh-my-posh

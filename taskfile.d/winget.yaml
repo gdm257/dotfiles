@@ -185,6 +185,7 @@ tasks:
             - Bandisoft.Honeyview
             # - GOG.Galaxy
             - Canva.Affinity
+            - ONLYOFFICE.DesktopEditors
             # - ModOrganizer2.modorganizer
 
   install:bulk:
