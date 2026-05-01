@@ -213,7 +213,6 @@ tasks:
             - gdm257/open-pencil
             # - gdm257/aionui
             - gdm257/paseo
-            - gdm257/pi
             - opencode-desktop
             # - gdm257/opencode-worktree
             # - gdm257/ocx
@@ -229,6 +228,7 @@ tasks:
             # - main/claude-code
             # - crush
             # - codex
+            # - gdm257/pi
             # - main/goose-cli
             # - gdm257/goose
             # - gdm257/goose-desktop
@@ -248,7 +248,7 @@ tasks:
             - hexyl
             # - lapce
             # - jupyterlab-desktop
-            - android-studio
+            # - android-studio
             # - recaf
             # - rstudio
             # - serial-studio
@@ -645,7 +645,7 @@ tasks:
             # - AgentRansack
             # - pdfpatcher_hu3rror
             # - pdfpatcher
-            - libreoffice
+            # - libreoffice
             - pot-desktop
             # - pdf-guru
             # - calibre-web
