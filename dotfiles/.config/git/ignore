@@ -14,3 +14,4 @@ CLAUDE.local.md
 age.key
 key.txt
 *.swp
+.~lock.*
