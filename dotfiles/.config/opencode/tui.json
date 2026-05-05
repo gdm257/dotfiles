@@ -7,7 +7,5 @@
     "input_newline": "shift+return,ctrl+return,alt+return,ctrl+j"
   },
   "scroll_speed": 2,
-  "plugin": [
-    "opencode-add-dir"
-  ]
+  "plugin": []
 }
