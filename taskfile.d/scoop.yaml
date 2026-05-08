@@ -135,7 +135,7 @@ tasks:
             # - python27 python37 python38 python39 python310 python311 micromamba_ShuguangSun micromamba
             # - rye
             - uv
-            - gdm257/micromamba
+            # - gdm257/micromamba
             - ruff
             # - hatch
             # - volta
@@ -466,6 +466,7 @@ tasks:
             # - listary
             # - orange
             # - spacesniffer
+            - wiztree
             # - squirreldisk
             # - alldup
             # - restic
@@ -583,7 +584,8 @@ tasks:
             # - eudic
             - gdm257/awesome-dict
             # - ting-en
-            - ditto
+            # - ditto
+            - gdm257/ecopastepro
             # - ecopaste
             # - copyq
             # - clipboard
