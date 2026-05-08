@@ -21,6 +21,7 @@ auto-track = '''
     | CLAUDE.local.md | root-glob:".claude/rules/local" | root-glob:".claude/settings.local.json" | root-glob:".mcp.json"
     | age.key | key.txt
     | *.swp
+    | .~lock.*
   )
 '''
 
