@@ -148,7 +148,7 @@
     },
     "bash": {
       // fallback
-      "*": "ask",
+      "*": "allow",
       // allow rm
       "rmdir *": "allow",
       "mv *": "allow",
