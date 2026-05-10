@@ -234,9 +234,12 @@ tasks:
             # - gdm257/goose-desktop
             # - cc-switch
             # - gdm257/claude-squad
-            - gdm257/sudocode
+            # - gdm257/sudocode
             # - gdm257/auto-claude
             - beads
+            - beads-rust
+            - beads-viewer
+            - abacus
             - gdm257/rulesync
             - vim
             # - vimtutor
@@ -1050,7 +1053,7 @@ tasks:
             - ddns-go
             # - rustdesk
             # - parsec
-            - moonlight
+            - gdm257/moonlight
             - sunshine
             # - scrcpy
             # - qtscrcpy

@@ -30,6 +30,8 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "npm:cc-sdd" = "latest"
 "npm:claude-code-workflow" = "latest"
 "npm:@mindfoldhq/trellis" = "beta"
+"npm:beads-kanban-ui" = "latest"
+"npm:beads-ui" = "latest"
 "npm:@intellectronica/ruler" = "latest"
 # "npm:openskills" = "latest"
 "npm:@gdm257/openskills" = "latest"
