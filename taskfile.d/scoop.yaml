@@ -258,13 +258,7 @@ tasks:
             # - spyder
             # - sourcetrail
             # - masscode
-            - mogan
-            - miktex
-            - perl
-            - texstudio
-            # - texmaker
-            # - lyx
-            # - texmacs
+            # - texstudio
             - ldap-admin
             - redis
             # - postgresql14
