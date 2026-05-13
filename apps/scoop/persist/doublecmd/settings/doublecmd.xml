@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>431</Left>
-      <Top>243</Top>
+      <Left>598</Left>
+      <Top>144</Top>
       <Width>1106</Width>
       <Height>677</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -627,6 +627,8 @@
     <HotDir Name="miniconda" Path="C:\Users\demo\miniconda3\envs"/>
     <HotDir Name="openclaw" Path="C:\Users\demo\.openclaw"/>
     <HotDir Name="OpenPackage" Path="C:\Users\demo\.openpackage"/>
+    <HotDir Name="agents skills" Path="C:\Users\demo\.agents"/>
+    <HotDir Name="skillshare" Path="C:\Users\demo\AppData\Roaming\skillshare"/>
     <HotDir Name="openskills" Path="C:\Users\demo\.agent\skills"/>
     <HotDir Name="openspec" Path="C:\Users\demo\AppData\Roaming\openspec"/>
     <HotDir Name="pencil" Path="C:\Users\demo\.pencil"/>

@@ -26,24 +26,15 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "go:golang.org/x/tools/gopls" = "v0.21.0"
 
 "npm:neoss" = { version = "latest", os = ["linux"] }
-"npm:jj-stack" = "latest"
-"npm:cc-sdd" = "latest"
-"npm:claude-code-workflow" = "latest"
 "npm:@mindfoldhq/trellis" = "beta"
+"npm:openspec" = "latest"
 "npm:beads-kanban-ui" = "latest"
 "npm:beads-ui" = "latest"
-"npm:@intellectronica/ruler" = "latest"
-# "npm:openskills" = "latest"
-"npm:@gdm257/openskills" = "latest"
-"npm:@modelcontextprotocol/inspector" = "latest"
-"npm:openclaw" = "latest"
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/gdm257/magnetizer.git" = "main"
 "pipx:fonttools" = { version = "latest", extras = "ufo,lxml,woff,unicode" }
 "pipx:httpie" = "latest"
-"pipx:p115qrcode" = "latest"
 "pipx:marimo" = { version = "latest", extras = "recommended" }
 "pipx:ptpython" = "latest"
 "pipx:pyright" = "latest"
-"pipx:graphifyy" = "latest"

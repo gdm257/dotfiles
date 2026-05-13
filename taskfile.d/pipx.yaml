@@ -157,6 +157,7 @@ tasks:
             # - vdirsyncer
             # - ratarmount
             # - kubediagrams
+            - graphifyy
             - git-filter-repo
             - git+https://github.com/karpathy/rendergit
             # - git+https://github.com/github/spec-kit
