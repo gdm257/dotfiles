@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "autoupdate": true,
+  "autoupdate": false,
   "formatter": {
     "oxfmt": {
       "disabled": true,
@@ -77,8 +77,6 @@
     },
   },
   "instructions": [
-    ".kiro/steering/*.md",
-    "packages/*/AGENTS.md",
     ".claude/rules/**.md",
     // ".cursor/rules/*.md", ".cursorrules",
     // ".windsurf/rules/*.md", "global_rules.md",
@@ -87,6 +85,7 @@
     // "GEMINI.md",
     // "CRUSH.md", "CRUSH.local.md",
     // "openspec/*.md",
+    // ".kiro/steering/*.md",
     // ".augment/rules/*.md",
     // ".github/copilot-instructions.md",
     // ".clinerules/*.md",
@@ -94,7 +93,7 @@
     // ".trae/rules/*.md",
     // ".voidrules",
     // "CODE_OF_CONDUCT.md",
-    "CONTRIBUTING.md",
+    // "CONTRIBUTING.md",
   ],
   "plugin": [
     // Lock version to speedup boot
