@@ -99,6 +99,11 @@
     // Lock version to speedup boot
     "opencode-wakatime@1.3.7", // ~/.wakatime.cfg
   ],
+  "compaction": {
+    "prune": true, // keep 40K + 2 tool output (claude code force enables and has to enable this feature)
+    "auto": true,
+    "reserved": 80000, // Useful for 200K context window
+  },
   "agent": {},
   "command": {},
   "mcp": {},
