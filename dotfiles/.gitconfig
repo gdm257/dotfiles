@@ -5,9 +5,10 @@
 [core]
 	longpaths = true
 	quotepath = false
-	eol = lf
-	autocrlf = input
+  symlinks = true
 	safecrlf = true
+	autocrlf = false
+	eol = lf
 	editor = vim
 	paper = delta
 [interactive]
