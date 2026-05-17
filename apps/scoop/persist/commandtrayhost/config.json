@@ -22,6 +22,26 @@
     },
     {
       "enabled": false,
+      "name": "Codeg",
+      "path": "C:\\Users\\demo\\scoop\\shims\\",
+      "cmd": "codeg-server.exe",
+      "working_directory": "C:\\Users\\demo\\scoop\\apps\\codeg\\current\\",
+      "addition_env_path": "",
+      "use_builtin_console": false,
+      "is_gui": false
+    },
+    {
+      "enabled": false,
+      "name": "OpenACP",
+      "path": "C:\\Users\\demo\\AppData\\Local\\mise\\installs\\npm-openacp-cli\\2026.506.1\\bin\\",
+      "cmd": "openacp.exe --foreground --local",
+      "working_directory": "C:\\Users\\demo\\codebase\\openacp-workspace",
+      "addition_env_path": "",
+      "use_builtin_console": false,
+      "is_gui": false
+    },
+    {
+      "enabled": false,
       "name": "OpenCode",
       "path": "C:\\Users\\demo\\scoop\\shims\\",
       "cmd": "opencode.exe serve --hostname 0.0.0.0 --port 4096 --log-level INFO",
@@ -227,7 +247,7 @@
   "repeat_mod_hotkey": false, // 是否长按算多次,Windows XP下面无效
   "global_hotkey_alpha_step": 5, // 上面透明度调节的幅度
   "show_hotkey_in_menu": true, // 在菜单后面加上成功注册的热键
-  "enable_hotkey": true,
+  "enable_hotkey": false,
   "start_show_silent": true, // 启动的时候屏幕不会闪(也就是等到获取到窗口才显示)
   "auto_hot_reloading_config": true, // 这个为true时，相当于自动点击加载配置弹窗的否
   "auto_update": true,
