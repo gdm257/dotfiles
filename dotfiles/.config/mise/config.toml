@@ -26,10 +26,9 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "go:golang.org/x/tools/gopls" = "v0.21.0"
 
 "npm:neoss" = { version = "latest", os = ["linux"] }
+"npm:@openacp/cli" = "latest"
 "npm:@mindfoldhq/trellis" = "beta"
 "npm:openspec" = "latest"
-"npm:beads-kanban-ui" = "latest"
-"npm:beads-ui" = "latest"
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/gdm257/magnetizer.git" = "main"

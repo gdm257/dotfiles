@@ -1,0 +1,31 @@
+version: "3"
+
+tasks:
+  install:
+    desc: "Install app <APP>"
+    requires:
+      vars:
+        - APP
+    cmds:
+      - pi install {{.APP}}
+
+  extension:install:
+    internal: true
+    requires:
+      vars:
+        - APPS
+    cmds:
+      - for: { var: APPS, as: APP }
+        task: install
+        vars:
+          APP: "{{.APP}}"
+
+  extension:curated-list:
+    cmds:
+      - task: extension:install
+        vars:
+          APPS:
+            - npm:pi-subagents
+            - npm:pi-mcp-adapter
+            - npm:pi-ask-user
+            - npm:pi-btw

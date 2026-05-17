@@ -631,6 +631,7 @@
     <HotDir Name="skillshare" Path="C:\Users\demo\AppData\Roaming\skillshare"/>
     <HotDir Name="openskills" Path="C:\Users\demo\.agent\skills"/>
     <HotDir Name="openspec" Path="C:\Users\demo\AppData\Roaming\openspec"/>
+    <HotDir Name="openacp-workspace" Path="C:\Users\demo\openacp-workspace"/>
     <HotDir Name="pencil" Path="C:\Users\demo\.pencil"/>
     <HotDir Name="pdm" Path="C:\Users\demo\AppData\Local\pdm\pdm"/>
     <HotDir Name="pipx" Path="C:\Users\demo\.local\pipx"/>

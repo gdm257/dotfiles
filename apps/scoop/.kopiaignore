@@ -39,4 +39,5 @@ Everything.db
 **/vscode/data/
 **/vscodium/data/
 **/winfsp-np/
+**/winswctl/shims/*.exe
 **/zeal/docsets/

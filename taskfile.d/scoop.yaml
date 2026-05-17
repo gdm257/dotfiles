@@ -211,12 +211,14 @@ tasks:
             # - main/ironclaw
             # - picoclaw
             - gdm257/open-pencil
+            - gdm257/codeg
             # - gdm257/aionui
-            - gdm257/paseo
+            # - gdm257/paseo
             - opencode-desktop
             # - gdm257/opencode-worktree
             # - gdm257/ocx
-            # - gdm257/skillshare
+            - gdm257/skillshare
+            - gdm257/rulesync
             # - idea-portable
             # - imhex
             - vscode
@@ -237,10 +239,9 @@ tasks:
             # - gdm257/sudocode
             # - gdm257/auto-claude
             - beads
-            - beads-rust
+            # - beads-rust
             - beads-viewer
-            - abacus
-            - gdm257/rulesync
+            # - abacus
             - vim
             # - vimtutor
             - neovim
@@ -581,8 +582,8 @@ tasks:
             # - eudic
             - gdm257/awesome-dict
             # - ting-en
-            # - ditto
-            - gdm257/ecopastepro
+            - ditto
+            # - gdm257/ecopastepro
             # - ecopaste
             # - copyq
             # - clipboard
@@ -996,6 +997,7 @@ tasks:
             - atac
             # - keploy
             - postman
+            - bruno
             # - hoppscotch
             - gdm257/whistle
             - wireshark
@@ -1127,6 +1129,7 @@ tasks:
             # - gdm257/dsc
             # - main/winsw
             # - winsw-alpha
+            - gdm257/winswctl
             # - nssm
             # - activitywatch
             - tai
