@@ -28,7 +28,7 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "npm:neoss" = { version = "latest", os = ["linux"] }
 "npm:@openacp/cli" = "latest"
 "npm:@mindfoldhq/trellis" = "beta"
-"npm:openspec" = "latest"
+"npm:@fission-ai/openspec" = "latest"
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/gdm257/magnetizer.git" = "main"
@@ -37,3 +37,4 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "pipx:marimo" = { version = "latest", extras = "recommended" }
 "pipx:ptpython" = "latest"
 "pipx:pyright" = "latest"
+"pipx:semble" = "latest"
