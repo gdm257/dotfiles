@@ -25,6 +25,9 @@
 /dotfiles/.config/argocd
 /dotfiles/.config/bin
 /dotfiles/.config/opencode/package-lock.json
+/dotfiles/.config/opencode/AGENTS.md
+/dotfiles/.config/opencode/skills
+/dotfiles/.config/opencode/plugins
 
 /libraries/*
 
