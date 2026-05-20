@@ -27,6 +27,7 @@
 /dotfiles/.config/opencode/package-lock.json
 /dotfiles/.config/opencode/AGENTS.md
 /dotfiles/.config/opencode/skills
+/dotfiles/.config/opencode/agent
 /dotfiles/.config/opencode/plugins
 
 /libraries/*
