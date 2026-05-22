@@ -29,6 +29,7 @@
     "task": {
       "explore": "deny"
     },
+    "mcp__code-review-graph": { "*": "allow" },
     "bash": {
       "*": "ask",
       "git push *": "ask",
