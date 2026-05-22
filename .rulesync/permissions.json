@@ -8,12 +8,10 @@
       "*": "deny"
     },
     "edit": {
-      "*": "allow",
       ".sudocode/issues.jsonl": "deny",
       ".sudocode/specs.jsonl": "deny"
     },
     "read": {
-      "*": "allow",
       "~/.zshrc": "allow",
       "./src/**": "allow",
       "**/*.md": "allow",
@@ -31,7 +29,6 @@
     },
     "mcp__code-review-graph": { "*": "allow" },
     "bash": {
-      "*": "ask",
       "git push *": "ask",
       "jj git push *": "ask",
       "xmake push *": "ask",
