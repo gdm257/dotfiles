@@ -211,6 +211,7 @@ tasks:
             # - main/ironclaw
             # - picoclaw
             - gdm257/open-pencil
+            - gdm257/open-codesign
             - gdm257/codeg
             # - gdm257/aionui
             # - gdm257/paseo
@@ -243,6 +244,7 @@ tasks:
             - beads-viewer
             # - abacus
             - gdm257/beads-plan
+            - gdm257/archon
             - vim
             # - vimtutor
             - neovim
@@ -1120,7 +1122,8 @@ tasks:
       - task: install:bulk
         vars:
           APPS:
-            - gdm257/task-explorer
+            # - gdm257/task-explorer
+            - systeminformer
             - openark
             # - bottom
             - btop

@@ -45,6 +45,7 @@ tasks:
             # - Canonical.Ubuntu.2204
             # - jtroo.kanata_gui
             # - Xmarmalade.AlistHelper
+            - Powerformer.OpenDesign
             - Anthropic.ClaudeCode
             # - Codeium.Windsurf
             # - WEIFENG2333.VideoCaptioner

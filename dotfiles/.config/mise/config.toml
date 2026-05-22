@@ -38,3 +38,4 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "pipx:ptpython" = "latest"
 "pipx:pyright" = "latest"
 "pipx:semble" = "latest"
+"pipx:code-review-graph" = "latest"
