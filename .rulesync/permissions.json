@@ -274,12 +274,6 @@
       "npm *": "allow",
       "go *": "allow",
       "cargo *": "allow"
-    },
-    "Skill": {
-      "*": "allow"
-    },
-    "skill": {
-      "*": "allow"
     }
   }
 }
