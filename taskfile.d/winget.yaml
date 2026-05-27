@@ -188,6 +188,7 @@ tasks:
             - Canva.Affinity
             - ONLYOFFICE.DesktopEditors
             # - ModOrganizer2.modorganizer
+            - dorssel.usbipd-win
 
   install:bulk:
     platforms: [windows]

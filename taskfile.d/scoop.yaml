@@ -215,6 +215,7 @@ tasks:
             - gdm257/codeg
             # - gdm257/aionui
             # - gdm257/paseo
+            # - gdm257/nezha
             - opencode-desktop
             # - gdm257/opencode-worktree
             # - gdm257/ocx
@@ -574,6 +575,7 @@ tasks:
             - john-the-ripper
             - 7z2hashcat
             - pdftk
+            - officecli
             - poppler
             # - gpg
             - mkcert
@@ -619,6 +621,7 @@ tasks:
             # - zettlr
             # - typora
             # - pdf-xchange-editor
+            - gdm257/killerpdf
             # - koodo-reader
             # - latex
             # - msys2
@@ -894,6 +897,7 @@ tasks:
             # - reaper
             - lmms
             - audacity
+            - gdm257/micyou
             - domino
             - helio
             - hydrogen
@@ -1396,6 +1400,7 @@ tasks:
             # - cmctl
             # - korb
             # - wsl2-distro-manager
+            - wsl-dashboard
             # - WsaToolbox
             # - wsldl
             # - sandboxie-plus-np
