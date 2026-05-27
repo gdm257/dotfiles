@@ -844,6 +844,7 @@ tasks:
             - kdenlive
             # - shotcut losslesscut
             - gyroflow
+            - opentoonz
             - obs-studio
             - ZXPInstaller
             # - adobe-creative-cloud-cleaner-tool

@@ -29,6 +29,7 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "npm:@openacp/cli" = "latest"
 "npm:@mindfoldhq/trellis" = "beta"
 "npm:@fission-ai/openspec" = "latest"
+"npm:@agentmemory/agentmemory" = { version = "latest", postinstall = "agentmemory connect claude-code --with-hooks" }
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/gdm257/magnetizer.git" = "main"
