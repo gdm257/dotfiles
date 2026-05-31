@@ -1,0 +1,19 @@
+entrypoint: go
+command: install
+
+run:
+  # - {args: "github.com/gdm257/scoop-search@gdm257-patch-1"}
+  - {args: "github.com/PaulXu-cn/go-mod-graph-chart/gmchart@latest"}
+  - {args: "github.com/go-delve/delve/cmd/dlv@latest"}
+  # - {args: "github.com/chenjiandongx/sniffer@latest"}
+  # - {args: "github.com/zmap/zdns@latest"}
+  - {args: "github.com/gofireflyio/aiac/v4@latest"}
+  - {args: "github.com/google/go-licenses@latest"}
+  # - {args: "github.com/zquestz/s@latest"}
+  # - {args: "github.com/DimitarPetrov/stegify@latest"}
+  - {args: "github.com/charmbracelet/freeze@latest"}
+  - {args: "github.com/zeromicro/go-zero/tools/goctl@latest"}
+  - {args: "github.com/go-kratos/kratos/cmd/kratos/v2@latest"}
+  # - {args: "github.com/allyring/pvw@latest"}
+  # - {args: "github.com/chip/pathos@latest"}
+  - {args: "entgo.io/ent/cmd/ent@latest"}

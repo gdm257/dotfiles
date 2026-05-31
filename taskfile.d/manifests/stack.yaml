@@ -1,0 +1,5 @@
+entrypoint: stack
+command: install
+
+run:
+  - {args: BNFC}

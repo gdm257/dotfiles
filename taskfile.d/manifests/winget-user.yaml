@@ -1,0 +1,35 @@
+entrypoint: winget
+command: "install --source winget --id"
+
+run:
+  - { args: XPDNH1FMW7NB40 }
+  - { args: Microsoft.WindowsTerminal }
+  - { args: Mozilla.SOPS }
+  - { args: commercialhaskell.stack }
+  - { args: JRSoftware.InnoSetup }
+  # - {args: Espanso.Espanso}
+  # - {args: SublimeHQ.SublimeText.3}
+  # - {args: ZedIndustries.Zed}
+  # - {args: ByteDance.Trae}
+  # - {args: 123.123pan}
+  - { args: 115.115Chrome }
+  # - {args: Ollama.Ollama}
+  - { args: ElementLabs.LMStudio }
+  # - {args: ChidiWilliams.Buzz}
+  - { args: kangfenmao.CherryStudio }
+  - { args: Pencil.Desktop }
+  # - {args: kapitainsky.RcloneBrowser}
+  # - {args: FastCopy.FastCopy}
+  # - {args: Falcosoft.SoundfontMidiPlayer}
+  # - {args: Python.PythonInstallManager}
+  # - {args: Anaconda.Miniconda3}
+  # - {args: Mamba.Micromamba}
+  - { args: Python.Python.3.10 }
+  # - {args: Canonical.Ubuntu.2204}
+  # - {args: jtroo.kanata_gui}
+  # - {args: Xmarmalade.AlistHelper}
+  - { args: Powerformer.OpenDesign }
+  - { args: Anthropic.ClaudeCode }
+  # - {args: Codeium.Windsurf}
+  # - {args: WEIFENG2333.VideoCaptioner}
+  - { args: ItchIo.Itch }

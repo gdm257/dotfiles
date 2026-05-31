@@ -1,0 +1,93 @@
+entrypoint: scoop
+command: install
+
+run:
+  - { args: mediainfo }
+  - { args: mediainfo-gui }
+  - { args: digikam }
+  - { args: gdm257/bili-sync }
+  - { args: tinymediamanager }
+  - { args: tsukimi }
+  - { args: jellyfin }
+  - { args: jellyfin-mpv-shim }
+  - { args: gdm257/EmbyToLocalPlayer }
+  # - {args: streamlink}
+  - { args: mpv-handler }
+  - { args: mpv.net-dw }
+  # - {args: mpv-lazy}
+  # - {args: mpv-lazy_hu3rror}
+  # - {args: mpv-Portable}
+  # - {args: "mpv.net implay mpv.net-cm mpv.net-dw"}
+  - { args: potplayer }
+  - { args: wiliwili }
+  # - {args: kikoplay}
+  # - {args: dandanplay}
+  - { args: DanmakuFactory }
+  # - {args: AssFontSubset}
+  - { args: videosubfinder }
+  - { args: ChineseSubFinder }
+  - { args: SubRenamer }
+  - { args: fontloadersub }
+  # - {args: lavfilters}
+  # - {args: madvr}
+  # - {args: anime4kcpp-cli}
+  # - {args: anime4kcpp-gui}
+  # - {args: anime4k-glsl}
+  # - {args: anime4kcpp-avisynthplus-plugin}
+  # - {args: anime4kcpp-vapoursynth-plugin}
+  # - {args: anime4kcpp-dsfilter}
+  # - {args: acnet-glsl}
+  - { args: video2x }
+  - { args: magpie }
+  # - {args: vidbatch}
+  # - {args: megui-fixed@2896}
+  # - {args: megui}
+  - { args: megui_fixed }
+  # - {args: gdm257/okegui}
+  - { args: mkvtoolnix }
+  - { args: quickcut }
+  - { args: gdm257/ffmpegfreeui }
+  - { args: ffmpeg }
+  # - {args: shanaencoder}
+  # - {args: qwinff}
+  - { args: aegisub-arch }
+  - { args: subtitleedit }
+  - { args: video-srt }
+  - { args: sushi }
+  # - {args: Blender-Portable}
+  - { args: blender }
+  - { args: shadered }
+  - { args: pixelorama }
+  - { args: material-maker }
+  - { args: kicad }
+  - { args: fritzing }
+  - { args: librecad }
+  - { args: FreeCAD_dodorz }
+  - { args: makehuman }
+  - { args: sweethome3d }
+  - { args: pmx-editor }
+  - { args: miku-miku-model }
+  - { args: mikumikudance }
+  - { args: natron }
+  # - {args: olive-editor-nightly}
+  - { args: olive-editor }
+  - { args: kdenlive }
+  # - {args: "shotcut losslesscut"}
+  - { args: gyroflow }
+  - { args: opentoonz }
+  - { args: obs-studio }
+  - { args: ZXPInstaller }
+  # - {args: adobe-creative-cloud-cleaner-tool}
+  # - {args: UAC.ZXPInstaller}
+  # - {args: captura}
+  # - {args: sharex}
+  # - {args: screentogif}
+  # - {args: aegisub}
+  # - {args: mpc-be}
+  # - {args: onelist}
+  # - {args: ArctimePro_cc713}
+  # - {args: nvidia-geforce-experience}
+  # - {args: emby}
+  # - {args: terminus-player}
+  # - {args: EmbyTheater-Portable}
+  # - {args: freetube}

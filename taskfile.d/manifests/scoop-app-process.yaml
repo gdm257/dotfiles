@@ -1,0 +1,43 @@
+entrypoint: scoop
+command: install
+
+run:
+  # - {args: gdm257/task-explorer}
+  - { args: systeminformer }
+  - { args: openark }
+  # - {args: bottom}
+  - { args: btop }
+  # - {args: ntop}
+  # - {args: procs}
+  # - {args: gotop}
+  - { args: commandtrayhost }
+  # - {args: gdm257/dsc}
+  # - {args: main/winsw}
+  # - {args: winsw-alpha}
+  - { args: gdm257/winswctl }
+  # - {args: nssm}
+  # - {args: activitywatch}
+  - { args: tai }
+  - { args: gdm257/lite-monitor }
+  - { args: memreduct }
+  - { args: runasdate }
+  - { args: locale-emulator }
+  # - {args: locale-remulator}
+  # - {args: watch}
+  # - {args: noti}
+  # - {args: procexp}
+  # - {args: nvs}
+  # - {args: unetbootin}
+  # - {args: keepass-plugin-yafd}
+  # - {args: keepass-plugin-keetraytotp}
+  # - {args: keepass-plugin-sequencer}
+  # - {args: keepass-plugin-keepassrpc}
+  # - {args: listarypro}
+  # - {args: supervisord-go}
+  # - {args: PowerToys-Portable}
+  # - {args: activitywatch_chawyehsu}
+  # - {args: winmemorycleaner}
+  # - {args: systeminformer-nightly_hu3rror}
+  # - {args: komorebi}
+  # - {args: glazewm}
+  # - {args: fleetctl}

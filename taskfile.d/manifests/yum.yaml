@@ -1,0 +1,5 @@
+entrypoint: yum
+command: groupinstall
+
+run:
+  - {args: "Development Tools"}

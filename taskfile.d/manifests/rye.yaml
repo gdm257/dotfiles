@@ -1,0 +1,5 @@
+entrypoint: rye
+command: "toolchain fetch"
+
+run:
+  - {args: "3.11.6"}

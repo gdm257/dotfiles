@@ -1,0 +1,55 @@
+entrypoint: scoop
+command: install
+
+run:
+  # - {args: uutils-coreutils}
+  - { args: busybox }
+  # - {args: vim}
+  - { args: file }
+  - { args: curl }
+  - { args: wget }
+  - { args: sysinternals }
+  # - {args: sysinternals_ScoopInstaller}
+  # - {args: gaojitools}
+  # - {args: fufu-tools}
+  - { args: officebox }
+  # - {args: joytokey}
+  - { args: antimicrox }
+  - { args: ludusavi }
+  - { args: mo2 }
+  - { args: vortex }
+  - { args: playnite }
+  # - {args: steam-rom-manager}
+  - { args: gdm257/ReinaManager }
+  # - {args: gdm257/vnite}
+  # - {args: gdm257/WinDeckHelper}
+  # - {args: Hen3}
+  - { args: thprac }
+  - { args: steam }
+  - { args: SGDBoop }
+  # - {args: steam-deck-tools}
+  # - {args: HeroicGameLauncher-Portable}
+  # - {args: EpicGamesLauncher-Portable}
+  # - {args: GOGGalaxy-Portable}
+  - { args: gog-galaxy }
+  # - {args: itch}
+  # - {args: watt-toolkit}
+  # - {args: snap-hutao}
+  # - {args: collapse}
+  - { args: starward }
+  - { args: game-cheats-manager }
+  - { args: gdm257/project-86 }
+  - { args: gdm257/GriefSyndrome }
+  - { args: gdm257/airi }
+  - { args: golly }
+  - { args: lizzieyzy }
+  - { args: katrain }
+  # - {args: ogatak}
+  # - {args: q5go}
+  # - {args: sabaki}
+  - { args: pachi }
+  - { args: leela-zero }
+  - { args: leela-zero-network }
+  - { args: katago }
+  - { args: katago-tensorrt }
+  - { args: ikatago }

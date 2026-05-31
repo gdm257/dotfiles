@@ -1,0 +1,71 @@
+entrypoint: scoop
+command: install
+
+run:
+  - { args: scoop-search }
+  # - {args: ss}
+  - { args: wingetcreate }
+  # - {args: wingetui}
+  - { args: UniGetUI }
+  - { args: main/cargo-binstall }
+  - { args: cargo-update }
+  - { args: winget }
+  # - {args: winget-preview}
+  - { args: pkgx }
+  # - {args: eget}
+  - { args: bin-manager }
+  # - {args: stew}
+  # - {args: Baulk_dodorz}
+  # - {args: shovel}
+  # - {args: npackd}
+  - { args: snappy-driver-installer-origin }
+  # - {args: lux}
+  # - {args: bbdown-beta}
+  # - {args: bbdown}
+  # - {args: downkyi}
+  - { args: pixivutil2 }
+  # - {args: pixivbiu}
+  # - {args: youtube-dl}
+  # - {args: youtube-dl-gui}
+  - { args: yt-dlp }
+  - { args: gallery-dl }
+  # - {args: ariang-native}
+  - { args: rclone }
+  - { args: rclone-browser }
+  - { args: gdm257/clouddrive2 }
+  # - {args: winfsp-np-beta}
+  - { args: croc }
+  # - {args: cwRsync}
+  - { args: winscp }
+  # - {args: synctrayzor}
+  # - {args: landrop}
+  # - {args: megasync}
+  # - {args: 115}
+  # - {args: BaiduNetdisk}
+  # - {args: openlist}
+  - { args: openlist-desktop }
+  # - {args: alist-helper}
+  # - {args: hfs}
+  # - {args: sftpgo}
+  # - {args: dukto}
+  # - {args: dufs}
+  - { args: officetoolplus }
+  # - {args: lky-officetools}
+  # - {args: qbittorrent-portable}
+  - { args: qbittorrent-enhanced }
+  - { args: gdm257/qbbanhelper }
+  # - {args: annie}
+  - { args: fake115uploader }
+  - { args: fake115-go }
+  - { args: BaiduPanFilesTransfers }
+  - { args: baidupcs-go }
+  - { args: localsend }
+  # - {args: FileCentipede}
+  # - {args: ipfs-desktop}
+  - { args: kubo }
+  - { args: gdm257/fav }
+  # - {args: FileCentipede}
+  # - {args: termscp}
+  - { args: s3browser }
+  # - {args: windows-iso-downloader}
+  - { args: gopeed }

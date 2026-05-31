@@ -1,0 +1,8 @@
+entrypoint: scoop
+command: config
+
+run:
+  - {args: "aria2-enabled true"}
+  - {args: "debug true"}
+  - {args: "use_sqlite_cache true"}
+  - {args: "use_lessmsi true"}

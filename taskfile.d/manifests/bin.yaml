@@ -1,0 +1,9 @@
+entrypoint: bin
+command: install
+
+run:
+  # === common ===
+  - { args: "usagi-flow/evil-helix" }
+  # === linux ===
+  - { args: "github.com/joehillen/sysz" }
+  - { args: "github.com/servicer-labs/servicer $HOME/.local/bin/servicer" }

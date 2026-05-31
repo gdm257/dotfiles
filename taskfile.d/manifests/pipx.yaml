@@ -1,0 +1,126 @@
+entrypoint: pipx
+command: install
+
+run:
+  # === common ===
+  # - {args: pipx}
+  # - {args: virtualenvwrapper-win}
+  # - {args: pipenv}
+  # - {args: pex}
+  # - {args: ipython}
+  - { args: ptpython }
+  - { suffix: "--include-deps", args: "marimo[recommended]" }
+  - { args: pdm }
+  # - {args: poetry}
+  # - {args: hatch}
+  # - {args: pyinstaller}
+  # - {args: pyarmor}
+  # - {args: nuitka}
+  - { args: juv }
+  # - {args: flake8}
+  # - {args: mypy}
+  # - {args: ruff}
+  # - {args: cookiecutter}
+  # - {args: sedsed}
+  # - {args: jc}
+  - { args: httpie }
+  # - {args: mycli}
+  # - {args: tqdm}
+  # - {args: pandasgui}
+  # - {args: "scalene"}
+  # - {args: "glances windows-curses"}
+  # - {args: sphinx}
+  # - {args: mkdocs}
+  - { args: asciinema }
+  # - {args: bgmi}
+  # - {args: flexget}
+  # - {args: coredumpy}
+  # - {args: visidata}
+  # - {args: csvtotable}
+  - { args: pipdeptree }
+  # - {args: "scrapy; inject ipython"}
+  # - {args: "black[d]"}
+  # - {args: jsoncsv}
+  # - {args: scrapyd-client}
+  # - {args: scrapyd}
+  # - {args: scrapydweb}
+  # - {args: "httpx[cli]"}
+  # - {args: archivebox}
+  - { args: code2flow }
+  - { args: "git+https://github.com/gdm257/magnetizer.git" }
+  # - {args: torrent-parser}
+  # - {args: tox}
+  # - {args: pre-commit}
+  # - {args: isort}
+  # - {args: jupyter}
+  # - {args: jupyterhub}
+  # - {args: "feapder[all]"}
+  - { args: iredis }
+  # - {args: icdiff}
+  - { args: gita }
+  # - {args: eg}
+  # - {args: git-sim}
+  # - {args: sqlmodel}
+  # - {args: shell-gpt}
+  # - {args: Quick-Cut}
+  # - {args: ansible-lint}
+  # - {args: speedtest-cli}
+  # - {args: pyside6}
+  # - {args: uncompyle6}
+  # - {args: docformatter}
+  - { args: "datamodel-code-generator[http]" }
+  # - {args: apkleaks}
+  # - {args: flake8-to-ruff}
+  # - {args: pgcli}
+  # - {args: litecli}
+  # - {args: gdbgui}
+  # - {args: playwithmpv}
+  # - {args: bilix}
+  # - {args: vardbg}
+  # - {args: jupyterlab}
+  # - {args: git-imerge}
+  - { args: radian }
+  - { args: "fonttools[ufo,lxml,woff,unicode]" }
+  - { args: "pix2tex[gui]" }
+  # - {args: rapid_latex_ocr}
+  # - {args: texify}
+  # - {args: paracelsus}
+  - { args: ssh-audit }
+  # - {args: sqlalchemy-data-model-visualizer}
+  # - {args: pywxdump}
+  - { args: "harlequin[postgres,mysql,bigquery,trino,odbc,s3]" }
+  # - {args: deadlink}
+  # - {args: tiptop}
+  # - {args: toolong}
+  # - {args: ciphey}
+  # - {args: "pyscaffold[all]"}
+  # - {args: stego-lsb}
+  # - {args: copier}
+  # - {args: open-interpreter}
+  # - {args: scapy}
+  # - {args: ansible-playbook-grapher}
+  # - {args: aider-chat}
+  # - {args: kupo}
+  # - {args: eml-analyzer}
+  # - {args: eml-to-html}
+  # - {args: yen}
+  # - {args: packaged}
+  - { args: radon }
+  # - {args: basic-pitch}
+  # - {args: dotdrop}
+  # - {args: pretzelai}
+  # - {args: openapi-python-client}
+  # - {args: openbb-cli}
+  - { args: rexi }
+  - { args: dotbot }
+  - { args: p115qrcode }
+  # - {args: vdirsyncer}
+  # - {args: ratarmount}
+  # - {args: kubediagrams}
+  - { args: graphifyy }
+  - { args: git-filter-repo }
+  - { args: "git+https://github.com/karpathy/rendergit" }
+  # - {args: "git+https://github.com/github/spec-kit"}
+  # === unix ===
+  - { args: isd }
+  - { args: "--include-deps --preinstall netaddr ansible" }

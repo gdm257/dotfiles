@@ -1,0 +1,69 @@
+entrypoint: scoop
+command: install
+
+run:
+  - { args: taisei }
+  - { args: osulazer }
+  - { args: collection-manager }
+  - { args: gdm257/oszsave }
+  - { args: osuplayer }
+  - { args: danser-go }
+  - { args: rewind }
+  # - {args: storybrew}
+  - { args: OsuBeatmapDownloader }
+  # - {args: OsuRankedBeatmapDownloader}
+  - { args: aimp }
+  # - {args: "foobar2000 foobar2000-encoders foobar2000-foobox-en-pack"}
+  # - {args: foobar2000-asion-cn-plus}
+  # - {args: musicbee}
+  # - {args: ampcast}
+  - { args: cuetools }
+  # - {args: picard}
+  # - {args: balabolka}
+  - { args: musescore }
+  # - {args: lilypond}
+  # - {args: everyone-piano}
+  # - {args: freepiano}
+  # - {args: eac}
+  - { args: 163MusicLyrics }
+  # - {args: navidrome}
+  - { args: gdm257/viena }
+  - { args: gdm257/polyphone }
+  # - {args: reaper}
+  - { args: lmms }
+  - { args: audacity }
+  - { args: gdm257/micyou }
+  - { args: domino }
+  - { args: helio }
+  - { args: hydrogen }
+  - { args: mixxx }
+  - { args: gdm257/keyfinder }
+  - { args: gdm257/wavetone }
+  # - {args: fluidsynth}
+  - { args: gdm257/kiva }
+  - { args: gdm257/tmidi }
+  - { args: plmidi }
+  - { args: gdm257/keppy-midi-converter }
+  # - {args: miditrail}
+  - { args: openutau }
+  - { args: utsu }
+  # - {args: vgm2mid}
+  # - {args: midnote}
+  # - {args: smf-dsp}
+  # - {args: infrarecorder}
+  # - {args: InfrarecorderPortable}
+  # - {args: strawberry}
+  # - {args: clementine}
+  # - {args: mp3tag-portable}
+  # - {args: spleeter-gui}
+  # - {args: polyglot}
+  - { args: yesplaymusic }
+  # - {args: feeluown}
+  # - {args: keyfinder}
+  - { args: feishin }
+  # - {args: supersonic}
+  # - {args: gdm257/nsmusics}
+  - { args: retrieval-based-voice-conversion-webui }
+  # - {args: Buzz_dodorz}
+  - { args: gdm257/awesome-scores }
+  - { args: lfs/awesome-sf }

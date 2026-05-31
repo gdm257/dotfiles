@@ -1,0 +1,184 @@
+entrypoint: scoop
+command: install
+
+run:
+  - { args: tor }
+  # - {args: simple-obfs}
+  - { args: proxychains }
+  - { args: gping }
+  # - {args: trippy}
+  # - {args: besttrace}
+  - { args: nexttrace }
+  - { args: bind }
+  - { args: networkmanager }
+  - { args: whosip }
+  - { args: tldx }
+  # - {args: kscan_batkiz}
+  - { args: masscan }
+  - { args: naabu }
+  - { args: tlsx }
+  - { args: subfinder }
+  - { args: nmap-portable }
+  - { args: nuclei }
+  # - {args: fscan}
+  # - {args: coredns}
+  # - {args: sdns}
+  - { args: doggo }
+  - { args: dog }
+  # - {args: ipscan}
+  # - {args: shadowsocks-uri-generator}
+  # - {args: quicksetdns}
+  # - {args: DNSControlCLI-Portable}
+  # - {args: apache}
+  # - {args: nginx}
+  # - {args: caddy}
+  # - {args: xcaddy}
+  # - {args: clash}
+  # - {args: mihomo}
+  # - {args: clashtui}
+  # - {args: clash-for-windows}
+  # - {args: clash-for-windows-portable}
+  # - {args: clashweb}
+  # - {args: clashy}
+  - { args: clash-party }
+  # - {args: mihomo-party}
+  # - {args: clash-verge-rev_chawyehsu}
+  # - {args: clash-nyanpasu}
+  # - {args: clash-verge}
+  # - {args: geoip-country-mmdb}
+  # - {args: v2ray}
+  # - {args: v2ray-domain-list-community}
+  # - {args: v2ray-geoip}
+  # - {args: v2ray-rules-dat}
+  # - {args: qv2ray}
+  # - {args: qv2ray-plugin-command}
+  # - {args: qv2ray-plugin-naiveproxy}
+  # - {args: qv2ray-plugin-ss}
+  # - {args: qv2ray-plugin-ssr}
+  # - {args: qv2ray-plugin-trojan}
+  # - {args: qv2ray-plugin-trojan-go}
+  # - {args: v2rayA}
+  # - {args: tuic}
+  - { args: grpcurl }
+  - { args: tproxy }
+  - { args: websocat }
+  - { args: hurl }
+  # - {args: xh}
+  - { args: curlie }
+  - { args: atac }
+  # - {args: keploy}
+  - { args: postman }
+  - { args: bruno }
+  # - {args: hoppscotch}
+  - { args: gdm257/whistle }
+  - { args: wireshark }
+  # - {args: termshark}
+  # - {args: fiddler}
+  # - {args: mitmproxy}
+  # - {args: stairspeedtest-reborn}
+  # - {args: CloudflareSpeedTest}
+  - { args: tcptunnel }
+  # - {args: portforwarder}
+  # - {args: webhook}
+  # - {args: trafficmonitor}
+  - { args: winnfsd }
+  - { args: gdm257/oauth2l }
+  - { args: main/oauth2c }
+  - { args: telegram }
+  - { args: wechat }
+  - { args: wecom }
+  # - {args: cleanmywechat}
+  # - {args: wechat_ScoopInstaller}
+  # - {args: wechat_akirco}
+  # - {args: WechatExporter}
+  # - {args: pywxdump}
+  # - {args: memotrace}
+  # - {args: WeChatMsg}
+  # - {args: tencent-meeting}
+  - { args: discord }
+  # - {args: chatgpt}
+  - { args: frp }
+  - { args: gdm257/frpmgr }
+  - { args: catsxp }
+  - { args: centbrowser }
+  # - {args: gdm257/chrome-plus}
+  # - {args: chromium}
+  # - {args: brave}
+  # - {args: Brave-Portable}
+  # - {args: brave-beta}
+  - { args: tor-browser }
+  # - {args: HackBrowserData}
+  # - {args: geckodriver}
+  # - {args: chromedriver}
+  # - {args: DataGrip-portable@2020.1.5-201.8538.4}
+  # - {args: sqlitestudio}
+  # - {args: sftpgo}
+  # - {args: deskreen}
+  # - {args: charles}
+  # - {args: mariadb103}
+  # - {args: wakemeonlan}
+  - { args: ddns-go }
+  # - {args: rustdesk}
+  # - {args: parsec}
+  - { args: gdm257/moonlight }
+  - { args: sunshine }
+  # - {args: scrcpy}
+  # - {args: qtscrcpy}
+  - { args: escrcpy }
+  # - {args: ZeroTier}
+  # - {args: mongodb-compass-isolated}
+  # - {args: nps-server}
+  # - {args: nps-client}
+  # - {args: rathole}
+  - { args: iperf3 }
+  # - {args: tailscale}
+  - { args: gdm257/astral }
+  - { args: naiveproxy }
+  - { args: traefik }
+  - { args: gdm257/zoraxy }
+  # - {args: nekoray}
+  # - {args: sing-box}
+  # - {args: hysteria}
+  # - {args: trojan}
+  # - {args: trojan-go}
+  # - {args: leaf}
+  - { args: element }
+  # - {args: gomuks}
+  # - {args: mailspring}
+  # - {args: Thunderbird-Portable}
+  # - {args: simpread-synchelper}
+  - { args: clumsy }
+  # - {args: cherry-studio_naderi}
+  # - {args: chatwise}
+  # - {args: chatgpt-next-web}
+  # - {args: binggpt-portable}
+  # - {args: pidgin}
+  # - {args: chatbox}
+  # - {args: ChatALL-Portable}
+  - { args: main/aichat }
+  # - {args: mcp-linker}
+  # - {args: rivet}
+  # - {args: tutanota}
+  # - {args: dns-jumper}
+  - { args: gns3 }
+  # - {args: q-dns}
+  # - {args: dnsx}
+  # - {args: dnslookup}
+  # - {args: dnsq-go}
+  - { args: hexchat }
+  - { args: chisel }
+  # - {args: lego}
+  # - {args: remoteapptool}
+  # - {args: asnmap}
+  # - {args: jmeter}
+  # - {args: ali}
+  # - {args: packetsender}
+  # - {args: quasara}
+  - { args: bandwhich }
+  # - {args: "npcap sniffnet"}
+  # - {args: dug}
+  # - {args: zpscan}
+  # - {args: hiddify-next}
+  # - {args: hiddify-next_noql-net}
+  # - {args: teleport}
+  # - {args: hostctl}

@@ -1,0 +1,6 @@
+entrypoint: winget
+command: "install --source msstore --id"
+
+run:
+  - { args: XPDNH1FMW7NB40 }
+  - { args: 9nb0h051m4v4 }

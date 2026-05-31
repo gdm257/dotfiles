@@ -1,0 +1,17 @@
+entrypoint: choco
+command: "install -y"
+
+run:
+  - {args: veracrypt}
+  - {args: ext2fsd}
+  - {args: winbtrfs}
+  - {args: vcredist-all}
+  # - {args: omnimidi}
+  # - {args: softether-vpn-client}
+  # - {args: sqlserver-odbcdriver}
+  # - {args: krew}
+  # - {args: virtualmidisynth}
+  # - {args: imdisk}
+  - {args: imdisk-toolkit}
+  # - {args: ssd-z.portable}
+  # - {args: vb-cable}

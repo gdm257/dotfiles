@@ -1,0 +1,6 @@
+entrypoint: dotnet
+command: "tool install -g"
+
+run:
+  - {args: dotnet-repl}
+  - {args: Microsoft.dotnet-interactive}

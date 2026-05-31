@@ -1,7 +1,7 @@
-version: '3'
-run: 'always' # "always" | "once" | "when_changed"
-method: 'checksum' # "checksum" | "timestamp" | "none"
-interval: '5s'
+version: "3"
+run: "always" # "always" | "once" | "when_changed"
+method: "checksum" # "checksum" | "timestamp" | "none"
+interval: "5s"
 # set:
 #   - -e # Exit immediately if command returns a non-zero status
 #   - -x # Print commands
@@ -9,60 +9,476 @@ interval: '5s'
 #   - -s
 #   - dotglob
 silent: false
-output: 'interleaved' # "interleaved" | "group" | "prefixed"
+output: "interleaved" # "interleaved" | "group" | "prefixed"
 
 dotenv:
   - .env
   - .local.env
 
 includes:
-  manifest: {taskfile: './taskfile.d/manifest.yaml', optional: false}
-  adb: {taskfile: './taskfile.d/adb.yaml', optional: true}
-  ansible: {taskfile: './taskfile.d/ansible.yaml', optional: true}
-  apt: {taskfile: './taskfile.d/apt.yaml', optional: true}
-  astro: {taskfile: './taskfile.d/astro.yaml', optional: true}
-  bin: {taskfile: './taskfile.d/bin.yaml', optional: true}
-  brew: {taskfile: './taskfile.d/brew.yaml', optional: true}
-  cargo: {taskfile: './taskfile.d/cargo.yaml', optional: true}
-  cheatsheet: {taskfile: './taskfile.d/cheatsheet.yaml', optional: true}
-  choco: {taskfile: './taskfile.d/choco.yaml', optional: true}
-  claude: {taskfile: './taskfile.d/claude.yaml', optional: true}
-  coolify: {taskfile: './taskfile.d/coolify.yaml', optional: true}
-  dotnet: {taskfile: './taskfile.d/dotnet.yaml', optional: true}
-  git: {taskfile: './taskfile.d/git.yaml', optional: true}
-  go: {taskfile: './taskfile.d/go.yaml', optional: true}
-  k8s: {taskfile: './taskfile.d/k8s.yaml', optional: true}
-  conda: {taskfile: './taskfile.d/conda.yaml', optional: true}
-  nix: {taskfile: './taskfile.d/nix.yaml', optional: true}
-  npm: {taskfile: './taskfile.d/npm.yaml', optional: true}
-  pipx: {taskfile: './taskfile.d/pipx.yaml', optional: true}
-  playnite: {taskfile: './taskfile.d/playnite.yaml', optional: true}
-  powershell: {taskfile: './taskfile.d/powershell.yaml', optional: true, aliases: [pwsh, ps]}
-  rclone: {taskfile: './taskfile.d/rclone.yaml', optional: true}
-  reg: {taskfile: './taskfile.d/reg.yaml', optional: true}
-  restic: {taskfile: './taskfile.d/restic.yaml', optional: true}
-  rye: {taskfile: './taskfile.d/rye.yaml', optional: true}
-  scoop: {taskfile: './taskfile.d/scoop.yaml', optional: true}
-  sops: {taskfile: './taskfile.d/sops.yaml', optional: true}
-  ssh: {taskfile: './taskfile.d/ssh.yaml', optional: true}
-  stack: {taskfile: './taskfile.d/stack.yaml', optional: true}
-  systemd: {taskfile: './taskfile.d/systemd.yaml', optional: true}
-  task: {taskfile: './taskfile.d/task.yaml', optional: true}
-  vfox: {taskfile: './taskfile.d/vfox.yaml', optional: true}
-  volta: {taskfile: './taskfile.d/volta.yaml', optional: true}
-  winget: {taskfile: './taskfile.d/winget.yaml', optional: true}
-  w2: {taskfile: './taskfile.d/w2.yaml', optional: true}
-  wsl: {taskfile: './taskfile.d/wsl.yaml', optional: true}
-  x: {taskfile: './taskfile.d/x-cmd.yaml', optional: true}
-  yum: {taskfile: './taskfile.d/yum.yaml', optional: true}
+  manifest:
+    taskfile: "./taskfile.d/manifest.yaml"
+    optional: false
+  adb:
+    taskfile: "./taskfile.d/adb.yaml"
+    optional: true
+  ansible:
+    taskfile: "./taskfile.d/ansible.yaml"
+    optional: true
+  apt:
+    taskfile: "./taskfile.d/apt.yaml"
+    optional: true
+  astro:
+    taskfile: "./taskfile.d/astro.yaml"
+    optional: true
+  bin:
+    taskfile: "./taskfile.d/bin.yaml"
+    optional: true
+  brew:
+    taskfile: "./taskfile.d/brew.yaml"
+    optional: true
+  cargo:
+    taskfile: "./taskfile.d/cargo.yaml"
+    optional: true
+  cheatsheet:
+    taskfile: "./taskfile.d/cheatsheet.yaml"
+    optional: true
+  choco:
+    taskfile: "./taskfile.d/choco.yaml"
+    optional: true
+  claude:
+    taskfile: "./taskfile.d/claude.yaml"
+    optional: true
+  coolify:
+    taskfile: "./taskfile.d/coolify.yaml"
+    optional: true
+  dotnet:
+    taskfile: "./taskfile.d/dotnet.yaml"
+    optional: true
+  git:
+    taskfile: "./taskfile.d/git.yaml"
+    optional: true
+  go:
+    taskfile: "./taskfile.d/go.yaml"
+    optional: true
+  k8s:
+    taskfile: "./taskfile.d/k8s.yaml"
+    optional: true
+  conda:
+    taskfile: "./taskfile.d/conda.yaml"
+    optional: true
+  nix:
+    taskfile: "./taskfile.d/nix.yaml"
+    optional: true
+  npm:
+    taskfile: "./taskfile.d/npm.yaml"
+    optional: true
+  pipx:
+    taskfile: "./taskfile.d/pipx.yaml"
+    optional: true
+  playnite:
+    taskfile: "./taskfile.d/playnite.yaml"
+    optional: true
+  powershell:
+    taskfile: "./taskfile.d/powershell.yaml"
+    optional: true
+    aliases: [pwsh, ps]
+  rclone:
+    taskfile: "./taskfile.d/rclone.yaml"
+    optional: true
+  reg:
+    taskfile: "./taskfile.d/reg.yaml"
+    optional: true
+  restic:
+    taskfile: "./taskfile.d/restic.yaml"
+    optional: true
+  rye:
+    taskfile: "./taskfile.d/rye.yaml"
+    optional: true
+  scoop:
+    taskfile: "./taskfile.d/scoop.yaml"
+    optional: true
+  sops:
+    taskfile: "./taskfile.d/sops.yaml"
+    optional: true
+  ssh:
+    taskfile: "./taskfile.d/ssh.yaml"
+    optional: true
+  stack:
+    taskfile: "./taskfile.d/stack.yaml"
+    optional: true
+  systemd:
+    taskfile: "./taskfile.d/systemd.yaml"
+    optional: true
+  task:
+    taskfile: "./taskfile.d/task.yaml"
+    optional: true
+  vfox:
+    taskfile: "./taskfile.d/vfox.yaml"
+    optional: true
+  volta:
+    taskfile: "./taskfile.d/volta.yaml"
+    optional: true
+  winget:
+    taskfile: "./taskfile.d/winget.yaml"
+    optional: true
+  w2:
+    taskfile: "./taskfile.d/w2.yaml"
+    optional: true
+  wsl:
+    taskfile: "./taskfile.d/wsl.yaml"
+    optional: true
+  x:
+    taskfile: "./taskfile.d/x-cmd.yaml"
+    optional: true
+  yum:
+    taskfile: "./taskfile.d/yum.yaml"
+    optional: true
 
-  ls: {taskfile: './taskfile.d/task-ls.yaml', optional: false, aliases: [list, l]}
-  ll: {taskfile: './taskfile.d/task-ll.yaml', optional: false, aliases: [list-all, la]}
+  ls:
+    taskfile: "./taskfile.d/task-ls.yaml"
+    optional: false
+    aliases: [list, l]
+  ll:
+    taskfile: "./taskfile.d/task-ll.yaml"
+    optional: false
+    aliases: [list-all, la]
 
 tasks:
-
   default:
     cmds:
       - task: ll
 
-  debug:manifest: {cmds: [{vars: {PATH: "./taskfile.d/manifests/debug.yaml"}, task: manifest:run:manifest}]}
+  manifest:apt:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/apt.yaml"
+        task: manifest:run:manifest
+
+  manifest:ansible-collection:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/ansible-collection.yaml"
+        task: manifest:run:manifest
+
+  manifest:ansible-role:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/ansible-role.yaml"
+        task: manifest:run:manifest
+
+  manifest:astro:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/astro.yaml"
+        task: manifest:run:manifest
+
+  manifest:bin:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/bin.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/brew-app.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-tap:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/brew-tap.yaml"
+        task: manifest:run:manifest
+
+  manifest:cargo:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/cargo.yaml"
+        task: manifest:run:manifest
+
+  manifest:claude:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/claude.yaml"
+        task: manifest:run:manifest
+
+  manifest:choco:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/choco.yaml"
+        task: manifest:run:manifest
+
+  manifest:conda-create:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/conda-create.yaml"
+        task: manifest:run:manifest
+
+  manifest:debug:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/debug.yaml"
+        task: manifest:run:manifest
+
+  manifest:dotnet-source:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/dotnet-source.yaml"
+        task: manifest:run:manifest
+
+  manifest:dotnet-tool:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/dotnet-tool.yaml"
+        task: manifest:run:manifest
+
+  manifest:go:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/go.yaml"
+        task: manifest:run:manifest
+
+  manifest:k8s-helm-repo:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/k8s-helm-repo.yaml"
+        task: manifest:run:manifest
+
+  manifest:k8s-krew:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/k8s-krew.yaml"
+        task: manifest:run:manifest
+
+  manifest:npm:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/npm.yaml"
+        task: manifest:run:manifest
+
+  manifest:pi:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/pi.yaml"
+        task: manifest:run:manifest
+
+  manifest:pipx:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/pipx.yaml"
+        task: manifest:run:manifest
+
+  manifest:playnite:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/playnite.yaml"
+        task: manifest:run:manifest
+
+  manifest:rye:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/rye.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:audio:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-audio.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:devops:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-devops.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:downloader:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-downloader.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:file:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-file.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:fonts:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-fonts.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:kernel:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-kernel.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:layer:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-layer.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:network:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-network.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:picture:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-picture.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:process:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-process.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:shell:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-shell.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:text:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-text.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:toolbox:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-toolbox.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-app:video:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-app-video.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-bucket:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-bucket.yaml"
+        task: manifest:run:manifest
+
+  manifest:scoop-config:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/scoop-config.yaml"
+        task: manifest:run:manifest
+
+  manifest:skills:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/skills.yaml"
+        task: manifest:run:manifest
+
+  manifest:stack:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/stack.yaml"
+        task: manifest:run:manifest
+
+  manifest:vfox-globalize:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/vfox-globalize.yaml"
+        task: manifest:run:manifest
+
+  manifest:vfox-plugin:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/vfox-plugin.yaml"
+        task: manifest:run:manifest
+
+  manifest:vfox-sdk:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/vfox-sdk.yaml"
+        task: manifest:run:manifest
+
+  manifest:volta:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/volta.yaml"
+        task: manifest:run:manifest
+
+  manifest:w2:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/w2.yaml"
+        task: manifest:run:manifest
+
+  manifest:winget-global:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/winget-global.yaml"
+        task: manifest:run:manifest
+
+  manifest:winget-msstore:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/winget-msstore.yaml"
+        task: manifest:run:manifest
+
+  manifest:winget-user:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/winget-user.yaml"
+        task: manifest:run:manifest
+
+  manifest:wsl:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/wsl.yaml"
+        task: manifest:run:manifest
+
+  manifest:x-cmd:
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/x-cmd.yaml"
+        task: manifest:run:manifest
+
+  manifest:yum:
+    platforms: [linux]
+    cmds:
+      - vars:
+          PATH: "./taskfile.d/manifests/yum.yaml"
+        task: manifest:run:manifest

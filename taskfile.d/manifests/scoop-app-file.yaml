@@ -1,0 +1,85 @@
+entrypoint: scoop
+command: install
+
+run:
+  # - {args: ntfs2btrfs}
+  - { args: unar }
+  - { args: lessmsi }
+  - { args: age }
+  - { args: enc }
+  - { args: vault }
+  - { args: dirhash }
+  # - {args: chezmoi}
+  - { args: eza }
+  # - {args: lsd}
+  - { args: gdu }
+  - { args: dust }
+  - { args: duf }
+  - { args: fd }
+  # - {args: fselect}
+  - { args: fzf }
+  # - {args: tre-command}
+  - { args: zoxide }
+  - { args: yazi }
+  # - {args: superfile}
+  # - {args: broot}
+  # - {args: lf}
+  # - {args: file}
+  # - {args: main/7zip}
+  - { args: main/nanazip }
+  # - {args: nanazip_DoveBoy}
+  # - {args: bandizip6}
+  - { args: winrar }
+  # - {args: code2prompt}
+  - { args: everything }
+  # - {args: gdm257/listary5}
+  # - {args: listary}
+  # - {args: orange}
+  # - {args: spacesniffer}
+  - { args: wiztree }
+  # - {args: squirreldisk}
+  # - {args: alldup}
+  # - {args: restic}
+  # - {args: resticprofile}
+  # - {args: restic-browser}
+  # - {args: backrest}
+  # - {args: redu}
+  # - {args: duplicati}
+  - { args: diskgenius }
+  - { args: testdisk }
+  # - {args: diskinfo}
+  - { args: as-ssd }
+  - { args: crystaldiskmark }
+  - { args: crystaldiskmark-shizuku-edition }
+  - { args: crystaldiskmark-aoi-edition }
+  # - {args: CrystalDiskMark-TsukumoTokka}
+  - { args: crystaldiskinfo-shizuku-edition }
+  # - {args: hdtune}
+  # - {args: ssdlife}
+  - { args: smartmontools }
+  - { args: SymlinkCreator }
+  # - {args: VeraCrypt-Portable}
+  - { args: VeraCryptPortable }
+  - { args: Snap2HTML }
+  # - {args: HashTools}
+  # - {args: winmerge}
+  - { args: meld }
+  # - {args: AntRenamer}
+  # - {args: ReNamerLite}
+  # - {args: Bulk-Rename-Utility_dodorz}
+  # - {args: tagspaces}
+  # - {args: gdm257/tagstudio}
+  - { args: doublecmd }
+  # - {args: freecommander}
+  # - {args: xplorer}
+  # - {args: onecommander}
+  # - {args: mucommander}
+  - { args: renamer_fixed }
+  # - {args: advancedrenamer}
+  # - {args: DriveSnapShot}
+  # - {args: syncthing}
+  # - {args: watchexec}
+  - { args: watchman }
+  - { args: kopiaui }
+  # - {args: mc}
+  # - {args: cryptomator}

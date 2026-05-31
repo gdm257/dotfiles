@@ -1,0 +1,6 @@
+entrypoint: ansible-galaxy
+command: "collection install"
+
+run:
+  - {args: "git+https://github.com/k3s-io/k3s-ansible.git"}
+  - {args: "git+https://github.com/techno-tim/k3s-ansible.git"}

@@ -1,0 +1,6 @@
+entrypoint: apt
+command: "install -y"
+
+run:
+  - {args: build-essential}
+  - {args: pleaser}

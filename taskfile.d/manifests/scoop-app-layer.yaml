@@ -1,0 +1,106 @@
+entrypoint: scoop
+command: install
+
+run:
+  - { args: ventoy }
+  # - {args: wepe}
+  - { args: rufus }
+  - { args: balenaEtcher-Portable }
+  - { args: virtualbox-extension }
+  - { args: lxrunoffline }
+  - { args: packer }
+  - { args: vagrant }
+  - { args: qemu }
+  - { args: gdm257/EmuDeck }
+  # - {args: pegasus}
+  # - {args: cemu-dev}
+  # - {args: xemu}
+  # - {args: yuzu}
+  # - {args: azahar}
+  # - {args: citra-nightly}
+  # - {args: citra}
+  # - {args: dolphin-dev}
+  # - {args: duckstation}
+  # - {args: flycast}
+  # - {args: mgba}
+  # - {args: melonDS}
+  # - {args: mame}
+  # - {args: ppsspp}
+  # - {args: pcsx2}
+  # - {args: rpcs3}
+  # - {args: ryujinx}
+  # - {args: retroarch}
+  # - {args: vita3k}
+  # - {args: shadps4}
+  # - {args: supermodel}
+  # - {args: ScummVM}
+  # - {args: xenia}
+  - { args: LDPlayer-Portable }
+  - { args: onscripteryuri }
+  - { args: onscripter-w }
+  - { args: onscripter-jh }
+  - { args: onscripter-ru }
+  - { args: ruffle-nightly }
+  # - {args: wsl2host}
+  - { args: docker }
+  # - {args: docker-compose}
+  - { args: lazydocker }
+  - { args: ctop }
+  # - {args: dockle}
+  # - {args: diun}
+  # - {args: hadolint}
+  # - {args: dive}
+  # - {args: portainer}
+  - { args: nixpacks }
+  - { args: kompose }
+  # - {args: kustomize}
+  - { args: helm }
+  - { args: helmfile }
+  # - {args: kcl}
+  # - {args: autok3s}
+  # - {args: k3sup}
+  # - {args: k3d}
+  # - {args: rancher-desktop}
+  # - {args: minikube}
+  # - {args: kind}
+  # - {args: kubeadm}
+  - { args: openlens }
+  # - {args: lens}
+  # - {args: headlamp}
+  # - {args: seabird}
+  - { args: kdash }
+  - { args: k9s }
+  - { args: kubectl }
+  - { args: krew }
+  - { args: kubens }
+  - { args: kubectx }
+  # - {args: kubecolor}
+  # - {args: kubectl-ai}
+  # - {args: kubeconform}
+  # - {args: k8sgpt}
+  - { args: kubevpn }
+  # - {args: cilium-cli}
+  # - {args: istioctl}
+  # - {args: kwok}
+  # - {args: kubeshark}
+  # - {args: kops}
+  # - {args: main/flux}
+  # - {args: argocd}
+  # - {args: argocd-autopilot}
+  # - {args: tsuru}
+  # - {args: velero}
+  # - {args: cmctl}
+  # - {args: korb}
+  # - {args: wsl2-distro-manager}
+  - { args: wsl-dashboard }
+  # - {args: WsaToolbox}
+  # - {args: wsldl}
+  # - {args: sandboxie-plus-np}
+  # - {args: virtualbox-with-extension-pack-np}
+  # - {args: virtualbox-with-extension-pack-np_ScoopInstaller}
+  # - {args: WSABuildsWindows10}
+  # - {args: WSABuildsWindows11}
+  # - {args: wsl-centos-7}
+  # - {args: wsl-centos-8}
+  # - {args: nixos-wsl}
+  - { args: devpod }

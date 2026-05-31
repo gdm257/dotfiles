@@ -1,0 +1,135 @@
+entrypoint: winget
+command: "install --source winget --id"
+
+run:
+  - { args: Chocolatey.Chocolatey }
+  - { args: Microsoft.VisualStudio.2022.BuildTools }
+  - { args: Microsoft.EdgeWebView2Runtime }
+  # - {args: "*Microsoft.VisualStudio.2022.Community*"}
+  # - {args: Microsoft.VisualStudio.2022.Enterprise}
+  # - {args: Microsoft.VCRedist.2005.x64}
+  # - {args: Microsoft.VCRedist.2008.x64}
+  # - {args: Microsoft.VCRedist.2010.x64}
+  # - {args: Microsoft.VCRedist.2012.x64}
+  # - {args: Microsoft.VCRedist.2013.x64}
+  # - {args: Microsoft.VCRedist.2015+.x64}
+  # - {args: Microsoft.VCRedist.2005.x86}
+  # - {args: Microsoft.VCRedist.2008.x86}
+  # - {args: Microsoft.VCRedist.2010.x86}
+  # - {args: Microsoft.VCRedist.2012.x86}
+  # - {args: Microsoft.VCRedist.2013.x86}
+  # - {args: Microsoft.VCRedist.2015+.x86}
+  - { args: Microsoft.DotNet.DesktopRuntime.3_1 }
+  - { args: Microsoft.DotNet.DesktopRuntime.5 }
+  - { args: Microsoft.DotNet.DesktopRuntime.6 }
+  - { args: Microsoft.DotNet.DesktopRuntime.7 }
+  - { args: Microsoft.DotNet.DesktopRuntime.8 }
+  - { args: Microsoft.DotNet.DesktopRuntime.9 }
+  - { args: Microsoft.DotNet.DesktopRuntime.10 }
+  - { args: Microsoft.DotNet.AspNetCore.3_1 }
+  - { args: Microsoft.DotNet.AspNetCore.5 }
+  - { args: Microsoft.DotNet.AspNetCore.6 }
+  - { args: Microsoft.DotNet.AspNetCore.7 }
+  - { args: Microsoft.DotNet.AspNetCore.8 }
+  - { args: Microsoft.DotNet.AspNetCore.9 }
+  - { args: Microsoft.DotNet.AspNetCore.10 }
+  # - {args: Microsoft.DotNet.Framework.DeveloperPack_4}
+  - { args: Microsoft.XNARedist }
+  # - {args: Microsoft.DirectX}
+  - { args: Microsoft.DotNet.SDK.10 }
+  # - {args: Microsoft.WindowsSDK}
+  # - {args: "*Microsoft.WindowsApplicationDriver*"}
+  # - {args: "*Microsoft.WebDeploy*"}
+  # - {args: "*Microsoft.WindowsAppRuntime.1.0*"}
+  # - {args: "*Microsoft.WindowsAppRuntime.1.1*"}
+  # - {args: "*Microsoft.WindowsAppRuntime.1.2*"}
+  # - {args: "*Microsoft.PowerToys*"}
+  # - {args: "*Microsoft.MediaCreationTool*"}
+  # - {args: Microsoft.Office}
+  # - {args: Microsoft.Edge}
+  # - {args: DEVCOM.JetBrainsMonoNerdFont}
+  # - {args: "*Nvidia.CUDA*"}
+  # - {args: "*Nvidia.GeForceExperience*"}
+  - { args: ViGEm.ViGEmBus }
+  # - {args: "*MacType.MacType*"}
+  - { args: SSHFS-Win.SSHFS-Win }
+  - { args: WinFsp.WinFsp }
+  # - {args: dokan-dev.Dokany}
+  # - {args: DaiyuuNobori.Win10Pcap}
+  - { args: Insecure.Npcap }
+  - { args: WiresharkFoundation.Wireshark }
+  - { args: Rime.Weasel }
+  # - {args: Brave.Brave}
+  # - {args: AnyDeskSoftwareGmbH.AnyDesk}
+  # - {args: Youqu.ToDesk}
+  - { args: RustDesk.RustDesk }
+  - { args: NetEase.UURemote }
+  # - {args: Tencent.TencentMeeting}
+  # - {args: AlekseyHoffman.Sigma-File-Manager}
+  # - {args: AOMEI.Backupper}
+  # - {args: Dell.DisplayManager}
+  - { args: Sandboxie.Plus }
+  - { args: Oracle.VirtualBox }
+  - { args: SUSE.RancherDesktop }
+  - { args: Docker.DockerDesktop }
+  # - {args: OpenShot.OpenShot}
+  # - {args: iSlide.iSlide}
+  # - {args: "*ZeroTier.ZeroTierOne*"}
+  # - {args: "*Parsec.Parsec*"}
+  # - {args: LizardByte.Sunshine}
+  # - {args: tailscale.tailscale}
+  # - {args: Billfish.Billfish}
+  # - {args: WilbertBerendsen.Frescobaldi}
+  # - {args: Hitencent.JisuPDF}
+  # - {args: XmacsLabs.Mogan}
+  # - {args: "*rocksdanister.LivelyWallpaper*"}
+  # - {args: IELTSBRO.IELTS-PC}
+  # - {args: "*Adobe.Acrobat.Reader.64-bit*"}
+  # - {args: RProject.R}
+  # - {args: RProject.Rtools}
+  # - {args: Posit.RStudio}
+  - { args: Valve.SteamLink }
+  - { args: EpicGames.EpicGamesLauncher }
+  # - {args: Stellarium.Stellarium}
+  # - {args: "*HeidelbergUniversity.GaiaSky*"}
+  # - {args: SURF.eduVPNClient}
+  # - {args: MysteriumNetwork.Mysterium}
+  # - {args: AOMEI.Backupper}
+  # - {args: LamantineSoftware.StickyPassword}
+  # - {args: "*Microsoft.SQLServerManagementStudio*"}
+  # - {args: Microsoft.SQLServer.2017.Developer}
+  # - {args: Microsoft.SQLServer.2019.Developer}
+  # - {args: "*Microsoft.SQLServer.2022.Developer*"}
+  # - {args: Hesan.He3}
+  # - {args: TorProject.TorBrowser}
+  # - {args: nilesoft.shell}
+  # - {args: voidtools.Everything}
+  # - {args: stnkl.EverythingToolbar}
+  # - {args: "*115.115*"}
+  # - {args: "*Muse.MuseHub*"}
+  # - {args: "*Musescore.Musescore*"}
+  # - {args: Drumstick.dmidiplayer}
+  # - {args: Falcosoft.VSTMidiDriver}
+  # - {args: CodingWondersSoftware.DISMTools.Stable}
+  # - {args: CrystalDewWorld.CrystalDiskMark.ShizukuEdition}
+  # - {args: EFDSoftware.HDTunePro}
+  # - {args: HDDGURU.HDDLLFTool}
+  - { args: MichaelTippach.ASIO4ALL }
+  # - {args: VB-Audio.Voicemeeter.Banana}
+  # - {args: VB-Audio.Voicemeeter.Potato}
+  # - {args: dechamps.FlexASIO}
+  - { args: BandLab.Cakewalk }
+  # - {args: GnuPG.Gpg4win}
+  - { args: AOMEI.PartitionAssistant }
+  # - {args: "*KeppySoftware.OmniMIDI*"}
+  # - {args: Nlitesoft.NTLite}
+  - { args: Huawei.HiSuite }
+  # - {args: LiTang.QianJi}
+  # - {args: Tencent.Yuanbao}
+  - { args: Eusoft.Eudic }
+  - { args: Bandisoft.Honeyview }
+  # - {args: GOG.Galaxy}
+  - { args: Canva.Affinity }
+  - { args: ONLYOFFICE.DesktopEditors }
+  # - {args: ModOrganizer2.modorganizer}
+  - { args: dorssel.usbipd-win }

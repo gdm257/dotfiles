@@ -1,0 +1,61 @@
+entrypoint: scoop
+command: install
+
+run:
+  # - {args: vcredist-aio}
+  # - {args: osquery}
+  - { args: fastfetch }
+  # - {args: WindowsUpdateBlocker}
+  - { args: urlprotocolview }
+  - { args: rapidee }
+  - { args: registry-finder }
+  - { args: context-menu-manager }
+  # - {args: hibit-uninstaller-portable}
+  # - {args: registry-explorer}
+  - { args: dismplusplus }
+  - { args: Bootice_kkzzhizhou }
+  # - {args: optimizer}
+  # - {args: sophiapp}
+  - { args: wpd }
+  # - {args: privatezilla}
+  # - {args: Malware-Patch_Paxxs}
+  # - {args: itunes-portable}
+  - { args: i4 }
+  # - {args: i4tool}
+  # - {args: windows-application-driver}
+  # - {args: edgeless-hub}
+  # - {args: pchunter}
+  - { args: microsoft-activation-scripts }
+  - { args: CMWTAT_Digital_Edition }
+  # - {args: heu-kms-activator}
+  # - {args: kms-heu}
+  # - {args: KMS_VL_All_AiO-Portable}
+  # - {args: kms-vl-all-aio}
+  # - {args: powertool}
+  # - {args: BulkCrapUninstaller}
+  # - {args: BulkCrapUninstaller-Portable}
+  # - {args: bulk-crap-uninstaller}
+  # - {args: RevoUninstaller-Portable}
+  # - {args: geek-uninstaller}
+  - { args: driverstoreexplorer }
+  - { args: Grub2 }
+  - { args: ultraiso }
+  - { args: wincdemu }
+  # - {args: ntlite}
+  # - {args: ntlite-portable}
+  # - {args: ntlite_FlawlessCasual17}
+  - { args: dismtools }
+  - { args: vivetool }
+  - { args: vivetool-gui }
+  - { args: hwinfo }
+  - { args: speccy }
+  - { args: furmark }
+  - { args: prime95 }
+  - { args: hwmonitor }
+  - { args: memtest }
+  - { args: coretemp }
+  - { args: bluescreenview }
+  - { args: cpu-z }
+  - { args: gpu-z }
+  - { args: ssd-z }
+  - { args: ddu }

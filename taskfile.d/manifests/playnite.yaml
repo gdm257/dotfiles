@@ -1,0 +1,37 @@
+entrypoint: start
+command: ""
+
+run:
+  # === Theme ===
+  - { args: "playnite://playnite/installaddon/ThemeOptions_904cbf3b-573f-48f8-9642-0a09d05c64ef" }
+  - { args: "playnite://playnite/installaddon/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad" }
+  - { args: "playnite://playnite/installaddon/Solaris_b6e50d04-24ae-4ecd-bd3a-080367930992" }
+  # === Library Addons ===
+  # - {args: "playnite://playnite/installaddon/SteamLibrary_Builtin"}
+  - { args: "playnite://playnite/installaddon/f15771cd-b6d7-4a3d-9b8e-08786a13d9c7" }
+  # - {args: "playnite://playnite/installaddon/EpicGamesLibrary_Builtin"}
+  # - {args: "playnite://playnite/installaddon/GogLibrary_Builtin"}
+  # - {args: "playnite://playnite/installaddon/ItchioLibrary_Builtin"}
+  - { args: "playnite://playnite/installaddon/VirtualLibrary" }
+  # === Metadata Addons ===
+  - { args: "playnite://playnite/installaddon/Bangumi_fea02b9a-ab77-47e3-8fb1-6512c9261fbe" }
+  - { args: "playnite://playnite/installaddon/DLsiteMetadata_db03c8d9-645a-4359-aafb-01cda945f301" }
+  - { args: "playnite://playnite/installaddon/ESMetadata_71f952a8-4763-41e3-9934-7fe02a1e33d4" }
+  - { args: "playnite://playnite/installaddon/FanzaMetadata_db03c8d9-645a-4359-aafb-01cda945f301" }
+  - { args: "playnite://playnite/installaddon/GOGMetadata" }
+  # - {args: "playnite://playnite/installaddon/IGDBMetadata_Builtin"}
+  - { args: "playnite://playnite/installaddon/playnite-metadatalocal-plugin" }
+  - {
+      args: "playnite://playnite/installaddon/PCGamingWikiMetadata_c038558e-427b-4551-be4c-be7009ce5a8d",
+    }
+  - {
+      args: "playnite://playnite/installaddon/Steam_Tags_Importer_01b67948-33a1-42d5-bd39-e4e8a226d215",
+    }
+  - { args: "playnite://playnite/installaddon/SteamGridDB_Playnite_Metadata" }
+  - { args: "playnite://playnite/installaddon/Universal_Steam_Metadata" }
+  - { args: "playnite://playnite/installaddon/VNDBNexus_39229206-1199-4fee-a014-e8478ea4cd77" }
+  # === Generic Addons ===
+  - { args: "playnite://playnite/installaddon/Yalgrin_SteamCollectionImporter" }
+  - { args: "playnite://playnite/installaddon/playnite-systemchecker-plugin" }
+  - { args: "playnite://playnite/installaddon/SunshineAppExport" }
+  - { args: "playnite://playnite/installaddon/mtkennerly.ludusavi" }

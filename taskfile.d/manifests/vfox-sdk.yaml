@@ -1,0 +1,13 @@
+entrypoint: vfox
+command: install
+
+run:
+  - {args: "dotnet@6.0.31"}
+  - {args: "dotnet@8.0.6"}
+  # - {args: "golang@latest"}
+  - {args: "java@8.0.342+7-open"}
+  - {args: "java@11.0.16+8-open"}
+  - {args: "java@17.0.2+8-open"}
+  - {args: "kotlin@1.9.24"}
+  # - {args: "nodejs@latest"}
+  - {args: "php@7.4.32"}

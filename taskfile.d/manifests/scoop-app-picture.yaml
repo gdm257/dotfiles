@@ -1,0 +1,98 @@
+entrypoint: scoop
+command: install
+
+run:
+  - { args: exiftool }
+  - { args: jexiftoolgui }
+  # - {args: honeyview}
+  - { args: picview }
+  - { args: fsviewer }
+  # - {args: shutter-image-browser}
+  - { args: gimp }
+  # - {args: StylePix}
+  - { args: paint.net }
+  - { args: gdm257/imbatch }
+  - { args: piclist }
+  - { args: imagemagick-lean }
+  - { args: upscayl }
+  - { args: caesium-image-compressor }
+  - { args: Krita-Portable }
+  # - {args: inkscape}
+  - { args: pixieditor }
+  - { args: lunacy }
+  - { args: qgis }
+  - { args: geogebra }
+  - { args: stellarium }
+  - { args: umbrello }
+  # - {args: ascii-image-converter}
+  # - {args: irfanview}
+  # - {args: stegify}
+  # - {args: kumoworks}
+  - { args: clickshow }
+  # - {args: gink}
+  - { args: carnac }
+  # - {args: keyviz}
+  # - {args: keycastow}
+  # - {args: nohboard}
+  - { args: gdm257/livedraw }
+  # - {args: drawpen}
+  - { args: tesseract }
+  - { args: tesseract-languages }
+  - { args: pixpin }
+  # - {args: esearch}
+  # - {args: flameshot}
+  # - {args: Snipaste-Portable}
+  # - {args: wavetone}
+  # - {args: xnviewmp}
+  # - {args: ScreenToGif}
+  - { args: venera }
+  # - {args: tachidesk-server}
+  - { args: tachidesk-jui }
+  # - {args: suwayomi-jui}
+  - { args: tachidesk }
+  # - {args: quicklook}
+  # - {args: sizer}
+  - { args: WindowResizer }
+  # - {args: SetBrightness}
+  # - {args: win10_brightnessslider}
+  # - {args: lightbulb}
+  - { args: screenoff }
+  - { args: project-graph }
+  # - {args: xmind8}
+  # - {args: freemind}
+  # - {args: xmind_ScoopInstaller}
+  # - {args: xmind}
+  # - {args: revezone}
+  # - {args: hiddex}
+  # - {args: qgis}
+  # - {args: umlet}
+  # - {args: staruml}
+  - { args: graphviz }
+  - { args: plantuml }
+  - { args: d2 }
+  # - {args: Pinta_dodorz}
+  # - {args: Lively-Wallpaper}
+  # - {args: capture2text}
+  # - {args: greenshot}
+  - { args: baimiao }
+  # - {args: geekdesk}
+  # - {args: roundedtb}
+  - { args: universal-watermark-disabler }
+  # - {args: imageglass}
+  - { args: CelestiaPortable }
+  # - {args: StellariumPortable}
+  # - {args: picgo}
+  - { args: yacreader }
+  # - {args: kavita}
+  # - {args: hydrus-network}
+  # - {args: picacg-qt}
+  # - {args: jmcomic-qt}
+  # - {args: ehentai-qt}
+  # - {args: JHenTai}
+  - { args: snap2img }
+  # - {args: translumo}
+  - { args: LunaTranslator }
+  - { args: misakatranslator_ivaquero }
+  - { args: dango-translator }
+  # - {args: openbbterminal}
+  # - {args: darktable}

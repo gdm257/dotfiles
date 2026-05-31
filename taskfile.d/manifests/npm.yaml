@@ -1,0 +1,56 @@
+entrypoint: npm
+command: "install -g"
+
+run:
+  - {args: "@openapitools/openapi-generator-cli"}
+  - {args: "@devcontainers/cli"}
+  - {args: whistle}
+  - {args: neoss}
+  - {args: eslint}
+  - {args: repomix}
+  - {args: skills}
+  - {args: openskills}
+  - {args: rulesync}
+  - {args: "@intellectronica/ruler"}
+  - {args: "@modelcontextprotocol/inspector"}
+  - {args: cc-sdd}
+  - {args: claude-code-workflow}
+  - {args: jj-stack}
+  # - {args: opencode-ai}
+  # - {args: "@openai/codex"}
+  - {args: "@anthropic-ai/claude-code"}
+  # - {args: "@google/gemini-cli"}
+  # - {args: "@qwen-code/qwen-code"}
+  # - {args: opencommit}
+  # - {args: pxder}
+  # - {args: npkill}
+  # - {args: fkill-cli}
+  # - {args: fx}
+  # - {args: is-up-cli}
+  # - {args: "@aweary/alder"}
+  # - {args: typescript}
+  # - {args: temme}
+  # - {args: create-nocodb-app}
+  # - {args: "webpack webpack-cli"}
+  # - {args: sass}
+  # - {args: create-react-app}
+  # - {args: "@medv/eat"}
+  # - {args: gitmoji-cli}
+  # - {args: "@zeit/ncc"}
+  # - {args: "@vercel/ncc"}
+  # - {args: pkg}
+  # - {args: single-file-cli}
+  # - {args: webdav-cli}
+  # - {args: miniflare}
+  # - {args: static-marks}
+  # - {args: terminalizer}
+  # - {args: lint-staged}
+  # - {args: "@commitlint/cli @commitlint/config-conventional"}
+  # - {args: hygen}
+  # - {args: yo}
+  # - {args: commitizen}
+  # - {args: aicommits}
+  # - {args: deprank}
+  # - {args: git-stats}
+  # - {args: pake-cli}
+  # - {args: git-run}

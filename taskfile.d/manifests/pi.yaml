@@ -1,0 +1,8 @@
+entrypoint: pi
+command: install
+
+run:
+  - {args: "npm:pi-subagents"}
+  - {args: "npm:pi-mcp-adapter"}
+  - {args: "npm:pi-ask-user"}
+  - {args: "npm:pi-btw"}

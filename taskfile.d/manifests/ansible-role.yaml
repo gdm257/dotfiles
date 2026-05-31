@@ -1,0 +1,6 @@
+entrypoint: ansible-galaxy
+command: "role install"
+
+run:
+  - {args: alvistack.flatpak}
+  - {args: geerlingguy.docker}

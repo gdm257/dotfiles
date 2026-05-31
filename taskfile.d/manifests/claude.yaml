@@ -1,0 +1,8 @@
+entrypoint: claude
+command: "plugin marketplace add"
+
+run:
+  - { args: wakatime/claude-code-wakatime }
+  - { args: gdm257/cc-plugins }
+  - { args: Piebald-AI/claude-code-lsps }
+  - { args: anthropics/claude-plugins-official }

@@ -1,0 +1,9 @@
+entrypoint: w2
+command: install
+
+run:
+  - {args: whistle.proxyauth}
+  # - {args: whistle.uiauth}
+  - {args: whistle.inspect}
+  - {args: whistle.vase}
+  - {args: whistle.script}

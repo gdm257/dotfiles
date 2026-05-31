@@ -1,0 +1,6 @@
+entrypoint: micromamba
+command: create
+
+run:
+  - {args: "-y --channel conda-forge --name python3 python=3.11.* pipx"}
+  - {args: "-y --channel conda-forge --name python311 python=3.11.*"}

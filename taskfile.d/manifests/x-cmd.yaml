@@ -1,0 +1,5 @@
+entrypoint: x
+command: install
+
+run:
+  - {args: brew}

@@ -1,0 +1,71 @@
+entrypoint: scoop
+command: install
+
+run:
+  - { args: windows-terminal }
+  - { args: wezterm }
+  # - {args: ttyd}
+  # - {args: cmder-full}
+  # - {args: waveterm}
+  # - {args: xpipe}
+  # - {args: mobaxterm}
+  # - {args: electerm}
+  # - {args: alacritty}
+  # - {args: rio}
+  # - {args: hyper-beta}
+  # - {args: tabby-portable}
+  # - {args: putty}
+  - { args: openssh }
+  - { args: opkssh }
+  - { args: lrzsz }
+  - { args: tssh }
+  # - {args: mosh-client}
+  - { args: powershell }
+  - { args: main/powershelleditorservices }
+  # - {args: PSWinUtil}
+  - { args: chafa }
+  - { args: resvg }
+  # - {args: sudo}
+  - { args: gsudo }
+  # - {args: navi}
+  # - {args: cheat}
+  # - {args: tldr}
+  - { args: tealdeer }
+  - { args: ztools }
+  # - {args: kanata}
+  # - {args: kanata-tray}
+  - { args: gdm257/mykeymap }
+  # - {args: komokana}
+  # - {args: gdm257/dotenvx}
+  # - {args: ps-dotenv}
+  # - {args: psfzf}
+  - { args: starship }
+  # - {args: oh-my-posh}
+  # - {args: genact}
+  # - {args: ultravnc}
+  # - {args: vcxsrv}
+  # - {args: pueue}
+  # - {args: clink}
+  # - {args: clink-portable}
+  # - {args: nirsoft/nircmd}
+  # - {args: nircmd-both}
+  # - {args: hyperfine}
+  # - {args: SilentCMD-Portable}
+  # - {args: direnv}
+  # - {args: flow-launcher}
+  # - {args: rubick}
+  # - {args: spc/capslock-plus}
+  # - {args: keymouse}
+  # - {args: vim-ahk}
+  # - {args: vimdesktop}
+  # - {args: whkd}
+  # - {args: Quicker_dodorz}
+  # - {args: kmcounter}
+  # - {args: cht.sh}
+  # - {args: tgpt}
+  # - {args: sgpt}
+  # - {args: envelope}
+  # - {args: olivetin}
+  # - {args: maye}
+  # - {args: hunt-and-peck}
+  # - {args: keymousego}

@@ -1,0 +1,5 @@
+entrypoint: brew
+command: tap
+
+run:
+  - {args: homebrew/cask-fonts}

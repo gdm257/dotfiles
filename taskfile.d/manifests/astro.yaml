@@ -1,0 +1,5 @@
+entrypoint: "pnpm run astro --"
+command: add
+
+run:
+  # astro integrate:bulk had no curated-list items — this manifest is for future use

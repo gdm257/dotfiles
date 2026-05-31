@@ -1,0 +1,12 @@
+entrypoint: volta
+command: install
+
+run:
+  # === windows ===
+  - {args: node}
+  # - {args: npm}
+  - {args: npx}
+  - {args: pnpm}
+  - {args: yarn}
+  # === unix ===
+  # - {args: node}  # duplicate, already listed above

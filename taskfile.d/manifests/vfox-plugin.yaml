@@ -1,0 +1,12 @@
+entrypoint: vfox
+command: add
+
+run:
+  # - {args: clang}
+  - {args: dotnet}
+  # - {args: golang}
+  - {args: java}
+  - {args: kotlin}
+  # - {args: nodejs}
+  - {args: php}
+  # - {args: python}

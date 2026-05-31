@@ -1,0 +1,10 @@
+entrypoint: helm
+command: "repo add"
+
+run:
+  - { args: "authentik https://charts.goauthentik.io" }
+  - { args: "bitnami https://charts.bitnami.com/bitnami" }
+  - { args: "datawire https://app.getambassador.io" }
+  - { args: "fluxcd https://charts.fluxcd.io" }
+  - { args: "fluxcd-community https://fluxcd-community.github.io/helm-charts" }
+  - { args: "prometheus-community https://prometheus-community.github.io/helm-charts" }

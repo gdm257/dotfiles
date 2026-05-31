@@ -1,0 +1,17 @@
+entrypoint: scoop
+command: install
+
+run:
+  - { args: LXGWWenKai }
+  - { args: LXGWWenKaiMono }
+  - { args: LXGWWenKaiScreenR }
+  # - {args: MicrosoftYaHeiMono}
+  - { args: SarasaGothic-ttc }
+  # - {args: SarasaGothic-SC}
+  - { args: NerdFontsSymbolsOnly }
+  - { args: DejaVuSansMono-NF-Mono }
+  - { args: Hack-NF-Mono }
+  - { args: JetBrainsMono-NF }
+  - { args: CascadiaCode-NF-Mono }
+  # - {args: SourceCodePro-NF-Mono}
+  # - {args: MPlus-NF-Mono}

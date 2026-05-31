@@ -1,0 +1,126 @@
+entrypoint: scoop
+command: install
+
+run:
+  - { args: grex }
+  - { args: ripgrep }
+  # - {args: sig}
+  - { args: ugrep }
+  - { args: ag }
+  # - {args: ack}
+  - { args: main/sd }
+  # - {args: sad}
+  # - {args: ruplacer}
+  - { args: bat }
+  - { args: csvlens }
+  # - {args: fx}
+  # - {args: jid}
+  # - {args: openapi-tui}
+  # - {args: csview}
+  - { args: jq }
+  # - {args: xq}
+  - { args: yq }
+  # - {args: fq}
+  # - {args: dasel}
+  - { args: xidel }
+  # - {args: dsq}
+  # - {args: q}
+  - { args: sq }
+  # - {args: miller}
+  # - {args: pup}
+  - { args: pandoc }
+  # - {args: tailspin}
+  - { args: sttr }
+  - { args: hashcat }
+  - { args: john-the-ripper }
+  - { args: 7z2hashcat }
+  - { args: pdftk }
+  - { args: officecli }
+  - { args: poppler }
+  # - {args: gpg}
+  - { args: mkcert }
+  - { args: step }
+  # - {args: echo/beyondcompare}
+  - { args: zotero }
+  - { args: vosviewer }
+  - { args: SumatraPDF_dodorz }
+  # - {args: eudic}
+  - { args: gdm257/awesome-dict }
+  # - {args: ting-en}
+  - { args: ditto }
+  # - {args: gdm257/ecopastepro}
+  # - {args: ecopaste}
+  # - {args: copyq}
+  # - {args: clipboard}
+  # - {args: anytype}
+  - { args: obsidian }
+  # - {args: siyuan}
+  # - {args: focalboard}
+  # - {args: appflowy}
+  # - {args: bookxnote}
+  - { args: BookXNotePro }
+  - { args: lfs/awesome-books }
+  # - {args: xournalpp}
+  # - {args: rendevoz}
+  # - {args: imewlconverter}
+  - { args: zeal }
+  # - {args: zed}
+  # - {args: zed-opengl}
+  # - {args: notepad4}
+  # - {args: notepad--}
+  # - {args: notepadnext}
+  # - {args: notepadplusplus}
+  # - {args: islide}
+  # - {args: vscode-portable}
+  - { args: emeditor }
+  # - {args: sublime-text}
+  # - {args: notepad2-mod}
+  # - {args: notepad3}
+  # - {args: geany}
+  # - {args: texlive}
+  # - {args: zettlr}
+  # - {args: typora}
+  # - {args: pdf-xchange-editor}
+  - { args: gdm257/killerpdf }
+  # - {args: koodo-reader}
+  # - {args: latex}
+  # - {args: msys2}
+  # - {args: marktext}
+  - { args: gdm257/md-preview }
+  # - {args: logseq}
+  # - {args: github}
+  # - {args: oh-my-posh}
+  # - {args: gpg4win}
+  - { args: fontforge }
+  - { args: winfontsview }
+  - { args: keeweb }
+  # - {args: keepass}
+  # - {args: keepass-plugin-kpenhentryview}
+  # - {args: keepass-plugin-webautotype}
+  # - {args: keepass-plugin-keeanywhere}
+  # - {args: keepass-plugin-keepasshttp}
+  # - {args: keepass-plugin-keepassnatmsg}
+  # - {args: keepass-plugin-keeagent}
+  # - {args: bitwarden}
+  # - {args: bitwarden-cli}
+  # - {args: authme}
+  # - {args: infisical}
+  # - {args: "mendeley mendeley-desktop"}
+  # - {args: raindrop.io}
+  # - {args: anki}
+  # - {args: DocFetcher}
+  # - {args: AgentRansack}
+  # - {args: pdfpatcher_hu3rror}
+  # - {args: pdfpatcher}
+  # - {args: libreoffice}
+  - { args: pot-desktop }
+  # - {args: pdf-guru}
+  # - {args: calibre-web}
+  # - {args: calibre}
+  # - {args: goldendict-ng}
+  - { args: rssguard }
+  # - {args: fluent-reader}
+  # - {args: logdy}
+  # - {args: gdm257/kmcounter}
+  - { args: gnucash }
+  # - {args: moneymanagerex}
