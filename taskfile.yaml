@@ -16,6 +16,7 @@ dotenv:
   - .local.env
 
 includes:
+  manifest: {taskfile: './taskfile.d/manifest.yaml', optional: false}
   adb: {taskfile: './taskfile.d/adb.yaml', optional: true}
   ansible: {taskfile: './taskfile.d/ansible.yaml', optional: true}
   apt: {taskfile: './taskfile.d/apt.yaml', optional: true}
@@ -63,3 +64,5 @@ tasks:
   default:
     cmds:
       - task: ll
+
+  debug:manifest: {cmds: [{vars: {PATH: "./taskfile.d/manifests/debug.yaml"}, task: manifest:run:manifest}]}

@@ -1,0 +1,33 @@
+version: "3"
+
+tasks:
+  run:
+    desc: "run single command"
+    requires:
+      vars:
+        - RUN
+    cmds:
+      - cmd: "{{ .RUN.prefix }} {{ .RUN.entrypoint }} {{ .RUN.command }} {{ .RUN.args }} {{ .RUN.suffix }}"
+
+  run:manifest:
+    requires:
+      vars:
+        - PATH
+    vars:
+      _YAML:
+        sh: "cat '{{.PATH}}'"
+      _MANIFEST:
+        ref: 'fromYaml ._YAML'
+      _RUNS:
+        ref: '._MANIFEST.run'
+    cmds:
+      - for: { var: _RUNS, as: _RUN }
+        task: run
+        vars:
+          RUN:
+            map:
+              prefix: "{{ if ._RUN.prefix }}{{ ._RUN.prefix }}{{ else }}{{ ._MANIFEST.prefix }}{{ end }}"
+              entrypoint: "{{ if ._RUN.entrypoint }}{{ ._RUN.entrypoint }}{{ else }}{{ ._MANIFEST.entrypoint }}{{ end }}"
+              command: "{{ if ._RUN.command }}{{ ._RUN.command }}{{ else }}{{ ._MANIFEST.command }}{{ end }}"
+              args: "{{ if ._RUN.args }}{{ ._RUN.args }}{{ else }}{{ ._MANIFEST.args }}{{ end }}"
+              suffix: "{{ if ._RUN.suffix }}{{ ._RUN.suffix }}{{ else }}{{ ._MANIFEST.suffix }}{{ end }}"
