@@ -1,172 +1,24 @@
-version: '3'
+version: "3"
 
 tasks:
-
   install:self:
-    desc: 'Install pipx by pipx within a new default conda environment [CONDA, PYTHONVERSION]'
+    desc: "Install pipx by pipx within a new default conda environment [CONDA, PYTHONVERSION]"
     vars:
-      CONDA: 'micromamba'
-      PYTHONVERSION: '3.11.*'
+      CONDA: "micromamba"
+      PYTHONVERSION: "3.11.*"
     cmds:
-      - 'sudo $(which {{.CONDA}}) create --channel conda-forge -n pipx -y python={{.PYTHONVERSION}} pipx'
-      - 'sudo $(which {{.CONDA}}) run -n pipx pipx install --global pipx'
+      - "sudo $(which {{.CONDA}}) create --channel conda-forge -n pipx -y python={{.PYTHONVERSION}} pipx"
+      - "sudo $(which {{.CONDA}}) run -n pipx pipx install --global pipx"
 
   install:
-    desc: 'Install package <PACKAGE> [PIPX INCLUDE_DEPS GLOBAL]'
+    desc: "Install package <PACKAGE> [PIPX INCLUDE_DEPS GLOBAL]"
     requires:
       vars:
         - PACKAGE
     vars:
-      _PIPX: '{{if .PIPX}}{{.PIPX}}{{else}}pipx{{end}}'
-      _INCLUDE_DEPS: '{{if .INCLUDE_DEPS}}--include-deps{{end}}'
+      _PIPX: "{{if .PIPX}}{{.PIPX}}{{else}}pipx{{end}}"
+      _INCLUDE_DEPS: "{{if .INCLUDE_DEPS}}--include-deps{{end}}"
       _GLOBAL: '{{if and (eq OS "linux") (eq .GLOBAL "true")}}--global{{end}}'
     cmds:
       - >-
         {{._PIPX}} install {{._GLOBAL}} {{._INCLUDE_DEPS}} {{.PACKAGE}} {{.ARGS}}
-
-  install:bulk:
-    vars:
-      _ARGS: '{{.CLI_ARGS}}'
-    internal: true
-    requires:
-      vars:
-        - PACKAGES
-    cmds:
-      - for: {var: PACKAGES, as: PACKAGE}
-        task: install
-        vars:
-          ARGS: '{{._ARGS}}'
-          PACKAGE: '{{.PACKAGE}}'
-
-  install:curated-list:
-    cmds:
-      - task: install:bulk
-        vars:
-          PACKAGES:
-            # - pipx
-            # - virtualenvwrapper-win
-            # - pipenv
-            # - pex
-            # - ipython
-            - ptpython
-            - marimo[recommended]
-            - pdm
-            # - poetry
-            # - hatch
-            # - pyinstaller
-            # - pyarmor
-            # - nuitka
-            - juv
-            # - flake8
-            # - mypy
-            # - ruff
-            # - cookiecutter
-            # - sedsed
-            # - jc
-            - httpie
-            # - mycli
-            # - tqdm
-            # - pandasgui
-            # - scalene
-            # - glances windows-curses
-            # - sphinx
-            # - mkdocs
-            - asciinema
-            # - bgmi
-            # - flexget
-            # - coredumpy
-            # - visidata
-            # - csvtotable
-            - pipdeptree
-            # - scrapy; inject ipython
-            # - black[d]
-            # - jsoncsv
-            # - scrapyd-client
-            # - scrapyd
-            # - scrapydweb
-            # - httpx[cli]
-            # - archivebox
-            - code2flow
-            - git+https://github.com/gdm257/magnetizer.git
-            # - torrent-parser
-            # - tox
-            # - pre-commit
-            # - isort
-            # - jupyter
-            # - jupyterhub
-            # - feapder[all]
-            - iredis
-            # - icdiff
-            - gita
-            # - eg
-            # - git-sim
-            # - sqlmodel
-            # - shell-gpt
-            # - Quick-Cut
-            # - ansible-lint
-            # - speedtest-cli
-            # - pyside6
-            # - uncompyle6
-            # - docformatter
-            - datamodel-code-generator[http]
-            # - apkleaks
-            # - flake8-to-ruff
-            # - pgcli
-            # - litecli
-            # - gdbgui
-            # - playwithmpv
-            # - bilix
-            # - vardbg
-            # - jupyterlab
-            # - git-imerge
-            - radian
-            - fonttools[ufo,lxml,woff,unicode]
-            - pix2tex[gui]
-            # - rapid_latex_ocr
-            # - texify
-            # - paracelsus
-            - ssh-audit
-            # - sqlalchemy-data-model-visualizer
-            # - pywxdump
-            - harlequin[postgres,mysql,bigquery,trino,odbc,s3]
-            # - deadlink
-            # - tiptop
-            # - toolong
-            # - ciphey
-            # - pyscaffold[all]
-            # - stego-lsb
-            # - copier
-            # - open-interpreter
-            # - scapy
-            # - ansible-playbook-grapher
-            # - aider-chat
-            # - kupo
-            # - eml-analyzer
-            # - eml-to-html
-            # - yen
-            # - packaged
-            - radon
-            # - basic-pitch
-            # - dotdrop
-            # - pretzelai
-            # - openapi-python-client
-            # - openbb-cli
-            - rexi
-            - dotbot
-            - p115qrcode
-            # - vdirsyncer
-            # - ratarmount
-            # - kubediagrams
-            - graphifyy
-            - git-filter-repo
-            - git+https://github.com/karpathy/rendergit
-            # - git+https://github.com/github/spec-kit
-
-  install:curated-list:unix:
-    platforms: [linux, darwin]
-    cmds:
-      - task: install:bulk
-        vars:
-          PACKAGES:
-            - isd
-            - --include-deps --preinstall netaddr ansible

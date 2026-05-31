@@ -1,7 +1,6 @@
-version: '3'
+version: "3"
 
 tasks:
-
   list:
     cmds:
       - wsl -l -v
@@ -11,30 +10,9 @@ tasks:
       - wsl --list --online
 
   install:
-    desc: 'Install a distro <DISTRO>'
+    desc: "Install a distro <DISTRO>"
     requires:
       vars:
         - DISTRO
     cmds:
       - wsl --install -d {{.DISTRO}}
-
-  install:bulk:
-    internal: true
-    requires:
-      vars:
-        - DISTROS
-    cmds:
-      - for: {var: DISTROS, as: DISTRO}
-        task: install
-        vars:
-          DISTRO: '{{.DISTRO}}'
-
-  install:curated-list:
-    cmds:
-      - task: install:bulk
-        vars:
-          DISTROS:
-            - Ubuntu-24.04
-            - Debian
-            - kali-linux
-            - OracleLinux_8_7

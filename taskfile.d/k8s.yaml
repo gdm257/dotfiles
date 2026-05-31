@@ -1,7 +1,6 @@
-version: '3'
+version: "3"
 
 tasks:
-
   anteon:deploy:self:
     cmds:
       - helm repo add anteon https://getanteon.github.io/anteon-helm-charts/
@@ -114,9 +113,9 @@ tasks:
         {{.CLI_ARGS}}
 
   argocd:deploy:self:kubectl:
-    desc: 'Deploy ArgoCD controllers without HA to cluster [CONTEXT]'
+    desc: "Deploy ArgoCD controllers without HA to cluster [CONTEXT]"
     vars:
-      _CONTEXT: '{{if .CONTEXT}}--context {{.CONTEXT}}{{end}}'
+      _CONTEXT: "{{if .CONTEXT}}--context {{.CONTEXT}}{{end}}"
     cmds:
       - kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml {{._CONTEXT}}
 
@@ -126,13 +125,13 @@ tasks:
       - argocd admin initial-password -n argocd
 
   argocd:admin:passwd:
-    desc: 'Change admin password'
+    desc: "Change admin password"
     cmds:
       - argocd account update-password
 
   carina:deploy:self:
     vars:
-      _VERSION: 'v0.11.0'
+      _VERSION: "v0.11.0"
     cmds:
       - helm repo add carina-csi-driver https://carina-io.github.io
       - helm repo update
@@ -144,7 +143,7 @@ tasks:
 
   cert-manager:deploy:self:
     vars:
-      _VERSION: '{{if .VERSION}}{{.VERSION}}{{else}}v1.15.3{{end}}'
+      _VERSION: "{{if .VERSION}}{{.VERSION}}{{else}}v1.15.3{{end}}"
       _GATEWAY_API: >-
         {{if eq .GATEWAY_API "yes" -}}
         --set "extraArgs={--enable-gateway-api}"
@@ -161,7 +160,7 @@ tasks:
 
   cert-manager:deploy:csi:
     vars:
-      _VERSION: '{{if .VERSION}}{{.VERSION}}{{else}}v0.10.1{{end}}'
+      _VERSION: "{{if .VERSION}}{{.VERSION}}{{else}}v0.10.1{{end}}"
     cmds:
       - helm repo add jetstack https://charts.jetstack.io --force-update
       - >
@@ -506,9 +505,9 @@ tasks:
         {{if eq .POSTGIS "yes" -}}
         --set type=postgis
         {{- end}}
-      _PG_VERSION: '--set-string version.postgresql={{default 16 .PG_VERSION}}'
+      _PG_VERSION: "--set-string version.postgresql={{default 16 .PG_VERSION}}"
       # `cluster` mode
-      _INSTANCES: '--set cluster.instances={{default 1 .INSTANCES}}'
+      _INSTANCES: "--set cluster.instances={{default 1 .INSTANCES}}"
       _SIZE: '--set cluster.storage.size={{default "8Gi" .SIZE}}'
       _STORAGE_CLASS: >-
         {{if .STORAGE_CLASS -}}
@@ -567,7 +566,7 @@ tasks:
         {{.CLI_ARGS}}
 
   csi:nfs:deploy:self:
-    _VERSION: '{{if .VERSION}}{{.VERSION}}{{else}}v4.9.0{{end}}'
+    _VERSION: "{{if .VERSION}}{{.VERSION}}{{else}}v4.9.0{{end}}"
     cmds:
       - helm repo add csi-driver-nfs https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts
       - helm repo update
@@ -608,7 +607,7 @@ tasks:
         --set storageClass.mountOptions='--memory-limit 1000 --dir-mode 0777 --file-mode 0666 --no-systemd --enable-mtime --enable-perms'
 
   csi:smb:deploy:self:
-    _VERSION: '{{if .VERSION}}{{.VERSION}}{{else}}v1.16.0{{end}}'
+    _VERSION: "{{if .VERSION}}{{.VERSION}}{{else}}v1.16.0{{end}}"
     cmds:
       - helm repo add csi-driver-smb https://raw.githubusercontent.com/kubernetes-csi/csi-driver-smb/master/charts
       - helm repo update
@@ -620,7 +619,7 @@ tasks:
         {{.CLI_ARGS}}
 
   csi:seasweedfs:deploy:self:
-    _VERSION: '{{if .VERSION}}{{.VERSION}}{{else}}0.2.2{{end}}'
+    _VERSION: "{{if .VERSION}}{{.VERSION}}{{else}}0.2.2{{end}}"
     cmds:
       - helm repo add --force-update seaweedfs-csi-driver https://seaweedfs.github.io/seaweedfs-csi-driver/helm
       - >-
@@ -651,7 +650,7 @@ tasks:
         {{.CLI_ARGS}}
 
   envoy-gateway:deploy:self:
-    desc: 'Deploy Envoy Gateway that supports gateway api v1.1.0'
+    desc: "Deploy Envoy Gateway that supports gateway api v1.1.0"
     cmds:
       - >-
         helm upgrade --install
@@ -747,7 +746,7 @@ tasks:
 
   fission:deploy:self:
     vars:
-      _VERSION: 'v1.20.4'
+      _VERSION: "v1.20.4"
       _NAMESPACE: fission
     cmds:
       - kubectl create namespace {{._NAMESPACE}}
@@ -761,22 +760,22 @@ tasks:
         --namespace {{._NAMESPACE}} --create-namespace
 
   flux:deploy:self:
-    desc: 'Deploy Flux CD controllers to cluster [CONTEXT]'
+    desc: "Deploy Flux CD controllers to cluster [CONTEXT]"
     preconditions:
       - flux check --pre
     vars:
-      _CONTEXT: '{{if .CONTEXT}}--context {{.CONTEXT}}{{end}}'
+      _CONTEXT: "{{if .CONTEXT}}--context {{.CONTEXT}}{{end}}"
     cmds:
       - flux install {{._CONTEXT}}
 
   flux:deploy:community:
-    desc: 'Deploy Flux CD controllers to cluster [NAME CONTEXT]'
+    desc: "Deploy Flux CD controllers to cluster [NAME CONTEXT]"
     preconditions:
       - helm version
       - flux check --pre
     vars:
-      _NAME: '{{if .NAME}}{{.NAME}}{{else}}flux{{end}}'
-      _CONTEXT: '{{if .CONTEXT}}--kube-context {{.CONTEXT}}{{end}}'
+      _NAME: "{{if .NAME}}{{.NAME}}{{else}}flux{{end}}"
+      _CONTEXT: "{{if .CONTEXT}}--kube-context {{.CONTEXT}}{{end}}"
     cmds:
       - helm repo add fluxcd-community https://fluxcd-community.github.io/helm-charts
       - >
@@ -791,34 +790,11 @@ tasks:
       - kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.1.0/standard-install.yaml
 
   helm:repo:add:
-    desc: 'Add a repo <REPO>'
+    desc: "Add a repo <REPO>"
     internal: true
-    requires: {vars: [REPO]}
+    requires: { vars: [REPO] }
     cmds:
-      - cmd: 'helm repo add {{.REPO}}'
-
-  helm:repo:add:bulk:
-    desc: 'Add repos <REPOS>'
-    internal: true
-    requires: {var: [REPOS]}
-    cmds:
-      - task: 'helm:repo:add'
-        vars: {REPO: '{{.REPO}}'}
-        for: {var: REPOS, as: REPO}
-      - cmd: helm repo update
-
-  helm:repo:add:curated-list:
-    desc: 'Import repos'
-    cmds:
-      - task: 'helm:repo:add:bulk'
-        vars:
-          REPOS:
-            - authentik https://charts.goauthentik.io
-            - bitnami https://charts.bitnami.com/bitnami
-            - datawire https://app.getambassador.io
-            - fluxcd https://charts.fluxcd.io
-            - fluxcd-community https://fluxcd-community.github.io/helm-charts
-            - prometheus-community https://prometheus-community.github.io/helm-charts
+      - cmd: "helm repo add {{.REPO}}"
 
   hwameistor:deploy:self:
     cmds:
@@ -1065,7 +1041,7 @@ tasks:
 
   kadalu:deploy:self:
     vars:
-      _VERSION: '1.3.0'
+      _VERSION: "1.3.0"
     cmds:
       - >
         helm upgrade --install
@@ -1240,7 +1216,7 @@ tasks:
         --user {{.SSH_USER}}
         --ssh-port {{.SSH_PORT}}
         --ssh-key '{{.SSH_KEY}}'
-      _NODE_TYPE: '--server'
+      _NODE_TYPE: "--server"
       _K3S_ARGS: >-
         --server-data-dir '/home/rancher/k3s'
         --k3s-version v1.28.14+k3s1
@@ -1271,7 +1247,7 @@ tasks:
           {{.CLI_ARGS}}
 
   k3sup-join-worker:
-    desc: 'Join a k3s cluster via SSH <SSH_HOST SSH_USER MASTER_SSH_HOST MASTER_SSH_PORT>'
+    desc: "Join a k3s cluster via SSH <SSH_HOST SSH_USER MASTER_SSH_HOST MASTER_SSH_PORT>"
     cmds:
       - cmd: >
           k3sup join
@@ -1283,7 +1259,7 @@ tasks:
           --k3s-channel stable
 
   karpor:deploy:self:
-    desc: 'Deploy karpor [STORAGE_CLASS]'
+    desc: "Deploy karpor [STORAGE_CLASS]"
     vars:
       _STORAGE_CLASS: >-
         {{if .STORAGE_CLASS -}}
@@ -1310,27 +1286,27 @@ tasks:
 
   karpo:create:sa:admin:
     env:
-      KUBECONFIG: '$HOME/.kube/karpor-hub-cluster.kubeconfig'
+      KUBECONFIG: "$HOME/.kube/karpor-hub-cluster.kubeconfig"
     cmds:
       - kubectl create serviceaccount karpor-admin
       - kubectl create clusterrolebinding karpor-admin --clusterrole=karpor-admin --serviceaccount=default:karpor-admin
 
   karpo:create:sa:guest:
     env:
-      KUBECONFIG: '$HOME/.kube/karpor-hub-cluster.kubeconfig'
+      KUBECONFIG: "$HOME/.kube/karpor-hub-cluster.kubeconfig"
     cmds:
       - kubectl create serviceaccount karpor-guest
       - kubectl create clusterrolebinding karpor-guest --clusterrole=karpor-guest --serviceaccount=default:karpor-guest
 
   karpo:create:token:admin:
     env:
-      KUBECONFIG: '$HOME/.kube/karpor-hub-cluster.kubeconfig'
+      KUBECONFIG: "$HOME/.kube/karpor-hub-cluster.kubeconfig"
     cmds:
       - kubectl create token karpor-admin --duration=1000h
 
   karpo:create:token:guest:
     env:
-      KUBECONFIG: '$HOME/.kube/karpor-hub-cluster.kubeconfig'
+      KUBECONFIG: "$HOME/.kube/karpor-hub-cluster.kubeconfig"
     cmds:
       - kubectl create token karpor-admin --duration=8760h
 
@@ -1344,59 +1320,18 @@ tasks:
         {{.CLI_ARGS}}
 
   krew:install:plugin:
-    desc: 'Install a kubectl plugin [PLUGIN] -- [plugin]'
+    desc: "Install a kubectl plugin [PLUGIN] -- [plugin]"
     vars:
-      _PLUGIN: '{{if .PLUGIN}}{{.PLUGIN}}{{else if .CLI_ARGS}}{{.CLI_ARGS}}{{else}}--help{{end}}'
+      _PLUGIN: "{{if .PLUGIN}}{{.PLUGIN}}{{else if .CLI_ARGS}}{{.CLI_ARGS}}{{else}}--help{{end}}"
     cmds:
       - kubectl krew install {{._PLUGIN}}
-
-  krew:install:plugins:
-    internal: true
-    requires:
-      vars: [PLUGINS]
-    cmds:
-      - task: krew:install:plugin
-        vars:
-          PLUGIN: '{{.PLUGIN}}'
-        for: {var: PLUGINS, as: PLUGIN}
-
-  krew:install:plugin:curated-list:
-    desc: 'Install recommended plugins'
-    cmds:
-      - task: krew:install:plugins
-        vars:
-          PLUGINS:
-            - oidc-login
-            - access-matrix
-            - cert-manager
-            - cilium
-            - cnpg
-            - cost
-            - explore
-            - flame
-            - kc
-            - pv-migrate
-            - stern
-            - tree
-            - vela
-
-  krew:install:plugin:curated-list:unix:
-    platforms: [linux, darwin]
-    desc: 'Install recommended plugins'
-    cmds:
-      - task: krew:install:plugins
-        vars:
-          PLUGINS:
-            - ctx
-            - ns
-            - node-shell
 
   kuboard:deploy:self:
     cmds:
       - kubectl apply -f https://addons.kuboard.cn/kuboard/kuboard-v3.yaml
 
   kube-vip:deploy:self:
-    desc: 'Deploy kube-vip'
+    desc: "Deploy kube-vip"
     cmds:
       - kubectl apply -f https://kube-vip.io/manifests/rbac.yaml
       - 'echo "TODO: DaemonSet"'
@@ -1426,8 +1361,8 @@ tasks:
   kubero:deploy:ui:
     requires:
       vars:
-        - 'KUBERO_WEBHOOK_SECRET' # openssl rand -hex 20
-        - 'KUBERO_SESSION_KEY' # openssl rand -hex 20
+        - "KUBERO_WEBHOOK_SECRET" # openssl rand -hex 20
+        - "KUBERO_SESSION_KEY" # openssl rand -hex 20
     cmds:
       - kubectl create namespace kubero
       - >
@@ -1529,7 +1464,7 @@ tasks:
             echo -n "kubectl vela";
           fi;
     cmds:
-      - '{{.VELA}} port-forward -n vela-system addon-velaux 8000:8000'
+      - "{{.VELA}} port-forward -n vela-system addon-velaux 8000:8000"
 
   kubevela:crd:list:
     vars:
@@ -1568,7 +1503,7 @@ tasks:
           DATA_DIR: "{{._DATA_DIR}}"
 
   local-path-provisioner:deploy:self:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: "{{.USER_WORKING_DIR}}"
     vars:
       _CSI_VERSION: '--set image.tag={{default "v0.0.30" .CSI_VERSION}}'
       _PATH: >-
@@ -1592,8 +1527,8 @@ tasks:
       - defer: rm -r local-path-provisioner
 
   kmesh:deploy:self:
-    desc: 'Deploy kmesh. Please install istio ahead'
-    dir: '{{.USER_WORKING_DIR}}'
+    desc: "Deploy kmesh. Please install istio ahead"
+    dir: "{{.USER_WORKING_DIR}}"
     cmds:
       - git clone https://github.com/kmesh-net/kmesh
       - >-
@@ -1643,8 +1578,8 @@ tasks:
         {{.CLI_ARGS}}
 
   manifest:validate:
-    desc: 'Validate manifests -- <MANIFEST>...'
-    dir: '{{.USER_WORKING_DIR}}'
+    desc: "Validate manifests -- <MANIFEST>..."
+    dir: "{{.USER_WORKING_DIR}}"
     cmds:
       - >
         kubeconform
@@ -1653,9 +1588,9 @@ tasks:
         {{.CLI_ARGS}}
 
   multus:deploy:self:k3s:whereabouts:
-    desc: 'Deploy multus CNI [DATA_DIR]'
+    desc: "Deploy multus CNI [DATA_DIR]"
     vars:
-      _DATA_DIR: '{{if .DATA_DIR}}{{.DATA_DIR}}{{else}}/var/lib/rancher/k3s{{end}}'
+      _DATA_DIR: "{{if .DATA_DIR}}{{.DATA_DIR}}{{else}}/var/lib/rancher/k3s{{end}}"
     cmds:
       - helm repo add rke2-charts https://rke2-charts.rancher.io
       - helm repo update
@@ -1686,7 +1621,7 @@ tasks:
 
   longhorn:prepare:deps:cryptsetup:
     platforms: [linux]
-    desc: 'Optional'
+    desc: "Optional"
     vars:
       OS:
         sh: >-
@@ -1734,8 +1669,8 @@ tasks:
 
   longhorn:deploy:self:
     vars:
-      _VERSION: '1.7.1'
-      _RELEASE: 'longhorn'
+      _VERSION: "1.7.1"
+      _RELEASE: "longhorn"
       _DATA_DIR: >-
         {{if .DATA_DIR -}}
         {{.DATA_DIR}}
@@ -1819,11 +1754,11 @@ tasks:
         longhorn-backup-s3-compatible-secret
         {{- end}}
       AWS_ACCESS_KEY_ID_BASE64:
-        sh: 'echo -n {{.AWS_ACCESS_KEY_ID}} | base64'
+        sh: "echo -n {{.AWS_ACCESS_KEY_ID}} | base64"
       AWS_SECRET_ACCESS_KEY_BASE64:
-        sh: 'echo -n {{.AWS_SECRET_ACCESS_KEY}} | base64'
+        sh: "echo -n {{.AWS_SECRET_ACCESS_KEY}} | base64"
       AWS_ENDPOINTS_BASE64:
-        sh: 'echo -n {{.AWS_ENDPOINTS}} | base64'
+        sh: "echo -n {{.AWS_ENDPOINTS}} | base64"
       VIRTUAL_HOSTED_STYLE_BASE64: >-
         {{if eq .VIRTUAL_HOSTED_STYLE "false" -}}
         ZmFsc2U=
@@ -2019,7 +1954,7 @@ tasks:
 
   rclone:csi:deploy:self:
     vars:
-      _VERSION: '{{if .VERSION}}{{.VERSION}}{{else}}1.20{{end}}'
+      _VERSION: "{{if .VERSION}}{{.VERSION}}{{else}}1.20{{end}}"
     cmds:
       - git clone https://github.com/wunderio/csi-rclone
       - kubectl apply -f csi-rclone/deploy/kubernetes/{{._VERSION}}/
@@ -2049,8 +1984,8 @@ tasks:
         - ACCESS_KEY_ID
         - SECRET_ACCESS_KEY
     vars:
-      _PROVIDER: '{{if .PROVIDER}}{{.PROVIDER}}{{else}}Other{{end}}'
-      _DIR: '{{if .DIR}}{{.DIR}}{{else}}{{end}}'
+      _PROVIDER: "{{if .PROVIDER}}{{.PROVIDER}}{{else}}Other{{end}}"
+      _DIR: "{{if .DIR}}{{.DIR}}{{else}}{{end}}"
     cmds:
       - |-
         kubectl apply -n csi-rclone -f - <<'EOF'
@@ -2236,7 +2171,7 @@ tasks:
         --set tsuru-api.service.type=NodePort
 
   velero:deploy:self:
-    desc: 'Deploy velero 1.14.1'
+    desc: "Deploy velero 1.14.1"
     vars:
       _VERSION: '{{default "7.2.1" .VERSION}}'
       _PROVIDERS: >-
@@ -2278,7 +2213,7 @@ tasks:
         {{.CLI_ARGS}}
 
   velero:repo:passwd:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: "{{.USER_WORKING_DIR}}"
     requires:
       vars: [PASSWORD]
     vars:

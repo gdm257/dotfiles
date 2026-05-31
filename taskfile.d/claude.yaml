@@ -1,35 +1,11 @@
-version: '3'
+version: "3"
 
 tasks:
-
   install:
     platforms: [windows]
-    desc: 'Install app <APP>'
+    desc: "Install app <APP>"
     requires:
       vars:
         - APP
     cmds:
       - claude plugin marketplace add {{.APP}}
-
-  marketplace:install:
-    platforms: [windows]
-    internal: true
-    requires:
-      vars:
-        - APPS
-    cmds:
-      - for: {var: APPS, as: APP}
-        task: install
-        vars:
-          APP: '{{.APP}}'
-
-  marketplace:curated-list:
-    platforms: [windows]
-    cmds:
-      - task: marketplace:install
-        vars:
-          APPS:
-            - wakatime/claude-code-wakatime
-            - gdm257/cc-plugins
-            - Piebald-AI/claude-code-lsps
-            - anthropics/claude-plugins-official

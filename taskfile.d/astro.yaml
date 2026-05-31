@@ -1,22 +1,21 @@
-version: '3'
+version: "3"
 
 tasks:
-
   create:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: "{{.USER_WORKING_DIR}}"
     vars:
       _BRANCH: '{{default "main" .BRANCH}}'
-      _TEMPLATE: '--template {{.REPO}}#{{._BRANCH}}' # user/repo#main
+      _TEMPLATE: "--template {{.REPO}}#{{._BRANCH}}" # user/repo#main
     cmds:
       - pnpm create astro@latest {{._TEMPLATE}}
 
   dev:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: "{{.USER_WORKING_DIR}}"
     cmds:
       - pnpm run dev
 
   build:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: "{{.USER_WORKING_DIR}}"
     desc: >-
       Build a deploy-ready project
       [
@@ -25,10 +24,10 @@ tasks:
       -- [args]
     cmds:
       - pnpm run build {{.CLI_ARGS}}
-      - '{{if .PREVIEW -}} pnpm run preview {{- end}}'
+      - "{{if .PREVIEW -}} pnpm run preview {{- end}}"
 
   integrate:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: "{{.USER_WORKING_DIR}}"
     requires:
       vars: [INTEGRATION]
     vars:
@@ -39,16 +38,7 @@ tasks:
         pnpm run astro --
         {{- end}}
     cmds:
-      - '{{._ASTRO}} add {{.INTEGRATION}}'
-
-  integrate:bulk:
-    requires:
-      vars: [INTEGRATIONS]
-    cmds:
-      - task: integrate
-        vars:
-          INTEGRATION: '{{.ITEM}}'
-        for: {var: INTEGRATIONS}
+      - "{{._ASTRO}} add {{.INTEGRATION}}"
 
   integrate:tailwind:
     cmds:

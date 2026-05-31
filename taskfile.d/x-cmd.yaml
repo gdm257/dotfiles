@@ -1,7 +1,6 @@
-version: '3'
+version: "3"
 
 tasks:
-
   install:self:
     vars:
       CMD:
@@ -20,7 +19,7 @@ tasks:
         install:self:wget
         {{- end}}
     cmds:
-      - task: '{{.TASK}}'
+      - task: "{{.TASK}}"
 
   install:self:curl:
     cmds:
@@ -47,20 +46,3 @@ tasks:
       vars: [APP]
     cmds:
       - x install {{.APP}}
-
-  install:bulk:
-    internal: true
-    requres:
-      vars: [APPS]
-    cmds:
-      - task: install
-        vars:
-          APP: '{{.ITEM}}'
-        for: {var: APPS}
-
-  install:curated-list:
-    cmds:
-      - task: install:bulk
-        vars:
-          APPS:
-            - brew

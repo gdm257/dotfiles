@@ -19,13 +19,3 @@ tasks:
         task: install
         vars:
           APP: "{{.APP}}"
-
-  extension:curated-list:
-    cmds:
-      - task: extension:install
-        vars:
-          APPS:
-            - npm:pi-subagents
-            - npm:pi-mcp-adapter
-            - npm:pi-ask-user
-            - npm:pi-btw
