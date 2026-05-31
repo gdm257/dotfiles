@@ -107,6 +107,7 @@
   "agent": {},
   "command": {},
   "mcp": {},
+  "shell": "bash",
   "permission": {
     // MCP (not sure whether syntax is compatible)
     "arxiv_*": "allow",
