@@ -1,0 +1,9 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: chsrc }
+  - { args: rclone }
+  - { args: restic }
+  - { args: rsync }
+  - { args: lrzsz }

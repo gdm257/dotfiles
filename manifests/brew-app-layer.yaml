@@ -1,0 +1,26 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: qemu }
+  - { args: nemu }
+  - { args: docker }
+  - { args: docker-compose }
+  - { args: docker-buildx }
+  - { args: lazydocker }
+  - { args: ctop }
+  - { args: dive }
+  - { args: kompose }
+  - { args: kustomize }
+  - { args: helm }
+  - { args: helmfile }
+  - { args: "kcl-lang/tap/kcl" }
+  - { args: k3sup }
+  - { args: "kdash-rs/kdash/kdash" }
+  - { args: k9s }
+  - { args: kubernetes-cli }
+  - { args: krew }
+  - { args: kubectx }
+  # - {args: nomad}
+  # - {args: "robinovitch61/tap/wander"}
+  # - {args: "dokku/repo/dokku"}

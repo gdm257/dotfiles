@@ -1,0 +1,7 @@
+entrypoint: kubectl
+command: "krew install"
+
+run:
+  - { args: ctx }
+  - { args: ns }
+  - { args: node-shell }

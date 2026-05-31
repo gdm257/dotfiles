@@ -1,0 +1,22 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: file-formula }
+  - { args: unar }
+  - { args: unzip }
+  - { args: gnu-tar }
+  - { args: 7zip }
+  - { args: age }
+  - { args: ncdu }
+  - { args: tre }
+  - { args: duf }
+  - { args: dust }
+  - { args: yazi }
+  - { args: superfile }
+  - { args: eza }
+  - { args: fzf }
+  - { args: fd }
+  - { args: lsof }
+  - { args: rename }
+  - { args: trash }

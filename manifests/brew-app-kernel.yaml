@@ -1,0 +1,7 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: cyme }
+  - { args: tz }
+  - { args: fastfetch }

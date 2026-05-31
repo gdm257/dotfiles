@@ -1,0 +1,21 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: vim }
+  - { args: neovim }
+  # - {args: amp}
+  - { args: bat }
+  - { args: mdcat }
+  - { args: sad }
+  - { args: yq }
+  - { args: ag }
+  - { args: ripgrep }
+  - { args: ugrep }
+  - { args: grex }
+  - { args: grep }
+  - { args: gnu-sed }
+  - { args: awk }
+  - { args: fnt }
+  - { args: argon2 }
+  - { args: less }

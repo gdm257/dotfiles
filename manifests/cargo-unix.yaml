@@ -2,17 +2,14 @@ entrypoint: cargo
 command: install
 
 run:
-  # === common ===
-  - {args: sd}
-  # === unix ===
   # - {args: zellij}
-  - {args: sshx}
+  - { args: sshx }
   # - {args: xplr}
   # - {args: tailspin}
-  - {args: pyapp}
-  - {args: havn}
+  - { args: pyapp }
+  - { args: havn }
   # - {args: gpg-tui}
   # - {args: serie}
-  - {args: binsider}
+  - { args: binsider }
   # - {args: systeroid}
   # - {args: systeroid-tui}

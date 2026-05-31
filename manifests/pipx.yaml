@@ -121,6 +121,3 @@ run:
   - { args: git-filter-repo }
   - { args: "git+https://github.com/karpathy/rendergit" }
   # - {args: "git+https://github.com/github/spec-kit"}
-  # === unix ===
-  - { args: isd }
-  - { args: "--include-deps --preinstall netaddr ansible" }

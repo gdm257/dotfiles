@@ -2,7 +2,6 @@ entrypoint: kubectl
 command: "krew install"
 
 run:
-  # === common ===
   - { args: oidc-login }
   - { args: access-matrix }
   - { args: cert-manager }
@@ -16,7 +15,3 @@ run:
   - { args: stern }
   - { args: tree }
   - { args: vela }
-  # === unix ===
-  - { args: ctx }
-  - { args: ns }
-  - { args: node-shell }

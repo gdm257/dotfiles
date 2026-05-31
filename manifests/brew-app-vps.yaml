@@ -1,0 +1,18 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: go-task }
+  - { args: just }
+  - { args: make }
+  - { args: cmake }
+  - { args: vfox }
+  - { args: gcc }
+  - { args: llvm }
+  - { args: go }
+  - { args: micromamba }
+  - { args: rust }
+  - { args: volta }
+  - { args: git }
+  - { args: gitui }
+  - { args: lazygit }

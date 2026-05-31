@@ -1,0 +1,9 @@
+entrypoint: volta
+command: install
+
+run:
+  - { args: node }
+  # - {args: npm}
+  - { args: npx }
+  - { args: pnpm }
+  - { args: yarn }

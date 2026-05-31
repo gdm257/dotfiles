@@ -1,0 +1,26 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: curl }
+  - { args: wget }
+  - { args: nftables }
+  - { args: iptables }
+  - { args: iproute2 }
+  - { args: net-tools }
+  - { args: iputils }
+  - { args: gping }
+  # - {args: dog}
+  - { args: doggo }
+  - { args: asn }
+  - { args: curlie }
+  - { args: websocat }
+  - { args: mkcert }
+  - { args: bitwarden-cli }
+  - { args: bandwhich }
+  - { args: nethogs }
+  - { args: iftop }
+  - { args: iotop }
+  - { args: iperf3 }
+  - { args: tcpdump }
+  - { args: "guumaster/tap/hostctl" }

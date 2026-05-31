@@ -1,0 +1,49 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: go-task }
+  - { args: just }
+  - { args: make }
+  - { args: cmake }
+  - { args: vfox }
+  - { args: asdf }
+  - { args: whalebrew }
+  - { args: croc }
+  - { args: eget }
+  - { args: apt }
+  - { args: dpkg }
+  - { args: volta }
+  # - {args: pipx}
+  # - {args: rye}
+  - { args: micromamba }
+  - { args: ruff }
+  - { args: gradle }
+  - { args: adb-enhanced }
+  - { args: apktool }
+  - { args: nuget }
+  - { args: gcc }
+  - { args: llvm }
+  - { args: xmake }
+  - { args: conan }
+  - { args: gdb }
+  - { args: upx }
+  - { args: doxygen }
+  - { args: shellcheck }
+  - { args: shfmt }
+  - { args: luajit }
+  - { args: luarocks }
+  # - {args: "lua@5.3"}
+  - { args: go }
+  - { args: golangci-lint }
+  - { args: goreleaser }
+  - { args: protoc-gen-go }
+  - { args: gf }
+  - { args: rust }
+  # - {args: rustup}
+  - { args: perl }
+  # PHP
+  # - {args: "php@8.2"}
+  - { args: "shivammathur/php/php@8.2" }
+  # PHP extensions
+  - { args: "shivammathur/extensions/xdebug@8.2" }

@@ -1,0 +1,6 @@
+entrypoint: pipx
+command: install
+
+run:
+  - { args: isd }
+  - { args: "--include-deps --preinstall netaddr ansible" }

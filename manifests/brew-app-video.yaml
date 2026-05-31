@@ -1,0 +1,5 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: ffmpeg }

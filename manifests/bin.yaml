@@ -1,0 +1,5 @@
+entrypoint: bin
+command: install
+
+run:
+  - { args: "usagi-flow/evil-helix" }

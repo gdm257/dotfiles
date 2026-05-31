@@ -152,333 +152,445 @@ tasks:
   manifest:apt:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/apt.yaml"
+          PATH: "./manifests/apt.yaml"
         task: manifest:run:manifest
 
   manifest:ansible-collection:
     platforms: [linux, darwin]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/ansible-collection.yaml"
+          PATH: "./manifests/ansible-collection.yaml"
         task: manifest:run:manifest
 
   manifest:ansible-role:
     platforms: [linux, darwin]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/ansible-role.yaml"
+          PATH: "./manifests/ansible-role.yaml"
         task: manifest:run:manifest
 
   manifest:astro:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/astro.yaml"
+          PATH: "./manifests/astro.yaml"
         task: manifest:run:manifest
 
   manifest:bin:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/bin.yaml"
+          PATH: "./manifests/bin.yaml"
         task: manifest:run:manifest
 
-  manifest:brew-app:
+  manifest:bin-linux:
+    platforms: [linux]
+    cmds:
+      - vars:
+          PATH: "./manifests/bin-linux.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:devops:
     platforms: [linux, darwin]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/brew-app.yaml"
+          PATH: "./manifests/brew-app-devops.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:downloader:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-downloader.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:file:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-file.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:kernel:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-kernel.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:layer:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-layer.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:network:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-network.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:process:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-process.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:shell:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-shell.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:text:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-text.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:toolbox:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-toolbox.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:video:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-video.yaml"
+        task: manifest:run:manifest
+
+  manifest:brew-app:vps:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/brew-app-vps.yaml"
         task: manifest:run:manifest
 
   manifest:brew-tap:
     platforms: [linux, darwin]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/brew-tap.yaml"
+          PATH: "./manifests/brew-tap.yaml"
         task: manifest:run:manifest
 
   manifest:cargo:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/cargo.yaml"
+          PATH: "./manifests/cargo.yaml"
+        task: manifest:run:manifest
+
+  manifest:cargo-unix:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/cargo-unix.yaml"
         task: manifest:run:manifest
 
   manifest:claude:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/claude.yaml"
+          PATH: "./manifests/claude.yaml"
         task: manifest:run:manifest
 
   manifest:choco:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/choco.yaml"
+          PATH: "./manifests/choco.yaml"
         task: manifest:run:manifest
 
   manifest:conda-create:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/conda-create.yaml"
+          PATH: "./manifests/conda-create.yaml"
         task: manifest:run:manifest
 
   manifest:debug:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/debug.yaml"
+          PATH: "./manifests/debug.yaml"
         task: manifest:run:manifest
 
   manifest:dotnet-source:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/dotnet-source.yaml"
+          PATH: "./manifests/dotnet-source.yaml"
         task: manifest:run:manifest
 
   manifest:dotnet-tool:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/dotnet-tool.yaml"
+          PATH: "./manifests/dotnet-tool.yaml"
         task: manifest:run:manifest
 
   manifest:go:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/go.yaml"
+          PATH: "./manifests/go.yaml"
         task: manifest:run:manifest
 
   manifest:k8s-helm-repo:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/k8s-helm-repo.yaml"
+          PATH: "./manifests/k8s-helm-repo.yaml"
         task: manifest:run:manifest
 
   manifest:k8s-krew:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/k8s-krew.yaml"
+          PATH: "./manifests/k8s-krew.yaml"
+        task: manifest:run:manifest
+
+  manifest:k8s-krew-unix:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/k8s-krew-unix.yaml"
         task: manifest:run:manifest
 
   manifest:npm:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/npm.yaml"
+          PATH: "./manifests/npm.yaml"
         task: manifest:run:manifest
 
   manifest:pi:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/pi.yaml"
+          PATH: "./manifests/pi.yaml"
         task: manifest:run:manifest
 
   manifest:pipx:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/pipx.yaml"
+          PATH: "./manifests/pipx.yaml"
+        task: manifest:run:manifest
+
+  manifest:pipx-unix:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/pipx-unix.yaml"
         task: manifest:run:manifest
 
   manifest:playnite:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/playnite.yaml"
+          PATH: "./manifests/playnite.yaml"
         task: manifest:run:manifest
 
   manifest:rye:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/rye.yaml"
+          PATH: "./manifests/rye.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:audio:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-audio.yaml"
+          PATH: "./manifests/scoop-app-audio.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:devops:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-devops.yaml"
+          PATH: "./manifests/scoop-app-devops.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:downloader:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-downloader.yaml"
+          PATH: "./manifests/scoop-app-downloader.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:file:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-file.yaml"
+          PATH: "./manifests/scoop-app-file.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:fonts:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-fonts.yaml"
+          PATH: "./manifests/scoop-app-fonts.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:kernel:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-kernel.yaml"
+          PATH: "./manifests/scoop-app-kernel.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:layer:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-layer.yaml"
+          PATH: "./manifests/scoop-app-layer.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:network:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-network.yaml"
+          PATH: "./manifests/scoop-app-network.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:picture:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-picture.yaml"
+          PATH: "./manifests/scoop-app-picture.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:process:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-process.yaml"
+          PATH: "./manifests/scoop-app-process.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:shell:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-shell.yaml"
+          PATH: "./manifests/scoop-app-shell.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:text:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-text.yaml"
+          PATH: "./manifests/scoop-app-text.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:toolbox:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-toolbox.yaml"
+          PATH: "./manifests/scoop-app-toolbox.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:video:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-app-video.yaml"
+          PATH: "./manifests/scoop-app-video.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-bucket:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-bucket.yaml"
+          PATH: "./manifests/scoop-bucket.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-config:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/scoop-config.yaml"
+          PATH: "./manifests/scoop-config.yaml"
         task: manifest:run:manifest
 
   manifest:skills:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/skills.yaml"
+          PATH: "./manifests/skills.yaml"
         task: manifest:run:manifest
 
   manifest:stack:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/stack.yaml"
+          PATH: "./manifests/stack.yaml"
         task: manifest:run:manifest
 
   manifest:vfox-globalize:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/vfox-globalize.yaml"
+          PATH: "./manifests/vfox-globalize.yaml"
         task: manifest:run:manifest
 
   manifest:vfox-plugin:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/vfox-plugin.yaml"
+          PATH: "./manifests/vfox-plugin.yaml"
         task: manifest:run:manifest
 
   manifest:vfox-sdk:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/vfox-sdk.yaml"
+          PATH: "./manifests/vfox-sdk.yaml"
         task: manifest:run:manifest
 
   manifest:volta:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/volta.yaml"
+          PATH: "./manifests/volta.yaml"
+        task: manifest:run:manifest
+
+  manifest:volta-unix:
+    platforms: [linux, darwin]
+    cmds:
+      - vars:
+          PATH: "./manifests/volta-unix.yaml"
         task: manifest:run:manifest
 
   manifest:w2:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/w2.yaml"
+          PATH: "./manifests/w2.yaml"
         task: manifest:run:manifest
 
   manifest:winget-global:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/winget-global.yaml"
+          PATH: "./manifests/winget-global.yaml"
         task: manifest:run:manifest
 
   manifest:winget-msstore:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/winget-msstore.yaml"
+          PATH: "./manifests/winget-msstore.yaml"
         task: manifest:run:manifest
 
   manifest:winget-user:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/winget-user.yaml"
+          PATH: "./manifests/winget-user.yaml"
         task: manifest:run:manifest
 
   manifest:wsl:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/wsl.yaml"
+          PATH: "./manifests/wsl.yaml"
         task: manifest:run:manifest
 
   manifest:x-cmd:
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/x-cmd.yaml"
+          PATH: "./manifests/x-cmd.yaml"
         task: manifest:run:manifest
 
   manifest:yum:
     platforms: [linux]
     cmds:
       - vars:
-          PATH: "./taskfile.d/manifests/yum.yaml"
+          PATH: "./manifests/yum.yaml"
         task: manifest:run:manifest

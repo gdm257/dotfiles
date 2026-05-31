@@ -1,0 +1,9 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: systemd }
+  - { args: htop }
+  - { args: bottom }
+  - { args: pstree }
+  - { args: procs }

@@ -1,0 +1,22 @@
+entrypoint: brew
+command: install
+
+run:
+  - { args: zsh }
+  - { args: "powershell/tap/powershell" }
+  # - {args: "powershell/tap/powershell-lts"}
+  - { args: openssh }
+  - { args: trzsz-ssh }
+  - { args: mosh }
+  # - {args: screen}
+  # - {args: tmux}
+  - { args: zellij }
+  - { args: asciinema }
+  - { args: atuin }
+  - { args: clipboard }
+  - { args: mcfly }
+  - { args: tealdeer }
+  # - {args: wtfutil}
+  - { args: zoxide }
+  - { args: rargs }
+  - { args: "dotenvx/brew/dotenvx" }
