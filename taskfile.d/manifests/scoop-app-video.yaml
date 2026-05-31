@@ -74,7 +74,7 @@ run:
   - { args: kdenlive }
   # - {args: "shotcut losslesscut"}
   - { args: gyroflow }
-  - { args: opentoonz }
+  # - { args: opentoonz }
   - { args: obs-studio }
   - { args: ZXPInstaller }
   # - {args: adobe-creative-cloud-cleaner-tool}

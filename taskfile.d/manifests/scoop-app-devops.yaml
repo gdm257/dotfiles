@@ -93,6 +93,7 @@ run:
   # - {args: gdm257/paseo}
   # - {args: gdm257/nezha}
   - { args: opencode-desktop }
+  # - { args: gdm257/claude-code-haha }
   # - {args: gdm257/opencode-worktree}
   # - {args: gdm257/ocx}
   - { args: gdm257/skillshare }
