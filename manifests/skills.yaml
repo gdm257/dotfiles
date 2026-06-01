@@ -2,11 +2,12 @@ entrypoint: openskills
 command: "install -g -u"
 
 run:
-  # Enabled by default
+  # ======= Enabled by default =======
   - {args: gdm257/cc-plugins}
-  - {args: sudocode-ai/sudocode}
-  - {args: zhangyanxs/repo2skill}
-  # Collection
+  - {args: rohitg00/agentmemory}
+  # - {args: sudocode-ai/sudocode}
+  # - {args: zhangyanxs/repo2skill}
+  # ======= Collection =======
   - {args: anthropics/claude-plugins-official}
   - {args: ComposioHQ/awesome-claude-skills}
   - {args: VoltAgent/awesome-claude-code-subagents}
@@ -16,7 +17,7 @@ run:
   - {args: vercel-labs/agent-skills}
   - {args: softaworks/agent-toolkit}
   - {args: jeffallan/claude-skills}
-  # Specific tool
+  # ======= Specific tool =======
   - {args: supabase/agent-skills}
   - {args: expo/skills}
   - {args: hyf0/vue-skills}

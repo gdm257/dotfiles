@@ -98,6 +98,7 @@ run:
   # - {args: gdm257/ocx}
   - { args: gdm257/skillshare }
   - { args: gdm257/rulesync }
+  - { args: gdm257/iii }
   # - {args: idea-portable}
   # - {args: imhex}
   - { args: vscode }
