@@ -11,7 +11,7 @@
       "command": "npx",
       "args": ["-y", "@agentmemory/mcp"],
       "env": {
-        "AGENTMEMORY_URL": "http://localhost:3111}",
+        "AGENTMEMORY_URL": "http://localhost:3111",
         "AGENTMEMORY_SECRET": "",
         "AGENTMEMORY_TOOLS": "all"
       }
