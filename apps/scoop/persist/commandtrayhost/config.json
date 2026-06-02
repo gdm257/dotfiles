@@ -1,7 +1,7 @@
 {
   "configs": [
     {
-      "enabled": true,
+      "enabled": false,
       "name": "CloudDrive2",
       "path": "C:\\Users\\demo\\scoop\\apps\\clouddrive2\\current\\",
       "cmd": "clouddrive.exe",
@@ -62,7 +62,7 @@
     },
     {
       // 下面8个一个不能少
-      "enabled": true, // 是否当CommandTrayHost启动时，自动开始运行
+      "enabled": false, // 是否当CommandTrayHost启动时，自动开始运行
       "name": "embyToLocalPlayer", // 系统托盘菜单名字
       "path": "C:\\Users\\demo\\scoop\\apps\\EmbyToLocalPlayer\\current\\python_embed", // cmd的exe所在目录,相对路径是可以的，参考目录是CommandTrayHost.exe所在目录
       "cmd": "python.exe embyToLocalPlayer.py", // cmd命令，必须含有.exe
