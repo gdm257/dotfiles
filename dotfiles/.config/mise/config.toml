@@ -1,6 +1,9 @@
 [settings]
 experimental = true
 env_file = ".env"
+trusted_config_paths = ["/"]
+jobs = 4
+github.use_git_credentials = true
 npm.package_manager = "pnpm" # npm, pnpm, bun (require mise 2025.12.7+)
 pipx.uvx = true
 python.uv_venv_auto = true
