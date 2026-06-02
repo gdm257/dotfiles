@@ -1,0 +1,9 @@
+$schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
+id: cd2
+name: cd2
+description: cd2 service
+delayedAutoStart: true
+workingdirectory:
+hideWindow: true
+executable: clouddrive
+arguments:

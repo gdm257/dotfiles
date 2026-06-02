@@ -1,0 +1,9 @@
+$schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
+id: embytolocalplayer
+name: EmbyToLocalPlayer
+description: embytolocalplayer service
+delayedAutoStart: true
+hideWindow: true
+workingDirectory: C:/Users/demo/scoop/apps/EmbyToLocalPlayer/current
+executable: C:/Users/demo/scoop/apps/EmbyToLocalPlayer/current/python_embed/python.exe
+arguments: embyToLocalPlayer.py

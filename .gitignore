@@ -16,6 +16,9 @@
 !/apps/scoop/persist/mykeymap-beta
 !/apps/scoop/persist/commandtrayhost
 /apps/scoop/persist/commandtrayhost/*.cache
+!/apps/scoop/persist/winswctl
+/apps/scoop/persist/winswctl/shims/*.log
+/apps/scoop/persist/winswctl/shims/*.exe
 /apps/scoop/shims
 /apps/scoop/workspace
 

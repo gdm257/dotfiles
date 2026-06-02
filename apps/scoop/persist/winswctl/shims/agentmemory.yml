@@ -1,0 +1,49 @@
+$schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
+id: agentmemory
+name: agentmemory
+description: agentmemory service
+delayedAutoStart: true
+hideWindow: true
+serviceAccount:
+  # 默认使用 Local SYSTEM 用户，mise 会报错
+  # 1. 要么配置 mise 环境变量（见下方 env）
+  # 2. 要么切换用户身份运行 mise
+  # 授权用户服务登录
+  # 本地安全策略 → 本地策略 → 用户权限分配 → 作为服务登录 → 添加目标用户账户
+  # 解除空密码限制
+  # 本地安全策略 → 本地策略 → 安全选项 → 账户: 使用空密码的本地账户只允许进行控制台登录 → Disabled
+  domain: .
+  user: demo
+  password: ""
+executable: cmd
+# arguments: /c "mise doctor"
+# arguments: /c "mise exec npm:@agentmemory/agentmemory -- agentmemory --version"
+arguments: /c "mise exec npm:@agentmemory/agentmemory -- agentmemory"
+# env:
+#   # ===== Windows 用户目录 =====
+#   - name: HOME
+#     value: 'C:\Users\demo'
+#   - name: USERPROFILE
+#     value: 'C:\Users\demo'
+#   - name: HOMEDRIVE
+#     value: "C:"
+#   - name: HOMEPATH
+#     value: '\Users\demo'
+#   - name: APPDATA
+#     value: 'C:\Users\demo\AppData\Roaming'
+#   - name: LOCALAPPDATA
+#     value: 'C:\Users\demo\AppData\Local'
+#   - name: TEMP
+#     value: 'C:\Users\demo\AppData\Local\Temp'
+#   - name: TMP
+#     value: 'C:\Users\demo\AppData\Local\Temp'
+#
+#   # ===== mise 直接指定路径（不依赖 ~ 解析）=====
+#   - name: MISE_DATA_DIR
+#     value: 'C:\Users\demo\AppData\Local\mise'
+#   - name: MISE_CONFIG_DIR
+#     value: 'C:\Users\demo\.config\mise'
+#   - name: MISE_CACHE_DIR
+#     value: 'C:\Users\demo\AppData\Local\Temp\mise'
+#   - name: MISE_STATE_DIR
+#     value: 'C:\Users\demo\.local\state\mise'
