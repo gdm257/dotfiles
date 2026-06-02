@@ -9,4 +9,4 @@ python.uv_venv_auto = true
 "pipx:dotbot" = "latest"
 task = "latest"
 uv = "latest"
-"ubi:dyoshikawa/rulesync" = "latest"
+"github:dyoshikawa/rulesync" = "latest"

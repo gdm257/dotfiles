@@ -14,8 +14,8 @@ node = { version = "lts", postinstall = "corepack enable" }
 dart = "latest"
 pnpm = "latest"
 uv = "latest"
-"ubi:pkgxdev/pkgx" = "latest"
-"ubi:marwanhawari/stew" = "latest"
+"github:pkgxdev/pkgx" = "latest"
+"github:marwanhawari/stew" = "latest"
 task = "latest"
 yazi = "latest"
 zellij = { version = "latest", os = ["linux", "macos"] }
