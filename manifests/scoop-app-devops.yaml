@@ -109,12 +109,12 @@ run:
   # - {args: cursor}
   # - {args: main/claude-code}
   # - {args: crush}
-  # - {args: codex}
+  - {args: codex}
   # - {args: gdm257/pi}
   # - {args: main/goose-cli}
   # - {args: gdm257/goose}
   # - {args: gdm257/goose-desktop}
-  # - {args: cc-switch}
+  - {args: cc-switch}
   # - {args: gdm257/claude-squad}
   # - {args: gdm257/sudocode}
   # - {args: gdm257/auto-claude}
@@ -199,6 +199,7 @@ run:
   - { args: lfs-dal }
   - { args: git-credential-manager }
   # - {args: git-credential-oauth}
+  - {args: gdm257/git-ssh-sign }
   - { args: gitleaks }
   # - {args: gptcommit}
   # - {args: gitql}
