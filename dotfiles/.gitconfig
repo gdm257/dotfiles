@@ -6,7 +6,7 @@
 	longpaths = true
 	quotepath = false
   symlinks = true
-	safecrlf = true
+	safecrlf = false
 	autocrlf = false
 	eol = lf
 	editor = vim
