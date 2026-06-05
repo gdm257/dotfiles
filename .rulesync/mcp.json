@@ -1,13 +1,9 @@
 {
   "$schema": "https://github.com/dyoshikawa/rulesync/releases/latest/download/mcp-schema.json",
   "mcpServers": {
-    "code-review-graph": {
-      "type": "stdio",
-      "command": "uvx",
-      "args": ["code-review-graph", "serve"]
-    },
     "agentmemory": {
-      "type": "stdio",
+      "disabled": false,
+      "type": "local",
       "command": "npx",
       "args": ["-y", "@agentmemory/mcp"],
       "env": {
@@ -15,6 +11,18 @@
         "AGENTMEMORY_SECRET": "",
         "AGENTMEMORY_TOOLS": "all"
       }
+    },
+    "code-review-graph": {
+      "disabled": false,
+      "type": "local",
+      "command": "uvx",
+      "args": ["code-review-graph", "serve"]
+    },
+    "semble": {
+      "disabled": false,
+      "type": "local",
+      "command": "uvx",
+      "args": ["--from", "semble[mcp]", "semble"]
     }
   }
 }
