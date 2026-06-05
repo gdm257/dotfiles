@@ -15,6 +15,7 @@ serviceAccount:
   domain: .
   user: demo
   password: ""
+workingDirectory: '%USERPROFILE%/.agentmemory'
 executable: cmd
 # arguments: /c "mise doctor"
 # arguments: /c "mise exec npm:@agentmemory/agentmemory -- agentmemory --version"
