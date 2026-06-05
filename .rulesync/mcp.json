@@ -3,7 +3,6 @@
   "mcpServers": {
     "agentmemory": {
       "disabled": false,
-      "type": "local",
       "command": "npx",
       "args": ["-y", "@agentmemory/mcp"],
       "env": {
@@ -14,13 +13,11 @@
     },
     "code-review-graph": {
       "disabled": false,
-      "type": "local",
       "command": "uvx",
       "args": ["code-review-graph", "serve"]
     },
     "semble": {
       "disabled": false,
-      "type": "local",
       "command": "uvx",
       "args": ["--from", "semble[mcp]", "semble"]
     }
