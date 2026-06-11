@@ -1,9 +1,11 @@
 [settings]
+trusted_config_paths = ["/"]
 experimental = true
 env_file = ".env"
-trusted_config_paths = ["/"]
+env_shell_expand = true
 jobs = 4
 github.use_git_credentials = true
+prefer_offline = true
 npm.package_manager = "pnpm" # npm, pnpm, bun (require mise 2025.12.7+)
 pipx.uvx = true
 python.uv_venv_auto = true
