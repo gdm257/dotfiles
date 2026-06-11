@@ -1,0 +1,22 @@
+{
+  "system": "x86_64-linux",
+  "username": "root",
+  "home": "/root",
+  "isMinimal": true,
+  "isNixosWsl": false,
+  "isPersonalComputer": true,
+  "isDesktop": false,
+  "isSteamDeck": false,
+  "enableFile": false,
+  "enableText": false,
+  "enablePicture": false,
+  "enableAudio": false,
+  "enableVideo": false,
+  "enableDownloader": false,
+  "enableProcess": false,
+  "enableKernel": false,
+  "enableNetwork": false,
+  "enableLayer": false,
+  "enableShell": false,
+  "enableDevops": false
+}
