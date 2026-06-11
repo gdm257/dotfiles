@@ -46,6 +46,7 @@ run:
   - { args: llvm }
   - { args: xmake }
   - { args: conan }
+  - { args: vcpkg }
   - { args: cmake }
   - { args: doxygen }
   - { args: qt-creator }
@@ -123,7 +124,7 @@ run:
   - { args: beads-viewer }
   # - {args: abacus}
   - { args: gdm257/beads-plan }
-  - { args: gdm257/archon }
+  # - { args: gdm257/archon }
   - { args: vim }
   # - {args: vimtutor}
   - { args: neovim }
