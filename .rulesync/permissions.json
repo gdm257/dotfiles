@@ -24,7 +24,6 @@
     "agent": {
       "Explore": "deny"
     },
-    "mcp__code-review-graph": { "*": "allow" },
     "bash": {
       "git push *": "ask",
       "jj git push *": "ask",
