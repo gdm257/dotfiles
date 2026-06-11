@@ -12,14 +12,10 @@
       ".sudocode/specs.jsonl": "deny"
     },
     "read": {
-      "~/.zshrc": "allow",
-      "./src/**": "allow",
-      "**/*.md": "allow",
       "**/age.key": "deny",
       "**/key.txt": "deny",
       ".sudocode/issues.jsonl": "deny",
-      ".sudocode/specs.jsonl": "deny",
-      "**/secrets/**": "deny"
+      ".sudocode/specs.jsonl": "deny"
     },
     "agent": {
       "Explore": "deny"
