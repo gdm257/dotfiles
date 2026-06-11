@@ -2,6 +2,8 @@
 **/.config/opencode/logs/*
 **/.local/share/wezterm/gui-sock*
 **/.cache/
+**/.cc-switch/backups/
+**/.cc-switch/logs/
 **/.crawl4ai/cache/
 **/.codeium/
 **/.bgmi/bangumi/
@@ -38,6 +40,7 @@
 **/MuseScore4/SoundFonts/*
 
 # ==== XDG ====
+**/AppData/Local/.xmake/
 **/AppData/Local/activitywatch/activitywatch/Logs/
 **/AppData/Local/activitywatch/activitywatch/Cache/
 **/AppData/Local/BraveSoftware/Brave-Browser/Application/
