@@ -3,7 +3,7 @@ command: install
 
 run:
   # - {args: uutils-coreutils}
-  - { args: busybox }
+  # - {args: busybox}
   # - {args: vim}
   - { args: file }
   - { args: curl }
