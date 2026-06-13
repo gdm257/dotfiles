@@ -9,7 +9,6 @@
 }: {
   home.packages = with pkgs; [
     # Shell
-    busybox
     uutils-coreutils-noprefix
     coreutils
     util-linux
