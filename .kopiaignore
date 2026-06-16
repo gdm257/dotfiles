@@ -68,6 +68,8 @@
 **/AppData/Roaming/DM Pro6/Chrome/
 **/AppData/Roaming/DM Pro6/Log/*
 **/AppData/Roaming/itch/apps/
+**/AppData/Roaming/ludusavi/manifest.yaml
+**/AppData/Roaming/ludusavi/*.log
 **/AppData/Roaming/OpenList Desktop/data/log/*
 **/AppData/Roaming/OpenList Desktop/data/temp/
 **/AppData/Roaming/Tencent/WeMeet/Global/
