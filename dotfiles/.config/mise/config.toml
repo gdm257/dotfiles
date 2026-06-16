@@ -37,11 +37,13 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "npm:@agentmemory/agentmemory" = { version = "latest", postinstall = "agentmemory connect claude-code --with-hooks" }
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
+"pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = "main"
 "pipx:git+https://github.com/gdm257/magnetizer.git" = "main"
 "pipx:fonttools" = { version = "latest", extras = "ufo,lxml,woff,unicode" }
 "pipx:httpie" = "latest"
 "pipx:marimo" = { version = "latest", extras = "recommended" }
 "pipx:ptpython" = "latest"
 "pipx:pyright" = "latest"
+"pipx:git+https://github.com/browser-use/browser-harness.git" = "main"
 "pipx:semble" = "latest"
 "pipx:code-review-graph" = "latest"

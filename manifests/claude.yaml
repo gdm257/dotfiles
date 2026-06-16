@@ -6,4 +6,5 @@ run:
   - { args: gdm257/cc-plugins }
   - { args: Piebald-AI/claude-code-lsps }
   - { args: anthropics/claude-plugins-official }
+  - { args: max-sixty/worktrunk }
   - { args: rohitg00/agentmemory }
