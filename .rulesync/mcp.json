@@ -20,6 +20,75 @@
       "disabled": false,
       "command": "uvx",
       "args": ["--from", "semble[mcp]", "semble"]
+    },
+    "glm-zread": {
+      "disabled": true,
+      "command": "pnpm",
+      "args": ["dlx", "@z_ai/mcp-server"],
+      "env": {
+        "Z_AI_MODE": "ZHIPU",
+        "Z_AI_API_KEY": ""
+      }
+    },
+    "arxiv": {
+      "disabled": true,
+      "command": "uvx",
+      "args": ["arxiv-mcp-server"]
+    },
+    "bilibili": {
+      "disabled": true,
+      "command": "pnpm",
+      "args": ["dlx", "@wangshunnn/bilibili-mcp-server"]
+    },
+    "cloudflare-docs": {
+      "disabled": true,
+      "url": "https://docs.mcp.cloudflare.com/mcp"
+    },
+    "deepwiki": {
+      "disabled": true,
+      "url": "https://mcp.deepwiki.com/mcp"
+    },
+    "openrpc": {
+      "disabled": true,
+      "command": "pnpm",
+      "args": ["dlx", "openrpc-mcp-server"]
+    },
+    "exa": {
+      "disabled": true,
+      "url": "https://mcp.exa.ai/mcp?tools=web_search_exa,web_search_advanced_exa,get_code_context_exa,deep_search_exa,crawling_exa,company_research_exa,people_search_exa,deep_researcher_start,deep_researcher_check"
+    },
+    "tavily": {
+      "disabled": true,
+      "url": "https://mcp.tavily.com/mcp/"
+    },
+    "blender": {
+      "disabled": true,
+      "command": "uvx",
+      "args": ["blender-mcp"]
+    },
+    "cloudflare-browser": {
+      "disabled": true,
+      "url": "https://browser.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-workers": {
+      "disabled": true,
+      "url": "https://bindings.mcp.cloudflare.com/mcp"
+    },
+    "figma": {
+      "disabled": true,
+      "url": "https://mcp.figma.com/mcp"
+    },
+    "gitlab": {
+      "disabled": true,
+      "url": "https://gitlab.com/api/v4/mcp"
+    },
+    "neon": {
+      "disabled": true,
+      "url": "https://mcp.neon.tech/mcp"
+    },
+    "supabase": {
+      "disabled": true,
+      "url": "https://mcp.supabase.com/mcp"
     }
   }
 }
