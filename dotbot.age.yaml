@@ -4,9 +4,9 @@
     "~/.config/git-sync/config.yaml":
       source: private/git-sync.yaml.age
       identity: private/key.txt
-    "~/.config/ruler/ruler.toml":
-      source: private/ruler.toml.age
-      identity: private/key.txt
+    # "~/.config/ruler/ruler.toml":
+    #   source: private/ruler.toml.age
+    #   identity: private/key.txt
     # "~/.claude/settings.json":
     #     source: private/claude.settings.json.age
     #     identity: private/key.txt
