@@ -24,7 +24,7 @@ run:
   # - {args: Python.PythonInstallManager}
   # - {args: Anaconda.Miniconda3}
   # - {args: Mamba.Micromamba}
-  - { args: Python.Python.3.10 }
+  - { args: Python.Python.3.13 }
   # - {args: Canonical.Ubuntu.2204}
   # - {args: jtroo.kanata_gui}
   # - {args: Xmarmalade.AlistHelper}

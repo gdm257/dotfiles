@@ -70,7 +70,7 @@ run:
   # - {args: Dell.DisplayManager}
   - { args: Sandboxie.Plus }
   - { args: Oracle.VirtualBox }
-  - { args: SUSE.RancherDesktop }
+  # - {args: SUSE.RancherDesktop}
   - { args: Docker.DockerDesktop }
   # - {args: OpenShot.OpenShot}
   # - {args: iSlide.iSlide}

@@ -10,7 +10,7 @@ run:
   # - {args: main/pixi}
   # - {args: "python27 python37 python38 python39 python310 python311 micromamba_ShuguangSun micromamba"}
   # - {args: rye}
-  - { args: uv }
+  # - {args: uv}
   # - {args: gdm257/micromamba}
   - { args: ruff }
   # - {args: hatch}
