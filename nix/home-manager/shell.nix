@@ -175,6 +175,8 @@ in
         env_shell_expand = true;
         jobs = 4;
         prefer_offline = true;
+        auto_install = false;
+        exec_auto_install = true;
         npm.package_manager = "pnpm"; # require mise 2025.12.7+
         pipx.uvx = true;
         python.uv_venv_auto = true;

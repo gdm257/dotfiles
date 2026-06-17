@@ -6,44 +6,46 @@ env_shell_expand = true
 jobs = 4
 github.use_git_credentials = true
 prefer_offline = true
+auto_install = false
+exec_auto_install = true
 npm.package_manager = "pnpm" # npm, pnpm, bun (require mise 2025.12.7+)
 pipx.uvx = true
 python.uv_venv_auto = true
 
 [tools]
-bun = "latest"
-node = { version = "lts", postinstall = "corepack enable" }
-dart = "latest"
-pnpm = "latest"
-uv = "latest"
-"github:pkgxdev/pkgx" = "latest"
-"github:marwanhawari/stew" = "latest"
-task = "latest"
-yazi = "latest"
+bun = { version = "latest", os = ["windows"] }
+node = { version = "lts", postinstall = "corepack enable", os = ["windows"] }
+dart = { version = "latest", os = ["windows"] }
+pnpm = { version = "latest", os = ["windows"] }
+uv = { version = "latest", os = ["windows"] }
+"github:pkgxdev/pkgx" = { version = "latest", os = ["windows"] }
+"github:marwanhawari/stew" = { version = "latest", os = ["windows"] }
+task = { version = "latest", os = ["windows"] }
+yazi = { version = "latest", os = ["windows"] }
 zellij = { version = "latest", os = ["linux", "macos"] }
 
-"dotnet:dotnet-repl" = "latest"
-"dotnet:Microsoft.dotnet-interactive" = "latest"
-"dotnet:csharp-ls" = "latest"
+"dotnet:dotnet-repl" = { version = "latest", os = ["windows"] }
+"dotnet:Microsoft.dotnet-interactive" = { version = "latest", os = ["windows"] }
+"dotnet:csharp-ls" = { version = "latest", os = ["windows"] }
 
 "cargo:binsider" = { version = "latest", os = ["linux", "macos"] }
 
-"go:golang.org/x/tools/gopls" = "v0.21.0"
+"go:golang.org/x/tools/gopls" = { version = "v0.21.0", os = ["windows"] }
 
 "npm:neoss" = { version = "latest", os = ["linux"] }
-"npm:@openacp/cli" = "latest"
-"npm:@mindfoldhq/trellis" = "beta"
-"npm:@fission-ai/openspec" = "latest"
-"npm:@agentmemory/agentmemory" = { version = "latest", postinstall = "agentmemory connect claude-code --with-hooks" }
+"npm:@openacp/cli" = { version = "latest", os = ["windows"] }
+"npm:@mindfoldhq/trellis" = { version = "latest", os = ["windows"] }
+"npm:@fission-ai/openspec" = { version = "latest", os = ["windows"] }
+"npm:@agentmemory/agentmemory" = { version = "latest", postinstall = "agentmemory connect claude-code --with-hooks", os = ["windows"] }
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
-"pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = "main"
-"pipx:git+https://github.com/gdm257/magnetizer.git" = "main"
-"pipx:fonttools" = { version = "latest", extras = "ufo,lxml,woff,unicode" }
-"pipx:httpie" = "latest"
-"pipx:marimo" = { version = "latest", extras = "recommended" }
-"pipx:ptpython" = "latest"
-"pipx:pyright" = "latest"
-"pipx:git+https://github.com/browser-use/browser-harness.git" = "main"
-"pipx:semble" = "latest"
-"pipx:code-review-graph" = "latest"
+"pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = { version = "main", os = ["windows"] }
+"pipx:git+https://github.com/SilentSnowSoul/magnetizer.git" = { version = "main", os = ["windows"] }
+"pipx:fonttools" = { version = "latest", extras = "ufo,lxml,woff,unicode", os = ["windows"] }
+"pipx:httpie" = { version = "latest", os = ["windows"] }
+"pipx:marimo" = { version = "latest", extras = "recommended", os = ["windows"] }
+"pipx:ptpython" = { version = "latest", os = ["windows"] }
+"pipx:pyright" = { version = "latest", os = ["windows"] }
+"pipx:git+https://github.com/browser-use/browser-harness.git" = { version = "main", os = ["windows"] }
+"pipx:semble" = { version = "latest", os = ["windows"] }
+"pipx:code-review-graph" = { version = "latest", os = ["windows"] }
