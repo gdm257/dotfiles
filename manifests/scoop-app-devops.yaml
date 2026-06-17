@@ -93,6 +93,7 @@ run:
   # - {args: gdm257/aionui}
   # - {args: gdm257/paseo}
   # - {args: gdm257/nezha}
+  # - {args: gdm257/vibe-around}
   - { args: opencode-desktop }
   # - { args: gdm257/claude-code-haha }
   # - {args: gdm257/opencode-worktree}
@@ -124,6 +125,7 @@ run:
   - { args: beads-viewer }
   # - {args: abacus}
   - { args: gdm257/beads-plan }
+  - { args: gdm257/open-code-review }
   # - { args: gdm257/archon }
   - { args: vim }
   # - {args: vimtutor}
