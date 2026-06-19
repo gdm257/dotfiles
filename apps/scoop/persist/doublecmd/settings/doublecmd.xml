@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>598</Left>
-      <Top>144</Top>
+      <Left>450</Left>
+      <Top>229</Top>
       <Width>1106</Width>
       <Height>677</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -196,7 +196,7 @@
     <PersonalizedGiga>GB</PersonalizedGiga>
     <PersonalizedTera>TB</PersonalizedTera>
     <ConfirmQuit>False</ConfirmQuit>
-    <MinimizeToTray>True</MinimizeToTray>
+    <MinimizeToTray>False</MinimizeToTray>
     <AlwaysShowTrayIcon>False</AlwaysShowTrayIcon>
     <Mouse>
       <Selection Enabled="True">
@@ -651,6 +651,7 @@
     <HotDir Name="version manager" Path="C:\Users\demo\.vm"/>
     <HotDir Name="version fox" Path="C:\Users\demo\.version-fox"/>
     <HotDir Name="vfox global" Path="C:\Users\demo\.version-fox\shims"/>
+    <HotDir Name="worktrunk" Path="C:\Users\demo\AppData\Roaming\worktrunk"/>
     <HotDir Name="xpipe" Path="C:\Users\demo\.xpipe"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Download" Path=""/>
