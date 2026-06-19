@@ -71,6 +71,7 @@ run:
   - { args: bruno }
   # - {args: hoppscotch}
   - { args: gdm257/whistle }
+  - { args: proxypin }
   - { args: wireshark }
   # - {args: termshark}
   # - {args: fiddler}

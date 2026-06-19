@@ -8,7 +8,7 @@ github.use_git_credentials = true
 prefer_offline = true
 auto_install = false
 exec_auto_install = true
-npm.package_manager = "pnpm" # npm, pnpm, bun (require mise 2025.12.7+)
+npm.package_manager = "pnpm"
 pipx.uvx = true
 python.uv_venv_auto = true
 

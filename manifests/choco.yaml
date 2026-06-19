@@ -6,6 +6,7 @@ run:
   - {args: ext2fsd}
   - {args: winbtrfs}
   - {args: vcredist-all}
+  - {args: nvidia-app}
   # - {args: omnimidi}
   # - {args: softether-vpn-client}
   # - {args: sqlserver-odbcdriver}
