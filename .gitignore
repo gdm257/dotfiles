@@ -51,8 +51,8 @@
 /pub-merge-recursive/AppData/Roaming/skillshare/trash
 /pub-merge-recursive/AppData/Roaming/skillshare/ui
 /pub-merge-recursive/AppData/Roaming/skillshare/version-check.json
-!/pub-merge-recursive/AppData/Roaming/Zed/settings.json
-!/pub-merge-recursive/AppData/Roaming/Zed/keymap.json
+!/pub-merge-recursive/AppData/Roaming/Zed
+/pub-merge-recursive/AppData/Roaming/Zed/settings_backup.json
 
 /state/*
 !/state/massCode
