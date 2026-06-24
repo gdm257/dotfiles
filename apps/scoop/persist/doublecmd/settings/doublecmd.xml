@@ -736,6 +736,7 @@
     <HotDir Name="VSCode Snippets" Path="C:\Users\demo\scoop\persist\vscode\data\user-data\User\snippets"/>
     <HotDir Name="VisualStudio" Path="C:\Users\demo\AppData\Roaming\Microsoft\VisualStudio"/>
     <HotDir Name="VisualStudio Settings" Path="C:\Users\demo\AppData\Local\Microsoft\VisualStudio\17.0_55ac80b7\Settings"/>
+    <HotDir Name="Zed" Path="C:\Users\demo\AppData\Roaming\Zed"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Picture" Path=""/>
     <HotDir Name="Allusion" Path="C:\Users\demo\AppData\Roaming\Allusion"/>
@@ -793,7 +794,7 @@
     <ImageExifRotate>True</ImageExifRotate>
     <ImageStretchLargeOnly>True</ImageStretchLargeOnly>
     <ImageShowTransparency>False</ImageShowTransparency>
-    <ImageCenter>True</ImageCenter>
+    <ImageCenter>False</ImageCenter>
     <CopyMovePath1/>
     <CopyMovePath2/>
     <CopyMovePath3/>
