@@ -31,6 +31,7 @@
 /dotfiles/.config/opencode/AGENTS.md
 /dotfiles/.config/opencode/skills
 /dotfiles/.config/opencode/agent
+/dotfiles/.config/opencode/agents
 /dotfiles/.config/opencode/plugins
 
 /libraries/*
@@ -44,6 +45,14 @@
 !/pub-merge-recursive/AppData/Roaming/.emacs.d
 !/pub-merge-recursive/AppData/Roaming/.doom.d
 !/pub-merge-recursive/AppData/Roaming/jj
+!/pub-merge-recursive/AppData/Roaming/skillshare
+/pub-merge-recursive/AppData/Roaming/skillshare/backups
+/pub-merge-recursive/AppData/Roaming/skillshare/logs
+/pub-merge-recursive/AppData/Roaming/skillshare/trash
+/pub-merge-recursive/AppData/Roaming/skillshare/ui
+/pub-merge-recursive/AppData/Roaming/skillshare/version-check.json
+!/pub-merge-recursive/AppData/Roaming/Zed/settings.json
+!/pub-merge-recursive/AppData/Roaming/Zed/keymap.json
 
 /state/*
 !/state/massCode
