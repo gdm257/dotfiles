@@ -34,9 +34,10 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 
 "npm:neoss" = { version = "latest", os = ["linux"] }
 "npm:@openacp/cli" = { version = "latest", os = ["windows"] }
-"npm:@mindfoldhq/trellis" = { version = "latest", os = ["windows"] }
+"npm:@intellectronica/ruler" = { version = "latest", os = ["windows"] }
 "npm:@fission-ai/openspec" = { version = "latest", os = ["windows"] }
-"npm:@agentmemory/agentmemory" = { version = "latest", postinstall = "agentmemory connect claude-code --with-hooks", os = ["windows"] }
+"npm:@mindfoldhq/trellis" = { version = "latest", os = ["windows"] }
+"npm:cc-sdd" = { version = "latest", os = ["windows"] }
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = { version = "main", os = ["windows"] }
@@ -47,5 +48,5 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "pipx:ptpython" = { version = "latest", os = ["windows"] }
 "pipx:pyright" = { version = "latest", os = ["windows"] }
 "pipx:git+https://github.com/browser-use/browser-harness.git" = { version = "main", os = ["windows"] }
-"pipx:semble" = { version = "latest", os = ["windows"] }
+"pipx:semble" = { version = "latest", extras = "mcp", os = ["windows"] }
 "pipx:code-review-graph" = { version = "latest", os = ["windows"] }

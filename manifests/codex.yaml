@@ -1,0 +1,5 @@
+entrypoint: codex
+command: "plugin marketplace add"
+
+run:
+  - { args: wakatime/codex-cli-wakatime }

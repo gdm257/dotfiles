@@ -2,13 +2,15 @@ entrypoint: scoop
 command: install
 
 run:
-  - { args: chsrc }
+  # - {args: chsrc}
   - { args: wixtoolset }
   # - {args: dark}
   # - {args: vfox}
   - { args: main/mise }
+  - { args: gdm257/path-user-mise }
   # - {args: main/pixi}
   # - {args: "python27 python37 python38 python39 python310 python311 micromamba_ShuguangSun micromamba"}
+  - { args: gdm257/shim-python3 }
   # - {args: rye}
   # - {args: uv}
   # - {args: gdm257/micromamba}
@@ -94,10 +96,13 @@ run:
   # - {args: gdm257/paseo}
   # - {args: gdm257/nezha}
   # - {args: gdm257/vibe-around}
+  # - {args: gdm257/deepchat}
+  # - {args: gdm257/harnss}
   - { args: opencode-desktop }
   # - { args: gdm257/claude-code-haha }
   # - {args: gdm257/opencode-worktree}
   # - {args: gdm257/ocx}
+  - { args: gdm257/memorph }
   - { args: gdm257/skillshare }
   - { args: gdm257/rulesync }
   - { args: gdm257/iii }
@@ -105,18 +110,19 @@ run:
   # - {args: imhex}
   - { args: vscode }
   # - {args: vscodium}
+  - { args: zed }
   # - {args: void}
   # - {args: trae-cn}
   # - {args: trae}
   # - {args: cursor}
   # - {args: main/claude-code}
   # - {args: crush}
-  - {args: codex}
+  - { args: codex }
   # - {args: gdm257/pi}
   # - {args: main/goose-cli}
   # - {args: gdm257/goose}
   # - {args: gdm257/goose-desktop}
-  - {args: cc-switch}
+  - { args: cc-switch }
   # - {args: gdm257/claude-squad}
   # - {args: gdm257/sudocode}
   # - {args: gdm257/auto-claude}
@@ -134,6 +140,7 @@ run:
   # - {args: helix}
   # - {args: ox}
   # - {args: emacs}
+  # - {args: gdm257/path-user-doomemacs}
   - { args: hexyl }
   # - {args: lapce}
   # - {args: jupyterlab-desktop}
@@ -185,6 +192,7 @@ run:
   - { args: gdm257/gg }
   # - {args: lazyjj}
   - { args: git }
+  - { args: gdm257/path-git }
   - { args: bit }
   - { args: main/worktrunk }
   - { args: gitui }
@@ -202,7 +210,7 @@ run:
   - { args: lfs-dal }
   - { args: git-credential-manager }
   # - {args: git-credential-oauth}
-  - {args: gdm257/git-ssh-sign }
+  - { args: gdm257/git-ssh-sign }
   - { args: gitleaks }
   # - {args: gptcommit}
   # - {args: gitql}

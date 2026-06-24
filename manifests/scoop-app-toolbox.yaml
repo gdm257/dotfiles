@@ -2,6 +2,7 @@ entrypoint: scoop
 command: install
 
 run:
+  - { args: gdm257/path-user-local }
   # - {args: uutils-coreutils}
   # - {args: busybox}
   # - {args: vim}

@@ -299,6 +299,13 @@ tasks:
           PATH: "./manifests/claude.yaml"
         task: manifest:run:manifest
 
+  manifest:codex:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./manifests/codex.yaml"
+        task: manifest:run:manifest
+
   manifest:choco:
     platforms: [windows]
     cmds:

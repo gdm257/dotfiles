@@ -17,6 +17,8 @@ run:
   - { args: gdm257/winswctl }
   # - {args: nssm}
   # - {args: activitywatch}
+  - { args: main/wakatime-cli }
+  - { args: gdm257/wakatime }
   - { args: tai }
   - { args: gdm257/lite-monitor }
   - { args: memreduct }
