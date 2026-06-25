@@ -6,6 +6,7 @@ run:
   - { args: ripgrep }
   # - {args: sig}
   - { args: ugrep }
+  - { args: gdm257/shim-grep }
   - { args: ag }
   # - {args: ack}
   - { args: main/sd }

@@ -11,6 +11,7 @@ run:
   - { args: dirhash }
   # - {args: chezmoi}
   - { args: eza }
+  - { args: gdm257/shim-ll }
   # - {args: lsd}
   - { args: gdu }
   - { args: dust }
