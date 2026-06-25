@@ -4,6 +4,11 @@
 **/.cache/
 **/.cc-switch/backups/
 **/.cc-switch/logs/
+**/.claude/.runtime/
+**/.claude/cache/
+**/.claude/plugins/cache/
+**/.codex/worktrees/
+**/.codex/logs_2.sqlite*
 **/.crawl4ai/cache/
 **/.codeium/
 **/.bgmi/bangumi/
@@ -70,6 +75,7 @@
 **/AppData/Roaming/itch/apps/
 **/AppData/Roaming/ludusavi/manifest.yaml
 **/AppData/Roaming/ludusavi/*.log
+**/AppData/Roaming/obsidian/
 **/AppData/Roaming/OpenList Desktop/data/log/*
 **/AppData/Roaming/OpenList Desktop/data/temp/
 **/AppData/Roaming/Tencent/WeMeet/Global/
@@ -80,6 +86,8 @@
 **/AppData/Roaming/Tencent/xwechat/xplugin/*
 **/AppData/Roaming/Listary/UserProfile/Cache/
 **/AppData/Roaming/yesplaymusic/Cache/
+**/AppData/Roaming/Ztools/logs/
+**/AppData/Roaming/Ztools/ztools-update-pkg/
 **/BaiduYunKernel/
 **/CherryStudio/logs/*
 **/pdm/pdm/Logs/*

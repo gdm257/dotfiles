@@ -7,6 +7,11 @@
 **/persist/asciidocfx/
 **/catsxp/Cache/*
 **/clash-party/data/logs/*
+**/clash-party/data/test/
+**/clash-party/data/work/cache.db
+geoip.dat
+*.mmdb
+*.metadb
 Ditto.db
 **/doublecmd/settings/*.log
 **/Emby/programdata/cache/
@@ -35,9 +40,11 @@ Everything.db
 **/telegram/tdata/webview/
 **/persist/tor-browser/
 **/virtualbox-with-extension-pack-np/
+**/vcpkg/
 **/persist/volta/
 **/vscode/data/
 **/vscodium/data/
+**/wechat/
 **/winfsp-np/
 **/winswctl/shims/*.exe
 **/zeal/docsets/
