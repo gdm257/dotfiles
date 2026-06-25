@@ -23,6 +23,11 @@ extras:
     targets:
       - path: ~/.codex/agents
         extension: codex-agents
+  - name: rules
+    # source: ~/AppData/Roaming/skillshare/extras/rules
+    targets:
+      - path: ~/AppData/Roaming/skillshare/extensions/ruler/dummy
+        extension: ruler
 ignore:
   - '**/.DS_Store'
   - '**/.git/**'
