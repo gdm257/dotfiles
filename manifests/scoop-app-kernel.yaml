@@ -47,6 +47,7 @@ run:
   - { args: dismtools }
   - { args: vivetool }
   - { args: vivetool-gui }
+  - { args: openark }
   - { args: hwinfo }
   - { args: speccy }
   - { args: furmark }

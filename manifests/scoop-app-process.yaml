@@ -4,13 +4,12 @@ command: install
 run:
   # - {args: gdm257/task-explorer}
   - { args: systeminformer }
-  - { args: openark }
   # - {args: bottom}
   - { args: btop }
   # - {args: ntop}
   # - {args: procs}
   # - {args: gotop}
-  - { args: commandtrayhost }
+  # - {args: commandtrayhost}
   # - {args: gdm257/dsc}
   # - {args: main/winsw}
   # - {args: winsw-alpha}
