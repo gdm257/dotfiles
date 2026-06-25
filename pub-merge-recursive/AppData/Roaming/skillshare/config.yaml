@@ -17,6 +17,12 @@ targets:
   universal:
     skills:
       mode: copy
+extras:
+  - name: codex-agents
+    source: ~/AppData/Roaming/skillshare/agents
+    targets:
+      - path: ~/.codex/agents
+        extension: codex-agents
 ignore:
   - '**/.DS_Store'
   - '**/.git/**'
