@@ -1,76 +1,127 @@
 ---
 name: browser-harness
-description: Direct browser control via CDP — automate, scrape, test, or interact with web pages by driving the user's already-running Chrome (or a Browser Use cloud browser). Use when the user wants to click, screenshot, fill forms, extract data, or navigate real web pages. Default to screenshots + coordinate clicks, not selector hunting. Requires the one-time `browser-harness` CLI install (see references/install.md).
+description: "Always use browser-harness for any web interaction: automation, scraping, testing, or site/app work."
 ---
 
 # browser-harness
 
-Direct browser control via CDP. You drive the user's real browser with Python helpers run through the `browser-harness` command.
+Direct browser control via CDP. For task-specific edits, use `agent-workspace/agent_helpers.py`. For setup, install, or connection problems, read https://github.com/browser-use/browser-harness/blob/main/install.md.
 
-## Prerequisite (one-time — NOT part of the AI workflow)
+Domain skills are off by default. Set `BH_DOMAIN_SKILLS=1` to enable them; see the bottom section.
 
-This skill is instructions only. It assumes the `browser-harness` command is already on `$PATH`. If `command -v browser-harness` fails, do the one-time install in [references/install.md](references/install.md) first, then continue. Installation and browser-connection setup are a prerequisite; once `browser-harness <<'PY' … PY` prints page info, never run install/connection steps again as part of normal work.
+**If `BH_DOMAIN_SKILLS=1` and the task is site-specific, read every file in the matching `$BH_AGENT_WORKSPACE/domain-skills/<site>/` directory before inventing an approach.**
 
 ## Usage
 
 ```bash
 browser-harness <<'PY'
-new_tab("https://docs.browser-use.com")
-wait_for_load()
 print(page_info())
 PY
 ```
 
-- Invoke as `browser-harness` — it's on `$PATH` after install. No `cd`, no `uv run`.
-- Use the heredoc form for every multi-line command. It prevents shell quote mangling inside Python strings and JavaScript snippets.
-- First navigation is `new_tab(url)`, not `goto_url(url)` — goto runs in the user's active tab and clobbers their work.
-- Helpers are pre-imported and the daemon auto-starts; you never start/stop it manually unless you want to.
+- Invoke as `browser-harness`. Use heredocs for multi-line commands.
+- Helpers are pre-imported. `run.py` calls `ensure_daemon()` before `exec`.
+- First navigation is `new_tab(url)`, not `goto_url(url)`.
+- The normal local flow attaches to the running Chrome/Chromium CDP endpoint. No browser ids or local profile selection.
 
-## What actually works
+## Local Chrome
 
-- **Screenshots first.** `capture_screenshot()` to understand the page, find visible targets, and decide whether you need a click, a selector, or more navigation.
-- **Clicking.** `capture_screenshot()` → read the pixel off the image → `click_at_xy(x, y)` → `capture_screenshot()` to verify. Suppress the Playwright-habit reflex of "locate first, then click" — no `getBoundingClientRect`, no selector hunt. Drop to DOM only when the target has no visible geometry. Hit-testing happens in Chrome's browser process, so clicks pass through iframes / shadow DOM / cross-origin without extra work.
-- **Bulk HTTP.** `http_get(url)` + `ThreadPoolExecutor`. No browser needed for static pages.
-- **After goto:** `wait_for_load()`.
-- **Wrong/stale tab:** `ensure_real_tab()`.
-- **Verification:** `print(page_info())` is the simplest "is this alive?" check; screenshots are the default way to verify whether a visible action worked.
-- **DOM reads:** use `js(...)` for inspection/extraction when a screenshot shows coordinates are the wrong tool.
-- **Auth wall:** redirected to login → stop and ask the user. Don't type credentials from screenshots.
-- **Raw CDP** for anything helpers don't cover: `cdp("Domain.method", params)`.
+If the daemon cannot connect, run diagnostics:
 
-After every meaningful action, re-screenshot before assuming it worked.
+```bash
+browser-harness --doctor
+```
 
-## Remote / cloud browsers
+If Chrome remote debugging is not enabled, the harness opens:
 
-Use remote for parallel sub-agents (each gets an isolated browser via a distinct `BU_NAME`) or on a headless server. `BROWSER_USE_API_KEY` must be set.
+```text
+chrome://inspect/#remote-debugging
+```
+
+Ask the user to tick "Allow remote debugging for this browser instance" and click Allow if Chrome shows a permission popup. Then retry the same `browser-harness` command.
+
+## Remote Browsers
+
+Use Browser Use cloud for headless servers, parallel sub-agents, or isolated work. Authenticate once:
+
+```bash
+browser-harness auth login
+```
+
+Or import a key safely:
+
+```bash
+browser-harness auth login --api-key-stdin
+```
+
+Pick a short made-up name; `r7k2` below is just a placeholder:
 
 ```bash
 browser-harness <<'PY'
-start_remote_daemon("work")   # clean cloud browser; profileName=/profileId= to reuse a logged-in profile
+start_remote_daemon("r7k2")
 PY
 
-BU_NAME=work browser-harness <<'PY'
+BU_NAME=r7k2 browser-harness <<'PY'
 new_tab("https://example.com")
 print(page_info())
 PY
 ```
 
-`start_remote_daemon` prints a `liveUrl` so the user can watch. Running remote daemons bill until timeout.
+When the task is done and a cloud browser is still running, ask directly: "Should I close this browser now?" If yes, run `stop_remote_daemon(name)`. Remote daemons bill until they stop or time out.
 
-## Interaction skills (progressive disclosure)
+Do not start a remote daemon and then keep using the default daemon. Use the same name for `BU_NAME`.
 
-If you struggle with a specific UI mechanic, read the matching file under `${CLAUDE_PLUGIN_ROOT}/interaction-skills/` before inventing an approach. Available: browser-wall, connection, cookies, cross-origin-iframes, dialogs, downloads, drag-and-drop, dropdowns, iframes, network-requests, print-as-pdf, profile-sync, screenshots, scrolling, shadow-dom, tabs, uploads, viewport.
+Cloud profile cookie sync reference: https://github.com/browser-use/browser-harness/blob/main/interaction-skills/profile-sync.md.
 
-## Task-specific edits
+## Page Workflow
 
-For task-specific helper additions, edit `${CLAUDE_PLUGIN_ROOT}/agent-workspace/agent_helpers.py`. Keep core helpers short.
+- Screenshots first: use `capture_screenshot()` to understand visible state.
+- Clicking: screenshot -> read pixel -> `click_at_xy(x, y)` -> screenshot again.
+- After navigation, call `wait_for_load()`.
+- If the current tab is stale or internal, call `ensure_real_tab()`.
+- Use `js(...)` for DOM inspection or extraction when coordinates are the wrong tool.
+- Login walls: stop and ask. Exception: use available SSO automatically when Chrome is already signed in; still stop for passwords, MFA, consent, or ambiguous account choice.
+- Raw CDP is available with `cdp("Domain.method", ...)`.
 
-## Domain skills (opt-in)
+## Interaction Skills
 
-Community per-site playbooks live in `${CLAUDE_PLUGIN_ROOT}/agent-workspace/domain-skills/<host>/` and are **off by default**. Set `BH_DOMAIN_SKILLS=1` to enable them; when enabled and the task is site-specific, read every file in the matching `<site>/` directory before inventing an approach.
+If you get stuck on a browser mechanic, check https://github.com/browser-use/browser-harness/tree/main/interaction-skills.
 
-## Design constraints
+- connection.md
+- cookies.md
+- cross-origin-iframes.md
+- dialogs.md
+- downloads.md
+- drag-and-drop.md
+- dropdowns.md
+- iframes.md
+- network-requests.md
+- print-as-pdf.md
+- profile-sync.md
+- screenshots.md
+- scrolling.md
+- shadow-dom.md
+- tabs.md
+- uploads.md
+- viewport.md
 
-- Coordinate clicks default. `Input.dispatchMouseEvent` goes through iframes/shadow/cross-origin at the compositor level.
-- Connect to the user's running Chrome. Don't launch your own browser.
-- Prefer compositor-level actions (screenshots, coordinate clicks, raw key input) over framework/DOM hacks. Reach for `interaction-skills/` only when those are the wrong tool.
+## Design Constraints
+
+- Coordinate clicks default. CDP mouse events pass through iframes/shadow/cross-origin at the compositor level.
+- Keep the connection model simple: use the default daemon, `BU_NAME`, `BU_CDP_URL`, `BU_CDP_WS`, or `start_remote_daemon(...)`.
+- Core helpers stay short. Put task-specific helper additions in `$BH_AGENT_WORKSPACE/agent_helpers.py`.
+
+## Gotchas
+
+- `chrome://inspect/#remote-debugging` must be enabled for local Chrome control.
+- Chrome may show an "Allow remote debugging?" popup; wait for the user to click Allow.
+- Omnibox popups are not real work tabs.
+- CDP target order is not Chrome's visible tab-strip order.
+- `BU_CDP_URL` is an HTTP DevTools endpoint; the daemon resolves it to WebSocket.
+- Ask before leaving cloud browsers running; stop them with `stop_remote_daemon(name)` or `PATCH /browsers/{id} {"action":"stop"}`.
+
+## Domain Skills
+
+Only applies when `BH_DOMAIN_SKILLS=1`. Otherwise ignore domain skills.
+
+When enabled, search `$BH_AGENT_WORKSPACE/domain-skills/<host>/` before inventing an approach. `goto_url(...)` returns up to 10 skill filenames for the navigated host.
