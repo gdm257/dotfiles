@@ -55,7 +55,6 @@
 /pub-merge-recursive/AppData/Roaming/Zed/settings_backup.json
 
 /state/*
-!/state/massCode
 
 !/.*
 !/*.*
