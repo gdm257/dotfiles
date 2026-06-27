@@ -157,6 +157,34 @@
         "agents/openai.yaml": "sha256:d50d6c73ed0203ef24319e27fb66bfae96743d27fc753c4265d6703d019bcf00"
       }
     },
+    "kiro-settings": {
+      "source": "github.com/gdm257/cc-plugins/plugins/cc-sdd-skills/skills/kiro-settings",
+      "type": "github-subdir",
+      "installed_at": "2026-06-28T12:31:11.4650707+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/cc-sdd-skills/skills/kiro-settings",
+      "version": "f0f906c",
+      "tree_hash": "fdfd39f40f69fd4759fa5e1e0d19b7c363f93014",
+      "file_hashes": {
+        "SKILL.md": "sha256:1411e55640d4411484199293684c3cd291c0b9614fba885a5514b2988f4c039e",
+        "resources/.kiro/settings/templates/specs/design.md": "sha256:0b9e3cbd75e4543880aa3b58e4c194670543b39287f5cb5c9d80d9a5f9ff99ff",
+        "resources/.kiro/settings/templates/specs/init.json": "sha256:f6c91b02c68a8f02c1064f5a2c30804f37759dc806f922b66c110b40ce4bfc8f",
+        "resources/.kiro/settings/templates/specs/requirements-init.md": "sha256:ad3f8051e45003cc3f3b5a82bdd04c8b303c5e8d9f00e7d94c1593019c15ecf9",
+        "resources/.kiro/settings/templates/specs/requirements.md": "sha256:876aed0185db39e9fd160331a408b84e856d1f0ad1143036615b663742ddbdca",
+        "resources/.kiro/settings/templates/specs/research.md": "sha256:a77becba2f120a2d020004a08ad331a602fb0cb30c5fa3c7cc9fa8acc8da0fde",
+        "resources/.kiro/settings/templates/specs/tasks.md": "sha256:6ed02fcc9b90988c594c4b4698c178ef8a1124371b80170a44faab9430996214",
+        "resources/.kiro/settings/templates/steering-custom/api-standards.md": "sha256:c091a4579807ffcfa2eb16f956b273f7925e92a1e11cb436c7ae95ee45ef4b34",
+        "resources/.kiro/settings/templates/steering-custom/authentication.md": "sha256:061aa606b4bd2ed0a40dcfcf78882c5e2c7acc82ed80008611896e22efb9607c",
+        "resources/.kiro/settings/templates/steering-custom/database.md": "sha256:b93f66bbed730c787ebf43577c4dfb1cbe98d788c79681763fa68034ed84f0c4",
+        "resources/.kiro/settings/templates/steering-custom/deployment.md": "sha256:462a787ccc6ac63ca0d6d311bcadea24aae5a1cf9a513aed7d1f316237a46f33",
+        "resources/.kiro/settings/templates/steering-custom/error-handling.md": "sha256:1a58856c020fd3cbfc779a67ad67571fe661399631b9f4ef497a218ee36396ae",
+        "resources/.kiro/settings/templates/steering-custom/security.md": "sha256:a00847516d574e6e0d54bddc1819b8fba975344316dd6307b9d1c4cbee6686be",
+        "resources/.kiro/settings/templates/steering-custom/testing.md": "sha256:e5679d6769bddd196b9e44fa5f3f8bf31cb8caad63a5905b34838d6e68fa2540",
+        "resources/.kiro/settings/templates/steering/product.md": "sha256:f233ba3cebcaa4e8303ba59d9c447d2fa1c95a0a6504b19e8dc3df63e236f73f",
+        "resources/.kiro/settings/templates/steering/structure.md": "sha256:2d4ea086e3619750cc00166daeefa025cdfe75fdc3b745165cfabb6c53375910",
+        "resources/.kiro/settings/templates/steering/tech.md": "sha256:ab20caddc4a2361ebccbb09978cf0798a88e10bf259ee20113975f2966051025"
+      }
+    },
     "kiro-spec-batch": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-batch",
       "type": "github-subdir",
