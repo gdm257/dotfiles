@@ -89,6 +89,18 @@
         "SKILL.md": "sha256:3f3cd1fb3da22be2583f7506065a803bb0fa261087d07152787f32ed5a2f734f"
       }
     },
+    "frontend-fullchain-optimization": {
+      "source": "github.com/mindfold-ai/marketplace/skills/frontend-fullchain-optimization",
+      "type": "github-subdir",
+      "installed_at": "2026-06-28T13:47:59.3315906+09:00",
+      "repo_url": "https://github.com/mindfold-ai/marketplace.git",
+      "subdir": "skills/frontend-fullchain-optimization",
+      "version": "2f2e30d",
+      "tree_hash": "85a7d2533dcae23e87af4dfb73e5829b0d7149db",
+      "file_hashes": {
+        "SKILL.md": "sha256:4873a14afba488a51bc73f0ca06fd62a7f8fe92caf93f6b6bd3f9faf735ea218"
+      }
+    },
     "handoff": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/handoff",
       "type": "github-subdir",
@@ -365,6 +377,18 @@
       "file_hashes": {
         "SKILL.md": "sha256:389b056b47c9295df32787fec284a97f53b02555443bdd4343d3e61ac499efbb",
         "agents/openai.yaml": "sha256:05758a85e372d079199baadc94c392cddf24d1b85b4b7ee932bc40bbcf58ef9b"
+      }
+    },
+    "mem-recall": {
+      "source": "github.com/mindfold-ai/marketplace/skills/mem-recall",
+      "type": "github-subdir",
+      "installed_at": "2026-06-28T13:47:59.4598163+09:00",
+      "repo_url": "https://github.com/mindfold-ai/marketplace.git",
+      "subdir": "skills/mem-recall",
+      "version": "2f2e30d",
+      "tree_hash": "089bac967229dbef9654dab45f9c913e4b25205d",
+      "file_hashes": {
+        "SKILL.md": "sha256:888e8969e70d832fce467f3ac5059c002b7ebbfbcd5a13d4ac6c0bd4f35f359f"
       }
     },
     "openspec-apply-change": {
