@@ -5,11 +5,14 @@ outputs:
   - ~/.config/opencode/AGENTS.md
 ---
 
-# User-level memory (applies to all projects)
-
 ## 项目文档产物语言约定
 
-OpenSpec artifacts(`proposal.md` / `design.md` / `specs/**/spec.md` / `tasks.md`)与 steering 文档(`.claude/rules/steering/*.md`)主体使用中文撰写。
+主体使用中文撰写:
+
+1. OpenSpec artifacts(`proposal.md` / `design.md` / `specs/**/spec.md` / `tasks.md`)与 steering 文档(`.claude/rules/steering/*.md`)
+2. kiro spec artifacts (`reqirements.md` / `design.md` / `tasks.md`)
+3. trellis task artifacts (`prd.md`)
+4. 其他类似 workflows 的 artifacts
 
 **保持英文,不翻译:**
 
