@@ -10,8 +10,7 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-p": "command_palette::Toggle",
-      "ctrl-shift-p": "file_finder::Toggle",
-      "shift shift": "file_finder::Toggle"
+      "ctrl-shift-p": "file_finder::Toggle"
     }
   },
   {
