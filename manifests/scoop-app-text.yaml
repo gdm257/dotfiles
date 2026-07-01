@@ -55,9 +55,11 @@ run:
   # - {args: clipboard}
   # - {args: anytype}
   - { args: obsidian }
+  # - {args: tolaria}
   # - {args: siyuan}
   # - {args: focalboard}
   # - {args: appflowy}
+  # - {args: speedynote}
   # - {args: bookxnote}
   - { args: BookXNotePro }
   - { args: lfs/awesome-books }

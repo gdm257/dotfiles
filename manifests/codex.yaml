@@ -2,4 +2,5 @@ entrypoint: codex
 command: "plugin marketplace add"
 
 run:
+  # - {args: DietrichGebert/ponytail}
   - { args: wakatime/codex-cli-wakatime }

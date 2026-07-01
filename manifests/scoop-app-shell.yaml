@@ -24,6 +24,7 @@ run:
   - { args: powershell }
   - { args: main/powershelleditorservices }
   # - {args: PSWinUtil}
+  - { args: main/charm-gum }
   - { args: chafa }
   - { args: resvg }
   # - {args: sudo}

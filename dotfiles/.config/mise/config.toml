@@ -37,7 +37,6 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "npm:@intellectronica/ruler" = { version = "latest", os = ["windows"] }
 "npm:@fission-ai/openspec" = { version = "latest", os = ["windows"] }
 "npm:@mindfoldhq/trellis" = { version = "latest", os = ["windows"] }
-"npm:cc-sdd" = { version = "latest", os = ["windows"] }
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = { version = "main", os = ["windows"] }

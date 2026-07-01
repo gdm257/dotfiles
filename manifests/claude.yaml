@@ -8,3 +8,4 @@ run:
   - { args: anthropics/claude-plugins-official }
   - { args: max-sixty/worktrunk }
   # - { args: rohitg00/agentmemory }
+  - { args: DietrichGebert/ponytail }
