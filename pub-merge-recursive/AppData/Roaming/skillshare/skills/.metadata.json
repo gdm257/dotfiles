@@ -616,6 +616,22 @@
       "file_hashes": {
         "SKILL.md": "sha256:8120fd973b8df3e499a9259645e9b9c7205924e0693e5d5238a653106f2b198c"
       }
+    },
+    "stop-slop": {
+      "source": "github.com/hardikpandya/stop-slop",
+      "type": "github",
+      "installed_at": "2026-06-30T07:00:22.0073412+09:00",
+      "repo_url": "https://github.com/hardikpandya/stop-slop.git",
+      "version": "8da1f03",
+      "file_hashes": {
+        "CHANGELOG.md": "sha256:fe2f1484ef02abf22efc09def89bac186a2235831fd0da13d4895edb19cc6dd0",
+        "LICENSE": "sha256:2e2b2beaf41cc0ce28485455a62aed81777cdcdf68702e142427aef1cd720f2c",
+        "README.md": "sha256:d5c699e712e62d286aa4314e6b4ba02cde7a9da36ce56102660f98d1a8ceebba",
+        "SKILL.md": "sha256:7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
+        "references/examples.md": "sha256:49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d",
+        "references/phrases.md": "sha256:4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93",
+        "references/structures.md": "sha256:ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
+      }
     }
   }
 }
