@@ -6,4 +6,7 @@ outputs:
   - ~/.claude/rules/semble.md
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
+name: semble-local
 ---
+
+- semble also supports git URL as path, not just local path: `semble search "save model to disk" https://github.com/owner/repo.git --top-k 10`

@@ -1,8 +1,6 @@
 ---
 outputs:
-  - ~/.claude/rules/lang.md
   - ~/.codex/AGENTS.md
-  - ~/.config/opencode/AGENTS.md
 ---
 
 If you're using codex, follow the instructions.
