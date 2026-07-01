@@ -3,7 +3,7 @@
   // "features": ["mcp", "subagents", "hooks", "permissions"],
   "targets": {
     "claudecode": ["mcp", "hooks", "permissions"],
-    "opencode": ["mcp", "hooks"],
+    "opencode": ["mcp", "hooks", "permissions"],
     "codexcli": ["mcp", "hooks", "permissions"],
   },
   "global": true,
