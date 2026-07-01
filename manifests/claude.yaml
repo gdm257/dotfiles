@@ -7,5 +7,5 @@ run:
   - { args: Piebald-AI/claude-code-lsps }
   - { args: anthropics/claude-plugins-official }
   - { args: max-sixty/worktrunk }
-  # - { args: rohitg00/agentmemory }
-  - { args: DietrichGebert/ponytail }
+  # - {args: rohitg00/agentmemory}
+  # - {args: DietrichGebert/ponytail}
