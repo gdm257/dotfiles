@@ -121,22 +121,6 @@
   },
   "shell": "bash",
   "permission": {
-    "webfetch": {
-      "domain:csdn.net": "deny"
-    },
-    "websearch": {
-      "*": "deny"
-    },
-    "edit": {
-      ".sudocode/issues.jsonl": "deny",
-      ".sudocode/specs.jsonl": "deny"
-    },
-    "read": {
-      "**/age.key": "deny",
-      "**/key.txt": "deny",
-      ".sudocode/issues.jsonl": "deny",
-      ".sudocode/specs.jsonl": "deny"
-    },
     "agent": {
       "Explore": "deny"
     },
