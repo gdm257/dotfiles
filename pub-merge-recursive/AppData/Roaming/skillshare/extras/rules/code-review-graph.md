@@ -7,3 +7,5 @@ outputs:
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
 ---
+
+- WHEN 第一次调用任意 Code-Review-Graph MCP tools THEN 你必须先调用一次 `build_or_update_graph_tool`，否则搜索结果可能不完整或不新鲜。之后无需调用第二次 `build_or_update_graph_tool`，除非显式要求。
