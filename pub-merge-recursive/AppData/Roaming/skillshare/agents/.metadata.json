@@ -5,24 +5,24 @@
       "source": "github.com/gdm257/cc-plugins/plugins/semble/agents/semble-search.md",
       "kind": "agent",
       "type": "github-subdir",
-      "installed_at": "2026-06-22T23:50:40.1440564+09:00",
+      "installed_at": "2026-07-02T22:49:29.5089923+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "semble-search.md",
-      "version": "dd011c9",
+      "version": "89887c7",
       "file_hashes": {
-        "semble-search.md": "sha256:ba3a6e5862641c8fa6ac8355607d2b55dd3d069a61625772717c45ccddf7417d"
+        "semble-search.md": "sha256:6fcd78d7c01badd574b5bade54e7e47901f1501972eaaa74ad88c09469bfc45e"
       }
     },
     "spec-reviewer": {
       "source": "github.com/gdm257/cc-plugins/plugins/cc-sdd-skills/agents/spec-reviewer.md",
       "kind": "agent",
       "type": "github-subdir",
-      "installed_at": "2026-06-22T23:52:17.0524946+09:00",
+      "installed_at": "2026-07-02T22:49:15.1508605+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "spec-reviewer.md",
-      "version": "dd011c9",
+      "version": "89887c7",
       "file_hashes": {
-        "spec-reviewer.md": "sha256:17f89c552f03eba9f193af04018b7f8fa08502732acaf51c8025b29116b27da5"
+        "spec-reviewer.md": "sha256:5a9e4d1c907c873a263eced86b4cdd5feda0d5aee5f926598f3edd84ce90a9de"
       }
     }
   }

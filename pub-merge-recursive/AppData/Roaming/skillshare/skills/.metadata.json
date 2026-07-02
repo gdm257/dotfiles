@@ -4,10 +4,10 @@
     "beads-plan": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/beads-plan-skills/skills/beads-plan",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:40.5652599+09:00",
+      "installed_at": "2026-07-02T20:07:00.3547183+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/beads-plan-skills/skills/beads-plan",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "7215373a01723a407ef08362e47fdd6fcfb26f80",
       "file_hashes": {
         "SKILL.md": "sha256:b7ae1601e5abd0921204f824992b53803dbddac52ba3f13938bc9b1cc00b7987"
@@ -16,23 +16,23 @@
     "browser-harness": {
       "source": "https://github.com/browser-use/browser-harness.git/skills/browser-harness",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:46.9763023+09:00",
+      "installed_at": "2026-07-02T20:07:06.2950682+09:00",
       "repo_url": "https://github.com/browser-use/browser-harness.git",
       "subdir": "skills/browser-harness",
-      "version": "7594909",
+      "version": "4d75f11",
       "tree_hash": "0cd840bdc16c45d02cc4d86decc6aced55c13735",
       "file_hashes": {
-        "SKILL.md": "sha256:a7e1b845010ffc6757865a2b07d953c41d3f07f98c9b331f6ed1f1fac8b991f8",
+        "SKILL.md": "sha256:8fc17db5ad566f1f49414dbe3f7bf7bca89ce416146cd3843bfada9f1846380c",
         "references/install.md": "sha256:292e8ef0dbd391e19964ba5b3a230664e6e3baa22c37b6ed9a858ee37f8b7305"
       }
     },
     "commit-context": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/commit-context",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:54.5578232+09:00",
+      "installed_at": "2026-07-02T20:07:10.0968187+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/commit-context",
-      "version": "f6f9e3c",
+      "version": "93ae9bc",
       "tree_hash": "07a8b513f4b6081e698ac4fb1a87f066ec1e9258",
       "file_hashes": {
         "EXAMPLES.md": "sha256:370fecafbad5a7b467499da038863b383cdd740037c2f29758e43f56c6f064d2",
@@ -42,10 +42,10 @@
     "commit-history": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/commit-history",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:54.6608149+09:00",
+      "installed_at": "2026-07-02T20:07:10.2055171+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/commit-history",
-      "version": "f6f9e3c",
+      "version": "93ae9bc",
       "tree_hash": "949a512eaa9e0fabad7489e9c182e754f2deebf1",
       "file_hashes": {
         "EXAMPLES.md": "sha256:ebbc149695a107663966f1d0aa8e53a8eee93b98b0b81977f398277e7da40576",
@@ -55,10 +55,10 @@
     "debug-issue": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/debug-issue",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.3386487+09:00",
+      "installed_at": "2026-07-02T20:07:01.2045177+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/code-review-graph/skills/debug-issue",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "d0bc82be9bf83e711ece8a50cf00d6dfb3377c2c",
       "file_hashes": {
         "SKILL.md": "sha256:4359372f9591359123e7e54dbb183c538ed0153ef6cd0208cf680102e44fc36c"
@@ -67,10 +67,10 @@
     "explore-codebase": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/explore-codebase",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:41.215884+09:00",
+      "installed_at": "2026-07-02T20:07:00.0930013+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/code-review-graph/skills/explore-codebase",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "5efc9caea8544291914d1dc66a20d1e745735846",
       "file_hashes": {
         "SKILL.md": "sha256:d94f31fdf5fb25204b3a1e33b45b2e99432cfc71cc2fdebdc8c80d1979094f45"
@@ -79,10 +79,10 @@
     "forget": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/forget",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:54.7684721+09:00",
+      "installed_at": "2026-07-02T20:07:10.3162829+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/forget",
-      "version": "f6f9e3c",
+      "version": "93ae9bc",
       "tree_hash": "cd88b2e33ddce914bab0dc354f5d5b98c84c94c0",
       "file_hashes": {
         "EXAMPLES.md": "sha256:8364e9d2d30c0e4872c5eb95f000a1c4aa9b774d082a31c95b337e8c1d42b7aa",
@@ -90,9 +90,9 @@
       }
     },
     "frontend-fullchain-optimization": {
-      "source": "github.com/mindfold-ai/marketplace/skills/frontend-fullchain-optimization",
+      "source": "https://github.com/mindfold-ai/marketplace.git/skills/frontend-fullchain-optimization",
       "type": "github-subdir",
-      "installed_at": "2026-06-28T13:47:59.3315906+09:00",
+      "installed_at": "2026-07-02T20:06:51.5565527+09:00",
       "repo_url": "https://github.com/mindfold-ai/marketplace.git",
       "subdir": "skills/frontend-fullchain-optimization",
       "version": "2f2e30d",
@@ -104,10 +104,10 @@
     "handoff": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/handoff",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:54.8726585+09:00",
+      "installed_at": "2026-07-02T20:07:10.4256424+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/handoff",
-      "version": "f6f9e3c",
+      "version": "93ae9bc",
       "tree_hash": "7c1accbc291b0692d3d6e536d90502c5873401f4",
       "file_hashes": {
         "EXAMPLES.md": "sha256:1fa85f64e20fe8bc07cae31e6a4fb9a58eff354375d24e1efa7bcc295d723b21",
@@ -117,10 +117,10 @@
     "kiro-debug": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-debug",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.4430603+09:00",
+      "installed_at": "2026-07-02T20:07:02.0356831+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-debug",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "52f3501b2d587ef0da304dbd9cf3dc1f2445ce70",
       "file_hashes": {
         "SKILL.md": "sha256:c5ce75a0f76d5f587830d5c79c57adf05d6515badc5cff9b3d547bd942bc9514",
@@ -130,10 +130,10 @@
     "kiro-discovery": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-discovery",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:43.2190048+09:00",
+      "installed_at": "2026-07-02T20:07:00.473525+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-discovery",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "bce27e128099a38cb85b70e1f9bb4e388c4ef352",
       "file_hashes": {
         "SKILL.md": "sha256:f437f9e1cded21cd015ad26986ff3eedddf634f4784f725fedaf9947921ea7c1",
@@ -143,10 +143,10 @@
     "kiro-impl": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-impl",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:43.7890713+09:00",
+      "installed_at": "2026-07-02T20:07:00.6168685+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-impl",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "b73f81d42bbe65c43123678a1c51064402dd1fec",
       "file_hashes": {
         "SKILL.md": "sha256:9d7ddf5d5fb4e24800fb81b399a6dd0c4a1fed86d21e549a82c2f2323c76adab",
@@ -159,10 +159,10 @@
     "kiro-review": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-review",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:43.3281157+09:00",
+      "installed_at": "2026-07-02T20:07:03.7780036+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-review",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "5eb614b761c5e5cda9310899d550b3bd71dbb47f",
       "file_hashes": {
         "SKILL.md": "sha256:c68435ab6e7051226f235a75b616a47c78dc59ae93732c615ac2d2a2bea9940f",
@@ -170,12 +170,12 @@
       }
     },
     "kiro-settings": {
-      "source": "github.com/gdm257/cc-plugins/plugins/cc-sdd-skills/skills/kiro-settings",
+      "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-settings",
       "type": "github-subdir",
-      "installed_at": "2026-06-28T12:31:11.4650707+09:00",
+      "installed_at": "2026-07-02T20:07:01.3334513+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-settings",
-      "version": "f0f906c",
+      "version": "89887c7",
       "tree_hash": "fdfd39f40f69fd4759fa5e1e0d19b7c363f93014",
       "file_hashes": {
         "SKILL.md": "sha256:1411e55640d4411484199293684c3cd291c0b9614fba885a5514b2988f4c039e",
@@ -200,10 +200,10 @@
     "kiro-spec-batch": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-batch",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.5526503+09:00",
+      "installed_at": "2026-07-02T20:07:02.1482502+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-batch",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "80ba8d92b31cdf0eb7cf876c5fa02ed3490feb3f",
       "file_hashes": {
         "SKILL.md": "sha256:6b490abdbc1766e4a83680358c9184c4a9355cac99d1088121efcefdb6fb5f27",
@@ -213,10 +213,10 @@
     "kiro-spec-design": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-design",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:41.3587946+09:00",
+      "installed_at": "2026-07-02T20:07:00.2463013+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-design",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "ef91edc78284cc0cebcf1afdfc9e249dff1b36dc",
       "file_hashes": {
         "SKILL.md": "sha256:f42864c32f7a7ff14e5ada96eee6e47d3074d0d080ffd83e382b996492a972c8",
@@ -231,10 +231,10 @@
     "kiro-spec-init": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-init",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.6554356+09:00",
+      "installed_at": "2026-07-02T20:07:03.0702773+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-init",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "0b960614a58785aeb0a1d7354eac8fd94f888e15",
       "file_hashes": {
         "SKILL.md": "sha256:9b6690a00a8b399f6a5380e1267875bddfc4d226239930bfca457ab89e4c8acd",
@@ -244,10 +244,10 @@
     "kiro-spec-quick": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-quick",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:43.4383348+09:00",
+      "installed_at": "2026-07-02T20:07:00.7324273+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-quick",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "4b0d8ca9dd0149cef96e1fbd53e0fc4ef79fbccb",
       "file_hashes": {
         "SKILL.md": "sha256:4f63ae2f443d01047fae9698a3fad35daa5d7dbf8e06f83b25788f0941d69a5f",
@@ -257,10 +257,10 @@
     "kiro-spec-requirements": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-requirements",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:40.7883827+09:00",
+      "installed_at": "2026-07-02T20:07:03.1915565+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-requirements",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "d28748b839b6882f3a73f54453bda0d430e0cb3d",
       "file_hashes": {
         "SKILL.md": "sha256:72b20399dc768f316d46f89cb7163e60a344cf807b7d6bfaf8886845738145f8",
@@ -272,10 +272,10 @@
     "kiro-spec-status": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-status",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:43.5399879+09:00",
+      "installed_at": "2026-07-02T20:07:01.4406455+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-status",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "0163f7efeb93e97cce59f08a15fd3ed02d78254d",
       "file_hashes": {
         "SKILL.md": "sha256:5c7abdaa0ad500020c51c24338ff18784cc968b2d466f55468cce71b7c4b37e8",
@@ -285,10 +285,10 @@
     "kiro-spec-tasks": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-tasks",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:41.7071671+09:00",
+      "installed_at": "2026-07-02T20:07:03.3278805+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-tasks",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "e8e733e4c48fd5dc2b968cb3fc8df3d357f6ae1a",
       "file_hashes": {
         "SKILL.md": "sha256:9d79cc1ca267c9cd5f97b0e20f0876eb149805c8edbd77c57517ce7bd450b65f",
@@ -300,10 +300,10 @@
     "kiro-steering": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-steering",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:43.6532427+09:00",
+      "installed_at": "2026-07-02T20:07:00.8613336+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-steering",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "5d259b91d6af17824150feb7551be85e31ba5b4c",
       "file_hashes": {
         "SKILL.md": "sha256:0ed80e5e6441ea677b45c86300172b294cca459b0b922e087a829f0874b01b77",
@@ -314,10 +314,10 @@
     "kiro-steering-custom": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-steering-custom",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.7659193+09:00",
+      "installed_at": "2026-07-02T20:07:02.8524461+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-steering-custom",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "dbb123ca89938de0c50512effff91684d2c814c0",
       "file_hashes": {
         "SKILL.md": "sha256:cac16690dc4c3388e66a6dc73c7b9844a8366897901ef1210cd29d3676d13ef6",
@@ -328,10 +328,10 @@
     "kiro-validate-design": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-validate-design",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.8797947+09:00",
+      "installed_at": "2026-07-02T20:07:01.557418+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-validate-design",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "fc02b7e4d8890b341660cb07b3bdaeda35287389",
       "file_hashes": {
         "SKILL.md": "sha256:cfe55680d725b588e296d1979b2819d738f3995e35ca5eed9c061e94b5a95250",
@@ -342,10 +342,10 @@
     "kiro-validate-gap": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-validate-gap",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:41.8208705+09:00",
+      "installed_at": "2026-07-02T20:07:03.4484206+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-validate-gap",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "7d83e8e50912560c2f8e98b41371649295420955",
       "file_hashes": {
         "SKILL.md": "sha256:2536230bfc8abe45c83e6a04947f9c85c14a3e2588024cf3f11fd7cc7d73dec2",
@@ -356,10 +356,10 @@
     "kiro-validate-impl": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-validate-impl",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:41.4715422+09:00",
+      "installed_at": "2026-07-02T20:07:02.2669862+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-validate-impl",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "4466a83c081d43421d8fdaadb17a244ff46899e7",
       "file_hashes": {
         "SKILL.md": "sha256:cdc68cb4d78bcf29c76f1858e796ec9cfb31aa3d3f3983aaeb42786c09cda3ba",
@@ -369,10 +369,10 @@
     "kiro-verify-completion": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-verify-completion",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:40.6688668+09:00",
+      "installed_at": "2026-07-02T20:07:03.558911+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-verify-completion",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "6e773b0b71df3fe054a63e4738317f03134a79db",
       "file_hashes": {
         "SKILL.md": "sha256:389b056b47c9295df32787fec284a97f53b02555443bdd4343d3e61ac499efbb",
@@ -380,9 +380,9 @@
       }
     },
     "mem-recall": {
-      "source": "github.com/mindfold-ai/marketplace/skills/mem-recall",
+      "source": "https://github.com/mindfold-ai/marketplace.git/skills/mem-recall",
       "type": "github-subdir",
-      "installed_at": "2026-06-28T13:47:59.4598163+09:00",
+      "installed_at": "2026-07-02T20:06:51.6880522+09:00",
       "repo_url": "https://github.com/mindfold-ai/marketplace.git",
       "subdir": "skills/mem-recall",
       "version": "2f2e30d",
@@ -394,10 +394,10 @@
     "openspec-apply-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-apply-change",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:41.929266+09:00",
+      "installed_at": "2026-07-02T20:07:02.3790987+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-apply-change",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "ef0e89ee83ef134a8056156b4e3721e49890e8e5",
       "file_hashes": {
         "SKILL.md": "sha256:da3d97f3ea482cca969981a2079ce7f906ccb4a892728f07bf72f354035d951a"
@@ -406,10 +406,10 @@
     "openspec-archive-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-archive-change",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.0355135+09:00",
+      "installed_at": "2026-07-02T20:07:01.671492+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-archive-change",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "3a8d83471b6648c81823059fbd0553afa9262ff5",
       "file_hashes": {
         "SKILL.md": "sha256:0526054ec891a8a0c0cd0e19a285f285aa111112f2480a3ab365f9bba18a2b9c"
@@ -418,10 +418,10 @@
     "openspec-bulk-archive-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-bulk-archive-change",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:43.8991598+09:00",
+      "installed_at": "2026-07-02T20:07:01.7842024+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-bulk-archive-change",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "7db1c9b1e4bd71bfd3d09654a93d057654fb52cb",
       "file_hashes": {
         "SKILL.md": "sha256:fcdcb2562b7f19046c25dcddb1e85bdc78dcc1ab490cc9757313b435a053e99f"
@@ -430,10 +430,10 @@
     "openspec-continue-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-continue-change",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.1373577+09:00",
+      "installed_at": "2026-07-02T20:07:02.9637358+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-continue-change",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "4e306a8d0b45ed8837c0d39e9350d29eabb27b9a",
       "file_hashes": {
         "SKILL.md": "sha256:091d837fcddf53681bea8fd3f7db8b933d0acf200e9594b31c3b319e6d21b23e"
@@ -442,10 +442,10 @@
     "openspec-explore": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-explore",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:44.0067052+09:00",
+      "installed_at": "2026-07-02T20:07:02.4950481+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-explore",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "f4048e4b2f5fa6515c8c419aa87f8a6b761133c4",
       "file_hashes": {
         "SKILL.md": "sha256:fb359559d93095c81a57760c7739ffbd6d618a03d1810503515f8ae2b5054cd0"
@@ -454,10 +454,10 @@
     "openspec-ff-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-ff-change",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:40.9132415+09:00",
+      "installed_at": "2026-07-02T20:07:02.6081876+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-ff-change",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "cd208e6a13141e6d2afc7b63ab3053891bbcf81c",
       "file_hashes": {
         "SKILL.md": "sha256:b99adea311fc9e9c811a7ae7417c0d2dff0798bea8f041aa2f96f0792a516f92"
@@ -466,10 +466,10 @@
     "openspec-new-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-new-change",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.241136+09:00",
+      "installed_at": "2026-07-02T20:07:03.8841587+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-new-change",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "2b645f5b3b38b6a7bfb6a937fbf688ff977ea31b",
       "file_hashes": {
         "SKILL.md": "sha256:5cb6b426fd53c1b20c0a680ab2b34451d26c67bbe2bf38cdf381b51ff4cabdc2"
@@ -478,10 +478,10 @@
     "openspec-sync-specs": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-sync-specs",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:41.5775093+09:00",
+      "installed_at": "2026-07-02T20:07:00.9801654+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-sync-specs",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "6b18cd0227bb66e593b12c4c761625464e8c368f",
       "file_hashes": {
         "SKILL.md": "sha256:9c74dad096467f982806ccf33e213f459890e0b79af1f69f6e9f1e790bb2fccf"
@@ -490,82 +490,82 @@
     "openspec-verify-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-verify-change",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:42.9866861+09:00",
+      "installed_at": "2026-07-02T20:07:03.9959839+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-verify-change",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "a8bd8466ef8dd23c656d0d14bf2ab5786c9d16d9",
       "file_hashes": {
         "SKILL.md": "sha256:336cd56a90854494373439f59d9cdd92d696a8cba97d5d8637865ba275c31c66"
       }
     },
     "ponytail": {
-      "source": "github.com/DietrichGebert/ponytail/skills/ponytail",
+      "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail",
       "type": "github-subdir",
-      "installed_at": "2026-07-02T02:02:46.248405+09:00",
+      "installed_at": "2026-07-02T20:06:53.9378867+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail",
-      "version": "16f6cbf",
+      "version": "40e50d9",
       "tree_hash": "f2a46af45b7c0a57edf990bd43ed2e79782c31ef",
       "file_hashes": {
         "SKILL.md": "sha256:d1ffcddbc486ab787d5797441e8b6e4717da3249c6786b83fc2abd2f12803c29"
       }
     },
     "ponytail-audit": {
-      "source": "github.com/DietrichGebert/ponytail/skills/ponytail-audit",
+      "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-audit",
       "type": "github-subdir",
-      "installed_at": "2026-07-02T02:02:46.4238223+09:00",
+      "installed_at": "2026-07-02T20:06:54.0628289+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-audit",
-      "version": "16f6cbf",
+      "version": "40e50d9",
       "tree_hash": "19744a9490abb0f5d0f18c6e39e3a3eb50f4daa1",
       "file_hashes": {
         "SKILL.md": "sha256:5560b8e383dbe2ddfddc873a1e2bf2e586e23e0cd7d995537482b2315331f6d1"
       }
     },
     "ponytail-debt": {
-      "source": "github.com/DietrichGebert/ponytail/skills/ponytail-debt",
+      "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-debt",
       "type": "github-subdir",
-      "installed_at": "2026-07-02T02:02:46.5855787+09:00",
+      "installed_at": "2026-07-02T20:06:54.1684343+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-debt",
-      "version": "16f6cbf",
+      "version": "40e50d9",
       "tree_hash": "fe9ea82cad2b42a9c244acc275c9091c414ff528",
       "file_hashes": {
         "SKILL.md": "sha256:c84fba75f0ca12bfe83f9a78ea02fd125c5dd3f1fbb18124105a489937f284e6"
       }
     },
     "ponytail-gain": {
-      "source": "github.com/DietrichGebert/ponytail/skills/ponytail-gain",
+      "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-gain",
       "type": "github-subdir",
-      "installed_at": "2026-07-02T02:02:46.7616116+09:00",
+      "installed_at": "2026-07-02T20:06:54.2718857+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-gain",
-      "version": "16f6cbf",
+      "version": "40e50d9",
       "tree_hash": "13724e1903f76456164f00ec2a3074848433588f",
       "file_hashes": {
         "SKILL.md": "sha256:24e01d1c9715cb136ba1c4f1e52a95940c0193558b876828e537736480d6408b"
       }
     },
     "ponytail-help": {
-      "source": "github.com/DietrichGebert/ponytail/skills/ponytail-help",
+      "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-help",
       "type": "github-subdir",
-      "installed_at": "2026-07-02T02:02:46.9457568+09:00",
+      "installed_at": "2026-07-02T20:06:54.3793593+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-help",
-      "version": "16f6cbf",
-      "tree_hash": "fb3c72b0ae7280fcf1d05d938ef003f865be4923",
+      "version": "40e50d9",
+      "tree_hash": "b7df7bc32b6e4e8bbde8acb2ef3c97ee7e7638f7",
       "file_hashes": {
-        "SKILL.md": "sha256:23ee3856c727129f87ab850985f9e9ed6368f10449816aa7ff043bf2dd45ab4d"
+        "SKILL.md": "sha256:2264d1615117b02b0fd5a69ec84cd2757006471a78e4d6c22eed6d581c1d37a4"
       }
     },
     "ponytail-review": {
-      "source": "github.com/DietrichGebert/ponytail/skills/ponytail-review",
+      "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-review",
       "type": "github-subdir",
-      "installed_at": "2026-07-02T02:02:47.1529346+09:00",
+      "installed_at": "2026-07-02T20:06:54.4890149+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-review",
-      "version": "16f6cbf",
+      "version": "40e50d9",
       "tree_hash": "dc6d9660c4297496a9220de377f6f7df38ab1a53",
       "file_hashes": {
         "SKILL.md": "sha256:40df33b58fc6ef889b93585733feb9566b76e9586efa7f376785c1e995197ac0"
@@ -574,10 +574,10 @@
     "recall": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/recall",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:54.9793009+09:00",
+      "installed_at": "2026-07-02T20:07:10.5325695+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/recall",
-      "version": "f6f9e3c",
+      "version": "93ae9bc",
       "tree_hash": "064e9d31103b0386a2eed21031afb1b60bc8df5c",
       "file_hashes": {
         "EXAMPLES.md": "sha256:67f2d639bd4fde728b121fea7f8bc362fca13ded706216141feca8e61613cc29",
@@ -587,10 +587,10 @@
     "recap": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/recap",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:55.0846686+09:00",
+      "installed_at": "2026-07-02T20:07:10.6438622+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/recap",
-      "version": "f6f9e3c",
+      "version": "93ae9bc",
       "tree_hash": "a16b8a1d17a5d0934a284be3d8be9921140886a8",
       "file_hashes": {
         "EXAMPLES.md": "sha256:18c2df482626e52524474eaec9501dc52d0cc8c2325605c23065440c387d7378",
@@ -600,10 +600,10 @@
     "refactor-safely": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/refactor-safely",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:41.015434+09:00",
+      "installed_at": "2026-07-02T20:07:03.6654502+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/code-review-graph/skills/refactor-safely",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "d052e380063a590beeb547048dae982135bdc66c",
       "file_hashes": {
         "SKILL.md": "sha256:a9093218924808652ee638cd65995622cac8485b50ace7c3e88193a1e7ec2232"
@@ -612,10 +612,10 @@
     "remember": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/remember",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:55.1931821+09:00",
+      "installed_at": "2026-07-02T20:07:09.878035+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/remember",
-      "version": "f6f9e3c",
+      "version": "93ae9bc",
       "tree_hash": "6876d60a402bb483caf1d2104a97df79a1f608f7",
       "file_hashes": {
         "EXAMPLES.md": "sha256:9589ce0d511f7bbb79f05376229fcd2f53b90b2091830cefc9c56a358a4f3d21",
@@ -625,7 +625,7 @@
     "repo2skill": {
       "source": "https://github.com/zhangyanxs/repo2skill.git/repo2skill",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:58.0370933+09:00",
+      "installed_at": "2026-07-02T20:06:56.4469627+09:00",
       "repo_url": "https://github.com/zhangyanxs/repo2skill.git",
       "subdir": "repo2skill",
       "version": "c8a4ddc",
@@ -643,10 +643,10 @@
     "review-changes": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/review-changes",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:41.1135607+09:00",
+      "installed_at": "2026-07-02T20:07:01.0926306+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/code-review-graph/skills/review-changes",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "2929e6d029d23cdaf1ee9daad0486b3174008efe",
       "file_hashes": {
         "SKILL.md": "sha256:b932a341bcb6e59d6a069b9bb262ad170ecdf9615fbd1e67894651f48bd809a7"
@@ -655,10 +655,10 @@
     "session-history": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/session-history",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:54.4536882+09:00",
+      "installed_at": "2026-07-02T20:07:09.9864198+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/session-history",
-      "version": "f6f9e3c",
+      "version": "93ae9bc",
       "tree_hash": "215602eb80c1351f661ad912bda8b3c81ce82697",
       "file_hashes": {
         "EXAMPLES.md": "sha256:0a089f68ad9f7ca87b8dcc2536ce5d8e8a7b20980e602c41c29abb9d4b9afc11",
@@ -668,10 +668,10 @@
     "steering": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/steering-skills/skills/steering",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:44.112208+09:00",
+      "installed_at": "2026-07-02T20:07:02.7331957+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/steering-skills/skills/steering",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "9d3abe1bde7d74c5f20dc7fdf845d65c7903bb06",
       "file_hashes": {
         "SKILL.md": "sha256:a5b7c3d7a8295052d70fda571fcb0179caa283683e107c6823b888c13438a0d9"
@@ -680,19 +680,19 @@
     "steering-custom": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/steering-skills/skills/steering-custom",
       "type": "github-subdir",
-      "installed_at": "2026-06-26T23:31:43.1075903+09:00",
+      "installed_at": "2026-07-02T20:07:01.92228+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/steering-skills/skills/steering-custom",
-      "version": "d1239f4",
+      "version": "89887c7",
       "tree_hash": "c34801621264acdf27728d2efc8b5d044f08e5d1",
       "file_hashes": {
         "SKILL.md": "sha256:8120fd973b8df3e499a9259645e9b9c7205924e0693e5d5238a653106f2b198c"
       }
     },
     "stop-slop": {
-      "source": "github.com/hardikpandya/stop-slop",
+      "source": "https://github.com/hardikpandya/stop-slop.git",
       "type": "github",
-      "installed_at": "2026-06-30T07:00:22.0073412+09:00",
+      "installed_at": "2026-07-02T20:06:58.0749058+09:00",
       "repo_url": "https://github.com/hardikpandya/stop-slop.git",
       "version": "8da1f03",
       "file_hashes": {
