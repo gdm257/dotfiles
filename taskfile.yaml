@@ -394,6 +394,12 @@ tasks:
           PATH: "./manifests/playnite.yaml"
         task: manifest:run:manifest
 
+  manifest:rclone:
+    cmds:
+      - vars:
+          PATH: "./manifests/rclone.yaml"
+        task: manifest:run:manifest
+
   manifest:rye:
     cmds:
       - vars:

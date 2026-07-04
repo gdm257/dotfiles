@@ -1,0 +1,12 @@
+entrypoint: rclone copy
+command: >-
+  --progress -v
+  --immutable
+  --ignore-existing
+  --size-only --ignore-checksum
+  --ignore-times
+  --filter "- desktop.ini"
+  --fast-list
+
+run:
+  - args: >-
