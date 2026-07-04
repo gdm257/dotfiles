@@ -10,3 +10,5 @@ command: >-
 
 run:
   - args: >-
+      'remote-1:/src/foo/'
+      'remote-2:/dst/foo/'
