@@ -39,6 +39,7 @@ run:
   # - {args: collapse}
   - { args: starward }
   - { args: game-cheats-manager }
+  - { args: gdm257/sickeaseoverlay }
   - { args: gdm257/project-86 }
   - { args: gdm257/GriefSyndrome }
   - { args: gdm257/airi }

@@ -97,6 +97,7 @@ run:
   # - {args: gdm257/aionui}
   # - {args: gdm257/paseo}
   # - {args: gdm257/nezha}
+  # - {args: gdm257/ccgui}
   # - {args: gdm257/vibe-around}
   # - {args: gdm257/deepchat}
   # - {args: gdm257/harnss}
