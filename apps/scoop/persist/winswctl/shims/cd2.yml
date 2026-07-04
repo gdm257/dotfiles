@@ -2,6 +2,10 @@ $schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationS
 id: cd2
 name: cd2
 description: cd2 service
+serviceAccount:
+  domain: .
+  user: demo
+  password: ""
 delayedAutoStart: true
 workingdirectory:
 hideWindow: true
