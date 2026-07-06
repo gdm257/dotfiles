@@ -125,6 +125,7 @@ run:
   # - {args: main/goose-cli}
   # - {args: gdm257/goose}
   # - {args: gdm257/goose-desktop}
+  - { args: herdr }
   - { args: cc-switch }
   # - {args: gdm257/claude-squad}
   # - {args: gdm257/sudocode}
@@ -136,6 +137,7 @@ run:
   - { args: gdm257/beads-plan }
   - { args: gdm257/open-code-review }
   # - { args: gdm257/archon }
+  - { args: gdm257/codebase-memory-mcp }
   - { args: vim }
   # - {args: vimtutor}
   - { args: neovim }

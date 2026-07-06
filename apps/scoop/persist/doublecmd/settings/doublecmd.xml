@@ -752,6 +752,8 @@
     <HotDir Name="crush" Path="C:\Users\demo\AppData\Local\crush"/>
     <HotDir Name="codex" Path="C:\Users\demo\.codex"/>
     <HotDir Name="Claude-cowork-3p" Path="C:\Users\demo\AppData\Local\Claude-3p"/>
+    <HotDir Name="chrome-devtools-mcp-userdata" Path="C:\Users\demo\.cache\chrome-devtools-mcp"/>
+    <HotDir Name="codebase-memory-mcp" Path="C:\Users\demo\.cache\codebase-memory-mcp"/>
     <HotDir Name="dotenvx" Path="C:\Users\demo\AppData\Roaming\dotenvx"/>
     <HotDir Name="direnv" Path="C:\Users\demo\.config\direnv"/>
     <HotDir Name="direnv-allow" Path="C:\Users\demo\.local\share\direnv"/>
@@ -764,7 +766,6 @@
     <HotDir Name="opencode" Path="C:\Users\demo\.config\opencode"/>
     <HotDir Name="opencode-state" Path="C:\Users\demo\.local\share\opencode"/>
     <HotDir Name="opencode.desktop" Path="C:\Users\demo\AppData\Roaming\ai.opencode.desktop"/>
-    <HotDir Name="chrome-devtools-mcp-userdata" Path="C:\Users\demo\.cache\chrome-devtools-mcp"/>
     <HotDir Name="opencode-cache" Path="C:\Users\demo\.cache\opencode"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\Documents\PowerShell"/>
     <HotDir Name="PowerShell" Path="C:\Users\demo\AppData\Roaming\Microsoft\Windows\PowerShell"/>
