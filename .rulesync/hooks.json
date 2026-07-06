@@ -3,59 +3,29 @@
   "hooks": {},
   "claudecode": {
     "hooks": {
-      "sessionStart": [
+      "preToolUse": [
         {
+          "matcher": "Grep|Glob",
           "type": "command",
-          "command": "cat >/dev/null || true; git rev-parse --git-dir >/dev/null 2>&1 && code-review-graph status || echo 'Not a git repo, skipping'",
-          "timeout": 10
-        }
-      ],
-      "postToolUse": [
-        {
-          "matcher": "Edit|Write|Bash",
-          "type": "command",
-          "command": "cat >/dev/null || true; git rev-parse --git-dir >/dev/null 2>&1 && code-review-graph update --skip-flows || true",
-          "timeout": 30
+          "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0",
+          "timeout": 5
         }
       ]
     }
   },
   "codexcli": {
     "hooks": {
-      "sessionStart": [
+      "preToolUse": [
         {
+          "matcher": "Bash",
           "type": "command",
-          "command": "code-review-graph status",
-          "timeout": 10
-        }
-      ],
-      "postToolUse": [
-        {
-          "matcher": "apply_patch|shell_command",
-          "type": "command",
-          "command": "code-review-graph update --skip-flows",
-          "timeout": 30
+          "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0",
+          "timeout": 5
         }
       ]
     }
   },
   "opencode": {
-    "hooks": {
-      "sessionStart": [
-        {
-          "type": "command",
-          "command": "code-review-graph status",
-          "timeout": 10
-        }
-      ],
-      "postToolUse": [
-        {
-          "matcher": "edit|write|apply_patch|bash",
-          "type": "command",
-          "command": "code-review-graph update --skip-flows",
-          "timeout": 30
-        }
-      ]
-    }
+    "hooks": {}
   }
 }

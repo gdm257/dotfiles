@@ -1,10 +1,9 @@
 {
   "$schema": "https://github.com/dyoshikawa/rulesync/releases/latest/download/mcp-schema.json",
   "mcpServers": {
-    "code-review-graph": {
+    "codebase-memory": {
       "disabled": false,
-      "command": "uvx",
-      "args": ["code-review-graph", "serve"]
+      "command": "codebase-memory-mcp"
     },
     "semble": {
       "disabled": false,

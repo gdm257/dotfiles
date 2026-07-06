@@ -99,12 +99,10 @@
   "agent": {},
   "command": {},
   "mcp": {
-    "code-review-graph": {
+    "codebase-memory": {
       "type": "local",
       "command": [
-        "uvx",
-        "code-review-graph",
-        "serve"
+        "codebase-memory-mcp"
       ],
       "enabled": true
     },

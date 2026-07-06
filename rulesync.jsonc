@@ -4,7 +4,11 @@
   "targets": {
     "claudecode": ["mcp", "hooks", "permissions"],
     "opencode": ["mcp", "hooks", "permissions"],
-    "codexcli": ["mcp", "hooks", "permissions"],
+    "codexcli": [
+      "mcp",
+      "hooks",
+      // "permissions",
+    ],
   },
   "global": true,
   "delete": false,
