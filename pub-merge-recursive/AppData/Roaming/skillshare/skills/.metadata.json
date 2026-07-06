@@ -728,6 +728,184 @@
         "references/phrases.md": "sha256:4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93",
         "references/structures.md": "sha256:ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
       }
+    },
+    "trellis-before-dev": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-before-dev",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:02.0169957+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-before-dev",
+      "version": "769604c",
+      "tree_hash": "382f55ed39fb8d6a6184ca14e1bc13ff7bd4d209",
+      "file_hashes": {
+        "SKILL.md": "sha256:8f897d8dd76c1eeb532cf15ba784360f45a93229f8dcd0acfc14282f014f92a0"
+      }
+    },
+    "trellis-brainstorm": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-brainstorm",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:02.5689439+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-brainstorm",
+      "version": "769604c",
+      "tree_hash": "ee1b0ed4513187d330edc88329bbeab15f9e1f9c",
+      "file_hashes": {
+        "SKILL.md": "sha256:b3b33b61ec46c12293a021e7c6c746c9e4fba2844ee880e5e91370d35057ee6d"
+      }
+    },
+    "trellis-break-loop": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-break-loop",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:03.1536068+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-break-loop",
+      "version": "769604c",
+      "tree_hash": "c635a739a494dedc78321bbbd17524cac5cbc889",
+      "file_hashes": {
+        "SKILL.md": "sha256:f5a93699832f29dee443b53c135a7459519b371f689af191d15c29e8ee5c7bde"
+      }
+    },
+    "trellis-channel": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-channel",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:03.8506363+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-channel",
+      "version": "769604c",
+      "tree_hash": "36c572936e8ecd4b9f29155356a275b5c5da2c3e",
+      "file_hashes": {
+        "SKILL.md": "sha256:ff84801c511a736da018b4b1149348ebc9a16b7fc18d905ec10cfa7acbf269a3",
+        "references/command-reference.md": "sha256:c4df3d940d89814310bfdaded20e84dd1d6b96786f6772688de7a123338d3c8e",
+        "references/forum.md": "sha256:407db39e8ebde47cea8637e3069bdb3d76ba42b43ed1d08ba97a56f26dbcfcb4",
+        "references/progress-debugging.md": "sha256:fe59afd4c0a558cbefc49cc5ef8a7e0e3916d6718cb3255dc6da1b698c850ff7",
+        "references/workers.md": "sha256:d4481b2858bca82050cb8d131916da8a2ccc3857f199cdb9ced8bb41d592e2a7",
+        "references/workflows.md": "sha256:0782d602efde6e94a7d7d7950fd605eedc9a1f5a523908284e76b628fd618fd4"
+      }
+    },
+    "trellis-check": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-check",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:04.3362903+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-check",
+      "version": "769604c",
+      "tree_hash": "1fbaa7ac42ee84a5ef12d07fbdf7bf6b44dbf0cc",
+      "file_hashes": {
+        "SKILL.md": "sha256:2be18b6665b4da497c554acd5d76ef038cc960d25f3d4216f03e047202f2eadc"
+      }
+    },
+    "trellis-continue": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-continue",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:04.8060414+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-continue",
+      "version": "769604c",
+      "tree_hash": "71cfd8dc5b3c71171f3d7f8417319bc76e46eff7",
+      "file_hashes": {
+        "SKILL.md": "sha256:6ee22b56c363c4c3b4e6511d4d1b97d5d123bcb43bbcffa231265749631d4297"
+      }
+    },
+    "trellis-finish-work": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-finish-work",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:05.2664719+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-finish-work",
+      "version": "769604c",
+      "tree_hash": "d7cb361084567d61bab84bc5c46a332ca0cba9d8",
+      "file_hashes": {
+        "SKILL.md": "sha256:79e6d165358253a7379cae647bbd50b6bf174a1107f451b768a2bb4ba7cc0b87"
+      }
+    },
+    "trellis-meta": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-meta",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:06.0619679+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-meta",
+      "version": "769604c",
+      "tree_hash": "01b0696979bb5dfbdb6345bcb4e355e64faa4e51",
+      "file_hashes": {
+        "SKILL.md": "sha256:a190ecbde70a658a5b5c3e2558783e99c9afc6f2e5cdecdac8f11c06dd42065e",
+        "references/customize-local/add-project-local-conventions.md": "sha256:ef3380e71aa9f5103d37b467b1f725a8033ac516e4de31e4d790be02ec2c39e8",
+        "references/customize-local/change-agents.md": "sha256:3eef0d9b9cf875f121c1a38afb8eee6d3cd3894127db601ae5a7760fa5b61575",
+        "references/customize-local/change-context-loading.md": "sha256:e6aa7d938741c08b864f54e9bda8e4e68e04bc60cb46682f6acabaf37f9b2da2",
+        "references/customize-local/change-hooks.md": "sha256:b3b1ed51cfa436a98fad8dda3ec75d997bd8f8cabbad04f101fd9e3d0e1a9e35",
+        "references/customize-local/change-skills-or-commands.md": "sha256:a6994e2418cdf5bcad10b4236b02741179ae794bc4fdd811a64f443293b69268",
+        "references/customize-local/change-spec-structure.md": "sha256:1a712408217ee9cc6a916d874e3d6ed1ba7a3bdc1b9dc4bb1c64393f0df1eb98",
+        "references/customize-local/change-task-lifecycle.md": "sha256:148b7442ef8106de907afd06f9d1ca96f7ec074caedced3dd4175b3a26698ca2",
+        "references/customize-local/change-workflow.md": "sha256:43fa780a2ca580de121b10893d49b99f978873deebbf45008c466e5ac6651519",
+        "references/customize-local/overview.md": "sha256:a0e4cbc3fcc521c0c0f481ade796d31d19c2a5ba697d93856c890fbcc6171d71",
+        "references/local-architecture/bundled-skills.md": "sha256:bac739b042d7a12dae5d14d85cbc312e56ca03f571d2ba7a25b20641ddaefc3f",
+        "references/local-architecture/context-injection.md": "sha256:8497289bf333b3aa456f317039d1239b7ece79254aa0eb62cfc647714c866084",
+        "references/local-architecture/generated-files.md": "sha256:1128d45b2e8c011c247bcf3a3ca1184ca4951fb34a0802c50bf3fecbd7e4de55",
+        "references/local-architecture/multi-agent-channel.md": "sha256:56e5070474aeca872e2d70c46feea5aaafecd3d3ec052c3f7b1877358dca62e9",
+        "references/local-architecture/overview.md": "sha256:50638fd9eaaba2e0edf2f2a84d920578d5b2fb7934031b174e417d3dc510b2a6",
+        "references/local-architecture/spec-system.md": "sha256:55f3c95033a3cbed6c06e225187071502d7dcf3f153f4becbec6aa79acc782f5",
+        "references/local-architecture/task-system.md": "sha256:25dbd2be6a2271591274b56616b853b16e6fd9f44f43073350688e89e87295a6",
+        "references/local-architecture/workflow.md": "sha256:cfcdc6e4468a5d9c816e929fcca01640cd41cfdaaa4824118b40a8e460c927b6",
+        "references/local-architecture/workspace-memory.md": "sha256:79786a1ca2980b1785a36aba8142f9d879459c47dc000c999f638e5c864d04d3",
+        "references/platform-files/agents.md": "sha256:dedea76cd3ff3221a0abd121093ddd32ed8815bb08ca63d20c32feb29ca76aa7",
+        "references/platform-files/hooks-and-settings.md": "sha256:acdeba5866ccbe0e68fffc847e77e726cf79f579898e61312f6a8d62b48380ff",
+        "references/platform-files/overview.md": "sha256:821a2718b38e17439c2bb487a6dd3a95c8138e83dbda60b142a00ff80178dc3c",
+        "references/platform-files/platform-map.md": "sha256:59e13cdaa2077149b5d82ad25fa5dd821195be30bdc43d853619c4702d334a6e",
+        "references/platform-files/skills-and-commands.md": "sha256:5732bb0a7d384a91abd0c103372f3865e0b186e75185f35e0e91b00a6b6bf5a3"
+      }
+    },
+    "trellis-session-insight": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-session-insight",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:06.6214058+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-session-insight",
+      "version": "769604c",
+      "tree_hash": "479c03fb30776689f57ece29a7ae40d40ecdc0b7",
+      "file_hashes": {
+        "SKILL.md": "sha256:f6ad80eaca21b8fa63d31ae26b612bb2bb69dd04469603828509a8c5a0463ff1",
+        "references/cli-quick-reference.md": "sha256:c520353fe3fc00b9702ed4f780647c8fbd6d342e66527a03647f533a9fe09779",
+        "references/triggering-patterns.md": "sha256:121ecd23be83d1567e8ce15c366a81073d7a2b1d3ad616fce235c07ca1f1cc20"
+      }
+    },
+    "trellis-spec-bootstrap": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-spec-bootstrap",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:07.1382231+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-spec-bootstrap",
+      "version": "769604c",
+      "tree_hash": "cf40e7e637c22a8c3270db35efcb2ec9fa098ff0",
+      "file_hashes": {
+        "SKILL.md": "sha256:97bfa68c06cebb558eb4464bc1b81f7d2d56040d75baa8de1ee5ad90cca0196a",
+        "references/mcp-setup.md": "sha256:df542fc8f279edd38046d26a7c8151804b708f57b24d4aa2733cea587a88c65e",
+        "references/repository-analysis.md": "sha256:0dae98d774f6e34559b9f3442888ac43e3a8af110c37cbefc49ce256986858b6",
+        "references/spec-task-planning.md": "sha256:ef493d028c3b0807a8a534bb71fb92a68129f273db763ad27ceb464a522e799d",
+        "references/spec-writing.md": "sha256:e9800fe9ed4a4cd87062ea1829cf2caa8d170ec15e141678a6a30e74c497f47d"
+      }
+    },
+    "trellis-start": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-start",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:07.63192+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-start",
+      "version": "769604c",
+      "tree_hash": "7dffcbe8fbc3409bc5f9ff383fcf202c60616830",
+      "file_hashes": {
+        "SKILL.md": "sha256:ddcb643c43e967dc7e435cb815c9eb00ddab8913190d837d8b9504424f47a81a"
+      }
+    },
+    "trellis-update-spec": {
+      "source": "github.com/gdm257/cc-plugins/plugins/trellis/skills/trellis-update-spec",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:19:08.2061997+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-update-spec",
+      "version": "769604c",
+      "tree_hash": "4a8ae4ae75bd8c5fd96a0c68ae5bfb10525ba089",
+      "file_hashes": {
+        "SKILL.md": "sha256:003ce08a3404aeb50998029392c4d4e57b626edf526d3ebd585032bb92dcbb96"
+      }
     }
   }
 }

@@ -24,6 +24,42 @@
       "file_hashes": {
         "spec-reviewer.md": "sha256:5a9e4d1c907c873a263eced86b4cdd5feda0d5aee5f926598f3edd84ce90a9de"
       }
+    },
+    "trellis-check": {
+      "source": "github.com/mindfold-ai/Trellis/packages/cli/src/templates/gemini/agents/trellis-check.md",
+      "kind": "agent",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:21:05.8720574+09:00",
+      "repo_url": "https://github.com/mindfold-ai/Trellis.git",
+      "subdir": "trellis-check.md",
+      "version": "cf3c8af",
+      "file_hashes": {
+        "trellis-check.md": "sha256:68c1f3e9618974b38f39a633775520b40d92a7403bb06b7f3e93f968cb961d43"
+      }
+    },
+    "trellis-implement": {
+      "source": "github.com/mindfold-ai/Trellis/packages/cli/src/templates/gemini/agents/trellis-implement.md",
+      "kind": "agent",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:21:05.8859325+09:00",
+      "repo_url": "https://github.com/mindfold-ai/Trellis.git",
+      "subdir": "trellis-implement.md",
+      "version": "cf3c8af",
+      "file_hashes": {
+        "trellis-implement.md": "sha256:ba98e963fb9ea85ca6fc373ed6458526f9fdea282b4aa9fa9225431b995cb45e"
+      }
+    },
+    "trellis-research": {
+      "source": "github.com/mindfold-ai/Trellis/packages/cli/src/templates/gemini/agents/trellis-research.md",
+      "kind": "agent",
+      "type": "github-subdir",
+      "installed_at": "2026-07-08T07:21:05.9020364+09:00",
+      "repo_url": "https://github.com/mindfold-ai/Trellis.git",
+      "subdir": "trellis-research.md",
+      "version": "cf3c8af",
+      "file_hashes": {
+        "trellis-research.md": "sha256:fdccaef6caa3710b5741610f2df53f8a6cf981ab68abf5786ba426b684dfdad3"
+      }
     }
   }
 }

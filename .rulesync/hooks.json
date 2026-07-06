@@ -1,27 +1,33 @@
 {
   "version": 1,
   "hooks": {},
-  "claudecode": {
-    "hooks": {
+ "claudecode": {
+   "hooks": {
+      "sessionStart": [
+        { "matcher": "startup", "type": "command", "command": "uvx --from trellis-runtime trellis-hook-session-start", "timeout": 30 },
+        { "matcher": "clear", "type": "command", "command": "uvx --from trellis-runtime trellis-hook-session-start", "timeout": 30 },
+        { "matcher": "compact", "type": "command", "command": "uvx --from trellis-runtime trellis-hook-session-start", "timeout": 30 }
+      ],
       "preToolUse": [
-        {
-          "matcher": "Grep|Glob",
-          "type": "command",
-          "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0",
-          "timeout": 5
-        }
+        { "matcher": "Grep|Glob", "type": "command", "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0", "timeout": 5 },
+        { "matcher": "Task", "type": "command", "command": "uvx --from trellis-runtime trellis-hook-inject-subagent-context", "timeout": 30 },
+        { "matcher": "Agent", "type": "command", "command": "uvx --from trellis-runtime trellis-hook-inject-subagent-context", "timeout": 30 }
+      ],
+      "beforeSubmitPrompt": [
+        { "type": "command", "command": "uvx --from trellis-runtime trellis-hook-inject-workflow-state", "timeout": 15 }
       ]
     }
   },
   "codexcli": {
     "hooks": {
+      "sessionStart": [
+        { "matcher": "startup|resume|clear|compact", "type": "command", "command": "uvx --from trellis-runtime trellis-hook-session-start", "timeout": 30 }
+      ],
       "preToolUse": [
-        {
-          "matcher": "Bash",
-          "type": "command",
-          "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0",
-          "timeout": 5
-        }
+        { "matcher": "Bash", "type": "command", "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0", "timeout": 5 }
+      ],
+      "beforeSubmitPrompt": [
+        { "type": "command", "command": "uvx --from trellis-runtime trellis-hook-inject-workflow-state", "timeout": 15 }
       ]
     }
   },
