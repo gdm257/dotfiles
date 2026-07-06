@@ -26,6 +26,18 @@
         "references/install.md": "sha256:292e8ef0dbd391e19964ba5b3a230664e6e3baa22c37b6ed9a858ee37f8b7305"
       }
     },
+    "codebase-memory": {
+      "source": "github.com/gdm257/cc-plugins/plugins/codebase-memory/skills/codebase-memory",
+      "type": "github-subdir",
+      "installed_at": "2026-07-06T02:17:17.8193778+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/codebase-memory/skills/codebase-memory",
+      "version": "c8541f0",
+      "tree_hash": "4b9d722ac754a46d16e9431a9abf2f42d93b8242",
+      "file_hashes": {
+        "SKILL.md": "sha256:99371d29af21e23079fd6cc2213e5e7add270304b3812da55d5dfdbe67176684"
+      }
+    },
     "commit-context": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/commit-context",
       "type": "github-subdir",
@@ -389,6 +401,18 @@
       "tree_hash": "089bac967229dbef9654dab45f9c913e4b25205d",
       "file_hashes": {
         "SKILL.md": "sha256:888e8969e70d832fce467f3ac5059c002b7ebbfbcd5a13d4ac6c0bd4f35f359f"
+      }
+    },
+    "open-code-review": {
+      "source": "github.com/alibaba/open-code-review/skills/open-code-review",
+      "type": "github-subdir",
+      "installed_at": "2026-07-05T17:12:06.8393887+09:00",
+      "repo_url": "https://github.com/alibaba/open-code-review.git",
+      "subdir": "skills/open-code-review",
+      "version": "10f5875",
+      "tree_hash": "162e96f55a04f56aae9762b9de99f39e5e8081c6",
+      "file_hashes": {
+        "SKILL.md": "sha256:d9a72b3a15f7f8d22da3d7d6f1a95c99e98c5b8353cd92438d6f2bb6aa686895"
       }
     },
     "openspec-apply-change": {
