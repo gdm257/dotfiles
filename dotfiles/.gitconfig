@@ -71,7 +71,7 @@
 	allowedSignersFile = ~/.ssh/allowed_signers
   program = git-ssh-sign
 [tag]
-	gpgsign = true
+	gpgsign = false
 [http]
 	lowSpeedLimit = 1000
 	lowSpeedTime = 60
