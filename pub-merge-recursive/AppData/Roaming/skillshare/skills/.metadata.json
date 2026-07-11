@@ -13,6 +13,18 @@
         "SKILL.md": "sha256:b7ae1601e5abd0921204f824992b53803dbddac52ba3f13938bc9b1cc00b7987"
       }
     },
+    "brandkit": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/brandkit",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:29.6885847+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/brandkit",
+      "version": "b177427",
+      "tree_hash": "d278ff748cafab01e4ae5dd7758fc0b53258621c",
+      "file_hashes": {
+        "SKILL.md": "sha256:b0c4837e1bd140ca816ae54948754ddd2ac1e2a4d3619363777a80caf00b2ede"
+      }
+    },
     "browser-harness": {
       "source": "https://github.com/browser-use/browser-harness.git/skills/browser-harness",
       "type": "github-subdir",
@@ -24,6 +36,30 @@
       "file_hashes": {
         "SKILL.md": "sha256:8fc17db5ad566f1f49414dbe3f7bf7bca89ce416146cd3843bfada9f1846380c",
         "references/install.md": "sha256:292e8ef0dbd391e19964ba5b3a230664e6e3baa22c37b6ed9a858ee37f8b7305"
+      }
+    },
+    "brutalist-skill": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/brutalist-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:31.3149549+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/brutalist-skill",
+      "version": "b177427",
+      "tree_hash": "f812ede7e5c34cf680f629911e9f9ac05e416cf4",
+      "file_hashes": {
+        "SKILL.md": "sha256:fffbaac8597f07679e9d87145533567658aedba3b5eca6f16a7075a333048caa"
+      }
+    },
+    "code-review-and-quality": {
+      "source": "github.com/addyosmani/agent-skills/skills/code-review-and-quality",
+      "type": "github-subdir",
+      "installed_at": "2026-07-09T07:03:13.00741+09:00",
+      "repo_url": "https://github.com/addyosmani/agent-skills.git",
+      "subdir": "skills/code-review-and-quality",
+      "version": "70b7506",
+      "tree_hash": "49d4d30c3839541abb063446b3b24bc6c0dc5ae6",
+      "file_hashes": {
+        "SKILL.md": "sha256:6d7c7cb43e8eb6727ab72b3baa570d8e8c00f484392cfd07acf4550fed2b6838"
       }
     },
     "codebase-memory": {
@@ -76,6 +112,18 @@
         "SKILL.md": "sha256:4359372f9591359123e7e54dbb183c538ed0153ef6cd0208cf680102e44fc36c"
       }
     },
+    "design-with-taste": {
+      "source": "github.com/cristicretu/family-taste-skill/skills/design-with-taste",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:23:44.276672+09:00",
+      "repo_url": "https://github.com/cristicretu/family-taste-skill.git",
+      "subdir": "skills/design-with-taste",
+      "version": "8c34fce",
+      "tree_hash": "2b370bec039f58d746201da3caac12bb938f6c99",
+      "file_hashes": {
+        "SKILL.md": "sha256:2cf276fe7679081784fb00e1ce4b942ca923d8a0672bd41bc494bc7f6d66c962"
+      }
+    },
     "explore-codebase": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/explore-codebase",
       "type": "github-subdir",
@@ -86,6 +134,36 @@
       "tree_hash": "5efc9caea8544291914d1dc66a20d1e745735846",
       "file_hashes": {
         "SKILL.md": "sha256:d94f31fdf5fb25204b3a1e33b45b2e99432cfc71cc2fdebdc8c80d1979094f45"
+      }
+    },
+    "extract-design-md": {
+      "source": "github.com/google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:19:31.2921089+09:00",
+      "repo_url": "https://github.com/google-labs-code/stitch-skills.git",
+      "subdir": "plugins/stitch-design/skills/extract-design-md",
+      "version": "3f64079",
+      "tree_hash": "35e72eb853c63ed6a364b2ff6fce63bb508dbfac",
+      "file_hashes": {
+        "SKILL.md": "sha256:f9c32b30acd9fea3dba7306bf38e3a859f49c1f27bcf44f9cf16d3a60a730276",
+        "examples/DESIGN.md": "sha256:9a14478effd073d9fefc1f0e1084aab299078603d248406f1381462cd5a01c26",
+        "references/angular.md": "sha256:4611bf5a4592e8b4b2390635b8371ed07c0852e99d9adbafac8878f4d9e019d1",
+        "references/plain-css.md": "sha256:a4e7a8efa8d8d7b33a214a4b146263bb029ba4ead478305436e7bb7ebeace80a",
+        "references/react-tailwind.md": "sha256:9b48abffd0240e7721edaa1526674699fbaaab5838efb5fac0276b7e5efc8e15",
+        "references/svelte.md": "sha256:f17530d1f2274ef5a8764355c979c992fe5c64a88a03270b69f43099fc117b9b",
+        "references/vue.md": "sha256:df8f4d1e166e4cca4d01a60f28a1ecf35ce45787669a79008ea0cad1ec709f9f"
+      }
+    },
+    "find-skills": {
+      "source": "github.com/vercel-labs/skills/skills/find-skills",
+      "type": "github-subdir",
+      "installed_at": "2026-07-09T07:12:22.2995624+09:00",
+      "repo_url": "https://github.com/vercel-labs/skills.git",
+      "subdir": "skills/find-skills",
+      "version": "4ce6d48",
+      "tree_hash": "eb6a23305aea6e340d14b9de3766e721f9f4861b",
+      "file_hashes": {
+        "SKILL.md": "sha256:deddc03b4b5f50755b97fcdb737a786676992ef7e9be614d2cd2c71e0320bebf"
       }
     },
     "forget": {
@@ -113,6 +191,50 @@
         "SKILL.md": "sha256:4873a14afba488a51bc73f0ca06fd62a7f8fe92caf93f6b6bd3f9faf735ea218"
       }
     },
+    "git-rebase": {
+      "source": "github.com/pedronauck/skills/skills/mine/git-rebase",
+      "type": "github-subdir",
+      "installed_at": "2026-07-09T06:11:42.1232185+09:00",
+      "repo_url": "https://github.com/pedronauck/skills.git",
+      "subdir": "skills/mine/git-rebase",
+      "version": "671a38a",
+      "tree_hash": "c77a691dccb364e1a26f5f734dd487bc91b5fc35",
+      "file_hashes": {
+        "SKILL.md": "sha256:11e74f8a4880433b7e01fb4dd704db3120dd28d954a81fc678417bdf35ca836b",
+        "references/automation.md": "sha256:bac788b2aa172eba3440602ceffacaef307eb644acd14937dff5b30b36709525",
+        "references/resolution-patterns.md": "sha256:95a0c0abfd3fb0713a96abb26e47df1dd16708e78b0acf4d963dff94459da860",
+        "references/scripts-tools.md": "sha256:e4b9d9b9667f29ba352e0f61750e57ac14ddfd825139795830b581248cfd916b",
+        "references/strategies.md": "sha256:f3c90b00bddba9cc771abe194058ffc93236d916373ee84f696eeeb5c164755a",
+        "references/troubleshooting.md": "sha256:27ff5723411b15d27b26a04bc3b64931da0112af06d87bd2562bde8049db95bc",
+        "scripts/analyze-conflicts.sh": "sha256:e9f46a80ace9d6abd3edfda204a4a24f06020825be89c4f252278f45a8736fc0",
+        "scripts/pre-rebase-backup.sh": "sha256:e6e00a4215b7c07ced34248c3b4b7ceb3e621a99b90e90ff931b6196e5b0d7a8",
+        "scripts/validate-merge.sh": "sha256:0ff3d79f97035e9208da2baa3a7faed02e29e4c7c3a311e8c82b28eb13d36695"
+      }
+    },
+    "gpt-tasteskill": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/gpt-tasteskill",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:31.5389537+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/gpt-tasteskill",
+      "version": "b177427",
+      "tree_hash": "c87d529ad945cd35985b19475bf53f41682d4f69",
+      "file_hashes": {
+        "SKILL.md": "sha256:2e64c269953f2656c21bf5a0fa6b4568e82fe0c72b36e8f84758e090349966a5"
+      }
+    },
+    "grilling": {
+      "source": "github.com/mattpocock/skills/skills/productivity/grilling",
+      "type": "github-subdir",
+      "installed_at": "2026-07-09T05:37:49.9903215+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/productivity/grilling",
+      "version": "d574778",
+      "tree_hash": "0ace40ac10f5c0b1534324e4e109ebfa831fb361",
+      "file_hashes": {
+        "SKILL.md": "sha256:5a35925d03a391bcfa46940868b649b72dba89ec9c19525e785bbb6bd3a7f478"
+      }
+    },
     "handoff": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/handoff",
       "type": "github-subdir",
@@ -124,6 +246,54 @@
       "file_hashes": {
         "EXAMPLES.md": "sha256:1fa85f64e20fe8bc07cae31e6a4fb9a58eff354375d24e1efa7bcc295d723b21",
         "SKILL.md": "sha256:1a56957440917ffb5706db1f27d81c7d1a679d35eb8541516091c2c51411f9d5"
+      }
+    },
+    "image-to-code-skill": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/image-to-code-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:31.8323931+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/image-to-code-skill",
+      "version": "b177427",
+      "tree_hash": "701b3cb89c061fcf98a98f639e0b0b5c0b492479",
+      "file_hashes": {
+        "SKILL.md": "sha256:4c060a8064a8b13380bc2ef3d6e6a1d0b1e316aa093cd9807d0ce9e4eeb037fa"
+      }
+    },
+    "imagegen-frontend-mobile": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/imagegen-frontend-mobile",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:32.0392862+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/imagegen-frontend-mobile",
+      "version": "b177427",
+      "tree_hash": "9901fcde67e9506a706912107825fdfb72e01f30",
+      "file_hashes": {
+        "SKILL.md": "sha256:8a33389979f3074fa0926678e266ad2eb9234624472254469fc1ad916b9caa24"
+      }
+    },
+    "imagegen-frontend-web": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/imagegen-frontend-web",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:32.3114531+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/imagegen-frontend-web",
+      "version": "b177427",
+      "tree_hash": "3b5117d349200e33f9c3399344681620079dcc18",
+      "file_hashes": {
+        "SKILL.md": "sha256:6b5c2256522fdba1e3313eafa3d743b960a7b13ec029d3e6586e04b23327c1f8"
+      }
+    },
+    "interview-me": {
+      "source": "github.com/addyosmani/agent-skills/skills/interview-me",
+      "type": "github-subdir",
+      "installed_at": "2026-07-09T07:22:06.9622301+09:00",
+      "repo_url": "https://github.com/addyosmani/agent-skills.git",
+      "subdir": "skills/interview-me",
+      "version": "70b7506",
+      "tree_hash": "0797d64561cca6ad975d9e5d1f1497cba83a517b",
+      "file_hashes": {
+        "SKILL.md": "sha256:1d94741d10d2c826cd0c191aea3981ee94c8abb27ef2a166f6a372117d06448f"
       }
     },
     "kiro-debug": {
@@ -403,6 +573,18 @@
         "SKILL.md": "sha256:888e8969e70d832fce467f3ac5059c002b7ebbfbcd5a13d4ac6c0bd4f35f359f"
       }
     },
+    "minimalist-skill": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/minimalist-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:32.5836039+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/minimalist-skill",
+      "version": "b177427",
+      "tree_hash": "5509c012862cda27e2ed7efae89ed940ecc53add",
+      "file_hashes": {
+        "SKILL.md": "sha256:36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c"
+      }
+    },
     "open-code-review": {
       "source": "github.com/alibaba/open-code-review/skills/open-code-review",
       "type": "github-subdir",
@@ -523,6 +705,18 @@
         "SKILL.md": "sha256:336cd56a90854494373439f59d9cdd92d696a8cba97d5d8637865ba275c31c66"
       }
     },
+    "output-skill": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/output-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:32.7260512+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/output-skill",
+      "version": "b177427",
+      "tree_hash": "3dd6ad49b667d15182acddc9d3e4f7763ae33c9c",
+      "file_hashes": {
+        "SKILL.md": "sha256:e5bf48b1ae561511439cf71672209a10a88cee0968cc925909ff861dfa0a96a7"
+      }
+    },
     "ponytail": {
       "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail",
       "type": "github-subdir",
@@ -621,6 +815,18 @@
         "SKILL.md": "sha256:33e992570d0e10b614e71515f0611e3ed8d6a7264ecc14e9fb085d438acf880b"
       }
     },
+    "redesign-skill": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/redesign-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:32.9212311+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/redesign-skill",
+      "version": "b177427",
+      "tree_hash": "d9cffe56d26d4af7687299e391a7be1cfaf46c1b",
+      "file_hashes": {
+        "SKILL.md": "sha256:98ad3e5b051bfb71b2795f7e8a6aa0d32b51ee095606c098a4b2822ac07926c9"
+      }
+    },
     "refactor-safely": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/refactor-safely",
       "type": "github-subdir",
@@ -664,6 +870,18 @@
         "scripts/utils.sh": "sha256:c4ba3cf231afd06b919428d4599dda91ff2cf19920625a1c6720cc4cfc1d70b8"
       }
     },
+    "resolving-merge-conflicts": {
+      "source": "github.com/mattpocock/skills/skills/engineering/resolving-merge-conflicts",
+      "type": "github-subdir",
+      "installed_at": "2026-07-09T06:26:00.673428+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/resolving-merge-conflicts",
+      "version": "d574778",
+      "tree_hash": "b601c90446f887a94ec68e5c2301a8919f949a2c",
+      "file_hashes": {
+        "SKILL.md": "sha256:c7c9ba81362a786aac05d2223123bf1bd2f8a99c3243a72882ede9c68bedfb24"
+      }
+    },
     "review-changes": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/review-changes",
       "type": "github-subdir",
@@ -687,6 +905,18 @@
       "file_hashes": {
         "EXAMPLES.md": "sha256:0a089f68ad9f7ca87b8dcc2536ce5d8e8a7b20980e602c41c29abb9d4b9afc11",
         "SKILL.md": "sha256:6aec3cfd96a3630fa9c7985f1db5b0049cafdb1d4b0726c5160928dcada41a0b"
+      }
+    },
+    "soft-skill": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/soft-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:33.0620577+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/soft-skill",
+      "version": "b177427",
+      "tree_hash": "1b5943432ddd1b980206968c529a323cc992dbec",
+      "file_hashes": {
+        "SKILL.md": "sha256:e1e32f5e2d420872c6c7332b53d5ff7721946766b78c4822b424c2d512c8fdbc"
       }
     },
     "steering": {
@@ -713,6 +943,19 @@
         "SKILL.md": "sha256:8120fd973b8df3e499a9259645e9b9c7205924e0693e5d5238a653106f2b198c"
       }
     },
+    "stitch-skill": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/stitch-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:33.4930399+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/stitch-skill",
+      "version": "b177427",
+      "tree_hash": "de2038cf286b31f33b397c1308455dbc17ef26f3",
+      "file_hashes": {
+        "DESIGN.md": "sha256:0ab6740c4ebb1966dbceddb823a66d4bf027e960efbd73faca56cbf8370ae2ad",
+        "SKILL.md": "sha256:46bdb08fee2dded38b6ba0a051230a502d6ac6e4044afd47592cb40c256028b5"
+      }
+    },
     "stop-slop": {
       "source": "https://github.com/hardikpandya/stop-slop.git",
       "type": "github",
@@ -727,6 +970,57 @@
         "references/examples.md": "sha256:49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d",
         "references/phrases.md": "sha256:4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93",
         "references/structures.md": "sha256:ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
+      }
+    },
+    "taste-design": {
+      "source": "github.com/google-labs-code/stitch-skills/plugins/stitch-utilities/skills/taste-design",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:24:38.9811444+09:00",
+      "repo_url": "https://github.com/google-labs-code/stitch-skills.git",
+      "subdir": "plugins/stitch-utilities/skills/taste-design",
+      "version": "3f64079",
+      "tree_hash": "9b0d4827e32e8688348fa131a4aedcb9ac34ff0d",
+      "file_hashes": {
+        "SKILL.md": "sha256:e425fdb7ab250764f6229c48941f97e20bd6a7ba9e25a628f1e0ebeb008e8bff",
+        "resources/DESIGN.md": "sha256:d6bd72a44725e0d8fe40642559863c4c2eae5e4a6bd3b5f204d1cc0c7c5482fa"
+      }
+    },
+    "taste-skill": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/taste-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:33.7392089+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/taste-skill",
+      "version": "b177427",
+      "tree_hash": "a6d128e53b4ec0238baee751dde33bf707adb5ec",
+      "file_hashes": {
+        "SKILL.md": "sha256:aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89"
+      }
+    },
+    "taste-skill-v1": {
+      "source": "github.com/Leonxlnx/taste-skill/skills/taste-skill-v1",
+      "type": "github-subdir",
+      "installed_at": "2026-07-10T21:39:33.9080458+09:00",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
+      "subdir": "skills/taste-skill-v1",
+      "version": "b177427",
+      "tree_hash": "3642ecef471a6ee4d9d485feea6df8ba92616b78",
+      "file_hashes": {
+        "SKILL.md": "sha256:033d45af1ed23832730642f95f40ab49db7fb5222848489a6c5656144bfc6dae"
+      }
+    },
+    "tdd": {
+      "source": "github.com/mattpocock/skills/skills/engineering/tdd",
+      "type": "github-subdir",
+      "installed_at": "2026-07-09T05:37:28.8445219+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/tdd",
+      "version": "d574778",
+      "tree_hash": "57e1bee887816ed2af745e5fd388f224f6e61ada",
+      "file_hashes": {
+        "SKILL.md": "sha256:5363bb2775679fe9311fbb67947f95359169c6e7f1fac77c0f25e190bca6cf2f",
+        "mocking.md": "sha256:3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
+        "tests.md": "sha256:859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a"
       }
     },
     "trellis-before-dev": {
