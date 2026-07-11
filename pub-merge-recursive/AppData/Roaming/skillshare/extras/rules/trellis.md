@@ -10,7 +10,9 @@ outputs:
 name: trellis-runtime
 ---
 
-Do NOT use `python3 ./.trellis/scripts/<name>.py` — the project has no .trellis/scripts/. Replace every occurrence with `uvx --from trellis-runtime trellis-<name>` (same flags):
+Do NOT use `python3 ./.trellis/scripts/<name>.py` — the project has no .trellis/scripts/.
+Replace every occurrence with `uvx --from trellis-runtime trellis-<name>` (same flags)
+E.g. `uvx --from trellis-runtime trellis-get-context`
 
 - task.py → trellis-task
 - get_context.py → trellis-get-context
