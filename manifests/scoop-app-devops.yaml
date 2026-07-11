@@ -138,6 +138,7 @@ run:
   - { args: gdm257/open-code-review }
   # - { args: gdm257/archon }
   - { args: gdm257/codebase-memory-mcp }
+  - { args: gdm257/codebase-memory-mcp-ui }
   - { args: vim }
   # - {args: vimtutor}
   - { args: neovim }

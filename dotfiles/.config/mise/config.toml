@@ -48,3 +48,4 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "pipx:pyright" = { version = "latest", os = ["windows"] }
 "pipx:browser-harness" = { version = "latest", extras = "mcp", os = ["windows"] }
 "pipx:semble" = { version = "latest", extras = "mcp", os = ["windows"] }
+"pipx:litellm" = { version = "latest", extras = "proxy", os = ["windows"] }

@@ -17,7 +17,7 @@ run:
   - { args: upscayl }
   - { args: caesium-image-compressor }
   - { args: Krita-Portable }
-  # - {args: inkscape}
+  - { args: inkscape }
   - { args: pixieditor }
   - { args: lunacy }
   - { args: qgis }
