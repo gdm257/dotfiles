@@ -46,6 +46,5 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "pipx:marimo" = { version = "latest", extras = "recommended", os = ["windows"] }
 "pipx:ptpython" = { version = "latest", os = ["windows"] }
 "pipx:pyright" = { version = "latest", os = ["windows"] }
-"pipx:git+https://github.com/browser-use/browser-harness.git" = { version = "main", os = ["windows"] }
+"pipx:browser-harness" = { version = "latest", extras = "mcp", os = ["windows"] }
 "pipx:semble" = { version = "latest", extras = "mcp", os = ["windows"] }
-"pipx:code-review-graph" = { version = "latest", os = ["windows"] }
