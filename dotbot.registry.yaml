@@ -2,4 +2,4 @@
     - dotbot-plugins/dotbot-windows/dotbot_windows.py
 - windows:
     registry:
-      import: pub-merge-recursive/Registry/
+      import: registry/
