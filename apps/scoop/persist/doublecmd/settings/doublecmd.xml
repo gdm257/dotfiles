@@ -158,10 +158,10 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>450</Left>
-      <Top>229</Top>
+      <Left>516</Left>
+      <Top>217</Top>
       <Width>1106</Width>
-      <Height>677</Height>
+      <Height>680</Height>
       <PixelsPerInch>120</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>99.8996990972919</Splitter>
@@ -646,6 +646,7 @@
     <HotDir Name="sudocode" Path="C:\Users\demo\.config\sudocode"/>
     <HotDir Name="scoop" Path="C:\Users\demo\scoop"/>
     <HotDir Name="stack" Path="C:\sr"/>
+    <HotDir Name="semble cache" Path="C:\Users\demo\AppData\Local\semble"/>
     <HotDir Name="Taskfile.d" Path="C:\Users\demo\Documents\repos\Iac"/>
     <HotDir Name="uv" Path="C:\Users\demo\AppData\Roaming\uv"/>
     <HotDir Name="version manager" Path="C:\Users\demo\.vm"/>
@@ -752,6 +753,7 @@
     <HotDir Name="crush" Path="C:\Users\demo\AppData\Local\crush"/>
     <HotDir Name="codex" Path="C:\Users\demo\.codex"/>
     <HotDir Name="Claude-cowork-3p" Path="C:\Users\demo\AppData\Local\Claude-3p"/>
+    <HotDir Name="claude-cli-mcp-logs" Path="C:\Users\demo\AppData\Local\claude-cli-nodejs"/>
     <HotDir Name="chrome-devtools-mcp-userdata" Path="C:\Users\demo\.cache\chrome-devtools-mcp"/>
     <HotDir Name="codebase-memory-mcp" Path="C:\Users\demo\.cache\codebase-memory-mcp"/>
     <HotDir Name="dotenvx" Path="C:\Users\demo\AppData\Roaming\dotenvx"/>
