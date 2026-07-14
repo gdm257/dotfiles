@@ -1,0 +1,15 @@
+$schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
+id: cbm
+name: cbm
+description: cbm service
+delayedAutoStart: true
+hideWindow: true
+serviceAccount:
+  domain: .
+  user: demo
+  password: ""
+workingDirectory:
+executable: codebase-memory-mcp-ui
+arguments: >-
+  --ui=true
+  --ui-port=9749
