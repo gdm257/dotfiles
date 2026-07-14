@@ -82,6 +82,19 @@
         "baseURL": "http://localhost:23333/v1"
       },
       "models": {}
+    },
+    "kuaipao": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "KuaiPao API",
+      "options": {
+        "baseURL": "https://kuaipao.pro/v1"
+      },
+      "models": {
+        "gpt-5.6-luna": {
+          "name": "gpt-5.6-luna",
+          "options": {}
+        }
+      }
     }
   },
   "instructions": [
