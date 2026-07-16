@@ -1,9 +1,6 @@
 {
   "$schema": "https://github.com/dyoshikawa/rulesync/releases/latest/download/permissions-schema.json",
   "permission": {
-    "agent": {
-      "Explore": "deny"
-    },
     "bash": {
       "git push *": "ask",
       "git push": "ask",
@@ -496,5 +493,21 @@
       "cargo *": "allow",
       "cargo": "allow"
     }
+  },
+  "claudecode": {
+    "permission": {
+      "agent": {
+        "Explore": "deny"
+      }
+    }
+  },
+  "codexcli": {
+    "base_permission_profile": ":workspace",
+    "approval_policy": "on-request",
+    "approvals_reviewer": "auto_review",
+    "permission": {}
+  },
+  "opencode": {
+    "permission": {}
   }
 }
