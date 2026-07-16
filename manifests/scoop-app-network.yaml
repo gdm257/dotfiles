@@ -4,7 +4,8 @@ command: install
 run:
   - { args: tor }
   # - {args: simple-obfs}
-  - { args: proxychains }
+  # - {args: proxychains}
+  - { args: gdm257/ghost-proxifier }
   - { args: gping }
   # - {args: trippy}
   # - {args: besttrace}

@@ -127,6 +127,9 @@ run:
   # - {args: gdm257/goose-desktop}
   - { args: herdr }
   - { args: cc-switch }
+  - { args: gdm257/omniroute }
+  - { args: main/cliproxyapi }
+  - { args: gdm257/cpa-manager-plus }
   # - {args: gdm257/claude-squad}
   # - {args: gdm257/sudocode}
   # - {args: gdm257/auto-claude}
