@@ -6,7 +6,7 @@
       "command": "codebase-memory-mcp"
     },
     "semble": {
-      "disabled": false,
+      "disabled": true,
       "command": "uvx",
       "args": ["--from", "semble[mcp]", "semble"]
     }
