@@ -604,6 +604,7 @@
     <HotDir Name="chat2db" Path="C:\Users\demo\AppData\Roaming\chat2db"/>
     <HotDir Name="chat2db" Path="C:\Users\demo\.chat2db"/>
     <HotDir Name="cline" Path="C:\Users\demo\.cline"/>
+    <HotDir Name="cli-proxy-api" Path="C:\Users\demo\.cli-proxy-api"/>
     <HotDir Name="continue" Path="C:\Users\demo\.continue"/>
     <HotDir Name="conda" Path="C:\Users\demo\.conda"/>
     <HotDir Name="conda" Path="C:\Users\demo\AppData\Local\conda\conda"/>
@@ -627,6 +628,7 @@
     <HotDir Name="micromamba" Path="C:\Users\demo\micromamba\envs"/>
     <HotDir Name="miniconda" Path="C:\Users\demo\miniconda3\envs"/>
     <HotDir Name="openclaw" Path="C:\Users\demo\.openclaw"/>
+    <HotDir Name="opencodereview" Path="C:\Users\demo\.opencodereview"/>
     <HotDir Name="OpenPackage" Path="C:\Users\demo\.openpackage"/>
     <HotDir Name="agents skills" Path="C:\Users\demo\.agents"/>
     <HotDir Name="skillshare" Path="C:\Users\demo\AppData\Roaming\skillshare"/>
