@@ -7,7 +7,7 @@
     "codexcli": [
       "mcp",
       "hooks",
-      // "permissions",
+      "permissions",
     ],
   },
   "global": true,
