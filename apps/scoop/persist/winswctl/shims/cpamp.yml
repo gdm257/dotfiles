@@ -1,0 +1,15 @@
+$schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
+id: cpamp
+name: cpamp
+description: cpamp service
+serviceDependencies:
+  - cpa
+delayedAutoStart: true
+hideWindow: true
+serviceAccount:
+  domain: .
+  user: demo
+  password: ""
+workingDirectory:
+executable: cpa-manager-plus
+arguments:

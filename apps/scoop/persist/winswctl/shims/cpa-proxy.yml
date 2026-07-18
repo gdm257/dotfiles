@@ -1,0 +1,9 @@
+$schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
+id: cpa-proxy
+name: cpa-proxy
+description: cpa-proxy service
+delayedAutoStart: false
+hideWindow: true
+workingDirectory:
+executable: C:\Users\demo\scoop\shims\ghost-proxifier.exe
+arguments: inject --tree cpa.exe

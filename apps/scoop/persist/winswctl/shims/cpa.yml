@@ -1,0 +1,16 @@
+$schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
+id: cpa
+name: cpa
+description: cpa service
+delayedAutoStart: true
+hideWindow: true
+serviceAccount:
+  domain: .
+  user: demo
+  password: ""
+workingDirectory:
+# workingDirectory: 'C:\Users\demo\scoop\apps\cliproxyapi\current\'
+# executable: 'C:\Users\demo\scoop\apps\cliproxyapi\current\cli-proxy-api.exe'
+executable: cli-proxy-api
+arguments:
+# arguments: --config "C:\Users\demo\scoop\persist\cliproxyapi\config.yaml"
