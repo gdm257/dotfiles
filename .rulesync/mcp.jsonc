@@ -3,12 +3,12 @@
   "mcpServers": {
     "codebase-memory": {
       "disabled": false,
-      "command": "codebase-memory-mcp"
+      "command": "codebase-memory-mcp",
     },
-    "semble": {
-      "disabled": true,
-      "command": "uvx",
-      "args": ["--from", "semble[mcp]", "semble"]
-    }
-  }
+    // "semble": {
+    //   "disabled": false,
+    //   "command": "uvx",
+    //   "args": ["--from", "semble[mcp]", "semble"]
+    // },
+  },
 }

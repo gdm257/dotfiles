@@ -118,23 +118,10 @@
         "codebase-memory-mcp"
       ],
       "enabled": true
-    },
-    "semble": {
-      "type": "local",
-      "command": [
-        "uvx",
-        "--from",
-        "semble[mcp]",
-        "semble"
-      ],
-      "enabled": true
     }
   },
   "shell": "bash",
   "permission": {
-    "agent": {
-      "Explore": "deny"
-    },
     "bash": {
       "git push *": "ask",
       "git push": "ask",
