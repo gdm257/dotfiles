@@ -35,7 +35,6 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "npm:neoss" = { version = "latest", os = ["linux"] }
 "npm:@openacp/cli" = { version = "latest", os = ["windows"] }
 "npm:@intellectronica/ruler" = { version = "latest", os = ["windows"] }
-"npm:@fission-ai/openspec" = { version = "latest", os = ["windows"] }
 "npm:@mindfoldhq/trellis" = { version = "latest", os = ["windows"] }
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
@@ -47,5 +46,3 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "pipx:ptpython" = { version = "latest", os = ["windows"] }
 "pipx:pyright" = { version = "latest", os = ["windows"] }
 "pipx:browser-harness" = { version = "latest", extras = "mcp", os = ["windows"] }
-"pipx:semble" = { version = "latest", extras = "mcp", os = ["windows"] }
-"pipx:litellm" = { version = "latest", extras = "proxy", os = ["windows"] }
