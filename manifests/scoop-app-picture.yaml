@@ -45,7 +45,8 @@ run:
   # - {args: wavetone}
   # - {args: xnviewmp}
   # - {args: ScreenToGif}
-  - { args: venera }
+  # - {args: venera}
+  - { args: gdm257/venera-next }
   # - {args: tachidesk-server}
   - { args: tachidesk-jui }
   # - {args: suwayomi-jui}

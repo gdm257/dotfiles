@@ -5,7 +5,8 @@ run:
   - { args: tor }
   # - {args: simple-obfs}
   # - {args: proxychains}
-  - { args: gdm257/ghost-proxifier }
+  # - {args: gdm257/ghost-proxifier}
+  - { args: gdm257/ghost-proxifier-257 }
   - { args: gping }
   # - {args: trippy}
   # - {args: besttrace}

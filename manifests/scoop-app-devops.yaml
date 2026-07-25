@@ -105,7 +105,7 @@ run:
   # - { args: gdm257/claude-code-haha }
   # - {args: gdm257/opencode-worktree}
   # - {args: gdm257/ocx}
-  - { args: gdm257/memorph }
+  # - {args: gdm257/memorph}
   - { args: gdm257/skillshare }
   - { args: gdm257/rulesync }
   - { args: gdm257/iii }
@@ -121,23 +121,22 @@ run:
   # - {args: main/claude-code}
   # - {args: crush}
   - { args: codex }
+  - { args: oh-my-pi }
   # - {args: gdm257/pi}
   # - {args: main/goose-cli}
   # - {args: gdm257/goose}
   # - {args: gdm257/goose-desktop}
   - { args: herdr }
   - { args: cc-switch }
-  - { args: gdm257/omniroute }
   - { args: main/cliproxyapi }
   - { args: gdm257/cpa-manager-plus }
+  - { args: gdm257/omniroute }
   # - {args: gdm257/claude-squad}
   # - {args: gdm257/sudocode}
   # - {args: gdm257/auto-claude}
-  - { args: beads }
-  # - {args: beads-rust}
-  - { args: beads-viewer }
-  # - {args: abacus}
-  - { args: gdm257/beads-plan }
+  # - {args: beads}
+  # - {args: beads-viewer}
+  # - {args: gdm257/beads-plan}
   - { args: gdm257/open-code-review }
   # - { args: gdm257/archon }
   - { args: gdm257/codebase-memory-mcp }
@@ -220,7 +219,7 @@ run:
   - { args: git-credential-manager }
   # - {args: git-credential-oauth}
   - { args: gdm257/git-ssh-sign }
-  - { args: gitleaks }
+  # - {args: gitleaks}
   # - {args: gptcommit}
   # - {args: gitql}
   # - {args: ungit}
