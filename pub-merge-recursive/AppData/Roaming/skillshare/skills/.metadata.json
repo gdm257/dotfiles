@@ -1023,6 +1023,23 @@
         "tests.md": "sha256:859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a"
       }
     },
+    "teach": {
+      "source": "github.com/mattpocock/skills/skills/productivity/teach",
+      "type": "github-subdir",
+      "installed_at": "2026-07-23T05:27:32.726061+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/productivity/teach",
+      "version": "ed37663",
+      "tree_hash": "15f8c86d39ef834e643d092733ca899b59049067",
+      "file_hashes": {
+        "GLOSSARY-FORMAT.md": "sha256:d177def491519d97873291f2e860d8f1d60ead78feecb82eee022177958069c6",
+        "LEARNING-RECORD-FORMAT.md": "sha256:855f81017625256584bbf62bd5edb9b0c86605c4cc1139c56acc36b802595d17",
+        "MISSION-FORMAT.md": "sha256:8da6d3ac84eb2eb19f17c260b6acf01c560d3ac7a4501c415eea0e985602f4d7",
+        "RESOURCES-FORMAT.md": "sha256:2bc634a64b0d0daa10904f9222e7aa0d361420dfacabbf092fbe3a72222edc08",
+        "SKILL.md": "sha256:6d2dbe5e03084cf26fef66b535127b36cd1bcbe9478e26b0626029cd51dc2259",
+        "agents/openai.yaml": "sha256:5856f3ae8aec742f1499c640aecdd5f1d6af5fa210a7c6ec794de8263a6f733f"
+      }
+    },
     "trellis-before-dev": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-before-dev",
       "type": "github-subdir",
@@ -1199,6 +1216,20 @@
       "tree_hash": "4a8ae4ae75bd8c5fd96a0c68ae5bfb10525ba089",
       "file_hashes": {
         "SKILL.md": "sha256:003ce08a3404aeb50998029392c4d4e57b626edf526d3ebd585032bb92dcbb96"
+      }
+    },
+    "writing-great-skills": {
+      "source": "github.com/mattpocock/skills/skills/productivity/writing-great-skills",
+      "type": "github-subdir",
+      "installed_at": "2026-07-23T05:31:48.4017299+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/productivity/writing-great-skills",
+      "version": "ed37663",
+      "tree_hash": "81d36946d48842f90358d8af54e3cdcc141f8e01",
+      "file_hashes": {
+        "GLOSSARY.md": "sha256:cccd684c73fb7a06f523497b0121765f92d2b33d6ef9c51602294849233451d6",
+        "SKILL.md": "sha256:4d6ccbc3760b1bd4107c495a79872286ea69494003f3b0a719fc95b147457061",
+        "agents/openai.yaml": "sha256:b3c555d2654ec61aed78f8435f583c6a0cd6bf980d71317724682ad20075c33d"
       }
     }
   }
