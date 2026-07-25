@@ -77,6 +77,9 @@
       "fd *": "allow",
       "find *": "allow",
       "file *": "allow",
+      "codebase-memory-mcp cli *": "allow",
+      "semble *": "allow",
+      "uvx semble *": "allow",
       "awk *": "allow",
       "grep *": "allow",
       "egrep *": "allow",
@@ -256,6 +259,19 @@
       "npm *": "allow",
       "go *": "allow",
       "cargo *": "allow"
+    },
+    "codebase-memory_*": {
+      "*": "allow"
+    },
+    "semble_*": {
+      "*": "allow"
+    },
+    "websearch": "deny",
+    "task": {
+      "explore": "deny"
+    },
+    "external_directory": {
+      "~/codebase/**": "allow"
     }
   }
 }

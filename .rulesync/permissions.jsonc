@@ -68,6 +68,9 @@
       "fd *": "allow",
       "find *": "allow",
       "file *": "allow",
+      "codebase-memory-mcp cli *": "allow",
+      "semble *": "allow",
+      "uvx semble *": "allow",
       "awk *": "allow",
       "grep *": "allow",
       "egrep *": "allow",
@@ -251,6 +254,8 @@
   },
   "claudecode": {
     "permission": {
+      "mcp__codebase-memory__*": {"*": "allow"},
+      "mcp__semble__*": {"*": "allow"},
       "agent": {
         "Explore": "deny"
       }
@@ -329,6 +334,9 @@
         "find": "allow",
         "file": "allow",
         "awk": "allow",
+        "codebase-memory-mcp cli": "allow",
+        "semble": "allow",
+        "uvx semble": "allow",
         "grep": "allow",
         "egrep": "allow",
         "ugrep": "allow",
@@ -511,6 +519,16 @@
     }
   },
   "opencode": {
-    "permission": {}
-  }
+    "permission": {
+      "codebase-memory_*": {"*": "allow"},
+      "semble_*": {"*": "allow"},
+      "websearch": {"*": "deny"},
+      "task": {
+        "explore": "deny",
+      },
+      "external_directory": {
+        "~/codebase/**": "allow",
+      },
+    }
+  },
 }
