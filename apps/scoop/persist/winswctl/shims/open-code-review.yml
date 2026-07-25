@@ -1,7 +1,7 @@
 $schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
-id: cpa
-name: cpa
-description: cpa service
+id: open-code-review
+name: open-code-review
+description: open-code-review service
 delayedAutoStart: true
 hideWindow: true
 serviceAccount:
@@ -9,5 +9,5 @@ serviceAccount:
   user: demo
   password: ""
 workingDirectory:
-executable: cli-proxy-api
-arguments:
+executable: ocr
+arguments: viewer --addr :5483

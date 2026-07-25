@@ -1,0 +1,9 @@
+$schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
+id: proxy-git
+name: proxy-git
+description: proxy-git service
+delayedAutoStart: false
+hideWindow: true
+workingDirectory:
+executable: C:\Users\demo\scoop\shims\ghost-proxifier.exe
+arguments: inject git.exe git-remote-https.exe git-remote-ssh.exe
