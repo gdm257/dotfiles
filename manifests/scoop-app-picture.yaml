@@ -68,14 +68,14 @@ run:
   # - {args: qgis}
   # - {args: umlet}
   # - {args: staruml}
-  - { args: graphviz }
-  - { args: plantuml }
-  - { args: d2 }
+  # - {args: graphviz}
+  # - {args: plantuml}
+  # - {args: d2}
   # - {args: Pinta_dodorz}
   # - {args: Lively-Wallpaper}
   # - {args: capture2text}
   # - {args: greenshot}
-  - { args: baimiao }
+  # - {args: baimiao}
   # - {args: geekdesk}
   # - {args: roundedtb}
   - { args: universal-watermark-disabler }

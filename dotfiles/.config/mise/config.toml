@@ -33,13 +33,11 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "go:golang.org/x/tools/gopls" = { version = "v0.21.0", os = ["windows"] }
 
 "npm:neoss" = { version = "latest", os = ["linux"] }
-"npm:@openacp/cli" = { version = "latest", os = ["windows"] }
 "npm:@mindfoldhq/trellis" = { version = "latest", os = ["windows"] }
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = { version = "main", os = ["windows"] }
 "pipx:git+https://github.com/SilentSnowSoul/magnetizer.git" = { version = "main", os = ["windows"] }
-"pipx:fonttools" = { version = "latest", extras = "ufo,lxml,woff,unicode", os = ["windows"] }
 "pipx:httpie" = { version = "latest", os = ["windows"] }
 "pipx:marimo" = { version = "latest", extras = "recommended", os = ["windows"] }
 "pipx:ptpython" = { version = "latest", os = ["windows"] }

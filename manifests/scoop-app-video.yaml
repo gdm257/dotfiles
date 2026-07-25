@@ -19,7 +19,7 @@ run:
   # - {args: mpv-Portable}
   # - {args: "mpv.net implay mpv.net-cm mpv.net-dw"}
   - { args: potplayer }
-  - { args: wiliwili }
+  # - {args: wiliwili}
   # - {args: kikoplay}
   # - {args: dandanplay}
   - { args: DanmakuFactory }

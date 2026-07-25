@@ -29,21 +29,21 @@ run:
   - { args: sq }
   # - {args: miller}
   # - {args: pup}
-  - { args: pandoc }
   # - {args: tailspin}
   - { args: sttr }
   - { args: hashcat }
   - { args: john-the-ripper }
   - { args: 7z2hashcat }
-  - { args: pdftk }
+  - { args: pandoc }
   - { args: officecli }
+  - { args: pdftk }
   - { args: poppler }
   # - {args: gpg}
   - { args: mkcert }
   - { args: step }
   # - {args: echo/beyondcompare}
-  - { args: zotero }
-  - { args: vosviewer }
+  # - {args: zotero}
+  # - {args: vosviewer}
   - { args: SumatraPDF_dodorz }
   # - {args: eudic}
   - { args: gdm257/awesome-dict }

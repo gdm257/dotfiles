@@ -127,6 +127,7 @@ run:
   # - {args: LiTang.QianJi}
   # - {args: Tencent.Yuanbao}
   - { args: Eusoft.Eudic }
+  - { args: Uzero.ScanScan }
   - { args: Bandisoft.Honeyview }
   # - {args: GOG.Galaxy}
   - { args: Canva.Affinity }
