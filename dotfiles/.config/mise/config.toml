@@ -38,6 +38,7 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = { version = "main", os = ["windows"] }
 "pipx:git+https://github.com/SilentSnowSoul/magnetizer.git" = { version = "main", os = ["windows"] }
+"pipx:transparent-background" = { version = "latest", extras = "gui", uvx_args = "--with flet==0.23.1", os = ["windows"] }
 "pipx:httpie" = { version = "latest", os = ["windows"] }
 "pipx:marimo" = { version = "latest", extras = "recommended", os = ["windows"] }
 "pipx:ptpython" = { version = "latest", os = ["windows"] }

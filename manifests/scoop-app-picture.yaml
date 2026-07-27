@@ -9,16 +9,17 @@ run:
   # - {args: picview}
   # - {args: jarkviewer}
   # - {args: qimgv}
+  - { args: gdm257/rapidraw }
   - { args: fsviewer }
+  - { args: gdm257/imbatch }
+  - { args: upscayl }
+  - { args: snap2img }
   # - {args: shutter-image-browser}
   - { args: gimp }
   # - {args: StylePix}
   - { args: paint.net }
-  - { args: gdm257/imbatch }
-  - { args: snap2img }
   - { args: piclist }
   - { args: imagemagick-lean }
-  - { args: upscayl }
   # - {args: caesium-image-compressor}
   - { args: Krita-Portable }
   - { args: inkscape }
