@@ -3,19 +3,23 @@ command: install
 
 run:
   - { args: exiftool }
-  - { args: jexiftoolgui }
+  # - {args: jexiftoolgui}
   # - {args: honeyview}
-  - { args: picview }
+  - { args: gdm257/guoheview }
+  # - {args: picview}
+  # - {args: jarkviewer}
+  # - {args: qimgv}
   - { args: fsviewer }
   # - {args: shutter-image-browser}
   - { args: gimp }
   # - {args: StylePix}
   - { args: paint.net }
   - { args: gdm257/imbatch }
+  - { args: snap2img }
   - { args: piclist }
   - { args: imagemagick-lean }
   - { args: upscayl }
-  - { args: caesium-image-compressor }
+  # - {args: caesium-image-compressor}
   - { args: Krita-Portable }
   - { args: inkscape }
   - { args: pixieditor }
@@ -78,7 +82,6 @@ run:
   # - {args: baimiao}
   # - {args: geekdesk}
   # - {args: roundedtb}
-  - { args: universal-watermark-disabler }
   # - {args: imageglass}
   - { args: CelestiaPortable }
   # - {args: StellariumPortable}
@@ -90,7 +93,6 @@ run:
   # - {args: jmcomic-qt}
   # - {args: ehentai-qt}
   # - {args: JHenTai}
-  - { args: snap2img }
   # - {args: translumo}
   - { args: LunaTranslator }
   - { args: misakatranslator_ivaquero }

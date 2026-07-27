@@ -10,6 +10,7 @@ run:
   - { args: rapidee }
   - { args: registry-finder }
   - { args: context-menu-manager }
+  - { args: universal-watermark-disabler }
   # - {args: hibit-uninstaller-portable}
   # - {args: registry-explorer}
   - { args: dismplusplus }
