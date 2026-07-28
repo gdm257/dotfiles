@@ -2,28 +2,15 @@
   "$schema": "https://github.com/dyoshikawa/rulesync/releases/latest/download/mcp-schema.json",
   "mcpServers": {
     "codebase-memory": {
-      "disabled": false,
+      "enabled": true,
       "command": "codebase-memory-mcp",
+      "default_tools_approval_mode": "approve",  // codex
     },
-    // "semble": {
-    //   "disabled": false,
-    //   "command": "uvx",
-    //   "args": ["--from", "semble[mcp]", "semble"],
-    // },
-  },
-  "codexcli": {
-    "mcpServers": {
-      "codebase-memory": {
-        "disabled": false,
-        "command": "codebase-memory-mcp",
-        "default_tools_approval_mode": "approve",
-      },
-      // "semble": {
-      //   "disabled": false,
-      //   "command": "uvx",
-      //   "args": ["--from", "semble[mcp]", "semble"],
-      //   "default_tools_approval_mode": "approve",
-      // },
+    "semble": {
+      "enabled": false,
+      "command": "uvx",
+      "args": ["--from", "semble[mcp]", "semble"],
+      "default_tools_approval_mode": "approve",  // codex
     },
   },
 }
