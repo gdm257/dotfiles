@@ -368,6 +368,12 @@ tasks:
           PATH: "./manifests/npm.yaml"
         task: manifest:run:manifest
 
+  manifest:omp:
+    cmds:
+      - vars:
+          PATH: "./manifests/omp.yaml"
+        task: manifest:run:manifest
+
   manifest:pi:
     cmds:
       - vars:
