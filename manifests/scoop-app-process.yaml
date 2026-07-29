@@ -17,7 +17,7 @@ run:
   # - {args: nssm}
   # - {args: activitywatch}
   - { args: main/wakatime-cli }
-  - { args: gdm257/wakatime }
+  # - { args: gdm257/wakatime }
   - { args: tai }
   - { args: gdm257/patina }
   - { args: gdm257/lite-monitor }

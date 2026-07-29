@@ -5,12 +5,12 @@ run:
   - { args: taisei }
   - { args: osulazer }
   - { args: collection-manager }
-  - { args: gdm257/oszsave }
-  - { args: osuplayer }
-  - { args: danser-go }
-  - { args: rewind }
+  # - {args: osuplayer}
+  # - {args: danser-go}
+  # - {args: rewind}
   # - {args: storybrew}
   - { args: OsuBeatmapDownloader }
+  # - {args: gdm257/oszsave}
   # - {args: OsuRankedBeatmapDownloader}
   - { args: aimp }
   # - {args: "foobar2000 foobar2000-encoders foobar2000-foobox-en-pack"}
@@ -41,8 +41,9 @@ run:
   - { args: gdm257/wavetone }
   # - {args: fluidsynth}
   - { args: gdm257/kiva }
+  - { args: gdm257/zenith }
   - { args: gdm257/tmidi }
-  - { args: plmidi }
+  # - {args: plmidi}
   - { args: gdm257/keppy-midi-converter }
   # - {args: miditrail}
   - { args: openutau }

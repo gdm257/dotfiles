@@ -15,6 +15,7 @@ run:
   # - {args: rio}
   # - {args: hyper-beta}
   # - {args: tabby-portable}
+  # - {args: zellij}
   # - {args: putty}
   - { args: openssh }
   - { args: opkssh }
