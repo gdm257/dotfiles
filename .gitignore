@@ -27,6 +27,7 @@
 !/dotfiles
 /dotfiles/.config/argocd
 /dotfiles/.config/bin
+/dotfiles/.config/browser-harness
 /dotfiles/.config/opencode/package-lock.json
 /dotfiles/.config/opencode/AGENTS.md
 /dotfiles/.config/opencode/skills
