@@ -7,6 +7,16 @@
         "codebase-memory-mcp"
       ],
       "enabled": true
+    },
+    "semble": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from",
+        "semble[mcp]",
+        "semble"
+      ],
+      "enabled": true
     }
   },
   "permission": {
@@ -266,6 +276,9 @@
       "*": "allow"
     },
     "semble_*": {
+      "*": "allow"
+    },
+    "open-pencil_*": {
       "*": "allow"
     },
     "codeg_get_session_info": {

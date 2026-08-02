@@ -258,6 +258,7 @@
     "permission": {
       "mcp__codebase-memory__*": {"*": "allow"},
       "mcp__semble__*": {"*": "allow"},
+      "mcp__open-pencil__*": {"*": "allow"},
       "mcp__codeg__get_session_info": {"*": "allow"},
       "agent": {
         "Explore": "deny"
@@ -527,6 +528,7 @@
     "permission": {
       "codebase-memory_*": {"*": "allow"},
       "semble_*": {"*": "allow"},
+      "open-pencil_*": {"*": "allow"},
       "codeg_get_session_info": {"*": "allow"},
       "websearch": {"*": "deny"},
       "task": {

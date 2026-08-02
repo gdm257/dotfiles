@@ -7,9 +7,15 @@
       "default_tools_approval_mode": "approve",  // codex
     },
     "semble": {
-      "enabled": false,
+      "enabled": true,
       "command": "uvx",
       "args": ["--from", "semble[mcp]", "semble"],
+      "default_tools_approval_mode": "approve",  // codex
+    },
+    "open-pencil": {
+      "enabled": false,
+      "command": "bunx",
+      "args": ["-p", "@open-pencil/mcp", "openpencil-mcp"],
       "default_tools_approval_mode": "approve",  // codex
     },
   },

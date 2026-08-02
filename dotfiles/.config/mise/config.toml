@@ -6,6 +6,7 @@ env_shell_expand = true
 jobs = 4
 github.use_git_credentials = true
 prefer_offline = true
+minimum_release_age = "1h"
 auto_install = false
 exec_auto_install = true
 npm.package_manager = "pnpm"
@@ -34,6 +35,7 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 
 "npm:neoss" = { version = "latest", os = ["linux"] }
 "npm:@mindfoldhq/trellis" = { version = "latest", os = ["windows"] }
+"npm:@open-pencil/cli" = { version = "latest", os = ["windows"] }
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
 "pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = { version = "main", os = ["windows"] }
@@ -44,4 +46,3 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "pipx:ptpython" = { version = "latest", os = ["windows"] }
 "pipx:pyright" = { version = "latest", os = ["windows"] }
 "pipx:browser-harness" = { version = "latest", os = ["windows"] }
-"pipx:semble" = { version = "latest", extras = "mcp", os = ["windows"] }
