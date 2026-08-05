@@ -16,6 +16,7 @@ run:
   - { args: mpv.net-dw }
   # - {args: mpv-lazy}
   # - {args: mpv-lazy_hu3rror}
+  # - {args: gdm257/mpv-AnimeJaNai}
   # - {args: mpv-Portable}
   # - {args: "mpv.net implay mpv.net-cm mpv.net-dw"}
   - { args: potplayer }

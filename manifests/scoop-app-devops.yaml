@@ -92,7 +92,7 @@ run:
   # - {args: main/ironclaw}
   # - {args: picoclaw}
   - { args: gdm257/open-pencil }
-  - { args: gdm257/open-codesign }
+  # - {args: gdm257/open-codesign}
   - { args: gdm257/codeg }
   # - {args: gdm257/aionui}
   # - {args: gdm257/paseo}
@@ -101,14 +101,14 @@ run:
   # - {args: gdm257/vibe-around}
   # - {args: gdm257/deepchat}
   # - {args: gdm257/harnss}
-  - { args: opencode-desktop }
-  # - { args: gdm257/claude-code-haha }
+  # - {args: opencode-desktop}
+  # - {args: gdm257/claude-code-haha}
   # - {args: gdm257/opencode-worktree}
   # - {args: gdm257/ocx}
   # - {args: gdm257/memorph}
   - { args: gdm257/skillshare }
   - { args: gdm257/rulesync }
-  - { args: gdm257/iii }
+  # - {args: gdm257/iii}
   # - {args: idea-portable}
   # - {args: imhex}
   - { args: vscode }

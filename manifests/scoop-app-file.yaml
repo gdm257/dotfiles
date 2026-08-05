@@ -39,6 +39,7 @@ run:
   # - {args: spacesniffer}
   - { args: wiztree }
   # - {args: squirreldisk}
+  # - {args: fluentcleaner_naderi}
   # - {args: alldup}
   # - {args: restic}
   # - {args: resticprofile}

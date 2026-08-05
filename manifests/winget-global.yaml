@@ -43,6 +43,7 @@ run:
   # - {args: "*Microsoft.WindowsAppRuntime.1.0*"}
   # - {args: "*Microsoft.WindowsAppRuntime.1.1*"}
   # - {args: "*Microsoft.WindowsAppRuntime.1.2*"}
+  - { args: "Microsoft.WindowsAppRuntime.2" }
   # - {args: "*Microsoft.PowerToys*"}
   # - {args: "*Microsoft.MediaCreationTool*"}
   # - {args: Microsoft.Office}

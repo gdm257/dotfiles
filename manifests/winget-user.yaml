@@ -17,7 +17,7 @@ run:
   - { args: ElementLabs.LMStudio }
   # - {args: ChidiWilliams.Buzz}
   - { args: kangfenmao.CherryStudio }
-  - { args: Pencil.Desktop }
+  # - {args: Pencil.Desktop}
   # - {args: kapitainsky.RcloneBrowser}
   # - {args: FastCopy.FastCopy}
   # - {args: Falcosoft.SoundfontMidiPlayer}
@@ -28,7 +28,7 @@ run:
   # - {args: Canonical.Ubuntu.2204}
   # - {args: jtroo.kanata_gui}
   # - {args: Xmarmalade.AlistHelper}
-  - { args: Powerformer.OpenDesign }
+  # - {args: Powerformer.OpenDesign}
   - { args: Anthropic.ClaudeCode }
   # - {args: Codeium.Windsurf}
   # - {args: WEIFENG2333.VideoCaptioner}
