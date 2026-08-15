@@ -90,6 +90,7 @@ run:
   # - {args: msys2}
   # - {args: marktext}
   - { args: gdm257/md-preview }
+  # - {args: gdm257/vividmark}
   # - {args: logseq}
   # - {args: github}
   # - {args: oh-my-posh}

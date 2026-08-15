@@ -32,7 +32,9 @@ run:
   # - {args: ariang-native}
   - { args: rclone }
   - { args: rclone-browser }
+  # - {args: rclone-ui}
   - { args: gdm257/clouddrive2 }
+  - { args: gdm257/guangyapan }
   # - {args: winfsp-np-beta}
   - { args: croc }
   # - {args: cwRsync}

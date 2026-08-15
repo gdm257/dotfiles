@@ -77,17 +77,16 @@ run:
   - { args: go }
   - { args: golangci-lint }
   - { args: goreleaser }
-  - { args: gf }
+  # - {args: gf}
   - { args: gdm257/protoc-gen-go }
   # - {args: rustup-gnu}
   - { args: rustup-msvc }
   - { args: rust-analyzer }
   # - {args: unityhub}
-  # - {args: autohotkey}
-  - { args: AutoHotkey-Portable_ACooper81 }
-  - { args: AutoHotkey2-Portable }
-  - { args: openmodelica }
-  - { args: scilab }
+  # - {args: AutoHotkey-Portable_ACooper81}
+  # - {args: AutoHotkey2-Portable}
+  # - {args: openmodelica}
+  # - {args: scilab}
   # - {args: main/zeroclaw}
   # - {args: main/ironclaw}
   # - {args: picoclaw}
@@ -174,10 +173,11 @@ run:
   - { args: edgedb }
   - { args: gdm257/dbgate }
   # - {args: chat2db}
-  - { args: jailer }
+  # - {args: jailer}
   # - {args: dbeaver}
   # - {args: dblab}
   # - {args: usql}
+  - { args: gdm257/onedump }
   - { args: atlas }
   # - {args: migrate}
   # - {args: dbmate}
@@ -190,7 +190,7 @@ run:
   # - {args: beekeeper-studio}
   - { args: sqlitebrowser }
   # - {args: sqlitestudio}
-  # - {args: sqlite}
+  - { args: sqlite }
   # - {args: studio-3t}
   # - {args: robo3t}
   # - {args: NoSQLBooster-for-MongoDB}
@@ -224,7 +224,7 @@ run:
   # - {args: gitql}
   # - {args: ungit}
   # - {args: gitleaks}
-  - { args: delta }
+  # - {args: delta}
   # - {args: gix}
   # - {args: git-chglog}
   - { args: git-cliff }
@@ -237,7 +237,7 @@ run:
   # - {args: gitea}
   - { args: act }
   # - {args: hub}
-  # - {args: gh}
+  - { args: gh }
   # - {args: ghq}
   # - {args: lepton}
   # - {args: glab}
