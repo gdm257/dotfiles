@@ -1,30 +1,47 @@
 # Stateless Project
 
-| State                       | Source of Truth                   | Backup          | Is Elegant |
-| --------------------------- | --------------------------------- | --------------- | ---------- |
-| ACG                         | 115                               | 123             | no         |
-| Games                       | steam, epic, gog, itch, scoop-lfs | -               | yes        |
-| Mods                        | nexus                             | TODO            |            |
-| Saves                       | online, ludusavi                  | kopia           | yes        |
-| LLMs                        | hugging face                      | TODO            |            |
-| Datasets                    | dolthub                           | TODO            | yes        |
-| Applications (Linux)        | home-manager, pkg, x-cmd          | public registry | yes        |
-| Applications (Windows)      | scoop, winget, chocolatey         | public registry | yes        |
-| Applications (Android)      | obtainium                         | public registry | yes        |
-| Applications (Python)       | mise                              | pypi            | yes        |
-| Applications (JS)           | mise                              | npmjs.org       | yes        |
-| Applications Configurations | dotfiles (this repo)              | -               | yes        |
-| Applications Cache          | kopia                             | -               | yes        |
-| Joplin                      | webdav                            | -               | yes        |
-| Obsidian                    | git                               | -               | yes        |
-| `caldav://`                 | disroot                           | TODO            |            |
-| `git://`                    | github                            | TODO            |            |
-| `mail://`                   | disroot                           | TODO            |            |
-| `s3://`                     | cloudflare r2                     | -               | yes        |
-| `vcard://`                  | disroot                           | TODO            |            |
-| `webdav://`                 | koofr, 123                        | TODO            |            |
-| Bangumi                     | online                            | bangumi-data    | yes        |
-| Bilibili                    | online                            | TODO            |            |
+| State                       | Source of Truth           | Backup                            | Is Elegant |
+| --------------------------- | ------------------------- | --------------------------------- | ---------- |
+| Applications (Linux)        | home-manager, pkg, x-cmd  | public registry                   | yes        |
+| Applications (Windows)      | scoop, winget, chocolatey | public registry                   | yes        |
+| Applications (Android)      | obtainium                 | public registry                   | yes        |
+| Applications (JS)           | mise                      | npmjs.org                         | yes        |
+| Applications (Python)       | mise                      | pypi                              | yes        |
+| Games                       | playnite, scoop           | steam, epic, gog, itch, scoop-lfs | yes        |
+| Mods                        | mo2, vortex               | nexus                             | yes        |
+| Models                      | TODO                      | hugging face                      |            |
+| Datasets                    | TODO                      | dolthub, hugging face             |            |
+| Bangumi                     | bangumi-data, TODO        | bgm.tv                            |            |
+| ACG                         | 115                       | 123, guangya                      | no         |
+| Applications Configurations | dotfiles                  | -                                 | yes        |
+| Applications Cache          | kopia                     | -                                 | yes        |
+| Dotfiles (this repo)        | git                       | -                                 | yes        |
+| Saves                       | steam, ludusavi           | kopia                             | yes        |
+| Bangumi                     | online                    | TODO                              |            |
+| Bilibili                    | online                    | TODO                              |            |
+| Pixiv                       | online                    | TODO                              |            |
+| DAVx5                       | vcard, caldav             | -                                 | yes        |
+| EHentai                     | online                    | venera                            | yes        |
+| Joplin                      | webdav                    | -                                 | yes        |
+| Kazumi                      | webdav                    | -                                 | yes        |
+| Legado                      | webdav                    | -                                 | yes        |
+| MGit                        | git                       | -                                 | yes        |
+| Obsidian                    | git                       | -                                 | yes        |
+| Obtainium                   | s3                        | -                                 | yes        |
+| PicHoro                     | TODO                      |                                   |            |
+| Playnite                    | TODO                      |                                   |            |
+| Kopia                       | webdav                    | -                                 | yes        |
+| PureWriter                  | webdav                    | -                                 | yes        |
+| Venera                      | webdav                    | -                                 | yes        |
+| `caldav://`                 | disroot                   | TODO                              |            |
+| `git://`                    | github                    | TODO                              |            |
+| `mail://`                   | disroot                   | TODO                              |            |
+| `mysql://`                  | tidb, sqlpub              | gobackup, databasement            | yes        |
+| `postgres://`               | aiven, neon               | gobackup, databasement            | yes        |
+| `redis://`                  | aiven                     | gobackup, databasement            | yes        |
+| `s3://`                     | cloudflare                | -                                 | yes        |
+| `vcard://`                  | disroot                   | github actions                    | yes        |
+| `webdav://`                 | filelu, koofr, 123        | -                                 | yes        |
 
 # Dotfiles
 
