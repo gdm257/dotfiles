@@ -27,7 +27,7 @@ run:
   # - {args: coredns}
   # - {args: sdns}
   - { args: doggo }
-  - { args: dog }
+  # - {args: dog}
   # - {args: ipscan}
   # - {args: shadowsocks-uri-generator}
   # - {args: quicksetdns}

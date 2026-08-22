@@ -60,6 +60,7 @@ run:
   - { args: Insecure.Npcap }
   - { args: WiresharkFoundation.Wireshark }
   - { args: Rime.Weasel }
+  - { args: luolangaga.tubatools }
   # - {args: Brave.Brave}
   # - {args: AnyDeskSoftwareGmbH.AnyDesk}
   # - {args: Youqu.ToDesk}

@@ -78,7 +78,7 @@ run:
   - { args: golangci-lint }
   - { args: goreleaser }
   # - {args: gf}
-  - { args: gdm257/protoc-gen-go }
+  # - {args: gdm257/protoc-gen-go}
   # - {args: rustup-gnu}
   - { args: rustup-msvc }
   - { args: rust-analyzer }
@@ -118,14 +118,17 @@ run:
   # - {args: trae}
   # - {args: cursor}
   # - {args: main/claude-code}
+  - { args: gdm257/shim-claude }
+  # - {args: claurst}
   # - {args: crush}
   - { args: codex }
+  # - {args: opencode}
   - { args: oh-my-pi }
   # - {args: gdm257/pi}
   # - {args: main/goose-cli}
   # - {args: gdm257/goose}
   # - {args: gdm257/goose-desktop}
-  - { args: herdr }
+  # - {args: herdr}
   - { args: cc-switch }
   - { args: main/cliproxyapi }
   - { args: gdm257/cpa-manager-plus }
@@ -148,7 +151,7 @@ run:
   # - {args: ox}
   # - {args: emacs}
   # - {args: gdm257/path-user-doomemacs}
-  - { args: hexyl }
+  # - {args: hexyl}
   # - {args: lapce}
   # - {args: jupyterlab-desktop}
   # - {args: android-studio}

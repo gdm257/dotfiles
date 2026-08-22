@@ -38,6 +38,7 @@ run:
   # - {args: anime4kcpp-vapoursynth-plugin}
   # - {args: anime4kcpp-dsfilter}
   # - {args: acnet-glsl}
+  - { args: gdm257/real-video-enhancer }
   - { args: video2x }
   - { args: magpie }
   # - {args: vidbatch}
