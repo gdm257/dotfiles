@@ -53,6 +53,10 @@
 /pub-merge-recursive/AppData/Roaming/skillshare/trash
 /pub-merge-recursive/AppData/Roaming/skillshare/ui
 /pub-merge-recursive/AppData/Roaming/skillshare/version-check.json
+!/pub-merge-recursive/AppData/Roaming/yazi
+/pub-merge-recursive/AppData/Roaming/yazi/state
+/pub-merge-recursive/AppData/Roaming/yazi/config/flavors
+/pub-merge-recursive/AppData/Roaming/yazi/config/plugins
 !/pub-merge-recursive/AppData/Roaming/Zed
 /pub-merge-recursive/AppData/Roaming/Zed/settings_backup.json
 

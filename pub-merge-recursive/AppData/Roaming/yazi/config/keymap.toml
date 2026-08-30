@@ -1,0 +1,58 @@
+# https://yazi-rs.github.io/docs/configuration/keymap
+"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+
+# ======== Compress Plugin ========
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "7" ]
+run  = "plugin compress '7z'"
+desc = "Archive to .7z"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "r" ]
+run  = "plugin compress 'rar'"
+desc = "Archive to .rar"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "z" ]
+run  = "plugin compress 'zip'"
+desc = "Archive to .zip"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "t", "a", "r" ]
+run  = "plugin compress 'tar'"
+desc = "Archive to .tar"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "t", "g", "z" ]
+run  = "plugin compress 'tar.gz'"
+desc = "Archive to .tar.gz"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "t", "x", "z" ]
+run  = "plugin compress 'tar.xz'"
+desc = "Archive to .tar.xz"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "t", "b", "z" ]
+run  = "plugin compress 'tar.bz2'"
+desc = "Archive to .tar.bz2"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "a" ]
+run  = "plugin compress"
+desc = "Archive"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "l" ]
+run  = "plugin compress -l"
+desc = "Archive (level)"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "p" ]
+run  = "plugin compress -ph"
+desc = "Archive (passwd)"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "u" ]
+run  = "plugin compress -phl"
+desc = "Archive (passwd+level)"
