@@ -1,5 +1,52 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "shell": "bash",
+  "small_model": "octopus/fast",
+  "disabled_providers": [
+    "anthropic",
+    "openai",
+    "opencode"
+  ],
+  "provider": {
+    "octopus": {
+      "npm": "@ai-sdk/openai",
+      "name": "octopus",
+      "options": {
+        "baseURL": "http://localhost:8080/v1",
+        "chunkTimeout": 45000,
+        "headerTimeout": 20000
+      },
+      "models": {
+        "stable": {
+          "name": "stable"
+        },
+        "coding": {
+          "name": "coding"
+        },
+        "fast": {
+          "name": "fast"
+        },
+        "free": {
+          "name": "free"
+        }
+      }
+    }
+  },
+  "plugin": [
+    "opencode-wakatime@1.3.8",
+    [
+      "opencode-auto-permissions@0.2.10",
+      {
+        "model": "octopus/fast",
+        "variant": "none"
+      }
+    ]
+  ],
+  "compaction": {
+    "prune": true,
+    "auto": true,
+    "reserved": 80000
+  },
   "mcp": {
     "codebase-memory": {
       "type": "local",
@@ -21,6 +68,7 @@
   },
   "permission": {
     "bash": {
+      "trellis init *": "deny",
       "git push *": "ask",
       "jj git push *": "ask",
       "xmake push *": "ask",
