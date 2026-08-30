@@ -5,7 +5,7 @@
 [core]
 	longpaths = true
 	quotepath = false
-  symlinks = true
+	symlinks = true
 	safecrlf = false
 	autocrlf = false
 	eol = lf
@@ -69,7 +69,7 @@
 	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = ~/.ssh/allowed_signers
-  program = git-ssh-sign
+	program = git-ssh-sign
 [tag]
 	gpgsign = false
 [http]

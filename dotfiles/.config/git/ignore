@@ -13,5 +13,6 @@ CLAUDE.local.md
 /.mcp.json
 age.key
 key.txt
+.mindfs
 *.swp
 .~lock.*
