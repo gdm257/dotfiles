@@ -93,6 +93,7 @@ run:
   - { args: gdm257/open-pencil }
   # - {args: gdm257/open-codesign}
   - { args: gdm257/codeg }
+  - { args: gdm257/mindfs }
   # - {args: gdm257/aionui}
   # - {args: gdm257/paseo}
   # - {args: gdm257/nezha}
@@ -122,17 +123,19 @@ run:
   # - {args: claurst}
   # - {args: crush}
   - { args: codex }
-  # - {args: opencode}
+  - { args: opencode }
+  - { args: gdm257/peri }
   - { args: oh-my-pi }
   # - {args: gdm257/pi}
   # - {args: main/goose-cli}
   # - {args: gdm257/goose}
   # - {args: gdm257/goose-desktop}
   # - {args: herdr}
-  - { args: cc-switch }
-  - { args: main/cliproxyapi }
-  - { args: gdm257/cpa-manager-plus }
-  - { args: gdm257/omniroute }
+  - { args: gdm257/octopus }
+  # - {args: main/cliproxyapi}
+  # - {args: gdm257/cpa-manager-plus}
+  # - {args: cc-switch}
+  # - {args: gdm257/omniroute}
   # - {args: gdm257/claude-squad}
   # - {args: gdm257/sudocode}
   # - {args: gdm257/auto-claude}
@@ -143,6 +146,7 @@ run:
   # - { args: gdm257/archon }
   - { args: gdm257/codebase-memory-mcp }
   - { args: gdm257/codebase-memory-mcp-ui }
+  - { args: llmfit }
   - { args: vim }
   # - {args: vimtutor}
   - { args: neovim }
@@ -181,6 +185,7 @@ run:
   # - {args: dblab}
   # - {args: usql}
   - { args: gdm257/onedump }
+  - { args: gdm257/dqex }
   - { args: atlas }
   # - {args: migrate}
   # - {args: dbmate}

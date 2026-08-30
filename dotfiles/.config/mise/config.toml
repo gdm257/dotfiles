@@ -34,7 +34,6 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "go:golang.org/x/tools/gopls" = { version = "v0.21.0", os = ["windows"] }
 
 "npm:neoss" = { version = "latest", os = ["linux"] }
-"npm:claude-code-best" = { version = "latest", os = ["windows"] }
 "npm:@mindfoldhq/trellis" = { version = "latest", os = ["windows"] }
 "npm:@open-pencil/cli" = { version = "latest", os = ["windows"] }
 

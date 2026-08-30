@@ -13,6 +13,7 @@ run:
   - { args: fsviewer }
   - { args: gdm257/imbatch }
   - { args: upscayl }
+  - { args: hugin }
   - { args: snap2img }
   # - {args: shutter-image-browser}
   - { args: gimp }

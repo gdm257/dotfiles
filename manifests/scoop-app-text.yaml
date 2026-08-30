@@ -79,6 +79,7 @@ run:
   # - {args: sublime-text}
   # - {args: notepad2-mod}
   # - {args: notepad3}
+  - { args: papertodo }
   # - {args: geany}
   # - {args: texlive}
   # - {args: zettlr}
@@ -90,6 +91,7 @@ run:
   # - {args: msys2}
   # - {args: marktext}
   - { args: gdm257/md-preview }
+  - { args: gdm257/inknote }
   # - {args: gdm257/vividmark}
   # - {args: logseq}
   # - {args: github}

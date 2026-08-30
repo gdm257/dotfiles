@@ -2,7 +2,7 @@ entrypoint: scoop
 command: install
 
 run:
-  - { args: tor }
+  # - {args: main/tor}
   # - {args: simple-obfs}
   # - {args: proxychains}
   # - {args: gdm257/ghost-proxifier}
@@ -99,7 +99,7 @@ run:
   # - {args: memotrace}
   # - {args: WeChatMsg}
   # - {args: tencent-meeting}
-  - { args: discord }
+  # - {args: discord}
   # - {args: chatgpt}
   - { args: frp }
   - { args: gdm257/frpmgr }
@@ -121,7 +121,7 @@ run:
   # - {args: charles}
   # - {args: mariadb103}
   # - {args: wakemeonlan}
-  - { args: ddns-go }
+  # - {args: ddns-go}
   # - {args: rustdesk}
   # - {args: parsec}
   - { args: gdm257/moonlight }
@@ -137,7 +137,7 @@ run:
   - { args: iperf3 }
   # - {args: tailscale}
   - { args: gdm257/astral }
-  - { args: naiveproxy }
+  # - {args: naiveproxy}
   - { args: traefik }
   - { args: gdm257/zoraxy }
   # - {args: nekoray}
@@ -170,7 +170,7 @@ run:
   # - {args: dnslookup}
   # - {args: dnsq-go}
   - { args: hexchat }
-  - { args: chisel }
+  # - {args: chisel}
   # - {args: lego}
   # - {args: remoteapptool}
   # - {args: asnmap}
