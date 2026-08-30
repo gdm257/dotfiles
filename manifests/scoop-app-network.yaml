@@ -101,6 +101,7 @@ run:
   # - {args: tencent-meeting}
   # - {args: discord}
   # - {args: chatgpt}
+  - { args: gdm257/ddnsto }
   - { args: frp }
   - { args: gdm257/frpmgr }
   - { args: catsxp }
