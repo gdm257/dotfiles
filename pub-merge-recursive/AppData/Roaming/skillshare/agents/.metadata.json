@@ -2,61 +2,56 @@
   "version": 1,
   "entries": {
     "semble-search": {
-      "source": "github.com/gdm257/cc-plugins/plugins/semble/agents/semble-search.md",
+      "source": "/semble-search.md",
       "kind": "agent",
-      "type": "github-subdir",
-      "installed_at": "2026-07-02T22:49:29.5089923+09:00",
-      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "type": "unknown-subdir",
+      "installed_at": "2026-08-25T03:52:11.0691576+08:00",
       "subdir": "semble-search.md",
-      "version": "89887c7",
+      "version": "644f989",
       "file_hashes": {
         "semble-search.md": "sha256:6fcd78d7c01badd574b5bade54e7e47901f1501972eaaa74ad88c09469bfc45e"
       }
     },
     "spec-reviewer": {
-      "source": "github.com/gdm257/cc-plugins/plugins/cc-sdd-skills/agents/spec-reviewer.md",
+      "source": "/spec-reviewer.md",
       "kind": "agent",
-      "type": "github-subdir",
-      "installed_at": "2026-07-02T22:49:15.1508605+09:00",
-      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "type": "unknown-subdir",
+      "installed_at": "2026-08-25T03:52:04.0110457+08:00",
       "subdir": "spec-reviewer.md",
-      "version": "89887c7",
+      "version": "644f989",
       "file_hashes": {
         "spec-reviewer.md": "sha256:5a9e4d1c907c873a263eced86b4cdd5feda0d5aee5f926598f3edd84ce90a9de"
       }
     },
     "trellis-check": {
-      "source": "github.com/mindfold-ai/Trellis/packages/cli/src/templates/gemini/agents/trellis-check.md",
+      "source": "/trellis-check.md",
       "kind": "agent",
-      "type": "github-subdir",
-      "installed_at": "2026-07-08T07:21:05.8720574+09:00",
-      "repo_url": "https://github.com/mindfold-ai/Trellis.git",
+      "type": "unknown-subdir",
+      "installed_at": "2026-08-25T03:52:07.6571453+08:00",
       "subdir": "trellis-check.md",
-      "version": "cf3c8af",
+      "version": "64e6636",
       "file_hashes": {
         "trellis-check.md": "sha256:68c1f3e9618974b38f39a633775520b40d92a7403bb06b7f3e93f968cb961d43"
       }
     },
     "trellis-implement": {
-      "source": "github.com/mindfold-ai/Trellis/packages/cli/src/templates/gemini/agents/trellis-implement.md",
+      "source": "/trellis-implement.md",
       "kind": "agent",
-      "type": "github-subdir",
-      "installed_at": "2026-07-08T07:21:05.8859325+09:00",
-      "repo_url": "https://github.com/mindfold-ai/Trellis.git",
+      "type": "unknown-subdir",
+      "installed_at": "2026-08-25T03:52:07.6703861+08:00",
       "subdir": "trellis-implement.md",
-      "version": "cf3c8af",
+      "version": "64e6636",
       "file_hashes": {
         "trellis-implement.md": "sha256:ba98e963fb9ea85ca6fc373ed6458526f9fdea282b4aa9fa9225431b995cb45e"
       }
     },
     "trellis-research": {
-      "source": "github.com/mindfold-ai/Trellis/packages/cli/src/templates/gemini/agents/trellis-research.md",
+      "source": "/trellis-research.md",
       "kind": "agent",
-      "type": "github-subdir",
-      "installed_at": "2026-07-08T07:21:05.9020364+09:00",
-      "repo_url": "https://github.com/mindfold-ai/Trellis.git",
+      "type": "unknown-subdir",
+      "installed_at": "2026-08-25T03:52:07.6881341+08:00",
       "subdir": "trellis-research.md",
-      "version": "cf3c8af",
+      "version": "64e6636",
       "file_hashes": {
         "trellis-research.md": "sha256:fdccaef6caa3710b5741610f2df53f8a6cf981ab68abf5786ba426b684dfdad3"
       }
