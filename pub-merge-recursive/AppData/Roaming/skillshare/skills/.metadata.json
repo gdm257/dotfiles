@@ -1455,6 +1455,42 @@
         "SKILL.md": "sha256:79e6d165358253a7379cae647bbd50b6bf174a1107f451b768a2bb4ba7cc0b87"
       }
     },
+    "trellis-init": {
+      "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-init",
+      "type": "github-subdir",
+      "installed_at": "2026-08-31T06:09:15.0579379+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/trellis/skills/trellis-init",
+      "version": "599d6b0",
+      "tree_hash": "08c28c939fc049bcbdd1cb7dcdab7c98a49ffb0c",
+      "file_hashes": {
+        "SKILL.md": "sha256:049111b63c67975c4b01b176ba9ecbdf0b3a8d3b6942947b4341b024a3f05013",
+        "resources/.trellis/.developer": "sha256:de0349217a1360c43d7d937856636c992a3e19d34d32775e94adce116a885dc4",
+        "resources/.trellis/.version": "sha256:4199a63108d33fca2f529174d1d370076d728c3ed569ab95134b66ac32c2f918",
+        "resources/.trellis/spec/backend/database-guidelines.md": "sha256:fa04a37014f16acc116e095d97ab02937cc06a0e120c4b96c3b5702f38fb06cb",
+        "resources/.trellis/spec/backend/directory-structure.md": "sha256:57edf3199e6baca66a782280a52083ef5d8b65ab3c6b436d7efd92410a3f94cc",
+        "resources/.trellis/spec/backend/error-handling.md": "sha256:f6b4145a8fcdfd8f0006bec6dd9c9b4a7fa69a7bd5f6e0c851dee5db39ea7273",
+        "resources/.trellis/spec/backend/index.md": "sha256:e9bbbfbc8141430a8312438a4a360f8b51d9e3bb54c5f08c1a4ca7b51e7fa130",
+        "resources/.trellis/spec/backend/logging-guidelines.md": "sha256:03a0398c3480af11a5cecf68c025d505b0090f38ede899b78bd85d6ff97752c4",
+        "resources/.trellis/spec/backend/quality-guidelines.md": "sha256:262fa49d9c4bd29b8490edd0c11ddb8f7e23fd2eb4418c8a388e176aab550357",
+        "resources/.trellis/spec/frontend/component-guidelines.md": "sha256:7ca6ea4f9305a8267b7570505f9ebf6030bb5911cbe3f2a135cfb7ebd402805b",
+        "resources/.trellis/spec/frontend/directory-structure.md": "sha256:731713ac66d21f383bb49fb19d30888aa8db9e50acb5c77329fa4b98546cd7bc",
+        "resources/.trellis/spec/frontend/hook-guidelines.md": "sha256:49801cb1eb7c779e9b01cdeabcd47dd0bc12be018405fc248646cf8a829aaf6c",
+        "resources/.trellis/spec/frontend/index.md": "sha256:adc1694bfef9c77bc01cec36589d9f05a97178cc5d5d965bdf324a555048ceb7",
+        "resources/.trellis/spec/frontend/quality-guidelines.md": "sha256:ac5a4da858d93492cbb4c721b164850b625f38696905e463e8feb5968eae78bc",
+        "resources/.trellis/spec/frontend/state-management.md": "sha256:a007d40daba4db27f1fcfad8d6192d5de2cd385f4bbbd0161a39a3e4c0dd6c1b",
+        "resources/.trellis/spec/frontend/type-safety.md": "sha256:1ced8d3ea4f5e6e63599a5a606db52fa86b3973046db57d550ed2964a8d4c40f",
+        "resources/.trellis/spec/guides/code-reuse-thinking-guide.md": "sha256:86fd10dc10916c00309714aa2275234f01b0ad40d21a485d43b3422e7ca79397",
+        "resources/.trellis/spec/guides/cross-layer-thinking-guide.md": "sha256:4c54130c02a7b8bc43f9a012e0837f798f43e2d137d6bc6d7498d2adb0bac3f4",
+        "resources/.trellis/spec/guides/index.md": "sha256:aa45e5d0f245aae0b34677b121f7d083620308b4b87cda929bd134c77d1f61fd",
+        "resources/.trellis/tasks/00-bootstrap-guidelines/prd.md": "sha256:01e6539d5f92381c5052a37a80e0d574c5a073515d72e734222918565c4cf220",
+        "resources/.trellis/tasks/00-bootstrap-guidelines/task.json": "sha256:b24483fb945cd036d49bc6461a54df37d346fb72eebb2a15b03752b0f3f7537c",
+        "resources/.trellis/workflow.md": "sha256:1447158c66cbbf011257c1eae2dfd456d42b7022667f36074ffdafee003459c4",
+        "resources/.trellis/workspace/index.md": "sha256:3efe34e8be3315b9f381f9be93b404c7ade7af5a837675cf8dbe8e21eabc445b",
+        "resources/.trellis/workspace/{developer}/index.md": "sha256:4ef11bf933fd1dfc909b06ececb82f07c83f49d6eacab008c8ec16db53f85c32",
+        "resources/.trellis/workspace/{developer}/journal-1.md": "sha256:d5a4371631f06693b538ae725d310c2b4e1d9ee64f809c5bca12b84f6e0b4e11"
+      }
+    },
     "trellis-meta": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-meta",
       "type": "github-subdir",
