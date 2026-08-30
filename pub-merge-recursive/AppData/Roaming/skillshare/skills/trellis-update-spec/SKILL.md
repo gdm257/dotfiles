@@ -72,7 +72,7 @@ For triggered tasks, include all sections below:
 ### CRITICAL: Code-Spec vs Guide - Know the Difference
 
 | Type | Location | Purpose | Content Style |
-|------|----------|---------|---------------|
+| --- | --- | --- | --- |
 | **Code-Spec** | `<layer>/*.md` | Tell AI "how to implement safely" | Signatures, contracts, matrices, cases, test points |
 | **Guide** | `guides/*.md` | Help AI "what to think about" | Checklists, questions, pointers to specs |
 

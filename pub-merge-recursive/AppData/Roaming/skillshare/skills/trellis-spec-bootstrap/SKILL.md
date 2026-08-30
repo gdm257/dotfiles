@@ -18,7 +18,7 @@ Use this skill to create or refresh `.trellis/spec/` guidelines from the real co
 ## Reference Routing
 
 | Need | Read |
-|------|------|
+| --- | --- |
 | Repository architecture analysis | [references/repository-analysis.md](references/repository-analysis.md) |
 | Spec work decomposition and task planning | [references/spec-task-planning.md](references/spec-task-planning.md) |
 | Writing high-signal Trellis spec files | [references/spec-writing.md](references/spec-writing.md) |

@@ -565,6 +565,19 @@
         "scripts/surface-brief.mjs": "sha256:acd03bf38f6aef2b5d5287cefccacac018063b5b5356c99d191b3bd012f28ed3"
       }
     },
+    "implement": {
+      "source": "https://github.com/mattpocock/skills/skills/engineering/implement",
+      "type": "github-subdir",
+      "installed_at": "2026-08-24T06:14:23.0003917+08:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/implement",
+      "version": "5b15a47",
+      "tree_hash": "f07d230f645fc9ac390cf13a450bbff12ad791a3",
+      "file_hashes": {
+        "SKILL.md": "sha256:6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3",
+        "agents/openai.yaml": "sha256:8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc"
+      }
+    },
     "interview-me": {
       "source": "https://github.com/addyosmani/agent-skills.git/skills/interview-me",
       "type": "github-subdir",
@@ -1008,6 +1021,24 @@
       "tree_hash": "3dd6ad49b667d15182acddc9d3e4f7763ae33c9c",
       "file_hashes": {
         "SKILL.md": "sha256:e5bf48b1ae561511439cf71672209a10a88cee0968cc925909ff861dfa0a96a7"
+      }
+    },
+    "pavedpath-code": {
+      "source": "https://github.com/Jia-Ethan/pavedpath-code",
+      "type": "github",
+      "installed_at": "2026-08-29T04:21:38.389344+08:00",
+      "repo_url": "https://github.com/Jia-Ethan/pavedpath-code.git",
+      "version": "97a319f",
+      "file_hashes": {
+        ".gitignore": "sha256:99675b0c8dd5e136921609533a5683e028aff80b6317a74cb77abb2526adfede",
+        "CHANGELOG.md": "sha256:2d0a7f484de111acc33dedebb0032b084e2e5d31998bf7e8df3e15d078b737e5",
+        "LICENSE": "sha256:3606450b38624daef7664208bf1dfa1bc3d3a47fd0044bfece6b560d6b85ef05",
+        "MIGRATION.md": "sha256:27df287549887f0943f61d5b8fc7debeb60821049ea173b4d884aa10139da370",
+        "README.md": "sha256:d12eb68abf7e0afb8e1fcfa2c8d02210ec0b85c1083a7748aa0cfd17a63bf98a",
+        "SKILL.md": "sha256:81605269429e265f75f5c29a4017ad27459209edbf10fe47ef0b674fee492685",
+        "agents/openai.yaml": "sha256:892c9311d307eb4913971222e92dd84ddaffb4a9995208b89d08994f05d0e320",
+        "references/extraction-playbook.md": "sha256:1b350d6a9382740fdb1e1e062080d7ae7d4e547b80cb04925b29b721b06e72e1",
+        "references/research-rubric.md": "sha256:4d29f009881204dc173e03ad189e7882ee2539c0ac285d05ff0b7ce0df03152e"
       }
     },
     "ponytail": {

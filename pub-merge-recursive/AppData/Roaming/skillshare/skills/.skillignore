@@ -30,7 +30,6 @@ ponytail-gain
 ponytail-debt
 trellis-start
 trellis-session-insight
-trellis-spec-bootstrap
 brandkit
 gpt-tasteskill
 output-skill
@@ -55,3 +54,4 @@ hallmark
 taste-skill
 soft-skill
 minimalist-skill
+trellis-spec-bootstrap
