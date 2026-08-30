@@ -2,4 +2,4 @@ entrypoint: omp
 command: plugin install
 
 run:
-  - {args: "npm:pi-wakatime"}
+  # - {args: "npm:pi-wakatime"}
