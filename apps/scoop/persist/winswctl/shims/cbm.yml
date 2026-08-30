@@ -9,6 +9,8 @@ serviceAccount:
   user: demo
   password: ""
 workingDirectory:
+environment:
+  CBM_SKIP_DACL_HARDENING: "1"
 executable: codebase-memory-mcp-ui
 arguments: >-
   --ui=true

@@ -1,0 +1,13 @@
+$schema: https://raw.githubusercontent.com/winsw/winsw/v2/doc/yamlConfigurationSchema.json
+id: octopusd
+name: octopusd
+description: octopusd service
+serviceAccount:
+  domain: .
+  user: demo
+  password: ""
+delayedAutoStart: true
+hideWindow: true
+workingDirectory:
+executable: cmd.exe
+arguments: /c octopus start

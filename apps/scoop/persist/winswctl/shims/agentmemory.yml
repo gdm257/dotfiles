@@ -38,7 +38,8 @@ arguments: /c "mise exec npm:@agentmemory/agentmemory -- agentmemory"
 #     value: 'C:\Users\demo\AppData\Local\Temp'
 #   - name: TMP
 #     value: 'C:\Users\demo\AppData\Local\Temp'
-#
+#   - name: PATH
+#     value: 'C:\Users\demo\scoop\shims;%PATH%'
 #   # ===== mise 直接指定路径（不依赖 ~ 解析）=====
 #   - name: MISE_DATA_DIR
 #     value: 'C:\Users\demo\AppData\Local\mise'
