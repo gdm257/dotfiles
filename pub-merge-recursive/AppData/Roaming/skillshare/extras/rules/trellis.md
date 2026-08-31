@@ -14,7 +14,7 @@ Do NOT use `python3 ./.trellis/scripts/<name>.py` — the project has no .trelli
 Replace every occurrence with `uvx trellis-runtime <name>` (same flags)
 E.g. `uvx trellis-runtime get-context`
 
-- task.py → trellis-task
+- task.py → task
 - get_context.py → get-context
 - add_session.py → add-session
 - get_developer.py → get-developer

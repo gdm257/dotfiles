@@ -7,19 +7,19 @@
         {
           "matcher": "startup",
           "type": "command",
-          "command": "uvx --from trellis-runtime trellis-hook-session-start",
+          "command": "uvx trellis-runtime session-start",
           "timeout": 30
         },
         {
           "matcher": "clear",
           "type": "command",
-          "command": "uvx --from trellis-runtime trellis-hook-session-start",
+          "command": "uvx trellis-runtime session-start",
           "timeout": 30
         },
         {
           "matcher": "compact",
           "type": "command",
-          "command": "uvx --from trellis-runtime trellis-hook-session-start",
+          "command": "uvx trellis-runtime session-start",
           "timeout": 30
         }
       ],
@@ -33,20 +33,20 @@
         {
           "matcher": "Task",
           "type": "command",
-          "command": "uvx --from trellis-runtime trellis-hook-inject-subagent-context",
+          "command": "uvx trellis-runtime inject-subagent-context",
           "timeout": 30
         },
         {
           "matcher": "Agent",
           "type": "command",
-          "command": "uvx --from trellis-runtime trellis-hook-inject-subagent-context",
+          "command": "uvx trellis-runtime inject-subagent-context",
           "timeout": 30
         }
       ],
       "beforeSubmitPrompt": [
         {
           "type": "command",
-          "command": "uvx --from trellis-runtime trellis-hook-inject-workflow-state",
+          "command": "uvx trellis-runtime inject-workflow-state",
           "timeout": 15
         }
       ]
@@ -58,7 +58,7 @@
         {
           "matcher": "startup|resume|clear|compact",
           "type": "command",
-          "command": "uvx --from trellis-runtime trellis-hook-session-start",
+          "command": "uvx trellis-runtime session-start",
           "timeout": 30
         }
       ],
@@ -73,7 +73,7 @@
       "beforeSubmitPrompt": [
         {
           "type": "command",
-          "command": "uvx --from trellis-runtime trellis-hook-inject-workflow-state",
+          "command": "uvx trellis-runtime inject-workflow-state",
           "timeout": 15
         }
       ]
