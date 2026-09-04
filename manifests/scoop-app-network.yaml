@@ -101,6 +101,7 @@ run:
   # - {args: tencent-meeting}
   # - {args: discord}
   # - {args: chatgpt}
+  - { args: main/cloudflared }
   - { args: gdm257/ddnsto }
   - { args: frp }
   - { args: gdm257/frpmgr }
@@ -141,6 +142,7 @@ run:
   # - {args: naiveproxy}
   - { args: traefik }
   - { args: gdm257/zoraxy }
+  - { args: gdm257/whoami }
   # - {args: nekoray}
   # - {args: sing-box}
   # - {args: hysteria}

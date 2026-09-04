@@ -93,7 +93,7 @@ run:
   - { args: gdm257/open-pencil }
   # - {args: gdm257/open-codesign}
   - { args: gdm257/codeg }
-  - { args: gdm257/mindfs }
+  # - {args: gdm257/mindfs}
   # - {args: gdm257/aionui}
   # - {args: gdm257/paseo}
   # - {args: gdm257/nezha}
@@ -131,7 +131,8 @@ run:
   # - {args: gdm257/goose}
   # - {args: gdm257/goose-desktop}
   # - {args: herdr}
-  - { args: gdm257/octopus }
+  # - {args: gdm257/octopus}
+  - { args: gdm257/octopus-257 }
   # - {args: main/cliproxyapi}
   # - {args: gdm257/cpa-manager-plus}
   # - {args: cc-switch}
@@ -146,6 +147,7 @@ run:
   # - { args: gdm257/archon }
   - { args: gdm257/codebase-memory-mcp }
   - { args: gdm257/codebase-memory-mcp-ui }
+  - { args: deja-vu }
   - { args: llmfit }
   - { args: vim }
   # - {args: vimtutor}
