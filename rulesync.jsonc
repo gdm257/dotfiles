@@ -5,6 +5,7 @@
     "claudecode": ["mcp", "hooks", "permissions"],
     "codexcli": ["mcp", "hooks", "permissions"],
     "opencode": ["mcp", "hooks", "permissions"],
+    "zcode": ["mcp", "hooks"],
   },
   "global": true,
   "delete": false,
