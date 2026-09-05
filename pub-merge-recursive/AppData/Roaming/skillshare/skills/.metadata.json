@@ -112,6 +112,18 @@
         "SKILL.md": "sha256:4359372f9591359123e7e54dbb183c538ed0153ef6cd0208cf680102e44fc36c"
       }
     },
+    "deja-search": {
+      "source": "https://github.com/vshulcz/deja-vu/skills/deja-search",
+      "type": "github-subdir",
+      "installed_at": "2026-09-05T05:54:46.5599942+09:00",
+      "repo_url": "https://github.com/vshulcz/deja-vu.git",
+      "subdir": "skills/deja-search",
+      "version": "5770986",
+      "tree_hash": "acd1c17bc28a36be532c259ccb8d5486d2513918",
+      "file_hashes": {
+        "SKILL.md": "sha256:594b8ead0824d213437cb936b9e38f336ff0d585cbbaab3382f4fd99dd75eda0"
+      }
+    },
     "design-with-taste": {
       "source": "https://github.com/cristicretu/family-taste-skill.git/skills/design-with-taste",
       "type": "github-subdir",
