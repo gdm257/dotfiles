@@ -3,6 +3,8 @@ outputs:
   - ~/.claude/rules/windows.md
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
+  - ~/.omp/agent/AGENTS.md
+  - ~/.zcode/AGENTS.md
 ---
 
 If you are in Windows environment, follow:

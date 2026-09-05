@@ -3,11 +3,13 @@ outputs:
   - ~/.claude/rules/artifacts.md
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
+  - ~/.omp/agent/AGENTS.md
+  - ~/.zcode/AGENTS.md
 ---
 
 ## 项目文档产物语言约定
 
-主体使用中文撰写:
+正文主体使用中文撰写:
 
 1. OpenSpec artifacts(`proposal.md` / `design.md` / `specs/**/spec.md` / `tasks.md`)与 steering 文档(`.claude/rules/steering/*.md`)
 2. kiro spec artifacts (`reqirements.md` / `design.md` / `tasks.md`)

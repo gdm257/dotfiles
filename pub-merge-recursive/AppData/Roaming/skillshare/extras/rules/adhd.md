@@ -3,6 +3,8 @@ outputs:
   - ~/.claude/rules/adhd.md
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
+  - ~/.omp/agent/AGENTS.md
+  - ~/.zcode/AGENTS.md
 ---
 
 # i-have-adhd

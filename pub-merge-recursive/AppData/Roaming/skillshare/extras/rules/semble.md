@@ -7,6 +7,8 @@ outputs:
   - ~/.claude/rules/semble.md
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
+  - ~/.omp/agent/AGENTS.md
+  - ~/.zcode/AGENTS.md
 name: semble-user
 ---
 

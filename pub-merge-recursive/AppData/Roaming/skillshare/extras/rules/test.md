@@ -3,6 +3,8 @@ outputs:
   - ~/.claude/rules/test.md
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
+  - ~/.omp/agent/AGENTS.md
+  - ~/.zcode/AGENTS.md
 ---
 
 - ONLY write unit tests. Consider E2E tests and integration tests only as a last resort.

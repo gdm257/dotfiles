@@ -3,6 +3,8 @@ outputs:
   - ~/.claude/rules/ruler.md
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
+  - ~/.omp/agent/AGENTS.md
+  - ~/.zcode/AGENTS.md
 ---
 
 - Ruler (`ruler`) is a tool that manages instructions by providing a single source of truth for all your AI agent instructions.

@@ -9,6 +9,8 @@ outputs:
   - ~/.claude/rules/codebase-memory.md
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
+  - ~/.omp/agent/AGENTS.md
+  - ~/.zcode/AGENTS.md
 name: codebase-memory-user
 ---
 

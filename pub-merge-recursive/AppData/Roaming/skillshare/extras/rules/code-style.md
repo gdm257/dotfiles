@@ -3,6 +3,8 @@ outputs:
   - ~/.claude/rules/code-style.md
   - ~/.codex/AGENTS.md
   - ~/.config/opencode/AGENTS.md
+  - ~/.omp/agent/AGENTS.md
+  - ~/.zcode/AGENTS.md
 ---
 
 - code 与 comment 的风格、格式与详细程度应该与项目中已有代码保持一致。
