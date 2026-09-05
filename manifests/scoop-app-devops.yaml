@@ -122,14 +122,15 @@ run:
   - { args: gdm257/shim-claude }
   # - {args: claurst}
   # - {args: crush}
-  - { args: codex }
-  - { args: opencode }
-  - { args: gdm257/peri }
+  # - {args: codex}
+  # - {args: opencode}
+  # - {args: gdm257/peri}
   - { args: oh-my-pi }
   # - {args: gdm257/pi}
   # - {args: main/goose-cli}
   # - {args: gdm257/goose}
   # - {args: gdm257/goose-desktop}
+  - { args: zcode }
   # - {args: herdr}
   # - {args: gdm257/octopus}
   - { args: gdm257/octopus-257 }
