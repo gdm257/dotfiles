@@ -1,4 +1,5 @@
 ---
+enable: false
 outputs:
   - ~/.claude/rules/cc-sdd.md
   - ~/.codex/AGENTS.md
