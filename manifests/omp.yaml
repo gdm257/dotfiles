@@ -3,3 +3,4 @@ command: plugin install
 
 run:
   # - {args: "npm:pi-wakatime"}
+  - {args: "git:github.com/gdm257/pi-auto-approve"}
