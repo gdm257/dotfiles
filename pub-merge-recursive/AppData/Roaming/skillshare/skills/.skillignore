@@ -20,9 +20,7 @@ openspec-archive-change
 openspec-bulk-archive-change
 openspec-continue-change
 openspec-explore
-openspec-ff-change
 openspec-new-change
-openspec-sync-specs
 openspec-verify-change
 ponytail-help
 trellis-channel
@@ -56,3 +54,4 @@ soft-skill
 minimalist-skill
 trellis-spec-bootstrap
 mem-recall
+translation-workbench
