@@ -23,6 +23,11 @@ extras:
     targets:
       - path: ~/.codex/agents
         extension: codex-agents
+  - name: omp-agents
+    source: ~/AppData/Roaming/skillshare/agents
+    targets:
+      - path: ~/.omp/agent/agents
+        extension: omp-agents
   - name: rules
     # source: ~/AppData/Roaming/skillshare/extras/rules
     targets:
