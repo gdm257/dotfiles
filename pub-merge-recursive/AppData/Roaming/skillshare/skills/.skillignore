@@ -15,13 +15,7 @@ debug-issue
 explore-codebase
 refactor-safely
 review-changes
-openspec-apply-change
-openspec-archive-change
-openspec-bulk-archive-change
-openspec-continue-change
-openspec-explore
 openspec-new-change
-openspec-verify-change
 ponytail-help
 trellis-channel
 ponytail-gain

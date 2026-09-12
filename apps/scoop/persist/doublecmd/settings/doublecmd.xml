@@ -627,6 +627,7 @@
     <HotDir Name="mambaforge" Path="C:\Users\demo\mambaforge\envs"/>
     <HotDir Name="micromamba" Path="C:\Users\demo\micromamba\envs"/>
     <HotDir Name="miniconda" Path="C:\Users\demo\miniconda3\envs"/>
+    <HotDir Name="openspec schemas" Path="C:\Users\demo\AppData\Local\openspec"/>
     <HotDir Name="openclaw" Path="C:\Users\demo\.openclaw"/>
     <HotDir Name="opencodereview" Path="C:\Users\demo\.opencodereview"/>
     <HotDir Name="OpenPackage" Path="C:\Users\demo\.openpackage"/>
