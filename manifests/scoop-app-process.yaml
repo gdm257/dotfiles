@@ -14,6 +14,7 @@ run:
   # - {args: main/winsw}
   # - {args: winsw-alpha}
   - { args: gdm257/winswctl }
+  - { args: gdm257/winstctl }
   # - {args: nssm}
   # - {args: activitywatch}
   - { args: main/wakatime-cli }

@@ -99,7 +99,7 @@ run:
   # - {args: gpg4win}
   - { args: fontforge }
   - { args: winfontsview }
-  - { args: keeweb }
+  # - {args: keeweb}
   # - {args: keepass}
   # - {args: keepass-plugin-kpenhentryview}
   # - {args: keepass-plugin-webautotype}

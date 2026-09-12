@@ -3,6 +3,7 @@ command: install
 
 run:
   - { args: scoop-search }
+  - { args: gdm257/scoop-checkver }
   # - {args: ss}
   - { args: wingetcreate }
   # - {args: wingetui}

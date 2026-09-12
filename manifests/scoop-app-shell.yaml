@@ -37,6 +37,7 @@ run:
   # - {args: tldr}
   - { args: tealdeer }
   - { args: ztools }
+  - { args: main/scoop-shim }
   - { args: gdm257/command-wrapper }
   # - { args: gdm257/onin }
   # - {args: kanata}
