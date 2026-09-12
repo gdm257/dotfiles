@@ -919,109 +919,109 @@
     "openspec-apply-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-apply-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:37.7139972+08:00",
+      "installed_at": "2026-09-13T06:50:00.8966262+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-apply-change",
-      "version": "fc5acda",
-      "tree_hash": "ef0e89ee83ef134a8056156b4e3721e49890e8e5",
+      "version": "13aa8d2",
+      "tree_hash": "f3268ddfc81c475b8842b61a8745be7d667e68b2",
       "file_hashes": {
-        "SKILL.md": "sha256:da3d97f3ea482cca969981a2079ce7f906ccb4a892728f07bf72f354035d951a"
+        "SKILL.md": "sha256:0a948dcdbded11b9e7b2101cc16fca2f5da9c83dfa62ec6593743993d8c9398c"
       }
     },
     "openspec-archive-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-archive-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:34.5353639+08:00",
+      "installed_at": "2026-09-13T06:50:03.9544846+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-archive-change",
-      "version": "fc5acda",
-      "tree_hash": "3a8d83471b6648c81823059fbd0553afa9262ff5",
+      "version": "13aa8d2",
+      "tree_hash": "4c9971e2cec77091b2f1f7dd9f0b7d4d4c117306",
       "file_hashes": {
-        "SKILL.md": "sha256:0526054ec891a8a0c0cd0e19a285f285aa111112f2480a3ab365f9bba18a2b9c"
+        "SKILL.md": "sha256:c9fefae73635876634432270b57ffdcdd24d0f8aa727d12f1a03c81603d8204c"
       }
     },
     "openspec-bulk-archive-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-bulk-archive-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:39.7228259+08:00",
+      "installed_at": "2026-09-13T06:50:07.3085212+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-bulk-archive-change",
-      "version": "fc5acda",
-      "tree_hash": "7db1c9b1e4bd71bfd3d09654a93d057654fb52cb",
+      "version": "13aa8d2",
+      "tree_hash": "06901f78c37089a722fbd362bd18676dfbbd236f",
       "file_hashes": {
-        "SKILL.md": "sha256:fcdcb2562b7f19046c25dcddb1e85bdc78dcc1ab490cc9757313b435a053e99f"
+        "SKILL.md": "sha256:982a588110a16a0ce27fbc8c524d506163dfd663e3c9bd921dfbc96857038e11"
       }
     },
     "openspec-continue-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-continue-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:29.5655936+08:00",
+      "installed_at": "2026-09-13T06:50:11.0658154+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-continue-change",
-      "version": "fc5acda",
-      "tree_hash": "4e306a8d0b45ed8837c0d39e9350d29eabb27b9a",
+      "version": "13aa8d2",
+      "tree_hash": "8c3d255fb1db9b5d507535070c2448788eb64643",
       "file_hashes": {
-        "SKILL.md": "sha256:091d837fcddf53681bea8fd3f7db8b933d0acf200e9594b31c3b319e6d21b23e"
+        "SKILL.md": "sha256:b41b99e6af695947df68a92448848a92fc056b2d78c9e686b8cc6cbb85adec2b"
       }
     },
     "openspec-explore": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-explore",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:42.0658984+08:00",
+      "installed_at": "2026-09-13T06:50:14.7348379+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-explore",
-      "version": "fc5acda",
-      "tree_hash": "f4048e4b2f5fa6515c8c419aa87f8a6b761133c4",
+      "version": "13aa8d2",
+      "tree_hash": "332085ac9616fe04725f556afdeedb546a3456fa",
       "file_hashes": {
-        "SKILL.md": "sha256:fb359559d93095c81a57760c7739ffbd6d618a03d1810503515f8ae2b5054cd0"
+        "SKILL.md": "sha256:c46c348c91cba294474e8ea9121976ccd38a476a435284e12d4017c22d425b0c"
       }
     },
     "openspec-ff-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-ff-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:34.8182954+08:00",
+      "installed_at": "2026-09-13T06:50:18.8027691+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-ff-change",
-      "version": "fc5acda",
-      "tree_hash": "cd208e6a13141e6d2afc7b63ab3053891bbcf81c",
+      "version": "13aa8d2",
+      "tree_hash": "9dd32ce1d6a877972882a16b5740170e0dfa09bd",
       "file_hashes": {
-        "SKILL.md": "sha256:b99adea311fc9e9c811a7ae7417c0d2dff0798bea8f041aa2f96f0792a516f92"
+        "SKILL.md": "sha256:659eef17b81e4e1aced565264e92a493541d722e0229cf4d6600a574f1c1e2ee"
       }
     },
     "openspec-new-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-new-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:29.8072015+08:00",
+      "installed_at": "2026-09-13T06:50:22.0499745+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-new-change",
-      "version": "fc5acda",
-      "tree_hash": "2b645f5b3b38b6a7bfb6a937fbf688ff977ea31b",
+      "version": "13aa8d2",
+      "tree_hash": "010eeb12b84ecfc89891bf0a28065a2c188acdd8",
       "file_hashes": {
-        "SKILL.md": "sha256:5cb6b426fd53c1b20c0a680ab2b34451d26c67bbe2bf38cdf381b51ff4cabdc2"
+        "SKILL.md": "sha256:008466542b5740155458a1b5a266d3c1918308c30af608099a06fbcbbf3606e2"
       }
     },
     "openspec-sync-specs": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-sync-specs",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:35.1008562+08:00",
+      "installed_at": "2026-09-13T06:50:25.8498497+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-sync-specs",
-      "version": "fc5acda",
-      "tree_hash": "6b18cd0227bb66e593b12c4c761625464e8c368f",
+      "version": "13aa8d2",
+      "tree_hash": "ed06b8e97ad97d69bdd72927ee31775bfe072572",
       "file_hashes": {
-        "SKILL.md": "sha256:9c74dad096467f982806ccf33e213f459890e0b79af1f69f6e9f1e790bb2fccf"
+        "SKILL.md": "sha256:b2ab0a3e06c41ea32e2e8fba9c37320f65c993d17bdc9a9ac344b75c38c41a6f"
       }
     },
     "openspec-verify-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-verify-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:28.2464087+08:00",
+      "installed_at": "2026-09-13T06:50:29.0473485+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-verify-change",
-      "version": "fc5acda",
-      "tree_hash": "a8bd8466ef8dd23c656d0d14bf2ab5786c9d16d9",
+      "version": "13aa8d2",
+      "tree_hash": "193a7a03d317b89d8311a9c7ae441f5bcbb3d640",
       "file_hashes": {
-        "SKILL.md": "sha256:336cd56a90854494373439f59d9cdd92d696a8cba97d5d8637865ba275c31c66"
+        "SKILL.md": "sha256:6664695b9cd1735b352b42ffd610bef6795fecd51b2b7a75b933f7ea438438c6"
       }
     },
     "output-skill": {
