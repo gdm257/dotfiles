@@ -1,92 +1,97 @@
 entrypoint: scoop
 command: install
-
 run:
-  # - {args: chsrc}
-  - { args: wixtoolset }
-  # - {args: dark}
-  # - {args: vfox}
   - { args: main/mise }
   - { args: gdm257/path-user-mise }
-  # - {args: main/pixi}
-  # - {args: "python27 python37 python38 python39 python310 python311 micromamba_ShuguangSun micromamba"}
   - { args: gdm257/shim-python3 }
-  # - {args: rye}
-  # - {args: uv}
-  # - {args: gdm257/micromamba}
-  # - {args: gdm257/shim-mamba}
-  # - {args: gdm257/shim-conda}
   - { args: ruff }
-  # - {args: hatch}
-  # - {args: volta}
   - { args: nodejs-lts }
   - { args: bun }
-  # - {args: tailwindcss}
-  # - {args: fnm}
-  # - {args: nvm}
-  # - {args: "yarn pnpm"}
   - { args: php74 }
-  # - {args: php74-xdebug}
   - { args: composer }
   - { args: jbang }
   - { args: zulu21-jdk }
-  # - {args: "openjdk9 openjdk8-redhat openjdk11 openjdk17"}
   - { args: maven }
   - { args: gradle }
   - { args: main/jdtls }
   - { args: main/android-clt }
   - { args: adb }
-  # - {args: netbeans-portable}
-  # - {args: kotlin}
   - { args: gdm257/kotlin-lsp }
-  - { args: apktool }
-  # - {args: flutter}
   - { args: flutter-cn }
   - { args: main/ruby }
   - { args: nuget }
-  - { args: ilspy }
-  # - {args: dnspy}
   - { args: mingw }
   - { args: llvm }
-  - { args: xmake }
-  - { args: conan }
-  - { args: vcpkg }
   - { args: cmake }
-  - { args: doxygen }
-  - { args: qt-creator }
-  - { args: innoextract }
-  - { args: innounp }
-  - { args: innosetup-portapps }
-  # - {args: InnoExtractor}
-  - { args: nsis }
-  - { args: msix }
-  - { args: upx }
-  - { args: encrypto }
-  - { args: x64dbg }
-  - { args: reko }
-  - { args: cutter }
-  - { args: die }
-  - { args: shellcheck }
-  - { args: shfmt }
   - { args: luajit }
   - { args: lua51 }
   - { args: luarocks }
   - { args: main/lua-language-server }
-  - { args: haskell }
-  # - {args: stack}
   - { args: go }
   - { args: golangci-lint }
   - { args: goreleaser }
-  # - {args: gf}
-  # - {args: gdm257/protoc-gen-go}
-  # - {args: rustup-gnu}
   - { args: rustup-msvc }
   - { args: rust-analyzer }
-  # - {args: unityhub}
-  # - {args: AutoHotkey-Portable_ACooper81}
-  # - {args: AutoHotkey2-Portable}
+  - { args: gdm257/open-pencil }
+  - { args: gdm257/codeg }
+  - { args: gdm257/skillshare }
+  - { args: gdm257/rulesync }
+  - { args: gdm257/open-code-review }
+  - { args: zed }
+  - { args: oh-my-pi }
+  - { args: zcode }
+  - { args: gdm257/octopus-257 }
+  - { args: gdm257/codebase-memory-mcp }
+  - { args: gdm257/codebase-memory-mcp-ui }
+  - { args: deja-vu }
+  - { args: llmfit }
+  - { args: vim }
+  - { args: neovim }
+  - { args: neovide }
+  - { args: redis }
+  - { args: another-redis-desktop-manager }
+  - { args: gdm257/dbgate }
+  - { args: gdm257/onedump }
+  - { args: gdm257/dqex }
+  - { args: sqlitebrowser }
+  - { args: sqlite }
+  - { args: atlas }
+  - { args: jj }
+  - { args: jjui }
+  - { args: gdm257/gg }
+  - { args: git }
+  - { args: gdm257/path-git }
+  - { args: main/worktrunk }
+  - { args: gitui }
+  - { args: gickup }
+  - { args: git-lfs }
+  - { args: lfs-dal }
+  - { args: git-credential-manager }
+  - { args: gdm257/git-ssh-sign }
+  - { args: git-cliff }
+  - { args: act }
+  - { args: gh }
+
+_algorithm:
   # - {args: openmodelica}
   # - {args: scilab}
+
+auth:
+  # - {args: ldap-admin}
+
+_bash:
+  - { args: shellcheck }
+  - { args: shfmt }
+
+_ci-cd:
+  # - {args: teleport}
+  # - {args: jenkins-lts}
+  # - {args: nomad}
+  # - {args: semaphore}
+  # - {args: prometheus}
+  # - {args: openobserve}
+
+coding-agent:
   # - {args: main/zeroclaw}
   # - {args: main/ironclaw}
   # - {args: picoclaw}
@@ -111,7 +116,7 @@ run:
   # - {args: gdm257/iii}
   # - {args: idea-portable}
   # - {args: imhex}
-  - { args: vscode }
+  # - {args: vscode}
   # - {args: vscodium}
   - { args: zed }
   # - {args: void}
@@ -119,7 +124,7 @@ run:
   # - {args: trae}
   # - {args: cursor}
   # - {args: main/claude-code}
-  - { args: gdm257/shim-claude }
+  # - {args: gdm257/shim-claude}
   # - {args: claurst}
   # - {args: crush}
   # - {args: codex}
@@ -150,61 +155,27 @@ run:
   - { args: gdm257/codebase-memory-mcp-ui }
   - { args: deja-vu }
   - { args: llmfit }
-  - { args: vim }
-  # - {args: vimtutor}
-  - { args: neovim }
-  - { args: neovide }
-  # - {args: helix}
-  # - {args: ox}
-  # - {args: emacs}
-  # - {args: gdm257/path-user-doomemacs}
-  # - {args: hexyl}
-  # - {args: lapce}
-  # - {args: jupyterlab-desktop}
-  # - {args: android-studio}
-  # - {args: recaf}
-  # - {args: rstudio}
-  # - {args: serial-studio}
-  # - {args: spyder}
-  # - {args: sourcetrail}
-  # - {args: masscode}
-  # - {args: texstudio}
-  - { args: ldap-admin }
-  - { args: redis }
-  # - {args: postgresql14}
-  # - {args: mysql57}
-  # - {args: mysql8}
-  # - {args: mongodb}
-  - { args: dolt }
-  - { args: protobuf }
-  - { args: another-redis-desktop-manager }
-  # - {args: tiny-rdm}
-  - { args: mongodb-compass }
-  - { args: edgedb }
-  - { args: gdm257/dbgate }
-  # - {args: chat2db}
-  # - {args: jailer}
-  # - {args: dbeaver}
-  # - {args: dblab}
-  # - {args: usql}
-  - { args: gdm257/onedump }
-  - { args: gdm257/dqex }
-  - { args: atlas }
-  # - {args: migrate}
-  # - {args: dbmate}
-  # - {args: goose}
-  # - {args: datax}
-  # - {args: zincsearch}
-  # - {args: heidisql}
-  # - {args: sqlyog-community}
-  # - {args: falcon-sql-client}
-  # - {args: beekeeper-studio}
-  - { args: sqlitebrowser }
-  # - {args: sqlitestudio}
-  - { args: sqlite }
-  # - {args: studio-3t}
-  # - {args: robo3t}
-  # - {args: NoSQLBooster-for-MongoDB}
+
+_cpp:
+  - { args: qt-creator }
+  - { args: xmake }
+  - { args: conan }
+  - { args: vcpkg }
+  - { args: doxygen }
+
+csharp:
+  - { args: nuget }
+
+_exe:
+  - { args: upx }
+  - { args: encrypto }
+  # - {args: nfpm}
+
+gcc:
+  - { args: mingw }
+  - { args: llvm }
+
+git:
   - { args: jj }
   - { args: jjui }
   # - {args: vizjj}
@@ -212,7 +183,7 @@ run:
   # - {args: lazyjj}
   - { args: git }
   - { args: gdm257/path-git }
-  - { args: bit }
+  # - {args: bit}
   - { args: main/worktrunk }
   - { args: gitui }
   # - {args: gitu}
@@ -239,12 +210,6 @@ run:
   # - {args: gix}
   # - {args: git-chglog}
   - { args: git-cliff }
-  # - {args: git-sizer}
-  # - {args: git-quick-stats}
-  - { args: onefetch }
-  - { args: scc }
-  # - {args: tokei}
-  # - {args: cloc}
   # - {args: gitea}
   - { args: act }
   # - {args: hub}
@@ -252,13 +217,186 @@ run:
   # - {args: ghq}
   # - {args: lepton}
   # - {args: glab}
-  # - {args: teleport}
-  # - {args: jenkins-lts}
-  # - {args: nomad}
-  # - {args: semaphore}
-  # - {args: prometheus}
-  # - {args: openobserve}
   # - {args: sourcetree}
   # - {args: sourcetree_ScoopInstaller}
   # - {args: gisto}
-  # - {args: nfpm}
+
+_git-stats:
+  - { args: onefetch }
+  - { args: scc }
+  # - {args: tokei}
+  # - {args: cloc}
+  # - {args: git-sizer}
+  # - {args: git-quick-stats}
+
+go:
+  - { args: go }
+  - { args: golangci-lint }
+  - { args: goreleaser }
+  # - {args: gf}
+  # - {args: gdm257/protoc-gen-go}
+
+_haskell:
+  - { args: haskell }
+  # - {args: stack}
+
+ide:
+  - { args: vim }
+  # - {args: vimtutor}
+  - { args: neovim }
+  - { args: neovide }
+  # - {args: helix}
+  # - {args: ox}
+  # - {args: emacs}
+  # - {args: gdm257/path-user-doomemacs}
+  # - {args: hexyl}
+  # - {args: lapce}
+  # - {args: jupyterlab-desktop}
+  # - {args: android-studio}
+  # - {args: recaf}
+  # - {args: rstudio}
+  # - {args: serial-studio}
+  # - {args: spyder}
+  # - {args: sourcetrail}
+  # - {args: masscode}
+  # - {args: texstudio}
+
+lua:
+  - { args: luajit }
+  - { args: lua51 }
+  - { args: luarocks }
+  - { args: main/lua-language-server }
+
+java:
+  - { args: jbang }
+  - { args: zulu21-jdk }
+  # - {args: "openjdk9 openjdk8-redhat openjdk11 openjdk17"}
+  - { args: maven }
+  - { args: gradle }
+  - { args: main/jdtls }
+  # - {args: netbeans-portable}
+
+js:
+  # - {args: volta}
+  - { args: nodejs-lts }
+  - { args: bun }
+  # - {args: tailwindcss}
+  # - {args: fnm}
+  # - {args: nvm}
+  # - {args: "yarn pnpm"}
+
+json:
+  - { args: protobuf }
+
+kotlin:
+  - { args: main/android-clt }
+  - { args: adb }
+  # - {args: kotlin}
+  - { args: gdm257/kotlin-lsp }
+  # - {args: flutter}
+  - { args: flutter-cn }
+
+_macro:
+  # - {args: AutoHotkey-Portable_ACooper81}
+  # - {args: AutoHotkey2-Portable}
+
+mirror:
+  # - {args: chsrc}
+
+_mysql:
+  # - {args: mysql57}
+  - {args: mysql8}
+  # - {args: dolt}
+
+_mongodb:
+  - { args: mongodb }
+  - { args: mongodb-compass }
+
+package-manager:
+  # - {args: vfox}
+  - { args: main/mise }
+  - { args: gdm257/path-user-mise }
+  # - {args: main/pixi}
+
+php:
+  - { args: php74 }
+  # - {args: php74-xdebug}
+  - { args: composer }
+
+python:
+  # - {args: "python27 python37 python38 python39 python310 python311 micromamba_ShuguangSun micromamba"}
+  - { args: gdm257/shim-python3 }
+  # - {args: rye}
+  # - {args: uv}
+  # - {args: gdm257/micromamba}
+  # - {args: gdm257/shim-mamba}
+  # - {args: gdm257/shim-conda}
+  - { args: ruff }
+  # - {args: hatch}
+
+_postgreql:
+  - {args: postgresql14}
+
+re:
+  - { args: x64dbg }
+  - { args: reko }
+  - { args: cutter }
+  - { args: die }
+  - { args: apktool }
+  - { args: ilspy }
+  # - {args: dnspy}
+
+redis:
+  - { args: redis }
+  - { args: another-redis-desktop-manager }
+  # - {args: tiny-rdm}
+
+ruby:
+  - { args: main/ruby }
+
+rust:
+  # - {args: rustup-gnu}
+  - { args: rustup-msvc }
+  - { args: rust-analyzer }
+
+scoop:
+  # - {args: dark}
+  - { args: wixtoolset }
+  - { args: innoextract }
+  - { args: innounp }
+  - { args: innosetup-portapps }
+  # - {args: InnoExtractor}
+  - { args: nsis }
+  - { args: msix }
+
+sql:
+  - { args: gdm257/dbgate }
+  # - {args: chat2db}
+  # - {args: jailer}
+  # - {args: dbeaver}
+  # - {args: dblab}
+  # - {args: usql}
+  - { args: gdm257/onedump }
+  - { args: gdm257/dqex }
+  - { args: atlas }
+  # - {args: migrate}
+  # - {args: dbmate}
+  # - {args: goose}
+  # - {args: datax}
+  # - {args: zincsearch}
+  # - {args: heidisql}
+  # - {args: sqlyog-community}
+  # - {args: falcon-sql-client}
+  # - {args: beekeeper-studio}
+  - { args: sqlitebrowser }
+  # - {args: sqlitestudio}
+  - { args: sqlite }
+  # - {args: studio-3t}
+  # - {args: robo3t}
+  # - {args: NoSQLBooster-for-MongoDB}
+
+task-runner:
+  - { args: cmake }
+
+_unity:
+  # - {args: unityhub}
