@@ -1260,13 +1260,19 @@
     "steering-custom": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/steering-skills/skills/steering-custom",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:30.0751912+08:00",
+      "installed_at": "2026-09-14T04:42:57.6729596+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/steering-skills/skills/steering-custom",
-      "version": "fc5acda",
-      "tree_hash": "e7e136dd9f92acb25f812045f13dd3b5f88ed544",
+      "version": "d61d745",
+      "tree_hash": "2abe980dc8f36c38c8e7e612249946c2679f97a4",
       "file_hashes": {
-        "SKILL.md": "sha256:b61763fadf6c1f0a40017ce0253ef727675aea5cbc99fc1f4e19a5a71f2e0048"
+        "SKILL.md": "sha256:67a839ba59e8f60d48e4fd43694d9051041b9349b37cb97d02dd091290a24f29",
+        "templates/api-standards.md": "sha256:a4765e01360c060ef749737ffefa86d7e4dd606f78235c2b7d9c75bdf3619580",
+        "templates/build.md": "sha256:443a16d626a9c0e4f928951d144b2949c8f2ffa0bccd1e7ded5d3a3bf5f54971",
+        "templates/database.md": "sha256:6565074c4deefe3542bd24aebfe78e4f2fb4232fcd5c9f96155ba0587114fa0f",
+        "templates/deployment.md": "sha256:5214e3cbf1dd9563df0364dde13188f1c6f7611d9e72b227d7f43adaaa2f0ad5",
+        "templates/error-handling.md": "sha256:fb5cfef459fa2bc0e08eecc8586dac6abc35898e66ff4c7079b99a5d19826bc3",
+        "templates/testing.md": "sha256:e32ad047125d28be8aef1213d25559fb9bc5823d64f61d9307644a4103dd138c"
       }
     },
     "stitch-skill": {
