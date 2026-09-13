@@ -34,7 +34,7 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "go:golang.org/x/tools/gopls" = { version = "v0.21.0", os = ["windows"] }
 
 "npm:neoss" = { version = "latest", os = ["linux"] }
-"npm:@mindfoldhq/trellis" = { version = "latest", os = ["windows"] }
+"npm:@fission-ai/openspec" = { version = "latest", os = ["windows"] }
 "npm:@open-pencil/cli" = { version = "latest", os = ["windows"] }
 
 "pipx:isd" = { version = "latest", os = ["linux", "macos"] }
