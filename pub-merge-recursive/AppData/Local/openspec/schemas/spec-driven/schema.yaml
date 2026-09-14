@@ -45,6 +45,15 @@ artifacts:
       implementation details belong in design.md.
 
       This is the foundation - specs, design, and tasks all build on this.
+
+      <!-- trellis:start -->
+      Trellis specs: if the repository root contains `.trellis/spec/`, it holds this
+      project's coding conventions. When filling in Impact, skim the index files
+      there (`.trellis/spec/guides/index.md` plus the `<layer>/index.md` of each
+      layer the change touches) and treat their constraints as given; design.md and
+      apply will read them in full. If the directory does not exist, skip this
+      silently - do not create it.
+      <!-- trellis:end -->
     requires: []
 
   - id: specs
@@ -178,6 +187,20 @@ artifacts:
       if a section would only restate them, point to them instead.
 
       Good design docs explain the "why" behind technical decisions.
+
+      <!-- trellis:start -->
+      Trellis specs (project coding conventions) - read on demand:
+      - If `.trellis/spec/` does not exist in the repository root, skip this
+        section silently and do not create it.
+      - List `.trellis/spec/` to discover the layout: either `<layer>/index.md`
+        directories (single repo) or `<package>/<layer>/index.md` (monorepo),
+        plus the shared `guides/`.
+      - Read `guides/index.md` and the `index.md` of every layer this change
+        touches, then the specific guideline files their Pre-Development Checklist
+        points to. The index is a pointer, not the goal.
+      - Treat those guidelines as hard constraints on Decisions; when a decision
+        must deviate from one, say so explicitly in that decision's rationale.
+      <!-- trellis:end -->
     requires:
       - proposal
 
@@ -230,3 +253,25 @@ apply:
   instruction: |
     Read context files, work through pending tasks, mark complete as you go.
     Pause if you hit blockers or need clarification.
+
+    <!-- trellis:start -->
+    Trellis specs (project coding conventions):
+    - Before writing code for a task, if `.trellis/spec/` exists in the
+      repository root, read the relevant layer's `index.md` (layout: `<layer>/`
+      or `<package>/<layer>/`) plus `guides/index.md`, then the guideline files
+      the index points to, and follow them while implementing. If the directory
+      does not exist, skip silently - do not create it.
+    - After implementation, before declaring the change done, review whether
+      this work produced knowledge worth recording in `.trellis/spec/`: a new
+      pattern or convention, a gotcha, a bug-prevention rule, or a load-bearing
+      technical decision. If yes, update the matching
+      `.trellis/spec/<layer>/*.md` (or `guides/*.md` for cross-cutting thinking
+      rules) with executable detail - concrete signatures, payload fields, env
+      keys, error behavior - not principle-only text, and update that layer's
+      `index.md` if files were added or renamed. Do this in the same session,
+      not as a follow-up.
+    - "Nothing to update" is a valid outcome, but state the judgment explicitly.
+    - Keep the two spec systems separate: openspec specs define product
+      behavior; `.trellis/spec/` defines how code in this repo is written. Do
+      not copy requirement or scenario content into `.trellis/spec/`.
+    <!-- trellis:end -->
