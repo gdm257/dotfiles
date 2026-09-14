@@ -1248,22 +1248,25 @@
     "steering": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/steering-skills/skills/steering",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:32.2871151+08:00",
+      "installed_at": "2026-09-15T02:02:01.4132406+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/steering-skills/skills/steering",
-      "version": "fc5acda",
-      "tree_hash": "7daaea7ca2043bfb5de221701ef3c95866b93349",
+      "version": "75c29e8",
+      "tree_hash": "194b6aca38471f9f86066f7d8f7fcffcbfe4dd69",
       "file_hashes": {
-        "SKILL.md": "sha256:d787ddd944f3c3a02484282d3cbe8dd809d95bfdf25fb2c114c9158ee7d19c48"
+        "SKILL.md": "sha256:8d54195d2bb2a59b5d340d645ce19facc2bc80fadd028ca42c626c2be36a09f2",
+        "templates/product.md": "sha256:f233ba3cebcaa4e8303ba59d9c447d2fa1c95a0a6504b19e8dc3df63e236f73f",
+        "templates/structure.md": "sha256:32230506ca8e65ddd8ece315f86feeb2d00439d915b421b486ca56c9ad3e19e6",
+        "templates/tech.md": "sha256:fcd9b18caa4bf7404e571786641b147600406224fc40c14d543c802f62cce9f3"
       }
     },
     "steering-custom": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/steering-skills/skills/steering-custom",
       "type": "github-subdir",
-      "installed_at": "2026-09-14T04:42:57.6729596+09:00",
+      "installed_at": "2026-09-15T02:02:07.3904207+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/steering-skills/skills/steering-custom",
-      "version": "d61d745",
+      "version": "75c29e8",
       "tree_hash": "2abe980dc8f36c38c8e7e612249946c2679f97a4",
       "file_hashes": {
         "SKILL.md": "sha256:67a839ba59e8f60d48e4fd43694d9051041b9349b37cb97d02dd091290a24f29",

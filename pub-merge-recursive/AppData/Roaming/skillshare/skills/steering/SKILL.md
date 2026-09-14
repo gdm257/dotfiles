@@ -1,6 +1,6 @@
 ---
 name: steering
-description: Maintain .ruler/ as persistent project memory (bootstrap/sync). Use when initializing or updating steering documents. Supports --local to keep steering out of version control.
+description: Maintain .rulesync/rules/ as persistent project memory (bootstrap/sync). Use when initializing or updating steering documents. Supports --local to keep steering out of version control.
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 metadata: {}
 ---
@@ -8,14 +8,14 @@ metadata: {}
 # kiro-steering Skill
 
 ## Role
-You are a specialized skill for maintaining `.ruler/` as persistent project memory.
+You are a specialized skill for maintaining `.rulesync/rules/` as persistent project memory.
 
 ## Options
 
-- `--local` — Keep steering out of version control. Creates `.ruler/.gitignore` that ignores the entire steering directory. Use when steering should stay local to the developer's machine.
+- `--local` — Keep steering out of version control. Creates `.rulesync/rules/.gitignore` that ignores the entire steering directory. Use when steering should stay local to the developer's machine.
 
 ## Core Mission
-**Role**: Maintain `.ruler/` as persistent project memory.
+**Role**: Maintain `.rulesync/rules/` as persistent project memory.
 
 **Mission**:
 - Bootstrap: Generate core steering from codebase (first-time)
@@ -25,7 +25,7 @@ You are a specialized skill for maintaining `.ruler/` as persistent project memo
 **Success Criteria**:
 - Steering captures patterns and principles, not exhaustive lists
 - Code drift detected and reported
-- All `.ruler/*.md` treated equally (core + custom)
+- All `.rulesync/rules/*.md` treated equally (core + custom)
 
 ## Execution Steps
 
@@ -33,13 +33,13 @@ You are a specialized skill for maintaining `.ruler/` as persistent project memo
 
 If steering context is already available from conversation, skip redundant file reads.
 
-- For Bootstrap mode: Use embedded templates below
-- For Sync mode: Read all existing `.ruler/*.md` files
+- For Bootstrap mode: Read `templates/{product,tech,structure}.md` from this skill's directory
+- For Sync mode: Read all existing `.rulesync/rules/*.md` files
 - Steering principles are embedded in the "Steering Principles" section below
 
 ## Scenario Detection
 
-Check `.ruler/` status:
+Check `.rulesync/rules/` status:
 
 **Bootstrap Mode**: Empty OR missing core files (product.md, tech.md, structure.md)
 **Sync Mode**: All core files exist
@@ -48,7 +48,7 @@ Check `.ruler/` status:
 
 ## Bootstrap Flow
 
-1. Load templates from the `<template>` sections embedded in this skill
+1. Read `templates/product.md`, `templates/tech.md`, `templates/structure.md` from this skill's directory
 2. Analyze codebase (JIT):
 
 #### Parallel Research
@@ -65,7 +65,7 @@ After all parallel research completes, synthesize patterns for steering files.
    - Tech: Frameworks, decisions, conventions
    - Structure: Organization, naming, imports
 4. Generate steering files (follow templates and steering principles below)
-5. If `--local` flag is set, create `.ruler/.gitignore` with `*` to ignore the entire directory
+5. If `--local` flag is set, create `.rulesync/rules/.gitignore` with `*` to ignore the entire directory
 6. Present summary for review
 
 **Focus**: Patterns that guide decisions, not catalogs of files/dependencies.
@@ -74,7 +74,7 @@ After all parallel research completes, synthesize patterns for steering files.
 
 ## Sync Flow
 
-1. Load all existing steering (`.ruler/*.md`)
+1. Load all existing steering (`.rulesync/rules/*.md`)
 2. Analyze codebase for changes (JIT)
 3. Detect drift:
    - **Steering → Code**: Missing elements → Warning
@@ -141,6 +141,7 @@ Never include:
 - **Concrete examples**: Show patterns with code
 - **Explain rationale**: Why decisions were made
 - **Maintainable size**: 100-200 lines typical
+- **Common mistakes**: Record known pitfalls and forbidden patterns
 
 ### Preservation (when updating)
 
@@ -219,124 +220,7 @@ Steering Updated
 
 ## Notes
 
-- All `.ruler/*.md` loaded as project memory
-- Templates and principles are embedded in this file (no external dependencies)
+- All `.rulesync/rules/*.md` loaded as project memory
+- Templates live in this skill's `templates/` directory
 - Focus on patterns, not catalogs
 - "Golden Rule": New code following patterns shouldn't require steering updates
-
----
-
-## Templates
-
-<template name="product">
-# Product Overview
-
-[Brief description of what this product does and who it serves]
-
-## Core Capabilities
-
-[3-5 key capabilities, not exhaustive features]
-
-## Target Use Cases
-
-[Primary scenarios this product addresses]
-
-## Value Proposition
-
-[What makes this product unique or valuable]
-
----
-_Focus on patterns and purpose, not exhaustive feature lists_
-</template>
-
-<template name="tech">
-# Technology Stack
-
-## Architecture
-
-[High-level system design approach]
-
-## Core Technologies
-
-- **Language**: [e.g., TypeScript, Python]
-- **Framework**: [e.g., React, Next.js, Django]
-- **Runtime**: [e.g., Node.js 20+]
-
-## Key Libraries
-
-[Only major libraries that influence development patterns]
-
-## Development Standards
-
-### Type Safety
-[e.g., TypeScript strict mode, no `any`]
-
-### Code Quality
-[e.g., ESLint, Prettier rules]
-
-### Testing
-[e.g., Jest, coverage requirements]
-
-## Development Environment
-
-### Required Tools
-[Key tools and version requirements]
-
-### Common Commands
-```bash
-# Dev: [command]
-# Build: [command]
-# Test: [command]
-```
-
-## Key Technical Decisions
-
-[Important architectural choices and rationale]
-
----
-_Document standards and patterns, not every dependency_
-</template>
-
-<template name="structure">
-# Project Structure
-
-## Organization Philosophy
-
-[Describe approach: feature-first, layered, domain-driven, etc.]
-
-## Directory Patterns
-
-### [Pattern Name]
-**Location**: `/path/`
-**Purpose**: [What belongs here]
-**Example**: [Brief example]
-
-### [Pattern Name]
-**Location**: `/path/`
-**Purpose**: [What belongs here]
-**Example**: [Brief example]
-
-## Naming Conventions
-
-- **Files**: [Pattern, e.g., PascalCase, kebab-case]
-- **Components**: [Pattern]
-- **Functions**: [Pattern]
-
-## Import Organization
-
-```typescript
-// Example import patterns
-import { Something } from '@/path'  // Absolute
-import { Local } from './local'     // Relative
-```
-
-**Path Aliases**:
-- `@/`: [Maps to]
-
-## Code Organization Principles
-
-[Key architectural patterns and dependency rules]
-
----
-_Document patterns, not file trees. New files following patterns shouldn't require updates_
-</template>
