@@ -6,6 +6,6 @@ run:
   - {args: "gdm257/cc-plugins", command: "plugin marketplace add"}
 
   # Plugins
-  # - {args: "npm:pi-wakatime"}
+  - {args: "npm:wakatime-omp"}
   - {args: "claude-code-hooks@cc-257"}
   - {args: "git:github.com/gdm257/pi-auto-approve"}
