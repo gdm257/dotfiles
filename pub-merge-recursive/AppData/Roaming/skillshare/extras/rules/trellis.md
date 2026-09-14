@@ -32,3 +32,21 @@ If project is managed by Trellis. The working knowledge you need lives under `.t
 - `.trellis/tasks/` — active and archived tasks (PRDs, research, jsonl context)
 
 If a Trellis command is available on your platform (e.g. `/trellis:finish-work`, `/trellis:continue`), prefer it over manual steps. Not every platform exposes every command.
+
+<!-- trellis-spec:start -->
+Trellis specs (project coding conventions) - consult on demand:
+- If `.trellis/spec/` does not exist in the repository root, skip this
+  section silently and do not create it.
+- When a question touches how this codebase is written (structure,
+  error handling, testing, naming, tooling), list `.trellis/spec/` to
+  discover the layout (`<layer>/index.md` or `<package>/<layer>/index.md`,
+  plus shared `guides/`), read the matching `index.md`, then the guideline
+  files it points to. The index is a pointer, not the goal.
+- Use them as evidence for feasibility, constraints, and
+  recommendations - cite the file you relied on. Do not propose options
+  that violate a convention; if a convention blocks something the user
+  wants, surface the conflict explicitly instead of working around it.
+- Read only. Exploration and brainstorming never write to
+  `.trellis/spec/` - capturing new knowledge happens later, via design
+  and apply.
+<!-- trellis-spec:end -->
