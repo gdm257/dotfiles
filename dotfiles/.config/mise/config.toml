@@ -15,7 +15,6 @@ python.uv_venv_auto = true
 
 [tools]
 bun = { version = "latest", os = ["windows"] }
-node = { version = "lts", postinstall = "corepack enable", os = ["windows"] }
 dart = { version = "latest", os = ["windows"] }
 pnpm = { version = "latest", os = ["windows"] }
 uv = { version = "latest", os = ["windows"] }
@@ -37,7 +36,7 @@ zellij = { version = "latest", os = ["linux", "macos"] }
 "npm:@fission-ai/openspec" = { version = "latest", os = ["windows"] }
 "npm:@open-pencil/cli" = { version = "latest", os = ["windows"] }
 
-"pipx:isd" = { version = "latest", os = ["linux", "macos"] }
+"pipx:isd" = { version = "latest", os = ["linux"] }
 "pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = { version = "main", os = ["windows"] }
 "pipx:git+https://github.com/SilentSnowSoul/magnetizer.git" = { version = "main", os = ["windows"] }
 "pipx:httpie" = { version = "latest", os = ["windows"] }
