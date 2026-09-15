@@ -136,6 +136,20 @@
         "SKILL.md": "sha256:2cf276fe7679081784fb00e1ce4b942ca923d8a0672bd41bc494bc7f6d66c962"
       }
     },
+    "diagnosing-bugs": {
+      "source": "https://github.com/mattpocock/skills/skills/engineering/diagnosing-bugs",
+      "type": "github-subdir",
+      "installed_at": "2026-09-17T06:35:50.8274465+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/diagnosing-bugs",
+      "version": "959a8e9",
+      "tree_hash": "99bd56983e42bc752c52da67f1112e4121781cd1",
+      "file_hashes": {
+        "SKILL.md": "sha256:77f3cf31bc99b2f49af943222526531fcc9fc41d047626d3640e875e85af3e84",
+        "agents/openai.yaml": "sha256:3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+        "scripts/hitl-loop.template.sh": "sha256:35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
+      }
+    },
     "explore-codebase": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/explore-codebase",
       "type": "github-subdir",
@@ -589,6 +603,20 @@
       "file_hashes": {
         "SKILL.md": "sha256:6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3",
         "agents/openai.yaml": "sha256:8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc"
+      }
+    },
+    "improve-codebase-architecture": {
+      "source": "https://github.com/mattpocock/skills/skills/engineering/improve-codebase-architecture",
+      "type": "github-subdir",
+      "installed_at": "2026-09-17T06:35:51.1219329+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/improve-codebase-architecture",
+      "version": "959a8e9",
+      "tree_hash": "3d35cd438f4067b03c8b3792e038960e4ac11526",
+      "file_hashes": {
+        "HTML-REPORT.md": "sha256:581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528",
+        "SKILL.md": "sha256:d1ac25511a936ff4250a48dbcefda363837d6bb9321b3cba73df99fa37270a75",
+        "agents/openai.yaml": "sha256:c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1"
       }
     },
     "interview-me": {
@@ -1114,6 +1142,21 @@
         "SKILL.md": "sha256:40df33b58fc6ef889b93585733feb9566b76e9586efa7f376785c1e995197ac0"
       }
     },
+    "prototype": {
+      "source": "https://github.com/mattpocock/skills/skills/engineering/prototype",
+      "type": "github-subdir",
+      "installed_at": "2026-09-17T06:35:51.3981659+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/prototype",
+      "version": "959a8e9",
+      "tree_hash": "e41d92e171f074a2b6887d8f6faca4a15c83d1ca",
+      "file_hashes": {
+        "LOGIC.md": "sha256:f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9",
+        "SKILL.md": "sha256:714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+        "UI.md": "sha256:723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3",
+        "agents/openai.yaml": "sha256:5af65e43ab41a350436697b81e27b7f848d36782043b73c322bb2c9fa9cc55dc"
+      }
+    },
     "recall": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/recall",
       "type": "github-subdir",
@@ -1634,6 +1677,20 @@
       "file_hashes": {
         "SKILL.md": "sha256:dd32e35eedef12763a3b3311a5993fce451f74919be614c78335c4b7ebfc0a6a",
         "resources/.trellis/workflow.md": "sha256:078bc526d7a29b1d391cc198d113d28225cf46a6868d655498832a6cc9a36acf"
+      }
+    },
+    "writing-for-agents": {
+      "source": "https://github.com/mattpocock/skills/skills/productivity/writing-for-agents",
+      "type": "github-subdir",
+      "installed_at": "2026-09-17T06:19:15.7151317+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/productivity/writing-for-agents",
+      "version": "959a8e9",
+      "tree_hash": "ad2925850efb8973a72d2e666f7a975f9a2d4a9b",
+      "file_hashes": {
+        "SKILL-MECHANICS.md": "sha256:c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059",
+        "SKILL.md": "sha256:551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+        "agents/openai.yaml": "sha256:eacb24b2a618cfb81dacb0416f4fdd75ddf3a8060f8ddb99aae1b1e301907e4b"
       }
     },
     "writing-great-skills": {
