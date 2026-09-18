@@ -26,8 +26,8 @@ tasks:
         vars:
           RUN:
             map:
-              prefix: "{{ if ._RUN.prefix }}{{ ._RUN.prefix }}{{ else }}{{ ._MANIFEST.prefix }}{{ end }}"
-              entrypoint: "{{ if ._RUN.entrypoint }}{{ ._RUN.entrypoint }}{{ else }}{{ ._MANIFEST.entrypoint }}{{ end }}"
-              command: "{{ if ._RUN.command }}{{ ._RUN.command }}{{ else }}{{ ._MANIFEST.command }}{{ end }}"
-              args: "{{ if ._RUN.args }}{{ ._RUN.args }}{{ else }}{{ ._MANIFEST.args }}{{ end }}"
-              suffix: "{{ if ._RUN.suffix }}{{ ._RUN.suffix }}{{ else }}{{ ._MANIFEST.suffix }}{{ end }}"
+              prefix: "{{ if ._RUN.prefix }}{{ ._RUN.prefix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.prefix (get (default dict ._MANIFEST.presets) ._RUN.preset).prefix }}{{ else }}{{ ._MANIFEST.prefix }}{{ end }}"
+              entrypoint: "{{ if and ._RUN.preset (not (hasKey (default dict ._MANIFEST.presets) ._RUN.preset)) }}{{ fail (printf \"unknown preset '%s' in %s\" ._RUN.preset .PATH) }}{{ else if ._RUN.entrypoint }}{{ ._RUN.entrypoint }}{{ else if ._RUN.preset }}{{ default ._MANIFEST.entrypoint (get (default dict ._MANIFEST.presets) ._RUN.preset).entrypoint }}{{ else }}{{ ._MANIFEST.entrypoint }}{{ end }}"
+              command: "{{ if ._RUN.command }}{{ ._RUN.command }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.command (get (default dict ._MANIFEST.presets) ._RUN.preset).command }}{{ else }}{{ ._MANIFEST.command }}{{ end }}"
+              args: "{{ if ._RUN.args }}{{ ._RUN.args }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.args (get (default dict ._MANIFEST.presets) ._RUN.preset).args }}{{ else }}{{ ._MANIFEST.args }}{{ end }}"
+              suffix: "{{ if ._RUN.suffix }}{{ ._RUN.suffix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.suffix (get (default dict ._MANIFEST.presets) ._RUN.preset).suffix }}{{ else }}{{ ._MANIFEST.suffix }}{{ end }}"
