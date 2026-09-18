@@ -1,0 +1,29 @@
+name: matt-pocock
+version: 1
+description: Matt Pocock engineering workflow - grill-with-docs → to-spec → to-tickets -> implement
+artifacts:
+  - id: spec
+    generates: spec.md
+    description: Detailed specification for the change
+    template: spec.md
+    instruction: |
+      Call the Skill tool "to-spec".
+    requires: []
+
+  - id: tickets
+    generates: tickets.md
+    description: Break a plan, spec, or conversation into a set of tickets
+    template: tickets.md
+    instruction: |
+      Call the Skill tool "to-tickets".
+    requires:
+      - spec
+
+apply:
+  requires: [ tickets ]
+  tracks: tickets.md
+  instruction: |
+    Read context files, work through pending tickets, mark complete as you go.
+    Pause if you hit blockers or need clarification.
+
+    Call the Skill tool "implement".
