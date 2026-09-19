@@ -50,6 +50,19 @@
         "SKILL.md": "sha256:fffbaac8597f07679e9d87145533567658aedba3b5eca6f16a7075a333048caa"
       }
     },
+    "code-review": {
+      "source": "https://github.com/mattpocock/skills/skills/engineering/code-review",
+      "type": "github-subdir",
+      "installed_at": "2026-09-21T04:01:43.8406271+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/code-review",
+      "version": "c55ee46",
+      "tree_hash": "d8e341cee7980127dddda05159bedf25dc853615",
+      "file_hashes": {
+        "SKILL.md": "sha256:47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
+        "agents/openai.yaml": "sha256:8229ca854e11dc8e6aef2131ee03f31fb1561cf905fab9ccc325180cf3331352"
+      }
+    },
     "code-review-and-quality": {
       "source": "https://github.com/addyosmani/agent-skills.git/skills/code-review-and-quality",
       "type": "github-subdir",
@@ -975,6 +988,18 @@
         "SKILL.md": "sha256:0a19be27aefbf59ae5b67e9fb4b386d74dbd50c7e7f6d153bf8828292a0b503c"
       }
     },
+    "open-code-review-delegate": {
+      "source": "https://github.com/alibaba/open-code-review/skills/open-code-review-delegate",
+      "type": "github-subdir",
+      "installed_at": "2026-09-21T03:35:39.5282859+09:00",
+      "repo_url": "https://github.com/alibaba/open-code-review.git",
+      "subdir": "skills/open-code-review-delegate",
+      "version": "cf64e70",
+      "tree_hash": "763660a601ea4b9b75d2fdb679aa81fd205df461",
+      "file_hashes": {
+        "SKILL.md": "sha256:20828a50b05465496468c733270be2256c7764d2e5c29181a7706c58cfc64087"
+      }
+    },
     "open-pencil": {
       "source": "https://github.com/open-pencil/skills.git/skills/open-pencil",
       "type": "github-subdir",
@@ -1279,6 +1304,19 @@
         "references/gitlab-api.md": "sha256:c0e9ce36dd8647859727c2e4d878b5101b990de0881338992483a4c0ac46879c",
         "scripts/.gitkeep": "sha256:964c33b8a5c41d1d0cad193effa03e1387a7f5e8b6e1cd7dd855b3e50e6fd2f2",
         "scripts/utils.sh": "sha256:c4ba3cf231afd06b919428d4599dda91ff2cf19920625a1c6720cc4cfc1d70b8"
+      }
+    },
+    "research": {
+      "source": "https://github.com/mattpocock/skills/skills/engineering/research",
+      "type": "github-subdir",
+      "installed_at": "2026-09-21T04:06:02.2905722+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/research",
+      "version": "c55ee46",
+      "tree_hash": "0a6796c5667e95ed2301ba7381c123b4acb2ae1a",
+      "file_hashes": {
+        "SKILL.md": "sha256:985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
+        "agents/openai.yaml": "sha256:9b4c470d63221c1f68f22df70b83e2f12401b317babe0d1b7b5f24a974474d0d"
       }
     },
     "resolving-merge-conflicts": {
