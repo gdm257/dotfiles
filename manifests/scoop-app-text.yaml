@@ -90,9 +90,10 @@ run:
   # - {args: latex}
   # - {args: msys2}
   # - {args: marktext}
-  - { args: gdm257/md-preview }
+  # - {args: gdm257/md-preview}
   - { args: gdm257/inknote }
   # - {args: gdm257/vividmark}
+  # - {args: gdm257/markview}
   # - {args: logseq}
   # - {args: github}
   # - {args: oh-my-posh}

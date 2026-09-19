@@ -48,6 +48,7 @@ run:
   # - {args: esearch}
   # - {args: flameshot}
   # - {args: Snipaste-Portable}
+  # - {args: gdm257/kiri}
   # - {args: wavetone}
   # - {args: xnviewmp}
   # - {args: ScreenToGif}
