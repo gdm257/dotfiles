@@ -1,0 +1,29 @@
+name: matt-pocock-wayfinder
+version: 1
+description: Matt Pocock engineering wayfinder
+artifacts:
+  - id: map
+    generates: map.md
+    description: Effort map
+    template: map.md
+    instruction: |
+      Call the Skill tool "wayfinder".
+    requires: []
+
+  - id: tickets
+    generates: tickets.md
+    description: Break a plan, spec, or conversation into a set of tickets
+    template: tickets.md
+    instruction: |
+      Call the Skill tool "to-tickets".
+    requires:
+      - map
+
+apply:
+  requires: [ tickets ]
+  tracks: tickets.md
+  instruction: |
+    Read context files, work through pending tickets, mark complete as you go.
+    Pause if you hit blockers or need clarification.
+
+    Call the Skill tool "wayfinder".
