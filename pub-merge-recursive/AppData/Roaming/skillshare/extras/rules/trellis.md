@@ -1,5 +1,5 @@
 ---
-enable: true
+enable: false
 urls:
   - name: trellis
     url: https://raw.githubusercontent.com/mindfold-ai/Trellis/refs/heads/main/packages/cli/src/templates/markdown/agents.md
