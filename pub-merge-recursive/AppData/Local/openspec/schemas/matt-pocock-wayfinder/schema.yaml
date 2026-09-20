@@ -21,7 +21,6 @@ artifacts:
 
 apply:
   requires: [ tickets ]
-  tracks: tickets.md
   instruction: |
     Read context files, work through pending tickets, mark complete as you go.
     Pause if you hit blockers or need clarification.
