@@ -260,23 +260,37 @@
         "SKILL.md": "sha256:4873a14afba488a51bc73f0ca06fd62a7f8fe92caf93f6b6bd3f9faf735ea218"
       }
     },
+    "git-merge-upstream": {
+      "source": "https://github.com/gdm257/cc-plugins.git/plugins/agent-skills/skills/git-merge-upstream",
+      "type": "github-subdir",
+      "installed_at": "2026-09-24T21:34:45.549213+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/agent-skills/skills/git-merge-upstream",
+      "version": "abe6633",
+      "tree_hash": "45c3e27e9fa816bbac18be662947bf1b0c9aece9",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
+      "file_hashes": {
+        "SKILL.md": "sha256:258b9999d6ae6021bee3c8599885dd3cb3fe2b61e8c9fa2372c0ca7c6707bc1e"
+      }
+    },
     "git-rebase": {
       "source": "https://github.com/pedronauck/skills.git/skills/mine/git-rebase",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:59.6823386+08:00",
+      "installed_at": "2026-09-24T21:35:02.7422658+09:00",
       "repo_url": "https://github.com/pedronauck/skills.git",
       "subdir": "skills/mine/git-rebase",
-      "version": "1deebaa",
-      "tree_hash": "c77a691dccb364e1a26f5f734dd487bc91b5fc35",
+      "version": "0422940",
+      "tree_hash": "30c81346b73f26e3a5cf46007a3c19a375fcbd78",
+      "commit": "0422940cea5d9960b3697016d1cb28c8ed02b030",
       "file_hashes": {
-        "SKILL.md": "sha256:11e74f8a4880433b7e01fb4dd704db3120dd28d954a81fc678417bdf35ca836b",
-        "references/automation.md": "sha256:bac788b2aa172eba3440602ceffacaef307eb644acd14937dff5b30b36709525",
-        "references/resolution-patterns.md": "sha256:95a0c0abfd3fb0713a96abb26e47df1dd16708e78b0acf4d963dff94459da860",
-        "references/scripts-tools.md": "sha256:e4b9d9b9667f29ba352e0f61750e57ac14ddfd825139795830b581248cfd916b",
-        "references/strategies.md": "sha256:f3c90b00bddba9cc771abe194058ffc93236d916373ee84f696eeeb5c164755a",
-        "references/troubleshooting.md": "sha256:27ff5723411b15d27b26a04bc3b64931da0112af06d87bd2562bde8049db95bc",
+        "SKILL.md": "sha256:bd5793cc45c0579056e21ce0f7a0c92de627bd14c1de7caf670b80a0387795fb",
+        "references/automation.md": "sha256:6605d8cc240b020090c2ddd8ace8d45608c5f9f3756168b718e22051d9d6e146",
+        "references/resolution-patterns.md": "sha256:d72668bf49c1cb6c6fd914ac450ef502a3fbf21ed8d055e4ec2a88fa465aee16",
+        "references/scripts-tools.md": "sha256:7c45170994ae1cf82712b9ed56211198c5cc8a6d26e69073671c68a9aa1d833e",
+        "references/strategies.md": "sha256:86cc2a7621e1113f3281db5208509b8625fc0579d4e90790dd869f73b9787cf8",
+        "references/troubleshooting.md": "sha256:d7c05428d725a89ef4f87fb94893357ff240a922f2ac06e98ef84a396c5ee375",
         "scripts/analyze-conflicts.sh": "sha256:e9f46a80ace9d6abd3edfda204a4a24f06020825be89c4f252278f45a8736fc0",
-        "scripts/pre-rebase-backup.sh": "sha256:e6e00a4215b7c07ced34248c3b4b7ceb3e621a99b90e90ff931b6196e5b0d7a8",
+        "scripts/pre-rebase-backup.sh": "sha256:042576c06a41b310cfd267fa34868937a626ccca89e1998461cd498887fcc967",
         "scripts/validate-merge.sh": "sha256:0ff3d79f97035e9208da2baa3a7faed02e29e4c7c3a311e8c82b28eb13d36695"
       }
     },
@@ -447,6 +461,21 @@
       "file_hashes": {
         "SKILL.md": "sha256:7c62de979fdc7ac32fb5ddb2146156c917f80ee070d30fadc9d40343c4b6ed25",
         "agents/openai.yaml": "sha256:5c479fd562c691851690e8b18c8501045bef0943c10743d636b2fae26add1d28"
+      }
+    },
+    "i-have-adhd": {
+      "source": "https://github.com/ayghri/i-have-adhd/skills/i-have-adhd",
+      "type": "github-subdir",
+      "installed_at": "2026-09-23T02:56:24.2411893+09:00",
+      "repo_url": "https://github.com/ayghri/i-have-adhd.git",
+      "subdir": "skills/i-have-adhd",
+      "version": "839872f",
+      "tree_hash": "72dc6e3e9d0f8d906579a235edb7b2a402d7b8e1",
+      "commit": "839872f9d1cd634fed642b4589ce7226199cc15f",
+      "file_hashes": {
+        "SKILL.md": "sha256:3170b16ace00aecb0dd7feb54c0b5aa642e7502acda06ecd24fd89a11c7127e9",
+        "agents/gemini.toml": "sha256:5108a6123beb9df24846e0dd3f902c652d18522dfbc56e5762032ea383041c62",
+        "agents/openai.yaml": "sha256:2c51291283dcefdca43ca6b0c08172f225c7c26a9783ec444d6bdfa51ca96f8f"
       }
     },
     "image-to-code-skill": {
@@ -1802,16 +1831,17 @@
       }
     },
     "wait-what": {
-      "source": "https://github.com/mattpocock/skills/skills/productivity/wait-what",
+      "source": "https://github.com/vinvcn/mattpocock-skills-zh-CN/skills/productivity/wait-what",
       "type": "github-subdir",
-      "installed_at": "2026-09-19T07:24:45.7241692+09:00",
-      "repo_url": "https://github.com/mattpocock/skills.git",
+      "installed_at": "2026-09-23T02:34:50.7319917+09:00",
+      "repo_url": "https://github.com/vinvcn/mattpocock-skills-zh-CN.git",
       "subdir": "skills/productivity/wait-what",
-      "version": "c55ee46",
-      "tree_hash": "c119d66111cc1bac94cbc51322cd34ed21aa0446",
+      "version": "af6224e",
+      "tree_hash": "ac2f74674a76d6bb0d96be0a966f460be8da3dcd",
+      "commit": "af6224e1de2ad58ec55ebf5cc7b15f8dd246ae50",
       "file_hashes": {
-        "SKILL.md": "sha256:e3f44e3ccbc0e7b62f20ba70b295fc9c9f4aa3f96c77168faee1c71bacbf4215",
-        "agents/openai.yaml": "sha256:b41faadf741d51e4ea184148b2d1854d93f947aaf754c7844f70a00f04194999"
+        "SKILL.md": "sha256:a31862252ba5b0beacc16b02399b4d4851e1a2f58911e26eaacf0e4e377f34b2",
+        "agents/openai.yaml": "sha256:c5160cb8f608759a228a46f66eeb439fea83321d32780efe71073dc2ce22577f"
       }
     },
     "wayfinder": {
@@ -1825,6 +1855,19 @@
       "file_hashes": {
         "SKILL.md": "sha256:fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
         "agents/openai.yaml": "sha256:88bc81a11a6d52ac67aeaa76b8b619e387020d47c5133a4dd4927fd15c4ad073"
+      }
+    },
+    "what-context-needed": {
+      "source": "https://github.com/github/awesome-copilot/skills/what-context-needed",
+      "type": "github-subdir",
+      "installed_at": "2026-09-23T03:48:12.7451042+09:00",
+      "repo_url": "https://github.com/github/awesome-copilot.git",
+      "subdir": "skills/what-context-needed",
+      "version": "db8d563",
+      "tree_hash": "95e13a9b2f36d5a106886d7e0aeabbbbafa15b47",
+      "commit": "db8d563aefebf9dd569bc72596c4ebd817847534",
+      "file_hashes": {
+        "SKILL.md": "sha256:65ed7445bf561a5e5199ac77478d2691c05019e0dc32fdddc23db9e45bd9d135"
       }
     },
     "writing-for-agents": {
