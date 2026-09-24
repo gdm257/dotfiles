@@ -40,7 +40,6 @@ run:
   - { args: gdm257/open-code-review }
   - { args: zed }
   - { args: oh-my-pi }
-  - { args: zcode }
   - { args: gdm257/octopus-257 }
   - { args: gdm257/codebase-memory-mcp }
   - { args: gdm257/codebase-memory-mcp-ui }
@@ -74,11 +73,11 @@ run:
   - { args: gh }
 
 _algorithm:
-  # - {args: openmodelica}
-  # - {args: scilab}
+  - {args: openmodelica}
+  - {args: scilab}
 
-auth:
-  # - {args: ldap-admin}
+_auth:
+  - {args: ldap-admin}
 
 _bash:
   - { args: shellcheck }
@@ -136,7 +135,7 @@ coding-agent:
   # - {args: main/goose-cli}
   # - {args: gdm257/goose}
   # - {args: gdm257/goose-desktop}
-  - { args: zcode }
+  # - {args: zcode}
   # - {args: herdr}
   # - {args: gdm257/octopus}
   - { args: gdm257/octopus-257 }
@@ -290,6 +289,7 @@ json:
   - { args: protobuf }
 
 kotlin:
+  - { args: main/android-cli }
   - { args: main/android-clt }
   - { args: adb }
   # - {args: kotlin}
@@ -298,11 +298,11 @@ kotlin:
   - { args: flutter-cn }
 
 _macro:
-  # - {args: AutoHotkey-Portable_ACooper81}
-  # - {args: AutoHotkey2-Portable}
+  - {args: AutoHotkey-Portable_ACooper81}
+  - {args: AutoHotkey2-Portable}
 
 mirror:
-  # - {args: chsrc}
+  - {args: chsrc}
 
 _mysql:
   # - {args: mysql57}
@@ -400,4 +400,4 @@ task-runner:
   - { args: cmake }
 
 _unity:
-  # - {args: unityhub}
+  - {args: unityhub}
