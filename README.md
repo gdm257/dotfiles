@@ -12,7 +12,7 @@
 | Models | TODO | hugging face |  |
 | Datasets | TODO | dolthub, hugging face |  |
 | Bangumi | bangumi-data, TODO | bgm.tv |  |
-| ACG | 115 | 123, guangya | no |
+| ACG | 115 | guangya | no |
 | Applications Configurations | dotfiles | - | yes |
 | Applications Cache | kopia | - | yes |
 | Dotfiles (this repo) | git | - | yes |
@@ -41,7 +41,7 @@
 | `redis://` | aiven | gobackup, databasement | yes |
 | `s3://` | cloudflare | - | yes |
 | `vcard://` | disroot | github actions | yes |
-| `webdav://` | filelu, koofr, 123 | - | yes |
+| `webdav://` | filelu, koofr | - | yes |
 
 # Dotfiles
 
