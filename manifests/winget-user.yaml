@@ -29,7 +29,7 @@ run:
   # - {args: jtroo.kanata_gui}
   # - {args: Xmarmalade.AlistHelper}
   # - {args: Powerformer.OpenDesign}
-  - { args: Anthropic.ClaudeCode }
+  # - {args: Anthropic.ClaudeCode}
   # - {args: Codeium.Windsurf}
   # - {args: WEIFENG2333.VideoCaptioner}
   - { args: ItchIo.Itch }

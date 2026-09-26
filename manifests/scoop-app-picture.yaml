@@ -45,6 +45,7 @@ run:
   - { args: tesseract }
   - { args: tesseract-languages }
   - { args: pixpin }
+  - { args: gdm257/snowshot }
   # - {args: esearch}
   # - {args: flameshot}
   # - {args: Snipaste-Portable}

@@ -44,6 +44,7 @@ run:
   # - {args: kanata-tray}
   - { args: gdm257/mykeymap }
   - { args: gdm257/mousemaster }
+  - { args: gdm257/starpie }
   # - {args: komokana}
   # - {args: gdm257/dotenvx}
   # - {args: ps-dotenv}

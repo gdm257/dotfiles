@@ -64,7 +64,7 @@ run:
   # - {args: Brave.Brave}
   # - {args: AnyDeskSoftwareGmbH.AnyDesk}
   # - {args: Youqu.ToDesk}
-  - { args: RustDesk.RustDesk }
+  # - {args: RustDesk.RustDesk}
   - { args: NetEase.UURemote }
   # - {args: Tencent.TencentMeeting}
   # - {args: AlekseyHoffman.Sigma-File-Manager}
@@ -129,9 +129,11 @@ run:
   # - {args: LiTang.QianJi}
   # - {args: Tencent.Yuanbao}
   - { args: Eusoft.Eudic }
-  - { args: Uzero.ScanScan }
+  # - {args: Uzero.ScanScan}
   - { args: Bandisoft.Honeyview }
   # - {args: GOG.Galaxy}
+  - { args: IdeaMK.CDRViewer }
+  - { args: IdeaMK.AIViewer }
   - { args: Canva.Affinity }
   - { args: ONLYOFFICE.DesktopEditors }
   # - {args: ModOrganizer2.modorganizer}
