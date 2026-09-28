@@ -107,7 +107,10 @@ There are many tools to take note for command-line:
 - Cheatsheet tool (e.g. navi, cheat, tldr)
 - Task runner (e.g. just, task, make)
 
-After thousands of notes, I realize **task runner** is the best choice for **CLI**. Finally I choose [task](https://taskfile.dev/), a YAML-based task runner, which has excellent cross-platform experience and powerful features.
+~~After thousands of notes, I realize **task runner** is the best choice for **CLI**. Finally I choose [task](https://taskfile.dev/), a YAML-based task runner, which has excellent cross-platform experience and powerful features.~~
 
-> [!TIP]
-> It's allowed to write sensitive environment variables to `.local.env` file that taskfile auto reads.
+AI is the best partner for command-line:
+
+```bash
+aichat --execute "Check whether the last 10 git commits are signed"
+```
