@@ -178,6 +178,5 @@ artifacts:
 apply:
   requires: [ tickets ]
   instruction: |
-    Read context files, work through pending tickets.
-
     Call the Skill tool "implement".
+    Read context files, work through pending tickets.
