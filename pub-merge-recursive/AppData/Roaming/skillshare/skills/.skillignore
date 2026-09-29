@@ -15,7 +15,6 @@ debug-issue
 explore-codebase
 refactor-safely
 review-changes
-openspec-new-change
 ponytail-help
 trellis-channel
 ponytail-gain
@@ -64,3 +63,5 @@ kiro-validate-design
 kiro-validate-gap
 kiro-validate-impl
 kiro-verify-completion
+openspec-verify-change
+code-review-and-quality
