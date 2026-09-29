@@ -573,6 +573,13 @@ tasks:
           PATH: "./manifests/w2.yaml"
         task: manifest:run:manifest
 
+  manifest:windows-features:
+    platforms: [windows]
+    cmds:
+      - vars:
+          PATH: "./manifests/windows-features.yaml"
+        task: manifest:run:manifest
+
   manifest:winget-global:
     platforms: [windows]
     cmds:
