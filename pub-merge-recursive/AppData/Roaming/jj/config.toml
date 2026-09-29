@@ -18,7 +18,7 @@ auto-track = '''
     | .nvim.lua | .nvimrc | .exrc
     | root-glob:"*.bak" | root-glob:".*/*.bak"
     | root-glob:"opencode.json"
-    | CLAUDE.local.md | root-glob:".claude/rules/local" | root-glob:".claude/settings.local.json" | root-glob:".mcp.json"
+    | CLAUDE.md | CLAUDE.local.md | root-glob:".claude/rules/local" | root-glob:".claude/settings.local.json" | root-glob:".mcp.json"
     | age.key | key.txt
     | .mindfs
     | *.swp
