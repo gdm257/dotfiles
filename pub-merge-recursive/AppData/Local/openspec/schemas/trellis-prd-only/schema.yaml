@@ -164,9 +164,10 @@ apply:
   instruction: |
       Implement this change's tasks yourself; do not dispatch sub-agents.
       First activate the Trellis task: run `uvx trellis-runtime task start
-      <task-dir>` with the task directory the prd artifact points to (skip
-      if it is already active). `start` is idempotent. If it errors with a
-      session-identity hint, follow the hint, then retry.
+      <task-dir>` with the task directory the prd artifact points to.
+      `start` is idempotent - safe to run even if the task is already
+      active or already in progress. If it errors with a session-identity
+      hint, follow the hint, then retry.
       Before writing code:
       - Read every file in `contextFiles` from `openspec instructions apply --json`.
       - If `.trellis/workflow.md` exists, read it.

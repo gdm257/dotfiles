@@ -19,9 +19,10 @@ apply:
   instruction: |
     Implement this change's tasks yourself; do not dispatch sub-agents.
     First activate the Trellis task: run `uvx trellis-runtime task start
-    <task-dir>` with the task directory the prd artifact points to (skip
-    if it is already active). `start` is idempotent. If it errors with a
-    session-identity hint, follow the hint, then retry.
+    <task-dir>` with the task directory the prd artifact points to.
+    `start` is idempotent - safe to run even if the task is already
+    active or already in progress. If it errors with a session-identity
+    hint, follow the hint, then retry.
     Before writing code:
     - Read every file in `contextFiles` from `openspec instructions apply --json`.
     - If `.trellis/workflow.md` exists, read it.
@@ -53,6 +54,8 @@ Amendment 2 (2026-09-30): replaced the `python ./.trellis/scripts/task.py` / `ge
 Amendment 3 (2026-09-30): split the apply bullet — `.trellis/workflow.md` and `.trellis/spec/` are independent optional sources, not a chain. Loading guidelines is now gated on `.trellis/spec/` existing, not on workflow.md; neither is a hard dependency (only the task-directory mechanism is, and only for prd/design/implement placement).
 
 Amendment 4 (2026-09-30): apply now activates the task first — `uvx trellis-runtime task start <task-dir>` before writing code (workflow step 1.4 moved into apply; idempotent, skipped if already active, retry per session-identity hint). `task finish` / `task archive` remain user-owned, outside apply.
+
+Amendment 5 (2026-09-30): dropped the "skip if already active" clause — `task start` is idempotent, so apply runs it unconditionally ("safe to run even if the task is already active or already in progress"). Removes the pointer-active vs status-in_progress ambiguity without adding a `task current --source` check step.
 
 ## Evidence
 
