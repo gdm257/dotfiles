@@ -1,0 +1,15 @@
+CONTEXT.md
+pub-merge-recursive/AppData/Local/openspec/schemas/spec-driven/schema.yaml
+pub-merge-recursive/AppData/Local/openspec/schemas/matt-pocock/schema.yaml
+pub-merge-recursive/AppData/Local/openspec/schemas/matt-pocock/templates/spec.md
+pub-merge-recursive/AppData/Local/openspec/schemas/matt-pocock/templates/tickets.md
+pub-merge-recursive/AppData/Local/openspec/schemas/matt-pocock/templates/openspec.md
+pub-merge-recursive/AppData/Local/openspec/schemas/matt-pocock/templates/memories.md
+pub-merge-recursive/AppData/Local/openspec/schemas/matt-pocock-wayfinder/schema.yaml
+pub-merge-recursive/AppData/Roaming/skillshare/skills/trellis-before-dev/SKILL.md
+pub-merge-recursive/AppData/Roaming/skillshare/skills/trellis-brainstorm/SKILL.md
+pub-merge-recursive/AppData/Roaming/skillshare/skills/trellis-init/SKILL.md
+pub-merge-recursive/AppData/Roaming/skillshare/skills/trellis-workflow/SKILL.md
+pub-merge-recursive/AppData/Roaming/skillshare/skills/to-tickets/SKILL.md
+pub-merge-recursive/AppData/Roaming/skillshare/agents/trellis-implement.md
+pub-merge-recursive/AppData/Roaming/skillshare/skills/to-spec/SKILL.md
