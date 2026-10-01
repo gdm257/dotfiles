@@ -89,7 +89,7 @@ artifacts:
       Create one spec file per capability identified above.
       `<capability-path>` is the spec directory relative to `specs/` (for example,
       `user-auth` or `identity/user-auth`). Preserve the full path:
-      - New capabilities: use the exact path from the proposal at `specs/<capability-path>/spec.md`. Any path segment newly introduced in the proposal must be kebab-case. Follow the project's existing organization; do not add a new domain level when the project uses a flat layout.
+      - New capabilities: use the exact path identified above at `specs/<capability-path>/spec.md`. Any path segment newly introduced must be kebab-case. Follow the project's existing organization; do not add a new domain level when the project uses a flat layout.
       - Modified capabilities: use the exact existing path from `openspec/specs/<capability-path>/` when creating the delta at `specs/<capability-path>/spec.md`. Run `openspec list --specs` to confirm that path before writing the delta, appending `--store "<id>"` only for a registered standalone store - a mistyped or invented path targets a capability that does not exist rather than the one you meant. Do not move or rename the capability.
 
       There must be at least one spec file unless the change's `.openspec.yaml`
@@ -112,7 +112,7 @@ artifacts:
 
       New capabilities only: start the delta spec with a `## Purpose` section -
       one or two sentences (50+ characters, or `openspec validate --strict`
-      reports it as too brief) describing what this capability is for. Archive
+      reports it as too brief) describing what the capability is for. Archive
       copies it into the main spec it creates; without it the new main spec is
       left with a `TBD ... Update Purpose after archive` placeholder to fill in
       by hand. Do NOT add `## Purpose` to a delta for an existing capability -

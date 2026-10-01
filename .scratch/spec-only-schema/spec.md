@@ -39,7 +39,7 @@ _Avoid_: 逆向用法, reverse
 - memories instruction 与模板从 spec-driven 原样拷贝（`templates/memories.md` 与 matt-pocock 的字节一致）。
 - specs instruction 基于 matt-pocock 版（其已前置 `<!-- propose-capabilities:start/end -->` 块），做三处改动：
   - 块前新增来源段：new work / backfill 各一条，backfill 定义为蒸馏 observable behavior、丢弃实现细节与源框架流程。
-  - 两处 proposal 死引用改写："per capability identified above"；skip_specs 段末句改为 "If no capabilities were identified and `skip_specs` is not set, ask the user before writing anything"。skip_specs 段其余文本与 propose-capabilities 块内文本原样保留。
+  - proposal 死引用全部改写为指向 identified above："per capability identified above"；path bullet 的 "from the proposal" / "in the proposal"；skip_specs 段末句改为 "If no capabilities were identified and `skip_specs` is not set, ask the user before writing anything"。skip_specs 段其余文本与 propose-capabilities 块内文本原样保留。
   - 结尾新增 `` Done when every capability above has a spec file and `openspec validate` passes. ``
 - delta 语义无 backfill 特例：同一套 ADDED/MODIFIED/REMOVED/RENAMED（共识 Q4a）。
 - instruction 全英文，风格对标 implement skill 的简明克制，符合 writing-for-agents（正向措辞、leading word、完成判据、无 no-op）。
@@ -60,4 +60,4 @@ _Avoid_: 逆向用法, reverse
 ## Further Notes
 
 - 决策脉络见本次 grilling 会话：两轮 Q&A 定稿 artifact 链、单 schema 双来源、无 apply、change 生命周期、skip_specs 保留、proposal 死引用最小改写。
-- `D:/home/pub-merge-recursive` 是部署副本（`AppData/Local/openspec` symlink 指向它），与仓库树分离；smoke 前已手动拷贝同步，后续依赖既有发布机制。
+- 部署副本（`AppData/Local/openspec` symlink 指向的 pub-merge-recursive 部署树）与仓库树分离；smoke 前已手动拷贝同步，后续依赖既有发布机制。
