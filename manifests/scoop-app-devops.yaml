@@ -3,6 +3,7 @@ command: install
 run:
   - { args: main/mise }
   - { args: gdm257/path-user-mise }
+  - { args: main/ytt }
   - { args: gdm257/shim-python3 }
   - { args: ruff }
   - { args: nodejs-lts }
@@ -398,6 +399,9 @@ sql:
 
 task-runner:
   - { args: cmake }
+
+templating:
+  - { args: main/ytt }
 
 _unity:
   - {args: unityhub}

@@ -45,6 +45,7 @@ run:
   - { args: docker }
   # - {args: docker-compose}
   - { args: lazydocker }
+  - { args: gdm257/lazywslc }
   - { args: ctop }
   # - {args: dockle}
   # - {args: diun}
