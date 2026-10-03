@@ -43,6 +43,12 @@
 | `vcard://` | disroot | github actions | yes |
 | `webdav://` | filelu, koofr | - | yes |
 
+## Grilling
+
+- Semi-structured
+- Structured
+- IaC
+
 # Dotfiles
 
 ## Common
