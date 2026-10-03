@@ -119,11 +119,11 @@ includes:
   volta:
     taskfile: "./taskfile.d/volta.yaml"
     optional: true
-  winget:
-    taskfile: "./taskfile.d/winget.yaml"
-    optional: true
   w2:
     taskfile: "./taskfile.d/w2.yaml"
+    optional: true
+  winget:
+    taskfile: "./taskfile.d/winget.yaml"
     optional: true
   wsl:
     taskfile: "./taskfile.d/wsl.yaml"
@@ -580,25 +580,11 @@ tasks:
           PATH: "./manifests/windows-features.yaml"
         task: manifest:run:manifest
 
-  manifest:winget-global:
+  manifest:winget:
     platforms: [windows]
     cmds:
       - vars:
-          PATH: "./manifests/winget-global.yaml"
-        task: manifest:run:manifest
-
-  manifest:winget-msstore:
-    platforms: [windows]
-    cmds:
-      - vars:
-          PATH: "./manifests/winget-msstore.yaml"
-        task: manifest:run:manifest
-
-  manifest:winget-user:
-    platforms: [windows]
-    cmds:
-      - vars:
-          PATH: "./manifests/winget-user.yaml"
+          PATH: "./manifests/winget.yaml"
         task: manifest:run:manifest
 
   manifest:wsl:

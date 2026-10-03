@@ -1,0 +1,181 @@
+entrypoint: winget
+
+presets:
+  winget:
+    command: "install --source winget --id"
+  msstore:
+    command: "install --source msstore --id"
+
+run:
+  # === global ===
+  - { preset: winget, args: Chocolatey.Chocolatey}
+  - { preset: winget, args: Microsoft.VisualStudio.2022.BuildTools}
+  - { preset: winget, args: Microsoft.EdgeWebView2Runtime}
+  # - {args: "*Microsoft.VisualStudio.2022.Community*"}
+  # - {args: Microsoft.VisualStudio.2022.Enterprise}
+  # - {args: Microsoft.VCRedist.2005.x64}
+  # - {args: Microsoft.VCRedist.2008.x64}
+  # - {args: Microsoft.VCRedist.2010.x64}
+  # - {args: Microsoft.VCRedist.2012.x64}
+  # - {args: Microsoft.VCRedist.2013.x64}
+  # - {args: Microsoft.VCRedist.2015+.x64}
+  # - {args: Microsoft.VCRedist.2005.x86}
+  # - {args: Microsoft.VCRedist.2008.x86}
+  # - {args: Microsoft.VCRedist.2010.x86}
+  # - {args: Microsoft.VCRedist.2012.x86}
+  # - {args: Microsoft.VCRedist.2013.x86}
+  # - {args: Microsoft.VCRedist.2015+.x86}
+  - { preset: winget, args: Microsoft.DotNet.DesktopRuntime.3_1}
+  - { preset: winget, args: Microsoft.DotNet.DesktopRuntime.5}
+  - { preset: winget, args: Microsoft.DotNet.DesktopRuntime.6}
+  - { preset: winget, args: Microsoft.DotNet.DesktopRuntime.7}
+  - { preset: winget, args: Microsoft.DotNet.DesktopRuntime.8}
+  - { preset: winget, args: Microsoft.DotNet.DesktopRuntime.9}
+  - { preset: winget, args: Microsoft.DotNet.DesktopRuntime.10}
+  - { preset: winget, args: Microsoft.DotNet.AspNetCore.3_1}
+  - { preset: winget, args: Microsoft.DotNet.AspNetCore.5}
+  - { preset: winget, args: Microsoft.DotNet.AspNetCore.6}
+  - { preset: winget, args: Microsoft.DotNet.AspNetCore.7}
+  - { preset: winget, args: Microsoft.DotNet.AspNetCore.8}
+  - { preset: winget, args: Microsoft.DotNet.AspNetCore.9}
+  - { preset: winget, args: Microsoft.DotNet.AspNetCore.10}
+  # - {args: Microsoft.DotNet.Framework.DeveloperPack_4}
+  - { preset: winget, args: Microsoft.XNARedist}
+  # - {args: Microsoft.DirectX}
+  - { preset: winget, args: Microsoft.DotNet.SDK.10}
+  # - {args: Microsoft.WindowsSDK}
+  # - {args: "*Microsoft.WindowsApplicationDriver*"}
+  # - {args: "*Microsoft.WebDeploy*"}
+  # - {args: "*Microsoft.WindowsAppRuntime.1.0*"}
+  # - {args: "*Microsoft.WindowsAppRuntime.1.1*"}
+  # - {args: "*Microsoft.WindowsAppRuntime.1.2*"}
+  - { preset: winget, args: "Microsoft.WindowsAppRuntime.2"}
+  # - {args: "*Microsoft.PowerToys*"}
+  # - {args: "*Microsoft.MediaCreationTool*"}
+  # - {args: Microsoft.Office}
+  # - {args: Microsoft.Edge}
+  # - {args: DEVCOM.JetBrainsMonoNerdFont}
+  # - {args: "*Nvidia.CUDA*"}
+  # - {args: "*Nvidia.GeForceExperience*"}
+  - { preset: winget, args: ViGEm.ViGEmBus}
+  # - {args: "*MacType.MacType*"}
+  - { preset: winget, args: SSHFS-Win.SSHFS-Win}
+  - { preset: winget, args: WinFsp.WinFsp}
+  # - {args: dokan-dev.Dokany}
+  # - {args: DaiyuuNobori.Win10Pcap}
+  - { preset: winget, args: Insecure.Npcap}
+  - { preset: winget, args: WiresharkFoundation.Wireshark}
+  - { preset: winget, args: Rime.Weasel}
+  - { preset: winget, args: luolangaga.tubatools}
+  # - {args: Brave.Brave}
+  # - {args: AnyDeskSoftwareGmbH.AnyDesk}
+  # - {args: Youqu.ToDesk}
+  # - {args: RustDesk.RustDesk}
+  - { preset: winget, args: NetEase.UURemote}
+  # - {args: Tencent.TencentMeeting}
+  # - {args: AlekseyHoffman.Sigma-File-Manager}
+  # - {args: AOMEI.Backupper}
+  # - {args: Dell.DisplayManager}
+  - { preset: winget, args: Sandboxie.Plus}
+  - { preset: winget, args: Oracle.VirtualBox}
+  # - {args: SUSE.RancherDesktop}
+  - { preset: winget, args: Docker.DockerDesktop}
+  # - {args: OpenShot.OpenShot}
+  # - {args: iSlide.iSlide}
+  # - {args: "*ZeroTier.ZeroTierOne*"}
+  # - {args: "*Parsec.Parsec*"}
+  # - {args: LizardByte.Sunshine}
+  # - {args: tailscale.tailscale}
+  # - {args: Billfish.Billfish}
+  # - {args: WilbertBerendsen.Frescobaldi}
+  # - {args: Hitencent.JisuPDF}
+  # - {args: XmacsLabs.Mogan}
+  # - {args: "*rocksdanister.LivelyWallpaper*"}
+  # - {args: IELTSBRO.IELTS-PC}
+  # - {args: "*Adobe.Acrobat.Reader.64-bit*"}
+  # - {args: RProject.R}
+  # - {args: RProject.Rtools}
+  # - {args: Posit.RStudio}
+  - { preset: winget, args: Valve.SteamLink}
+  - { preset: winget, args: EpicGames.EpicGamesLauncher}
+  # - {args: Stellarium.Stellarium}
+  # - {args: "*HeidelbergUniversity.GaiaSky*"}
+  # - {args: SURF.eduVPNClient}
+  # - {args: MysteriumNetwork.Mysterium}
+  # - {args: AOMEI.Backupper}
+  # - {args: LamantineSoftware.StickyPassword}
+  # - {args: "*Microsoft.SQLServerManagementStudio*"}
+  # - {args: Microsoft.SQLServer.2017.Developer}
+  # - {args: Microsoft.SQLServer.2019.Developer}
+  # - {args: "*Microsoft.SQLServer.2022.Developer*"}
+  # - {args: Hesan.He3}
+  # - {args: TorProject.TorBrowser}
+  # - {args: nilesoft.shell}
+  # - {args: voidtools.Everything}
+  # - {args: stnkl.EverythingToolbar}
+  # - {args: "*115.115*"}
+  # - {args: "*Muse.MuseHub*"}
+  # - {args: "*Musescore.Musescore*"}
+  # - {args: Drumstick.dmidiplayer}
+  # - {args: Falcosoft.VSTMidiDriver}
+  # - {args: CodingWondersSoftware.DISMTools.Stable}
+  # - {args: CrystalDewWorld.CrystalDiskMark.ShizukuEdition}
+  # - {args: EFDSoftware.HDTunePro}
+  # - {args: HDDGURU.HDDLLFTool}
+  - { preset: winget, args: MichaelTippach.ASIO4ALL}
+  # - {args: VB-Audio.Voicemeeter.Banana}
+  # - {args: VB-Audio.Voicemeeter.Potato}
+  # - {args: dechamps.FlexASIO}
+  - { preset: winget, args: BandLab.Cakewalk}
+  # - {args: GnuPG.Gpg4win}
+  - { preset: winget, args: AOMEI.PartitionAssistant}
+  # - {args: "*KeppySoftware.OmniMIDI*"}
+  # - {args: Nlitesoft.NTLite}
+  - { preset: winget, args: Huawei.HiSuite}
+  # - {args: LiTang.QianJi}
+  # - {args: Tencent.Yuanbao}
+  - { preset: winget, args: Eusoft.Eudic}
+  # - {args: Uzero.ScanScan}
+  - { preset: winget, args: Bandisoft.Honeyview}
+  # - {args: GOG.Galaxy}
+  - { preset: winget, args: IdeaMK.CDRViewer}
+  - { preset: winget, args: IdeaMK.AIViewer}
+  - { preset: winget, args: Canva.Affinity}
+  - { preset: winget, args: ONLYOFFICE.DesktopEditors}
+  # - {args: ModOrganizer2.modorganizer}
+  - { preset: winget, args: dorssel.usbipd-win}
+  # === user ===
+  - { preset: winget, args: XPDNH1FMW7NB40}
+  - { preset: winget, args: Microsoft.WindowsTerminal}
+  - { preset: winget, args: Mozilla.SOPS}
+  - { preset: winget, args: commercialhaskell.stack}
+  - { preset: winget, args: JRSoftware.InnoSetup}
+  # - {args: Espanso.Espanso}
+  # - {args: SublimeHQ.SublimeText.3}
+  # - {args: ZedIndustries.Zed}
+  # - {args: ByteDance.Trae}
+  # - {args: 123.123pan}
+  - { preset: winget, args: 115.115Chrome}
+  # - {args: Ollama.Ollama}
+  - { preset: winget, args: ElementLabs.LMStudio}
+  # - {args: ChidiWilliams.Buzz}
+  - { preset: winget, args: kangfenmao.CherryStudio}
+  # - {args: Pencil.Desktop}
+  # - {args: kapitainsky.RcloneBrowser}
+  # - {args: FastCopy.FastCopy}
+  # - {args: Falcosoft.SoundfontMidiPlayer}
+  # - {args: Python.PythonInstallManager}
+  # - {args: Anaconda.Miniconda3}
+  # - {args: Mamba.Micromamba}
+  - { preset: winget, args: Python.Python.3.13}
+  # - {args: Canonical.Ubuntu.2204}
+  # - {args: jtroo.kanata_gui}
+  # - {args: Xmarmalade.AlistHelper}
+  # - {args: Powerformer.OpenDesign}
+  # - {args: Anthropic.ClaudeCode}
+  # - {args: Codeium.Windsurf}
+  # - {args: WEIFENG2333.VideoCaptioner}
+  - { preset: winget, args: ItchIo.Itch}
+  # === msstore ===
+  - { preset: msstore, args: XPDNH1FMW7NB40}
+  - { preset: msstore, args: 9nb0h051m4v4}
