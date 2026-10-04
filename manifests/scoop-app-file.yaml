@@ -1,88 +1,90 @@
-entrypoint: scoop
-command: install
+presets:
+  scoop-install:
+    entrypoint: scoop
+    command: install
 
 run:
-  # - {args: ntfs2btrfs}
-  - { args: unar }
-  - { args: lessmsi }
-  - { args: age }
-  - { args: enc }
-  - { args: vault }
-  - { args: dirhash }
-  # - {args: chezmoi}
-  - { args: eza }
-  - { args: gdm257/shim-ll }
-  # - {args: lsd}
-  - { args: gdu }
-  - { args: dust }
-  - { args: duf }
-  - { args: fd }
-  # - {args: fselect}
-  - { args: fzf }
-  # - {args: tre-command}
-  - { args: zoxide }
-  - { args: yazi }
-  # - {args: superfile}
-  # - {args: broot}
-  # - {args: lf}
-  # - {args: file}
-  # - {args: main/7zip}
-  - { args: main/nanazip }
-  # - {args: nanazip_DoveBoy}
-  # - {args: bandizip6}
-  - { args: winrar }
-  # - {args: code2prompt}
-  - { args: everything }
-  # - {args: gdm257/listary5}
-  # - {args: listary}
-  # - {args: orange}
-  # - {args: spacesniffer}
-  - { args: wiztree }
-  # - {args: squirreldisk}
-  # - {args: fluentcleaner_naderi}
-  # - {args: alldup}
-  # - {args: restic}
-  # - {args: resticprofile}
-  # - {args: restic-browser}
-  # - {args: backrest}
-  # - {args: redu}
-  # - {args: duplicati}
-  - { args: diskgenius }
-  - { args: testdisk }
-  # - {args: diskinfo}
-  - { args: as-ssd }
-  - { args: crystaldiskmark }
-  - { args: crystaldiskmark-shizuku-edition }
-  - { args: crystaldiskmark-aoi-edition }
-  # - {args: CrystalDiskMark-TsukumoTokka}
-  - { args: crystaldiskinfo-shizuku-edition }
-  # - {args: hdtune}
-  # - {args: ssdlife}
-  - { args: smartmontools }
-  - { args: SymlinkCreator }
-  # - {args: VeraCrypt-Portable}
-  - { args: VeraCryptPortable }
-  - { args: Snap2HTML }
-  # - {args: HashTools}
-  # - {args: winmerge}
-  - { args: meld }
-  # - {args: AntRenamer}
-  # - {args: ReNamerLite}
-  # - {args: Bulk-Rename-Utility_dodorz}
-  # - {args: tagspaces}
-  # - {args: gdm257/tagstudio}
-  - { args: doublecmd }
-  # - {args: freecommander}
-  # - {args: xplorer}
-  # - {args: onecommander}
-  # - {args: mucommander}
-  - { args: renamer_fixed }
-  # - {args: flut-renamer}
-  # - {args: advancedrenamer}
-  # - {args: DriveSnapShot}
-  # - {args: syncthing}
-  # - {args: watchexec}
-  - { args: watchman }
-  - { args: kopiaui }
-  # - {args: mc}
-  # - {args: cryptomator}
+  # - { preset: scoop-install, args: ntfs2btrfs}
+  - { preset: scoop-install, args: unar }
+  - { preset: scoop-install, args: lessmsi }
+  - { preset: scoop-install, args: age }
+  - { preset: scoop-install, args: enc }
+  - { preset: scoop-install, args: vault }
+  - { preset: scoop-install, args: dirhash }
+  # - { preset: scoop-install, args: chezmoi}
+  - { preset: scoop-install, args: eza }
+  - { preset: scoop-install, args: gdm257/shim-ll }
+  # - { preset: scoop-install, args: lsd}
+  - { preset: scoop-install, args: gdu }
+  - { preset: scoop-install, args: dust }
+  - { preset: scoop-install, args: duf }
+  - { preset: scoop-install, args: fd }
+  # - { preset: scoop-install, args: fselect}
+  - { preset: scoop-install, args: fzf }
+  # - { preset: scoop-install, args: tre-command}
+  - { preset: scoop-install, args: zoxide }
+  - { preset: scoop-install, args: yazi }
+  # - { preset: scoop-install, args: superfile}
+  # - { preset: scoop-install, args: broot}
+  # - { preset: scoop-install, args: lf}
+  # - { preset: scoop-install, args: file}
+  # - { preset: scoop-install, args: main/7zip}
+  - { preset: scoop-install, args: main/nanazip }
+  # - { preset: scoop-install, args: nanazip_DoveBoy}
+  # - { preset: scoop-install, args: bandizip6}
+  - { preset: scoop-install, args: winrar }
+  # - { preset: scoop-install, args: code2prompt}
+  - { preset: scoop-install, args: everything }
+  # - { preset: scoop-install, args: gdm257/listary5}
+  # - { preset: scoop-install, args: listary}
+  # - { preset: scoop-install, args: orange}
+  # - { preset: scoop-install, args: spacesniffer}
+  - { preset: scoop-install, args: wiztree }
+  # - { preset: scoop-install, args: squirreldisk}
+  # - { preset: scoop-install, args: fluentcleaner_naderi}
+  # - { preset: scoop-install, args: alldup}
+  # - { preset: scoop-install, args: restic}
+  # - { preset: scoop-install, args: resticprofile}
+  # - { preset: scoop-install, args: restic-browser}
+  # - { preset: scoop-install, args: backrest}
+  # - { preset: scoop-install, args: redu}
+  # - { preset: scoop-install, args: duplicati}
+  - { preset: scoop-install, args: diskgenius }
+  - { preset: scoop-install, args: testdisk }
+  # - { preset: scoop-install, args: diskinfo}
+  - { preset: scoop-install, args: as-ssd }
+  - { preset: scoop-install, args: crystaldiskmark }
+  - { preset: scoop-install, args: crystaldiskmark-shizuku-edition }
+  - { preset: scoop-install, args: crystaldiskmark-aoi-edition }
+  # - { preset: scoop-install, args: CrystalDiskMark-TsukumoTokka}
+  - { preset: scoop-install, args: crystaldiskinfo-shizuku-edition }
+  # - { preset: scoop-install, args: hdtune}
+  # - { preset: scoop-install, args: ssdlife}
+  - { preset: scoop-install, args: smartmontools }
+  - { preset: scoop-install, args: SymlinkCreator }
+  # - { preset: scoop-install, args: VeraCrypt-Portable}
+  - { preset: scoop-install, args: VeraCryptPortable }
+  - { preset: scoop-install, args: Snap2HTML }
+  # - { preset: scoop-install, args: HashTools}
+  # - { preset: scoop-install, args: winmerge}
+  - { preset: scoop-install, args: meld }
+  # - { preset: scoop-install, args: AntRenamer}
+  # - { preset: scoop-install, args: ReNamerLite}
+  # - { preset: scoop-install, args: Bulk-Rename-Utility_dodorz}
+  # - { preset: scoop-install, args: tagspaces}
+  # - { preset: scoop-install, args: gdm257/tagstudio}
+  - { preset: scoop-install, args: doublecmd }
+  # - { preset: scoop-install, args: freecommander}
+  # - { preset: scoop-install, args: xplorer}
+  # - { preset: scoop-install, args: onecommander}
+  # - { preset: scoop-install, args: mucommander}
+  - { preset: scoop-install, args: renamer_fixed }
+  # - { preset: scoop-install, args: flut-renamer}
+  # - { preset: scoop-install, args: advancedrenamer}
+  # - { preset: scoop-install, args: DriveSnapShot}
+  # - { preset: scoop-install, args: syncthing}
+  # - { preset: scoop-install, args: watchexec}
+  - { preset: scoop-install, args: watchman }
+  - { preset: scoop-install, args: kopiaui }
+  # - { preset: scoop-install, args: mc}
+  # - { preset: scoop-install, args: cryptomator}

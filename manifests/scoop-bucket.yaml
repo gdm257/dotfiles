@@ -1,13 +1,15 @@
-entrypoint: scoop
-command: "bucket add"
+presets:
+  scoop-bucket-add:
+    entrypoint: scoop
+    command: "bucket add"
 
 run:
-  - {args: main}
-  # - {args: extras}
-  # - {args: versions}
-  - {args: "apps https://github.com/kkzzhizhou/scoop-apps"}
-  - {args: "gdm257 https://github.com/gdm257/scoop-257"}
-  - {args: "lfs https://github.com/gdm257/scoop-lfs"}
-  - {args: "SM https://github.com/okibcn/ScoopMaster"}
-  # - {args: "lemon https://github.com/hoilc/scoop-lemon"}
-  # - {args: "spc https://ghproxy.com/https://github.com/lzwme/scoop-proxy-cn"}
+  - { preset: scoop-bucket-add, args: main}
+  # - { preset: scoop-bucket-add, args: extras}
+  # - { preset: scoop-bucket-add, args: versions}
+  - { preset: scoop-bucket-add, args: "apps https://github.com/kkzzhizhou/scoop-apps"}
+  - { preset: scoop-bucket-add, args: "gdm257 https://github.com/gdm257/scoop-257"}
+  - { preset: scoop-bucket-add, args: "lfs https://github.com/gdm257/scoop-lfs"}
+  - { preset: scoop-bucket-add, args: "SM https://github.com/okibcn/ScoopMaster"}
+  # - { preset: scoop-bucket-add, args: "lemon https://github.com/hoilc/scoop-lemon"}
+  # - { preset: scoop-bucket-add, args: "spc https://ghproxy.com/https://github.com/lzwme/scoop-proxy-cn"}

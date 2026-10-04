@@ -1,17 +1,19 @@
-entrypoint: scoop
-command: install
+presets:
+  scoop-install:
+    entrypoint: scoop
+    command: install
 
 run:
-  - { args: LXGWWenKai }
-  - { args: LXGWWenKaiMono }
-  - { args: LXGWWenKaiScreenR }
-  # - {args: MicrosoftYaHeiMono}
-  - { args: SarasaGothic-ttc }
-  # - {args: SarasaGothic-SC}
-  - { args: NerdFontsSymbolsOnly }
-  - { args: DejaVuSansMono-NF-Mono }
-  - { args: Hack-NF-Mono }
-  - { args: JetBrainsMono-NF }
-  - { args: CascadiaCode-NF-Mono }
-  # - {args: SourceCodePro-NF-Mono}
-  # - {args: MPlus-NF-Mono}
+  - { preset: scoop-install, args: LXGWWenKai }
+  - { preset: scoop-install, args: LXGWWenKaiMono }
+  - { preset: scoop-install, args: LXGWWenKaiScreenR }
+  # - { preset: scoop-install, args: MicrosoftYaHeiMono}
+  - { preset: scoop-install, args: SarasaGothic-ttc }
+  # - { preset: scoop-install, args: SarasaGothic-SC}
+  - { preset: scoop-install, args: NerdFontsSymbolsOnly }
+  - { preset: scoop-install, args: DejaVuSansMono-NF-Mono }
+  - { preset: scoop-install, args: Hack-NF-Mono }
+  - { preset: scoop-install, args: JetBrainsMono-NF }
+  - { preset: scoop-install, args: CascadiaCode-NF-Mono }
+  # - { preset: scoop-install, args: SourceCodePro-NF-Mono}
+  # - { preset: scoop-install, args: MPlus-NF-Mono}

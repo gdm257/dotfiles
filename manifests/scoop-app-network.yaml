@@ -1,191 +1,193 @@
-entrypoint: scoop
-command: install
+presets:
+  scoop-install:
+    entrypoint: scoop
+    command: install
 
 run:
-  # - {args: main/tor}
-  # - {args: simple-obfs}
-  # - {args: proxychains}
-  # - {args: gdm257/ghost-proxifier}
-  - { args: gdm257/ghost-proxifier-257 }
-  - { args: gping }
-  # - {args: nping}
-  # - {args: trippy}
-  # - {args: besttrace}
-  - { args: nexttrace }
-  - { args: bind }
-  - { args: networkmanager }
-  - { args: whosip }
-  - { args: tldx }
-  # - {args: kscan_batkiz}
-  - { args: masscan }
-  - { args: naabu }
-  - { args: tlsx }
-  - { args: subfinder }
-  - { args: nmap-portable }
-  - { args: nuclei }
-  # - {args: fscan}
-  # - {args: coredns}
-  # - {args: sdns}
-  - { args: doggo }
-  # - {args: dog}
-  # - {args: ipscan}
-  # - {args: shadowsocks-uri-generator}
-  # - {args: quicksetdns}
-  # - {args: DNSControlCLI-Portable}
-  # - {args: apache}
-  # - {args: nginx}
-  # - {args: caddy}
-  # - {args: xcaddy}
-  # - {args: clash}
-  # - {args: mihomo}
-  # - {args: clashtui}
-  # - {args: clash-for-windows}
-  # - {args: clash-for-windows-portable}
-  # - {args: clashweb}
-  # - {args: clashy}
-  - { args: clash-party }
-  # - {args: mihomo-party}
-  # - {args: clash-verge-rev_chawyehsu}
-  # - {args: clash-nyanpasu}
-  # - {args: clash-verge}
-  # - {args: geoip-country-mmdb}
-  # - {args: v2ray}
-  # - {args: v2ray-domain-list-community}
-  # - {args: v2ray-geoip}
-  # - {args: v2ray-rules-dat}
-  # - {args: qv2ray}
-  # - {args: qv2ray-plugin-command}
-  # - {args: qv2ray-plugin-naiveproxy}
-  # - {args: qv2ray-plugin-ss}
-  # - {args: qv2ray-plugin-ssr}
-  # - {args: qv2ray-plugin-trojan}
-  # - {args: qv2ray-plugin-trojan-go}
-  # - {args: v2rayA}
-  # - {args: tuic}
-  - { args: grpcurl }
-  - { args: tproxy }
-  - { args: websocat }
-  - { args: hurl }
-  # - {args: xh}
-  - { args: curlie }
-  - { args: atac }
-  # - {args: keploy}
-  - { args: postman }
-  - { args: bruno }
-  # - {args: hoppscotch}
-  - { args: gdm257/whistle }
-  - { args: proxypin }
-  - { args: wireshark }
-  # - {args: termshark}
-  # - {args: fiddler}
-  # - {args: mitmproxy}
-  # - {args: stairspeedtest-reborn}
-  # - {args: CloudflareSpeedTest}
-  - { args: tcptunnel }
-  # - {args: portforwarder}
-  # - {args: webhook}
-  # - {args: trafficmonitor}
-  - { args: winnfsd }
-  - { args: gdm257/oauth2l }
-  - { args: main/oauth2c }
-  - { args: telegram }
-  - { args: wechat }
-  - { args: wecom }
-  # - {args: cleanmywechat}
-  # - {args: wechat_ScoopInstaller}
-  # - {args: wechat_akirco}
-  # - {args: WechatExporter}
-  # - {args: pywxdump}
-  # - {args: memotrace}
-  # - {args: WeChatMsg}
-  # - {args: tencent-meeting}
-  # - {args: discord}
-  # - {args: chatgpt}
-  - { args: main/cloudflared }
-  - { args: gdm257/ddnsto }
-  - { args: frp }
-  - { args: gdm257/frpmgr }
-  - { args: catsxp }
-  - { args: centbrowser }
-  # - {args: gdm257/chrome-plus}
-  # - {args: chromium}
-  # - {args: brave}
-  # - {args: Brave-Portable}
-  # - {args: brave-beta}
-  - { args: tor-browser }
-  # - {args: HackBrowserData}
-  # - {args: geckodriver}
-  # - {args: chromedriver}
-  # - {args: DataGrip-portable@2020.1.5-201.8538.4}
-  # - {args: sqlitestudio}
-  # - {args: sftpgo}
-  # - {args: deskreen}
-  # - {args: charles}
-  # - {args: mariadb103}
-  # - {args: wakemeonlan}
-  # - {args: ddns-go}
-  # - {args: rustdesk}
-  # - {args: parsec}
-  - { args: gdm257/moonlight }
-  - { args: sunshine }
-  # - {args: scrcpy}
-  # - {args: qtscrcpy}
-  - { args: escrcpy }
-  # - {args: ZeroTier}
-  # - {args: mongodb-compass-isolated}
-  # - {args: nps-server}
-  # - {args: nps-client}
-  # - {args: rathole}
-  - { args: iperf3 }
-  # - {args: tailscale}
-  - { args: gdm257/astral }
-  # - {args: naiveproxy}
-  - { args: traefik }
-  - { args: gdm257/zoraxy }
-  - { args: gdm257/whoami }
-  # - {args: nekoray}
-  # - {args: sing-box}
-  # - {args: hysteria}
-  # - {args: trojan}
-  # - {args: trojan-go}
-  # - {args: leaf}
-  - { args: element }
-  # - {args: gomuks}
-  # - {args: mailspring}
-  # - {args: Thunderbird-Portable}
-  # - {args: simpread-synchelper}
-  - { args: clumsy }
-  # - {args: cherry-studio_naderi}
-  # - {args: chatwise}
-  # - {args: chatgpt-next-web}
-  # - {args: binggpt-portable}
-  # - {args: pidgin}
-  # - {args: chatbox}
-  # - {args: ChatALL-Portable}
-  - { args: main/aichat }
-  # - {args: mcp-linker}
-  # - {args: rivet}
-  # - {args: tutanota}
-  # - {args: dns-jumper}
-  - { args: gns3 }
-  # - {args: q-dns}
-  # - {args: dnsx}
-  # - {args: dnslookup}
-  # - {args: dnsq-go}
-  - { args: hexchat }
-  # - {args: chisel}
-  # - {args: lego}
-  # - {args: remoteapptool}
-  # - {args: asnmap}
-  # - {args: jmeter}
-  # - {args: ali}
-  # - {args: packetsender}
-  # - {args: quasara}
-  - { args: bandwhich }
-  # - {args: "npcap sniffnet"}
-  # - {args: dug}
-  # - {args: zpscan}
-  # - {args: hiddify-next}
-  # - {args: hiddify-next_noql-net}
-  # - {args: teleport}
-  # - {args: hostctl}
+  # - { preset: scoop-install, args: main/tor}
+  # - { preset: scoop-install, args: simple-obfs}
+  # - { preset: scoop-install, args: proxychains}
+  # - { preset: scoop-install, args: gdm257/ghost-proxifier}
+  - { preset: scoop-install, args: gdm257/ghost-proxifier-257 }
+  - { preset: scoop-install, args: gping }
+  # - { preset: scoop-install, args: nping}
+  # - { preset: scoop-install, args: trippy}
+  # - { preset: scoop-install, args: besttrace}
+  - { preset: scoop-install, args: nexttrace }
+  - { preset: scoop-install, args: bind }
+  - { preset: scoop-install, args: networkmanager }
+  - { preset: scoop-install, args: whosip }
+  - { preset: scoop-install, args: tldx }
+  # - { preset: scoop-install, args: kscan_batkiz}
+  - { preset: scoop-install, args: masscan }
+  - { preset: scoop-install, args: naabu }
+  - { preset: scoop-install, args: tlsx }
+  - { preset: scoop-install, args: subfinder }
+  - { preset: scoop-install, args: nmap-portable }
+  - { preset: scoop-install, args: nuclei }
+  # - { preset: scoop-install, args: fscan}
+  # - { preset: scoop-install, args: coredns}
+  # - { preset: scoop-install, args: sdns}
+  - { preset: scoop-install, args: doggo }
+  # - { preset: scoop-install, args: dog}
+  # - { preset: scoop-install, args: ipscan}
+  # - { preset: scoop-install, args: shadowsocks-uri-generator}
+  # - { preset: scoop-install, args: quicksetdns}
+  # - { preset: scoop-install, args: DNSControlCLI-Portable}
+  # - { preset: scoop-install, args: apache}
+  # - { preset: scoop-install, args: nginx}
+  # - { preset: scoop-install, args: caddy}
+  # - { preset: scoop-install, args: xcaddy}
+  # - { preset: scoop-install, args: clash}
+  # - { preset: scoop-install, args: mihomo}
+  # - { preset: scoop-install, args: clashtui}
+  # - { preset: scoop-install, args: clash-for-windows}
+  # - { preset: scoop-install, args: clash-for-windows-portable}
+  # - { preset: scoop-install, args: clashweb}
+  # - { preset: scoop-install, args: clashy}
+  - { preset: scoop-install, args: clash-party }
+  # - { preset: scoop-install, args: mihomo-party}
+  # - { preset: scoop-install, args: clash-verge-rev_chawyehsu}
+  # - { preset: scoop-install, args: clash-nyanpasu}
+  # - { preset: scoop-install, args: clash-verge}
+  # - { preset: scoop-install, args: geoip-country-mmdb}
+  # - { preset: scoop-install, args: v2ray}
+  # - { preset: scoop-install, args: v2ray-domain-list-community}
+  # - { preset: scoop-install, args: v2ray-geoip}
+  # - { preset: scoop-install, args: v2ray-rules-dat}
+  # - { preset: scoop-install, args: qv2ray}
+  # - { preset: scoop-install, args: qv2ray-plugin-command}
+  # - { preset: scoop-install, args: qv2ray-plugin-naiveproxy}
+  # - { preset: scoop-install, args: qv2ray-plugin-ss}
+  # - { preset: scoop-install, args: qv2ray-plugin-ssr}
+  # - { preset: scoop-install, args: qv2ray-plugin-trojan}
+  # - { preset: scoop-install, args: qv2ray-plugin-trojan-go}
+  # - { preset: scoop-install, args: v2rayA}
+  # - { preset: scoop-install, args: tuic}
+  - { preset: scoop-install, args: grpcurl }
+  - { preset: scoop-install, args: tproxy }
+  - { preset: scoop-install, args: websocat }
+  - { preset: scoop-install, args: hurl }
+  # - { preset: scoop-install, args: xh}
+  - { preset: scoop-install, args: curlie }
+  - { preset: scoop-install, args: atac }
+  # - { preset: scoop-install, args: keploy}
+  - { preset: scoop-install, args: postman }
+  - { preset: scoop-install, args: bruno }
+  # - { preset: scoop-install, args: hoppscotch}
+  - { preset: scoop-install, args: gdm257/whistle }
+  - { preset: scoop-install, args: proxypin }
+  - { preset: scoop-install, args: wireshark }
+  # - { preset: scoop-install, args: termshark}
+  # - { preset: scoop-install, args: fiddler}
+  # - { preset: scoop-install, args: mitmproxy}
+  # - { preset: scoop-install, args: stairspeedtest-reborn}
+  # - { preset: scoop-install, args: CloudflareSpeedTest}
+  - { preset: scoop-install, args: tcptunnel }
+  # - { preset: scoop-install, args: portforwarder}
+  # - { preset: scoop-install, args: webhook}
+  # - { preset: scoop-install, args: trafficmonitor}
+  - { preset: scoop-install, args: winnfsd }
+  - { preset: scoop-install, args: gdm257/oauth2l }
+  - { preset: scoop-install, args: main/oauth2c }
+  - { preset: scoop-install, args: telegram }
+  - { preset: scoop-install, args: wechat }
+  - { preset: scoop-install, args: wecom }
+  # - { preset: scoop-install, args: cleanmywechat}
+  # - { preset: scoop-install, args: wechat_ScoopInstaller}
+  # - { preset: scoop-install, args: wechat_akirco}
+  # - { preset: scoop-install, args: WechatExporter}
+  # - { preset: scoop-install, args: pywxdump}
+  # - { preset: scoop-install, args: memotrace}
+  # - { preset: scoop-install, args: WeChatMsg}
+  # - { preset: scoop-install, args: tencent-meeting}
+  # - { preset: scoop-install, args: discord}
+  # - { preset: scoop-install, args: chatgpt}
+  - { preset: scoop-install, args: main/cloudflared }
+  - { preset: scoop-install, args: gdm257/ddnsto }
+  - { preset: scoop-install, args: frp }
+  - { preset: scoop-install, args: gdm257/frpmgr }
+  - { preset: scoop-install, args: catsxp }
+  - { preset: scoop-install, args: centbrowser }
+  # - { preset: scoop-install, args: gdm257/chrome-plus}
+  # - { preset: scoop-install, args: chromium}
+  # - { preset: scoop-install, args: brave}
+  # - { preset: scoop-install, args: Brave-Portable}
+  # - { preset: scoop-install, args: brave-beta}
+  - { preset: scoop-install, args: tor-browser }
+  # - { preset: scoop-install, args: HackBrowserData}
+  # - { preset: scoop-install, args: geckodriver}
+  # - { preset: scoop-install, args: chromedriver}
+  # - { preset: scoop-install, args: DataGrip-portable@2020.1.5-201.8538.4}
+  # - { preset: scoop-install, args: sqlitestudio}
+  # - { preset: scoop-install, args: sftpgo}
+  # - { preset: scoop-install, args: deskreen}
+  # - { preset: scoop-install, args: charles}
+  # - { preset: scoop-install, args: mariadb103}
+  # - { preset: scoop-install, args: wakemeonlan}
+  # - { preset: scoop-install, args: ddns-go}
+  # - { preset: scoop-install, args: rustdesk}
+  # - { preset: scoop-install, args: parsec}
+  - { preset: scoop-install, args: gdm257/moonlight }
+  - { preset: scoop-install, args: sunshine }
+  # - { preset: scoop-install, args: scrcpy}
+  # - { preset: scoop-install, args: qtscrcpy}
+  - { preset: scoop-install, args: escrcpy }
+  # - { preset: scoop-install, args: ZeroTier}
+  # - { preset: scoop-install, args: mongodb-compass-isolated}
+  # - { preset: scoop-install, args: nps-server}
+  # - { preset: scoop-install, args: nps-client}
+  # - { preset: scoop-install, args: rathole}
+  - { preset: scoop-install, args: iperf3 }
+  # - { preset: scoop-install, args: tailscale}
+  - { preset: scoop-install, args: gdm257/astral }
+  # - { preset: scoop-install, args: naiveproxy}
+  - { preset: scoop-install, args: traefik }
+  - { preset: scoop-install, args: gdm257/zoraxy }
+  - { preset: scoop-install, args: gdm257/whoami }
+  # - { preset: scoop-install, args: nekoray}
+  # - { preset: scoop-install, args: sing-box}
+  # - { preset: scoop-install, args: hysteria}
+  # - { preset: scoop-install, args: trojan}
+  # - { preset: scoop-install, args: trojan-go}
+  # - { preset: scoop-install, args: leaf}
+  - { preset: scoop-install, args: element }
+  # - { preset: scoop-install, args: gomuks}
+  # - { preset: scoop-install, args: mailspring}
+  # - { preset: scoop-install, args: Thunderbird-Portable}
+  # - { preset: scoop-install, args: simpread-synchelper}
+  - { preset: scoop-install, args: clumsy }
+  # - { preset: scoop-install, args: cherry-studio_naderi}
+  # - { preset: scoop-install, args: chatwise}
+  # - { preset: scoop-install, args: chatgpt-next-web}
+  # - { preset: scoop-install, args: binggpt-portable}
+  # - { preset: scoop-install, args: pidgin}
+  # - { preset: scoop-install, args: chatbox}
+  # - { preset: scoop-install, args: ChatALL-Portable}
+  - { preset: scoop-install, args: main/aichat }
+  # - { preset: scoop-install, args: mcp-linker}
+  # - { preset: scoop-install, args: rivet}
+  # - { preset: scoop-install, args: tutanota}
+  # - { preset: scoop-install, args: dns-jumper}
+  - { preset: scoop-install, args: gns3 }
+  # - { preset: scoop-install, args: q-dns}
+  # - { preset: scoop-install, args: dnsx}
+  # - { preset: scoop-install, args: dnslookup}
+  # - { preset: scoop-install, args: dnsq-go}
+  - { preset: scoop-install, args: hexchat }
+  # - { preset: scoop-install, args: chisel}
+  # - { preset: scoop-install, args: lego}
+  # - { preset: scoop-install, args: remoteapptool}
+  # - { preset: scoop-install, args: asnmap}
+  # - { preset: scoop-install, args: jmeter}
+  # - { preset: scoop-install, args: ali}
+  # - { preset: scoop-install, args: packetsender}
+  # - { preset: scoop-install, args: quasara}
+  - { preset: scoop-install, args: bandwhich }
+  # - { preset: scoop-install, args: "npcap sniffnet"}
+  # - { preset: scoop-install, args: dug}
+  # - { preset: scoop-install, args: zpscan}
+  # - { preset: scoop-install, args: hiddify-next}
+  # - { preset: scoop-install, args: hiddify-next_noql-net}
+  # - { preset: scoop-install, args: teleport}
+  # - { preset: scoop-install, args: hostctl}

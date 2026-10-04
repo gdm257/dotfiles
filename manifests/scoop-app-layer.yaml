@@ -1,107 +1,109 @@
-entrypoint: scoop
-command: install
+presets:
+  scoop-install:
+    entrypoint: scoop
+    command: install
 
 run:
-  - { args: ventoy }
-  # - {args: wepe}
-  - { args: rufus }
-  - { args: balenaEtcher-Portable }
-  - { args: virtualbox-extension }
-  - { args: lxrunoffline }
-  - { args: packer }
-  - { args: vagrant }
-  - { args: qemu }
-  - { args: gdm257/EmuDeck }
-  # - {args: pegasus}
-  # - {args: cemu-dev}
-  # - {args: xemu}
-  # - {args: yuzu}
-  # - {args: azahar}
-  # - {args: citra-nightly}
-  # - {args: citra}
-  # - {args: dolphin-dev}
-  # - {args: duckstation}
-  # - {args: flycast}
-  # - {args: mgba}
-  # - {args: melonDS}
-  # - {args: mame}
-  # - {args: ppsspp}
-  # - {args: pcsx2}
-  # - {args: rpcs3}
-  # - {args: ryujinx}
-  # - {args: retroarch}
-  # - {args: vita3k}
-  # - {args: shadps4}
-  # - {args: supermodel}
-  # - {args: ScummVM}
-  # - {args: xenia}
-  - { args: LDPlayer-Portable }
-  - { args: onscripteryuri }
-  - { args: onscripter-w }
-  - { args: onscripter-jh }
-  - { args: onscripter-ru }
-  - { args: ruffle-nightly }
-  # - {args: wsl2host}
-  - { args: docker }
-  # - {args: docker-compose}
-  - { args: lazydocker }
-  - { args: gdm257/lazywslc }
-  - { args: ctop }
-  # - {args: dockle}
-  # - {args: diun}
-  # - {args: hadolint}
-  # - {args: dive}
-  # - {args: portainer}
-  - { args: nixpacks }
-  - { args: kompose }
-  # - {args: kustomize}
-  - { args: helm }
-  - { args: helmfile }
-  # - {args: kcl}
-  # - {args: autok3s}
-  # - {args: k3sup}
-  # - {args: k3d}
-  # - {args: rancher-desktop}
-  # - {args: minikube}
-  # - {args: kind}
-  # - {args: kubeadm}
-  - { args: openlens }
-  # - {args: lens}
-  # - {args: headlamp}
-  # - {args: seabird}
-  - { args: kdash }
-  - { args: k9s }
-  - { args: kubectl }
-  - { args: krew }
-  - { args: kubens }
-  - { args: kubectx }
-  # - {args: kubecolor}
-  # - {args: kubectl-ai}
-  # - {args: kubeconform}
-  # - {args: k8sgpt}
-  - { args: kubevpn }
-  # - {args: cilium-cli}
-  # - {args: istioctl}
-  # - {args: kwok}
-  # - {args: kubeshark}
-  # - {args: kops}
-  # - {args: main/flux}
-  # - {args: argocd}
-  # - {args: argocd-autopilot}
-  # - {args: tsuru}
-  # - {args: velero}
-  # - {args: cmctl}
-  # - {args: korb}
-  # - {args: wsl2-distro-manager}
-  - { args: wsl-dashboard }
-  # - {args: WsaToolbox}
-  # - {args: wsldl}
-  # - {args: sandboxie-plus-np}
-  # - {args: virtualbox-with-extension-pack-np}
-  # - {args: virtualbox-with-extension-pack-np_ScoopInstaller}
-  # - {args: WSABuildsWindows10}
-  # - {args: WSABuildsWindows11}
-  # - {args: wsl-centos-7}
-  # - {args: wsl-centos-8}
-  # - {args: nixos-wsl}
-  - { args: devpod }
+  - { preset: scoop-install, args: ventoy }
+  # - { preset: scoop-install, args: wepe}
+  - { preset: scoop-install, args: rufus }
+  - { preset: scoop-install, args: balenaEtcher-Portable }
+  - { preset: scoop-install, args: virtualbox-extension }
+  - { preset: scoop-install, args: lxrunoffline }
+  - { preset: scoop-install, args: packer }
+  - { preset: scoop-install, args: vagrant }
+  - { preset: scoop-install, args: qemu }
+  - { preset: scoop-install, args: gdm257/EmuDeck }
+  # - { preset: scoop-install, args: pegasus}
+  # - { preset: scoop-install, args: cemu-dev}
+  # - { preset: scoop-install, args: xemu}
+  # - { preset: scoop-install, args: yuzu}
+  # - { preset: scoop-install, args: azahar}
+  # - { preset: scoop-install, args: citra-nightly}
+  # - { preset: scoop-install, args: citra}
+  # - { preset: scoop-install, args: dolphin-dev}
+  # - { preset: scoop-install, args: duckstation}
+  # - { preset: scoop-install, args: flycast}
+  # - { preset: scoop-install, args: mgba}
+  # - { preset: scoop-install, args: melonDS}
+  # - { preset: scoop-install, args: mame}
+  # - { preset: scoop-install, args: ppsspp}
+  # - { preset: scoop-install, args: pcsx2}
+  # - { preset: scoop-install, args: rpcs3}
+  # - { preset: scoop-install, args: ryujinx}
+  # - { preset: scoop-install, args: retroarch}
+  # - { preset: scoop-install, args: vita3k}
+  # - { preset: scoop-install, args: shadps4}
+  # - { preset: scoop-install, args: supermodel}
+  # - { preset: scoop-install, args: ScummVM}
+  # - { preset: scoop-install, args: xenia}
+  - { preset: scoop-install, args: LDPlayer-Portable }
+  - { preset: scoop-install, args: onscripteryuri }
+  - { preset: scoop-install, args: onscripter-w }
+  - { preset: scoop-install, args: onscripter-jh }
+  - { preset: scoop-install, args: onscripter-ru }
+  - { preset: scoop-install, args: ruffle-nightly }
+  # - { preset: scoop-install, args: wsl2host}
+  - { preset: scoop-install, args: docker }
+  # - { preset: scoop-install, args: docker-compose}
+  - { preset: scoop-install, args: lazydocker }
+  - { preset: scoop-install, args: gdm257/lazywslc }
+  - { preset: scoop-install, args: ctop }
+  # - { preset: scoop-install, args: dockle}
+  # - { preset: scoop-install, args: diun}
+  # - { preset: scoop-install, args: hadolint}
+  # - { preset: scoop-install, args: dive}
+  # - { preset: scoop-install, args: portainer}
+  - { preset: scoop-install, args: nixpacks }
+  - { preset: scoop-install, args: kompose }
+  # - { preset: scoop-install, args: kustomize}
+  - { preset: scoop-install, args: helm }
+  - { preset: scoop-install, args: helmfile }
+  # - { preset: scoop-install, args: kcl}
+  # - { preset: scoop-install, args: autok3s}
+  # - { preset: scoop-install, args: k3sup}
+  # - { preset: scoop-install, args: k3d}
+  # - { preset: scoop-install, args: rancher-desktop}
+  # - { preset: scoop-install, args: minikube}
+  # - { preset: scoop-install, args: kind}
+  # - { preset: scoop-install, args: kubeadm}
+  - { preset: scoop-install, args: openlens }
+  # - { preset: scoop-install, args: lens}
+  # - { preset: scoop-install, args: headlamp}
+  # - { preset: scoop-install, args: seabird}
+  - { preset: scoop-install, args: kdash }
+  - { preset: scoop-install, args: k9s }
+  - { preset: scoop-install, args: kubectl }
+  - { preset: scoop-install, args: krew }
+  - { preset: scoop-install, args: kubens }
+  - { preset: scoop-install, args: kubectx }
+  # - { preset: scoop-install, args: kubecolor}
+  # - { preset: scoop-install, args: kubectl-ai}
+  # - { preset: scoop-install, args: kubeconform}
+  # - { preset: scoop-install, args: k8sgpt}
+  - { preset: scoop-install, args: kubevpn }
+  # - { preset: scoop-install, args: cilium-cli}
+  # - { preset: scoop-install, args: istioctl}
+  # - { preset: scoop-install, args: kwok}
+  # - { preset: scoop-install, args: kubeshark}
+  # - { preset: scoop-install, args: kops}
+  # - { preset: scoop-install, args: main/flux}
+  # - { preset: scoop-install, args: argocd}
+  # - { preset: scoop-install, args: argocd-autopilot}
+  # - { preset: scoop-install, args: tsuru}
+  # - { preset: scoop-install, args: velero}
+  # - { preset: scoop-install, args: cmctl}
+  # - { preset: scoop-install, args: korb}
+  # - { preset: scoop-install, args: wsl2-distro-manager}
+  - { preset: scoop-install, args: wsl-dashboard }
+  # - { preset: scoop-install, args: WsaToolbox}
+  # - { preset: scoop-install, args: wsldl}
+  # - { preset: scoop-install, args: sandboxie-plus-np}
+  # - { preset: scoop-install, args: virtualbox-with-extension-pack-np}
+  # - { preset: scoop-install, args: virtualbox-with-extension-pack-np_ScoopInstaller}
+  # - { preset: scoop-install, args: WSABuildsWindows10}
+  # - { preset: scoop-install, args: WSABuildsWindows11}
+  # - { preset: scoop-install, args: wsl-centos-7}
+  # - { preset: scoop-install, args: wsl-centos-8}
+  # - { preset: scoop-install, args: nixos-wsl}
+  - { preset: scoop-install, args: devpod }

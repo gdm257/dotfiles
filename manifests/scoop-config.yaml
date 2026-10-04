@@ -1,8 +1,10 @@
-entrypoint: scoop
-command: config
+presets:
+  scoop-config:
+    entrypoint: scoop
+    command: config
 
 run:
-  - {args: "aria2-enabled true"}
-  - {args: "debug true"}
-  - {args: "use_sqlite_cache true"}
-  - {args: "use_lessmsi true"}
+  - { preset: scoop-config, args: "aria2-enabled true"}
+  - { preset: scoop-config, args: "debug true"}
+  - { preset: scoop-config, args: "use_sqlite_cache true"}
+  - { preset: scoop-config, args: "use_lessmsi true"}

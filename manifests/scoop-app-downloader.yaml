@@ -1,74 +1,76 @@
-entrypoint: scoop
-command: install
+presets:
+  scoop-install:
+    entrypoint: scoop
+    command: install
 
 run:
-  - { args: scoop-search }
-  - { args: gdm257/scoop-checkver }
-  # - {args: ss}
-  - { args: wingetcreate }
-  # - {args: wingetui}
-  - { args: UniGetUI }
-  - { args: main/cargo-binstall }
-  - { args: cargo-update }
-  - { args: winget }
-  # - {args: winget-preview}
-  - { args: pkgx }
-  # - {args: eget}
-  - { args: bin-manager }
-  # - {args: stew}
-  # - {args: Baulk_dodorz}
-  # - {args: shovel}
-  # - {args: npackd}
-  - { args: snappy-driver-installer-origin }
-  # - {args: lux}
-  # - {args: bbdown-beta}
-  # - {args: bbdown}
-  # - {args: downkyi}
-  - { args: pixivutil2 }
-  # - {args: pixivbiu}
-  # - {args: youtube-dl}
-  # - {args: youtube-dl-gui}
-  - { args: yt-dlp }
-  - { args: gallery-dl }
-  # - {args: ariang-native}
-  - { args: rclone }
-  - { args: rclone-browser }
-  # - {args: rclone-ui}
-  - { args: gdm257/clouddrive2 }
-  - { args: gdm257/guangyapan }
-  # - {args: winfsp-np-beta}
-  - { args: croc }
-  # - {args: cwRsync}
-  - { args: winscp }
-  # - {args: synctrayzor}
-  # - {args: landrop}
-  # - {args: megasync}
-  # - {args: 115}
-  # - {args: BaiduNetdisk}
-  # - {args: openlist}
-  - { args: openlist-desktop }
-  # - {args: alist-helper}
-  # - {args: hfs}
-  # - {args: sftpgo}
-  # - {args: dukto}
-  # - {args: dufs}
-  - { args: officetoolplus }
-  # - {args: lky-officetools}
-  # - {args: qbittorrent-portable}
-  - { args: qbittorrent-enhanced }
-  - { args: gdm257/qbbanhelper }
-  # - {args: annie}
-  # - { args: fake115uploader }
-  # - { args: fake115-go }
-  # - { args: BaiduPanFilesTransfers }
-  # - { args: baidupcs-go }
-  - { args: localsend }
-  # - {args: FileCentipede}
-  # - {args: ipfs-desktop}
-  - { args: kubo }
-  - { args: gdm257/fav }
-  # - {args: FileCentipede}
-  # - {args: termscp}
-  - { args: s3browser }
-  # - {args: windows-iso-downloader}
-  - { args: gopeed }
+  - { preset: scoop-install, args: scoop-search }
+  - { preset: scoop-install, args: gdm257/scoop-checkver }
+  # - { preset: scoop-install, args: ss}
+  - { preset: scoop-install, args: wingetcreate }
+  # - { preset: scoop-install, args: wingetui}
+  - { preset: scoop-install, args: UniGetUI }
+  - { preset: scoop-install, args: main/cargo-binstall }
+  - { preset: scoop-install, args: cargo-update }
+  - { preset: scoop-install, args: winget }
+  # - { preset: scoop-install, args: winget-preview}
+  - { preset: scoop-install, args: pkgx }
+  # - { preset: scoop-install, args: eget}
+  - { preset: scoop-install, args: bin-manager }
+  # - { preset: scoop-install, args: stew}
+  # - { preset: scoop-install, args: Baulk_dodorz}
+  # - { preset: scoop-install, args: shovel}
+  # - { preset: scoop-install, args: npackd}
+  - { preset: scoop-install, args: snappy-driver-installer-origin }
+  # - { preset: scoop-install, args: lux}
+  # - { preset: scoop-install, args: bbdown-beta}
+  # - { preset: scoop-install, args: bbdown}
+  # - { preset: scoop-install, args: downkyi}
+  - { preset: scoop-install, args: pixivutil2 }
+  # - { preset: scoop-install, args: pixivbiu}
+  # - { preset: scoop-install, args: youtube-dl}
+  # - { preset: scoop-install, args: youtube-dl-gui}
+  - { preset: scoop-install, args: yt-dlp }
+  - { preset: scoop-install, args: gallery-dl }
+  # - { preset: scoop-install, args: ariang-native}
+  - { preset: scoop-install, args: rclone }
+  - { preset: scoop-install, args: rclone-browser }
+  # - { preset: scoop-install, args: rclone-ui}
+  - { preset: scoop-install, args: gdm257/clouddrive2 }
+  - { preset: scoop-install, args: gdm257/guangyapan }
+  # - { preset: scoop-install, args: winfsp-np-beta}
+  - { preset: scoop-install, args: croc }
+  # - { preset: scoop-install, args: cwRsync}
+  - { preset: scoop-install, args: winscp }
+  # - { preset: scoop-install, args: synctrayzor}
+  # - { preset: scoop-install, args: landrop}
+  # - { preset: scoop-install, args: megasync}
+  # - { preset: scoop-install, args: 115}
+  # - { preset: scoop-install, args: BaiduNetdisk}
+  # - { preset: scoop-install, args: openlist}
+  - { preset: scoop-install, args: openlist-desktop }
+  # - { preset: scoop-install, args: alist-helper}
+  # - { preset: scoop-install, args: hfs}
+  # - { preset: scoop-install, args: sftpgo}
+  # - { preset: scoop-install, args: dukto}
+  # - { preset: scoop-install, args: dufs}
+  - { preset: scoop-install, args: officetoolplus }
+  # - { preset: scoop-install, args: lky-officetools}
+  # - { preset: scoop-install, args: qbittorrent-portable}
+  - { preset: scoop-install, args: qbittorrent-enhanced }
+  - { preset: scoop-install, args: gdm257/qbbanhelper }
+  # - { preset: scoop-install, args: annie}
+  # - { preset: scoop-install, args: fake115uploader }
+  # - { preset: scoop-install, args: fake115-go }
+  # - { preset: scoop-install, args: BaiduPanFilesTransfers }
+  # - { preset: scoop-install, args: baidupcs-go }
+  - { preset: scoop-install, args: localsend }
+  # - { preset: scoop-install, args: FileCentipede}
+  # - { preset: scoop-install, args: ipfs-desktop}
+  - { preset: scoop-install, args: kubo }
+  - { preset: scoop-install, args: gdm257/fav }
+  # - { preset: scoop-install, args: FileCentipede}
+  # - { preset: scoop-install, args: termscp}
+  - { preset: scoop-install, args: s3browser }
+  # - { preset: scoop-install, args: windows-iso-downloader}
+  - { preset: scoop-install, args: gopeed }

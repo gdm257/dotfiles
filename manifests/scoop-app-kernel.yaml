@@ -1,63 +1,65 @@
-entrypoint: scoop
-command: install
+presets:
+  scoop-install:
+    entrypoint: scoop
+    command: install
 
 run:
-  # - {args: vcredist-aio}
-  # - {args: osquery}
-  - { args: fastfetch }
-  # - {args: WindowsUpdateBlocker}
-  - { args: urlprotocolview }
-  - { args: rapidee }
-  - { args: registry-finder }
-  - { args: context-menu-manager }
-  - { args: universal-watermark-disabler }
-  # - {args: hibit-uninstaller-portable}
-  # - {args: registry-explorer}
-  - { args: dismplusplus }
-  - { args: Bootice_kkzzhizhou }
-  # - {args: optimizer}
-  # - {args: sophiapp}
-  - { args: wpd }
-  # - {args: privatezilla}
-  # - {args: Malware-Patch_Paxxs}
-  # - {args: itunes-portable}
-  - { args: i4 }
-  # - {args: i4tool}
-  # - {args: windows-application-driver}
-  # - {args: edgeless-hub}
-  # - {args: pchunter}
-  - { args: microsoft-activation-scripts }
-  - { args: CMWTAT_Digital_Edition }
-  # - {args: heu-kms-activator}
-  # - {args: kms-heu}
-  # - {args: KMS_VL_All_AiO-Portable}
-  # - {args: kms-vl-all-aio}
-  # - {args: powertool}
-  # - {args: BulkCrapUninstaller}
-  # - {args: BulkCrapUninstaller-Portable}
-  # - {args: bulk-crap-uninstaller}
-  # - {args: RevoUninstaller-Portable}
-  # - {args: geek-uninstaller}
-  - { args: driverstoreexplorer }
-  - { args: Grub2 }
-  - { args: ultraiso }
-  - { args: wincdemu }
-  # - {args: ntlite}
-  # - {args: ntlite-portable}
-  # - {args: ntlite_FlawlessCasual17}
-  - { args: dismtools }
-  - { args: vivetool }
-  - { args: vivetool-gui }
-  - { args: openark }
-  - { args: hwinfo }
-  - { args: speccy }
-  - { args: furmark }
-  - { args: prime95 }
-  - { args: hwmonitor }
-  - { args: memtest }
-  - { args: coretemp }
-  - { args: bluescreenview }
-  - { args: cpu-z }
-  - { args: gpu-z }
-  - { args: ssd-z }
-  - { args: ddu }
+  # - { preset: scoop-install, args: vcredist-aio}
+  # - { preset: scoop-install, args: osquery}
+  - { preset: scoop-install, args: fastfetch }
+  # - { preset: scoop-install, args: WindowsUpdateBlocker}
+  - { preset: scoop-install, args: urlprotocolview }
+  - { preset: scoop-install, args: rapidee }
+  - { preset: scoop-install, args: registry-finder }
+  - { preset: scoop-install, args: context-menu-manager }
+  - { preset: scoop-install, args: universal-watermark-disabler }
+  # - { preset: scoop-install, args: hibit-uninstaller-portable}
+  # - { preset: scoop-install, args: registry-explorer}
+  - { preset: scoop-install, args: dismplusplus }
+  - { preset: scoop-install, args: Bootice_kkzzhizhou }
+  # - { preset: scoop-install, args: optimizer}
+  # - { preset: scoop-install, args: sophiapp}
+  - { preset: scoop-install, args: wpd }
+  # - { preset: scoop-install, args: privatezilla}
+  # - { preset: scoop-install, args: Malware-Patch_Paxxs}
+  # - { preset: scoop-install, args: itunes-portable}
+  - { preset: scoop-install, args: i4 }
+  # - { preset: scoop-install, args: i4tool}
+  # - { preset: scoop-install, args: windows-application-driver}
+  # - { preset: scoop-install, args: edgeless-hub}
+  # - { preset: scoop-install, args: pchunter}
+  - { preset: scoop-install, args: microsoft-activation-scripts }
+  - { preset: scoop-install, args: CMWTAT_Digital_Edition }
+  # - { preset: scoop-install, args: heu-kms-activator}
+  # - { preset: scoop-install, args: kms-heu}
+  # - { preset: scoop-install, args: KMS_VL_All_AiO-Portable}
+  # - { preset: scoop-install, args: kms-vl-all-aio}
+  # - { preset: scoop-install, args: powertool}
+  # - { preset: scoop-install, args: BulkCrapUninstaller}
+  # - { preset: scoop-install, args: BulkCrapUninstaller-Portable}
+  # - { preset: scoop-install, args: bulk-crap-uninstaller}
+  # - { preset: scoop-install, args: RevoUninstaller-Portable}
+  # - { preset: scoop-install, args: geek-uninstaller}
+  - { preset: scoop-install, args: driverstoreexplorer }
+  - { preset: scoop-install, args: Grub2 }
+  - { preset: scoop-install, args: ultraiso }
+  - { preset: scoop-install, args: wincdemu }
+  # - { preset: scoop-install, args: ntlite}
+  # - { preset: scoop-install, args: ntlite-portable}
+  # - { preset: scoop-install, args: ntlite_FlawlessCasual17}
+  - { preset: scoop-install, args: dismtools }
+  - { preset: scoop-install, args: vivetool }
+  - { preset: scoop-install, args: vivetool-gui }
+  - { preset: scoop-install, args: openark }
+  - { preset: scoop-install, args: hwinfo }
+  - { preset: scoop-install, args: speccy }
+  - { preset: scoop-install, args: furmark }
+  - { preset: scoop-install, args: prime95 }
+  - { preset: scoop-install, args: hwmonitor }
+  - { preset: scoop-install, args: memtest }
+  - { preset: scoop-install, args: coretemp }
+  - { preset: scoop-install, args: bluescreenview }
+  - { preset: scoop-install, args: cpu-z }
+  - { preset: scoop-install, args: gpu-z }
+  - { preset: scoop-install, args: ssd-z }
+  - { preset: scoop-install, args: ddu }
