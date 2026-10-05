@@ -1213,6 +1213,19 @@
         "SKILL.md": "sha256:b2ab0a3e06c41ea32e2e8fba9c37320f65c993d17bdc9a9ac344b75c38c41a6f"
       }
     },
+    "openspec-update-change": {
+      "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-opencode-skills/skills/openspec-update-change",
+      "type": "github-subdir",
+      "installed_at": "2026-10-06T04:32:11.6698518+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/openspec-opencode-skills/skills/openspec-update-change",
+      "version": "4e2409c",
+      "tree_hash": "7e4276c1aae71675e01468b14e5bdccfbf7ff704",
+      "commit": "4e2409c95475532b90b2aec48c2d7e8a8d5f1b77",
+      "file_hashes": {
+        "SKILL.md": "sha256:17f5c9abb2051a331b44195fa1fa2ee479ce66301adeb5427bebb6fcf084cd5c"
+      }
+    },
     "openspec-verify-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-verify-change",
       "type": "github-subdir",
