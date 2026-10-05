@@ -4,11 +4,12 @@
     "beads-plan": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/beads-plan-skills/skills/beads-plan",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:42.3423106+08:00",
+      "installed_at": "2026-10-05T19:03:43.0350823+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/beads-plan-skills/skills/beads-plan",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "7215373a01723a407ef08362e47fdd6fcfb26f80",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:b7ae1601e5abd0921204f824992b53803dbddac52ba3f13938bc9b1cc00b7987"
       }
@@ -16,11 +17,12 @@
     "brandkit": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/brandkit",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:41.076722+08:00",
+      "installed_at": "2026-10-05T19:05:01.5890117+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/brandkit",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "d278ff748cafab01e4ae5dd7758fc0b53258621c",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:b0c4837e1bd140ca816ae54948754ddd2ac1e2a4d3619363777a80caf00b2ede"
       }
@@ -28,36 +30,39 @@
     "browser-harness": {
       "source": "https://github.com/browser-use/browser-harness.git/skills/browser-harness",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:09.0631717+08:00",
+      "installed_at": "2026-10-05T19:05:05.9300746+09:00",
       "repo_url": "https://github.com/browser-use/browser-harness.git",
       "subdir": "skills/browser-harness",
-      "version": "0c9b95f",
+      "version": "afbcc38",
       "tree_hash": "0cd840bdc16c45d02cc4d86decc6aced55c13735",
+      "commit": "afbcc381b963040c19627d788e40c7e7663171ee",
       "file_hashes": {
-        "SKILL.md": "sha256:f11f4ebf136fe7a4b0d515cda543869c97f50cb2a721ddad41338e27944fca7e",
+        "SKILL.md": "sha256:9e25a96375a0e120c16b76ea9d0a57c2fb7a5765813f89d5b9bcdc6dba6ea175",
         "references/install.md": "sha256:292e8ef0dbd391e19964ba5b3a230664e6e3baa22c37b6ed9a858ee37f8b7305"
       }
     },
     "brutalist-skill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/brutalist-skill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:42.9561106+08:00",
+      "installed_at": "2026-10-05T19:05:00.205193+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/brutalist-skill",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "f812ede7e5c34cf680f629911e9f9ac05e416cf4",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:fffbaac8597f07679e9d87145533567658aedba3b5eca6f16a7075a333048caa"
       }
     },
     "code-review": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/code-review",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/code-review",
       "type": "github-subdir",
-      "installed_at": "2026-09-21T04:01:43.8406271+09:00",
+      "installed_at": "2026-10-05T19:03:47.1513386+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/code-review",
-      "version": "c55ee46",
+      "version": "f6abdeb",
       "tree_hash": "d8e341cee7980127dddda05159bedf25dc853615",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL.md": "sha256:47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
         "agents/openai.yaml": "sha256:8229ca854e11dc8e6aef2131ee03f31fb1561cf905fab9ccc325180cf3331352"
@@ -66,26 +71,28 @@
     "code-review-and-quality": {
       "source": "https://github.com/addyosmani/agent-skills.git/skills/code-review-and-quality",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:49.0360078+08:00",
+      "installed_at": "2026-10-05T19:03:02.2910615+09:00",
       "repo_url": "https://github.com/addyosmani/agent-skills.git",
       "subdir": "skills/code-review-and-quality",
-      "version": "d2c37ef",
-      "tree_hash": "8c26aef07c0ac94770d48ed68e72c0fd585420a6",
+      "version": "1401c8b",
+      "tree_hash": "2c0b966d411b0d64c4f44efdde30d5f6f3666f76",
+      "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
       "file_hashes": {
-        "SKILL.md": "sha256:8f3cabca581bbf7cb5f0add3f7454e7a4523f9d4353a6a4a217e6fa515309612"
+        "SKILL.md": "sha256:2db1e850379f255fd3091ef278cde24cd6c7d2ba23e360cc52ea522c40d4396e"
       }
     },
     "codebase-design": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/codebase-design",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/codebase-design",
       "type": "github-subdir",
-      "installed_at": "2026-09-19T04:22:25.5441637+09:00",
+      "installed_at": "2026-10-05T19:03:49.1463766+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/codebase-design",
-      "version": "c55ee46",
-      "tree_hash": "344e3efc88ee60663b2e989555c2efdb548fbd42",
+      "version": "f6abdeb",
+      "tree_hash": "07ba1cd60efc12d0d3a083005c1d9651cf15e39a",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "DEEPENING.md": "sha256:f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
-        "DESIGN-IT-TWICE.md": "sha256:8e740bf98446dbd4dfdc132ac4346d9a7eedaf93de6a495889171cf7f99f16bd",
+        "DESIGN-IT-TWICE.md": "sha256:52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010",
         "SKILL.md": "sha256:2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
         "agents/openai.yaml": "sha256:edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f"
       }
@@ -93,11 +100,12 @@
     "codebase-memory": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/codebase-memory/skills/codebase-memory",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:33.3447429+08:00",
+      "installed_at": "2026-10-05T19:03:41.5586954+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/codebase-memory/skills/codebase-memory",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "4b9d722ac754a46d16e9431a9abf2f42d93b8242",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:99371d29af21e23079fd6cc2213e5e7add270304b3812da55d5dfdbe67176684"
       }
@@ -105,11 +113,12 @@
     "commit-context": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/commit-context",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:18.9445598+08:00",
+      "installed_at": "2026-10-05T19:03:12.8838173+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/commit-context",
-      "version": "e04ba88",
+      "version": "c51bf3f",
       "tree_hash": "07a8b513f4b6081e698ac4fb1a87f066ec1e9258",
+      "commit": "c51bf3f294a423294deb050513a9741eff42fe8e",
       "file_hashes": {
         "EXAMPLES.md": "sha256:370fecafbad5a7b467499da038863b383cdd740037c2f29758e43f56c6f064d2",
         "SKILL.md": "sha256:11a6e724628cca46134f153925fabd4c29c3fdad09c132d8992705a5c22bb032"
@@ -118,11 +127,12 @@
     "commit-history": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/commit-history",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:19.2146904+08:00",
+      "installed_at": "2026-10-05T19:03:11.856499+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/commit-history",
-      "version": "e04ba88",
+      "version": "c51bf3f",
       "tree_hash": "949a512eaa9e0fabad7489e9c182e754f2deebf1",
+      "commit": "c51bf3f294a423294deb050513a9741eff42fe8e",
       "file_hashes": {
         "EXAMPLES.md": "sha256:ebbc149695a107663966f1d0aa8e53a8eee93b98b0b81977f398277e7da40576",
         "SKILL.md": "sha256:69f1379cfbc86b66d6741c0bad297fb9a7cd02540d9a7656d0458e6af48dc804"
@@ -131,76 +141,82 @@
     "debug-issue": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/debug-issue",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:33.6189151+08:00",
+      "installed_at": "2026-10-05T19:03:39.2244788+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/code-review-graph/skills/debug-issue",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "d0bc82be9bf83e711ece8a50cf00d6dfb3377c2c",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:4359372f9591359123e7e54dbb183c538ed0153ef6cd0208cf680102e44fc36c"
       }
     },
     "deja-search": {
-      "source": "https://github.com/vshulcz/deja-vu/skills/deja-search",
+      "source": "https://github.com/vshulcz/deja-vu.git/skills/deja-search",
       "type": "github-subdir",
-      "installed_at": "2026-09-05T05:54:46.5599942+09:00",
+      "installed_at": "2026-10-05T19:04:27.1156392+09:00",
       "repo_url": "https://github.com/vshulcz/deja-vu.git",
       "subdir": "skills/deja-search",
-      "version": "5770986",
-      "tree_hash": "acd1c17bc28a36be532c259ccb8d5486d2513918",
+      "version": "03287af",
+      "tree_hash": "cc7d0ea24f6c33a2bf651d4d25be18acc5b8023b",
+      "commit": "03287af280e44add1f8b9b5dda1e3185c3091ae2",
       "file_hashes": {
-        "SKILL.md": "sha256:594b8ead0824d213437cb936b9e38f336ff0d585cbbaab3382f4fd99dd75eda0"
+        "SKILL.md": "sha256:d106997e622cefd2c68fd5162c6d2308f838ca76910d24568c510f7ed0464c75"
       }
     },
     "design-with-taste": {
       "source": "https://github.com/cristicretu/family-taste-skill.git/skills/design-with-taste",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:52.6626379+08:00",
+      "installed_at": "2026-10-05T19:03:15.9901995+09:00",
       "repo_url": "https://github.com/cristicretu/family-taste-skill.git",
       "subdir": "skills/design-with-taste",
       "version": "8c34fce",
       "tree_hash": "2b370bec039f58d746201da3caac12bb938f6c99",
+      "commit": "8c34fce6ad63c6d3bf053e17c7bc32aee866141f",
       "file_hashes": {
         "SKILL.md": "sha256:2cf276fe7679081784fb00e1ce4b942ca923d8a0672bd41bc494bc7f6d66c962"
       }
     },
     "diagnosing-bugs": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/diagnosing-bugs",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/diagnosing-bugs",
       "type": "github-subdir",
-      "installed_at": "2026-09-17T06:35:50.8274465+09:00",
+      "installed_at": "2026-10-05T19:03:47.3185827+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/diagnosing-bugs",
-      "version": "959a8e9",
-      "tree_hash": "99bd56983e42bc752c52da67f1112e4121781cd1",
+      "version": "f6abdeb",
+      "tree_hash": "de4236cf34757c4e9ea7afe78d46c023213ff254",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
-        "SKILL.md": "sha256:77f3cf31bc99b2f49af943222526531fcc9fc41d047626d3640e875e85af3e84",
+        "SKILL.md": "sha256:9168404abda0967a5d32977e3498cd95fda6807018852f3de736a78357c82b40",
         "agents/openai.yaml": "sha256:3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
         "scripts/hitl-loop.template.sh": "sha256:35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
       }
     },
     "domain-modeling": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/domain-modeling",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/domain-modeling",
       "type": "github-subdir",
-      "installed_at": "2026-09-19T04:51:46.1693946+09:00",
+      "installed_at": "2026-10-05T19:03:48.380605+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/domain-modeling",
-      "version": "c55ee46",
-      "tree_hash": "388c9822641805ca2dcd5038e68a1d5282437ee5",
+      "version": "f6abdeb",
+      "tree_hash": "ea30ee454ba264543dbe40737973b1a5afb9f0e6",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "ADR-FORMAT.md": "sha256:944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
-        "CONTEXT-FORMAT.md": "sha256:17ab16ce783e4d2801ee52fd9acdf550cbf44de65ae76797a93943bbedf22a13",
-        "SKILL.md": "sha256:327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+        "GLOSSARY-FORMAT.md": "sha256:21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+        "SKILL.md": "sha256:7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
         "agents/openai.yaml": "sha256:f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b"
       }
     },
     "explore-codebase": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/explore-codebase",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:36.5261371+08:00",
+      "installed_at": "2026-10-05T19:03:36.9592535+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/code-review-graph/skills/explore-codebase",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "5efc9caea8544291914d1dc66a20d1e745735846",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:d94f31fdf5fb25204b3a1e33b45b2e99432cfc71cc2fdebdc8c80d1979094f45"
       }
@@ -208,11 +224,12 @@
     "extract-design-md": {
       "source": "https://github.com/google-labs-code/stitch-skills.git/plugins/stitch-design/skills/extract-design-md",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:24.9758715+08:00",
+      "installed_at": "2026-10-05T19:04:30.9453276+09:00",
       "repo_url": "https://github.com/google-labs-code/stitch-skills.git",
       "subdir": "plugins/stitch-design/skills/extract-design-md",
       "version": "0337446",
       "tree_hash": "ea8fc30873dc0c5f1069b029aac1ecf2fd30036d",
+      "commit": "0337446dadde6f8c94210444e2aa9d546126480f",
       "file_hashes": {
         "SKILL.md": "sha256:f9c32b30acd9fea3dba7306bf38e3a859f49c1f27bcf44f9cf16d3a60a730276",
         "examples/DESIGN.md": "sha256:9a14478effd073d9fefc1f0e1084aab299078603d248406f1381462cd5a01c26",
@@ -226,11 +243,12 @@
     "find-skills": {
       "source": "https://github.com/vercel-labs/skills.git/skills/find-skills",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:29.3256523+08:00",
+      "installed_at": "2026-10-05T19:03:52.7641641+09:00",
       "repo_url": "https://github.com/vercel-labs/skills.git",
       "subdir": "skills/find-skills",
-      "version": "435076e",
+      "version": "18f96ea",
       "tree_hash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "commit": "18f96ea131dab3b0fcc9b27cf7c6f6cbb6174680",
       "file_hashes": {
         "SKILL.md": "sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f"
       }
@@ -238,11 +256,12 @@
     "forget": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/forget",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:19.468205+08:00",
+      "installed_at": "2026-10-05T19:03:12.0029743+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/forget",
-      "version": "e04ba88",
+      "version": "c51bf3f",
       "tree_hash": "72eff55fcbe9b6228dd6d678c91bfa6ee728c82d",
+      "commit": "c51bf3f294a423294deb050513a9741eff42fe8e",
       "file_hashes": {
         "EXAMPLES.md": "sha256:8364e9d2d30c0e4872c5eb95f000a1c4aa9b774d082a31c95b337e8c1d42b7aa",
         "SKILL.md": "sha256:4578899d32c2abb29ef7b346fbdcbfdd8c61ffd0135b82cf00a1b5df0e6b17d6"
@@ -251,11 +270,12 @@
     "frontend-fullchain-optimization": {
       "source": "https://github.com/mindfold-ai/marketplace.git/skills/frontend-fullchain-optimization",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:34.9043385+08:00",
+      "installed_at": "2026-10-05T19:03:19.2394391+09:00",
       "repo_url": "https://github.com/mindfold-ai/marketplace.git",
       "subdir": "skills/frontend-fullchain-optimization",
-      "version": "a478b28",
+      "version": "62a77c9",
       "tree_hash": "85a7d2533dcae23e87af4dfb73e5829b0d7149db",
+      "commit": "62a77c9b57fb8bb081c110394bce08b6ebc6e09a",
       "file_hashes": {
         "SKILL.md": "sha256:4873a14afba488a51bc73f0ca06fd62a7f8fe92caf93f6b6bd3f9faf735ea218"
       }
@@ -263,7 +283,7 @@
     "git-merge-upstream": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/agent-skills/skills/git-merge-upstream",
       "type": "github-subdir",
-      "installed_at": "2026-09-24T21:34:45.549213+09:00",
+      "installed_at": "2026-10-05T19:03:34.4210622+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/agent-skills/skills/git-merge-upstream",
       "version": "abe6633",
@@ -276,7 +296,7 @@
     "git-rebase": {
       "source": "https://github.com/pedronauck/skills.git/skills/mine/git-rebase",
       "type": "github-subdir",
-      "installed_at": "2026-09-24T21:35:02.7422658+09:00",
+      "installed_at": "2026-10-05T19:04:35.5325257+09:00",
       "repo_url": "https://github.com/pedronauck/skills.git",
       "subdir": "skills/mine/git-rebase",
       "version": "0422940",
@@ -297,23 +317,25 @@
     "gpt-tasteskill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/gpt-tasteskill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:43.2016086+08:00",
+      "installed_at": "2026-10-05T19:05:00.3480553+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/gpt-tasteskill",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "c87d529ad945cd35985b19475bf53f41682d4f69",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:2e64c269953f2656c21bf5a0fa6b4568e82fe0c72b36e8f84758e090349966a5"
       }
     },
     "grill-with-docs": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/grill-with-docs",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/grill-with-docs",
       "type": "github-subdir",
-      "installed_at": "2026-09-19T04:51:46.3229372+09:00",
+      "installed_at": "2026-10-05T19:03:49.3127846+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/grill-with-docs",
-      "version": "c55ee46",
+      "version": "f6abdeb",
       "tree_hash": "eedaf2562c83155115e9c649fa3ecaac2e10e81d",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL.md": "sha256:7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
         "agents/openai.yaml": "sha256:94cd0ab161fb468a836349f5ed482ba58ce8e709a05c57ce533d739dbd35cca9"
@@ -322,11 +344,12 @@
     "grilling": {
       "source": "https://github.com/mattpocock/skills.git/skills/productivity/grilling",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:04.3117608+08:00",
+      "installed_at": "2026-10-05T19:03:49.4835606+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/productivity/grilling",
-      "version": "6654f6b",
+      "version": "f6abdeb",
       "tree_hash": "f0732035b8b1b60ae39454e4191caef32fa91903",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL.md": "sha256:10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2",
         "agents/openai.yaml": "sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b"
@@ -335,11 +358,12 @@
     "hallmark": {
       "source": "https://github.com/Nutlope/hallmark.git/skills/hallmark",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:12.0113428+08:00",
+      "installed_at": "2026-10-05T19:03:25.638508+09:00",
       "repo_url": "https://github.com/Nutlope/hallmark.git",
       "subdir": "skills/hallmark",
       "version": "13ac0ec",
       "tree_hash": "747c924c4767b4d5fa6f1c59985c87a21c918334",
+      "commit": "13ac0ec7e148655948100b6396439e481361d690",
       "file_hashes": {
         "SKILL.md": "sha256:59469635bbbd21acddbc664d95e8d97147f454b2d8f4a0a89c7d2c5afbe67577",
         "references/anti-patterns.md": "sha256:a36eb346ad59cafaa26119ed1e7c0bbb8aca6637209ee110eb630dd1a9307070",
@@ -451,22 +475,23 @@
       }
     },
     "handoff": {
-      "source": "https://github.com/mattpocock/skills/skills/productivity/handoff",
+      "source": "https://github.com/mattpocock/skills.git/skills/productivity/handoff",
       "type": "github-subdir",
-      "installed_at": "2026-09-19T07:25:07.7039065+09:00",
+      "installed_at": "2026-10-05T19:03:47.4573117+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/productivity/handoff",
-      "version": "c55ee46",
+      "version": "f6abdeb",
       "tree_hash": "2242e8f05424b8c2ae94194a90d97b88d16108ec",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL.md": "sha256:7c62de979fdc7ac32fb5ddb2146156c917f80ee070d30fadc9d40343c4b6ed25",
         "agents/openai.yaml": "sha256:5c479fd562c691851690e8b18c8501045bef0943c10743d636b2fae26add1d28"
       }
     },
     "i-have-adhd": {
-      "source": "https://github.com/ayghri/i-have-adhd/skills/i-have-adhd",
+      "source": "https://github.com/ayghri/i-have-adhd.git/skills/i-have-adhd",
       "type": "github-subdir",
-      "installed_at": "2026-09-23T02:56:24.2411893+09:00",
+      "installed_at": "2026-10-05T19:04:38.17065+09:00",
       "repo_url": "https://github.com/ayghri/i-have-adhd.git",
       "subdir": "skills/i-have-adhd",
       "version": "839872f",
@@ -481,11 +506,12 @@
     "image-to-code-skill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/image-to-code-skill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:41.3622885+08:00",
+      "installed_at": "2026-10-05T19:05:02.1681405+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/image-to-code-skill",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "701b3cb89c061fcf98a98f639e0b0b5c0b492479",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:4c060a8064a8b13380bc2ef3d6e6a1d0b1e316aa093cd9807d0ce9e4eeb037fa"
       }
@@ -493,11 +519,12 @@
     "imagegen-frontend-mobile": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/imagegen-frontend-mobile",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:41.6515177+08:00",
+      "installed_at": "2026-10-05T19:05:00.545256+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/imagegen-frontend-mobile",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "9901fcde67e9506a706912107825fdfb72e01f30",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:8a33389979f3074fa0926678e266ad2eb9234624472254469fc1ad916b9caa24"
       }
@@ -505,11 +532,12 @@
     "imagegen-frontend-web": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/imagegen-frontend-web",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:41.9299031+08:00",
+      "installed_at": "2026-10-05T19:05:00.7468005+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/imagegen-frontend-web",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "3b5117d349200e33f9c3399344681620079dcc18",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:6b5c2256522fdba1e3313eafa3d743b960a7b13ec029d3e6586e04b23327c1f8"
       }
@@ -680,50 +708,68 @@
     "implement": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/implement",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:04.693697+08:00",
+      "installed_at": "2026-10-05T19:03:47.5986504+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/implement",
-      "version": "6654f6b",
+      "version": "f6abdeb",
       "tree_hash": "f07d230f645fc9ac390cf13a450bbff12ad791a3",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL.md": "sha256:6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3",
         "agents/openai.yaml": "sha256:8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc"
       }
     },
-    "improve-codebase-architecture": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/improve-codebase-architecture",
+    "implement-spec": {
+      "source": "https://github.com/mattpocock/skills/skills/engineering/implement-spec",
       "type": "github-subdir",
-      "installed_at": "2026-09-17T06:35:51.1219329+09:00",
+      "installed_at": "2026-10-05T19:20:00.8650585+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/implement-spec",
+      "version": "f6abdeb",
+      "tree_hash": "0cfefc751d0cb64f0c948ffcb17e13b94e778f08",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
+      "file_hashes": {
+        "SKILL.md": "sha256:7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d",
+        "agents/openai.yaml": "sha256:fd41efb42c60c96320d6531be7e4bf15cbf5518cd652d57dff27ccffa46988e9"
+      }
+    },
+    "improve-codebase-architecture": {
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/improve-codebase-architecture",
+      "type": "github-subdir",
+      "installed_at": "2026-10-05T19:03:49.6754407+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/improve-codebase-architecture",
-      "version": "959a8e9",
-      "tree_hash": "3d35cd438f4067b03c8b3792e038960e4ac11526",
+      "version": "f6abdeb",
+      "tree_hash": "39bd9cc130f7dfcc4e3ea0b3613f6ebed0d0ad2b",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "HTML-REPORT.md": "sha256:581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528",
-        "SKILL.md": "sha256:d1ac25511a936ff4250a48dbcefda363837d6bb9321b3cba73df99fa37270a75",
+        "SKILL.md": "sha256:552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392",
         "agents/openai.yaml": "sha256:c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1"
       }
     },
     "interview-me": {
       "source": "https://github.com/addyosmani/agent-skills.git/skills/interview-me",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:49.2950696+08:00",
+      "installed_at": "2026-10-05T19:03:02.1320498+09:00",
       "repo_url": "https://github.com/addyosmani/agent-skills.git",
       "subdir": "skills/interview-me",
-      "version": "d2c37ef",
-      "tree_hash": "0797d64561cca6ad975d9e5d1f1497cba83a517b",
+      "version": "1401c8b",
+      "tree_hash": "2a391376521dee060881b7edc676e58a564616f2",
+      "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
       "file_hashes": {
-        "SKILL.md": "sha256:1d94741d10d2c826cd0c191aea3981ee94c8abb27ef2a166f6a372117d06448f"
+        "SKILL.md": "sha256:ace4b675999bb504593d572e0f73f3d7e803ad6fddf318445598c82c11939db2"
       }
     },
     "kiro-debug": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-debug",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:39.1449134+08:00",
+      "installed_at": "2026-10-05T19:03:38.260024+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-debug",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "52f3501b2d587ef0da304dbd9cf3dc1f2445ce70",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:c5ce75a0f76d5f587830d5c79c57adf05d6515badc5cff9b3d547bd942bc9514",
         "agents/openai.yaml": "sha256:b758f4ab344af0fea6d29fbb950f6b816af1862d7d33e704b2ead3bd4954e87b"
@@ -732,11 +778,12 @@
     "kiro-discovery": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-discovery",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:41.1672841+08:00",
+      "installed_at": "2026-10-05T19:03:43.2162489+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-discovery",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "bce27e128099a38cb85b70e1f9bb4e388c4ef352",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:f437f9e1cded21cd015ad26986ff3eedddf634f4784f725fedaf9947921ea7c1",
         "agents/openai.yaml": "sha256:22ebe6712d9d0f89b6357faa83e48377b2853e5f72d0ab67b8102e6f745a6a36"
@@ -745,11 +792,12 @@
     "kiro-impl": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-impl",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:29.0415948+08:00",
+      "installed_at": "2026-10-05T19:03:39.4454252+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-impl",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "b73f81d42bbe65c43123678a1c51064402dd1fec",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:9d7ddf5d5fb4e24800fb81b399a6dd0c4a1fed86d21e549a82c2f2323c76adab",
         "agents/openai.yaml": "sha256:9d1bf3f6d6f6356f56c51bdad8fd0373f247a4f7f356877158307facf8b4c3fc",
@@ -761,11 +809,12 @@
     "kiro-review": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-review",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:33.9437366+08:00",
+      "installed_at": "2026-10-05T19:03:43.3867078+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-review",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "5eb614b761c5e5cda9310899d550b3bd71dbb47f",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:c68435ab6e7051226f235a75b616a47c78dc59ae93732c615ac2d2a2bea9940f",
         "agents/openai.yaml": "sha256:d50d6c73ed0203ef24319e27fb66bfae96743d27fc753c4265d6703d019bcf00"
@@ -774,11 +823,12 @@
     "kiro-settings": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-settings",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:42.6716011+08:00",
+      "installed_at": "2026-10-05T19:03:39.6556502+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-settings",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "fdfd39f40f69fd4759fa5e1e0d19b7c363f93014",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:1411e55640d4411484199293684c3cd291c0b9614fba885a5514b2988f4c039e",
         "resources/.kiro/settings/templates/specs/design.md": "sha256:0b9e3cbd75e4543880aa3b58e4c194670543b39287f5cb5c9d80d9a5f9ff99ff",
@@ -802,11 +852,12 @@
     "kiro-spec-batch": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-batch",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:36.8236329+08:00",
+      "installed_at": "2026-10-05T19:03:37.1386555+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-batch",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "80ba8d92b31cdf0eb7cf876c5fa02ed3490feb3f",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:6b490abdbc1766e4a83680358c9184c4a9355cac99d1088121efcefdb6fb5f27",
         "agents/openai.yaml": "sha256:312a60f578322711cb1c2cb8ec2046f4100c8a7543ee2f0e97dbffa1ebdd1208"
@@ -815,11 +866,12 @@
     "kiro-spec-design": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-design",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:30.75697+08:00",
+      "installed_at": "2026-10-05T19:03:37.3654094+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-design",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "ef91edc78284cc0cebcf1afdfc9e249dff1b36dc",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:f42864c32f7a7ff14e5ada96eee6e47d3074d0d080ffd83e382b996492a972c8",
         "agents/openai.yaml": "sha256:3f7a8457db937cb9ccf4e2586b2dbc31a90a8ff504fa4057186d3caf11434f8d",
@@ -833,11 +885,12 @@
     "kiro-spec-init": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-init",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:35.6591677+08:00",
+      "installed_at": "2026-10-05T19:03:40.8234929+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-init",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "0b960614a58785aeb0a1d7354eac8fd94f888e15",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:9b6690a00a8b399f6a5380e1267875bddfc4d226239930bfca457ab89e4c8acd",
         "agents/openai.yaml": "sha256:5da94bcd58bbad30ca72b36aaa32166500b99d928a725eb9cdd2a3bf67265afe"
@@ -846,11 +899,12 @@
     "kiro-spec-quick": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-quick",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:37.1089322+08:00",
+      "installed_at": "2026-10-05T19:03:35.6297869+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-quick",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "4b0d8ca9dd0149cef96e1fbd53e0fc4ef79fbccb",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:4f63ae2f443d01047fae9698a3fad35daa5d7dbf8e06f83b25788f0941d69a5f",
         "agents/openai.yaml": "sha256:14de92d462c4d8b4b773c0495dbf980decd52202a63edc0c919fb3f91e4492d2"
@@ -859,11 +913,12 @@
     "kiro-spec-requirements": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-requirements",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:31.081451+08:00",
+      "installed_at": "2026-10-05T19:03:41.0267779+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-requirements",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "d28748b839b6882f3a73f54453bda0d430e0cb3d",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:72b20399dc768f316d46f89cb7163e60a344cf807b7d6bfaf8886845738145f8",
         "agents/openai.yaml": "sha256:abf191f0929e70b61e55ce643f0889fdd8b4d4294af8b103def6a973436ed27b",
@@ -874,11 +929,12 @@
     "kiro-spec-status": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-status",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:29.3169033+08:00",
+      "installed_at": "2026-10-05T19:03:39.8327975+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-status",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "0163f7efeb93e97cce59f08a15fd3ed02d78254d",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:5c7abdaa0ad500020c51c24338ff18784cc968b2d466f55468cce71b7c4b37e8",
         "agents/openai.yaml": "sha256:d74bee33607b29ccb151bbfd3b0c737ab9087705c5d0f02570671251b70e6705"
@@ -887,11 +943,12 @@
     "kiro-spec-tasks": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-spec-tasks",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:37.4272076+08:00",
+      "installed_at": "2026-10-05T19:03:38.4869518+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-spec-tasks",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "e8e733e4c48fd5dc2b968cb3fc8df3d357f6ae1a",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:9d79cc1ca267c9cd5f97b0e20f0876eb149805c8edbd77c57517ce7bd450b65f",
         "agents/openai.yaml": "sha256:e1bdb2eedec1372525e3d0a237f80ad0ea77b332c4792fb4d970510623b2a7f6",
@@ -902,11 +959,12 @@
     "kiro-steering": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-steering",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:41.4589067+08:00",
+      "installed_at": "2026-10-05T19:03:41.7377984+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-steering",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "5d259b91d6af17824150feb7551be85e31ba5b4c",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:0ed80e5e6441ea677b45c86300172b294cca459b0b922e087a829f0874b01b77",
         "agents/openai.yaml": "sha256:e0568d48c6a5ead9a659b6f0d4a2acc9e333d36fcc429770442c3a67bf7445fd",
@@ -916,11 +974,12 @@
     "kiro-steering-custom": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-steering-custom",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:31.38167+08:00",
+      "installed_at": "2026-10-05T19:03:35.8092611+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-steering-custom",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "dbb123ca89938de0c50512effff91684d2c814c0",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:cac16690dc4c3388e66a6dc73c7b9844a8366897901ef1210cd29d3676d13ef6",
         "agents/openai.yaml": "sha256:3a25cca2c5b682adb45cf8ff881cbc74d77033a0feb90d070e7829fde6e5bd08",
@@ -930,11 +989,12 @@
     "kiro-validate-design": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-validate-design",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:31.7119638+08:00",
+      "installed_at": "2026-10-05T19:03:41.2095711+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-validate-design",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "fc02b7e4d8890b341660cb07b3bdaeda35287389",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:cfe55680d725b588e296d1979b2819d738f3995e35ca5eed9c061e94b5a95250",
         "agents/openai.yaml": "sha256:a12e7c2f457ca2bd0d29f355b57f46e027922e803aa5f4ec03ee2f1ec6f1ce51",
@@ -944,11 +1004,12 @@
     "kiro-validate-gap": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-validate-gap",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:34.2543958+08:00",
+      "installed_at": "2026-10-05T19:03:36.004249+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-validate-gap",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "7d83e8e50912560c2f8e98b41371649295420955",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:2536230bfc8abe45c83e6a04947f9c85c14a3e2588024cf3f11fd7cc7d73dec2",
         "agents/openai.yaml": "sha256:f597ad952200df881ac6b78f7b7a8dc535dd6997698c8f170968cd731d385a6b",
@@ -958,11 +1019,12 @@
     "kiro-validate-impl": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-validate-impl",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:41.7645996+08:00",
+      "installed_at": "2026-10-05T19:03:40.0160473+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-validate-impl",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "4466a83c081d43421d8fdaadb17a244ff46899e7",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:cdc68cb4d78bcf29c76f1858e796ec9cfb31aa3d3f3983aaeb42786c09cda3ba",
         "agents/openai.yaml": "sha256:9fd7995d902e956dea248d19e0a96a62757d0cebd3d9153b6938eea09cb6e15f"
@@ -971,11 +1033,12 @@
     "kiro-verify-completion": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/cc-sdd-skills/skills/kiro-verify-completion",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:39.4233629+08:00",
+      "installed_at": "2026-10-05T19:03:37.5424031+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/cc-sdd-skills/skills/kiro-verify-completion",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "6e773b0b71df3fe054a63e4738317f03134a79db",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:389b056b47c9295df32787fec284a97f53b02555443bdd4343d3e61ac499efbb",
         "agents/openai.yaml": "sha256:05758a85e372d079199baadc94c392cddf24d1b85b4b7ee932bc40bbcf58ef9b"
@@ -984,23 +1047,25 @@
     "mem-recall": {
       "source": "https://github.com/mindfold-ai/marketplace.git/skills/mem-recall",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:35.3198189+08:00",
+      "installed_at": "2026-10-05T19:03:19.4479748+09:00",
       "repo_url": "https://github.com/mindfold-ai/marketplace.git",
       "subdir": "skills/mem-recall",
-      "version": "a478b28",
-      "tree_hash": "b01f0f6775d7e3c9837257771b7faff70fb903ce",
+      "version": "62a77c9",
+      "tree_hash": "91605e7071495245e08fa59bff6a8663541ab577",
+      "commit": "62a77c9b57fb8bb081c110394bce08b6ebc6e09a",
       "file_hashes": {
-        "SKILL.md": "sha256:8313aae322abfa58e9d17b57685211711251dcb2e598568682274e13672c4917"
+        "SKILL.md": "sha256:b10111fd6dc7a01de1cc046894119079f51708d7ebc15c79b05eb89b2888a8ec"
       }
     },
     "minimalist-skill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/minimalist-skill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:42.1985749+08:00",
+      "installed_at": "2026-10-05T19:05:00.9225698+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/minimalist-skill",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "5509c012862cda27e2ed7efae89ed940ecc53add",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c"
       }
@@ -1008,23 +1073,25 @@
     "open-code-review": {
       "source": "https://github.com/alibaba/open-code-review.git/skills/open-code-review",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:19:55.2694044+08:00",
+      "installed_at": "2026-10-05T19:04:53.4197781+09:00",
       "repo_url": "https://github.com/alibaba/open-code-review.git",
       "subdir": "skills/open-code-review",
-      "version": "4cecf1e",
-      "tree_hash": "4e1f9432dbbd6e2949ee35e2bec9f0ceec41e637",
+      "version": "182898c",
+      "tree_hash": "6ca3160dcfcf7ff4d3ccfd0c999f59d06e6ad603",
+      "commit": "182898cf522da3d04157b422752d028417974e19",
       "file_hashes": {
-        "SKILL.md": "sha256:0a19be27aefbf59ae5b67e9fb4b386d74dbd50c7e7f6d153bf8828292a0b503c"
+        "SKILL.md": "sha256:be45ee1303e5106cd36f20bd7854ea1a5bb41b0d6ae045953cb643201bcd715e"
       }
     },
     "open-code-review-delegate": {
-      "source": "https://github.com/alibaba/open-code-review/skills/open-code-review-delegate",
+      "source": "https://github.com/alibaba/open-code-review.git/skills/open-code-review-delegate",
       "type": "github-subdir",
-      "installed_at": "2026-09-21T03:35:39.5282859+09:00",
+      "installed_at": "2026-10-05T19:04:53.269972+09:00",
       "repo_url": "https://github.com/alibaba/open-code-review.git",
       "subdir": "skills/open-code-review-delegate",
-      "version": "cf64e70",
+      "version": "182898c",
       "tree_hash": "763660a601ea4b9b75d2fdb679aa81fd205df461",
+      "commit": "182898cf522da3d04157b422752d028417974e19",
       "file_hashes": {
         "SKILL.md": "sha256:20828a50b05465496468c733270be2256c7764d2e5c29181a7706c58cfc64087"
       }
@@ -1032,11 +1099,12 @@
     "open-pencil": {
       "source": "https://github.com/open-pencil/skills.git/skills/open-pencil",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:00.2849681+08:00",
+      "installed_at": "2026-10-05T19:03:04.8000761+09:00",
       "repo_url": "https://github.com/open-pencil/skills.git",
       "subdir": "skills/open-pencil",
-      "version": "6239279",
+      "version": "0d850d2",
       "tree_hash": "b52ce04ec8faefc316f151140ec56260f09f83f6",
+      "commit": "0d850d25f0ccd2066ad47877bd5884e6f433dbd0",
       "file_hashes": {
         "SKILL.md": "sha256:8ca0f42986ad9a3c55a7403428b38d86c442866df6e54c01fb542a184513484e"
       }
@@ -1044,11 +1112,12 @@
     "openspec-apply-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-apply-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-13T06:50:00.8966262+09:00",
+      "installed_at": "2026-10-05T19:03:37.7249475+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-apply-change",
-      "version": "13aa8d2",
+      "version": "abe6633",
       "tree_hash": "f3268ddfc81c475b8842b61a8745be7d667e68b2",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:0a948dcdbded11b9e7b2101cc16fca2f5da9c83dfa62ec6593743993d8c9398c"
       }
@@ -1056,11 +1125,12 @@
     "openspec-archive-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-archive-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-13T06:50:03.9544846+09:00",
+      "installed_at": "2026-10-05T19:03:40.1916347+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-archive-change",
-      "version": "13aa8d2",
+      "version": "abe6633",
       "tree_hash": "4c9971e2cec77091b2f1f7dd9f0b7d4d4c117306",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:c9fefae73635876634432270b57ffdcdd24d0f8aa727d12f1a03c81603d8204c"
       }
@@ -1068,11 +1138,12 @@
     "openspec-bulk-archive-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-bulk-archive-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-13T06:50:07.3085212+09:00",
+      "installed_at": "2026-10-05T19:03:36.2010634+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-bulk-archive-change",
-      "version": "13aa8d2",
+      "version": "abe6633",
       "tree_hash": "06901f78c37089a722fbd362bd18676dfbbd236f",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:982a588110a16a0ce27fbc8c524d506163dfd663e3c9bd921dfbc96857038e11"
       }
@@ -1080,11 +1151,12 @@
     "openspec-continue-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-continue-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-13T06:50:11.0658154+09:00",
+      "installed_at": "2026-10-05T19:03:37.8932957+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-continue-change",
-      "version": "13aa8d2",
+      "version": "abe6633",
       "tree_hash": "8c3d255fb1db9b5d507535070c2448788eb64643",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:b41b99e6af695947df68a92448848a92fc056b2d78c9e686b8cc6cbb85adec2b"
       }
@@ -1092,11 +1164,12 @@
     "openspec-explore": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-explore",
       "type": "github-subdir",
-      "installed_at": "2026-09-13T06:50:14.7348379+09:00",
+      "installed_at": "2026-10-05T19:03:41.9207935+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-explore",
-      "version": "13aa8d2",
+      "version": "abe6633",
       "tree_hash": "332085ac9616fe04725f556afdeedb546a3456fa",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:c46c348c91cba294474e8ea9121976ccd38a476a435284e12d4017c22d425b0c"
       }
@@ -1104,11 +1177,12 @@
     "openspec-ff-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-ff-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-13T06:50:18.8027691+09:00",
+      "installed_at": "2026-10-05T19:03:34.5981626+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-ff-change",
-      "version": "13aa8d2",
+      "version": "abe6633",
       "tree_hash": "9dd32ce1d6a877972882a16b5740170e0dfa09bd",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:659eef17b81e4e1aced565264e92a493541d722e0229cf4d6600a574f1c1e2ee"
       }
@@ -1116,7 +1190,7 @@
     "openspec-new-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-opencode-skills/skills/openspec-new-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-29T22:00:55.4406598+09:00",
+      "installed_at": "2026-10-05T19:03:38.6834766+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-opencode-skills/skills/openspec-new-change",
       "version": "abe6633",
@@ -1129,11 +1203,12 @@
     "openspec-sync-specs": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-sync-specs",
       "type": "github-subdir",
-      "installed_at": "2026-09-13T06:50:25.8498497+09:00",
+      "installed_at": "2026-10-05T19:03:34.774783+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-sync-specs",
-      "version": "13aa8d2",
+      "version": "abe6633",
       "tree_hash": "ed06b8e97ad97d69bdd72927ee31775bfe072572",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:b2ab0a3e06c41ea32e2e8fba9c37320f65c993d17bdc9a9ac344b75c38c41a6f"
       }
@@ -1141,11 +1216,12 @@
     "openspec-verify-change": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/openspec-claude-skills/skills/openspec-verify-change",
       "type": "github-subdir",
-      "installed_at": "2026-09-13T06:50:29.0473485+09:00",
+      "installed_at": "2026-10-05T19:03:42.0895027+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/openspec-claude-skills/skills/openspec-verify-change",
-      "version": "13aa8d2",
+      "version": "abe6633",
       "tree_hash": "193a7a03d317b89d8311a9c7ae441f5bcbb3d640",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:6664695b9cd1735b352b42ffd610bef6795fecd51b2b7a75b933f7ea438438c6"
       }
@@ -1153,11 +1229,12 @@
     "output-skill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/output-skill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:43.4534098+08:00",
+      "installed_at": "2026-10-05T19:05:02.6141013+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/output-skill",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "3dd6ad49b667d15182acddc9d3e4f7763ae33c9c",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:e5bf48b1ae561511439cf71672209a10a88cee0968cc925909ff861dfa0a96a7"
       }
@@ -1165,9 +1242,10 @@
     "pavedpath-code": {
       "source": "https://github.com/Jia-Ethan/pavedpath-code.git",
       "type": "github",
-      "installed_at": "2026-09-02T22:20:04.5401872+08:00",
+      "installed_at": "2026-10-05T19:03:06.9642902+09:00",
       "repo_url": "https://github.com/Jia-Ethan/pavedpath-code.git",
       "version": "97a319f",
+      "commit": "97a319fcfd3f9b68976690e04f3b511d6171a300",
       "file_hashes": {
         ".gitignore": "sha256:99675b0c8dd5e136921609533a5683e028aff80b6317a74cb77abb2526adfede",
         "CHANGELOG.md": "sha256:2d0a7f484de111acc33dedebb0032b084e2e5d31998bf7e8df3e15d078b737e5",
@@ -1183,11 +1261,12 @@
     "ponytail": {
       "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:20.7272302+08:00",
+      "installed_at": "2026-10-05T19:03:28.2435164+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail",
-      "version": "2ed6c52",
+      "version": "e15862b",
       "tree_hash": "cb6e53477eaf04e6daeca22feacb85f9ce20d40c",
+      "commit": "e15862bb04d04285233a164460ced063941d9ef5",
       "file_hashes": {
         "SKILL.md": "sha256:1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2"
       }
@@ -1195,71 +1274,92 @@
     "ponytail-audit": {
       "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-audit",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:19.325404+08:00",
+      "installed_at": "2026-10-05T19:03:28.3836776+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-audit",
-      "version": "2ed6c52",
-      "tree_hash": "19744a9490abb0f5d0f18c6e39e3a3eb50f4daa1",
+      "version": "e15862b",
+      "tree_hash": "f62f3a49debd14effa6d339b309f0bc531b9b232",
+      "commit": "e15862bb04d04285233a164460ced063941d9ef5",
       "file_hashes": {
-        "SKILL.md": "sha256:5560b8e383dbe2ddfddc873a1e2bf2e586e23e0cd7d995537482b2315331f6d1"
+        "SKILL.md": "sha256:38c209f3b56c8c8291bd00cf91da1ee9048ddafb1b5e7f838c1e1b81822e4023"
       }
     },
     "ponytail-debt": {
       "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-debt",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:19.5992767+08:00",
+      "installed_at": "2026-10-05T19:03:28.5310388+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-debt",
-      "version": "2ed6c52",
-      "tree_hash": "fe9ea82cad2b42a9c244acc275c9091c414ff528",
+      "version": "e15862b",
+      "tree_hash": "c9bf71ce830bce18e5bbe277828d56ff20eb3dfb",
+      "commit": "e15862bb04d04285233a164460ced063941d9ef5",
       "file_hashes": {
-        "SKILL.md": "sha256:c84fba75f0ca12bfe83f9a78ea02fd125c5dd3f1fbb18124105a489937f284e6"
+        "SKILL.md": "sha256:d3611761039bdb2955e31856834feeec6ed5483a3fc64576e9a166f949a131d1"
       }
     },
     "ponytail-gain": {
       "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-gain",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:19.8962692+08:00",
+      "installed_at": "2026-10-05T19:03:28.6858642+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-gain",
-      "version": "2ed6c52",
-      "tree_hash": "13724e1903f76456164f00ec2a3074848433588f",
+      "version": "e15862b",
+      "tree_hash": "87c6e7af7ab9dfbfb0729cc571ef2937cf731206",
+      "commit": "e15862bb04d04285233a164460ced063941d9ef5",
       "file_hashes": {
-        "SKILL.md": "sha256:24e01d1c9715cb136ba1c4f1e52a95940c0193558b876828e537736480d6408b"
+        "SKILL.md": "sha256:b85750bbceb37095c7bc59e77a05ffd428ac92f0e570e99bc789e295d8734640"
       }
     },
     "ponytail-help": {
       "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-help",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:20.1741097+08:00",
+      "installed_at": "2026-10-05T19:03:28.8458299+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-help",
-      "version": "2ed6c52",
-      "tree_hash": "b7df7bc32b6e4e8bbde8acb2ef3c97ee7e7638f7",
+      "version": "e15862b",
+      "tree_hash": "3927d4fb46b93abbfe7da4ce1576e0891ae03005",
+      "commit": "e15862bb04d04285233a164460ced063941d9ef5",
       "file_hashes": {
-        "SKILL.md": "sha256:2264d1615117b02b0fd5a69ec84cd2757006471a78e4d6c22eed6d581c1d37a4"
+        "SKILL.md": "sha256:23d9baf1b9a9464b40ebe1b5b50752795210b934fc8e248e791496e4c9a39fd2"
       }
     },
     "ponytail-review": {
       "source": "https://github.com/DietrichGebert/ponytail.git/skills/ponytail-review",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:20.4462287+08:00",
+      "installed_at": "2026-10-05T19:03:29.0067157+09:00",
       "repo_url": "https://github.com/DietrichGebert/ponytail.git",
       "subdir": "skills/ponytail-review",
-      "version": "2ed6c52",
-      "tree_hash": "dc6d9660c4297496a9220de377f6f7df38ab1a53",
+      "version": "e15862b",
+      "tree_hash": "6edfcf161c997fdd3089bce4e5682a921fb59b46",
+      "commit": "e15862bb04d04285233a164460ced063941d9ef5",
       "file_hashes": {
-        "SKILL.md": "sha256:40df33b58fc6ef889b93585733feb9566b76e9586efa7f376785c1e995197ac0"
+        "SKILL.md": "sha256:4b29656469baa5df3513a1557197ec8053162c6a54c166c871c57061e37a8ebb"
+      }
+    },
+    "pr": {
+      "source": "https://github.com/mattpocock/skills/skills/engineering/pr",
+      "type": "github-subdir",
+      "installed_at": "2026-10-05T19:20:01.0472428+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/pr",
+      "version": "f6abdeb",
+      "tree_hash": "00b896d811adffad747c7ca30078d909d60c7f93",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
+      "file_hashes": {
+        "CREDITS.md": "sha256:a7a087127665d7298a72280ef6e19c41ad8404523712a788c8dc3ab414bc2497",
+        "SKILL.md": "sha256:ab63f1cf78647389edcd386c9427c5dfca27ed2836930c24773ffee834c19bcd",
+        "agents/openai.yaml": "sha256:2295b586624db4ef546f3fd4695492f039d941a46d8a1593a702ce3ca511b8ad"
       }
     },
     "prototype": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/prototype",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/prototype",
       "type": "github-subdir",
-      "installed_at": "2026-09-17T06:35:51.3981659+09:00",
+      "installed_at": "2026-10-05T19:03:46.8476821+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/prototype",
-      "version": "959a8e9",
+      "version": "f6abdeb",
       "tree_hash": "e41d92e171f074a2b6887d8f6faca4a15c83d1ca",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "LOGIC.md": "sha256:f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9",
         "SKILL.md": "sha256:714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
@@ -1270,11 +1370,12 @@
     "recall": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/recall",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:19.9613984+08:00",
+      "installed_at": "2026-10-05T19:03:12.1503608+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/recall",
-      "version": "e04ba88",
+      "version": "c51bf3f",
       "tree_hash": "1b6969dcc5d4060a2436b31fc8279ec95ff0c4b6",
+      "commit": "c51bf3f294a423294deb050513a9741eff42fe8e",
       "file_hashes": {
         "EXAMPLES.md": "sha256:67f2d639bd4fde728b121fea7f8bc362fca13ded706216141feca8e61613cc29",
         "SKILL.md": "sha256:430a2527d09ca6edc0f6ad36daccd32c723f87113a9c0d169ce469f989511743"
@@ -1283,11 +1384,12 @@
     "recap": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/recap",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:20.2090853+08:00",
+      "installed_at": "2026-10-05T19:03:12.3024222+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/recap",
-      "version": "e04ba88",
+      "version": "c51bf3f",
       "tree_hash": "a16b8a1d17a5d0934a284be3d8be9921140886a8",
+      "commit": "c51bf3f294a423294deb050513a9741eff42fe8e",
       "file_hashes": {
         "EXAMPLES.md": "sha256:18c2df482626e52524474eaec9501dc52d0cc8c2325605c23065440c387d7378",
         "SKILL.md": "sha256:33e992570d0e10b614e71515f0611e3ed8d6a7264ecc14e9fb085d438acf880b"
@@ -1296,11 +1398,12 @@
     "redesign-skill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/redesign-skill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:42.4547198+08:00",
+      "installed_at": "2026-10-05T19:05:02.8791121+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/redesign-skill",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "d9cffe56d26d4af7687299e391a7be1cfaf46c1b",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:98ad3e5b051bfb71b2795f7e8a6aa0d32b51ee095606c098a4b2822ac07926c9"
       }
@@ -1308,11 +1411,12 @@
     "refactor-safely": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/refactor-safely",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:40.0009579+08:00",
+      "installed_at": "2026-10-05T19:03:34.9367932+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/code-review-graph/skills/refactor-safely",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "d052e380063a590beeb547048dae982135bdc66c",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:a9093218924808652ee638cd65995622cac8485b50ace7c3e88193a1e7ec2232"
       }
@@ -1320,11 +1424,12 @@
     "remember": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/remember",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:18.4151027+08:00",
+      "installed_at": "2026-10-05T19:03:12.4614469+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/remember",
-      "version": "e04ba88",
+      "version": "c51bf3f",
       "tree_hash": "07a8fd5852db27d6ac2ea33f8a12125eeceae88d",
+      "commit": "c51bf3f294a423294deb050513a9741eff42fe8e",
       "file_hashes": {
         "EXAMPLES.md": "sha256:9589ce0d511f7bbb79f05376229fcd2f53b90b2091830cefc9c56a358a4f3d21",
         "SKILL.md": "sha256:d9b6facf4cbecaa3385a53d26afeec755f59531ebd5a775fb2812b4f37476936"
@@ -1333,11 +1438,12 @@
     "repo2skill": {
       "source": "https://github.com/zhangyanxs/repo2skill.git/repo2skill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:24.0537352+08:00",
+      "installed_at": "2026-10-05T19:03:31.5741974+09:00",
       "repo_url": "https://github.com/zhangyanxs/repo2skill.git",
       "subdir": "repo2skill",
       "version": "c8a4ddc",
       "tree_hash": "e98ca11c9d8a3bcf2ef4590bba0fec85aeda197c",
+      "commit": "c8a4ddc1bc6bacfa3f8eb24643b2d37ba3522af7",
       "file_hashes": {
         "IMPLEMENTATION.md": "sha256:42435604a5df9455f8343dd414ea6dd86c22e782584b2e98d7cbe3b200c6bd9e",
         "SKILL.md": "sha256:c2e4a20ea23c39e0a03541dd7c02af6f44ac305c19ad833a39346a23eb21200f",
@@ -1349,13 +1455,14 @@
       }
     },
     "research": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/research",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/research",
       "type": "github-subdir",
-      "installed_at": "2026-09-21T04:06:02.2905722+09:00",
+      "installed_at": "2026-10-05T19:03:47.7354886+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/research",
-      "version": "c55ee46",
+      "version": "f6abdeb",
       "tree_hash": "0a6796c5667e95ed2301ba7381c123b4acb2ae1a",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL.md": "sha256:985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
         "agents/openai.yaml": "sha256:9b4c470d63221c1f68f22df70b83e2f12401b317babe0d1b7b5f24a974474d0d"
@@ -1374,14 +1481,29 @@
         "agents/openai.yaml": "sha256:a1f4f96838f2ed6282eb28abbbf99029cb8fadce552baf53da90a025b8bffddf"
       }
     },
+    "retro": {
+      "source": "https://github.com/mattpocock/skills/skills/engineering/retro",
+      "type": "github-subdir",
+      "installed_at": "2026-10-05T19:20:01.2219093+09:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/retro",
+      "version": "f6abdeb",
+      "tree_hash": "335c1862a43da9d629abafdb79ca0c0de118be08",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
+      "file_hashes": {
+        "SKILL.md": "sha256:33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696",
+        "agents/openai.yaml": "sha256:cb6fb9d7e6b4be5975f41f6def1dd00a1255bad5d9b02696b124c924a8b8745c"
+      }
+    },
     "review-changes": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/review-changes",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:32.0024497+08:00",
+      "installed_at": "2026-10-05T19:03:42.2412648+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/code-review-graph/skills/review-changes",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "2929e6d029d23cdaf1ee9daad0486b3174008efe",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:b932a341bcb6e59d6a069b9bb262ad170ecdf9615fbd1e67894651f48bd809a7"
       }
@@ -1389,11 +1511,12 @@
     "session-history": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/session-history",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:18.6764899+08:00",
+      "installed_at": "2026-10-05T19:03:12.6286975+09:00",
       "repo_url": "https://github.com/rohitg00/agentmemory.git",
       "subdir": "plugin/skills/session-history",
-      "version": "e04ba88",
+      "version": "c51bf3f",
       "tree_hash": "215602eb80c1351f661ad912bda8b3c81ce82697",
+      "commit": "c51bf3f294a423294deb050513a9741eff42fe8e",
       "file_hashes": {
         "EXAMPLES.md": "sha256:0a089f68ad9f7ca87b8dcc2536ce5d8e8a7b20980e602c41c29abb9d4b9afc11",
         "SKILL.md": "sha256:6aec3cfd96a3630fa9c7985f1db5b0049cafdb1d4b0726c5160928dcada41a0b"
@@ -1402,11 +1525,12 @@
     "soft-skill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/soft-skill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:42.7053215+08:00",
+      "installed_at": "2026-10-05T19:05:03.0937851+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/soft-skill",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "1b5943432ddd1b980206968c529a323cc992dbec",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:e1e32f5e2d420872c6c7332b53d5ff7721946766b78c4822b424c2d512c8fdbc"
       }
@@ -1414,11 +1538,12 @@
     "steering": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/steering-skills/skills/steering",
       "type": "github-subdir",
-      "installed_at": "2026-09-15T02:02:01.4132406+09:00",
+      "installed_at": "2026-10-05T19:03:38.0761753+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/steering-skills/skills/steering",
-      "version": "75c29e8",
+      "version": "abe6633",
       "tree_hash": "194b6aca38471f9f86066f7d8f7fcffcbfe4dd69",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:8d54195d2bb2a59b5d340d645ce19facc2bc80fadd028ca42c626c2be36a09f2",
         "templates/product.md": "sha256:f233ba3cebcaa4e8303ba59d9c447d2fa1c95a0a6504b19e8dc3df63e236f73f",
@@ -1429,11 +1554,12 @@
     "steering-custom": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/steering-skills/skills/steering-custom",
       "type": "github-subdir",
-      "installed_at": "2026-09-15T02:02:07.3904207+09:00",
+      "installed_at": "2026-10-05T19:03:40.3880294+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/steering-skills/skills/steering-custom",
-      "version": "75c29e8",
+      "version": "abe6633",
       "tree_hash": "2abe980dc8f36c38c8e7e612249946c2679f97a4",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:67a839ba59e8f60d48e4fd43694d9051041b9349b37cb97d02dd091290a24f29",
         "templates/api-standards.md": "sha256:a4765e01360c060ef749737ffefa86d7e4dd606f78235c2b7d9c75bdf3619580",
@@ -1447,11 +1573,12 @@
     "stitch-skill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/stitch-skill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:43.7667499+08:00",
+      "installed_at": "2026-10-05T19:05:03.297362+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/stitch-skill",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "de2038cf286b31f33b397c1308455dbc17ef26f3",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "DESIGN.md": "sha256:0ab6740c4ebb1966dbceddb823a66d4bf027e960efbd73faca56cbf8370ae2ad",
         "SKILL.md": "sha256:46bdb08fee2dded38b6ba0a051230a502d6ac6e4044afd47592cb40c256028b5"
@@ -1460,9 +1587,10 @@
     "stop-slop": {
       "source": "https://github.com/hardikpandya/stop-slop.git",
       "type": "github",
-      "installed_at": "2026-09-02T22:20:12.509385+08:00",
+      "installed_at": "2026-10-05T19:03:54.9647648+09:00",
       "repo_url": "https://github.com/hardikpandya/stop-slop.git",
       "version": "8da1f03",
+      "commit": "8da1f030185bdfe8471220585162991eaeb970e9",
       "file_hashes": {
         "CHANGELOG.md": "sha256:fe2f1484ef02abf22efc09def89bac186a2235831fd0da13d4895edb19cc6dd0",
         "LICENSE": "sha256:2e2b2beaf41cc0ce28485455a62aed81777cdcdf68702e142427aef1cd720f2c",
@@ -1476,11 +1604,12 @@
     "taste-design": {
       "source": "https://github.com/google-labs-code/stitch-skills.git/plugins/stitch-utilities/skills/taste-design",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:25.2541484+08:00",
+      "installed_at": "2026-10-05T19:04:31.1797431+09:00",
       "repo_url": "https://github.com/google-labs-code/stitch-skills.git",
       "subdir": "plugins/stitch-utilities/skills/taste-design",
       "version": "0337446",
       "tree_hash": "9b0d4827e32e8688348fa131a4aedcb9ac34ff0d",
+      "commit": "0337446dadde6f8c94210444e2aa9d546126480f",
       "file_hashes": {
         "SKILL.md": "sha256:e425fdb7ab250764f6229c48941f97e20bd6a7ba9e25a628f1e0ebeb008e8bff",
         "resources/DESIGN.md": "sha256:d6bd72a44725e0d8fe40642559863c4c2eae5e4a6bd3b5f204d1cc0c7c5482fa"
@@ -1489,11 +1618,12 @@
     "taste-skill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/taste-skill",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:44.1805887+08:00",
+      "installed_at": "2026-10-05T19:05:00.0660646+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/taste-skill",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "a6d128e53b4ec0238baee751dde33bf707adb5ec",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89"
       }
@@ -1501,11 +1631,12 @@
     "taste-skill-v1": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/taste-skill-v1",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:20:44.4924471+08:00",
+      "installed_at": "2026-10-05T19:05:01.159361+09:00",
       "repo_url": "https://github.com/Leonxlnx/taste-skill.git",
       "subdir": "skills/taste-skill-v1",
-      "version": "ccbc156",
+      "version": "ce26fc2",
       "tree_hash": "3642ecef471a6ee4d9d485feea6df8ba92616b78",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
       "file_hashes": {
         "SKILL.md": "sha256:033d45af1ed23832730642f95f40ab49db7fb5222848489a6c5656144bfc6dae"
       }
@@ -1513,13 +1644,14 @@
     "tdd": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/tdd",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:05.3309073+08:00",
+      "installed_at": "2026-10-05T19:03:47.8843483+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/tdd",
-      "version": "6654f6b",
-      "tree_hash": "79288be15c67b849f22b6572056601090fd20913",
+      "version": "f6abdeb",
+      "tree_hash": "bf1bf5ffcd63aa8abce830f2955a853c121fb463",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
-        "SKILL.md": "sha256:cb01f66bebfaa25fa1f88e6b7e769cd9fd9f35b1120b8563749820738814c927",
+        "SKILL.md": "sha256:93ea419b76e9caaf26153b828e984f7c3fb136f4caa67b14af95f32ea965a1cc",
         "agents/openai.yaml": "sha256:ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b",
         "mocking.md": "sha256:3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
         "tests.md": "sha256:859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a"
@@ -1528,11 +1660,12 @@
     "teach": {
       "source": "https://github.com/mattpocock/skills.git/skills/productivity/teach",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:05.6425448+08:00",
+      "installed_at": "2026-10-05T19:03:48.0577292+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/productivity/teach",
-      "version": "6654f6b",
+      "version": "f6abdeb",
       "tree_hash": "2ab11f2f51f3c29771edb5d4258d807a49462491",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "GLOSSARY-FORMAT.md": "sha256:9b99859ec28437668130d8f2ce5a342938970f8a1ed4fd38c3eab4f4b5fff210",
         "LEARNING-RECORD-FORMAT.md": "sha256:701fa34b6748aa89e6c960ffb815257f481a7d77fb2900f9028f7edf3fdd6052",
@@ -1543,70 +1676,73 @@
       }
     },
     "to-spec": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/to-spec",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/to-spec",
       "type": "github-subdir",
-      "installed_at": "2026-09-19T07:24:44.9774059+09:00",
+      "installed_at": "2026-10-05T19:03:48.7291106+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/to-spec",
-      "version": "c55ee46",
+      "version": "f6abdeb",
       "tree_hash": "136b9651747cfccbfbb7c50a6b0dfb757e7547d2",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL.md": "sha256:43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
         "agents/openai.yaml": "sha256:1c5b4d1e3d8e52287ef19cc2742fdbbfae1914ac75d33af3e4c8174f08cc55bb"
       }
     },
     "to-tickets": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/to-tickets",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/to-tickets",
       "type": "github-subdir",
-      "installed_at": "2026-09-19T07:24:45.143773+09:00",
+      "installed_at": "2026-10-05T19:03:48.2075478+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/to-tickets",
-      "version": "c55ee46",
+      "version": "f6abdeb",
       "tree_hash": "b32c94e5a51c24ee9c41fcb7fe9ea9fff9af6369",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL.md": "sha256:5c9fba69845c2519b9b35b9af42ae5142c21f8ca15ac2123dc2722002c8058ae",
         "agents/openai.yaml": "sha256:21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090"
       }
     },
     "translation-workbench": {
-      "source": "https://github.com/Alexu0317-FATHER/translation-workbench/skills/translation-workbench",
+      "source": "https://github.com/Alexu0317-FATHER/translation-workbench.git/skills/translation-workbench",
       "type": "github-subdir",
-      "installed_at": "2026-09-07T22:40:24.0597087+09:00",
+      "installed_at": "2026-10-05T19:04:56.9307968+09:00",
       "repo_url": "https://github.com/Alexu0317-FATHER/translation-workbench.git",
       "subdir": "skills/translation-workbench",
-      "version": "850c43d",
-      "tree_hash": "a05a7f4edb499c9b54e0ccc58802b8f7887464d8",
+      "version": "a3801d3",
+      "tree_hash": "0e68640f8719e8fca0369f3c49afbab4e2be259b",
+      "commit": "a3801d3a228dab6bd73d21565b9ce20d81f0e634",
       "file_hashes": {
-        "SKILL.md": "sha256:f5d274d7d0e4961333580aa56f7a8789e955997942441f743127618c63c3f9d3",
+        "SKILL.md": "sha256:913b5acbf175563e9311935fdeff717e2a2bab9254b7c80395f43deb36ddb8b0",
         "agents/openai.yaml": "sha256:99a98494f2a0c4165094348e87523cb1ed36dfd288b2fdd9d7625678e16258b6",
         "assets/templates/background-notes.md": "sha256:30ee13403ea77c4dd4e8fba790bd39b9891d1b14cf93ef5ab12b836860f159b6",
         "assets/templates/character-profiles.md": "sha256:4578067b8f26d1056e8fee2db4b2a8be8ab9f1dbe7fbb0a1dae5338772b2d2e2",
-        "assets/templates/drafting-notes.md": "sha256:b6a09e186bf12993e94d4219ba43963861188372baac321b3859f18c05e47cdc",
+        "assets/templates/drafting-notes.md": "sha256:fcddc0519f10abf5c4836dd889bbc9d79d470b2667f570ea9f341c29a03ff3e8",
         "assets/templates/glossary.md": "sha256:032e6c5a551106c50f0c98241b5fd8a23421f3e5e1c96a4cbd637c6929c7d9d5",
-        "assets/templates/project-readme.md": "sha256:62f90ac2a7bd34e520979bedfbc684def09fd56d57ceb85cad7925fc79c28599",
-        "assets/templates/review-notes.md": "sha256:ffc48db4b46fc999e7418ea4771e0fddfa7009b67e1560e439f6b792245dacc2",
+        "assets/templates/project-readme.md": "sha256:f36cb9484a29b217aa9154d4fe4a109fa1af42f82be6cfbc1c33b803ecc1c48f",
+        "assets/templates/review-notes.md": "sha256:8122546dd906f9046faacfdc9294fe16c46ffb343a21501b9841ed142ceb700e",
         "assets/templates/sources.md": "sha256:9dba6b3eb0168ce956e9e4c5aeae28ea2127a744cf9c5fa7a3c3abe34c472411",
         "assets/templates/sourcing-handoff.json": "sha256:b9bbfd6b53f69985f14ee8ebb8c5cdd345e0bb6dd08e41cf4ce5ee29ec6f6b95",
         "assets/templates/translator-style.md": "sha256:5e75268e69e5b758a7ba584f276101dde93a6b8acebe5d1a4296800615b4f539",
-        "references/finalization.md": "sha256:f797498e3124738aab83ee2a3db60c92f74491b7670514608f0581139418a036",
-        "references/independent-review.md": "sha256:c13818f19664e935eb83d87de51394093d2a2389032c8f7fcd06e8f5e23546e8",
-        "references/project-initialization.md": "sha256:e9c849e80d4904ee73f311a38fbfbc7475a6396cec87af60fceb79ae975397e3",
+        "references/finalization.md": "sha256:dd68469b0da1a0b19d22f27188667821b05592f7522b5f07274b86dfbf0ace24",
+        "references/project-initialization.md": "sha256:b5635fa0a3907b8f4574a53a1e4d1797fa62bf92ed1e54f77d108f3e23a0da22",
         "references/sourcing.md": "sha256:a3d4ad311e3b0e72c7de864b5b54c35209b19c90a768c82d11a414062db438a6",
-        "references/translation.md": "sha256:3e792b3e910675493e7750048fef6d678bdab77f61ca7fae4714e8b021b3460d",
-        "scripts/check_stage.py": "sha256:b62a55d20b1188a4418957a1c81b353fb5ec515a05b4fb5486c41ac539f0ecc2",
+        "references/translation.md": "sha256:c2ad0c602bb622d7293650060756d6ba2f6c5cc9b6e2b1910864e05be1813805",
+        "scripts/check_stage.py": "sha256:e3b4fb56fccdf90fbc9bbae62cf4097b4a125cccb7936629dd5dee038be0e1b8",
         "scripts/check_translation_context.py": "sha256:a0c4f304dfaf0cdd09fe2a50f7809372dca4afd9f20a7c49325e4a6c4f979b33",
-        "scripts/test_check_stage.py": "sha256:d442ea6547c74838c0ac926ec9496eb363a71d22418362f8e97a2fddf8af5340",
+        "scripts/test_check_stage.py": "sha256:8790e679b9aa79a1c158493d7582309481addd2e5da2f4b6e129b99d89b48f70",
         "scripts/test_check_translation_context.py": "sha256:debf91f2ee6e3a1934ca5caff5238e13a49b5fcb0cca33baba443318400a80cc"
       }
     },
     "trellis-before-dev": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-before-dev",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:35.3787793+08:00",
+      "installed_at": "2026-10-05T19:03:35.1055484+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-before-dev",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "36cbfda7eb6c24a77b7827d6b65bfbec56b8ef11",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
       }
@@ -1614,11 +1750,12 @@
     "trellis-brainstorm": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-brainstorm",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:32.6202095+08:00",
+      "installed_at": "2026-10-05T19:03:38.8668916+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-brainstorm",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "934ca964de798ad3c590ee7725c7710f30e4a316",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:fb7399cda317bf4bdfa8bf92c9a0b6bca44dc54e384156f2fb7af1d89cac84c2"
       }
@@ -1626,11 +1763,12 @@
     "trellis-break-loop": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-break-loop",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:28.5013543+08:00",
+      "installed_at": "2026-10-05T19:03:36.3803356+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-break-loop",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "c635a739a494dedc78321bbbd17524cac5cbc889",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:f5a93699832f29dee443b53c135a7459519b371f689af191d15c29e8ee5c7bde"
       }
@@ -1638,11 +1776,12 @@
     "trellis-channel": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-channel",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:30.4078599+08:00",
+      "installed_at": "2026-10-05T19:03:42.4961354+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-channel",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "36c572936e8ecd4b9f29155356a275b5c5da2c3e",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:ff84801c511a736da018b4b1149348ebc9a16b7fc18d905ec10cfa7acbf269a3",
         "references/command-reference.md": "sha256:c4df3d940d89814310bfdaded20e84dd1d6b96786f6772688de7a123338d3c8e",
@@ -1655,11 +1794,12 @@
     "trellis-check": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-check",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:40.2791775+08:00",
+      "installed_at": "2026-10-05T19:03:43.5521559+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-check",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "6a31048efef3e1e6cdc803395cee011f6b93971d",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
       }
@@ -1667,11 +1807,12 @@
     "trellis-continue": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-continue",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:37.9956501+08:00",
+      "installed_at": "2026-10-05T19:03:41.3930005+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-continue",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "71cfd8dc5b3c71171f3d7f8417319bc76e46eff7",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:6ee22b56c363c4c3b4e6511d4d1b97d5d123bcb43bbcffa231265749631d4297"
       }
@@ -1679,11 +1820,12 @@
     "trellis-finish-work": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-finish-work",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:28.7600308+08:00",
+      "installed_at": "2026-10-05T19:03:35.2706275+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-finish-work",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "d7cb361084567d61bab84bc5c46a332ca0cba9d8",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:79e6d165358253a7379cae647bbd50b6bf174a1107f451b768a2bb4ba7cc0b87"
       }
@@ -1691,11 +1833,12 @@
     "trellis-init": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-init",
       "type": "github-subdir",
-      "installed_at": "2026-09-10T00:04:21.937196+09:00",
+      "installed_at": "2026-10-05T19:03:40.6307786+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-init",
-      "version": "2821258",
+      "version": "abe6633",
       "tree_hash": "a9e27ac0023173e30f3110df805debc31fd9548d",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:8a61acf26492d117e068f1952ef0ba45422547b1245593d2fc4e5c9c8432afea",
         "resources/.trellis/.developer": "sha256:de0349217a1360c43d7d937856636c992a3e19d34d32775e94adce116a885dc4",
@@ -1729,11 +1872,12 @@
     "trellis-meta": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-meta",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:38.48889+08:00",
+      "installed_at": "2026-10-05T19:03:36.782241+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-meta",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "20c9ad74fb5c793fd50ea2a5f1d39b885c7c549c",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:ee7bcfd0023def62688339c4b63c50f2fbeea12a34eb89e8bb63a992b58cb168",
         "references/customize-local/add-project-local-conventions.md": "sha256:ef3380e71aa9f5103d37b467b1f725a8033ac516e4de31e4d790be02ec2c39e8",
@@ -1764,11 +1908,12 @@
     "trellis-session-insight": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-session-insight",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:35.9580757+08:00",
+      "installed_at": "2026-10-05T19:03:42.6981135+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-session-insight",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "2ec8a4452e3a20107104011426306953f96c3896",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:d20f1d20c6946e26ba6f848b9a016d9a16c803d87501462e5b11a2ced6f56643",
         "references/cli-quick-reference.md": "sha256:c520353fe3fc00b9702ed4f780647c8fbd6d342e66527a03647f533a9fe09779",
@@ -1778,11 +1923,12 @@
     "trellis-spec-bootstrap": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-spec-bootstrap",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:38.832391+08:00",
+      "installed_at": "2026-10-05T19:03:39.0609856+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-spec-bootstrap",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "cf40e7e637c22a8c3270db35efcb2ec9fa098ff0",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:97bfa68c06cebb558eb4464bc1b81f7d2d56040d75baa8de1ee5ad90cca0196a",
         "references/mcp-setup.md": "sha256:df542fc8f279edd38046d26a7c8151804b708f57b24d4aa2733cea587a88c65e",
@@ -1794,11 +1940,12 @@
     "trellis-start": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-start",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:36.2428773+08:00",
+      "installed_at": "2026-10-05T19:03:43.71391+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-start",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "7dffcbe8fbc3409bc5f9ff383fcf202c60616830",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:ddcb643c43e967dc7e435cb815c9eb00ddab8913190d837d8b9504424f47a81a"
       }
@@ -1806,11 +1953,12 @@
     "trellis-update-spec": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-update-spec",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:40.5626799+08:00",
+      "installed_at": "2026-10-05T19:03:35.4467613+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-update-spec",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "4a8ae4ae75bd8c5fd96a0c68ae5bfb10525ba089",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:003ce08a3404aeb50998029392c4d4e57b626edf526d3ebd585032bb92dcbb96"
       }
@@ -1818,79 +1966,83 @@
     "trellis-workflow": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/trellis/skills/trellis-workflow",
       "type": "github-subdir",
-      "installed_at": "2026-09-02T22:21:40.8649857+08:00",
+      "installed_at": "2026-10-05T19:03:42.8691373+09:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/trellis/skills/trellis-workflow",
-      "version": "fc5acda",
+      "version": "abe6633",
       "tree_hash": "20d0cdea9f06f2bb40abe4e00c53fa1509ca5780",
+      "commit": "abe663387e4dd06158407a49395672b269313740",
       "file_hashes": {
         "SKILL.md": "sha256:dd32e35eedef12763a3b3311a5993fce451f74919be614c78335c4b7ebfc0a6a",
         "resources/.trellis/workflow.md": "sha256:078bc526d7a29b1d391cc198d113d28225cf46a6868d655498832a6cc9a36acf"
       }
     },
     "triage": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/triage",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/triage",
       "type": "github-subdir",
-      "installed_at": "2026-09-19T07:24:45.3433165+09:00",
+      "installed_at": "2026-10-05T19:03:48.9347618+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/triage",
-      "version": "c55ee46",
-      "tree_hash": "95fa21bf236993cd9af25bd3670476c17fdb95a4",
+      "version": "f6abdeb",
+      "tree_hash": "4cb951d62ecccaed601cdc5f9a1b7b3d8a799635",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "AGENT-BRIEF.md": "sha256:7f5f87fed3033df1b06e083c480f3e847b1fbb0647746b8a4c6a50f9f26ef44f",
         "OUT-OF-SCOPE.md": "sha256:1fbf9b432130c6380aa65813b55553cfda150309b27c595e183f8e335b8a190d",
-        "SKILL.md": "sha256:623a2ed692bdc77d2090e2a3dea3b627dd722ad3bbaca0be83aada75292c8fc4",
+        "SKILL.md": "sha256:917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf",
         "agents/openai.yaml": "sha256:2e683717720cf456d165d0bb1a68bb600d0b6a8ccb61841c172e50d26f95351c"
       }
     },
     "wait-what": {
-      "source": "https://github.com/vinvcn/mattpocock-skills-zh-CN/skills/productivity/wait-what",
+      "source": "https://github.com/vinvcn/mattpocock-skills-zh-CN.git/skills/productivity/wait-what",
       "type": "github-subdir",
-      "installed_at": "2026-09-23T02:34:50.7319917+09:00",
+      "installed_at": "2026-10-05T19:03:57.2620431+09:00",
       "repo_url": "https://github.com/vinvcn/mattpocock-skills-zh-CN.git",
       "subdir": "skills/productivity/wait-what",
-      "version": "af6224e",
-      "tree_hash": "ac2f74674a76d6bb0d96be0a966f460be8da3dcd",
-      "commit": "af6224e1de2ad58ec55ebf5cc7b15f8dd246ae50",
+      "version": "3f92a83",
+      "tree_hash": "b9163a49cf7e971935ad2f9d3203b4290571865e",
+      "commit": "3f92a83668ef8f303e6278f31c49fed9543cbc51",
       "file_hashes": {
-        "SKILL.md": "sha256:a31862252ba5b0beacc16b02399b4d4851e1a2f58911e26eaacf0e4e377f34b2",
+        "SKILL.md": "sha256:2e40b77cd7a93cc65c2d8a624261cb87fc5a1096f426d4364ee71e71367dab65",
         "agents/openai.yaml": "sha256:c5160cb8f608759a228a46f66eeb439fea83321d32780efe71073dc2ce22577f"
       }
     },
     "wayfinder": {
-      "source": "https://github.com/mattpocock/skills/skills/engineering/wayfinder",
+      "source": "https://github.com/mattpocock/skills.git/skills/engineering/wayfinder",
       "type": "github-subdir",
-      "installed_at": "2026-09-19T07:24:45.5299785+09:00",
+      "installed_at": "2026-10-05T19:03:47.0032652+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/wayfinder",
-      "version": "c55ee46",
+      "version": "f6abdeb",
       "tree_hash": "8ec0462658381bd1606d3f9db14ffc67df6a2a43",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL.md": "sha256:fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
         "agents/openai.yaml": "sha256:88bc81a11a6d52ac67aeaa76b8b619e387020d47c5133a4dd4927fd15c4ad073"
       }
     },
     "what-context-needed": {
-      "source": "https://github.com/github/awesome-copilot/skills/what-context-needed",
+      "source": "https://github.com/github/awesome-copilot.git/skills/what-context-needed",
       "type": "github-subdir",
-      "installed_at": "2026-09-23T03:48:12.7451042+09:00",
+      "installed_at": "2026-10-05T19:04:16.0203216+09:00",
       "repo_url": "https://github.com/github/awesome-copilot.git",
       "subdir": "skills/what-context-needed",
-      "version": "db8d563",
+      "version": "143a3d9",
       "tree_hash": "95e13a9b2f36d5a106886d7e0aeabbbbafa15b47",
-      "commit": "db8d563aefebf9dd569bc72596c4ebd817847534",
+      "commit": "143a3d976b3c1603cc8932984d5e1f28501cb5fc",
       "file_hashes": {
         "SKILL.md": "sha256:65ed7445bf561a5e5199ac77478d2691c05019e0dc32fdddc23db9e45bd9d135"
       }
     },
     "writing-for-agents": {
-      "source": "https://github.com/mattpocock/skills/skills/productivity/writing-for-agents",
+      "source": "https://github.com/mattpocock/skills.git/skills/productivity/writing-for-agents",
       "type": "github-subdir",
-      "installed_at": "2026-09-17T06:19:15.7151317+09:00",
+      "installed_at": "2026-10-05T19:03:48.5612414+09:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/productivity/writing-for-agents",
-      "version": "959a8e9",
+      "version": "f6abdeb",
       "tree_hash": "ad2925850efb8973a72d2e666f7a975f9a2d4a9b",
+      "commit": "f6abdeb8dd2a9be64f924ab44c7af374cb76726d",
       "file_hashes": {
         "SKILL-MECHANICS.md": "sha256:c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059",
         "SKILL.md": "sha256:551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",

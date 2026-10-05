@@ -10,8 +10,8 @@ This is the inline CONTRIBUTING.md for all projects. You should treat this as ex
 
 Source related guidelines and standards if it exists; missing sources are skipped silently, never created.
 
-- `CONTEXT-MAP.md`
-- `CONTEXT.md`
+- `GLOSSARY-MAP.md` `CONTEXT-MAP.md`
+- `GLOSSARY.md` `CONTEXT.md`
 - `docs/adr/`
 - `**/docs/adr/`
 - `**/AGENTS.md`
