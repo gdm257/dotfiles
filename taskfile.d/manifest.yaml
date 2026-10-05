@@ -18,10 +18,13 @@ tasks:
         sh: "cat '{{.PATH}}'"
       _MANIFEST:
         ref: 'fromYaml ._YAML'
-      _RUNS_JSON:
-        sh: >-
-          yq -o=json '. as $m | ($m.run // []) as $run | (($m.groups // {}) | map_values(. // [])) as $g |
-          [ $run[] | . as $i | ((($i.group // "") | $g[.]) // [$i])[] ]' '{{.PATH}}'
+      _RUNS_JSON: >-
+        {{ $g := ._MANIFEST.groups | default dict }}[{{ $first := true }}
+        {{- range ._MANIFEST.run | default list }}
+        {{- if .group }}{{ if not (hasKey $g .group) }}{{ fail (printf "unknown group '%s' in %s" .group $.PATH) }}{{ end }}
+        {{-   range index $g .group }}{{ if .group }}{{ fail (printf "nested group '%s' in %s" .group $.PATH) }}{{ end }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}
+        {{- else }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}
+        {{- end }}]
       _RUNS:
         ref: 'fromJson ._RUNS_JSON'
     cmds:
@@ -31,7 +34,7 @@ tasks:
           RUN:
             map:
               prefix: "{{ if ._RUN.prefix }}{{ ._RUN.prefix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.prefix (get (default dict ._MANIFEST.presets) ._RUN.preset).prefix }}{{ else }}{{ ._MANIFEST.prefix }}{{ end }}"
-              entrypoint: "{{ if and ._RUN.group (hasKey (default dict ._MANIFEST.groups) ._RUN.group) }}{{ fail (printf \"nested group '%s' in %s\" ._RUN.group .PATH) }}{{ else if ._RUN.group }}{{ fail (printf \"unknown group '%s' in %s\" ._RUN.group .PATH) }}{{ else if and ._RUN.preset (not (hasKey (default dict ._MANIFEST.presets) ._RUN.preset)) }}{{ fail (printf \"unknown preset '%s' in %s\" ._RUN.preset .PATH) }}{{ else if ._RUN.entrypoint }}{{ ._RUN.entrypoint }}{{ else if ._RUN.preset }}{{ default ._MANIFEST.entrypoint (get (default dict ._MANIFEST.presets) ._RUN.preset).entrypoint }}{{ else }}{{ ._MANIFEST.entrypoint }}{{ end }}"
+              entrypoint: "{{ if and ._RUN.preset (not (hasKey (default dict ._MANIFEST.presets) ._RUN.preset)) }}{{ fail (printf \"unknown preset '%s' in %s\" ._RUN.preset .PATH) }}{{ else if ._RUN.entrypoint }}{{ ._RUN.entrypoint }}{{ else if ._RUN.preset }}{{ default ._MANIFEST.entrypoint (get (default dict ._MANIFEST.presets) ._RUN.preset).entrypoint }}{{ else }}{{ ._MANIFEST.entrypoint }}{{ end }}"
               command: "{{ if ._RUN.command }}{{ ._RUN.command }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.command (get (default dict ._MANIFEST.presets) ._RUN.preset).command }}{{ else }}{{ ._MANIFEST.command }}{{ end }}"
               args: "{{ if ._RUN.args }}{{ ._RUN.args }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.args (get (default dict ._MANIFEST.presets) ._RUN.preset).args }}{{ else }}{{ ._MANIFEST.args }}{{ end }}"
               suffix: "{{ if ._RUN.suffix }}{{ ._RUN.suffix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.suffix (get (default dict ._MANIFEST.presets) ._RUN.preset).suffix }}{{ else }}{{ ._MANIFEST.suffix }}{{ end }}"
