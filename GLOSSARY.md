@@ -19,3 +19,7 @@ _Avoid_: global, base
 **Preset**:
 一组可命名的 defaults 覆盖，run item 通过 `preset` 字段按名引用；未引用时完全不参与解析。字段优先级为 run item > preset > defaults。
 _Avoid_: profile, template, variant
+
+**Group**:
+Manifest 中 `groups.<name>` 下的 run item 列表。`run` 列表中的 group 条目（`{ group: <name> }`）在执行时纯展开为该列表，不允许嵌套 group。
+_Avoid_: category, tag
