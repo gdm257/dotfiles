@@ -3,15 +3,74 @@ presets:
     entrypoint: scoop
     command: install
 
-run:
-  # - { preset: scoop-install, args: ntfs2btrfs}
+groups:
+  archive:
   - { preset: scoop-install, args: unar }
   - { preset: scoop-install, args: lessmsi }
+  # - { preset: scoop-install, args: main/7zip}
+  - { preset: scoop-install, args: main/nanazip }
+  # - { preset: scoop-install, args: nanazip_DoveBoy}
+  # - { preset: scoop-install, args: bandizip6}
+  - { preset: scoop-install, args: winrar }
+
+  disk:
+  - { preset: scoop-install, args: dirhash }
+  # - { preset: scoop-install, args: file}
+  # - { preset: scoop-install, args: code2prompt}
+  # - { preset: scoop-install, args: orange}
+  # - { preset: scoop-install, args: fluentcleaner_naderi}
+  # - { preset: scoop-install, args: alldup}
+  - { preset: scoop-install, args: diskgenius }
+  - { preset: scoop-install, args: testdisk }
+  # - { preset: scoop-install, args: diskinfo}
+  - { preset: scoop-install, args: as-ssd }
+  - { preset: scoop-install, args: crystaldiskmark }
+  - { preset: scoop-install, args: crystaldiskmark-shizuku-edition }
+  - { preset: scoop-install, args: crystaldiskmark-aoi-edition }
+  # - { preset: scoop-install, args: CrystalDiskMark-TsukumoTokka}
+  - { preset: scoop-install, args: crystaldiskinfo-shizuku-edition }
+  # - { preset: scoop-install, args: hdtune}
+  # - { preset: scoop-install, args: ssdlife}
+  - { preset: scoop-install, args: smartmontools }
+
+  diff:
+  # - { preset: scoop-install, args: winmerge}
+  - { preset: scoop-install, args: meld }
+
+  dotfiles:
+  # - { preset: scoop-install, args: chezmoi}
+
+  encrypt:
+  # - { preset: scoop-install, args: gpg}
+  # - { preset: scoop-install, args: gpg4win}
   - { preset: scoop-install, args: age }
   - { preset: scoop-install, args: enc }
   - { preset: scoop-install, args: vault }
-  - { preset: scoop-install, args: dirhash }
-  # - { preset: scoop-install, args: chezmoi}
+  # - { preset: scoop-install, args: keeweb}
+  # - { preset: scoop-install, args: keepass}
+  # - { preset: scoop-install, args: keepass-plugin-kpenhentryview}
+  # - { preset: scoop-install, args: keepass-plugin-webautotype}
+  # - { preset: scoop-install, args: keepass-plugin-keeanywhere}
+  # - { preset: scoop-install, args: keepass-plugin-keepasshttp}
+  # - { preset: scoop-install, args: keepass-plugin-keepassnatmsg}
+  # - { preset: scoop-install, args: keepass-plugin-keeagent}
+  # - { preset: scoop-install, args: bitwarden}
+  # - { preset: scoop-install, args: bitwarden-cli}
+  # - { preset: scoop-install, args: authme}
+  # - { preset: scoop-install, args: infisical}
+  # - { preset: scoop-install, args: restic}
+  # - { preset: scoop-install, args: resticprofile}
+  # - { preset: scoop-install, args: restic-browser}
+  # - { preset: scoop-install, args: backrest}
+  # - { preset: scoop-install, args: redu}
+  # - { preset: scoop-install, args: duplicati}
+  - { preset: scoop-install, args: kopiaui }
+  # - { preset: scoop-install, args: cryptomator}
+  # - { preset: scoop-install, args: VeraCrypt-Portable}
+  - { preset: scoop-install, args: VeraCryptPortable }
+  # - { preset: scoop-install, args: DriveSnapShot}
+
+  file-manager:
   - { preset: scoop-install, args: eza }
   - { preset: scoop-install, args: gdm257/shim-ll }
   # - { preset: scoop-install, args: lsd}
@@ -27,50 +86,9 @@ run:
   # - { preset: scoop-install, args: superfile}
   # - { preset: scoop-install, args: broot}
   # - { preset: scoop-install, args: lf}
-  # - { preset: scoop-install, args: file}
-  # - { preset: scoop-install, args: main/7zip}
-  - { preset: scoop-install, args: main/nanazip }
-  # - { preset: scoop-install, args: nanazip_DoveBoy}
-  # - { preset: scoop-install, args: bandizip6}
-  - { preset: scoop-install, args: winrar }
-  # - { preset: scoop-install, args: code2prompt}
-  - { preset: scoop-install, args: everything }
-  # - { preset: scoop-install, args: gdm257/listary5}
-  # - { preset: scoop-install, args: listary}
-  # - { preset: scoop-install, args: orange}
   # - { preset: scoop-install, args: spacesniffer}
   - { preset: scoop-install, args: wiztree }
   # - { preset: scoop-install, args: squirreldisk}
-  # - { preset: scoop-install, args: fluentcleaner_naderi}
-  # - { preset: scoop-install, args: alldup}
-  # - { preset: scoop-install, args: restic}
-  # - { preset: scoop-install, args: resticprofile}
-  # - { preset: scoop-install, args: restic-browser}
-  # - { preset: scoop-install, args: backrest}
-  # - { preset: scoop-install, args: redu}
-  # - { preset: scoop-install, args: duplicati}
-  - { preset: scoop-install, args: diskgenius }
-  - { preset: scoop-install, args: testdisk }
-  # - { preset: scoop-install, args: diskinfo}
-  - { preset: scoop-install, args: as-ssd }
-  - { preset: scoop-install, args: crystaldiskmark }
-  - { preset: scoop-install, args: crystaldiskmark-shizuku-edition }
-  - { preset: scoop-install, args: crystaldiskmark-aoi-edition }
-  # - { preset: scoop-install, args: CrystalDiskMark-TsukumoTokka}
-  - { preset: scoop-install, args: crystaldiskinfo-shizuku-edition }
-  # - { preset: scoop-install, args: hdtune}
-  # - { preset: scoop-install, args: ssdlife}
-  - { preset: scoop-install, args: smartmontools }
-  - { preset: scoop-install, args: SymlinkCreator }
-  # - { preset: scoop-install, args: VeraCrypt-Portable}
-  - { preset: scoop-install, args: VeraCryptPortable }
-  - { preset: scoop-install, args: Snap2HTML }
-  # - { preset: scoop-install, args: HashTools}
-  # - { preset: scoop-install, args: winmerge}
-  - { preset: scoop-install, args: meld }
-  # - { preset: scoop-install, args: AntRenamer}
-  # - { preset: scoop-install, args: ReNamerLite}
-  # - { preset: scoop-install, args: Bulk-Rename-Utility_dodorz}
   # - { preset: scoop-install, args: tagspaces}
   # - { preset: scoop-install, args: gdm257/tagstudio}
   - { preset: scoop-install, args: doublecmd }
@@ -78,13 +96,40 @@ run:
   # - { preset: scoop-install, args: xplorer}
   # - { preset: scoop-install, args: onecommander}
   # - { preset: scoop-install, args: mucommander}
+  # - { preset: scoop-install, args: mc}
+  - { preset: scoop-install, args: SymlinkCreator }
+  - { preset: scoop-install, args: Snap2HTML }
+  # - { preset: scoop-install, args: HashTools}
+
+  fs:
+  # - { preset: scoop-install, args: ntfs2btrfs}
+
+  renamer:
+  # - { preset: scoop-install, args: AntRenamer}
+  # - { preset: scoop-install, args: ReNamerLite}
+  # - { preset: scoop-install, args: Bulk-Rename-Utility_dodorz}
   - { preset: scoop-install, args: renamer_fixed }
   # - { preset: scoop-install, args: flut-renamer}
   # - { preset: scoop-install, args: advancedrenamer}
-  # - { preset: scoop-install, args: DriveSnapShot}
-  # - { preset: scoop-install, args: syncthing}
+
+  search:
+  - { preset: scoop-install, args: everything }
+  # - { preset: scoop-install, args: gdm257/listary5}
+  # - { preset: scoop-install, args: listary}
+
+  watch:
   # - { preset: scoop-install, args: watchexec}
   - { preset: scoop-install, args: watchman }
-  - { preset: scoop-install, args: kopiaui }
-  # - { preset: scoop-install, args: mc}
-  # - { preset: scoop-install, args: cryptomator}
+
+
+run:
+  - { group: archive }
+  - { group: disk }
+  - { group: diff }
+  - { group: dotfiles }
+  - { group: encrypt }
+  - { group: file-manager }
+  - { group: fs }
+  - { group: renamer }
+  - { group: search }
+  - { group: watch }

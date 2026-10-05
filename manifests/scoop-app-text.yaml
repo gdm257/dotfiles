@@ -3,7 +3,16 @@ presets:
     entrypoint: scoop
     command: install
 
-run:
+groups:
+  accounting:
+  - { preset: scoop-install, args: gnucash }
+  # - { preset: scoop-install, args: moneymanagerex}
+
+  book:
+  # - { preset: scoop-install, args: calibre-web}
+  # - { preset: scoop-install, args: calibre}
+
+  text:
   - { preset: scoop-install, args: grex }
   - { preset: scoop-install, args: ripgrep }
   # - { preset: scoop-install, args: sig}
@@ -15,10 +24,14 @@ run:
   # - { preset: scoop-install, args: sad}
   # - { preset: scoop-install, args: ruplacer}
   - { preset: scoop-install, args: bat }
-  - { preset: scoop-install, args: csvlens }
+  # - { preset: scoop-install, args: miller}
+  # - { preset: scoop-install, args: tailspin}
+  # - { preset: scoop-install, args: logdy}
+  - { preset: scoop-install, args: sttr }
+
+  json:
   # - { preset: scoop-install, args: fx}
   # - { preset: scoop-install, args: jid}
-  # - { preset: scoop-install, args: openapi-tui}
   # - { preset: scoop-install, args: csview}
   - { preset: scoop-install, args: jq }
   # - { preset: scoop-install, args: xq}
@@ -26,35 +39,49 @@ run:
   # - { preset: scoop-install, args: fq}
   # - { preset: scoop-install, args: dasel}
   - { preset: scoop-install, args: xidel }
+  # - { preset: scoop-install, args: pup}
+
+  spreadsheet:
+  - { preset: scoop-install, args: csvlens }
   # - { preset: scoop-install, args: dsq}
   # - { preset: scoop-install, args: q}
   - { preset: scoop-install, args: sq }
-  # - { preset: scoop-install, args: miller}
-  # - { preset: scoop-install, args: pup}
-  # - { preset: scoop-install, args: tailspin}
-  - { preset: scoop-install, args: sttr }
+
+  openapi:
+  # - { preset: scoop-install, args: openapi-tui}
+
   - { preset: scoop-install, args: hashcat }
   - { preset: scoop-install, args: john-the-ripper }
   - { preset: scoop-install, args: 7z2hashcat }
+
+  doc:
   - { preset: scoop-install, args: pandoc }
   - { preset: scoop-install, args: officecli }
   - { preset: scoop-install, args: pdftk }
   - { preset: scoop-install, args: poppler }
-  # - { preset: scoop-install, args: gpg}
-  - { preset: scoop-install, args: mkcert }
-  - { preset: scoop-install, args: step }
-  # - { preset: scoop-install, args: echo/beyondcompare}
-  # - { preset: scoop-install, args: zotero}
   # - { preset: scoop-install, args: vosviewer}
   - { preset: scoop-install, args: SumatraPDF_dodorz }
+  - { preset: scoop-install, args: lfs/awesome-books }
+  # - { preset: scoop-install, args: zeal}
+  # - { preset: scoop-install, args: koodo-reader}
+  # - { preset: scoop-install, args: "mendeley mendeley-desktop"}
+
+  dict:
   # - { preset: scoop-install, args: eudic}
   - { preset: scoop-install, args: gdm257/awesome-dict }
   # - { preset: scoop-install, args: ting-en}
+  # - { preset: scoop-install, args: anki}
+  # - { preset: scoop-install, args: goldendict-ng}
+
+  clipboard:
   - { preset: scoop-install, args: ditto }
   # - { preset: scoop-install, args: gdm257/ecopastepro}
   # - { preset: scoop-install, args: ecopaste}
   # - { preset: scoop-install, args: copyq}
   # - { preset: scoop-install, args: clipboard}
+
+  note:
+  # - { preset: scoop-install, args: zotero}
   # - { preset: scoop-install, args: anytype}
   - { preset: scoop-install, args: obsidian }
   # - { preset: scoop-install, args: tolaria}
@@ -64,11 +91,27 @@ run:
   # - { preset: scoop-install, args: speedynote}
   # - { preset: scoop-install, args: bookxnote}
   - { preset: scoop-install, args: BookXNotePro }
-  - { preset: scoop-install, args: lfs/awesome-books }
   # - { preset: scoop-install, args: xournalpp}
   # - { preset: scoop-install, args: rendevoz}
+  # - { preset: scoop-install, args: logseq}
+
+  ime:
   # - { preset: scoop-install, args: imewlconverter}
-  # - { preset: scoop-install, args: zeal}
+
+  markdown:
+  # - { preset: scoop-install, args: zettlr}
+  # - { preset: scoop-install, args: typora}
+  # - { preset: scoop-install, args: marktext}
+  # - { preset: scoop-install, args: gdm257/md-preview}
+  - { preset: scoop-install, args: gdm257/inknote }
+  # - { preset: scoop-install, args: gdm257/vividmark}
+  # - { preset: scoop-install, args: gdm257/markview}
+
+  tex:
+  # - { preset: scoop-install, args: texlive}
+  # - { preset: scoop-install, args: latex}
+
+  text-editor:
   # - { preset: scoop-install, args: zed}
   # - { preset: scoop-install, args: zed-opengl}
   # - { preset: scoop-install, args: notepad4}
@@ -81,55 +124,47 @@ run:
   # - { preset: scoop-install, args: sublime-text}
   # - { preset: scoop-install, args: notepad2-mod}
   # - { preset: scoop-install, args: notepad3}
-  - { preset: scoop-install, args: papertodo }
   # - { preset: scoop-install, args: geany}
-  # - { preset: scoop-install, args: texlive}
-  # - { preset: scoop-install, args: zettlr}
-  # - { preset: scoop-install, args: typora}
+
+  pdf:
   # - { preset: scoop-install, args: pdf-xchange-editor}
   - { preset: scoop-install, args: gdm257/killerpdf }
-  # - { preset: scoop-install, args: koodo-reader}
-  # - { preset: scoop-install, args: latex}
-  # - { preset: scoop-install, args: msys2}
-  # - { preset: scoop-install, args: marktext}
-  # - { preset: scoop-install, args: gdm257/md-preview}
-  - { preset: scoop-install, args: gdm257/inknote }
-  # - { preset: scoop-install, args: gdm257/vividmark}
-  # - { preset: scoop-install, args: gdm257/markview}
-  # - { preset: scoop-install, args: logseq}
-  # - { preset: scoop-install, args: github}
-  # - { preset: scoop-install, args: oh-my-posh}
-  # - { preset: scoop-install, args: gpg4win}
-  - { preset: scoop-install, args: fontforge }
-  - { preset: scoop-install, args: winfontsview }
-  # - { preset: scoop-install, args: keeweb}
-  # - { preset: scoop-install, args: keepass}
-  # - { preset: scoop-install, args: keepass-plugin-kpenhentryview}
-  # - { preset: scoop-install, args: keepass-plugin-webautotype}
-  # - { preset: scoop-install, args: keepass-plugin-keeanywhere}
-  # - { preset: scoop-install, args: keepass-plugin-keepasshttp}
-  # - { preset: scoop-install, args: keepass-plugin-keepassnatmsg}
-  # - { preset: scoop-install, args: keepass-plugin-keeagent}
-  # - { preset: scoop-install, args: bitwarden}
-  # - { preset: scoop-install, args: bitwarden-cli}
-  # - { preset: scoop-install, args: authme}
-  # - { preset: scoop-install, args: infisical}
-  # - { preset: scoop-install, args: "mendeley mendeley-desktop"}
-  # - { preset: scoop-install, args: raindrop.io}
-  # - { preset: scoop-install, args: anki}
-  # - { preset: scoop-install, args: DocFetcher}
-  # - { preset: scoop-install, args: AgentRansack}
   # - { preset: scoop-install, args: pdfpatcher_hu3rror}
   # - { preset: scoop-install, args: pdfpatcher}
-  # - { preset: scoop-install, args: libreoffice}
-  - { preset: scoop-install, args: pot-desktop }
   # - { preset: scoop-install, args: pdf-guru}
-  # - { preset: scoop-install, args: calibre-web}
-  # - { preset: scoop-install, args: calibre}
-  # - { preset: scoop-install, args: goldendict-ng}
+
+  font:
+  - { preset: scoop-install, args: fontforge }
+  - { preset: scoop-install, args: winfontsview }
+
+  read-it-later:
+  # - { preset: scoop-install, args: raindrop.io}
+
+  office:
+  # - { preset: scoop-install, args: libreoffice}
+
+  rss:
   - { preset: scoop-install, args: rssguard }
   # - { preset: scoop-install, args: fluent-reader}
-  # - { preset: scoop-install, args: logdy}
-  # - { preset: scoop-install, args: gdm257/kmcounter}
-  - { preset: scoop-install, args: gnucash }
-  # - { preset: scoop-install, args: moneymanagerex}
+
+
+run:
+  - { group: accounting }
+  - { group: book }
+  - { group: text }
+  - { group: json }
+  - { group: spreadsheet }
+  - { group: openapi }
+  - { group: doc }
+  - { group: dict }
+  - { group: clipboard }
+  - { group: note }
+  - { group: ime }
+  - { group: markdown }
+  - { group: tex }
+  - { group: text-editor }
+  - { group: pdf }
+  - { group: font }
+  - { group: read-it-later }
+  - { group: office }
+  - { group: rss }

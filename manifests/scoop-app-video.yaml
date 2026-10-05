@@ -3,36 +3,62 @@ presets:
     entrypoint: scoop
     command: install
 
-run:
-  - { preset: scoop-install, args: mediainfo }
-  - { preset: scoop-install, args: mediainfo-gui }
-  - { preset: scoop-install, args: digikam }
+groups:
+  bilibili:
+  # - { preset: scoop-install, args: wiliwili}
   - { preset: scoop-install, args: gdm257/bili-sync }
+
+  cad:
+  - { preset: scoop-install, args: kicad }
+  - { preset: scoop-install, args: fritzing }
+  - { preset: scoop-install, args: librecad }
+  - { preset: scoop-install, args: FreeCAD_dodorz }
+
+  emby:
+  # - { preset: scoop-install, args: emby}
   - { preset: scoop-install, args: tinymediamanager }
   - { preset: scoop-install, args: tsukimi }
   - { preset: scoop-install, args: jellyfin }
   - { preset: scoop-install, args: jellyfin-mpv-shim }
   - { preset: scoop-install, args: gdm257/EmbyToLocalPlayer }
-  # - { preset: scoop-install, args: streamlink}
-  - { preset: scoop-install, args: mpv-handler }
-  - { preset: scoop-install, args: mpv.net-dw }
-  # - { preset: scoop-install, args: mpv-lazy}
-  # - { preset: scoop-install, args: mpv-lazy_hu3rror}
-  # - { preset: scoop-install, args: gdm257/mpv-AnimeJaNai}
-  # - { preset: scoop-install, args: mpv-Portable}
-  # - { preset: scoop-install, args: "mpv.net implay mpv.net-cm mpv.net-dw"}
-  - { preset: scoop-install, args: potplayer }
-  # - { preset: scoop-install, args: wiliwili}
-  # - { preset: scoop-install, args: kikoplay}
-  # - { preset: scoop-install, args: dandanplay}
+  # - { preset: scoop-install, args: EmbyTheater-Portable}
+  # - { preset: scoop-install, args: terminus-player}
+  # - { preset: scoop-install, args: onelist}
+
+  mmd:
+  - { preset: scoop-install, args: miku-miku-model }
+  - { preset: scoop-install, args: mikumikudance }
+  # - { preset: scoop-install, args: Blender-Portable}
+  - { preset: scoop-install, args: blender }
+  - { preset: scoop-install, args: pixelorama }
+  - { preset: scoop-install, args: material-maker }
+  - { preset: scoop-install, args: makehuman }
+  - { preset: scoop-install, args: sweethome3d }
+  - { preset: scoop-install, args: pmx-editor }
+  # - { preset: scoop-install, args: opentoonz }
+
+  recording:
+  - { preset: scoop-install, args: obs-studio }
+  # - { preset: scoop-install, args: screentogif}
+  # - { preset: scoop-install, args: captura}
+  # - { preset: scoop-install, args: sharex}
+  # - { preset: scoop-install, args: kmcounter}
+
+  subtitle:
   - { preset: scoop-install, args: DanmakuFactory }
   # - { preset: scoop-install, args: AssFontSubset}
   - { preset: scoop-install, args: videosubfinder }
   - { preset: scoop-install, args: ChineseSubFinder }
   - { preset: scoop-install, args: SubRenamer }
   - { preset: scoop-install, args: fontloadersub }
-  # - { preset: scoop-install, args: lavfilters}
-  # - { preset: scoop-install, args: madvr}
+  - { preset: scoop-install, args: aegisub-arch }
+  - { preset: scoop-install, args: subtitleedit }
+  - { preset: scoop-install, args: video-srt }
+  - { preset: scoop-install, args: sushi }
+  # - { preset: scoop-install, args: aegisub}
+  # - { preset: scoop-install, args: ArctimePro_cc713}
+
+  upscale:
   # - { preset: scoop-install, args: anime4kcpp-cli}
   # - { preset: scoop-install, args: anime4kcpp-gui}
   # - { preset: scoop-install, args: anime4k-glsl}
@@ -43,55 +69,66 @@ run:
   - { preset: scoop-install, args: gdm257/real-video-enhancer }
   - { preset: scoop-install, args: video2x }
   - { preset: scoop-install, args: magpie }
-  # - { preset: scoop-install, args: vidbatch}
-  # - { preset: scoop-install, args: megui-fixed@2896}
-  # - { preset: scoop-install, args: megui}
-  - { preset: scoop-install, args: megui_fixed }
-  # - { preset: scoop-install, args: gdm257/okegui}
-  - { preset: scoop-install, args: mkvtoolnix }
+
+  video-explorer:
+  - { preset: scoop-install, args: digikam }
+
+  video-player:
+  - { preset: scoop-install, args: mediainfo }
+  - { preset: scoop-install, args: mediainfo-gui }
+  # - { preset: scoop-install, args: streamlink}
+  - { preset: scoop-install, args: mpv-handler }
+  - { preset: scoop-install, args: mpv.net-dw }
+  # - { preset: scoop-install, args: mpv-lazy}
+  # - { preset: scoop-install, args: mpv-lazy_hu3rror}
+  # - { preset: scoop-install, args: gdm257/mpv-AnimeJaNai}
+  # - { preset: scoop-install, args: mpv-Portable}
+  # - { preset: scoop-install, args: "mpv.net implay mpv.net-cm mpv.net-dw"}
+  - { preset: scoop-install, args: potplayer }
+  # - { preset: scoop-install, args: kikoplay}
+  # - { preset: scoop-install, args: dandanplay}
+  # - { preset: scoop-install, args: lavfilters}
+  # - { preset: scoop-install, args: madvr}
+  # - { preset: scoop-install, args: mpc-be}
+
+  video-editor:
   - { preset: scoop-install, args: quickcut }
-  - { preset: scoop-install, args: gdm257/ffmpegfreeui }
-  - { preset: scoop-install, args: ffmpeg }
-  # - { preset: scoop-install, args: shanaencoder}
-  # - { preset: scoop-install, args: qwinff}
-  - { preset: scoop-install, args: aegisub-arch }
-  - { preset: scoop-install, args: subtitleedit }
-  - { preset: scoop-install, args: video-srt }
-  - { preset: scoop-install, args: sushi }
-  # - { preset: scoop-install, args: Blender-Portable}
-  - { preset: scoop-install, args: blender }
-  - { preset: scoop-install, args: shadered }
-  - { preset: scoop-install, args: pixelorama }
-  - { preset: scoop-install, args: material-maker }
-  - { preset: scoop-install, args: kicad }
-  - { preset: scoop-install, args: fritzing }
-  - { preset: scoop-install, args: librecad }
-  - { preset: scoop-install, args: FreeCAD_dodorz }
-  - { preset: scoop-install, args: makehuman }
-  - { preset: scoop-install, args: sweethome3d }
-  - { preset: scoop-install, args: pmx-editor }
-  - { preset: scoop-install, args: miku-miku-model }
-  - { preset: scoop-install, args: mikumikudance }
   - { preset: scoop-install, args: natron }
   # - { preset: scoop-install, args: olive-editor-nightly}
   - { preset: scoop-install, args: olive-editor }
   - { preset: scoop-install, args: kdenlive }
   # - { preset: scoop-install, args: "shotcut losslesscut"}
   - { preset: scoop-install, args: gyroflow }
-  # - { preset: scoop-install, args: opentoonz }
-  - { preset: scoop-install, args: obs-studio }
   - { preset: scoop-install, args: ZXPInstaller }
-  # - { preset: scoop-install, args: adobe-creative-cloud-cleaner-tool}
   # - { preset: scoop-install, args: UAC.ZXPInstaller}
-  # - { preset: scoop-install, args: captura}
-  # - { preset: scoop-install, args: sharex}
-  # - { preset: scoop-install, args: screentogif}
-  # - { preset: scoop-install, args: aegisub}
-  # - { preset: scoop-install, args: mpc-be}
-  # - { preset: scoop-install, args: onelist}
-  # - { preset: scoop-install, args: ArctimePro_cc713}
-  # - { preset: scoop-install, args: nvidia-geforce-experience}
-  # - { preset: scoop-install, args: emby}
-  # - { preset: scoop-install, args: terminus-player}
-  # - { preset: scoop-install, args: EmbyTheater-Portable}
+
+  video-processor:
+  # - { preset: scoop-install, args: vidbatch}
+  # - { preset: scoop-install, args: megui-fixed@2896}
+  # - { preset: scoop-install, args: megui}
+  - { preset: scoop-install, args: megui_fixed }
+  # - { preset: scoop-install, args: gdm257/okegui}
+  - { preset: scoop-install, args: mkvtoolnix }
+  - { preset: scoop-install, args: gdm257/ffmpegfreeui }
+  - { preset: scoop-install, args: ffmpeg }
+  # - { preset: scoop-install, args: shanaencoder}
+  # - { preset: scoop-install, args: qwinff}
+  - { preset: scoop-install, args: shadered }
+
+  youtube:
   # - { preset: scoop-install, args: freetube}
+
+
+run:
+  - { group: bilibili }
+  - { group: cad }
+  - { group: emby }
+  - { group: mmd }
+  - { group: recording }
+  - { group: subtitle }
+  - { group: upscale }
+  - { group: video-explorer }
+  - { group: video-player }
+  - { group: video-editor }
+  - { group: video-processor }
+  - { group: youtube }

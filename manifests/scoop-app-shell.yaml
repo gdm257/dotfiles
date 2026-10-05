@@ -6,12 +6,71 @@ presets:
     entrypoint: sudo scoop
     command: install
 
-run:
+groups:
+  cheetsheet:
+  # - { preset: scoop-install, args: navi}
+  # - { preset: scoop-install, args: cheat}
+  # - { preset: scoop-install, args: tldr}
+  - { preset: scoop-install, args: tealdeer }
+  # - { preset: scoop-install, args: cht.sh}
+
+  dotenv:
+  # - { preset: scoop-install, args: gdm257/dotenvx}
+  # - { preset: scoop-install, args: ps-dotenv}
+  # - { preset: scoop-install, args: direnv}
+
+  keybinding:
+  # - { preset: scoop-install, args: spc/capslock-plus}
+  # - { preset: scoop-install, args: keymouse}
+  # - { preset: scoop-install, args: vim-ahk}
+  # - { preset: scoop-install, args: vimdesktop}
+  # - { preset: scoop-install, args: hunt-and-peck}
+  # - { preset: scoop-install, args: whkd}
+  # - { preset: scoop-install, args: Quicker_dodorz}
+  # - { preset: scoop-install, args: keymousego}
+  # - { preset: scoop-install, args: kanata}
+  # - { preset: scoop-install, args: kanata-tray}
+  - { preset: scoop-install, args: gdm257/mykeymap }
+  - { preset: scoop-install, args: gdm257/mousemaster }
+  - { preset: scoop-install, args: gdm257/starpie }
+  # - { preset: scoop-install, args: komokana}
+
+  launcher:
+  # - { preset: scoop-install, args: flow-launcher}
+  # - { preset: scoop-install, args: rubick}
+  # - { preset: scoop-install, args: maye}
+  # - { preset: scoop-install, args: SilentCMD-Portable}
+  - { preset: scoop-install, args: runasdate }
+  - { preset: scoop-install, args: locale-emulator }
+  # - { preset: scoop-install, args: locale-remulator}
+  # - { preset: scoop-install, args: gdm257/onin }
+  - { preset: scoop-install, args: ztools }
+  # - { preset: scoop-install, args: geekdesk}
+  - { preset: scoop-install, args: main/scoop-shim }
+  - { preset: scoop-install, args: gdm257/command-wrapper }
+  # - { preset: scoop-install, args: pueue}
+  # - { preset: scoop-install, args: nirsoft/nircmd}
+  # - { preset: scoop-install, args: nircmd-both}
+  # - { preset: scoop-install, args: hyperfine}
+
+  shell:
+  - { preset: scoop-install, args: powershell }
+  - { preset: scoop-install, args: main/powershelleditorservices }
+  # - { preset: scoop-install, args: PSWinUtil}
+
+  sudo:
+  # - { preset: scoop-install, args: sudo}
+  - { preset: scoop-install, args: gsudo }
+
+  terminal-emulator:
   - { preset: scoop-install, args: windows-terminal }
   # - { preset: scoop-install, args: rio}
   # - { preset: scoop-install, args: wezterm}
   # - { preset: scoop-install, args: ttyd}
+  # - { preset: scoop-install, args: olivetin}
   # - { preset: scoop-install, args: cmder-full}
+  # - { preset: scoop-install, args: msys2}
+  # - { preset: scoop-install, args: oh-my-posh}
   # - { preset: scoop-install, args: waveterm}
   # - { preset: scoop-install, args: xpipe}
   # - { preset: scoop-install, args: mobaxterm}
@@ -21,66 +80,37 @@ run:
   # - { preset: scoop-install, args: rio}
   # - { preset: scoop-install, args: hyper-beta}
   # - { preset: scoop-install, args: tabby-portable}
-  # - { preset: scoop-install, args: zellij}
   # - { preset: scoop-install, args: putty}
   - { preset: scoop-install, args: openssh }
   - { preset: scoop-install, args: opkssh }
-  # - { preset: scoop-install, args: lrzsz}
-  # - { preset: scoop-install, args: tssh}
   # - { preset: scoop-install, args: mosh-client}
-  - { preset: scoop-install, args: powershell }
-  - { preset: scoop-install, args: main/powershelleditorservices }
-  # - { preset: scoop-install, args: PSWinUtil}
   - { preset: scoop-install, args: main/charm-gum }
   - { preset: scoop-install, args: chafa }
   - { preset: scoop-install, args: resvg }
-  # - { preset: scoop-install, args: sudo}
-  - { preset: scoop-install, args: gsudo }
-  - { preset: scoop-install-sudo, args: gdm257/path-globolize-user-scoop }
-  # - { preset: scoop-install, args: navi}
-  # - { preset: scoop-install, args: cheat}
-  # - { preset: scoop-install, args: tldr}
-  - { preset: scoop-install, args: tealdeer }
-  - { preset: scoop-install, args: ztools }
-  - { preset: scoop-install, args: main/scoop-shim }
-  - { preset: scoop-install, args: gdm257/command-wrapper }
-  # - { preset: scoop-install, args: gdm257/onin }
-  # - { preset: scoop-install, args: kanata}
-  # - { preset: scoop-install, args: kanata-tray}
-  - { preset: scoop-install, args: gdm257/mykeymap }
-  - { preset: scoop-install, args: gdm257/mousemaster }
-  - { preset: scoop-install, args: gdm257/starpie }
-  # - { preset: scoop-install, args: komokana}
-  # - { preset: scoop-install, args: gdm257/dotenvx}
-  # - { preset: scoop-install, args: ps-dotenv}
+  # - { preset: scoop-install, args: tgpt}
+  # - { preset: scoop-install, args: sgpt}
   # - { preset: scoop-install, args: psfzf}
   - { preset: scoop-install, args: starship }
   # - { preset: scoop-install, args: oh-my-posh}
-  # - { preset: scoop-install, args: genact}
-  # - { preset: scoop-install, args: ultravnc}
-  # - { preset: scoop-install, args: vcxsrv}
-  # - { preset: scoop-install, args: pueue}
   # - { preset: scoop-install, args: clink}
   # - { preset: scoop-install, args: clink-portable}
-  # - { preset: scoop-install, args: nirsoft/nircmd}
-  # - { preset: scoop-install, args: nircmd-both}
-  # - { preset: scoop-install, args: hyperfine}
-  # - { preset: scoop-install, args: SilentCMD-Portable}
-  # - { preset: scoop-install, args: direnv}
-  # - { preset: scoop-install, args: flow-launcher}
-  # - { preset: scoop-install, args: rubick}
-  # - { preset: scoop-install, args: spc/capslock-plus}
-  # - { preset: scoop-install, args: keymouse}
-  # - { preset: scoop-install, args: vim-ahk}
-  # - { preset: scoop-install, args: vimdesktop}
-  # - { preset: scoop-install, args: whkd}
-  # - { preset: scoop-install, args: Quicker_dodorz}
-  # - { preset: scoop-install, args: kmcounter}
-  # - { preset: scoop-install, args: cht.sh}
-  # - { preset: scoop-install, args: tgpt}
-  # - { preset: scoop-install, args: sgpt}
-  # - { preset: scoop-install, args: envelope}
-  # - { preset: scoop-install, args: olivetin}
-  # - { preset: scoop-install, args: maye}
-  # - { preset: scoop-install, args: hunt-and-peck}
-  # - { preset: scoop-install, args: keymousego}
+  # - { preset: scoop-install, args: genact}
+  # - { preset: scoop-install, args: zellij}
+  # - { preset: scoop-install, args: lrzsz}
+  # - { preset: scoop-install, args: tssh}
+
+  x11:
+  # - { preset: scoop-install, args: ultravnc}
+  # - { preset: scoop-install, args: vcxsrv}
+
+
+run:
+  - { group: scoop-install-sudo }
+  - { group: cheetsheet }
+  - { group: dotenv }
+  - { group: keybinding }
+  - { group: launcher }
+  - { group: shell }
+  - { group: sudo }
+  - { group: terminal-emulator }
+  - { group: x11 }

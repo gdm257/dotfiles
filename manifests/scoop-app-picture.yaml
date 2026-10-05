@@ -3,7 +3,38 @@ presets:
     entrypoint: scoop
     command: install
 
-run:
+groups:
+  book:
+  # - { preset: scoop-install, args: kavita}
+
+  graph:
+  - { preset: scoop-install, args: lunacy }
+  # - { preset: scoop-install, args: umlet}
+  # - { preset: scoop-install, args: staruml}
+  # - { preset: scoop-install, args: graphviz}
+  # - { preset: scoop-install, args: plantuml}
+  # - { preset: scoop-install, args: d2}
+  - { preset: scoop-install, args: project-graph }
+  # - { preset: scoop-install, args: xmind8}
+  # - { preset: scoop-install, args: freemind}
+  # - { preset: scoop-install, args: xmind_ScoopInstaller}
+  # - { preset: scoop-install, args: xmind}
+  # - { preset: scoop-install, args: revezone}
+
+  geo:
+  - { preset: scoop-install, args: qgis }
+  - { preset: scoop-install, args: geogebra }
+  - { preset: scoop-install, args: stellarium }
+  - { preset: scoop-install, args: umbrello }
+  - { preset: scoop-install, args: CelestiaPortable }
+  # - { preset: scoop-install, args: StellariumPortable}
+
+  image-explorer:
+  - { preset: scoop-install, args: fsviewer }
+  # - { preset: scoop-install, args: shutter-image-browser}
+  # - { preset: scoop-install, args: darktable}
+
+  image-viewer:
   - { preset: scoop-install, args: exiftool }
   # - { preset: scoop-install, args: jexiftoolgui}
   # - { preset: scoop-install, args: honeyview}
@@ -11,31 +42,78 @@ run:
   # - { preset: scoop-install, args: picview}
   # - { preset: scoop-install, args: jarkviewer}
   # - { preset: scoop-install, args: qimgv}
-  - { preset: scoop-install, args: gdm257/rapidraw }
-  - { preset: scoop-install, args: fsviewer }
-  - { preset: scoop-install, args: gdm257/imbatch }
-  - { preset: scoop-install, args: upscayl }
-  - { preset: scoop-install, args: hugin }
-  - { preset: scoop-install, args: snap2img }
-  # - { preset: scoop-install, args: shutter-image-browser}
-  - { preset: scoop-install, args: gimp }
-  # - { preset: scoop-install, args: StylePix}
-  - { preset: scoop-install, args: paint.net }
+  # - { preset: scoop-install, args: xnviewmp}
+  # - { preset: scoop-install, args: irfanview}
+  # - { preset: scoop-install, args: quicklook}
+  # - { preset: scoop-install, args: imageglass}
+
+  image-hosting:
+  # - { preset: scoop-install, args: picgo}
   - { preset: scoop-install, args: piclist }
+
+  manga:
+  # - { preset: scoop-install, args: venera}
+  - { preset: scoop-install, args: gdm257/venera-next }
+  # - { preset: scoop-install, args: tachidesk-server}
+  - { preset: scoop-install, args: tachidesk-jui }
+  # - { preset: scoop-install, args: suwayomi-jui}
+  - { preset: scoop-install, args: tachidesk }
+  - { preset: scoop-install, args: yacreader }
+  # - { preset: scoop-install, args: picacg-qt}
+  # - { preset: scoop-install, args: jmcomic-qt}
+  # - { preset: scoop-install, args: ehentai-qt}
+  # - { preset: scoop-install, args: JHenTai}
+
+  monitor:
+  # - { preset: scoop-install, args: SetBrightness}
+  # - { preset: scoop-install, args: win10_brightnessslider}
+  # - { preset: scoop-install, args: lightbulb}
+  - { preset: scoop-install, args: screenoff }
+  # - { preset: scoop-install, args: hiddex}
+
+  ocr:
+  # - { preset: scoop-install, args: baimiao}
+  - { preset: scoop-install, args: tesseract }
+  - { preset: scoop-install, args: tesseract-languages }
+  # - { preset: scoop-install, args: translumo}
+  - { preset: scoop-install, args: LunaTranslator }
+  - { preset: scoop-install, args: misakatranslator_ivaquero }
+  - { preset: scoop-install, args: dango-translator }
+  # - { preset: scoop-install, args: capture2text}
+  - { preset: scoop-install, args: pot-desktop }
+
+  picture-processor:
+  - { preset: scoop-install, args: gimp }
+  # - { preset: scoop-install, args: Pinta_dodorz}
+  - { preset: scoop-install, args: gdm257/imbatch }
+  - { preset: scoop-install, args: hugin }
+  # - { preset: scoop-install, args: kumoworks}
+  - { preset: scoop-install, args: snap2img }
   - { preset: scoop-install, args: imagemagick-lean }
   # - { preset: scoop-install, args: caesium-image-compressor}
+  # - { preset: scoop-install, args: ascii-image-converter}
+  # - { preset: scoop-install, args: stegify}
+
+  paint:
   - { preset: scoop-install, args: Krita-Portable }
+  # - { preset: scoop-install, args: StylePix}
+  - { preset: scoop-install, args: paint.net }
+
+  raw-editor:
+  - { preset: scoop-install, args: gdm257/rapidraw }
+
+  svg:
   - { preset: scoop-install, args: inkscape }
   - { preset: scoop-install, args: pixieditor }
-  - { preset: scoop-install, args: lunacy }
-  - { preset: scoop-install, args: qgis }
-  - { preset: scoop-install, args: geogebra }
-  - { preset: scoop-install, args: stellarium }
-  - { preset: scoop-install, args: umbrello }
-  # - { preset: scoop-install, args: ascii-image-converter}
-  # - { preset: scoop-install, args: irfanview}
-  # - { preset: scoop-install, args: stegify}
-  # - { preset: scoop-install, args: kumoworks}
+
+  screenshot:
+  - { preset: scoop-install, args: pixpin }
+  - { preset: scoop-install, args: gdm257/snowshot }
+  # - { preset: scoop-install, args: esearch}
+  # - { preset: scoop-install, args: flameshot}
+  # - { preset: scoop-install, args: Snipaste-Portable}
+  # - { preset: scoop-install, args: gdm257/kiri}
+  # - { preset: scoop-install, args: ScreenToGif}
   - { preset: scoop-install, args: clickshow }
   # - { preset: scoop-install, args: gink}
   - { preset: scoop-install, args: carnac }
@@ -44,64 +122,33 @@ run:
   # - { preset: scoop-install, args: nohboard}
   - { preset: scoop-install, args: gdm257/livedraw }
   # - { preset: scoop-install, args: drawpen}
-  - { preset: scoop-install, args: tesseract }
-  - { preset: scoop-install, args: tesseract-languages }
-  - { preset: scoop-install, args: pixpin }
-  - { preset: scoop-install, args: gdm257/snowshot }
-  # - { preset: scoop-install, args: esearch}
-  # - { preset: scoop-install, args: flameshot}
-  # - { preset: scoop-install, args: Snipaste-Portable}
-  # - { preset: scoop-install, args: gdm257/kiri}
-  # - { preset: scoop-install, args: wavetone}
-  # - { preset: scoop-install, args: xnviewmp}
-  # - { preset: scoop-install, args: ScreenToGif}
-  # - { preset: scoop-install, args: venera}
-  - { preset: scoop-install, args: gdm257/venera-next }
-  # - { preset: scoop-install, args: tachidesk-server}
-  - { preset: scoop-install, args: tachidesk-jui }
-  # - { preset: scoop-install, args: suwayomi-jui}
-  - { preset: scoop-install, args: tachidesk }
-  # - { preset: scoop-install, args: quicklook}
+  # - { preset: scoop-install, args: greenshot}
+  - { preset: scoop-install, args: papertodo }
+
+  upscale:
+  - { preset: scoop-install, args: upscayl }
   # - { preset: scoop-install, args: sizer}
   - { preset: scoop-install, args: WindowResizer }
-  # - { preset: scoop-install, args: SetBrightness}
-  # - { preset: scoop-install, args: win10_brightnessslider}
-  # - { preset: scoop-install, args: lightbulb}
-  - { preset: scoop-install, args: screenoff }
-  - { preset: scoop-install, args: project-graph }
-  # - { preset: scoop-install, args: xmind8}
-  # - { preset: scoop-install, args: freemind}
-  # - { preset: scoop-install, args: xmind_ScoopInstaller}
-  # - { preset: scoop-install, args: xmind}
-  # - { preset: scoop-install, args: revezone}
-  # - { preset: scoop-install, args: hiddex}
-  # - { preset: scoop-install, args: qgis}
-  # - { preset: scoop-install, args: umlet}
-  # - { preset: scoop-install, args: staruml}
-  # - { preset: scoop-install, args: graphviz}
-  # - { preset: scoop-install, args: plantuml}
-  # - { preset: scoop-install, args: d2}
-  # - { preset: scoop-install, args: Pinta_dodorz}
+
+  wallpaper:
   # - { preset: scoop-install, args: Lively-Wallpaper}
-  # - { preset: scoop-install, args: capture2text}
-  # - { preset: scoop-install, args: greenshot}
-  # - { preset: scoop-install, args: baimiao}
-  # - { preset: scoop-install, args: geekdesk}
   # - { preset: scoop-install, args: roundedtb}
-  # - { preset: scoop-install, args: imageglass}
-  - { preset: scoop-install, args: CelestiaPortable }
-  # - { preset: scoop-install, args: StellariumPortable}
-  # - { preset: scoop-install, args: picgo}
-  - { preset: scoop-install, args: yacreader }
-  # - { preset: scoop-install, args: kavita}
-  # - { preset: scoop-install, args: hydrus-network}
-  # - { preset: scoop-install, args: picacg-qt}
-  # - { preset: scoop-install, args: jmcomic-qt}
-  # - { preset: scoop-install, args: ehentai-qt}
-  # - { preset: scoop-install, args: JHenTai}
-  # - { preset: scoop-install, args: translumo}
-  - { preset: scoop-install, args: LunaTranslator }
-  - { preset: scoop-install, args: misakatranslator_ivaquero }
-  - { preset: scoop-install, args: dango-translator }
-  # - { preset: scoop-install, args: openbbterminal}
-  # - { preset: scoop-install, args: darktable}
+
+
+run:
+  - { group: book }
+  - { group: graph }
+  - { group: geo }
+  - { group: image-explorer }
+  - { group: image-viewer }
+  - { group: image-hosting }
+  - { group: manga }
+  - { group: monitor }
+  - { group: ocr }
+  - { group: picture-processor }
+  - { group: paint }
+  - { group: raw-editor }
+  - { group: svg }
+  - { group: screenshot }
+  - { group: upscale }
+  - { group: wallpaper }

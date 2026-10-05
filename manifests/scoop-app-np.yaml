@@ -2,8 +2,12 @@ presets:
   scoop-install:
     entrypoint: scoop
     command: install
+  scoop-install-sudo:
+    entrypoint: sudo scoop
+    command: install
 
-run:
+groups:
+  fonts:
   - { preset: scoop-install, args: LXGWWenKai }
   - { preset: scoop-install, args: LXGWWenKaiMono }
   - { preset: scoop-install, args: LXGWWenKaiScreenR }
@@ -17,3 +21,10 @@ run:
   - { preset: scoop-install, args: CascadiaCode-NF-Mono }
   # - { preset: scoop-install, args: SourceCodePro-NF-Mono}
   # - { preset: scoop-install, args: MPlus-NF-Mono}
+
+  path:
+  - { preset: scoop-install, args: gdm257/path-user-local }
+  - { preset: scoop-install-sudo, args: gdm257/path-globolize-user-scoop }
+
+run:
+  - { group: fonts }

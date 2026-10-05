@@ -3,16 +3,34 @@ presets:
     entrypoint: scoop
     command: install
 
-run:
+groups:
+  pe:
   - { preset: scoop-install, args: ventoy }
   # - { preset: scoop-install, args: wepe}
   - { preset: scoop-install, args: rufus }
   - { preset: scoop-install, args: balenaEtcher-Portable }
+  # - { preset: scoop-install, args: unetbootin}
+
+  vm:
   - { preset: scoop-install, args: virtualbox-extension }
   - { preset: scoop-install, args: lxrunoffline }
   - { preset: scoop-install, args: packer }
   - { preset: scoop-install, args: vagrant }
   - { preset: scoop-install, args: qemu }
+  # - { preset: scoop-install, args: wsl2host}
+  # - { preset: scoop-install, args: virtualbox-with-extension-pack-np}
+  # - { preset: scoop-install, args: virtualbox-with-extension-pack-np_ScoopInstaller}
+  # - { preset: scoop-install, args: WSABuildsWindows10}
+  # - { preset: scoop-install, args: WSABuildsWindows11}
+  # - { preset: scoop-install, args: wsl-centos-7}
+  # - { preset: scoop-install, args: wsl-centos-8}
+  # - { preset: scoop-install, args: nixos-wsl}
+  # - { preset: scoop-install, args: wsl2-distro-manager}
+  - { preset: scoop-install, args: wsl-dashboard }
+  # - { preset: scoop-install, args: WsaToolbox}
+  # - { preset: scoop-install, args: wsldl}
+
+  emulator:
   - { preset: scoop-install, args: gdm257/EmuDeck }
   # - { preset: scoop-install, args: pegasus}
   # - { preset: scoop-install, args: cemu-dev}
@@ -43,7 +61,8 @@ run:
   - { preset: scoop-install, args: onscripter-jh }
   - { preset: scoop-install, args: onscripter-ru }
   - { preset: scoop-install, args: ruffle-nightly }
-  # - { preset: scoop-install, args: wsl2host}
+
+  # container
   - { preset: scoop-install, args: docker }
   # - { preset: scoop-install, args: docker-compose}
   - { preset: scoop-install, args: lazydocker }
@@ -94,16 +113,11 @@ run:
   # - { preset: scoop-install, args: velero}
   # - { preset: scoop-install, args: cmctl}
   # - { preset: scoop-install, args: korb}
-  # - { preset: scoop-install, args: wsl2-distro-manager}
-  - { preset: scoop-install, args: wsl-dashboard }
-  # - { preset: scoop-install, args: WsaToolbox}
-  # - { preset: scoop-install, args: wsldl}
   # - { preset: scoop-install, args: sandboxie-plus-np}
-  # - { preset: scoop-install, args: virtualbox-with-extension-pack-np}
-  # - { preset: scoop-install, args: virtualbox-with-extension-pack-np_ScoopInstaller}
-  # - { preset: scoop-install, args: WSABuildsWindows10}
-  # - { preset: scoop-install, args: WSABuildsWindows11}
-  # - { preset: scoop-install, args: wsl-centos-7}
-  # - { preset: scoop-install, args: wsl-centos-8}
-  # - { preset: scoop-install, args: nixos-wsl}
   - { preset: scoop-install, args: devpod }
+
+
+run:
+  - { group: pe }
+  - { group: vm }
+  - { group: emulator }

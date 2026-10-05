@@ -3,30 +3,46 @@ presets:
     entrypoint: scoop
     command: install
 
-run:
-  - { preset: scoop-install, args: gdm257/path-user-local }
+groups:
+  go:
+  - { preset: scoop-install, args: golly }
+  - { preset: scoop-install, args: lizzieyzy }
+  - { preset: scoop-install, args: katrain }
+  # - { preset: scoop-install, args: ogatak}
+  # - { preset: scoop-install, args: q5go}
+  # - { preset: scoop-install, args: sabaki}
+  - { preset: scoop-install, args: pachi }
+  - { preset: scoop-install, args: leela-zero }
+  - { preset: scoop-install, args: leela-zero-network }
+  - { preset: scoop-install, args: katago }
+  - { preset: scoop-install, args: katago-tensorrt }
+  - { preset: scoop-install, args: ikatago }
+
+  toolbox:
+  - { preset: scoop-install, args: sysinternals }
+  # - { preset: scoop-install, args: sysinternals_ScoopInstaller}
+  # - { preset: scoop-install, args: gaojitools}
+  # - { preset: scoop-install, args: fufu-tools}
+  - { preset: scoop-install, args: officebox }
+
+  utils:
   # - { preset: scoop-install, args: uutils-coreutils}
   # - { preset: scoop-install, args: busybox}
   # - { preset: scoop-install, args: vim}
   - { preset: scoop-install, args: file }
   - { preset: scoop-install, args: curl }
   - { preset: scoop-install, args: wget }
-  - { preset: scoop-install, args: sysinternals }
-  # - { preset: scoop-install, args: sysinternals_ScoopInstaller}
-  # - { preset: scoop-install, args: gaojitools}
-  # - { preset: scoop-install, args: fufu-tools}
-  - { preset: scoop-install, args: officebox }
-  # - { preset: scoop-install, args: joytokey}
-  - { preset: scoop-install, args: antimicrox }
+
+  games:
+  - { preset: scoop-install, args: gdm257/GriefSyndrome }
+
+  game-manager:
   - { preset: scoop-install, args: ludusavi }
-  - { preset: scoop-install, args: mo2 }
-  - { preset: scoop-install, args: vortex }
   - { preset: scoop-install, args: playnite }
   # - { preset: scoop-install, args: steam-rom-manager}
   - { preset: scoop-install, args: gdm257/ReinaManager }
   # - { preset: scoop-install, args: gdm257/vnite}
   # - { preset: scoop-install, args: gdm257/WinDeckHelper}
-  # - { preset: scoop-install, args: Hen3}
   - { preset: scoop-install, args: thprac }
   - { preset: scoop-install, args: steam }
   - { preset: scoop-install, args: SGDBoop }
@@ -41,20 +57,24 @@ run:
   # - { preset: scoop-install, args: collapse}
   - { preset: scoop-install, args: starward }
   - { preset: scoop-install, args: game-cheats-manager }
+
+  mod:
+  - { preset: scoop-install, args: mo2 }
+  - { preset: scoop-install, args: vortex }
+
+  controller:
+  # - { preset: scoop-install, args: joytokey}
+  - { preset: scoop-install, args: antimicrox }
   - { preset: scoop-install, args: gdm257/sickeaseoverlay }
   - { preset: scoop-install, args: gdm257/vomishield }
-  - { preset: scoop-install, args: gdm257/project-86 }
-  - { preset: scoop-install, args: gdm257/GriefSyndrome }
   - { preset: scoop-install, args: gdm257/airi }
-  - { preset: scoop-install, args: golly }
-  - { preset: scoop-install, args: lizzieyzy }
-  - { preset: scoop-install, args: katrain }
-  # - { preset: scoop-install, args: ogatak}
-  # - { preset: scoop-install, args: q5go}
-  # - { preset: scoop-install, args: sabaki}
-  - { preset: scoop-install, args: pachi }
-  - { preset: scoop-install, args: leela-zero }
-  - { preset: scoop-install, args: leela-zero-network }
-  - { preset: scoop-install, args: katago }
-  - { preset: scoop-install, args: katago-tensorrt }
-  - { preset: scoop-install, args: ikatago }
+
+
+run:
+  - { group: go }
+  - { group: toolbox }
+  - { group: utils }
+  - { group: games }
+  - { group: game-manager }
+  - { group: mod }
+  - { group: controller }

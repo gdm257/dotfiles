@@ -3,7 +3,8 @@ presets:
     entrypoint: scoop
     command: install
 
-run:
+groups:
+  osu:
   - { preset: scoop-install, args: taisei }
   - { preset: scoop-install, args: osulazer }
   - { preset: scoop-install, args: collection-manager }
@@ -14,33 +15,24 @@ run:
   - { preset: scoop-install, args: OsuBeatmapDownloader }
   # - { preset: scoop-install, args: gdm257/oszsave}
   # - { preset: scoop-install, args: OsuRankedBeatmapDownloader}
+
+  music-player:
   - { preset: scoop-install, args: aimp }
   # - { preset: scoop-install, args: "foobar2000 foobar2000-encoders foobar2000-foobox-en-pack"}
   # - { preset: scoop-install, args: foobar2000-asion-cn-plus}
   # - { preset: scoop-install, args: musicbee}
   # - { preset: scoop-install, args: ampcast}
+  - { preset: scoop-install, args: yesplaymusic }
+  # - { preset: scoop-install, args: feeluown}
+  - { preset: scoop-install, args: feishin }
+  # - { preset: scoop-install, args: supersonic}
+  # - { preset: scoop-install, args: gdm257/nsmusics}
+  # - { preset: scoop-install, args: mp3tag-portable}
   - { preset: scoop-install, args: cuetools }
+  # - { preset: scoop-install, args: eac}
   # - { preset: scoop-install, args: picard}
   # - { preset: scoop-install, args: balabolka}
-  - { preset: scoop-install, args: musescore }
-  # - { preset: scoop-install, args: lilypond}
-  # - { preset: scoop-install, args: everyone-piano}
-  # - { preset: scoop-install, args: freepiano}
-  # - { preset: scoop-install, args: eac}
-  - { preset: scoop-install, args: 163MusicLyrics }
-  # - { preset: scoop-install, args: navidrome}
-  - { preset: scoop-install, args: gdm257/viena }
-  - { preset: scoop-install, args: gdm257/polyphone }
-  # - { preset: scoop-install, args: reaper}
-  - { preset: scoop-install, args: lmms }
-  - { preset: scoop-install, args: audacity }
-  - { preset: scoop-install, args: gdm257/micyou }
-  - { preset: scoop-install, args: domino }
-  - { preset: scoop-install, args: helio }
-  - { preset: scoop-install, args: hydrogen }
-  - { preset: scoop-install, args: mixxx }
-  - { preset: scoop-install, args: gdm257/keyfinder }
-  - { preset: scoop-install, args: gdm257/wavetone }
+  - { preset: scoop-install, args: lfs/awesome-sf }
   # - { preset: scoop-install, args: fluidsynth}
   - { preset: scoop-install, args: gdm257/kiva }
   - { preset: scoop-install, args: gdm257/zenith }
@@ -48,8 +40,16 @@ run:
   # - { preset: scoop-install, args: plmidi}
   - { preset: scoop-install, args: gdm257/keppy-midi-converter }
   # - { preset: scoop-install, args: miditrail}
-  - { preset: scoop-install, args: openutau }
-  - { preset: scoop-install, args: utsu }
+  - { preset: scoop-install, args: 163MusicLyrics }
+
+  music-sheet:
+  - { preset: scoop-install, args: gdm257/awesome-scores }
+  - { preset: scoop-install, args: gdm257/keyfinder }
+  - { preset: scoop-install, args: gdm257/wavetone }
+  - { preset: scoop-install, args: musescore }
+  # - { preset: scoop-install, args: lilypond}
+  # - { preset: scoop-install, args: everyone-piano}
+  # - { preset: scoop-install, args: freepiano}
   # - { preset: scoop-install, args: vgm2mid}
   # - { preset: scoop-install, args: midnote}
   # - { preset: scoop-install, args: smf-dsp}
@@ -57,16 +57,35 @@ run:
   # - { preset: scoop-install, args: InfrarecorderPortable}
   # - { preset: scoop-install, args: strawberry}
   # - { preset: scoop-install, args: clementine}
-  # - { preset: scoop-install, args: mp3tag-portable}
   # - { preset: scoop-install, args: spleeter-gui}
   # - { preset: scoop-install, args: polyglot}
-  - { preset: scoop-install, args: yesplaymusic }
-  # - { preset: scoop-install, args: feeluown}
   # - { preset: scoop-install, args: keyfinder}
-  - { preset: scoop-install, args: feishin }
-  # - { preset: scoop-install, args: supersonic}
-  # - { preset: scoop-install, args: gdm257/nsmusics}
+  # - { preset: scoop-install, args: navidrome}
+
+  music-mixer:
+  - { preset: scoop-install, args: gdm257/viena }
+  - { preset: scoop-install, args: gdm257/polyphone }
+  # - { preset: scoop-install, args: reaper}
+  - { preset: scoop-install, args: lmms }
+  - { preset: scoop-install, args: audacity }
+  - { preset: scoop-install, args: domino }
+  - { preset: scoop-install, args: helio }
+  - { preset: scoop-install, args: hydrogen }
+  - { preset: scoop-install, args: mixxx }
+
+  vocaloid:
+  - { preset: scoop-install, args: openutau }
+  - { preset: scoop-install, args: utsu }
+
+  voice:
+  - { preset: scoop-install, args: gdm257/micyou }
   - { preset: scoop-install, args: retrieval-based-voice-conversion-webui }
   # - { preset: scoop-install, args: Buzz_dodorz}
-  - { preset: scoop-install, args: gdm257/awesome-scores }
-  - { preset: scoop-install, args: lfs/awesome-sf }
+
+run:
+  - { group: osu }
+  - { group: music-player }
+  - { group: music-sheet }
+  - { group: music-mixer }
+  - { group: vocaloid }
+  - { group: voice }

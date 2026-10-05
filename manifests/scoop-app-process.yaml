@@ -3,46 +3,53 @@ presets:
     entrypoint: scoop
     command: install
 
-run:
+groups:
+  ps:
   # - { preset: scoop-install, args: gdm257/task-explorer}
   - { preset: scoop-install, args: systeminformer }
+  # - { preset: scoop-install, args: systeminformer-nightly_hu3rror}
+  # - { preset: scoop-install, args: procexp}
   # - { preset: scoop-install, args: bottom}
   - { preset: scoop-install, args: btop }
   # - { preset: scoop-install, args: ntop}
   # - { preset: scoop-install, args: procs}
   # - { preset: scoop-install, args: gotop}
+  - { preset: scoop-install, args: gdm257/lite-monitor }
+  - { preset: scoop-install, args: memreduct }
+  # - { preset: scoop-install, args: winmemorycleaner}
+  # - { preset: scoop-install, args: PowerToys-Portable}
+
+  service-manager:
   # - { preset: scoop-install, args: commandtrayhost}
   # - { preset: scoop-install, args: gdm257/dsc}
+  # - { preset: scoop-install, args: fleetctl}
   # - { preset: scoop-install, args: main/winsw}
   # - { preset: scoop-install, args: winsw-alpha}
   - { preset: scoop-install, args: gdm257/winswctl }
   - { preset: scoop-install, args: gdm257/winstctl }
   # - { preset: scoop-install, args: nssm}
+  # - { preset: scoop-install, args: supervisord-go}
+
+  time-tracker:
   # - { preset: scoop-install, args: activitywatch}
+  # - { preset: scoop-install, args: activitywatch_chawyehsu}
   - { preset: scoop-install, args: main/wakatime-cli }
   # - { preset: scoop-install, args: gdm257/wakatime }
-  - { preset: scoop-install, args: tai }
+  # - { preset: scoop-install, args: tai }
   - { preset: scoop-install, args: gdm257/patina }
-  - { preset: scoop-install, args: gdm257/lite-monitor }
-  - { preset: scoop-install, args: memreduct }
-  - { preset: scoop-install, args: runasdate }
-  - { preset: scoop-install, args: locale-emulator }
-  # - { preset: scoop-install, args: locale-remulator}
+
+  watch:
   # - { preset: scoop-install, args: watch}
   # - { preset: scoop-install, args: noti}
-  # - { preset: scoop-install, args: procexp}
-  # - { preset: scoop-install, args: nvs}
-  # - { preset: scoop-install, args: unetbootin}
-  # - { preset: scoop-install, args: keepass-plugin-yafd}
-  # - { preset: scoop-install, args: keepass-plugin-keetraytotp}
-  # - { preset: scoop-install, args: keepass-plugin-sequencer}
-  # - { preset: scoop-install, args: keepass-plugin-keepassrpc}
-  # - { preset: scoop-install, args: listarypro}
-  # - { preset: scoop-install, args: supervisord-go}
-  # - { preset: scoop-install, args: PowerToys-Portable}
-  # - { preset: scoop-install, args: activitywatch_chawyehsu}
-  # - { preset: scoop-install, args: winmemorycleaner}
-  # - { preset: scoop-install, args: systeminformer-nightly_hu3rror}
+
+  window-manager:
   # - { preset: scoop-install, args: komorebi}
   # - { preset: scoop-install, args: glazewm}
-  # - { preset: scoop-install, args: fleetctl}
+
+
+run:
+  - { group: ps }
+  - { group: service-manager }
+  - { group: time-tracker }
+  - { group: watch }
+  - { group: window-manager }

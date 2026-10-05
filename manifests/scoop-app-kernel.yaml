@@ -3,54 +3,32 @@ presets:
     entrypoint: scoop
     command: install
 
-run:
-  # - { preset: scoop-install, args: vcredist-aio}
-  # - { preset: scoop-install, args: osquery}
-  - { preset: scoop-install, args: fastfetch }
-  # - { preset: scoop-install, args: WindowsUpdateBlocker}
-  - { preset: scoop-install, args: urlprotocolview }
-  - { preset: scoop-install, args: rapidee }
-  - { preset: scoop-install, args: registry-finder }
-  - { preset: scoop-install, args: context-menu-manager }
-  - { preset: scoop-install, args: universal-watermark-disabler }
-  # - { preset: scoop-install, args: hibit-uninstaller-portable}
-  # - { preset: scoop-install, args: registry-explorer}
-  - { preset: scoop-install, args: dismplusplus }
-  - { preset: scoop-install, args: Bootice_kkzzhizhou }
-  # - { preset: scoop-install, args: optimizer}
-  # - { preset: scoop-install, args: sophiapp}
-  - { preset: scoop-install, args: wpd }
-  # - { preset: scoop-install, args: privatezilla}
-  # - { preset: scoop-install, args: Malware-Patch_Paxxs}
-  # - { preset: scoop-install, args: itunes-portable}
-  - { preset: scoop-install, args: i4 }
-  # - { preset: scoop-install, args: i4tool}
-  # - { preset: scoop-install, args: windows-application-driver}
-  # - { preset: scoop-install, args: edgeless-hub}
-  # - { preset: scoop-install, args: pchunter}
+groups:
+  activation:
   - { preset: scoop-install, args: microsoft-activation-scripts }
   - { preset: scoop-install, args: CMWTAT_Digital_Edition }
   # - { preset: scoop-install, args: heu-kms-activator}
   # - { preset: scoop-install, args: kms-heu}
   # - { preset: scoop-install, args: KMS_VL_All_AiO-Portable}
   # - { preset: scoop-install, args: kms-vl-all-aio}
-  # - { preset: scoop-install, args: powertool}
-  # - { preset: scoop-install, args: BulkCrapUninstaller}
-  # - { preset: scoop-install, args: BulkCrapUninstaller-Portable}
-  # - { preset: scoop-install, args: bulk-crap-uninstaller}
-  # - { preset: scoop-install, args: RevoUninstaller-Portable}
-  # - { preset: scoop-install, args: geek-uninstaller}
-  - { preset: scoop-install, args: driverstoreexplorer }
+
+  boot:
   - { preset: scoop-install, args: Grub2 }
-  - { preset: scoop-install, args: ultraiso }
-  - { preset: scoop-install, args: wincdemu }
-  # - { preset: scoop-install, args: ntlite}
-  # - { preset: scoop-install, args: ntlite-portable}
-  # - { preset: scoop-install, args: ntlite_FlawlessCasual17}
-  - { preset: scoop-install, args: dismtools }
-  - { preset: scoop-install, args: vivetool }
-  - { preset: scoop-install, args: vivetool-gui }
-  - { preset: scoop-install, args: openark }
+  # - { preset: scoop-install, args: edgeless-hub}
+
+  driver:
+  # - { preset: scoop-install, args: itunes-portable}
+  - { preset: scoop-install, args: i4 }
+  # - { preset: scoop-install, args: i4tool}
+  # - { preset: scoop-install, args: windows-application-driver}
+  - { preset: scoop-install, args: driverstoreexplorer }
+  - { preset: scoop-install, args: ddu }
+  # - { preset: scoop-install, args: nvidia-geforce-experience}
+
+  envvars:
+  - { preset: scoop-install, args: rapidee }
+
+  hardware:
   - { preset: scoop-install, args: hwinfo }
   - { preset: scoop-install, args: speccy }
   - { preset: scoop-install, args: furmark }
@@ -62,4 +40,63 @@ run:
   - { preset: scoop-install, args: cpu-z }
   - { preset: scoop-install, args: gpu-z }
   - { preset: scoop-install, args: ssd-z }
-  - { preset: scoop-install, args: ddu }
+
+  image:
+  - { preset: scoop-install, args: ultraiso }
+  - { preset: scoop-install, args: wincdemu }
+  # - { preset: scoop-install, args: ntlite}
+  # - { preset: scoop-install, args: ntlite-portable}
+  # - { preset: scoop-install, args: ntlite_FlawlessCasual17}
+
+  os-info:
+  # - { preset: scoop-install, args: osquery}
+  - { preset: scoop-install, args: fastfetch }
+  - { preset: scoop-install, args: urlprotocolview }
+
+  registry:
+  # - { preset: scoop-install, args: registry-explorer}
+  - { preset: scoop-install, args: registry-finder }
+
+  settings:
+  # - { preset: scoop-install, args: WindowsUpdateBlocker}
+  - { preset: scoop-install, args: context-menu-manager }
+  - { preset: scoop-install, args: universal-watermark-disabler }
+  - { preset: scoop-install, args: dismplusplus }
+  - { preset: scoop-install, args: Bootice_kkzzhizhou }
+  # - { preset: scoop-install, args: optimizer}
+  # - { preset: scoop-install, args: sophiapp}
+  - { preset: scoop-install, args: wpd }
+  # - { preset: scoop-install, args: privatezilla}
+  # - { preset: scoop-install, args: Malware-Patch_Paxxs}
+  - { preset: scoop-install, args: dismtools }
+  - { preset: scoop-install, args: vivetool }
+  - { preset: scoop-install, args: vivetool-gui }
+  - { preset: scoop-install, args: openark }
+  # - { preset: scoop-install, args: powertool}
+  # - { preset: scoop-install, args: pchunter}
+
+  uninstaller:
+  # - { preset: scoop-install, args: hibit-uninstaller-portable}
+  # - { preset: scoop-install, args: BulkCrapUninstaller}
+  # - { preset: scoop-install, args: BulkCrapUninstaller-Portable}
+  # - { preset: scoop-install, args: bulk-crap-uninstaller}
+  # - { preset: scoop-install, args: RevoUninstaller-Portable}
+  # - { preset: scoop-install, args: geek-uninstaller}
+  # - { preset: scoop-install, args: adobe-creative-cloud-cleaner-tool}
+
+  vcpp:
+  # - { preset: scoop-install, args: vcredist-aio}
+
+
+run:
+  - { group: activation }
+  - { group: boot }
+  - { group: driver }
+  - { group: envvars }
+  - { group: hardware }
+  - { group: image }
+  - { group: os-info }
+  - { group: registry }
+  - { group: settings }
+  - { group: uninstaller }
+  - { group: vcpp }
