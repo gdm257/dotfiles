@@ -8,9 +8,10 @@ artifacts:
     template: memories.md
     instruction: |
       Gather not-loaded context if it exists; missing sources are skipped silently, never created.
-      - Glossary: if `CONTEXT-MAP.md` exists at the repo root, read it and every
-        `CONTEXT.md` it points to that is relevant to this change; otherwise read
-        the root `CONTEXT.md`. Use its canonical terms verbatim when writing the
+      - Glossary: if `CONTEXT-MAP.md` or `GLOSSARY-MAP.md` exists at the repo
+        root, read it and every `CONTEXT.md` / `GLOSSARY.md` it points to that is
+        relevant to this change; otherwise read the root `CONTEXT.md` /
+        `GLOSSARY.md`. Use the canonical terms verbatim when writing the
         artifacts below.
       - ADRs: read every ADR in `docs/adr/` that touches the area of this change
         (in a multi-context repo, also `<context-root>/docs/adr/` for each context
