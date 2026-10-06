@@ -97,6 +97,7 @@ groups:
 
   ime:
   # - { preset: scoop-install, args: imewlconverter}
+  - { preset: scoop-install, args: gdm257/windinput }
 
   markdown:
   # - { preset: scoop-install, args: zettlr}

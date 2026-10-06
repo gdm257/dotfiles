@@ -1,0 +1,64 @@
+[input]
+alt_commit = "pinyin"
+buffer_symbol_chars = "-_"
+punct_on_empty_behavior = "commit"
+
+[input.default]
+chinese_mode = false
+chinese_punct = false
+
+[input.punct]
+follow_mode = true
+
+[input.unicode]
+enabled = true
+
+[keys]
+key_actions_materialized = 1
+page_keys = [
+    "pageupdown",
+    "minus_equal",
+    "brackets",
+]
+select_char_keys = ["comma_period"]
+select_key_groups = []
+
+[keys.key_actions]
+backtick = "temp_pinyin"
+semicolon = "mix:quick_mix"
+
+[schema]
+active = "pinyin"
+available = [
+    "pinyin",
+    "english",
+]
+
+[schema.codetable.english_merge]
+enable = true
+
+[schema.mix]
+enable_pinyin_abbrev = true
+
+[schema.pinyin.aux_code]
+enabled = true
+
+[ui.candidate]
+per_page = 5
+
+[ui.status]
+duration = 1000
+items = [
+    "schema",
+    "punct",
+    "full_width",
+    "s2t",
+]
+schema_name_style = "short"
+
+[ui.theme]
+name = "msime"
+style = "light"
+
+[ui.toolbar]
+visible = false

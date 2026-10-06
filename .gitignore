@@ -17,6 +17,8 @@
 !/apps/scoop/persist/mousemaster
 !/apps/scoop/persist/mykeymap
 !/apps/scoop/persist/mykeymap-beta
+!/apps/scoop/persist/windinput
+*.redb
 !/apps/scoop/persist/winswctl
 /apps/scoop/persist/winswctl/shims/*.log
 /apps/scoop/persist/winswctl/shims/*.exe

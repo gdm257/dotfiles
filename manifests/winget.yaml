@@ -65,7 +65,7 @@ run:
   # - { preset: winget-install, args: DaiyuuNobori.Win10Pcap}
   - { preset: winget-install, args: Insecure.Npcap}
   - { preset: winget-install, args: WiresharkFoundation.Wireshark}
-  - { preset: winget-install, args: Rime.Weasel}
+  # - { preset: winget-install, args: Rime.Weasel}
   - { preset: winget-install, args: luolangaga.tubatools}
   # - { preset: winget-install, args: Brave.Brave}
   # - { preset: winget-install, args: AnyDeskSoftwareGmbH.AnyDesk}
