@@ -33,6 +33,7 @@ groups:
   - { preset: scoop-install, args: fsviewer }
   # - { preset: scoop-install, args: shutter-image-browser}
   # - { preset: scoop-install, args: darktable}
+  - { preset: scoop-install, args: gdm257/lightcraft }
 
   image-viewer:
   - { preset: scoop-install, args: exiftool }
@@ -84,6 +85,7 @@ groups:
 
   picture-processor:
   - { preset: scoop-install, args: gimp }
+  - { preset: scoop-install, args: gdm257/photocraft }
   # - { preset: scoop-install, args: Pinta_dodorz}
   - { preset: scoop-install, args: gdm257/imbatch }
   - { preset: scoop-install, args: hugin }
@@ -98,6 +100,7 @@ groups:
   - { preset: scoop-install, args: Krita-Portable }
   # - { preset: scoop-install, args: StylePix}
   - { preset: scoop-install, args: paint.net }
+  - { preset: scoop-install, args: gdm257/designcraft }
 
   raw-editor:
   - { preset: scoop-install, args: gdm257/rapidraw }
@@ -105,6 +108,7 @@ groups:
   svg:
   - { preset: scoop-install, args: inkscape }
   - { preset: scoop-install, args: pixieditor }
+  - { preset: scoop-install, args: gdm257/vectorcraft }
 
   screenshot:
   - { preset: scoop-install, args: pixpin }

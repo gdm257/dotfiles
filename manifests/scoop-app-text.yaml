@@ -56,18 +56,16 @@ groups:
 
   doc:
   - { preset: scoop-install, args: pandoc }
-  - { preset: scoop-install, args: officecli }
-  - { preset: scoop-install, args: pdftk }
+  - { preset: scoop-install, args: main/officecli }
   - { preset: scoop-install, args: poppler }
   # - { preset: scoop-install, args: vosviewer}
-  - { preset: scoop-install, args: SumatraPDF_dodorz }
   - { preset: scoop-install, args: lfs/awesome-books }
   # - { preset: scoop-install, args: zeal}
   # - { preset: scoop-install, args: koodo-reader}
   # - { preset: scoop-install, args: "mendeley mendeley-desktop"}
 
   dict:
-  # - { preset: scoop-install, args: eudic}
+  - { preset: scoop-install, args: eudic -s }
   - { preset: scoop-install, args: gdm257/awesome-dict }
   # - { preset: scoop-install, args: ting-en}
   # - { preset: scoop-install, args: anki}
@@ -127,9 +125,17 @@ groups:
   # - { preset: scoop-install, args: notepad3}
   # - { preset: scoop-install, args: geany}
 
-  pdf:
+  pdf-cli:
+  - { preset: scoop-install, args: pdftk }
+
+  pdf-viewer:
+  # - { preset: scoop-install, args: SumatraPDF_dodorz }
+  - { preset: scoop-install, args: sumatrapdf-stable }
+
+  pdf-editor:
+  - { preset: scoop-install, args: gdm257/pdfcraft }
+  # - { preset: scoop-install, args: gdm257/killerpdf }
   # - { preset: scoop-install, args: pdf-xchange-editor}
-  - { preset: scoop-install, args: gdm257/killerpdf }
   # - { preset: scoop-install, args: pdfpatcher_hu3rror}
   # - { preset: scoop-install, args: pdfpatcher}
   # - { preset: scoop-install, args: pdf-guru}
@@ -143,6 +149,9 @@ groups:
 
   office:
   # - { preset: scoop-install, args: libreoffice}
+  - { preset: scoop-install, args: gdm257/wordcraft }
+  - { preset: scoop-install, args: gdm257/gridcraft }
+  - { preset: scoop-install, args: gdm257/deckcraft }
 
   rss:
   - { preset: scoop-install, args: rssguard }
@@ -164,7 +173,9 @@ run:
   - { group: markdown }
   - { group: tex }
   - { group: text-editor }
-  - { group: pdf }
+  - { group: pdf-cli }
+  - { group: pdf-viewer }
+  - { group: pdf-editor }
   - { group: font }
   - { group: read-it-later }
   - { group: office }

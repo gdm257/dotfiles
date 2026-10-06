@@ -13,6 +13,7 @@ groups:
   - { preset: scoop-install, args: fritzing }
   - { preset: scoop-install, args: librecad }
   - { preset: scoop-install, args: FreeCAD_dodorz }
+  - { preset: scoop-install, args: gdm257/cadcraft }
 
   emby:
   # - { preset: scoop-install, args: emby}
@@ -99,6 +100,8 @@ groups:
   - { preset: scoop-install, args: kdenlive }
   # - { preset: scoop-install, args: "shotcut losslesscut"}
   - { preset: scoop-install, args: gyroflow }
+  - { preset: scoop-install, args: gdm257/filmcraft }
+  - { preset: scoop-install, args: gdm257/effectcraft }
   - { preset: scoop-install, args: ZXPInstaller }
   # - { preset: scoop-install, args: UAC.ZXPInstaller}
 

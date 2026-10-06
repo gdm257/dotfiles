@@ -68,6 +68,7 @@ groups:
   # - { preset: scoop-install, args: reaper}
   - { preset: scoop-install, args: lmms }
   - { preset: scoop-install, args: audacity }
+  - { preset: scoop-install, args: gdm257/soundcraft }
   - { preset: scoop-install, args: domino }
   - { preset: scoop-install, args: helio }
   - { preset: scoop-install, args: hydrogen }

@@ -440,11 +440,11 @@ tasks:
           MANIFEST: "./manifests/scoop-app-file.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:fonts:
+  manifest:scoop-app:np:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-fonts.yaml"
+          MANIFEST: "./manifests/scoop-app-np.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-app:kernel:

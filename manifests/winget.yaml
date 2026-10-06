@@ -79,7 +79,7 @@ run:
   - { preset: winget-install, args: Sandboxie.Plus}
   - { preset: winget-install, args: Oracle.VirtualBox}
   # - { preset: winget-install, args: SUSE.RancherDesktop}
-  - { preset: winget-install, args: Docker.DockerDesktop}
+  # - { preset: winget-install, args: Docker.DockerDesktop}
   # - { preset: winget-install, args: OpenShot.OpenShot}
   # - { preset: winget-install, args: iSlide.iSlide}
   # - { preset: winget-install, args: "*ZeroTier.ZeroTierOne*"}
@@ -134,7 +134,7 @@ run:
   - { preset: winget-install, args: Huawei.HiSuite}
   # - { preset: winget-install, args: LiTang.QianJi}
   # - { preset: winget-install, args: Tencent.Yuanbao}
-  - { preset: winget-install, args: Eusoft.Eudic}
+  # - { preset: winget-install, args: Eusoft.Eudic}
   # - { preset: winget-install, args: Uzero.ScanScan}
   - { preset: winget-install, args: Bandisoft.Honeyview}
   # - { preset: winget-install, args: GOG.Galaxy}
@@ -146,7 +146,7 @@ run:
   - { preset: winget-install, args: dorssel.usbipd-win}
   # === user ===
   - { preset: winget-install, args: XPDNH1FMW7NB40}
-  - { preset: winget-install, args: Microsoft.WindowsTerminal}
+  # - { preset: winget-install, args: Microsoft.WindowsTerminal}
   - { preset: winget-install, args: Mozilla.SOPS}
   - { preset: winget-install, args: commercialhaskell.stack}
   - { preset: winget-install, args: JRSoftware.InnoSetup}
@@ -159,7 +159,7 @@ run:
   # - { preset: winget-install, args: Ollama.Ollama}
   - { preset: winget-install, args: ElementLabs.LMStudio}
   # - { preset: winget-install, args: ChidiWilliams.Buzz}
-  - { preset: winget-install, args: kangfenmao.CherryStudio}
+  - { preset: winget-install, args: kangfenmao.CherryStudio --version 1.9.13 }
   # - { preset: winget-install, args: Pencil.Desktop}
   # - { preset: winget-install, args: kapitainsky.RcloneBrowser}
   # - { preset: winget-install, args: FastCopy.FastCopy}
