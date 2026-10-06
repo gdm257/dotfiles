@@ -9,7 +9,7 @@
 _Avoid_: taskfile, playbook
 
 **Run item**:
-Manifest 中 `run` 列表里的一项，对应一条最终执行的命令。
+Manifest 中 `run` 列表里的一项，对应一条最终执行的命令。声明 `enable: false`（含 group 条目与组内条目）时静默跳过，默认执行。
 _Avoid_: step, entry
 
 **Defaults**:

@@ -22,8 +22,10 @@ tasks:
         {{ $g := ._MANIFEST.groups | default dict }}[{{ $first := true }}
         {{- range ._MANIFEST.run | default list }}
         {{- if .group }}{{ if not (hasKey $g .group) }}{{ fail (printf "unknown group '%s' in %s" .group $.MANIFEST) }}{{ end }}
-        {{-   range index $g .group }}{{ if .group }}{{ fail (printf "nested group '%s' in %s" .group $.MANIFEST) }}{{ end }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}
-        {{- else }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}
+        {{-   if ne .enable false }}
+        {{-     range index $g .group }}{{ if .group }}{{ fail (printf "nested group '%s' in %s" .group $.MANIFEST) }}{{ end }}{{ if ne .enable false }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}{{ end }}
+        {{-   end }}
+        {{- else if ne .enable false }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}
         {{- end }}]
       _RUNS:
         ref: 'fromJson ._RUNS_JSON'
