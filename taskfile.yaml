@@ -412,102 +412,102 @@ tasks:
           MANIFEST: "./manifests/rye.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:audio:
+  manifest:app:audio:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-audio.yaml"
+          MANIFEST: "./manifests/app-audio.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:devops:
+  manifest:app:devops:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-devops.yaml"
+          MANIFEST: "./manifests/app-devops.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:downloader:
+  manifest:app:downloader:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-downloader.yaml"
+          MANIFEST: "./manifests/app-downloader.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:file:
+  manifest:app:file:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-file.yaml"
+          MANIFEST: "./manifests/app-file.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:np:
+  manifest:app:np:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-np.yaml"
+          MANIFEST: "./manifests/app-np.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:kernel:
+  manifest:app:kernel:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-kernel.yaml"
+          MANIFEST: "./manifests/app-kernel.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:layer:
+  manifest:app:layer:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-layer.yaml"
+          MANIFEST: "./manifests/app-layer.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:network:
+  manifest:app:network:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-network.yaml"
+          MANIFEST: "./manifests/app-network.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:picture:
+  manifest:app:picture:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-picture.yaml"
+          MANIFEST: "./manifests/app-picture.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:process:
+  manifest:app:process:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-process.yaml"
+          MANIFEST: "./manifests/app-process.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:shell:
+  manifest:app:shell:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-shell.yaml"
+          MANIFEST: "./manifests/app-shell.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:text:
+  manifest:app:text:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-text.yaml"
+          MANIFEST: "./manifests/app-text.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:toolbox:
+  manifest:app:toolbox:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-toolbox.yaml"
+          MANIFEST: "./manifests/app-toolbox.yaml"
         task: manifest:run:manifest
 
-  manifest:scoop-app:video:
+  manifest:app:video:
     platforms: [windows]
     cmds:
       - vars:
-          MANIFEST: "./manifests/scoop-app-video.yaml"
+          MANIFEST: "./manifests/app-video.yaml"
         task: manifest:run:manifest
 
   manifest:scoop-bucket:
