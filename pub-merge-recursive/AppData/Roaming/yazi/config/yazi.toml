@@ -1,5 +1,5 @@
 # https://yazi-rs.github.io/docs/configuration/yazi
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+# "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
 linemode = "size"
@@ -34,7 +34,7 @@ edit = [
   { run = '%EDITOR% %s1', block = true, desc = "$EDITOR", for = "windows" },
   { run = 'vim %s1', block = true, desc = "vim", for = "windows" },
   { run = 'nvim %s1', block = true, desc = "nvim", for = "windows" },
-  { run = 'emeditor %s1', blcok = true, desc = "emeditor", for = "windows" },
+  { run = 'emeditor %s1', block = true, desc = "emeditor", for = "windows" },
   # { run = 'notepad %s1', orphan = true, desc = "notepad", for = "windows" },
   # { run = 'zed %s1', orphan = true, desc = "zed", for = "windows" },
   { run = 'code %s1', orphan = true, desc = "vscode", for = "windows" },

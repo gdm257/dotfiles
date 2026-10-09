@@ -1,5 +1,5 @@
 # https://yazi-rs.github.io/docs/configuration/keymap
-"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+# "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
 # ======== Compress Plugin ========
 [[mgr.prepend_keymap]]
