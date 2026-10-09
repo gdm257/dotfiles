@@ -65,7 +65,7 @@ groups:
   # - { preset: scoop-install, args: "mendeley mendeley-desktop"}
 
   dict:
-  - { preset: scoop-install, args: eudic -s }
+  - { preset: scoop-install, args: eudic }
   - { preset: scoop-install, args: gdm257/awesome-dict }
   # - { preset: scoop-install, args: ting-en}
   # - { preset: scoop-install, args: anki}
@@ -148,6 +148,7 @@ groups:
   # - { preset: scoop-install, args: raindrop.io}
 
   office:
+  - { preset: scoop-install, args: onlyoffice-desktopeditors }
   # - { preset: scoop-install, args: libreoffice}
   - { preset: scoop-install, args: gdm257/wordcraft }
   - { preset: scoop-install, args: gdm257/gridcraft }

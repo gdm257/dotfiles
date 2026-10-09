@@ -140,7 +140,7 @@ groups:
 
   chatgpt:
   # - { preset: scoop-install, args: chatgpt}
-  # - { preset: scoop-install, args: cherry-studio_naderi}
+  - { preset: scoop-install, args: gdm257/cherry-studio-v1 }
   # - { preset: scoop-install, args: chatwise}
   # - { preset: scoop-install, args: chatgpt-next-web}
   # - { preset: scoop-install, args: binggpt-portable}

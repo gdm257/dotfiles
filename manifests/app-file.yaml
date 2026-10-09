@@ -12,6 +12,7 @@ groups:
   # - { preset: scoop-install, args: nanazip_DoveBoy}
   # - { preset: scoop-install, args: bandizip6}
   - { preset: scoop-install, args: winrar }
+  - { preset: scoop-install, args: anyburn }
 
   disk:
   - { preset: scoop-install, args: dirhash }

@@ -38,7 +38,7 @@ groups:
   image-viewer:
   - { preset: scoop-install, args: exiftool }
   # - { preset: scoop-install, args: jexiftoolgui}
-  # - { preset: scoop-install, args: honeyview}
+  - { preset: scoop-install, args: honeyview}
   - { preset: scoop-install, args: gdm257/guoheview }
   # - { preset: scoop-install, args: picview}
   # - { preset: scoop-install, args: jarkviewer}
@@ -47,6 +47,8 @@ groups:
   # - { preset: scoop-install, args: irfanview}
   # - { preset: scoop-install, args: quicklook}
   # - { preset: scoop-install, args: imageglass}
+  - { preset: scoop-install, args: gdm257/aiviewer }
+  - { preset: scoop-install, args: gdm257/cdrviewer }
 
   image-hosting:
   # - { preset: scoop-install, args: picgo}
@@ -84,6 +86,7 @@ groups:
   - { preset: scoop-install, args: pot-desktop }
 
   picture-processor:
+  - { preset: scoop-install, args: affinity }
   - { preset: scoop-install, args: gimp }
   - { preset: scoop-install, args: gdm257/photocraft }
   # - { preset: scoop-install, args: Pinta_dodorz}

@@ -21,6 +21,7 @@ groups:
   toolbox:
   - { preset: scoop-install, args: sysinternals }
   # - { preset: scoop-install, args: sysinternals_ScoopInstaller}
+  - { preset: scoop-install, args: gdm257/tubatools }
   # - { preset: scoop-install, args: gaojitools}
   # - { preset: scoop-install, args: fufu-tools}
   - { preset: scoop-install, args: officebox }
@@ -45,13 +46,14 @@ groups:
   # - { preset: scoop-install, args: gdm257/WinDeckHelper}
   - { preset: scoop-install, args: thprac }
   - { preset: scoop-install, args: steam }
+  - { preset: scoop-install, args: itch }
+  - { preset: scoop-install, args: gdm257/epic-games-launcher }
   - { preset: scoop-install, args: SGDBoop }
   # - { preset: scoop-install, args: steam-deck-tools}
   # - { preset: scoop-install, args: HeroicGameLauncher-Portable}
   # - { preset: scoop-install, args: EpicGamesLauncher-Portable}
   # - { preset: scoop-install, args: GOGGalaxy-Portable}
   - { preset: scoop-install, args: gog-galaxy }
-  # - { preset: scoop-install, args: itch}
   # - { preset: scoop-install, args: watt-toolkit}
   # - { preset: scoop-install, args: snap-hutao}
   # - { preset: scoop-install, args: collapse}

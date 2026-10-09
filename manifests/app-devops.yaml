@@ -46,6 +46,7 @@ groups:
   _haskell:
   - { preset: scoop-install, args: haskell }
   # - { preset: scoop-install, args: stack}
+  - { preset: scoop-install, args: gdm257/stack }
 
   _macro:
   - { preset: scoop-install, args: AutoHotkey-Portable_ACooper81}
@@ -130,6 +131,7 @@ groups:
   - { preset: scoop-install, args: gdm257/codebase-memory-mcp-ui }
   - { preset: scoop-install, args: deja-vu }
   - { preset: scoop-install, args: llmfit }
+  - { preset: scoop-install, args: lmstudio }
 
   csharp:
   - { preset: scoop-install, args: nuget }
@@ -225,6 +227,7 @@ groups:
   # - { preset: scoop-install, args: volta}
   - { preset: scoop-install, args: nodejs-lts }
   - { preset: scoop-install, args: bun }
+  - { preset: scoop-install, args: pnpm_DoveBoy }
   # - { preset: scoop-install, args: tailwindcss}
   # - { preset: scoop-install, args: fnm}
   # - { preset: scoop-install, args: nvm}

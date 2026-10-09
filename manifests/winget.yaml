@@ -49,7 +49,7 @@ run:
   # - { preset: winget-install, args: "*Microsoft.WindowsAppRuntime.1.0*"}
   # - { preset: winget-install, args: "*Microsoft.WindowsAppRuntime.1.1*"}
   # - { preset: winget-install, args: "*Microsoft.WindowsAppRuntime.1.2*"}
-  - { preset: winget-install, args: "Microsoft.WindowsAppRuntime.2"}
+  - { preset: winget-install, args: Microsoft.WindowsAppRuntime.2}
   # - { preset: winget-install, args: "*Microsoft.PowerToys*"}
   # - { preset: winget-install, args: "*Microsoft.MediaCreationTool*"}
   # - { preset: winget-install, args: Microsoft.Office}
@@ -64,14 +64,13 @@ run:
   # - { preset: winget-install, args: dokan-dev.Dokany}
   # - { preset: winget-install, args: DaiyuuNobori.Win10Pcap}
   - { preset: winget-install, args: Insecure.Npcap}
-  - { preset: winget-install, args: WiresharkFoundation.Wireshark}
+  # - { preset: winget-install, args: WiresharkFoundation.Wireshark}
   # - { preset: winget-install, args: Rime.Weasel}
-  - { preset: winget-install, args: luolangaga.tubatools}
+  # - { preset: winget-install, args: luolangaga.tubatools}
   # - { preset: winget-install, args: Brave.Brave}
   # - { preset: winget-install, args: AnyDeskSoftwareGmbH.AnyDesk}
   # - { preset: winget-install, args: Youqu.ToDesk}
   # - { preset: winget-install, args: RustDesk.RustDesk}
-  - { preset: winget-install, args: NetEase.UURemote}
   # - { preset: winget-install, args: Tencent.TencentMeeting}
   # - { preset: winget-install, args: AlekseyHoffman.Sigma-File-Manager}
   # - { preset: winget-install, args: AOMEI.Backupper}
@@ -96,8 +95,8 @@ run:
   # - { preset: winget-install, args: RProject.R}
   # - { preset: winget-install, args: RProject.Rtools}
   # - { preset: winget-install, args: Posit.RStudio}
-  - { preset: winget-install, args: Valve.SteamLink}
-  - { preset: winget-install, args: EpicGames.EpicGamesLauncher}
+  # - { preset: winget-install, args: Valve.SteamLink}
+  # - { preset: winget-install, args: EpicGames.EpicGamesLauncher}
   # - { preset: winget-install, args: Stellarium.Stellarium}
   # - { preset: winget-install, args: "*HeidelbergUniversity.GaiaSky*"}
   # - { preset: winget-install, args: SURF.eduVPNClient}
@@ -128,7 +127,7 @@ run:
   # - { preset: winget-install, args: dechamps.FlexASIO}
   - { preset: winget-install, args: BandLab.Cakewalk}
   # - { preset: winget-install, args: GnuPG.Gpg4win}
-  - { preset: winget-install, args: AOMEI.PartitionAssistant}
+  # - { preset: winget-install, args: AOMEI.PartitionAssistant}
   # - { preset: winget-install, args: "*KeppySoftware.OmniMIDI*"}
   # - { preset: winget-install, args: Nlitesoft.NTLite}
   - { preset: winget-install, args: Huawei.HiSuite}
@@ -136,30 +135,31 @@ run:
   # - { preset: winget-install, args: Tencent.Yuanbao}
   # - { preset: winget-install, args: Eusoft.Eudic}
   # - { preset: winget-install, args: Uzero.ScanScan}
-  - { preset: winget-install, args: Bandisoft.Honeyview}
+  # - { preset: winget-install, args: Bandisoft.Honeyview}
   # - { preset: winget-install, args: GOG.Galaxy}
-  - { preset: winget-install, args: IdeaMK.CDRViewer}
-  - { preset: winget-install, args: IdeaMK.AIViewer}
-  - { preset: winget-install, args: Canva.Affinity}
-  - { preset: winget-install, args: ONLYOFFICE.DesktopEditors}
+  # - { preset: winget-install, args: IdeaMK.CDRViewer}
+  # - { preset: winget-install, args: IdeaMK.AIViewer}
+  # - { preset: winget-install, args: Canva.Affinity}
+  # - { preset: winget-install, args: ONLYOFFICE.DesktopEditors}
   # - { preset: winget-install, args: ModOrganizer2.modorganizer}
   - { preset: winget-install, args: dorssel.usbipd-win}
   # === user ===
-  - { preset: winget-install, args: XPDNH1FMW7NB40}
+  # - { preset: winget-install, args: XPDNH1FMW7NB40}
   # - { preset: winget-install, args: Microsoft.WindowsTerminal}
-  - { preset: winget-install, args: Mozilla.SOPS}
-  - { preset: winget-install, args: commercialhaskell.stack}
-  - { preset: winget-install, args: JRSoftware.InnoSetup}
+  - { preset: winget-install, args: NetEase.UURemote}
+  # - { preset: winget-install, args: Mozilla.SOPS}
+  # - { preset: winget-install, args: commercialhaskell.stack}
+  # - { preset: winget-install, args: JRSoftware.InnoSetup}
   # - { preset: winget-install, args: Espanso.Espanso}
   # - { preset: winget-install, args: SublimeHQ.SublimeText.3}
   # - { preset: winget-install, args: ZedIndustries.Zed}
   # - { preset: winget-install, args: ByteDance.Trae}
   # - { preset: winget-install, args: 123.123pan}
-  - { preset: winget-install, args: 115.115Chrome}
+  # - { preset: winget-install, args: 115.115Chrome}
   # - { preset: winget-install, args: Ollama.Ollama}
-  - { preset: winget-install, args: ElementLabs.LMStudio}
+  # - { preset: winget-install, args: ElementLabs.LMStudio}
   # - { preset: winget-install, args: ChidiWilliams.Buzz}
-  - { preset: winget-install, args: kangfenmao.CherryStudio --version 1.9.13 }
+  # - { preset: winget-install, args: kangfenmao.CherryStudio --version 1.9.13 }
   # - { preset: winget-install, args: Pencil.Desktop}
   # - { preset: winget-install, args: kapitainsky.RcloneBrowser}
   # - { preset: winget-install, args: FastCopy.FastCopy}
@@ -175,7 +175,7 @@ run:
   # - { preset: winget-install, args: Anthropic.ClaudeCode}
   # - { preset: winget-install, args: Codeium.Windsurf}
   # - { preset: winget-install, args: WEIFENG2333.VideoCaptioner}
-  - { preset: winget-install, args: ItchIo.Itch}
+  # - { preset: winget-install, args: ItchIo.Itch}
   # === msstore ===
-  - { preset: msstore-install, args: XPDNH1FMW7NB40}
-  - { preset: msstore-install, args: 9nb0h051m4v4}
+  # - { preset: msstore-install, args: XPDNH1FMW7NB40}
+  # - { preset: msstore-install, args: 9nb0h051m4v4}

@@ -35,6 +35,7 @@ groups:
   - { preset: scoop-install, args: winscp }
   # - { preset: scoop-install, args: megasync}
   # - { preset: scoop-install, args: 115}
+  - { preset: scoop-install, args: gdm257/115chrome }
   # - { preset: scoop-install, args: BaiduNetdisk}
   # - { preset: scoop-install, args: openlist}
   - { preset: scoop-install, args: openlist-desktop }
