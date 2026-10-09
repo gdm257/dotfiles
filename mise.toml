@@ -1,5 +1,4 @@
 [settings]
-npm.package_manager = "pnpm"
 pipx.uvx = true
 python.uv_venv_auto = true
 
@@ -7,4 +6,8 @@ python.uv_venv_auto = true
 "pipx:dotbot" = "latest"
 task = "latest"
 uv = "latest"
+bun = "latest"
+pnpm = "latest"
+"github:pkgxdev/pkgx" = { version = "latest", os = ["windows"] }
+"github:marwanhawari/stew" = { version = "latest", os = ["windows"] }
 "github:dyoshikawa/rulesync" = "latest"

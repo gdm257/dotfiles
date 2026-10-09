@@ -75,6 +75,7 @@ groups:
   # - { preset: scoop-install, args: xpipe}
   # - { preset: scoop-install, args: mobaxterm}
   - { preset: scoop-install, args: gdm257/leepanel }
+  - { preset: scoop-install, args: gdm257/voltius }
   # - { preset: scoop-install, args: electerm}
   # - { preset: scoop-install, args: alacritty}
   # - { preset: scoop-install, args: rio}

@@ -9,34 +9,13 @@ prefer_offline = true
 minimum_release_age = "1h"
 auto_install = false
 exec_auto_install = true
-npm.package_manager = "pnpm"
+npm.package_manager = "bun"
 pipx.uvx = true
 python.uv_venv_auto = true
 
 [tools]
-bun = { version = "latest", os = ["windows"] }
-dart = { version = "latest", os = ["windows"] }
-pnpm = { version = "latest", os = ["windows"] }
-uv = { version = "latest", os = ["windows"] }
-"github:pkgxdev/pkgx" = { version = "latest", os = ["windows"] }
-"github:marwanhawari/stew" = { version = "latest", os = ["windows"] }
-task = { version = "latest", os = ["windows"] }
-yazi = { version = "latest", os = ["windows"] }
-zellij = { version = "latest", os = ["linux", "macos"] }
-
-"dotnet:dotnet-repl" = { version = "latest", os = ["windows"] }
-"dotnet:Microsoft.dotnet-interactive" = { version = "latest", os = ["windows"] }
-"dotnet:csharp-ls" = { version = "latest", os = ["windows"] }
-
-"cargo:binsider" = { version = "latest", os = ["linux", "macos"] }
-
-"go:golang.org/x/tools/gopls" = { version = "v0.21.0", os = ["windows"] }
-
-"npm:neoss" = { version = "latest", os = ["linux"] }
 "npm:@fission-ai/openspec" = { version = "latest", os = ["windows"] }
-"npm:@open-pencil/cli" = { version = "latest", os = ["windows"] }
 
-"pipx:isd" = { version = "latest", os = ["linux"] }
 "pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = { version = "main", os = ["windows"] }
 "pipx:git+https://github.com/SilentSnowSoul/magnetizer.git" = { version = "main", os = ["windows"] }
 "pipx:httpie" = { version = "latest", os = ["windows"] }

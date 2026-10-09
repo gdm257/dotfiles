@@ -242,6 +242,7 @@ groups:
   - { preset: scoop-install, args: adb }
   # - { preset: scoop-install, args: kotlin}
   - { preset: scoop-install, args: gdm257/kotlin-lsp }
+  - { preset: scoop-install, args: main/dart }
   # - { preset: scoop-install, args: flutter}
   - { preset: scoop-install, args: flutter-cn }
 
@@ -270,6 +271,7 @@ groups:
   - { preset: scoop-install, args: gdm257/shim-python3 }
   # - { preset: scoop-install, args: rye}
   # - { preset: scoop-install, args: uv}
+  - { preset: scoop-install, args: gdm257/uv }
   # - { preset: scoop-install, args: gdm257/micromamba}
   # - { preset: scoop-install, args: gdm257/shim-mamba}
   # - { preset: scoop-install, args: gdm257/shim-conda}

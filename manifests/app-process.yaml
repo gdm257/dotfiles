@@ -9,6 +9,7 @@ groups:
   - { preset: scoop-install, args: systeminformer }
   # - { preset: scoop-install, args: systeminformer-nightly_hu3rror}
   # - { preset: scoop-install, args: procexp}
+  - { preset: scoop-install, args: main/witr }
   # - { preset: scoop-install, args: bottom}
   - { preset: scoop-install, args: btop }
   # - { preset: scoop-install, args: ntop}
