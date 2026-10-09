@@ -1,14 +1,14 @@
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "e6007f7"
-hash = "e0b1051849756dd72fca874c320259a"
+rev = "80e5268"
+hash = "868db729374b97871bc30b96d0e9061f"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "7cd6b04"
-hash = "98b8276aa076284f5c4a5260cbe08549"
+rev = "f1cec0b"
+hash = "fd9312e974c63438b1f8737711462d52"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "4a1802a"
-hash = "b951d27afe197d154f6da9683b46c5f8"
+rev = "1183892"
+hash = "ce320f877fe709b189433941aba747c4"
