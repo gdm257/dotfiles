@@ -8,15 +8,6 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "diff_view_style": "split",
-  "edit_predictions": {
-    "open_ai_compatible_api": {
-      "max_output_tokens": 256,
-      "model": "deepseek-v4-flash",
-      "api_url": "https://api.deepseek.com/v1"
-    },
-    "provider": "zed",
-    "mode": "subtle"
-  },
   "restore_on_startup": "launchpad",
   "show_whitespaces": "trailing",
   "line_ending": "prefer_lf",
@@ -33,9 +24,6 @@
     "tree_view": true,
   },
   "agent_servers": {
-    "codex-acp": {
-      "type": "registry"
-    },
     "claude-acp": {
       "type": "registry",
     },
