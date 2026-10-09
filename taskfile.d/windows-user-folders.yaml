@@ -1,0 +1,31 @@
+version: '3'
+
+tasks:
+
+  set:
+    platforms: [windows]
+    internal: true
+    desc: "Set user shell folder registry value NAME to PATH"
+    requires:
+      vars:
+        - NAME
+        - PATH
+    cmds:
+      - powershell -NoProfile -Command 'Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" "{{.NAME}}" "{{.PATH}}" -Type ExpandString'
+
+  libs:
+    platforms: [windows]
+    desc: "Redirect user shell folders to <repo>/libraries"
+    vars:
+      FOLDERS:
+        map:
+          Personal: Documents
+          My Music: Music
+          My Pictures: Pictures
+          My Video: Videos
+    cmds:
+      - for: { var: FOLDERS }
+        task: set
+        vars:
+          NAME: "{{.KEY}}"
+          PATH: "{{.ROOT_DIR}}/libraries/{{.ITEM}}"

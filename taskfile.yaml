@@ -128,6 +128,9 @@ includes:
   wsl:
     taskfile: "./taskfile.d/wsl.yaml"
     optional: true
+  win-user:
+    taskfile: "./taskfile.d/windows-user-folders.yaml"
+    optional: true
   x:
     taskfile: "./taskfile.d/x-cmd.yaml"
     optional: true
