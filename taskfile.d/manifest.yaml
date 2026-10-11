@@ -6,8 +6,10 @@ tasks:
     requires:
       vars:
         - RUN
+    vars:
+      _CMD: "{{ .RUN.prefix }} {{ .RUN.entrypoint }} {{ .RUN.command }} {{ .RUN.args }} {{ .RUN.suffix }}"
     cmds:
-      - cmd: "{{ .RUN.prefix }} {{ .RUN.entrypoint }} {{ .RUN.command }} {{ .RUN.args }} {{ .RUN.suffix }}"
+      - cmd: '{{ if eq (._CONTINUE | default "") "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> {{ ._FAIL_LOG }}; }{{ else }}{{ ._CMD }}{{ end }}'
 
   run:manifest:
     requires:
@@ -23,16 +25,21 @@ tasks:
         {{- range ._MANIFEST.run | default list }}
         {{- if .group }}{{ if not (hasKey $g .group) }}{{ fail (printf "unknown group '%s' in %s" .group $.MANIFEST) }}{{ end }}
         {{-   if ne .enable false }}
-        {{-     range index $g .group }}{{ if .group }}{{ fail (printf "nested group '%s' in %s" .group $.MANIFEST) }}{{ end }}{{ if ne .enable false }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}{{ end }}
+        {{-     $coe := .continue_on_error }}
+        {{-     range index $g .group }}{{ if .group }}{{ fail (printf "nested group '%s' in %s" .group $.MANIFEST) }}{{ end }}{{ if ne .enable false }}{{ if not $first }},{{ end }}{{ $first = false }}{{ if and $coe (not (hasKey . "continue_on_error")) }}{{ toJson (merge . (dict "continue_on_error" $coe)) }}{{ else }}{{ toJson . }}{{ end }}{{ end }}{{ end }}
         {{-   end }}
         {{- else if ne .enable false }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}
         {{- end }}]
       _RUNS:
         ref: 'fromJson ._RUNS_JSON'
+      _FAIL_LOG:
+        sh: 'mktemp | tr "\\\\" "/"'
     cmds:
       - for: { var: _RUNS, as: _RUN }
         task: run
         vars:
+          _CONTINUE: '{{ if hasKey ._RUN "continue_on_error" }}{{ if eq ._RUN.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+          _FAIL_LOG: "{{ ._FAIL_LOG }}"
           RUN:
             map:
               prefix: "{{ if ._RUN.prefix }}{{ ._RUN.prefix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.prefix (get (default dict ._MANIFEST.presets) ._RUN.preset).prefix }}{{ else }}{{ ._MANIFEST.prefix }}{{ end }}"
@@ -40,3 +47,4 @@ tasks:
               command: "{{ if ._RUN.command }}{{ ._RUN.command }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.command (get (default dict ._MANIFEST.presets) ._RUN.preset).command }}{{ else }}{{ ._MANIFEST.command }}{{ end }}"
               args: "{{ if ._RUN.args }}{{ ._RUN.args }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.args (get (default dict ._MANIFEST.presets) ._RUN.preset).args }}{{ else }}{{ ._MANIFEST.args }}{{ end }}"
               suffix: "{{ if ._RUN.suffix }}{{ ._RUN.suffix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.suffix (get (default dict ._MANIFEST.presets) ._RUN.preset).suffix }}{{ else }}{{ ._MANIFEST.suffix }}{{ end }}"
+      - cmd: "if [ -s {{ ._FAIL_LOG }} ]; then echo 'run:manifest: failed items:'; sed 's/^/  /' {{ ._FAIL_LOG }}; rm -f {{ ._FAIL_LOG }}; exit 1; else rm -f {{ ._FAIL_LOG }}; fi"
