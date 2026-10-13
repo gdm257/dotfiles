@@ -340,6 +340,12 @@ tasks:
           MANIFEST: "./manifests/dotnet-tool.yaml"
         task: manifest:run:manifest
 
+  manifest:dsh:
+    cmds:
+      - vars:
+          MANIFEST: "./manifests/dsh.yaml"
+        task: manifest:run:manifest
+
   manifest:go:
     cmds:
       - vars:
