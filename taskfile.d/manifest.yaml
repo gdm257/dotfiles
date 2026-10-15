@@ -49,3 +49,116 @@ tasks:
               args: "{{ if ._RUN.args }}{{ ._RUN.args }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.args (get (default dict ._MANIFEST.presets) ._RUN.preset).args }}{{ else }}{{ ._MANIFEST.args }}{{ end }}"
               suffix: "{{ if ._RUN.suffix }}{{ ._RUN.suffix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.suffix (get (default dict ._MANIFEST.presets) ._RUN.preset).suffix }}{{ else }}{{ ._MANIFEST.suffix }}{{ end }}"
       - cmd: "if [ -s {{ ._FAIL_LOG }} ]; then echo 'run:manifest: failed items:'; while IFS= read -r l; do printf '  %s\\n' \"$l\"; done < {{ ._FAIL_LOG }}; exit 1; fi"
+
+  manifest:dispatch:
+    desc: "dispatch manifest items to CALL task"
+    requires:
+      vars:
+        - MANIFEST
+        - CALL
+    vars:
+      _YAML:
+        sh: 'printf "%s" "$(< "{{.MANIFEST}}")"'
+      _MANIFEST:
+        ref: 'fromYaml ._YAML'
+      _DISPATCH_JSON: >-
+        {{ $m := ._MANIFEST | default dict }}{{ $n := 0 }}[{{ $first := true }}
+        {{- if not (eq (printf "%T" $m) "map[string]interface {}") }}{{ fail (printf "manifest is not a map in %s" $.MANIFEST) }}{{ end }}
+        {{- range $k, $v := $m }}
+        {{-   if not (or (eq $k "items") (eq $k "groups")) }}{{ fail (printf "unknown top-level key '%s' in %s" $k $.MANIFEST) }}{{ end }}
+        {{- end }}
+        {{- $g := $m.groups | default dict }}
+        {{- range $m.items | default list }}
+        {{-   if not (eq (printf "%T" .) "map[string]interface {}") }}{{ fail (printf "item #%d not a map in %s" (add $n 1) $.MANIFEST) }}{{ end }}
+        {{-   if hasKey . "group" }}
+        {{-     $grp := .group }}
+        {{-     if not (hasKey $g $grp) }}{{ fail (printf "unknown group '%s' in %s" $grp $.MANIFEST) }}{{ end }}
+        {{-     $coe := .continue_on_error }}
+        {{-     $refPass := true }}
+        {{-     if not (ne .enable false) }}{{ $refPass = false }}{{ end }}
+        {{-     $refPMatch := true }}
+        {{-     if hasKey . "platforms" }}
+        {{-       $refPMatch = false }}
+        {{-       if not (or (eq (printf "%T" .platforms) "string") (eq (printf "%T" .platforms) "[]interface {}")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" (add $n 1) .platforms $.MANIFEST) }}{{ end }}
+        {{-       $refPJs := toJson .platforms }}
+        {{-       if eq (printf "%T" .platforms) "string" }}{{ $refPJs = printf "[%s]" $refPJs }}{{ end }}
+        {{-       range fromJson $refPJs }}
+        {{-         if not (eq (printf "%T" .) "string") }}{{ fail (printf "item #%d invalid platform '%v' in %s" (add $n 1) . $.MANIFEST) }}{{ end }}
+        {{-         $refParts := splitList "/" . }}
+        {{-         if not (or (eq (index $refParts 0) "windows") (eq (index $refParts 0) "linux") (eq (index $refParts 0) "darwin")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" (add $n 1) . $.MANIFEST) }}{{ end }}
+        {{-         if gt (len $refParts) 2 }}{{ fail (printf "item #%d invalid platform '%v' in %s" (add $n 1) . $.MANIFEST) }}{{ end }}
+        {{-         $refM := eq (index $refParts 0) (OS) }}
+        {{-         if eq (len $refParts) 2 }}{{ $refM = and $refM (and (ne (index $refParts 1) "") (eq (index $refParts 1) (ARCH))) }}{{ end }}
+        {{-         if $refM }}{{ $refPMatch = true }}{{ end }}
+        {{-       end }}
+        {{-     end }}
+        {{-     $refPass = and $refPass $refPMatch }}
+        {{-     if $refPass }}
+        {{-       range index $g $grp }}
+        {{-         $n = add $n 1 }}
+        {{-         if not (eq (printf "%T" .) "map[string]interface {}") }}{{ fail (printf "item #%d not a map in %s" $n $.MANIFEST) }}{{ end }}
+        {{-         if hasKey . "group" }}{{ fail (printf "nested group '%s' in %s" .group $.MANIFEST) }}{{ end }}
+        {{-         if not (hasKey . "kind") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
+        {{-         if not (eq (printf "%T" .kind) "string") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
+        {{-         $pass := true }}
+        {{-         if not (ne .enable false) }}{{ $pass = false }}{{ end }}
+        {{-         $pMatch := true }}
+        {{-         if hasKey . "platforms" }}
+        {{-           $pMatch = false }}
+        {{-           if not (or (eq (printf "%T" .platforms) "string") (eq (printf "%T" .platforms) "[]interface {}")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n .platforms $.MANIFEST) }}{{ end }}
+        {{-           $pJs := toJson .platforms }}
+        {{-           if eq (printf "%T" .platforms) "string" }}{{ $pJs = printf "[%s]" $pJs }}{{ end }}
+        {{-           range fromJson $pJs }}
+        {{-             if not (eq (printf "%T" .) "string") }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
+        {{-             $parts := splitList "/" . }}
+        {{-             if not (or (eq (index $parts 0) "windows") (eq (index $parts 0) "linux") (eq (index $parts 0) "darwin")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
+        {{-             if gt (len $parts) 2 }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
+        {{-             $pm := eq (index $parts 0) (OS) }}
+        {{-             if eq (len $parts) 2 }}{{ $pm = and $pm (and (ne (index $parts 1) "") (eq (index $parts 1) (ARCH))) }}{{ end }}
+        {{-             if $pm }}{{ $pMatch = true }}{{ end }}
+        {{-           end }}
+        {{-         end }}
+        {{-         $pass = and $pass $pMatch }}
+        {{-         $item := . }}
+        {{-         if and $coe (not (hasKey . "continue_on_error")) }}{{ $item = merge . (dict "continue_on_error" $coe) }}{{ end }}
+        {{-         if $pass }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson $item }}{{ end }}
+        {{-       end }}
+        {{-     end }}
+        {{-   else }}
+        {{-     $n = add $n 1 }}
+        {{-     if not (hasKey . "kind") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
+        {{-     if not (eq (printf "%T" .kind) "string") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
+        {{-     $pass := true }}
+        {{-     if not (ne .enable false) }}{{ $pass = false }}{{ end }}
+        {{-     $pMatch := true }}
+        {{-     if hasKey . "platforms" }}
+        {{-       $pMatch = false }}
+        {{-       if not (or (eq (printf "%T" .platforms) "string") (eq (printf "%T" .platforms) "[]interface {}")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n .platforms $.MANIFEST) }}{{ end }}
+        {{-       $pJs := toJson .platforms }}
+        {{-       if eq (printf "%T" .platforms) "string" }}{{ $pJs = printf "[%s]" $pJs }}{{ end }}
+        {{-       range fromJson $pJs }}
+        {{-         if not (eq (printf "%T" .) "string") }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
+        {{-         $parts := splitList "/" . }}
+        {{-         if not (or (eq (index $parts 0) "windows") (eq (index $parts 0) "linux") (eq (index $parts 0) "darwin")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
+        {{-         if gt (len $parts) 2 }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
+        {{-             $pm := eq (index $parts 0) (OS) }}
+        {{-             if eq (len $parts) 2 }}{{ $pm = and $pm (and (ne (index $parts 1) "") (eq (index $parts 1) (ARCH))) }}{{ end }}
+        {{-             if $pm }}{{ $pMatch = true }}{{ end }}
+        {{-       end }}
+        {{-     end }}
+        {{-     $pass = and $pass $pMatch }}
+        {{-     if $pass }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}
+        {{-   end }}
+        {{- end }}]
+      _DISPATCH:
+        ref: 'fromJson ._DISPATCH_JSON'
+      _FAIL_LOG:
+        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+    cmds:
+      - cmd: ': > "{{ ._FAIL_LOG }}"'
+      - for: { var: _DISPATCH, as: _ITEM }
+        task: '{{.CALL}}'
+        vars:
+          ITEM_JSON: "{{toJson ._ITEM}}"
+          FAIL_LOG: "{{ ._FAIL_LOG }}"
+      - cmd: 'if [ -s "{{ ._FAIL_LOG }}" ]; then echo ''manifest:dispatch: failed items:''; while IFS= read -r l; do printf ''  %s\n'' "$l"; done < "{{ ._FAIL_LOG }}"; exit 1; fi'
