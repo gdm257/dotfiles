@@ -35,6 +35,7 @@ tasks:
       _FAIL_LOG:
         sh: 'f="${TMPDIR:-/tmp}/manifest-faillog"; printf "%s" "${f//\\//}"'
     cmds:
+      - cmd: '{{ if (hasKey ._MANIFEST "items") }}{{ fail (printf "v2 manifest (items:) not allowed in v1 engine: %s" .MANIFEST) }}{{ end }}'
       - cmd: ": > {{ ._FAIL_LOG }}"
       - for: { var: _RUNS, as: _RUN }
         task: run
