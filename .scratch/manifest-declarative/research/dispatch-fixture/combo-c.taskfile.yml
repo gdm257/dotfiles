@@ -1,0 +1,15 @@
+version: "3"
+
+includes:
+  ns: ns.tasks.yml
+
+tasks:
+  call:
+    cmds:
+      - task: "{{.CALL}}"
+        vars:
+          GREETING: hi
+
+  hello:
+    cmds:
+      - 'echo "hello: {{.GREETING}}"'

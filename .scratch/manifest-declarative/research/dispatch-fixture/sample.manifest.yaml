@@ -1,0 +1,9 @@
+items:
+  - name: ripgrep
+    sudo: true
+    version: "14.1.0"
+  - name: fzf
+    sudo: false
+    version: "0.44.0"
+  - name: bat
+    version: "0.24.0"

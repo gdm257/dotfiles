@@ -1,0 +1,46 @@
+version: "3"
+
+vars:
+  MANIFEST: sample.manifest.yaml
+  _YAML:
+    sh: 'printf "%s" "$(< "{{.MANIFEST}}")"'
+  _MANIFEST:
+    ref: "fromYaml ._YAML"
+  ITEMS:
+    ref: "._MANIFEST.items"
+
+tasks:
+  ref-renamed:
+    cmds:
+      - for: { var: ITEMS, as: ITM }
+        task: recv
+        vars:
+          ITEM:
+            ref: .ITM
+
+  as-string:
+    cmds:
+      - for: { var: ITEMS, as: ITM }
+        task: recv
+        vars:
+          ITEM: "{{.ITM}}"
+
+  engine-map:
+    cmds:
+      - for: { var: ITEMS, as: ITM }
+        task: recv-map
+        vars:
+          ITEM:
+            map:
+              name: "{{.ITM.name}}"
+              sudo: "{{.ITM.sudo}}"
+
+  recv:
+    internal: true
+    cmds:
+      - echo "name={{.ITEM.name}}"
+
+  recv-map:
+    internal: true
+    cmds:
+      - echo "name={{.ITEM.name}} sudo_raw={{.ITEM.sudo}} if_bare={{if .ITEM.sudo}}yes{{else}}no{{end}}"

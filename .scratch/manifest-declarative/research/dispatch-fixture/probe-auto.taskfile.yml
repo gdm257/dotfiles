@@ -1,0 +1,22 @@
+version: "3"
+
+vars:
+  MANIFEST: sample.manifest.yaml
+  _YAML:
+    sh: 'printf "%s" "$(< "{{.MANIFEST}}")"'
+  _MANIFEST:
+    ref: "fromYaml ._YAML"
+  ITEMS:
+    ref: "._MANIFEST.items"
+
+tasks:
+  auto-var:
+    cmds:
+      - for: { var: ITEMS, as: ITEM }
+        task: recv-auto
+
+  recv-auto:
+    internal: true
+    cmds:
+      - 'echo "json={{toJson .ITEM}}"'
+      - 'echo "name={{.ITEM.name}} sudo={{if .ITEM.sudo}}yes{{else}}no{{end}}"'
