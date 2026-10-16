@@ -4,11 +4,13 @@
   "targets": {
     "claudecode": ["mcp", "hooks", "permissions"],
     "codexcli": ["mcp", "hooks", "permissions"],
+    "dsh": ["mcp"],
     "opencode": ["mcp", "hooks", "permissions"],
     "omp": ["mcp"],
     "zcode": ["mcp", "hooks"],
   },
   "global": true,
+  "allowSymlinkEscape": true,
   "delete": false,
   "verbose": true,
   "silent": false,

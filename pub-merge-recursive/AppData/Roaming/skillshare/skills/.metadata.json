@@ -1367,6 +1367,60 @@
         "agents/openai.yaml": "sha256:5af65e43ab41a350436697b81e27b7f848d36782043b73c322bb2c9fa9cc55dc"
       }
     },
+    "publish-release-ci": {
+      "source": "https://github.com/gdm257/cc-plugins.git/plugins/agent-skills/skills/publish-release-ci",
+      "type": "github-subdir",
+      "installed_at": "2026-10-16T03:52:59.1422289+09:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/agent-skills/skills/publish-release-ci",
+      "version": "dca1166",
+      "tree_hash": "fa5b6be5f93da030063347aafefbbe115c150dbe",
+      "commit": "dca1166606f794a052e1cf7a18aea8513deba39a",
+      "file_hashes": {
+        "SKILL.md": "sha256:2d7ca4b5cb6684b81ebb943e9b489d052c97df1ee5ad6ef8c795f53e3343f5af"
+      }
+    },
+    "rea-changelog-update": {
+      "source": "https://github.com/morluto/rea/.agents/skills/rea-changelog-update",
+      "type": "github-subdir",
+      "installed_at": "2026-10-15T07:38:00.8150288+09:00",
+      "repo_url": "https://github.com/morluto/rea.git",
+      "subdir": ".agents/skills/rea-changelog-update",
+      "version": "3d2846f",
+      "tree_hash": "9e214d3fa14b0331970ec67fff1aa4d8c7a1dc20",
+      "commit": "3d2846f2371bc3e73b7069f713f6daa80f4db78c",
+      "file_hashes": {
+        "SKILL.md": "sha256:75729ede35eac4768fdc315f0f2a6885d84df1dfa1cd7b795f213b10ddcfd4bf"
+      }
+    },
+    "rea-ci-tests-audit": {
+      "source": "https://github.com/morluto/rea/.agents/skills/rea-ci-tests-audit",
+      "type": "github-subdir",
+      "installed_at": "2026-10-15T07:38:01.0393595+09:00",
+      "repo_url": "https://github.com/morluto/rea.git",
+      "subdir": ".agents/skills/rea-ci-tests-audit",
+      "version": "3d2846f",
+      "tree_hash": "40116d60d40cf1fa1560642a2a644ec2addfd042",
+      "commit": "3d2846f2371bc3e73b7069f713f6daa80f4db78c",
+      "file_hashes": {
+        "SKILL.md": "sha256:997f3717eacb261247b43805a75db9cbd6bd29eb88a5639b592b9705abac98ef",
+        "agents/openai.yaml": "sha256:389cac55e7a6faf9b22e871b18adcdfd3bd89bdd00aa9e6636de07ca913ec916",
+        "references/measurement-and-ci.md": "sha256:691eb55373b24b8276dce5abcf94d9011b6ebeb7bdd9c23fb371654c5e52a583"
+      }
+    },
+    "rea-tool-design": {
+      "source": "https://github.com/morluto/rea/.agents/skills/rea-tool-design",
+      "type": "github-subdir",
+      "installed_at": "2026-10-15T07:38:01.2492993+09:00",
+      "repo_url": "https://github.com/morluto/rea.git",
+      "subdir": ".agents/skills/rea-tool-design",
+      "version": "3d2846f",
+      "tree_hash": "23d6a0f4cee737e4414313a4eeb105c1f20b074d",
+      "commit": "3d2846f2371bc3e73b7069f713f6daa80f4db78c",
+      "file_hashes": {
+        "SKILL.md": "sha256:6023df0f1cdbe9944963469a3f2a1365d55eebdf1a7f4adb33430851f9ee5f14"
+      }
+    },
     "recall": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/recall",
       "type": "github-subdir",
@@ -1493,6 +1547,25 @@
       "file_hashes": {
         "SKILL.md": "sha256:33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696",
         "agents/openai.yaml": "sha256:cb6fb9d7e6b4be5975f41f6def1dd00a1255bad5d9b02696b124c924a8b8745c"
+      }
+    },
+    "reverse-engineer-anything": {
+      "source": "https://github.com/morluto/rea/.agents/skills/reverse-engineer-anything",
+      "type": "github-subdir",
+      "installed_at": "2026-10-15T07:38:01.5366897+09:00",
+      "repo_url": "https://github.com/morluto/rea.git",
+      "subdir": ".agents/skills/reverse-engineer-anything",
+      "version": "3d2846f",
+      "tree_hash": "95bb70a8379ce251932e223349946041a60c376c",
+      "commit": "3d2846f2371bc3e73b7069f713f6daa80f4db78c",
+      "file_hashes": {
+        "SKILL.md": "sha256:278a5826b004ebd33b83c9534f3081d8e4c0eae514be96a0124ceb6f3081d21c",
+        "references/android-applications.md": "sha256:412d9cb462d85b07f6fdbc2453dd741ca3da2c0dbba627867d5624df94afa74c",
+        "references/connection-and-recovery.md": "sha256:a33760c84ae100f6ffd27d666e515956c5014ac33a6ee2414807833ae666a2b1",
+        "references/evidence-workflows.md": "sha256:2bdee98a843d018cf850c706111bb74c459ba8640da00799e9208122e4d5ab80",
+        "references/javascript-applications.md": "sha256:b3e5e999833baac828addbb6b7a4ed859f0c68befd465812597bf19c27aa7a0b",
+        "references/native-and-artifacts.md": "sha256:1d2ac5f64feb5ad6ef8b98d803d570e1c48aa588281ff91a4bbf50d40f924450",
+        "references/runtime-observation.md": "sha256:fea85e2005a8fd1c86a946eeede24c20e57592a1deb36576b45216e9854803c8"
       }
     },
     "review-changes": {
