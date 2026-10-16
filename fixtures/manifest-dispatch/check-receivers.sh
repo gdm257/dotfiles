@@ -63,4 +63,3 @@ for receiver in windows-feature scoop winget apt yum choco; do
   check test "${output#*manifest-dispatch-faillog}" != "$output"
   printf 'PASS: %s precedence and FAIL_LOG dry-run only\n' "$receiver"
 done
-
