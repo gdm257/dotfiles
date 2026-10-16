@@ -51,7 +51,7 @@ tasks:
               suffix: "{{ if ._RUN.suffix }}{{ ._RUN.suffix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.suffix (get (default dict ._MANIFEST.presets) ._RUN.preset).suffix }}{{ else }}{{ ._MANIFEST.suffix }}{{ end }}"
       - cmd: "if [ -s {{ ._FAIL_LOG }} ]; then echo 'run:manifest: failed items:'; while IFS= read -r l; do printf '  %s\\n' \"$l\"; done < {{ ._FAIL_LOG }}; exit 1; fi"
 
-  manifest:dispatch:
+  dispatch:
     desc: "dispatch manifest items to CALL task"
     requires:
       vars:
@@ -163,3 +163,17 @@ tasks:
           ITEM_JSON: "{{toJson ._ITEM}}"
           FAIL_LOG: "{{ ._FAIL_LOG }}"
       - cmd: 'if [ -s "{{ ._FAIL_LOG }}" ]; then echo ''manifest:dispatch: failed items:''; while IFS= read -r l; do printf ''  %s\n'' "$l"; done < "{{ ._FAIL_LOG }}"; exit 1; fi'
+
+  dispatch:shell:
+    desc: "dispatch shell item"
+    requires:
+      vars:
+        - ITEM_JSON
+        - FAIL_LOG
+    vars:
+      _ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: "{{ ._ITEM.cmd }}"
+      _CONTINUE: '{{ if hasKey ._ITEM "continue_on_error" }}{{ if eq ._ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+    cmds:
+      - cmd: '{{ if eq (._CONTINUE | default "") "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> {{ .FAIL_LOG }}; }{{ else }}{{ ._CMD }}{{ end }}'

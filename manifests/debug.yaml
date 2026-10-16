@@ -1,8 +1,3 @@
-prefix: "echo 'from file'"
-entrypoint: "g-entrypoint"
-command: "g-command"
-args: "g-args"
-suffix: "g-suffix"
-
-run:
-  - {suffix: "run-suffix"}
+items:
+  - kind: shell
+    cmd: echo 'from file'

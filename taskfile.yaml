@@ -326,7 +326,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/debug.yaml"
-        task: manifest:run:manifest
+          CALL: "dispatch:shell"
+        task: manifest:dispatch
 
   manifest:dotnet-source:
     cmds:
