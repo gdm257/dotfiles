@@ -83,17 +83,17 @@ mise activate
 ## Recover
 
 ```powershell
-dotbot -v -c ./dotbot.registry.yaml
-dotbot -v -c ./dotbot.once.lib.yaml
-dotbot -v -c ./dotbot.links.yaml
+task dotbot:registry
+task dotbot:libs
+task dotbot:links
 ```
 
 ## From Scratch
 
 ```powershell
-dotbot -v -c ./dotbot.registry.yaml
-dotbot -v -c ./dotbot.once.lib.yaml
-dotbot -v -c ./dotbot.links.yaml
+task dotbot:registry
+task dotbot:libs
+task dotbot:links
 ```
 
 ## Optional Installation

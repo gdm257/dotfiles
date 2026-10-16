@@ -228,6 +228,30 @@ tasks:
           CALL: "shell:apply"
         task: manifest:dispatch
 
+  dotbot:age:
+    cmds:
+      - dotbot -v -c ./dotbot.age.yaml
+
+  dotbot:libs:
+    cmds:
+      - dotbot -v -c ./dotbot.once.lib.yaml
+
+  dotbot:links:
+    cmds:
+      - dotbot -v -c ./dotbot.links.yaml
+
+  dotbot:registry:
+    cmds:
+      - dotbot -v -c ./dotbot.registry.yaml
+
+  dotbot:scoop:
+    cmds:
+      - dotbot -v -c ./dotbot.scoop.yaml
+
+  dotbot:test-plugins:
+    cmds:
+      - dotbot -v -c ./dotbot.test-plugins.yaml
+
   manifest:dotnet-source:
     cmds:
       - vars:
