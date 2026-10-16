@@ -1,0 +1,9 @@
+# 引用 false MUST 覆盖全局 true，失败后不得执行后续 item。
+items:
+  - {group: strict, continue_on_error: false}
+  - {kind: echo, name: after-strict}
+groups:
+  strict:
+    - {kind: echo, name: strict-marker}
+    - {kind: echo, name: strict-failure, fail: true}
+    - {kind: echo, name: never-strict}

@@ -23,20 +23,22 @@
 | 独立 shell，无 FAIL_LOG | `task --taskfile fixtures/manifest-dispatch/receivers.taskfile.yaml shell ITEM_JSON='{"kind":"shell","cmd":"echo standalone-shell"}'` | 输出 `standalone-shell`；exit 0 |
 | items 空 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/empty.yaml CALL=echo:apply` | 不调 CALL；exit 0 |
 | 全部被过滤 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/all-filtered.yaml CALL=echo:apply` | 不调 CALL；exit 0 |
-| 未知顶层键 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/unknown-top-key.yaml CALL=echo:apply` | fail：`unknown top-level key 'extra' in <path>`；exit 1 |
-| 未知 group | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/unknown-group.yaml CALL=echo:apply` | fail：`unknown group 'nope' in <path>`；exit 1 |
-| 嵌套 group | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/nested-group.yaml CALL=echo:apply` | fail：`nested group 'inner' in <path>`；exit 1 |
+| 未知顶层键 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/unknown-top-key.yaml CALL=echo:apply` | fail：`item #1 unknown top-level key 'extra' in <path>`；exit 1 |
+| 未知 group | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/unknown-group.yaml CALL=echo:apply` | fail：`item #1 unknown group 'nope' in <path>`；exit 1 |
+| 嵌套 group | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/nested-group.yaml CALL=echo:apply` | fail：`item #2 nested group 'inner' in <path>`；exit 1 |
 | item 缺 kind | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/missing-kind.yaml CALL=echo:apply` | fail：`item #2 missing or non-scalar kind in <path>`；exit 1 |
 | kind 非标量 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/non-scalar-kind.yaml CALL=echo:apply` | fail：`item #2 missing or non-scalar kind in <path>`；exit 1 |
 | items 元素非 map | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/non-map-item.yaml CALL=echo:apply` | fail：`item #2 not a map in <path>`；exit 1 |
 | platforms 三段 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/invalid-platform-segments.yaml CALL=echo:apply` | fail：`item #2 invalid platform 'windows/amd64/extra' in <path>`；exit 1 |
 | platforms 值域外 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/invalid-platform-os.yaml CALL=echo:apply` | fail：`item #2 invalid platform 'foo' in <path>`；exit 1 |
-| v1 形打 v2 引擎 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/v1-form.yaml CALL=echo:apply` | fail：`unknown top-level key 'command' in <path>`（键序第一个未知键）；exit 1 |
+| v1 形打 v2 引擎 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/v1-form.yaml CALL=echo:apply` | fail：`item #1 unknown top-level key 'command' in <path>`（键序第一个未知键）；exit 1 |
 | CALL 未知名 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/bool-fidelity.yaml CALL=no-such-task` | 干净报错 `task: Task "manifest:no-such-task" does not exist`；exit 200 |
 | internal CLI 直呼 | `task manifest:echo:apply ITEM_JSON='{"kind":"echo","name":"x"}'` | 拒绝：`task: Task "manifest:echo:apply" is internal`；exit 202 |
 | 接收方独立调用 | 任一非 dispatch task 以 `task:` 调 `manifest:echo:apply`，仅传 ITEM_JSON | 正常 echo、exit 0（FAIL_LOG 非必需，default 兜底） |
 
 ## 最小接收方检查
+
+先运行 `bash fixtures/manifest-dispatch/check-dispatch.sh` 重放全部引擎 fixture，断言输出、退出码与结构错误路径和 `#N`。新增 `group-coe-false.yaml` 验证 group false 覆盖 global true 并硬停；`group-coe-member-override.yaml` 验证成员显式 true 优先；`group-coe-repeated.yaml` 验证重复引用 true / false / 未声明互不污染。三份 `structure/empty-platform-arch-*.yaml` 分别覆盖内联、成员和引用的空 arch，均期望 `item #2 invalid platform 'windows/'` 与 fixture 路径、exit 1。未知顶层键定位固定为 `#1`，未知 group 定位到下一展开位置，嵌套 group 定位到该成员位置。非空 arch 仍仅按当前 ARCH 匹配，不新增枚举。
 
 在仓库根运行 `bash fixtures/manifest-dispatch/check-receivers.sh`，Windows 使用 Git Bash，不使用 WSL 的 bash。检查只依赖 task CLI 与 bash builtins，不新增测试框架。
 

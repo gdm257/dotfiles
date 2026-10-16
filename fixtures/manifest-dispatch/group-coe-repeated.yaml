@@ -1,0 +1,10 @@
+# 重复引用 MUST 保持独立，不修改原始成员 map。
+items:
+  - {group: shared, continue_on_error: true}
+  - {group: shared, continue_on_error: false}
+  - {group: shared}
+  - {group: shared, continue_on_error: false}
+  - {group: shared, continue_on_error: true}
+groups:
+  shared:
+    - {kind: echo, name: repeated}

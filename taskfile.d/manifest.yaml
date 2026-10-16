@@ -33,15 +33,16 @@ tasks:
         {{ $m := ._MANIFEST | default dict }}{{ $n := 0 }}[{{ $first := true }}
         {{- if not (eq (printf "%T" $m) "map[string]interface {}") }}{{ fail (printf "manifest is not a map in %s" $.MANIFEST) }}{{ end }}
         {{- range $k, $v := $m }}
-        {{-   if not (or (eq $k "items") (eq $k "groups")) }}{{ fail (printf "unknown top-level key '%s' in %s" $k $.MANIFEST) }}{{ end }}
+        {{-   if not (or (eq $k "items") (eq $k "groups")) }}{{ fail (printf "item #1 unknown top-level key '%s' in %s" $k $.MANIFEST) }}{{ end }}
         {{- end }}
         {{- $g := $m.groups | default dict }}
         {{- range $m.items | default list }}
         {{-   if not (eq (printf "%T" .) "map[string]interface {}") }}{{ fail (printf "item #%d not a map in %s" (add $n 1) $.MANIFEST) }}{{ end }}
         {{-   if hasKey . "group" }}
         {{-     $grp := .group }}
-        {{-     if not (hasKey $g $grp) }}{{ fail (printf "unknown group '%s' in %s" $grp $.MANIFEST) }}{{ end }}
+        {{-     if not (hasKey $g $grp) }}{{ fail (printf "item #%d unknown group '%s' in %s" (add $n 1) $grp $.MANIFEST) }}{{ end }}
         {{-     $coe := .continue_on_error }}
+        {{-     $hasCoe := hasKey . "continue_on_error" }}
         {{-     $refPass := true }}
         {{-     if not (ne .enable false) }}{{ $refPass = false }}{{ end }}
         {{-     $refPMatch := true }}
@@ -54,7 +55,7 @@ tasks:
         {{-         if not (eq (printf "%T" .) "string") }}{{ fail (printf "item #%d invalid platform '%v' in %s" (add $n 1) . $.MANIFEST) }}{{ end }}
         {{-         $refParts := splitList "/" . }}
         {{-         if not (or (eq (index $refParts 0) "windows") (eq (index $refParts 0) "linux") (eq (index $refParts 0) "darwin")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" (add $n 1) . $.MANIFEST) }}{{ end }}
-        {{-         if gt (len $refParts) 2 }}{{ fail (printf "item #%d invalid platform '%v' in %s" (add $n 1) . $.MANIFEST) }}{{ end }}
+        {{-         if or (gt (len $refParts) 2) (and (eq (len $refParts) 2) (eq (index $refParts 1) "")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" (add $n 1) . $.MANIFEST) }}{{ end }}
         {{-         $refM := eq (index $refParts 0) (OS) }}
         {{-         if eq (len $refParts) 2 }}{{ $refM = and $refM (and (ne (index $refParts 1) "") (eq (index $refParts 1) (ARCH))) }}{{ end }}
         {{-         if $refM }}{{ $refPMatch = true }}{{ end }}
@@ -65,7 +66,7 @@ tasks:
         {{-       range index $g $grp }}
         {{-         $n = add $n 1 }}
         {{-         if not (eq (printf "%T" .) "map[string]interface {}") }}{{ fail (printf "item #%d not a map in %s" $n $.MANIFEST) }}{{ end }}
-        {{-         if hasKey . "group" }}{{ fail (printf "nested group '%s' in %s" .group $.MANIFEST) }}{{ end }}
+        {{-         if hasKey . "group" }}{{ fail (printf "item #%d nested group '%s' in %s" $n .group $.MANIFEST) }}{{ end }}
         {{-         if not (hasKey . "kind") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
         {{-         if not (eq (printf "%T" .kind) "string") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
         {{-         $pass := true }}
@@ -80,7 +81,7 @@ tasks:
         {{-             if not (eq (printf "%T" .) "string") }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
         {{-             $parts := splitList "/" . }}
         {{-             if not (or (eq (index $parts 0) "windows") (eq (index $parts 0) "linux") (eq (index $parts 0) "darwin")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
-        {{-             if gt (len $parts) 2 }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
+        {{-             if or (gt (len $parts) 2) (and (eq (len $parts) 2) (eq (index $parts 1) "")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
         {{-             $pm := eq (index $parts 0) (OS) }}
         {{-             if eq (len $parts) 2 }}{{ $pm = and $pm (and (ne (index $parts 1) "") (eq (index $parts 1) (ARCH))) }}{{ end }}
         {{-             if $pm }}{{ $pMatch = true }}{{ end }}
@@ -88,7 +89,7 @@ tasks:
         {{-         end }}
         {{-         $pass = and $pass $pMatch }}
         {{-         $item := . }}
-        {{-         if and $coe (not (hasKey . "continue_on_error")) }}{{ $item = merge . (dict "continue_on_error" $coe) }}{{ end }}
+        {{-         if and $hasCoe (not (hasKey . "continue_on_error")) }}{{ $item = merge (dict "continue_on_error" $coe) . }}{{ end }}
         {{-         if $pass }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson $item }}{{ end }}
         {{-       end }}
         {{-     end }}
@@ -108,7 +109,7 @@ tasks:
         {{-         if not (eq (printf "%T" .) "string") }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
         {{-         $parts := splitList "/" . }}
         {{-         if not (or (eq (index $parts 0) "windows") (eq (index $parts 0) "linux") (eq (index $parts 0) "darwin")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
-        {{-         if gt (len $parts) 2 }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
+        {{-         if or (gt (len $parts) 2) (and (eq (len $parts) 2) (eq (index $parts 1) "")) }}{{ fail (printf "item #%d invalid platform '%v' in %s" $n . $.MANIFEST) }}{{ end }}
         {{-             $pm := eq (index $parts 0) (OS) }}
         {{-             if eq (len $parts) 2 }}{{ $pm = and $pm (and (ne (index $parts 1) "") (eq (index $parts 1) (ARCH))) }}{{ end }}
         {{-             if $pm }}{{ $pMatch = true }}{{ end }}

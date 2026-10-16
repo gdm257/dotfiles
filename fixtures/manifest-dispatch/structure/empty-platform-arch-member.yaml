@@ -1,0 +1,6 @@
+items:
+  - {group: invalid}
+groups:
+  invalid:
+    - {kind: echo, name: before}
+    - {kind: echo, name: invalid, platforms: ['windows/']}

@@ -1,0 +1,3 @@
+items:
+  - {kind: echo, name: before}
+  - {kind: echo, name: invalid, platforms: 'windows/'}

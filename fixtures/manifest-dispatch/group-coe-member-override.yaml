@@ -1,0 +1,7 @@
+# 成员显式 true MUST 优先于引用 false。
+items:
+  - {group: strict, continue_on_error: false}
+groups:
+  strict:
+    - {kind: echo, name: member-tolerated, fail: true, continue_on_error: true}
+    - {kind: echo, name: after-member}
