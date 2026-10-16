@@ -587,7 +587,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/windows-features.yaml"
-          CALL: "recv:windows-feature"
+          CALL: "windows-feature:apply"
         task: manifest:dispatch
 
   manifest:winget:

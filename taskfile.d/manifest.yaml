@@ -51,7 +51,7 @@ tasks:
               suffix: "{{ if ._RUN.suffix }}{{ ._RUN.suffix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.suffix (get (default dict ._MANIFEST.presets) ._RUN.preset).suffix }}{{ else }}{{ ._MANIFEST.suffix }}{{ end }}"
       - cmd: "if [ -s {{ ._FAIL_LOG }} ]; then echo 'run:manifest: failed items:'; while IFS= read -r l; do printf '  %s\\n' \"$l\"; done < {{ ._FAIL_LOG }}; exit 1; fi"
 
-  recv:windows-feature:
+  windows-feature:apply:
     desc: "receive windows-feature items (dism enable/disable by state)"
     requires:
       vars:
