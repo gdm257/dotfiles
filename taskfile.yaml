@@ -26,6 +26,30 @@ tasks:
     cmds:
       - cmd: task --list-all
 
+  dotbot:age:
+    cmds:
+      - dotbot -v -d . -c ./dotbot-configs/age.yaml
+
+  dotbot:libs:
+    cmds:
+      - dotbot -v -d . -c ./dotbot-configs/once.lib.yaml
+
+  dotbot:links:
+    cmds:
+      - dotbot -v -d . -c ./dotbot-configs/links.yaml
+
+  dotbot:registry:
+    cmds:
+      - dotbot -v -d . -c ./dotbot-configs/registry.yaml
+
+  dotbot:scoop:
+    cmds:
+      - dotbot -v -d . -c ./dotbot-configs/scoop.yaml
+
+  dotbot:test-plugins:
+    cmds:
+      - dotbot -v -d . -c ./dotbot-configs/test-plugins.yaml
+
   manifest:apt:
     cmds:
       - vars:
