@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "favorite_models": [],
+    "model_parameters": [],
+    "auto_compact": {
+      "threshold": "75%"
+    }
+  },
+  "status_bar": {
+    "active_encoding_button": "enabled",
+    "line_endings_button": true
+  },
   "diff_view_style": "split",
   "restore_on_startup": "launchpad",
   "show_whitespaces": "trailing",
