@@ -1,0 +1,7 @@
+# 组成员再引用 group（嵌套 group）：fail，消息含 manifest 路径与组名
+items:
+  - group: outer
+groups:
+  outer:
+    - {kind: echo, name: a}
+    - group: inner

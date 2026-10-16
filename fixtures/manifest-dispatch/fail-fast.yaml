@@ -1,0 +1,5 @@
+# 接收方失败未被容忍：迭代立即中止，never 不被调用，退出码非 0
+items:
+  - {kind: echo, name: ok-1}
+  - {kind: echo, name: boom, fail: true}
+  - {kind: echo, name: never}

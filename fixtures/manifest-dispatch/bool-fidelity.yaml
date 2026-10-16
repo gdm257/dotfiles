@@ -1,0 +1,13 @@
+# bool / 嵌套 / list 经 ITEM_JSON 透传保真
+# 期望：flag=true / flag=false（bool 保真），json= 后 JSON 引号与嵌套结构完整
+items:
+  - kind: echo
+    name: bool-true
+    flag: true
+  - kind: echo
+    name: bool-false
+    flag: false
+  - kind: echo
+    name: nested-and-list
+    opts: {deep: {x: 1}}
+    tags: [a, b]

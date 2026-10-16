@@ -1,0 +1,8 @@
+# 全部被过滤（含整组）：不调 CALL，静默 exit 0
+items:
+  - {kind: echo, name: a, enable: false}
+  - group: off
+    enable: false
+groups:
+  off:
+    - {kind: echo, name: b}

@@ -205,3 +205,17 @@ tasks:
         sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
     cmds:
       - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  echo:apply:
+    desc: "replay receiver for dispatch fixtures: echo item evidence, fail on fail: true"
+    internal: true
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+      _CMD: '{{ if .ITEM.fail }}false{{ else }}echo ''item={{ .ITEM.name }} kind={{ .ITEM.kind }} flag={{ if .ITEM.flag }}true{{ else }}false{{ end }} json={{ toJson .ITEM }}''{{ end }}'
+    cmds:
+      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ .ITEM.name }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'

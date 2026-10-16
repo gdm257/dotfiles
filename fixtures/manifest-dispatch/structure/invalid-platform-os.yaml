@@ -1,0 +1,4 @@
+# platforms 顶层值域外：fail，消息含 manifest 路径与 #2
+items:
+  - {kind: echo, name: a}
+  - {kind: echo, name: b, platforms: foo}

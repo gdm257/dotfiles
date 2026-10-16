@@ -1,0 +1,5 @@
+# 容错 item 失败写入 FAIL_LOG：迭代继续，收尾打印 failed items 汇总并 exit 1
+items:
+  - {kind: echo, name: ok-1}
+  - {kind: echo, name: tolerated, fail: true, continue_on_error: true}
+  - {kind: echo, name: ok-2}
