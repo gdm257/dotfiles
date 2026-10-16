@@ -11,3 +11,7 @@
 - [ ] 删除后 `taskfile.d/manifest.yaml` 只含 `manifest:dispatch`
 - [ ] 抽查若干 `task manifest:<name>` wrapper 仍正常（走 dispatch）
 - [ ] 上位契约：`.scratch/manifest-declarative/details/migration.md` Deletion 节
+
+## Comments
+
+- （票 02 批注，2026-10-16）删除判据 grep 范围修正：全仓 `manifest:run` 零命中需排除 `fixtures/`（`fixtures/manifest-dispatch/README.md` 的防呆重放命令必然含该字样，属文档性命中而非 v1 入口引用）；`manifests/` 顶层 `run:` / `presets:` 判据不受影响（v1-form fixture 刻意落在 fixtures/ 下）。
