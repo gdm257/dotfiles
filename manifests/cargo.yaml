@@ -1,5 +1,2 @@
-entrypoint: cargo
-command: install
-
-run:
-  - { args: sd }
+items:
+  - { kind: cargo-crate, name: sd }

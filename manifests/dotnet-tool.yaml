@@ -1,6 +1,3 @@
-entrypoint: dotnet
-command: "tool install -g"
-
-run:
-  - {args: dotnet-repl}
-  - {args: Microsoft.dotnet-interactive}
+items:
+  - { kind: dotnet-tool, name: dotnet-repl }
+  - { kind: dotnet-tool, name: Microsoft.dotnet-interactive }

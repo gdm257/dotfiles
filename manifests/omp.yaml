@@ -1,11 +1,8 @@
-entrypoint: omp
-command: plugin install
-
-run:
+items:
   # Marketplaces
-  - {args: "gdm257/cc-plugins", command: "plugin marketplace add"}
+  - { kind: omp-marketplace, name: gdm257/cc-plugins }
 
   # Plugins
-  - {args: "npm:wakatime-omp"}
-  - {args: "claude-code-hooks@cc-257"}
-  - {args: "git:github.com/gdm257/pi-auto-approve"}
+  - { kind: omp-plugin, name: npm:wakatime-omp }
+  - { kind: omp-plugin, name: claude-code-hooks@cc-257 }
+  - { kind: omp-plugin, name: git:github.com/gdm257/pi-auto-approve }

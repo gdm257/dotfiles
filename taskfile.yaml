@@ -164,33 +164,38 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/ansible-collection.yaml"
-        task: manifest:run:manifest
+          CALL: "ansible-collection:apply"
+        task: manifest:dispatch
 
   manifest:ansible-role:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/ansible-role.yaml"
-        task: manifest:run:manifest
+          CALL: "ansible-role:apply"
+        task: manifest:dispatch
 
   manifest:astro:
     cmds:
       - vars:
           MANIFEST: "./manifests/astro.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:astro:apply"
+        task: manifest:dispatch
 
   manifest:bin:
     cmds:
       - vars:
           MANIFEST: "./manifests/bin.yaml"
-        task: manifest:run:manifest
+          CALL: "bin:apply"
+        task: manifest:dispatch
 
   manifest:bin-linux:
     platforms: [linux]
     cmds:
       - vars:
           MANIFEST: "./manifests/bin-linux.yaml"
-        task: manifest:run:manifest
+          CALL: "bin:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:devops:
     platforms: [linux, darwin]
@@ -300,28 +305,32 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/cargo.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:cargo:apply"
+        task: manifest:dispatch
 
   manifest:cargo-unix:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/cargo-unix.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:cargo:apply"
+        task: manifest:dispatch
 
   manifest:claude:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/claude.yaml"
-        task: manifest:run:manifest
+          CALL: "claude:apply"
+        task: manifest:dispatch
 
   manifest:codex:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/codex.yaml"
-        task: manifest:run:manifest
+          CALL: "codex:apply"
+        task: manifest:dispatch
 
   manifest:choco:
     platforms: [windows]
@@ -335,7 +344,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/conda-create.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:conda-create:apply"
+        task: manifest:dispatch
 
   manifest:debug:
     cmds:
@@ -348,94 +358,109 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/dotnet-source.yaml"
-        task: manifest:run:manifest
+          CALL: "dotnet-source:apply"
+        task: manifest:dispatch
 
   manifest:dotnet-tool:
     cmds:
       - vars:
           MANIFEST: "./manifests/dotnet-tool.yaml"
-        task: manifest:run:manifest
+          CALL: "dotnet-tool:apply"
+        task: manifest:dispatch
 
   manifest:dsh:
     cmds:
       - vars:
           MANIFEST: "./manifests/dsh.yaml"
-        task: manifest:run:manifest
+          CALL: "dsh:apply"
+        task: manifest:dispatch
 
   manifest:go:
     cmds:
       - vars:
           MANIFEST: "./manifests/go.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:go:apply"
+        task: manifest:dispatch
 
   manifest:k8s-helm-repo:
     cmds:
       - vars:
           MANIFEST: "./manifests/k8s-helm-repo.yaml"
-        task: manifest:run:manifest
+          CALL: "k8s-helm-repo:apply"
+        task: manifest:dispatch
 
   manifest:k8s-krew:
     cmds:
       - vars:
           MANIFEST: "./manifests/k8s-krew.yaml"
-        task: manifest:run:manifest
+          CALL: "k8s-krew:apply"
+        task: manifest:dispatch
 
   manifest:k8s-krew-unix:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/k8s-krew-unix.yaml"
-        task: manifest:run:manifest
+          CALL: "k8s-krew:apply"
+        task: manifest:dispatch
 
   manifest:npm:
     cmds:
       - vars:
           MANIFEST: "./manifests/npm.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:npm:apply"
+        task: manifest:dispatch
 
   manifest:omp:
     cmds:
       - vars:
           MANIFEST: "./manifests/omp.yaml"
-        task: manifest:run:manifest
+          CALL: "omp:apply"
+        task: manifest:dispatch
 
   manifest:pi:
     cmds:
       - vars:
           MANIFEST: "./manifests/pi.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:pi:apply"
+        task: manifest:dispatch
 
   manifest:pipx:
     cmds:
       - vars:
           MANIFEST: "./manifests/pipx.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:pipx:apply"
+        task: manifest:dispatch
 
   manifest:pipx-unix:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/pipx-unix.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:pipx:apply"
+        task: manifest:dispatch
 
   manifest:playnite:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/playnite.yaml"
-        task: manifest:run:manifest
+          CALL: "playnite:apply"
+        task: manifest:dispatch
 
   manifest:rclone:
     cmds:
       - vars:
           MANIFEST: "./manifests/rclone.yaml"
-        task: manifest:run:manifest
+          CALL: "rclone:apply"
+        task: manifest:dispatch
 
   manifest:rye:
     cmds:
       - vars:
           MANIFEST: "./manifests/rye.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:rye:apply"
+        task: manifest:dispatch
 
   manifest:app:audio:
     platforms: [windows]
@@ -569,50 +594,58 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/skills.yaml"
-        task: manifest:run:manifest
+          CALL: "skills:apply"
+        task: manifest:dispatch
 
   manifest:stack:
     cmds:
       - vars:
           MANIFEST: "./manifests/stack.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:stack:apply"
+        task: manifest:dispatch
 
   manifest:vfox-globalize:
     cmds:
       - vars:
           MANIFEST: "./manifests/vfox-globalize.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:vfox-globalize:apply"
+        task: manifest:dispatch
 
   manifest:vfox-plugin:
     cmds:
       - vars:
           MANIFEST: "./manifests/vfox-plugin.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:vfox-plugin:apply"
+        task: manifest:dispatch
 
   manifest:vfox-sdk:
     cmds:
       - vars:
           MANIFEST: "./manifests/vfox-sdk.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:vfox-sdk:apply"
+        task: manifest:dispatch
 
   manifest:volta:
     cmds:
       - vars:
           MANIFEST: "./manifests/volta.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:volta:apply"
+        task: manifest:dispatch
 
   manifest:volta-unix:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/volta-unix.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:volta:apply"
+        task: manifest:dispatch
 
   manifest:w2:
     cmds:
       - vars:
           MANIFEST: "./manifests/w2.yaml"
-        task: manifest:run:manifest
+          CALL: "w2:apply"
+        task: manifest:dispatch
 
   manifest:windows-features:
     platforms: [windows]
@@ -635,13 +668,15 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/wsl.yaml"
-        task: manifest:run:manifest
+          CALL: "wsl:apply"
+        task: manifest:dispatch
 
   manifest:x-cmd:
     cmds:
       - vars:
           MANIFEST: "./manifests/x-cmd.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:x-cmd:apply"
+        task: manifest:dispatch
 
   manifest:yum:
     platforms: [linux]

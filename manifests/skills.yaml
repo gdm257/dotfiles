@@ -1,31 +1,28 @@
-entrypoint: openskills
-command: "install -g -u"
-
-run:
+items:
   # ======= Enabled by default =======
-  - {args: gdm257/cc-plugins}
-  - {args: rohitg00/agentmemory}
-  # - {args: sudocode-ai/sudocode}
-  # - {args: zhangyanxs/repo2skill}
+  - {kind: openskills-skill, repo: gdm257/cc-plugins}
+  - {kind: openskills-skill, repo: rohitg00/agentmemory}
+  # - {kind: openskills-skill, repo: sudocode-ai/sudocode}
+  # - {kind: openskills-skill, repo: zhangyanxs/repo2skill}
   # ======= Collection =======
-  - {args: anthropics/claude-plugins-official}
-  - {args: ComposioHQ/awesome-claude-skills}
-  - {args: VoltAgent/awesome-claude-code-subagents}
-  - {args: wshobson/agents}
-  - {args: antfu/skills}
-  - {args: vercel-labs/skills}
-  - {args: vercel-labs/agent-skills}
-  - {args: softaworks/agent-toolkit}
-  - {args: jeffallan/claude-skills}
+  - {kind: openskills-skill, repo: anthropics/claude-plugins-official}
+  - {kind: openskills-skill, repo: ComposioHQ/awesome-claude-skills}
+  - {kind: openskills-skill, repo: VoltAgent/awesome-claude-code-subagents}
+  - {kind: openskills-skill, repo: wshobson/agents}
+  - {kind: openskills-skill, repo: antfu/skills}
+  - {kind: openskills-skill, repo: vercel-labs/skills}
+  - {kind: openskills-skill, repo: vercel-labs/agent-skills}
+  - {kind: openskills-skill, repo: softaworks/agent-toolkit}
+  - {kind: openskills-skill, repo: jeffallan/claude-skills}
   # ======= Specific tool =======
-  - {args: supabase/agent-skills}
-  - {args: expo/skills}
-  - {args: hyf0/vue-skills}
-  - {args: vercel-labs/next-skills}
-  - {args: cloudai-x/threejs-skills}
-  - {args: adithya-s-k/manim_skill}
-  - {args: remotion-dev/skills}
-  - {args: slidevjs/slidev}
-  - {args: better-auth/skills}
-  - {args: resend/resend-skills}
-  - {args: browser-use/browser-use}
+  - {kind: openskills-skill, repo: supabase/agent-skills}
+  - {kind: openskills-skill, repo: expo/skills}
+  - {kind: openskills-skill, repo: hyf0/vue-skills}
+  - {kind: openskills-skill, repo: vercel-labs/next-skills}
+  - {kind: openskills-skill, repo: cloudai-x/threejs-skills}
+  - {kind: openskills-skill, repo: adithya-s-k/manim_skill}
+  - {kind: openskills-skill, repo: remotion-dev/skills}
+  - {kind: openskills-skill, repo: slidevjs/slidev}
+  - {kind: openskills-skill, repo: better-auth/skills}
+  - {kind: openskills-skill, repo: resend/resend-skills}
+  - {kind: openskills-skill, repo: browser-use/browser-use}

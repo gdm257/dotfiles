@@ -1,8 +1,5 @@
-entrypoint: wsl
-command: "--install -d"
-
-run:
-  - {args: Ubuntu-24.04}
-  - {args: Debian}
-  - {args: kali-linux}
-  - {args: OracleLinux_8_7}
+items:
+  - { kind: wsl-distro, name: Ubuntu-24.04 }
+  - { kind: wsl-distro, name: Debian }
+  - { kind: wsl-distro, name: kali-linux }
+  - { kind: wsl-distro, name: OracleLinux_8_7 }

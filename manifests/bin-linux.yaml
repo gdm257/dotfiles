@@ -1,6 +1,3 @@
-entrypoint: bin
-command: install
-
-run:
-  - { args: "github.com/joehillen/sysz" }
-  - { args: "github.com/servicer-labs/servicer $HOME/.local/bin/servicer" }
+items:
+  - { kind: bin-app, name: github.com/joehillen/sysz, platforms: [linux] }
+  - { kind: bin-app, name: github.com/servicer-labs/servicer, path: $HOME/.local/bin/servicer, platforms: [linux] }

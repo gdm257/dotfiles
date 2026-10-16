@@ -1,11 +1,8 @@
-entrypoint: claude
-command: "plugin marketplace add"
-
-run:
-  - { args: wakatime/claude-code-wakatime }
-  - { args: gdm257/cc-plugins }
-  - { args: Piebald-AI/claude-code-lsps }
-  - { args: anthropics/claude-plugins-official }
-  - { args: max-sixty/worktrunk }
-  # - {args: rohitg00/agentmemory}
-  # - {args: DietrichGebert/ponytail}
+items:
+  - { kind: claude-marketplace, name: wakatime/claude-code-wakatime }
+  - { kind: claude-marketplace, name: gdm257/cc-plugins }
+  - { kind: claude-marketplace, name: Piebald-AI/claude-code-lsps }
+  - { kind: claude-marketplace, name: anthropics/claude-plugins-official }
+  - { kind: claude-marketplace, name: max-sixty/worktrunk }
+  # - { kind: claude-marketplace, name: rohitg00/agentmemory }
+  # - { kind: claude-marketplace, name: DietrichGebert/ponytail }

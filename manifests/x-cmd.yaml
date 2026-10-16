@@ -1,5 +1,2 @@
-entrypoint: x
-command: install
-
-run:
-  - {args: brew}
+items:
+  - {kind: x-cmd-package, name: brew}

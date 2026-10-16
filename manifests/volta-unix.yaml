@@ -1,5 +1,2 @@
-entrypoint: volta
-command: install
-
-run:
-  # - {args: node}
+items: []
+  # - {kind: volta-tool, name: node, platforms: [linux, darwin]}

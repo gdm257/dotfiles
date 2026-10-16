@@ -1,6 +1,3 @@
-entrypoint: ansible-galaxy
-command: "role install"
-
-run:
-  - {args: alvistack.flatpak}
-  - {args: geerlingguy.docker}
+items:
+  - { kind: ansible-role, name: alvistack.flatpak, platforms: [linux, darwin] }
+  - { kind: ansible-role, name: geerlingguy.docker, platforms: [linux, darwin] }

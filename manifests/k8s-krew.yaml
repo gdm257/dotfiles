@@ -1,17 +1,14 @@
-entrypoint: kubectl
-command: "krew install"
-
-run:
-  - { args: oidc-login }
-  - { args: access-matrix }
-  - { args: cert-manager }
-  - { args: cilium }
-  - { args: cnpg }
-  - { args: cost }
-  - { args: explore }
-  - { args: flame }
-  - { args: kc }
-  - { args: pv-migrate }
-  - { args: stern }
-  - { args: tree }
-  - { args: vela }
+items:
+  - { kind: k8s-krew, name: oidc-login }
+  - { kind: k8s-krew, name: access-matrix }
+  - { kind: k8s-krew, name: cert-manager }
+  - { kind: k8s-krew, name: cilium }
+  - { kind: k8s-krew, name: cnpg }
+  - { kind: k8s-krew, name: cost }
+  - { kind: k8s-krew, name: explore }
+  - { kind: k8s-krew, name: flame }
+  - { kind: k8s-krew, name: kc }
+  - { kind: k8s-krew, name: pv-migrate }
+  - { kind: k8s-krew, name: stern }
+  - { kind: k8s-krew, name: tree }
+  - { kind: k8s-krew, name: vela }

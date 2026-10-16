@@ -1,6 +1,3 @@
-entrypoint: codex
-command: "plugin marketplace add"
-
-run:
-  # - {args: DietrichGebert/ponytail}
-  - { args: wakatime/codex-cli-wakatime }
+items:
+  # - { kind: codex-marketplace, name: DietrichGebert/ponytail }
+  - { kind: codex-marketplace, name: wakatime/codex-cli-wakatime }

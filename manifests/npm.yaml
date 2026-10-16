@@ -1,56 +1,53 @@
-entrypoint: npm
-command: "install -g"
-
-run:
-  - {args: "@openapitools/openapi-generator-cli"}
-  - {args: "@devcontainers/cli"}
-  - {args: whistle}
-  - {args: neoss}
-  - {args: eslint}
-  - {args: repomix}
-  - {args: skills}
-  - {args: openskills}
-  - {args: rulesync}
-  - {args: "@intellectronica/ruler"}
-  - {args: "@modelcontextprotocol/inspector"}
-  - {args: cc-sdd}
-  - {args: claude-code-workflow}
-  - {args: jj-stack}
-  # - {args: opencode-ai}
-  # - {args: "@openai/codex"}
-  - {args: "@anthropic-ai/claude-code"}
-  # - {args: "@google/gemini-cli"}
-  # - {args: "@qwen-code/qwen-code"}
-  # - {args: opencommit}
-  # - {args: pxder}
-  # - {args: npkill}
-  # - {args: fkill-cli}
-  # - {args: fx}
-  # - {args: is-up-cli}
-  # - {args: "@aweary/alder"}
-  # - {args: typescript}
-  # - {args: temme}
-  # - {args: create-nocodb-app}
-  # - {args: "webpack webpack-cli"}
-  # - {args: sass}
-  # - {args: create-react-app}
-  # - {args: "@medv/eat"}
-  # - {args: gitmoji-cli}
-  # - {args: "@zeit/ncc"}
-  # - {args: "@vercel/ncc"}
-  # - {args: pkg}
-  # - {args: single-file-cli}
-  # - {args: webdav-cli}
-  # - {args: miniflare}
-  # - {args: static-marks}
-  # - {args: terminalizer}
-  # - {args: lint-staged}
-  # - {args: "@commitlint/cli @commitlint/config-conventional"}
-  # - {args: hygen}
-  # - {args: yo}
-  # - {args: commitizen}
-  # - {args: aicommits}
-  # - {args: deprank}
-  # - {args: git-stats}
-  # - {args: pake-cli}
-  # - {args: git-run}
+items:
+  - {kind: npm-package, name: "@openapitools/openapi-generator-cli"}
+  - {kind: npm-package, name: "@devcontainers/cli"}
+  - {kind: npm-package, name: whistle}
+  - {kind: npm-package, name: neoss}
+  - {kind: npm-package, name: eslint}
+  - {kind: npm-package, name: repomix}
+  - {kind: npm-package, name: skills}
+  - {kind: npm-package, name: openskills}
+  - {kind: npm-package, name: rulesync}
+  - {kind: npm-package, name: "@intellectronica/ruler"}
+  - {kind: npm-package, name: "@modelcontextprotocol/inspector"}
+  - {kind: npm-package, name: cc-sdd}
+  - {kind: npm-package, name: claude-code-workflow}
+  - {kind: npm-package, name: jj-stack}
+  # - {kind: npm-package, name: opencode-ai}
+  # - {kind: npm-package, name: "@openai/codex"}
+  - {kind: npm-package, name: "@anthropic-ai/claude-code"}
+  # - {kind: npm-package, name: "@google/gemini-cli"}
+  # - {kind: npm-package, name: "@qwen-code/qwen-code"}
+  # - {kind: npm-package, name: opencommit}
+  # - {kind: npm-package, name: pxder}
+  # - {kind: npm-package, name: npkill}
+  # - {kind: npm-package, name: fkill-cli}
+  # - {kind: npm-package, name: fx}
+  # - {kind: npm-package, name: is-up-cli}
+  # - {kind: npm-package, name: "@aweary/alder"}
+  # - {kind: npm-package, name: typescript}
+  # - {kind: npm-package, name: temme}
+  # - {kind: npm-package, name: create-nocodb-app}
+  # - {kind: npm-package, name: "webpack webpack-cli"}
+  # - {kind: npm-package, name: sass}
+  # - {kind: npm-package, name: create-react-app}
+  # - {kind: npm-package, name: "@medv/eat"}
+  # - {kind: npm-package, name: gitmoji-cli}
+  # - {kind: npm-package, name: "@zeit/ncc"}
+  # - {kind: npm-package, name: "@vercel/ncc"}
+  # - {kind: npm-package, name: pkg}
+  # - {kind: npm-package, name: single-file-cli}
+  # - {kind: npm-package, name: webdav-cli}
+  # - {kind: npm-package, name: miniflare}
+  # - {kind: npm-package, name: static-marks}
+  # - {kind: npm-package, name: terminalizer}
+  # - {kind: npm-package, name: lint-staged}
+  # - {kind: npm-package, name: "@commitlint/cli @commitlint/config-conventional"}
+  # - {kind: npm-package, name: hygen}
+  # - {kind: npm-package, name: yo}
+  # - {kind: npm-package, name: commitizen}
+  # - {kind: npm-package, name: aicommits}
+  # - {kind: npm-package, name: deprank}
+  # - {kind: npm-package, name: git-stats}
+  # - {kind: npm-package, name: pake-cli}
+  # - {kind: npm-package, name: git-run}
