@@ -2069,15 +2069,15 @@
     "wait-what": {
       "source": "https://github.com/vinvcn/mattpocock-skills-zh-CN.git/skills/productivity/wait-what",
       "type": "github-subdir",
-      "installed_at": "2026-10-05T19:03:57.2620431+09:00",
+      "installed_at": "2026-10-19T05:10:03.1794924+09:00",
       "repo_url": "https://github.com/vinvcn/mattpocock-skills-zh-CN.git",
       "subdir": "skills/productivity/wait-what",
-      "version": "3f92a83",
-      "tree_hash": "b9163a49cf7e971935ad2f9d3203b4290571865e",
-      "commit": "3f92a83668ef8f303e6278f31c49fed9543cbc51",
+      "version": "574e28d",
+      "tree_hash": "06805ce62abf09fe697fa5872d2c2d5a5e5cfdb6",
+      "commit": "574e28dad038880cee788478ed8daf68264f0988",
       "file_hashes": {
-        "SKILL.md": "sha256:2e40b77cd7a93cc65c2d8a624261cb87fc5a1096f426d4364ee71e71367dab65",
-        "agents/openai.yaml": "sha256:c5160cb8f608759a228a46f66eeb439fea83321d32780efe71073dc2ce22577f"
+        "SKILL.md": "sha256:7c5c7f8b6bf0f52f33ae6a0de76db599d228e090bc7b38d996dca5e8bab15ef9",
+        "agents/openai.yaml": "sha256:db24c6e2cc9d76a754613abf83d08f49e3c3f6af7729039403300f8fcee4f40b"
       }
     },
     "wayfinder": {
