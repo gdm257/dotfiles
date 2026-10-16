@@ -1,0 +1,4 @@
+# item 缺 kind：fail，消息含 manifest 路径与 #2
+items:
+  - {kind: echo, name: a}
+  - {name: b}

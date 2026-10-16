@@ -1,0 +1,6 @@
+# 未知 group：fail，消息含 manifest 路径与组名
+items:
+  - group: nope
+groups:
+  known:
+    - {kind: echo, name: a}

@@ -1,0 +1,4 @@
+# platforms 值三段：fail，消息含 manifest 路径与 #2
+items:
+  - {kind: echo, name: a}
+  - {kind: echo, name: b, platforms: [windows/amd64/extra]}

@@ -1,0 +1,4 @@
+# kind 非标量（list）：fail，消息含 manifest 路径与 #2
+items:
+  - {kind: echo, name: a}
+  - {kind: [a, b], name: b}

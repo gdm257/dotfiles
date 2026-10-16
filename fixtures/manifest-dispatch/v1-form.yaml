@@ -1,0 +1,7 @@
+# v1 形 manifest（顶层 run:），payload 刻意 inert（echo）
+# 仅用于打 v2 引擎断言未知顶层键响亮报错；勿作新 manifest 范本（冻结期新增一律 v2 表达）
+entrypoint: echo
+command: v1-form
+
+run:
+  - {args: "inert"}

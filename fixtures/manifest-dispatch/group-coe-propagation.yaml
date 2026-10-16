@@ -1,0 +1,12 @@
+# 组引用条目 continue_on_error 向未声明该字段的 item 传播（prop-1 被容错、迭代继续）
+# 显式 continue_on_error: false 不被覆盖（explicit-off 硬失败中止迭代，after-group 不被调用）
+items:
+  - group: tolerant
+    continue_on_error: true
+  - {kind: echo, name: after-group}
+groups:
+  tolerant:
+    - {kind: echo, name: prop-1, fail: true}
+    - {kind: echo, name: prop-2}
+    - {kind: echo, name: explicit-off, fail: true, continue_on_error: false}
+    - {kind: echo, name: never-reached}

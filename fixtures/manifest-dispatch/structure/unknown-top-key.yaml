@@ -1,0 +1,4 @@
+# 未知顶层键：fail，消息含 manifest 路径与键名
+items:
+  - {kind: echo, name: a}
+extra: true

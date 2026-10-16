@@ -1,0 +1,4 @@
+# items 元素非 map（纯字符串）：fail，消息含 manifest 路径与 #2
+items:
+  - {kind: echo, name: a}
+  - just-a-string
