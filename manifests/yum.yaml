@@ -1,5 +1,2 @@
-entrypoint: yum
-command: groupinstall
-
-run:
-  - {args: "Development Tools"}
+items:
+  - { kind: yum-package, name: "Development Tools" }

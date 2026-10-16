@@ -1,18 +1,15 @@
-entrypoint: choco
-command: "install -y"
-
-run:
-  - {args: veracrypt}
-  - {args: ext2fsd}
-  - {args: winbtrfs}
-  - {args: vcredist-all}
-  - {args: nvidia-app}
-  # - {args: omnimidi}
-  # - {args: softether-vpn-client}
-  # - {args: sqlserver-odbcdriver}
-  # - {args: krew}
-  # - {args: virtualmidisynth}
-  # - {args: imdisk}
-  - {args: imdisk-toolkit}
-  # - {args: ssd-z.portable}
-  # - {args: vb-cable}
+items:
+  - { kind: choco-package, name: veracrypt }
+  - { kind: choco-package, name: ext2fsd }
+  - { kind: choco-package, name: winbtrfs }
+  - { kind: choco-package, name: vcredist-all }
+  - { kind: choco-package, name: nvidia-app }
+  # - { kind: choco-package, name: omnimidi }
+  # - { kind: choco-package, name: softether-vpn-client }
+  # - { kind: choco-package, name: sqlserver-odbcdriver }
+  # - { kind: choco-package, name: krew }
+  # - { kind: choco-package, name: virtualmidisynth }
+  # - { kind: choco-package, name: imdisk }
+  - { kind: choco-package, name: imdisk-toolkit }
+  # - { kind: choco-package, name: ssd-z.portable }
+  # - { kind: choco-package, name: vb-cable }

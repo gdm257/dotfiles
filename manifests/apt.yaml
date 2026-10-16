@@ -1,6 +1,3 @@
-entrypoint: apt
-command: "install -y"
-
-run:
-  - {args: build-essential}
-  - {args: pleaser}
+items:
+  - { kind: apt-package, name: build-essential }
+  - { kind: apt-package, name: pleaser }

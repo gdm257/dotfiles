@@ -1,181 +1,173 @@
-presets:
-  winget-install:
-    entrypoint: winget
-    command: "install --source winget --id"
-  msstore-install:
-    entrypoint: winget
-    command: "install --source msstore --id"
-
-run:
+items:
   # === global ===
-  - { preset: winget-install, args: Chocolatey.Chocolatey}
-  - { preset: winget-install, args: Microsoft.VisualStudio.2022.BuildTools}
-  - { preset: winget-install, args: Microsoft.EdgeWebView2Runtime}
-  # - { preset: winget-install, args: "*Microsoft.VisualStudio.2022.Community*"}
-  # - { preset: winget-install, args: Microsoft.VisualStudio.2022.Enterprise}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2005.x64}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2008.x64}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2010.x64}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2012.x64}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2013.x64}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2015+.x64}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2005.x86}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2008.x86}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2010.x86}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2012.x86}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2013.x86}
-  # - { preset: winget-install, args: Microsoft.VCRedist.2015+.x86}
-  - { preset: winget-install, args: Microsoft.DotNet.DesktopRuntime.3_1}
-  - { preset: winget-install, args: Microsoft.DotNet.DesktopRuntime.5}
-  - { preset: winget-install, args: Microsoft.DotNet.DesktopRuntime.6}
-  - { preset: winget-install, args: Microsoft.DotNet.DesktopRuntime.7}
-  - { preset: winget-install, args: Microsoft.DotNet.DesktopRuntime.8}
-  - { preset: winget-install, args: Microsoft.DotNet.DesktopRuntime.9}
-  - { preset: winget-install, args: Microsoft.DotNet.DesktopRuntime.10}
-  - { preset: winget-install, args: Microsoft.DotNet.AspNetCore.3_1}
-  - { preset: winget-install, args: Microsoft.DotNet.AspNetCore.5}
-  - { preset: winget-install, args: Microsoft.DotNet.AspNetCore.6}
-  - { preset: winget-install, args: Microsoft.DotNet.AspNetCore.7}
-  - { preset: winget-install, args: Microsoft.DotNet.AspNetCore.8}
-  - { preset: winget-install, args: Microsoft.DotNet.AspNetCore.9}
-  - { preset: winget-install, args: Microsoft.DotNet.AspNetCore.10}
-  # - { preset: winget-install, args: Microsoft.DotNet.Framework.DeveloperPack_4}
-  - { preset: winget-install, args: Microsoft.XNARedist}
-  # - { preset: winget-install, args: Microsoft.DirectX}
-  - { preset: winget-install, args: Microsoft.DotNet.SDK.10}
-  # - { preset: winget-install, args: Microsoft.WindowsSDK}
-  # - { preset: winget-install, args: "*Microsoft.WindowsApplicationDriver*"}
-  # - { preset: winget-install, args: "*Microsoft.WebDeploy*"}
-  # - { preset: winget-install, args: "*Microsoft.WindowsAppRuntime.1.0*"}
-  # - { preset: winget-install, args: "*Microsoft.WindowsAppRuntime.1.1*"}
-  # - { preset: winget-install, args: "*Microsoft.WindowsAppRuntime.1.2*"}
-  - { preset: winget-install, args: Microsoft.WindowsAppRuntime.2}
-  # - { preset: winget-install, args: "*Microsoft.PowerToys*"}
-  # - { preset: winget-install, args: "*Microsoft.MediaCreationTool*"}
-  # - { preset: winget-install, args: Microsoft.Office}
-  # - { preset: winget-install, args: Microsoft.Edge}
-  # - { preset: winget-install, args: DEVCOM.JetBrainsMonoNerdFont}
-  # - { preset: winget-install, args: "*Nvidia.CUDA*"}
-  # - { preset: winget-install, args: "*Nvidia.GeForceExperience*"}
-  - { preset: winget-install, args: ViGEm.ViGEmBus}
-  # - { preset: winget-install, args: "*MacType.MacType*"}
-  - { preset: winget-install, args: SSHFS-Win.SSHFS-Win}
-  - { preset: winget-install, args: WinFsp.WinFsp}
-  # - { preset: winget-install, args: dokan-dev.Dokany}
-  # - { preset: winget-install, args: DaiyuuNobori.Win10Pcap}
-  - { preset: winget-install, args: Insecure.Npcap}
-  # - { preset: winget-install, args: WiresharkFoundation.Wireshark}
-  # - { preset: winget-install, args: Rime.Weasel}
-  # - { preset: winget-install, args: luolangaga.tubatools}
-  # - { preset: winget-install, args: Brave.Brave}
-  # - { preset: winget-install, args: AnyDeskSoftwareGmbH.AnyDesk}
-  # - { preset: winget-install, args: Youqu.ToDesk}
-  # - { preset: winget-install, args: RustDesk.RustDesk}
-  # - { preset: winget-install, args: Tencent.TencentMeeting}
-  # - { preset: winget-install, args: AlekseyHoffman.Sigma-File-Manager}
-  # - { preset: winget-install, args: AOMEI.Backupper}
-  # - { preset: winget-install, args: Dell.DisplayManager}
-  - { preset: winget-install, args: Sandboxie.Plus}
-  - { preset: winget-install, args: Oracle.VirtualBox}
-  # - { preset: winget-install, args: SUSE.RancherDesktop}
-  # - { preset: winget-install, args: Docker.DockerDesktop}
-  # - { preset: winget-install, args: OpenShot.OpenShot}
-  # - { preset: winget-install, args: iSlide.iSlide}
-  # - { preset: winget-install, args: "*ZeroTier.ZeroTierOne*"}
-  # - { preset: winget-install, args: "*Parsec.Parsec*"}
-  # - { preset: winget-install, args: LizardByte.Sunshine}
-  # - { preset: winget-install, args: tailscale.tailscale}
-  # - { preset: winget-install, args: Billfish.Billfish}
-  # - { preset: winget-install, args: WilbertBerendsen.Frescobaldi}
-  # - { preset: winget-install, args: Hitencent.JisuPDF}
-  # - { preset: winget-install, args: XmacsLabs.Mogan}
-  # - { preset: winget-install, args: "*rocksdanister.LivelyWallpaper*"}
-  # - { preset: winget-install, args: IELTSBRO.IELTS-PC}
-  # - { preset: winget-install, args: "*Adobe.Acrobat.Reader.64-bit*"}
-  # - { preset: winget-install, args: RProject.R}
-  # - { preset: winget-install, args: RProject.Rtools}
-  # - { preset: winget-install, args: Posit.RStudio}
-  # - { preset: winget-install, args: Valve.SteamLink}
-  # - { preset: winget-install, args: EpicGames.EpicGamesLauncher}
-  # - { preset: winget-install, args: Stellarium.Stellarium}
-  # - { preset: winget-install, args: "*HeidelbergUniversity.GaiaSky*"}
-  # - { preset: winget-install, args: SURF.eduVPNClient}
-  # - { preset: winget-install, args: MysteriumNetwork.Mysterium}
-  # - { preset: winget-install, args: AOMEI.Backupper}
-  # - { preset: winget-install, args: LamantineSoftware.StickyPassword}
-  # - { preset: winget-install, args: "*Microsoft.SQLServerManagementStudio*"}
-  # - { preset: winget-install, args: Microsoft.SQLServer.2017.Developer}
-  # - { preset: winget-install, args: Microsoft.SQLServer.2019.Developer}
-  # - { preset: winget-install, args: "*Microsoft.SQLServer.2022.Developer*"}
-  # - { preset: winget-install, args: Hesan.He3}
-  # - { preset: winget-install, args: TorProject.TorBrowser}
-  # - { preset: winget-install, args: nilesoft.shell}
-  # - { preset: winget-install, args: voidtools.Everything}
-  # - { preset: winget-install, args: stnkl.EverythingToolbar}
-  # - { preset: winget-install, args: "*115.115*"}
-  # - { preset: winget-install, args: "*Muse.MuseHub*"}
-  # - { preset: winget-install, args: "*Musescore.Musescore*"}
-  # - { preset: winget-install, args: Drumstick.dmidiplayer}
-  # - { preset: winget-install, args: Falcosoft.VSTMidiDriver}
-  # - { preset: winget-install, args: CodingWondersSoftware.DISMTools.Stable}
-  # - { preset: winget-install, args: CrystalDewWorld.CrystalDiskMark.ShizukuEdition}
-  # - { preset: winget-install, args: EFDSoftware.HDTunePro}
-  # - { preset: winget-install, args: HDDGURU.HDDLLFTool}
-  - { preset: winget-install, args: MichaelTippach.ASIO4ALL}
-  # - { preset: winget-install, args: VB-Audio.Voicemeeter.Banana}
-  # - { preset: winget-install, args: VB-Audio.Voicemeeter.Potato}
-  # - { preset: winget-install, args: dechamps.FlexASIO}
-  - { preset: winget-install, args: BandLab.Cakewalk}
-  # - { preset: winget-install, args: GnuPG.Gpg4win}
-  # - { preset: winget-install, args: AOMEI.PartitionAssistant}
-  # - { preset: winget-install, args: "*KeppySoftware.OmniMIDI*"}
-  # - { preset: winget-install, args: Nlitesoft.NTLite}
-  - { preset: winget-install, args: Huawei.HiSuite}
-  # - { preset: winget-install, args: LiTang.QianJi}
-  # - { preset: winget-install, args: Tencent.Yuanbao}
-  # - { preset: winget-install, args: Eusoft.Eudic}
-  # - { preset: winget-install, args: Uzero.ScanScan}
-  # - { preset: winget-install, args: Bandisoft.Honeyview}
-  # - { preset: winget-install, args: GOG.Galaxy}
-  # - { preset: winget-install, args: IdeaMK.CDRViewer}
-  # - { preset: winget-install, args: IdeaMK.AIViewer}
-  # - { preset: winget-install, args: Canva.Affinity}
-  # - { preset: winget-install, args: ONLYOFFICE.DesktopEditors}
-  # - { preset: winget-install, args: ModOrganizer2.modorganizer}
-  - { preset: winget-install, args: dorssel.usbipd-win}
+  - { kind: winget-app, id: Chocolatey.Chocolatey}
+  - { kind: winget-app, id: Microsoft.VisualStudio.2022.BuildTools}
+  - { kind: winget-app, id: Microsoft.EdgeWebView2Runtime}
+  # - { kind: winget-app, id: "*Microsoft.VisualStudio.2022.Community*"}
+  # - { kind: winget-app, id: Microsoft.VisualStudio.2022.Enterprise}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2005.x64}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2008.x64}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2010.x64}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2012.x64}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2013.x64}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2015+.x64}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2005.x86}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2008.x86}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2010.x86}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2012.x86}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2013.x86}
+  # - { kind: winget-app, id: Microsoft.VCRedist.2015+.x86}
+  - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.3_1}
+  - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.5}
+  - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.6}
+  - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.7}
+  - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.8}
+  - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.9}
+  - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.10}
+  - { kind: winget-app, id: Microsoft.DotNet.AspNetCore.3_1}
+  - { kind: winget-app, id: Microsoft.DotNet.AspNetCore.5}
+  - { kind: winget-app, id: Microsoft.DotNet.AspNetCore.6}
+  - { kind: winget-app, id: Microsoft.DotNet.AspNetCore.7}
+  - { kind: winget-app, id: Microsoft.DotNet.AspNetCore.8}
+  - { kind: winget-app, id: Microsoft.DotNet.AspNetCore.9}
+  - { kind: winget-app, id: Microsoft.DotNet.AspNetCore.10}
+  # - { kind: winget-app, id: Microsoft.DotNet.Framework.DeveloperPack_4}
+  - { kind: winget-app, id: Microsoft.XNARedist}
+  # - { kind: winget-app, id: Microsoft.DirectX}
+  - { kind: winget-app, id: Microsoft.DotNet.SDK.10}
+  # - { kind: winget-app, id: Microsoft.WindowsSDK}
+  # - { kind: winget-app, id: "*Microsoft.WindowsApplicationDriver*"}
+  # - { kind: winget-app, id: "*Microsoft.WebDeploy*"}
+  # - { kind: winget-app, id: "*Microsoft.WindowsAppRuntime.1.0*"}
+  # - { kind: winget-app, id: "*Microsoft.WindowsAppRuntime.1.1*"}
+  # - { kind: winget-app, id: "*Microsoft.WindowsAppRuntime.1.2*"}
+  - { kind: winget-app, id: Microsoft.WindowsAppRuntime.2}
+  # - { kind: winget-app, id: "*Microsoft.PowerToys*"}
+  # - { kind: winget-app, id: "*Microsoft.MediaCreationTool*"}
+  # - { kind: winget-app, id: Microsoft.Office}
+  # - { kind: winget-app, id: Microsoft.Edge}
+  # - { kind: winget-app, id: DEVCOM.JetBrainsMonoNerdFont}
+  # - { kind: winget-app, id: "*Nvidia.CUDA*"}
+  # - { kind: winget-app, id: "*Nvidia.GeForceExperience*"}
+  - { kind: winget-app, id: ViGEm.ViGEmBus}
+  # - { kind: winget-app, id: "*MacType.MacType*"}
+  - { kind: winget-app, id: SSHFS-Win.SSHFS-Win}
+  - { kind: winget-app, id: WinFsp.WinFsp}
+  # - { kind: winget-app, id: dokan-dev.Dokany}
+  # - { kind: winget-app, id: DaiyuuNobori.Win10Pcap}
+  - { kind: winget-app, id: Insecure.Npcap}
+  # - { kind: winget-app, id: WiresharkFoundation.Wireshark}
+  # - { kind: winget-app, id: Rime.Weasel}
+  # - { kind: winget-app, id: luolangaga.tubatools}
+  # - { kind: winget-app, id: Brave.Brave}
+  # - { kind: winget-app, id: AnyDeskSoftwareGmbH.AnyDesk}
+  # - { kind: winget-app, id: Youqu.ToDesk}
+  # - { kind: winget-app, id: RustDesk.RustDesk}
+  # - { kind: winget-app, id: Tencent.TencentMeeting}
+  # - { kind: winget-app, id: AlekseyHoffman.Sigma-File-Manager}
+  # - { kind: winget-app, id: AOMEI.Backupper}
+  # - { kind: winget-app, id: Dell.DisplayManager}
+  - { kind: winget-app, id: Sandboxie.Plus}
+  - { kind: winget-app, id: Oracle.VirtualBox}
+  # - { kind: winget-app, id: SUSE.RancherDesktop}
+  # - { kind: winget-app, id: Docker.DockerDesktop}
+  # - { kind: winget-app, id: OpenShot.OpenShot}
+  # - { kind: winget-app, id: iSlide.iSlide}
+  # - { kind: winget-app, id: "*ZeroTier.ZeroTierOne*"}
+  # - { kind: winget-app, id: "*Parsec.Parsec*"}
+  # - { kind: winget-app, id: LizardByte.Sunshine}
+  # - { kind: winget-app, id: tailscale.tailscale}
+  # - { kind: winget-app, id: Billfish.Billfish}
+  # - { kind: winget-app, id: WilbertBerendsen.Frescobaldi}
+  # - { kind: winget-app, id: Hitencent.JisuPDF}
+  # - { kind: winget-app, id: XmacsLabs.Mogan}
+  # - { kind: winget-app, id: "*rocksdanister.LivelyWallpaper*"}
+  # - { kind: winget-app, id: IELTSBRO.IELTS-PC}
+  # - { kind: winget-app, id: "*Adobe.Acrobat.Reader.64-bit*"}
+  # - { kind: winget-app, id: RProject.R}
+  # - { kind: winget-app, id: RProject.Rtools}
+  # - { kind: winget-app, id: Posit.RStudio}
+  # - { kind: winget-app, id: Valve.SteamLink}
+  # - { kind: winget-app, id: EpicGames.EpicGamesLauncher}
+  # - { kind: winget-app, id: Stellarium.Stellarium}
+  # - { kind: winget-app, id: "*HeidelbergUniversity.GaiaSky*"}
+  # - { kind: winget-app, id: SURF.eduVPNClient}
+  # - { kind: winget-app, id: MysteriumNetwork.Mysterium}
+  # - { kind: winget-app, id: AOMEI.Backupper}
+  # - { kind: winget-app, id: LamantineSoftware.StickyPassword}
+  # - { kind: winget-app, id: "*Microsoft.SQLServerManagementStudio*"}
+  # - { kind: winget-app, id: Microsoft.SQLServer.2017.Developer}
+  # - { kind: winget-app, id: Microsoft.SQLServer.2019.Developer}
+  # - { kind: winget-app, id: "*Microsoft.SQLServer.2022.Developer*"}
+  # - { kind: winget-app, id: Hesan.He3}
+  # - { kind: winget-app, id: TorProject.TorBrowser}
+  # - { kind: winget-app, id: nilesoft.shell}
+  # - { kind: winget-app, id: voidtools.Everything}
+  # - { kind: winget-app, id: stnkl.EverythingToolbar}
+  # - { kind: winget-app, id: "*115.115*"}
+  # - { kind: winget-app, id: "*Muse.MuseHub*"}
+  # - { kind: winget-app, id: "*Musescore.Musescore*"}
+  # - { kind: winget-app, id: Drumstick.dmidiplayer}
+  # - { kind: winget-app, id: Falcosoft.VSTMidiDriver}
+  # - { kind: winget-app, id: CodingWondersSoftware.DISMTools.Stable}
+  # - { kind: winget-app, id: CrystalDewWorld.CrystalDiskMark.ShizukuEdition}
+  # - { kind: winget-app, id: EFDSoftware.HDTunePro}
+  # - { kind: winget-app, id: HDDGURU.HDDLLFTool}
+  - { kind: winget-app, id: MichaelTippach.ASIO4ALL}
+  # - { kind: winget-app, id: VB-Audio.Voicemeeter.Banana}
+  # - { kind: winget-app, id: VB-Audio.Voicemeeter.Potato}
+  # - { kind: winget-app, id: dechamps.FlexASIO}
+  - { kind: winget-app, id: BandLab.Cakewalk}
+  # - { kind: winget-app, id: GnuPG.Gpg4win}
+  # - { kind: winget-app, id: AOMEI.PartitionAssistant}
+  # - { kind: winget-app, id: "*KeppySoftware.OmniMIDI*"}
+  # - { kind: winget-app, id: Nlitesoft.NTLite}
+  - { kind: winget-app, id: Huawei.HiSuite}
+  # - { kind: winget-app, id: LiTang.QianJi}
+  # - { kind: winget-app, id: Tencent.Yuanbao}
+  # - { kind: winget-app, id: Eusoft.Eudic}
+  # - { kind: winget-app, id: Uzero.ScanScan}
+  # - { kind: winget-app, id: Bandisoft.Honeyview}
+  # - { kind: winget-app, id: GOG.Galaxy}
+  # - { kind: winget-app, id: IdeaMK.CDRViewer}
+  # - { kind: winget-app, id: IdeaMK.AIViewer}
+  # - { kind: winget-app, id: Canva.Affinity}
+  # - { kind: winget-app, id: ONLYOFFICE.DesktopEditors}
+  # - { kind: winget-app, id: ModOrganizer2.modorganizer}
+  - { kind: winget-app, id: dorssel.usbipd-win}
   # === user ===
-  # - { preset: winget-install, args: XPDNH1FMW7NB40}
-  # - { preset: winget-install, args: Microsoft.WindowsTerminal}
-  - { preset: winget-install, args: NetEase.UURemote}
-  # - { preset: winget-install, args: Mozilla.SOPS}
-  # - { preset: winget-install, args: commercialhaskell.stack}
-  # - { preset: winget-install, args: JRSoftware.InnoSetup}
-  # - { preset: winget-install, args: Espanso.Espanso}
-  # - { preset: winget-install, args: SublimeHQ.SublimeText.3}
-  # - { preset: winget-install, args: ZedIndustries.Zed}
-  # - { preset: winget-install, args: ByteDance.Trae}
-  # - { preset: winget-install, args: 123.123pan}
-  # - { preset: winget-install, args: 115.115Chrome}
-  # - { preset: winget-install, args: Ollama.Ollama}
-  # - { preset: winget-install, args: ElementLabs.LMStudio}
-  # - { preset: winget-install, args: ChidiWilliams.Buzz}
-  # - { preset: winget-install, args: kangfenmao.CherryStudio --version 1.9.13 }
-  # - { preset: winget-install, args: Pencil.Desktop}
-  # - { preset: winget-install, args: kapitainsky.RcloneBrowser}
-  # - { preset: winget-install, args: FastCopy.FastCopy}
-  # - { preset: winget-install, args: Falcosoft.SoundfontMidiPlayer}
-  # - { preset: winget-install, args: Python.PythonInstallManager}
-  # - { preset: winget-install, args: Anaconda.Miniconda3}
-  # - { preset: winget-install, args: Mamba.Micromamba}
-  - { preset: winget-install, args: Python.Python.3.13}
-  # - { preset: winget-install, args: Canonical.Ubuntu.2204}
-  # - { preset: winget-install, args: jtroo.kanata_gui}
-  # - { preset: winget-install, args: Xmarmalade.AlistHelper}
-  # - { preset: winget-install, args: Powerformer.OpenDesign}
-  # - { preset: winget-install, args: Anthropic.ClaudeCode}
-  # - { preset: winget-install, args: Codeium.Windsurf}
-  # - { preset: winget-install, args: WEIFENG2333.VideoCaptioner}
-  # - { preset: winget-install, args: ItchIo.Itch}
+  # - { kind: winget-app, id: XPDNH1FMW7NB40}
+  # - { kind: winget-app, id: Microsoft.WindowsTerminal}
+  - { kind: winget-app, id: NetEase.UURemote}
+  # - { kind: winget-app, id: Mozilla.SOPS}
+  # - { kind: winget-app, id: commercialhaskell.stack}
+  # - { kind: winget-app, id: JRSoftware.InnoSetup}
+  # - { kind: winget-app, id: Espanso.Espanso}
+  # - { kind: winget-app, id: SublimeHQ.SublimeText.3}
+  # - { kind: winget-app, id: ZedIndustries.Zed}
+  # - { kind: winget-app, id: ByteDance.Trae}
+  # - { kind: winget-app, id: 123.123pan}
+  # - { kind: winget-app, id: 115.115Chrome}
+  # - { kind: winget-app, id: Ollama.Ollama}
+  # - { kind: winget-app, id: ElementLabs.LMStudio}
+  # - { kind: winget-app, id: ChidiWilliams.Buzz}
+  # - { kind: winget-app, id: kangfenmao.CherryStudio, version: "1.9.13" }
+  # - { kind: winget-app, id: Pencil.Desktop}
+  # - { kind: winget-app, id: kapitainsky.RcloneBrowser}
+  # - { kind: winget-app, id: FastCopy.FastCopy}
+  # - { kind: winget-app, id: Falcosoft.SoundfontMidiPlayer}
+  # - { kind: winget-app, id: Python.PythonInstallManager}
+  # - { kind: winget-app, id: Anaconda.Miniconda3}
+  # - { kind: winget-app, id: Mamba.Micromamba}
+  - { kind: winget-app, id: Python.Python.3.13}
+  # - { kind: winget-app, id: Canonical.Ubuntu.2204}
+  # - { kind: winget-app, id: jtroo.kanata_gui}
+  # - { kind: winget-app, id: Xmarmalade.AlistHelper}
+  # - { kind: winget-app, id: Powerformer.OpenDesign}
+  # - { kind: winget-app, id: Anthropic.ClaudeCode}
+  # - { kind: winget-app, id: Codeium.Windsurf}
+  # - { kind: winget-app, id: WEIFENG2333.VideoCaptioner}
+  # - { kind: winget-app, id: ItchIo.Itch}
   # === msstore ===
-  # - { preset: msstore-install, args: XPDNH1FMW7NB40}
-  # - { preset: msstore-install, args: 9nb0h051m4v4}
+  # - { kind: winget-app, id: XPDNH1FMW7NB40, source: msstore}
+  # - { kind: winget-app, id: 9nb0h051m4v4, source: msstore}
