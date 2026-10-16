@@ -612,7 +612,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/winget.yaml"
-        task: manifest:run:manifest
+          CALL: "winget:apply"
+        task: manifest:dispatch
 
   manifest:wsl:
     platforms: [windows]
