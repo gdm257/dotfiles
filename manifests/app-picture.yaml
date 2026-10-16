@@ -44,6 +44,7 @@ groups:
   # - { kind: scoop-app, name: imageglass}
   - { kind: scoop-app, name: gdm257/aiviewer }
   - { kind: scoop-app, name: gdm257/cdrviewer }
+  - { kind: scoop-app, name: icat }
 
   image-hosting:
   # - { kind: scoop-app, name: picgo}

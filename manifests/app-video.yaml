@@ -39,6 +39,7 @@ groups:
   # - { kind: scoop-app, name: captura}
   # - { kind: scoop-app, name: sharex}
   # - { kind: scoop-app, name: kmcounter}
+  - { kind: scoop-app, name: gdm257/frameview }
 
   subtitle:
   - { kind: scoop-app, name: DanmakuFactory }
