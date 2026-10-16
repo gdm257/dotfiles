@@ -5,3 +5,4 @@ pagefile.sys
 swapfile.sys
 .pnpm-store
 .ventoyignore
+d:\AliWorkbenchData
