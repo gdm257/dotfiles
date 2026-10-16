@@ -1,13 +1,10 @@
-entrypoint: vfox
-command: install
-
-run:
-  - {args: "dotnet@6.0.31"}
-  - {args: "dotnet@8.0.6"}
-  # - {args: "golang@latest"}
-  - {args: "java@8.0.342+7-open"}
-  - {args: "java@11.0.16+8-open"}
-  - {args: "java@17.0.2+8-open"}
-  - {args: "kotlin@1.9.24"}
-  # - {args: "nodejs@latest"}
-  - {args: "php@7.4.32"}
+items:
+  - {kind: vfox-sdk, name: "dotnet@6.0.31"}
+  - {kind: vfox-sdk, name: "dotnet@8.0.6"}
+  # - {kind: vfox-sdk, name: "golang@latest"}
+  - {kind: vfox-sdk, name: "java@8.0.342+7-open"}
+  - {kind: vfox-sdk, name: "java@11.0.16+8-open"}
+  - {kind: vfox-sdk, name: "java@17.0.2+8-open"}
+  - {kind: vfox-sdk, name: "kotlin@1.9.24"}
+  # - {kind: vfox-sdk, name: "nodejs@latest"}
+  - {kind: vfox-sdk, name: "php@7.4.32"}

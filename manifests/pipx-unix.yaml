@@ -1,6 +1,3 @@
-entrypoint: pipx
-command: install
-
-run:
-  - { args: isd }
-  - { args: "--include-deps --preinstall netaddr ansible" }
+items:
+  - { kind: pipx-package, name: isd, platforms: [linux, darwin] }
+  - { kind: pipx-package, name: ansible, include_deps: true, preinstall: [netaddr], platforms: [linux, darwin] }

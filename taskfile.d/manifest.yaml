@@ -1,5 +1,8 @@
 version: "3"
 
+includes:
+  runtime: ./manifest-runtimes.yaml
+
 tasks:
   run:
     desc: "run single command"

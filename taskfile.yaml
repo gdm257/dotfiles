@@ -179,7 +179,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/astro.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:astro:apply"
+        task: manifest:dispatch
 
   manifest:bin:
     cmds:
@@ -304,14 +305,16 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/cargo.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:cargo:apply"
+        task: manifest:dispatch
 
   manifest:cargo-unix:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/cargo-unix.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:cargo:apply"
+        task: manifest:dispatch
 
   manifest:claude:
     platforms: [windows]
@@ -341,7 +344,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/conda-create.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:conda-create:apply"
+        task: manifest:dispatch
 
   manifest:debug:
     cmds:
@@ -375,7 +379,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/go.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:go:apply"
+        task: manifest:dispatch
 
   manifest:k8s-helm-repo:
     cmds:
@@ -403,7 +408,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/npm.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:npm:apply"
+        task: manifest:dispatch
 
   manifest:omp:
     cmds:
@@ -416,20 +422,23 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/pi.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:pi:apply"
+        task: manifest:dispatch
 
   manifest:pipx:
     cmds:
       - vars:
           MANIFEST: "./manifests/pipx.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:pipx:apply"
+        task: manifest:dispatch
 
   manifest:pipx-unix:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/pipx-unix.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:pipx:apply"
+        task: manifest:dispatch
 
   manifest:playnite:
     platforms: [windows]
@@ -450,7 +459,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/rye.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:rye:apply"
+        task: manifest:dispatch
 
   manifest:app:audio:
     platforms: [windows]
@@ -591,38 +601,44 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/stack.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:stack:apply"
+        task: manifest:dispatch
 
   manifest:vfox-globalize:
     cmds:
       - vars:
           MANIFEST: "./manifests/vfox-globalize.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:vfox-globalize:apply"
+        task: manifest:dispatch
 
   manifest:vfox-plugin:
     cmds:
       - vars:
           MANIFEST: "./manifests/vfox-plugin.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:vfox-plugin:apply"
+        task: manifest:dispatch
 
   manifest:vfox-sdk:
     cmds:
       - vars:
           MANIFEST: "./manifests/vfox-sdk.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:vfox-sdk:apply"
+        task: manifest:dispatch
 
   manifest:volta:
     cmds:
       - vars:
           MANIFEST: "./manifests/volta.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:volta:apply"
+        task: manifest:dispatch
 
   manifest:volta-unix:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/volta-unix.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:volta:apply"
+        task: manifest:dispatch
 
   manifest:w2:
     cmds:
@@ -659,7 +675,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/x-cmd.yaml"
-        task: manifest:run:manifest
+          CALL: "runtime:x-cmd:apply"
+        task: manifest:dispatch
 
   manifest:yum:
     platforms: [linux]

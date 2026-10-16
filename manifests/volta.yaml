@@ -1,9 +1,6 @@
-entrypoint: volta
-command: install
-
-run:
-  - { args: node }
-  # - {args: npm}
-  - { args: npx }
-  - { args: pnpm }
-  - { args: yarn }
+items:
+  - { kind: volta-package, name: node }
+  # - { kind: volta-package, name: npm }
+  - { kind: volta-package, name: npx }
+  - { kind: volta-package, name: pnpm }
+  - { kind: volta-package, name: yarn }

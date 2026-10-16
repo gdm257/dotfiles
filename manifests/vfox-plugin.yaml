@@ -1,12 +1,9 @@
-entrypoint: vfox
-command: add
-
-run:
-  # - {args: clang}
-  - {args: dotnet}
-  # - {args: golang}
-  - {args: java}
-  - {args: kotlin}
-  # - {args: nodejs}
-  - {args: php}
-  # - {args: python}
+items:
+  # - {kind: vfox-plugin, name: clang}
+  - {kind: vfox-plugin, name: dotnet}
+  # - {kind: vfox-plugin, name: golang}
+  - {kind: vfox-plugin, name: java}
+  - {kind: vfox-plugin, name: kotlin}
+  # - {kind: vfox-plugin, name: nodejs}
+  - {kind: vfox-plugin, name: php}
+  # - {kind: vfox-plugin, name: python}
