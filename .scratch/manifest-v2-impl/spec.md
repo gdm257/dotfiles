@@ -1,6 +1,8 @@
 # Manifest v2 implementation and migration
 
-Status: ready-for-agent
+Status: resolved
+
+实施与验收结果见 [Implementation Verification](verification.md)。工单 01–11 已完成；旧 worktree 的安全保留原因与备份 SHA 记录在该文件中。
 
 ## Problem Statement
 

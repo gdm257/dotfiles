@@ -23,3 +23,9 @@
 - 逐场景实跑证据（Windows / task 3.54.0，重放命令见 fixture README）：bool / 嵌套 / list 保真（`flag=false` 不字符串化）；enable / platforms 过滤与整组跳过；fail-fast exit 201；容错 FAIL_LOG 汇总 + exit 1；`continue_on_error` 组传播且显式 false 不被覆盖；空批 / 全过滤静默 exit 0；8 型结构错误消息含路径。初始实现对未知顶层键及 group 错误未附 `#N`，最终 Spec review 确认为缺陷，以本票与 OpenSpec 的全型序号要求为准，不作契约豁免。双向防呆（v1 形 → v2 报未知顶层键；v2 形 → v1 触发 `0e534f5` 守卫，均 exit 1）；CALL 未知名 exit 200；接收方独立调用不被 FAIL_LOG 绑死（story 18 实证）。
 - 接收方失败原语用 `false` 而非 `exit 1`（mvdan/sh 下 `exit` 会杀死解释器、绕过 `||` 容错包装）——接收方设计修正，非引擎缺陷。
 - 环境观察（未动 v1）：TMPDIR 未设的 Windows shell 下 v1 引擎 `/tmp` faillog 路径被 mvdan/sh 解析到 cwd\tmp；v2 已有 TEMP 兜底不受影响。
+
+## Answer
+
+- 最终集中修复 `24eb00d` 按字段 presence 传播 group false，以 fresh map 防止重复引用串值；全部结构错误类型补齐路径与 `#N`，三层 platforms 拒绝空 arch。
+- 回归先红后绿，24 个 dispatch CLI 场景通过；包含 group false 覆盖 global true、成员显式 true 优先、同组五次 true / false / absent 引用不污染。父代理独立重放再次通过。
+- 既有九组 receiver 检查、runtime 14 × 6 场景、17 wrapper dry-run 与 diff whitespace 通过。v1 两 task 已按票 11 在独立提交删除，不再要求终态提供已删除入口的守卫重放。
