@@ -1,20 +1,10 @@
-entrypoint: dism
-
-presets:
-  enable:
-    command: "/online /enable-feature"
-    suffix: "/all /norestart"
-  disable:
-    command: "/online /disable-feature"
-    suffix: "/norestart"
-
-run:
-  - {preset: enable, args: "/featurename:ClientForNFS-Infrastructure"}
-  - {preset: enable, args: "/featurename:Containers-DisposableClientVM"}
-  - {preset: enable, args: "/featurename:Microsoft-Hyper-V-All"}
-  - {preset: enable, args: "/featurename:Microsoft-Windows-Subsystem-Linux"}
-  - {preset: enable, args: "/featurename:NetFx3"}
-  - {preset: enable, args: "/featurename:NFS-Administration"}
-  - {preset: enable, args: "/featurename:Printing-Foundation-InternetPrinting-Client"}
-  - {preset: enable, args: "/featurename:TelnetClient"}
-  - {preset: enable, args: "/featurename:VirtualMachinePlatform"}
+items:
+  - { kind: windows-feature, feature: ClientForNFS-Infrastructure }
+  - { kind: windows-feature, feature: Containers-DisposableClientVM }
+  - { kind: windows-feature, feature: Microsoft-Hyper-V-All }
+  - { kind: windows-feature, feature: Microsoft-Windows-Subsystem-Linux }
+  - { kind: windows-feature, feature: NetFx3 }
+  - { kind: windows-feature, feature: NFS-Administration }
+  - { kind: windows-feature, feature: Printing-Foundation-InternetPrinting-Client }
+  - { kind: windows-feature, feature: TelnetClient }
+  - { kind: windows-feature, feature: VirtualMachinePlatform }
