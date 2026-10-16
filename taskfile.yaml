@@ -19,138 +19,12 @@ includes:
   manifest:
     taskfile: "./taskfile.d/manifest.yaml"
     optional: false
-  adb:
-    taskfile: "./taskfile.d/adb.yaml"
-    optional: true
-  ansible:
-    taskfile: "./taskfile.d/ansible.yaml"
-    optional: true
-  apt:
-    taskfile: "./taskfile.d/apt.yaml"
-    optional: true
-  astro:
-    taskfile: "./taskfile.d/astro.yaml"
-    optional: true
-  bin:
-    taskfile: "./taskfile.d/bin.yaml"
-    optional: true
-  brew:
-    taskfile: "./taskfile.d/brew.yaml"
-    optional: true
-  cargo:
-    taskfile: "./taskfile.d/cargo.yaml"
-    optional: true
-  cheatsheet:
-    taskfile: "./taskfile.d/cheatsheet.yaml"
-    optional: true
-  choco:
-    taskfile: "./taskfile.d/choco.yaml"
-    optional: true
-  claude:
-    taskfile: "./taskfile.d/claude.yaml"
-    optional: true
-  coolify:
-    taskfile: "./taskfile.d/coolify.yaml"
-    optional: true
-  dotnet:
-    taskfile: "./taskfile.d/dotnet.yaml"
-    optional: true
-  git:
-    taskfile: "./taskfile.d/git.yaml"
-    optional: true
-  go:
-    taskfile: "./taskfile.d/go.yaml"
-    optional: true
-  k8s:
-    taskfile: "./taskfile.d/k8s.yaml"
-    optional: true
-  conda:
-    taskfile: "./taskfile.d/conda.yaml"
-    optional: true
-  nix:
-    taskfile: "./taskfile.d/nix.yaml"
-    optional: true
-  npm:
-    taskfile: "./taskfile.d/npm.yaml"
-    optional: true
-  pipx:
-    taskfile: "./taskfile.d/pipx.yaml"
-    optional: true
-  playnite:
-    taskfile: "./taskfile.d/playnite.yaml"
-    optional: true
-  powershell:
-    taskfile: "./taskfile.d/powershell.yaml"
-    optional: true
-    aliases: [pwsh, ps]
-  rclone:
-    taskfile: "./taskfile.d/rclone.yaml"
-    optional: true
-  reg:
-    taskfile: "./taskfile.d/reg.yaml"
-    optional: true
-  restic:
-    taskfile: "./taskfile.d/restic.yaml"
-    optional: true
-  rye:
-    taskfile: "./taskfile.d/rye.yaml"
-    optional: true
-  scoop:
-    taskfile: "./taskfile.d/scoop.yaml"
-    optional: true
-  sops:
-    taskfile: "./taskfile.d/sops.yaml"
-    optional: true
-  ssh:
-    taskfile: "./taskfile.d/ssh.yaml"
-    optional: true
-  stack:
-    taskfile: "./taskfile.d/stack.yaml"
-    optional: true
-  systemd:
-    taskfile: "./taskfile.d/systemd.yaml"
-    optional: true
-  task:
-    taskfile: "./taskfile.d/task.yaml"
-    optional: true
-  vfox:
-    taskfile: "./taskfile.d/vfox.yaml"
-    optional: true
-  volta:
-    taskfile: "./taskfile.d/volta.yaml"
-    optional: true
-  w2:
-    taskfile: "./taskfile.d/w2.yaml"
-    optional: true
-  winget:
-    taskfile: "./taskfile.d/winget.yaml"
-    optional: true
-  wsl:
-    taskfile: "./taskfile.d/wsl.yaml"
-    optional: true
-  win-user:
-    taskfile: "./taskfile.d/windows-user-folders.yaml"
-    optional: true
-  x:
-    taskfile: "./taskfile.d/x-cmd.yaml"
-    optional: true
-  yum:
-    taskfile: "./taskfile.d/yum.yaml"
-    optional: true
-
-  ls:
-    taskfile: "./taskfile.d/task-ls.yaml"
-    optional: false
-    aliases: [list, l]
-  ll:
-    taskfile: "./taskfile.d/task-ll.yaml"
-    optional: false
-    aliases: [list-all, la]
 
 tasks:
   default:
+    silent: true
     cmds:
-      - task: ll
+      - cmd: task --list-all
 
   manifest:apt:
     cmds:
@@ -179,7 +53,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/astro.yaml"
-          CALL: "runtime:astro:apply"
+          CALL: "astro:apply"
         task: manifest:dispatch
 
   manifest:bin:
@@ -305,7 +179,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/cargo.yaml"
-          CALL: "runtime:cargo:apply"
+          CALL: "cargo:apply"
         task: manifest:dispatch
 
   manifest:cargo-unix:
@@ -313,7 +187,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/cargo-unix.yaml"
-          CALL: "runtime:cargo:apply"
+          CALL: "cargo:apply"
         task: manifest:dispatch
 
   manifest:claude:
@@ -344,7 +218,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/conda-create.yaml"
-          CALL: "runtime:conda-create:apply"
+          CALL: "conda-create:apply"
         task: manifest:dispatch
 
   manifest:debug:
@@ -379,7 +253,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/go.yaml"
-          CALL: "runtime:go:apply"
+          CALL: "go:apply"
         task: manifest:dispatch
 
   manifest:k8s-helm-repo:
@@ -408,7 +282,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/npm.yaml"
-          CALL: "runtime:npm:apply"
+          CALL: "npm:apply"
         task: manifest:dispatch
 
   manifest:omp:
@@ -422,14 +296,14 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/pi.yaml"
-          CALL: "runtime:pi:apply"
+          CALL: "pi:apply"
         task: manifest:dispatch
 
   manifest:pipx:
     cmds:
       - vars:
           MANIFEST: "./manifests/pipx.yaml"
-          CALL: "runtime:pipx:apply"
+          CALL: "pipx:apply"
         task: manifest:dispatch
 
   manifest:pipx-unix:
@@ -437,7 +311,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/pipx-unix.yaml"
-          CALL: "runtime:pipx:apply"
+          CALL: "pipx:apply"
         task: manifest:dispatch
 
   manifest:playnite:
@@ -459,7 +333,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/rye.yaml"
-          CALL: "runtime:rye:apply"
+          CALL: "rye:apply"
         task: manifest:dispatch
 
   manifest:app:audio:
@@ -601,35 +475,35 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/stack.yaml"
-          CALL: "runtime:stack:apply"
+          CALL: "stack:apply"
         task: manifest:dispatch
 
   manifest:vfox-globalize:
     cmds:
       - vars:
           MANIFEST: "./manifests/vfox-globalize.yaml"
-          CALL: "runtime:vfox-globalize:apply"
+          CALL: "vfox-globalize:apply"
         task: manifest:dispatch
 
   manifest:vfox-plugin:
     cmds:
       - vars:
           MANIFEST: "./manifests/vfox-plugin.yaml"
-          CALL: "runtime:vfox-plugin:apply"
+          CALL: "vfox-plugin:apply"
         task: manifest:dispatch
 
   manifest:vfox-sdk:
     cmds:
       - vars:
           MANIFEST: "./manifests/vfox-sdk.yaml"
-          CALL: "runtime:vfox-sdk:apply"
+          CALL: "vfox-sdk:apply"
         task: manifest:dispatch
 
   manifest:volta:
     cmds:
       - vars:
           MANIFEST: "./manifests/volta.yaml"
-          CALL: "runtime:volta:apply"
+          CALL: "volta:apply"
         task: manifest:dispatch
 
   manifest:volta-unix:
@@ -637,7 +511,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/volta-unix.yaml"
-          CALL: "runtime:volta:apply"
+          CALL: "volta:apply"
         task: manifest:dispatch
 
   manifest:w2:
@@ -675,7 +549,7 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/x-cmd.yaml"
-          CALL: "runtime:x-cmd:apply"
+          CALL: "x-cmd:apply"
         task: manifest:dispatch
 
   manifest:yum:

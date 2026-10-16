@@ -1,8 +1,0 @@
-version: "3"
-tasks:
-  install:pkg:
-    requires:
-      vars:
-        - PKG
-    cmds:
-      - stack install {{.PKG}}
