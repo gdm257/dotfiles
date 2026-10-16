@@ -32,7 +32,6 @@
 | platforms 三段 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/invalid-platform-segments.yaml CALL=echo:apply` | fail：`item #2 invalid platform 'windows/amd64/extra' in <path>`；exit 1 |
 | platforms 值域外 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/invalid-platform-os.yaml CALL=echo:apply` | fail：`item #2 invalid platform 'foo' in <path>`；exit 1 |
 | v1 形打 v2 引擎 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/v1-form.yaml CALL=echo:apply` | fail：`unknown top-level key 'command' in <path>`（键序第一个未知键）；exit 1 |
-| v2 形打 v1 引擎 | `task manifest:run:manifest MANIFEST=fixtures/manifest-dispatch/bool-fidelity.yaml` | fail：`v2 manifest (items:) not allowed in v1 engine: <path>`；exit 1 |
 | CALL 未知名 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/bool-fidelity.yaml CALL=no-such-task` | 干净报错 `task: Task "manifest:no-such-task" does not exist`；exit 200 |
 | internal CLI 直呼 | `task manifest:echo:apply ITEM_JSON='{"kind":"echo","name":"x"}'` | 拒绝：`task: Task "manifest:echo:apply" is internal`；exit 202 |
 | 接收方独立调用 | 任一非 dispatch task 以 `task:` 调 `manifest:echo:apply`，仅传 ITEM_JSON | 正常 echo、exit 0（FAIL_LOG 非必需，default 兜底） |
@@ -50,4 +49,3 @@
 ## 注意
 
 - 本目录 fixture 仅供引擎回归，禁止放入 `manifests/`（票 11 删除判据对 `manifests/` 全目录 grep 顶层 `run:` / `presets:`，v1 形 fixture 会污染判据）。
-- 本 README 因防呆重放命令必然含 `manifest:run` 字样：票 11 的全仓 `manifest:run` grep 需排除 `fixtures/`（此处是守卫文档，不是 v1 入口引用）。
