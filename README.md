@@ -105,6 +105,9 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 # Command-line cheatsheet
 
+> [!TIP]
+> `aichat --execute "Check whether the last 10 git commits are signed"`
+
 There are many tools to take note for command-line:
 
 - Blog (e.g. Medium, Wordpress, Hexo)
@@ -115,8 +118,4 @@ There are many tools to take note for command-line:
 
 ~~After thousands of notes, I realize **task runner** is the best choice for **CLI**. Finally I choose [task](https://taskfile.dev/), a YAML-based task runner, which has excellent cross-platform experience and powerful features.~~
 
-AI is the best partner for command-line:
-
-```bash
-aichat --execute "Check whether the last 10 git commits are signed"
-```
+AI is the best partner for command-line.
