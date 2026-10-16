@@ -1,5 +1,2 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: ffmpeg }
+items:
+  - { kind: brew-app, name: ffmpeg }

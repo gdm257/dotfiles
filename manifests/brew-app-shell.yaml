@@ -1,22 +1,19 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: zsh }
-  - { args: "powershell/tap/powershell" }
-  # - {args: "powershell/tap/powershell-lts"}
-  - { args: openssh }
-  - { args: trzsz-ssh }
-  - { args: mosh }
-  # - {args: screen}
-  # - {args: tmux}
-  - { args: zellij }
-  - { args: asciinema }
-  - { args: atuin }
-  - { args: clipboard }
-  - { args: mcfly }
-  - { args: tealdeer }
-  # - {args: wtfutil}
-  - { args: zoxide }
-  - { args: rargs }
-  - { args: "dotenvx/brew/dotenvx" }
+items:
+  - { kind: brew-app, name: zsh }
+  - { kind: brew-app, name: "powershell/tap/powershell" }
+  # - { kind: brew-app, name: "powershell/tap/powershell-lts"}
+  - { kind: brew-app, name: openssh }
+  - { kind: brew-app, name: trzsz-ssh }
+  - { kind: brew-app, name: mosh }
+  # - { kind: brew-app, name: screen}
+  # - { kind: brew-app, name: tmux}
+  - { kind: brew-app, name: zellij }
+  - { kind: brew-app, name: asciinema }
+  - { kind: brew-app, name: atuin }
+  - { kind: brew-app, name: clipboard }
+  - { kind: brew-app, name: mcfly }
+  - { kind: brew-app, name: tealdeer }
+  # - { kind: brew-app, name: wtfutil}
+  - { kind: brew-app, name: zoxide }
+  - { kind: brew-app, name: rargs }
+  - { kind: brew-app, name: "dotenvx/brew/dotenvx" }
