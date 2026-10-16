@@ -8,7 +8,7 @@ import subprocess
 TASK = shutil.which("task")
 assert TASK, "task is required"
 CASES = [
-    ("volta", {"kind": "volta-package", "name": "node"}, "volta install node"),
+    ("volta", {"kind": "volta-tool", "name": "node"}, "volta install node"),
     ("vfox-plugin", {"kind": "vfox-plugin", "name": "java"}, "vfox add java"),
     ("vfox-sdk", {"kind": "vfox-sdk", "name": "java@17"}, "vfox install java@17"),
     ("vfox-globalize", {"kind": "vfox-sdk", "name": "java@17"}, "vfox use --global java@17"),

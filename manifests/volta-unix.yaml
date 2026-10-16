@@ -1,2 +1,2 @@
 items: []
-  # - {kind: volta-package, name: node, platforms: [linux, darwin]}
+  # - {kind: volta-tool, name: node, platforms: [linux, darwin]}

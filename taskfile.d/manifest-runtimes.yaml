@@ -7,7 +7,7 @@ tasks:
     vars:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
-      _CMD: '{{ if ne .ITEM.kind "volta-package" }}{{ fail "volta: unexpected kind" }}{{ end }}volta install {{ .ITEM.name }}'
+      _CMD: '{{ if ne .ITEM.kind "volta-tool" }}{{ fail "volta: unexpected kind" }}{{ end }}volta install {{ .ITEM.name }}'
       _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
       _FAIL_LOG: '{{ .FAIL_LOG | default "" }}'
     cmds:
@@ -168,4 +168,3 @@ tasks:
       _FAIL_LOG: '{{ .FAIL_LOG | default "" }}'
     cmds:
       - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { {{ if ._FAIL_LOG }}echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"{{ else }}echo "failed: {{ ._CMD }}" >&2{{ end }}; }{{ else }}{{ ._CMD }}{{ end }}'
-

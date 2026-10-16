@@ -1,6 +1,6 @@
 items:
-  - { kind: volta-package, name: node }
-  # - { kind: volta-package, name: npm }
-  - { kind: volta-package, name: npx }
-  - { kind: volta-package, name: pnpm }
-  - { kind: volta-package, name: yarn }
+  - { kind: volta-tool, name: node }
+  # - { kind: volta-tool, name: npm }
+  - { kind: volta-tool, name: npx }
+  - { kind: volta-tool, name: pnpm }
+  - { kind: volta-tool, name: yarn }
