@@ -6,10 +6,16 @@
 
 **Blocked by:** 05: scoop 族迁移（大头批）.
 
-**Status:** ready-for-agent
+**Status:** claimed
 
-- [ ] 三接收方就绪（容错模式含）
-- [ ] 三个 manifest 原地重写、wrapper 翻转，三件套同 commit
-- [ ] `task manifest:apt` / `manifest:yum` / `manifest:choco` 用户面名字不变，经 dispatch 走通
-- [ ] 批内 grep 双清零
+- [x] 三接收方就绪（容错模式含）
+- [x] 三个 manifest 原地重写、wrapper 翻转，三件套同 commit
+- [x] `task manifest:apt` / `manifest:yum` / `manifest:choco` 用户面名字不变，经 dispatch 走通
+- [x] 批内 grep 双清零
 - [ ] `CONTINUE_ON_ERROR` / item 级容错行为不变
+
+## Comments
+
+- 实现 `e70f86b`，merge commit `1228047` 合入集成分支；与 winget 的 EOF 追加冲突仅保留两侧完整接收方，无语义改写。
+- 三件套同 commit，active item 身份与顺序保留，apt 2 / yum 1 / choco 6；批内 grep 双清零，`task --list` 与安全 wrapper dry-run 通过。Windows 上 yum wrapper 平台跳过，独立 receiver dry-run 验证 `yum groupinstall Development Tools`，保留旧命令行为。未执行真实安装或原生 Unix 验证。
+- 已知容错优先级缺陷留给最终 code-review 集中修复，显式 item false 未覆盖全局 true；此项暂不勾选，修复后补齐验收。

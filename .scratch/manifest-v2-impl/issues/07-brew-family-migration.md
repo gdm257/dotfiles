@@ -6,7 +6,7 @@
 
 **Blocked by:** 05: scoop 族迁移（大头批）.
 
-**Status:** ready-for-agent
+**Status:** claimed
 
 - [ ] brew 接收方就绪（app + tap 路由 + 容错模式）
 - [ ] 13 个 manifest 原地重写、wrapper 翻转，三件套同 commit

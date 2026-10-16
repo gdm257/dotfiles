@@ -6,7 +6,7 @@
 
 **Blocked by:** 05: scoop 族迁移（大头批）.
 
-**Status:** ready-for-agent
+**Status:** claimed
 
 - [ ] 各族接收方就绪（容错模式含）
 - [ ] 18 个 manifest 原地重写、wrapper 翻转，三件套同 commit
