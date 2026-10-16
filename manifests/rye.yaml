@@ -1,5 +1,2 @@
-entrypoint: rye
-command: "toolchain fetch"
-
-run:
-  - {args: "3.11.6"}
+items:
+  - {kind: rye-toolchain, version: "3.11.6"}

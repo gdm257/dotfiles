@@ -1,123 +1,120 @@
-entrypoint: pipx
-command: install
-
-run:
+items:
   # === common ===
-  # - {args: pipx}
-  # - {args: virtualenvwrapper-win}
-  # - {args: pipenv}
-  # - {args: pex}
-  # - {args: ipython}
-  - { args: ptpython }
-  - { suffix: "--include-deps", args: "marimo[recommended]" }
-  - { args: pdm }
-  # - {args: poetry}
-  # - {args: hatch}
-  # - {args: pyinstaller}
-  # - {args: pyarmor}
-  # - {args: nuitka}
-  - { args: juv }
-  # - {args: flake8}
-  # - {args: mypy}
-  # - {args: ruff}
-  # - {args: cookiecutter}
-  # - {args: sedsed}
-  # - {args: jc}
-  - { args: httpie }
-  # - {args: mycli}
-  # - {args: tqdm}
-  # - {args: pandasgui}
-  # - {args: "scalene"}
-  # - {args: "glances windows-curses"}
-  # - {args: sphinx}
-  # - {args: mkdocs}
-  - { args: asciinema }
-  # - {args: bgmi}
-  # - {args: flexget}
-  # - {args: coredumpy}
-  # - {args: visidata}
-  # - {args: csvtotable}
-  - { args: pipdeptree }
-  # - {args: "scrapy; inject ipython"}
-  # - {args: "black[d]"}
-  # - {args: jsoncsv}
-  # - {args: scrapyd-client}
-  # - {args: scrapyd}
-  # - {args: scrapydweb}
-  # - {args: "httpx[cli]"}
-  # - {args: archivebox}
-  - { args: code2flow }
-  - { args: "git+https://github.com/gdm257/magnetizer.git" }
-  # - {args: torrent-parser}
-  # - {args: tox}
-  # - {args: pre-commit}
-  # - {args: isort}
-  # - {args: jupyter}
-  # - {args: jupyterhub}
-  # - {args: "feapder[all]"}
-  - { args: iredis }
-  # - {args: icdiff}
-  - { args: gita }
-  # - {args: eg}
-  # - {args: git-sim}
-  # - {args: sqlmodel}
-  # - {args: shell-gpt}
-  # - {args: Quick-Cut}
-  # - {args: ansible-lint}
-  # - {args: speedtest-cli}
-  # - {args: pyside6}
-  # - {args: uncompyle6}
-  # - {args: docformatter}
-  - { args: "datamodel-code-generator[http]" }
-  # - {args: apkleaks}
-  # - {args: flake8-to-ruff}
-  # - {args: pgcli}
-  # - {args: litecli}
-  # - {args: gdbgui}
-  # - {args: playwithmpv}
-  # - {args: bilix}
-  # - {args: vardbg}
-  # - {args: jupyterlab}
-  # - {args: git-imerge}
-  - { args: radian }
-  - { args: "fonttools[ufo,lxml,woff,unicode]" }
-  - { args: "pix2tex[gui]" }
-  # - {args: rapid_latex_ocr}
-  # - {args: texify}
-  # - {args: paracelsus}
-  - { args: ssh-audit }
-  # - {args: sqlalchemy-data-model-visualizer}
-  # - {args: pywxdump}
-  - { args: "harlequin[postgres,mysql,bigquery,trino,odbc,s3]" }
-  # - {args: deadlink}
-  # - {args: tiptop}
-  # - {args: toolong}
-  # - {args: ciphey}
-  # - {args: "pyscaffold[all]"}
-  # - {args: stego-lsb}
-  # - {args: copier}
-  # - {args: open-interpreter}
-  # - {args: scapy}
-  # - {args: ansible-playbook-grapher}
-  # - {args: aider-chat}
-  # - {args: kupo}
-  # - {args: eml-analyzer}
-  # - {args: eml-to-html}
-  # - {args: yen}
-  # - {args: packaged}
-  - { args: radon }
-  # - {args: basic-pitch}
-  # - {args: dotdrop}
-  # - {args: pretzelai}
-  # - {args: openapi-python-client}
-  # - {args: openbb-cli}
-  - { args: rexi }
-  - { args: dotbot }
-  - { args: p115qrcode }
-  # - {args: vdirsyncer}
-  # - {args: ratarmount}
-  # - {args: kubediagrams}
-  - { args: graphifyy }
-  - { args: git-filter-repo }
-  - { args: "git+https://github.com/karpathy/rendergit" }
-  # - {args: "git+https://github.com/github/spec-kit"}
+  # - {kind: pipx-package, name: pipx}
+  # - {kind: pipx-package, name: virtualenvwrapper-win}
+  # - {kind: pipx-package, name: pipenv}
+  # - {kind: pipx-package, name: pex}
+  # - {kind: pipx-package, name: ipython}
+  - { kind: pipx-package, name: ptpython }
+  - { kind: pipx-package, include_deps: true, name: "marimo[recommended]" }
+  - { kind: pipx-package, name: pdm }
+  # - {kind: pipx-package, name: poetry}
+  # - {kind: pipx-package, name: hatch}
+  # - {kind: pipx-package, name: pyinstaller}
+  # - {kind: pipx-package, name: pyarmor}
+  # - {kind: pipx-package, name: nuitka}
+  - { kind: pipx-package, name: juv }
+  # - {kind: pipx-package, name: flake8}
+  # - {kind: pipx-package, name: mypy}
+  # - {kind: pipx-package, name: ruff}
+  # - {kind: pipx-package, name: cookiecutter}
+  # - {kind: pipx-package, name: sedsed}
+  # - {kind: pipx-package, name: jc}
+  - { kind: pipx-package, name: httpie }
+  # - {kind: pipx-package, name: mycli}
+  # - {kind: pipx-package, name: tqdm}
+  # - {kind: pipx-package, name: pandasgui}
+  # - {kind: pipx-package, name: "scalene"}
+  # - {kind: pipx-package, name: "glances windows-curses"}
+  # - {kind: pipx-package, name: sphinx}
+  # - {kind: pipx-package, name: mkdocs}
+  - { kind: pipx-package, name: asciinema }
+  # - {kind: pipx-package, name: bgmi}
+  # - {kind: pipx-package, name: flexget}
+  # - {kind: pipx-package, name: coredumpy}
+  # - {kind: pipx-package, name: visidata}
+  # - {kind: pipx-package, name: csvtotable}
+  - { kind: pipx-package, name: pipdeptree }
+  # - {kind: pipx-package, name: "scrapy; inject ipython"}
+  # - {kind: pipx-package, name: "black[d]"}
+  # - {kind: pipx-package, name: jsoncsv}
+  # - {kind: pipx-package, name: scrapyd-client}
+  # - {kind: pipx-package, name: scrapyd}
+  # - {kind: pipx-package, name: scrapydweb}
+  # - {kind: pipx-package, name: "httpx[cli]"}
+  # - {kind: pipx-package, name: archivebox}
+  - { kind: pipx-package, name: code2flow }
+  - { kind: pipx-package, name: "git+https://github.com/gdm257/magnetizer.git" }
+  # - {kind: pipx-package, name: torrent-parser}
+  # - {kind: pipx-package, name: tox}
+  # - {kind: pipx-package, name: pre-commit}
+  # - {kind: pipx-package, name: isort}
+  # - {kind: pipx-package, name: jupyter}
+  # - {kind: pipx-package, name: jupyterhub}
+  # - {kind: pipx-package, name: "feapder[all]"}
+  - { kind: pipx-package, name: iredis }
+  # - {kind: pipx-package, name: icdiff}
+  - { kind: pipx-package, name: gita }
+  # - {kind: pipx-package, name: eg}
+  # - {kind: pipx-package, name: git-sim}
+  # - {kind: pipx-package, name: sqlmodel}
+  # - {kind: pipx-package, name: shell-gpt}
+  # - {kind: pipx-package, name: Quick-Cut}
+  # - {kind: pipx-package, name: ansible-lint}
+  # - {kind: pipx-package, name: speedtest-cli}
+  # - {kind: pipx-package, name: pyside6}
+  # - {kind: pipx-package, name: uncompyle6}
+  # - {kind: pipx-package, name: docformatter}
+  - { kind: pipx-package, name: "datamodel-code-generator[http]" }
+  # - {kind: pipx-package, name: apkleaks}
+  # - {kind: pipx-package, name: flake8-to-ruff}
+  # - {kind: pipx-package, name: pgcli}
+  # - {kind: pipx-package, name: litecli}
+  # - {kind: pipx-package, name: gdbgui}
+  # - {kind: pipx-package, name: playwithmpv}
+  # - {kind: pipx-package, name: bilix}
+  # - {kind: pipx-package, name: vardbg}
+  # - {kind: pipx-package, name: jupyterlab}
+  # - {kind: pipx-package, name: git-imerge}
+  - { kind: pipx-package, name: radian }
+  - { kind: pipx-package, name: "fonttools[ufo,lxml,woff,unicode]" }
+  - { kind: pipx-package, name: "pix2tex[gui]" }
+  # - {kind: pipx-package, name: rapid_latex_ocr}
+  # - {kind: pipx-package, name: texify}
+  # - {kind: pipx-package, name: paracelsus}
+  - { kind: pipx-package, name: ssh-audit }
+  # - {kind: pipx-package, name: sqlalchemy-data-model-visualizer}
+  # - {kind: pipx-package, name: pywxdump}
+  - { kind: pipx-package, name: "harlequin[postgres,mysql,bigquery,trino,odbc,s3]" }
+  # - {kind: pipx-package, name: deadlink}
+  # - {kind: pipx-package, name: tiptop}
+  # - {kind: pipx-package, name: toolong}
+  # - {kind: pipx-package, name: ciphey}
+  # - {kind: pipx-package, name: "pyscaffold[all]"}
+  # - {kind: pipx-package, name: stego-lsb}
+  # - {kind: pipx-package, name: copier}
+  # - {kind: pipx-package, name: open-interpreter}
+  # - {kind: pipx-package, name: scapy}
+  # - {kind: pipx-package, name: ansible-playbook-grapher}
+  # - {kind: pipx-package, name: aider-chat}
+  # - {kind: pipx-package, name: kupo}
+  # - {kind: pipx-package, name: eml-analyzer}
+  # - {kind: pipx-package, name: eml-to-html}
+  # - {kind: pipx-package, name: yen}
+  # - {kind: pipx-package, name: packaged}
+  - { kind: pipx-package, name: radon }
+  # - {kind: pipx-package, name: basic-pitch}
+  # - {kind: pipx-package, name: dotdrop}
+  # - {kind: pipx-package, name: pretzelai}
+  # - {kind: pipx-package, name: openapi-python-client}
+  # - {kind: pipx-package, name: openbb-cli}
+  - { kind: pipx-package, name: rexi }
+  - { kind: pipx-package, name: dotbot }
+  - { kind: pipx-package, name: p115qrcode }
+  # - {kind: pipx-package, name: vdirsyncer}
+  # - {kind: pipx-package, name: ratarmount}
+  # - {kind: pipx-package, name: kubediagrams}
+  - { kind: pipx-package, name: graphifyy }
+  - { kind: pipx-package, name: git-filter-repo }
+  - { kind: pipx-package, name: "git+https://github.com/karpathy/rendergit" }
+  # - {kind: pipx-package, name: "git+https://github.com/github/spec-kit"}

@@ -1,15 +1,12 @@
-entrypoint: cargo
-command: install
-
-run:
-  # - {args: zellij}
-  - { args: sshx }
-  # - {args: xplr}
-  # - {args: tailspin}
-  - { args: pyapp }
-  - { args: havn }
-  # - {args: gpg-tui}
-  # - {args: serie}
-  - { args: binsider }
-  # - {args: systeroid}
-  # - {args: systeroid-tui}
+items:
+  # - {kind: cargo-crate, name: zellij, platforms: [linux, darwin]}
+  - { kind: cargo-crate, name: sshx, platforms: [linux, darwin] }
+  # - {kind: cargo-crate, name: xplr, platforms: [linux, darwin]}
+  # - {kind: cargo-crate, name: tailspin, platforms: [linux, darwin]}
+  - { kind: cargo-crate, name: pyapp, platforms: [linux, darwin] }
+  - { kind: cargo-crate, name: havn, platforms: [linux, darwin] }
+  # - {kind: cargo-crate, name: gpg-tui, platforms: [linux, darwin]}
+  # - {kind: cargo-crate, name: serie, platforms: [linux, darwin]}
+  - { kind: cargo-crate, name: binsider, platforms: [linux, darwin] }
+  # - {kind: cargo-crate, name: systeroid, platforms: [linux, darwin]}
+  # - {kind: cargo-crate, name: systeroid-tui, platforms: [linux, darwin]}
