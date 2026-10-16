@@ -1,26 +1,23 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: qemu }
-  - { args: nemu }
-  - { args: docker }
-  - { args: docker-compose }
-  - { args: docker-buildx }
-  - { args: lazydocker }
-  - { args: ctop }
-  - { args: dive }
-  - { args: kompose }
-  - { args: kustomize }
-  - { args: helm }
-  - { args: helmfile }
-  - { args: "kcl-lang/tap/kcl" }
-  - { args: k3sup }
-  - { args: "kdash-rs/kdash/kdash" }
-  - { args: k9s }
-  - { args: kubernetes-cli }
-  - { args: krew }
-  - { args: kubectx }
-  # - {args: nomad}
-  # - {args: "robinovitch61/tap/wander"}
-  # - {args: "dokku/repo/dokku"}
+items:
+  - { kind: brew-app, name: qemu }
+  - { kind: brew-app, name: nemu }
+  - { kind: brew-app, name: docker }
+  - { kind: brew-app, name: docker-compose }
+  - { kind: brew-app, name: docker-buildx }
+  - { kind: brew-app, name: lazydocker }
+  - { kind: brew-app, name: ctop }
+  - { kind: brew-app, name: dive }
+  - { kind: brew-app, name: kompose }
+  - { kind: brew-app, name: kustomize }
+  - { kind: brew-app, name: helm }
+  - { kind: brew-app, name: helmfile }
+  - { kind: brew-app, name: "kcl-lang/tap/kcl" }
+  - { kind: brew-app, name: k3sup }
+  - { kind: brew-app, name: "kdash-rs/kdash/kdash" }
+  - { kind: brew-app, name: k9s }
+  - { kind: brew-app, name: kubernetes-cli }
+  - { kind: brew-app, name: krew }
+  - { kind: brew-app, name: kubectx }
+  # - { kind: brew-app, name: nomad}
+  # - { kind: brew-app, name: "robinovitch61/tap/wander"}
+  # - { kind: brew-app, name: "dokku/repo/dokku"}

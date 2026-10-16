@@ -1,26 +1,23 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: curl }
-  - { args: wget }
-  - { args: nftables }
-  - { args: iptables }
-  - { args: iproute2 }
-  - { args: net-tools }
-  - { args: iputils }
-  - { args: gping }
-  # - {args: dog}
-  - { args: doggo }
-  - { args: asn }
-  - { args: curlie }
-  - { args: websocat }
-  - { args: mkcert }
-  - { args: bitwarden-cli }
-  - { args: bandwhich }
-  - { args: nethogs }
-  - { args: iftop }
-  - { args: iotop }
-  - { args: iperf3 }
-  - { args: tcpdump }
-  - { args: "guumaster/tap/hostctl" }
+items:
+  - { kind: brew-app, name: curl }
+  - { kind: brew-app, name: wget }
+  - { kind: brew-app, name: nftables }
+  - { kind: brew-app, name: iptables }
+  - { kind: brew-app, name: iproute2 }
+  - { kind: brew-app, name: net-tools }
+  - { kind: brew-app, name: iputils }
+  - { kind: brew-app, name: gping }
+  # - { kind: brew-app, name: dog}
+  - { kind: brew-app, name: doggo }
+  - { kind: brew-app, name: asn }
+  - { kind: brew-app, name: curlie }
+  - { kind: brew-app, name: websocat }
+  - { kind: brew-app, name: mkcert }
+  - { kind: brew-app, name: bitwarden-cli }
+  - { kind: brew-app, name: bandwhich }
+  - { kind: brew-app, name: nethogs }
+  - { kind: brew-app, name: iftop }
+  - { kind: brew-app, name: iotop }
+  - { kind: brew-app, name: iperf3 }
+  - { kind: brew-app, name: tcpdump }
+  - { kind: brew-app, name: "guumaster/tap/hostctl" }

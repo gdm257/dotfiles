@@ -1,23 +1,20 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: util-linux }
-  - { args: util-macros }
-  - { args: coreutils }
-  - { args: diffutils }
-  - { args: findutils }
-  - { args: uutils-coreutils }
-  - { args: uutils-diffutils }
-  - { args: uutils-findutils }
-  - { args: binutils }
-  - { args: dateutils }
-  - { args: inetutils }
-  - { args: iputils }
-  - { args: mailutils }
-  - { args: moreutils }
-  - { args: nfcutils }
-  - { args: pciutils }
-  - { args: plotutils }
-  - { args: recutils }
-  - { args: usbutils }
+items:
+  - { kind: brew-app, name: util-linux }
+  - { kind: brew-app, name: util-macros }
+  - { kind: brew-app, name: coreutils }
+  - { kind: brew-app, name: diffutils }
+  - { kind: brew-app, name: findutils }
+  - { kind: brew-app, name: uutils-coreutils }
+  - { kind: brew-app, name: uutils-diffutils }
+  - { kind: brew-app, name: uutils-findutils }
+  - { kind: brew-app, name: binutils }
+  - { kind: brew-app, name: dateutils }
+  - { kind: brew-app, name: inetutils }
+  - { kind: brew-app, name: iputils }
+  - { kind: brew-app, name: mailutils }
+  - { kind: brew-app, name: moreutils }
+  - { kind: brew-app, name: nfcutils }
+  - { kind: brew-app, name: pciutils }
+  - { kind: brew-app, name: plotutils }
+  - { kind: brew-app, name: recutils }
+  - { kind: brew-app, name: usbutils }

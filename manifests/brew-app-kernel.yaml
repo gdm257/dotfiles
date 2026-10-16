@@ -1,7 +1,4 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: cyme }
-  - { args: tz }
-  - { args: fastfetch }
+items:
+  - { kind: brew-app, name: cyme }
+  - { kind: brew-app, name: tz }
+  - { kind: brew-app, name: fastfetch }

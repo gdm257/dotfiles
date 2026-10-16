@@ -1,9 +1,6 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: systemd }
-  - { args: htop }
-  - { args: bottom }
-  - { args: pstree }
-  - { args: procs }
+items:
+  - { kind: brew-app, name: systemd }
+  - { kind: brew-app, name: htop }
+  - { kind: brew-app, name: bottom }
+  - { kind: brew-app, name: pstree }
+  - { kind: brew-app, name: procs }

@@ -1,9 +1,6 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: chsrc }
-  - { args: rclone }
-  - { args: restic }
-  - { args: rsync }
-  - { args: lrzsz }
+items:
+  - { kind: brew-app, name: chsrc }
+  - { kind: brew-app, name: rclone }
+  - { kind: brew-app, name: restic }
+  - { kind: brew-app, name: rsync }
+  - { kind: brew-app, name: lrzsz }
