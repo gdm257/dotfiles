@@ -1,7 +1,4 @@
-entrypoint: kubectl
-command: "krew install"
-
-run:
-  - { args: ctx }
-  - { args: ns }
-  - { args: node-shell }
+items:
+  - { kind: k8s-krew, name: ctx, platforms: [linux, darwin] }
+  - { kind: k8s-krew, name: ns, platforms: [linux, darwin] }
+  - { kind: k8s-krew, name: node-shell, platforms: [linux, darwin] }

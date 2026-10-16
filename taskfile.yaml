@@ -163,14 +163,16 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/ansible-collection.yaml"
-        task: manifest:run:manifest
+          CALL: "ansible-collection:apply"
+        task: manifest:dispatch
 
   manifest:ansible-role:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/ansible-role.yaml"
-        task: manifest:run:manifest
+          CALL: "ansible-role:apply"
+        task: manifest:dispatch
 
   manifest:astro:
     cmds:
@@ -182,14 +184,16 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/bin.yaml"
-        task: manifest:run:manifest
+          CALL: "bin:apply"
+        task: manifest:dispatch
 
   manifest:bin-linux:
     platforms: [linux]
     cmds:
       - vars:
           MANIFEST: "./manifests/bin-linux.yaml"
-        task: manifest:run:manifest
+          CALL: "bin:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:devops:
     platforms: [linux, darwin]
@@ -300,14 +304,16 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/claude.yaml"
-        task: manifest:run:manifest
+          CALL: "claude:apply"
+        task: manifest:dispatch
 
   manifest:codex:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/codex.yaml"
-        task: manifest:run:manifest
+          CALL: "codex:apply"
+        task: manifest:dispatch
 
   manifest:choco:
     platforms: [windows]
@@ -333,19 +339,22 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/dotnet-source.yaml"
-        task: manifest:run:manifest
+          CALL: "dotnet-source:apply"
+        task: manifest:dispatch
 
   manifest:dotnet-tool:
     cmds:
       - vars:
           MANIFEST: "./manifests/dotnet-tool.yaml"
-        task: manifest:run:manifest
+          CALL: "dotnet-tool:apply"
+        task: manifest:dispatch
 
   manifest:dsh:
     cmds:
       - vars:
           MANIFEST: "./manifests/dsh.yaml"
-        task: manifest:run:manifest
+          CALL: "dsh:apply"
+        task: manifest:dispatch
 
   manifest:go:
     cmds:
@@ -357,20 +366,23 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/k8s-helm-repo.yaml"
-        task: manifest:run:manifest
+          CALL: "k8s-helm-repo:apply"
+        task: manifest:dispatch
 
   manifest:k8s-krew:
     cmds:
       - vars:
           MANIFEST: "./manifests/k8s-krew.yaml"
-        task: manifest:run:manifest
+          CALL: "k8s-krew:apply"
+        task: manifest:dispatch
 
   manifest:k8s-krew-unix:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/k8s-krew-unix.yaml"
-        task: manifest:run:manifest
+          CALL: "k8s-krew:apply"
+        task: manifest:dispatch
 
   manifest:npm:
     cmds:
@@ -382,7 +394,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/omp.yaml"
-        task: manifest:run:manifest
+          CALL: "omp:apply"
+        task: manifest:dispatch
 
   manifest:pi:
     cmds:
@@ -408,13 +421,15 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/playnite.yaml"
-        task: manifest:run:manifest
+          CALL: "playnite:apply"
+        task: manifest:dispatch
 
   manifest:rclone:
     cmds:
       - vars:
           MANIFEST: "./manifests/rclone.yaml"
-        task: manifest:run:manifest
+          CALL: "rclone:apply"
+        task: manifest:dispatch
 
   manifest:rye:
     cmds:
@@ -554,7 +569,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/skills.yaml"
-        task: manifest:run:manifest
+          CALL: "skills:apply"
+        task: manifest:dispatch
 
   manifest:stack:
     cmds:
@@ -597,7 +613,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/w2.yaml"
-        task: manifest:run:manifest
+          CALL: "w2:apply"
+        task: manifest:dispatch
 
   manifest:windows-features:
     platforms: [windows]
@@ -619,7 +636,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/wsl.yaml"
-        task: manifest:run:manifest
+          CALL: "wsl:apply"
+        task: manifest:dispatch
 
   manifest:x-cmd:
     cmds:

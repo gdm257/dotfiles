@@ -1,5 +1,2 @@
-entrypoint: bin
-command: install
-
-run:
-  - { args: "usagi-flow/evil-helix" }
+items:
+  - { kind: bin-app, name: usagi-flow/evil-helix }

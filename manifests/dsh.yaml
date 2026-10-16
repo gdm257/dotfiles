@@ -1,8 +1,2 @@
-presets:
-  desktop:
-    entrypoint: dsh
-    command: plugin add
-    suffix: "--profile desktop"
-
-run:
-  - { preset: desktop, args: dshmarket }
+items:
+  - { kind: dsh-plugin, name: dshmarket, profile: desktop }

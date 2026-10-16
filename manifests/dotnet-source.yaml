@@ -1,5 +1,2 @@
-entrypoint: dotnet
-command: "nuget add source"
-
-run:
-  - {args: "https://api.nuget.org/v3/index.json -n nuget.org"}
+items:
+  - { kind: dotnet-source, name: nuget.org, url: https://api.nuget.org/v3/index.json }
