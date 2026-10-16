@@ -51,7 +51,21 @@ tasks:
               suffix: "{{ if ._RUN.suffix }}{{ ._RUN.suffix }}{{ else if and ._RUN.preset (hasKey (default dict ._MANIFEST.presets) ._RUN.preset) }}{{ default ._MANIFEST.suffix (get (default dict ._MANIFEST.presets) ._RUN.preset).suffix }}{{ else }}{{ ._MANIFEST.suffix }}{{ end }}"
       - cmd: "if [ -s {{ ._FAIL_LOG }} ]; then echo 'run:manifest: failed items:'; while IFS= read -r l; do printf '  %s\\n' \"$l\"; done < {{ ._FAIL_LOG }}; exit 1; fi"
 
-  manifest:dispatch:
+  recv:windows-feature:
+    desc: "receive windows-feature items (dism enable/disable by state)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq (.ITEM.state | default "enabled") "enabled" }}dism /online /enable-feature /featurename:{{ .ITEM.feature }} /all /norestart{{ else if eq .ITEM.state "disabled" }}dism /online /disable-feature /featurename:{{ .ITEM.feature }} /norestart{{ else }}echo "windows-feature: unknown state {{ .ITEM.state }} for {{ .ITEM.feature }}" >&2 && exit 1{{ end }}'
+      _FAIL_LOG:
+        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+    cmds:
+      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  dispatch:
     desc: "dispatch manifest items to CALL task"
     requires:
       vars:
