@@ -2,6 +2,7 @@
 outputs:
   - ~/.claude/rules/code-style.md
   - ~/.codex/AGENTS.md
+  - ~/.dsh/AGENTS.md
   - ~/.config/opencode/AGENTS.md
   - ~/.omp/agent/AGENTS.md
   - ~/.zcode/AGENTS.md

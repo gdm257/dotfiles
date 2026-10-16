@@ -3,6 +3,7 @@ enable: false
 outputs:
   - ~/.claude/rules/ruler.md
   - ~/.codex/AGENTS.md
+  - ~/.dsh/AGENTS.md
   - ~/.config/opencode/AGENTS.md
   - ~/.omp/agent/AGENTS.md
   - ~/.zcode/AGENTS.md
