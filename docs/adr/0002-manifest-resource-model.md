@@ -4,7 +4,6 @@ manifest 的声明单元从 v1 的命令碎片（`entrypoint` / `command` / `arg
 
 ## Considered Options
 
-- verb 路由约定（`kind:verb` 分发与动词矩阵）：被否决——调用处的 task 本身就是动词（`CALL=scoop:apply` 的 `apply` 即是），在 manifest 或引擎里再造显式 verb 概念只是把调用点的自由度搬进声明，还要维护动词矩阵。
 - manifest 即 taskfile（取消声明/执行二分）：被否决——丢失声明与执行的分离：manifest 是数据，可被任何消费者校验与盘点；做成 taskfile 后与 go-task 语义耦合，混合 kind 又要回到在声明文件里写命令。
 - 命令瘦身版（保留 run item 字段形状、仅外移命令组装）：被否决——声明单元仍是命令而非资源，「机器上有什么」依旧不可表达，变体仍需形状爆炸，只是把爆炸点挪了个位置。
 

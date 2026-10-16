@@ -6,14 +6,14 @@ includes:
 tasks:
   shell:
     cmds:
-      - task: manifest:shell:apply
+      - task: manifest:shell:run
         vars:
           ITEM_JSON: '{{ .ITEM_JSON }}'
 
   shell:fail-log:
     cmds:
       - cmd: ': > "{{ .FAIL_LOG }}"'
-      - task: manifest:shell:apply
+      - task: manifest:shell:run
         vars:
           ITEM_JSON: '{"kind":"shell","cmd":"false","continue_on_error":true}'
           FAIL_LOG: '{{ .FAIL_LOG }}'

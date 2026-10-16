@@ -50,560 +50,536 @@ tasks:
     cmds:
       - dotbot -v -d . -c ./dotbot-configs/test-plugins.yaml
 
-  manifest:apt:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/apt.yaml"
-          CALL: "apt:apply"
-        task: manifest:dispatch
-
-  manifest:ansible-collection:
+  manifests:ansible-collection:install:
     platforms: [linux, darwin]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "ansible-collection:install"
           MANIFEST: "./manifests/ansible-collection.yaml"
-          CALL: "ansible-collection:apply"
-        task: manifest:dispatch
 
-  manifest:ansible-role:
+  manifests:ansible-role:install:
     platforms: [linux, darwin]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "ansible-role:install"
           MANIFEST: "./manifests/ansible-role.yaml"
-          CALL: "ansible-role:apply"
-        task: manifest:dispatch
 
-  manifest:astro:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/astro.yaml"
-          CALL: "astro:apply"
-        task: manifest:dispatch
-
-  manifest:bin:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/bin.yaml"
-          CALL: "bin:apply"
-        task: manifest:dispatch
-
-  manifest:bin-linux:
-    platforms: [linux]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/bin-linux.yaml"
-          CALL: "bin:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:devops:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-devops.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:downloader:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-downloader.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:file:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-file.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:kernel:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-kernel.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:layer:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-layer.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:network:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-network.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:process:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-process.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:shell:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-shell.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:text:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-text.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:toolbox:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-toolbox.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:video:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-video.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-app:vps:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-app-vps.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:brew-tap:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/brew-tap.yaml"
-          CALL: "brew:apply"
-        task: manifest:dispatch
-
-  manifest:cargo:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/cargo.yaml"
-          CALL: "cargo:apply"
-        task: manifest:dispatch
-
-  manifest:cargo-unix:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/cargo-unix.yaml"
-          CALL: "cargo:apply"
-        task: manifest:dispatch
-
-  manifest:claude:
+  manifests:app:audio:install:
     platforms: [windows]
     cmds:
-      - vars:
-          MANIFEST: "./manifests/claude.yaml"
-          CALL: "claude:apply"
-        task: manifest:dispatch
-
-  manifest:codex:
-    platforms: [windows]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/codex.yaml"
-          CALL: "codex:apply"
-        task: manifest:dispatch
-
-  manifest:choco:
-    platforms: [windows]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/choco.yaml"
-          CALL: "choco:apply"
-        task: manifest:dispatch
-
-  manifest:conda-create:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/conda-create.yaml"
-          CALL: "conda-create:apply"
-        task: manifest:dispatch
-
-  manifest:debug:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/debug.yaml"
-          CALL: "shell:apply"
-        task: manifest:dispatch
-
-  dotbot:age:
-    cmds:
-      - dotbot -v -c ./dotbot.age.yaml
-
-  dotbot:libs:
-    cmds:
-      - dotbot -v -c ./dotbot.once.lib.yaml
-
-  dotbot:links:
-    cmds:
-      - dotbot -v -c ./dotbot.links.yaml
-
-  dotbot:registry:
-    cmds:
-      - dotbot -v -c ./dotbot.registry.yaml
-
-  dotbot:scoop:
-    cmds:
-      - dotbot -v -c ./dotbot.scoop.yaml
-
-  dotbot:test-plugins:
-    cmds:
-      - dotbot -v -c ./dotbot.test-plugins.yaml
-
-  manifest:dotnet-source:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/dotnet-source.yaml"
-          CALL: "dotnet-source:apply"
-        task: manifest:dispatch
-
-  manifest:dotnet-tool:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/dotnet-tool.yaml"
-          CALL: "dotnet-tool:apply"
-        task: manifest:dispatch
-
-  manifest:dsh:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/dsh.yaml"
-          CALL: "dsh:apply"
-        task: manifest:dispatch
-
-  manifest:go:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/go.yaml"
-          CALL: "go:apply"
-        task: manifest:dispatch
-
-  manifest:k8s-helm-repo:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/k8s-helm-repo.yaml"
-          CALL: "k8s-helm-repo:apply"
-        task: manifest:dispatch
-
-  manifest:k8s-krew:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/k8s-krew.yaml"
-          CALL: "k8s-krew:apply"
-        task: manifest:dispatch
-
-  manifest:k8s-krew-unix:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/k8s-krew-unix.yaml"
-          CALL: "k8s-krew:apply"
-        task: manifest:dispatch
-
-  manifest:npm:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/npm.yaml"
-          CALL: "npm:apply"
-        task: manifest:dispatch
-
-  manifest:omp:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/omp.yaml"
-          CALL: "omp:apply"
-        task: manifest:dispatch
-
-  manifest:pi:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/pi.yaml"
-          CALL: "pi:apply"
-        task: manifest:dispatch
-
-  manifest:pipx:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/pipx.yaml"
-          CALL: "pipx:apply"
-        task: manifest:dispatch
-
-  manifest:pipx-unix:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/pipx-unix.yaml"
-          CALL: "pipx:apply"
-        task: manifest:dispatch
-
-  manifest:playnite:
-    platforms: [windows]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/playnite.yaml"
-          CALL: "playnite:apply"
-        task: manifest:dispatch
-
-  manifest:rclone:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/rclone.yaml"
-          CALL: "rclone:apply"
-        task: manifest:dispatch
-
-  manifest:rye:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/rye.yaml"
-          CALL: "rye:apply"
-        task: manifest:dispatch
-
-  manifest:app:audio:
-    platforms: [windows]
-    cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-audio.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:devops:
+  manifests:app:devops:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-devops.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:downloader:
+  manifests:app:downloader:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-downloader.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:file:
+  manifests:app:file:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-file.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:np:
+  manifests:app:kernel:install:
     platforms: [windows]
     cmds:
-      - vars:
-          MANIFEST: "./manifests/app-np.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
-
-  manifest:app:kernel:
-    platforms: [windows]
-    cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-kernel.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:layer:
+  manifests:app:layer:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-layer.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:network:
+  manifests:app:network:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-network.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:picture:
+  manifests:app:np:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
+          MANIFEST: "./manifests/app-np.yaml"
+
+  manifests:app:picture:install:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-picture.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:process:
+  manifests:app:process:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-process.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:shell:
+  manifests:app:shell:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-shell.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:text:
+  manifests:app:text:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-text.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:toolbox:
+  manifests:app:toolbox:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-toolbox.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:app:video:
+  manifests:app:video:install:
     platforms: [windows]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
           MANIFEST: "./manifests/app-video.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
 
-  manifest:scoop-bucket:
-    platforms: [windows]
+  manifests:apt:install:
     cmds:
-      - vars:
-          MANIFEST: "./manifests/scoop-bucket.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
+      - task: manifest:dispatch
+        vars:
+          CALL: "apt:install"
+          MANIFEST: "./manifests/apt.yaml"
 
-  manifest:scoop-config:
-    platforms: [windows]
+  manifests:astro:add:
     cmds:
-      - vars:
-          MANIFEST: "./manifests/scoop-config.yaml"
-          CALL: "scoop:apply"
-        task: manifest:dispatch
+      - task: manifest:dispatch
+        vars:
+          CALL: "astro:add"
+          MANIFEST: "./manifests/astro.yaml"
 
-  manifest:skills:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/skills.yaml"
-          CALL: "skills:apply"
-        task: manifest:dispatch
-
-  manifest:stack:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/stack.yaml"
-          CALL: "stack:apply"
-        task: manifest:dispatch
-
-  manifest:vfox-globalize:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/vfox-globalize.yaml"
-          CALL: "vfox-globalize:apply"
-        task: manifest:dispatch
-
-  manifest:vfox-plugin:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/vfox-plugin.yaml"
-          CALL: "vfox-plugin:apply"
-        task: manifest:dispatch
-
-  manifest:vfox-sdk:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/vfox-sdk.yaml"
-          CALL: "vfox-sdk:apply"
-        task: manifest:dispatch
-
-  manifest:volta:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/volta.yaml"
-          CALL: "volta:apply"
-        task: manifest:dispatch
-
-  manifest:volta-unix:
-    platforms: [linux, darwin]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/volta-unix.yaml"
-          CALL: "volta:apply"
-        task: manifest:dispatch
-
-  manifest:w2:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/w2.yaml"
-          CALL: "w2:apply"
-        task: manifest:dispatch
-
-  manifest:windows-features:
-    platforms: [windows]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/windows-features.yaml"
-          CALL: "windows-feature:apply"
-        task: manifest:dispatch
-
-  manifest:winget:
-    platforms: [windows]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/winget.yaml"
-          CALL: "winget:apply"
-        task: manifest:dispatch
-
-  manifest:wsl:
-    platforms: [windows]
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/wsl.yaml"
-          CALL: "wsl:apply"
-        task: manifest:dispatch
-
-  manifest:x-cmd:
-    cmds:
-      - vars:
-          MANIFEST: "./manifests/x-cmd.yaml"
-          CALL: "x-cmd:apply"
-        task: manifest:dispatch
-
-  manifest:yum:
+  manifests:bin-linux:install:
     platforms: [linux]
     cmds:
-      - vars:
+      - task: manifest:dispatch
+        vars:
+          CALL: "bin:install"
+          MANIFEST: "./manifests/bin-linux.yaml"
+
+  manifests:bin:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "bin:install"
+          MANIFEST: "./manifests/bin.yaml"
+
+  manifests:brew-app:devops:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-devops.yaml"
+
+  manifests:brew-app:downloader:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-downloader.yaml"
+
+  manifests:brew-app:file:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-file.yaml"
+
+  manifests:brew-app:kernel:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-kernel.yaml"
+
+  manifests:brew-app:layer:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-layer.yaml"
+
+  manifests:brew-app:network:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-network.yaml"
+
+  manifests:brew-app:process:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-process.yaml"
+
+  manifests:brew-app:shell:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-shell.yaml"
+
+  manifests:brew-app:text:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-text.yaml"
+
+  manifests:brew-app:toolbox:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-toolbox.yaml"
+
+  manifests:brew-app:video:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-video.yaml"
+
+  manifests:brew-app:vps:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-app-vps.yaml"
+
+  manifests:brew-tap:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "brew:install"
+          MANIFEST: "./manifests/brew-tap.yaml"
+
+  manifests:cargo-unix:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "cargo:install"
+          MANIFEST: "./manifests/cargo-unix.yaml"
+
+  manifests:cargo:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "cargo:install"
+          MANIFEST: "./manifests/cargo.yaml"
+
+  manifests:choco:install:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "choco:install"
+          MANIFEST: "./manifests/choco.yaml"
+
+  manifests:claude:add:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "claude:add"
+          MANIFEST: "./manifests/claude.yaml"
+
+  manifests:codex:add:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "codex:add"
+          MANIFEST: "./manifests/codex.yaml"
+
+  manifests:conda-create:create:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "conda-create:create"
+          MANIFEST: "./manifests/conda-create.yaml"
+
+  manifests:debug:run:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "shell:run"
+          MANIFEST: "./manifests/debug.yaml"
+
+  manifests:dotnet-source:add:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "dotnet-source:add"
+          MANIFEST: "./manifests/dotnet-source.yaml"
+
+  manifests:dotnet-tool:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "dotnet-tool:install"
+          MANIFEST: "./manifests/dotnet-tool.yaml"
+
+  manifests:dsh:add:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "dsh:add"
+          MANIFEST: "./manifests/dsh.yaml"
+
+  manifests:go:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "go:install"
+          MANIFEST: "./manifests/go.yaml"
+
+  manifests:k8s-helm-repo:add:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "k8s-helm-repo:add"
+          MANIFEST: "./manifests/k8s-helm-repo.yaml"
+
+  manifests:k8s-krew-unix:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "k8s-krew:install"
+          MANIFEST: "./manifests/k8s-krew-unix.yaml"
+
+  manifests:k8s-krew:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "k8s-krew:install"
+          MANIFEST: "./manifests/k8s-krew.yaml"
+
+  manifests:npm:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "npm:install"
+          MANIFEST: "./manifests/npm.yaml"
+
+  manifests:omp:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "omp:install"
+          MANIFEST: "./manifests/omp.yaml"
+
+  manifests:pi:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "pi:install"
+          MANIFEST: "./manifests/pi.yaml"
+
+  manifests:pipx-unix:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "pipx:install"
+          MANIFEST: "./manifests/pipx-unix.yaml"
+
+  manifests:pipx:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "pipx:install"
+          MANIFEST: "./manifests/pipx.yaml"
+
+  manifests:playnite:start:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "playnite:start"
+          MANIFEST: "./manifests/playnite.yaml"
+
+  manifests:rclone:copy:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "rclone:copy"
+          MANIFEST: "./manifests/rclone.yaml"
+
+  manifests:rye:fetch:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "rye:fetch"
+          MANIFEST: "./manifests/rye.yaml"
+
+  manifests:scoop-bucket:install:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
+          MANIFEST: "./manifests/scoop-bucket.yaml"
+
+  manifests:scoop-config:install:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "scoop:install"
+          MANIFEST: "./manifests/scoop-config.yaml"
+
+  manifests:skills:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "skills:install"
+          MANIFEST: "./manifests/skills.yaml"
+
+  manifests:stack:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "stack:install"
+          MANIFEST: "./manifests/stack.yaml"
+
+  manifests:vfox-globalize:use:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "vfox-globalize:use"
+          MANIFEST: "./manifests/vfox-globalize.yaml"
+
+  manifests:vfox-plugin:add:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "vfox-plugin:add"
+          MANIFEST: "./manifests/vfox-plugin.yaml"
+
+  manifests:vfox-sdk:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "vfox-sdk:install"
+          MANIFEST: "./manifests/vfox-sdk.yaml"
+
+  manifests:volta-unix:install:
+    platforms: [linux, darwin]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "volta:install"
+          MANIFEST: "./manifests/volta-unix.yaml"
+
+  manifests:volta:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "volta:install"
+          MANIFEST: "./manifests/volta.yaml"
+
+  manifests:w2:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "w2:install"
+          MANIFEST: "./manifests/w2.yaml"
+
+  manifests:windows-features:set:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "windows-feature:set"
+          MANIFEST: "./manifests/windows-features.yaml"
+
+  manifests:winget:install:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "winget:install"
+          MANIFEST: "./manifests/winget.yaml"
+
+  manifests:wsl:install:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "wsl:install"
+          MANIFEST: "./manifests/wsl.yaml"
+
+  manifests:x-cmd:install:
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "x-cmd:install"
+          MANIFEST: "./manifests/x-cmd.yaml"
+
+  manifests:yum:install:
+    platforms: [linux]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALL: "yum:install"
           MANIFEST: "./manifests/yum.yaml"
-          CALL: "yum:apply"
-        task: manifest:dispatch

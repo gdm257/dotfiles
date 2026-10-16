@@ -12,8 +12,8 @@
 
 #### Scenario: 标准调用
 
-- **WHEN** 执行 `task manifest:dispatch MANIFEST=app-np.yaml CALL=scoop:apply`
-- **THEN** manifest 幸存 items 逐个调用 `scoop:apply`
+- **WHEN** 执行 `task manifest:dispatch MANIFEST=app-np.yaml CALL=scoop:install`
+- **THEN** manifest 幸存 items 逐个调用 `scoop:install`
 
 #### Scenario: CALL 指向未知名
 

@@ -1,0 +1,489 @@
+version: "3"
+
+tasks:
+  ansible-collection:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "ansible-collection" }}{{ fail (printf "ansible-collection: unknown kind %s" .ITEM.kind) }}{{ end }}ansible-galaxy collection install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  ansible-role:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "ansible-role" }}{{ fail (printf "ansible-role: unknown kind %s" .ITEM.kind) }}{{ end }}ansible-galaxy role install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  apt:install:
+    desc: "receive apt-package items (apt install)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "apt-package" }}apt install -y {{ .ITEM.name }}{{ else }}echo "apt: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  astro:add:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "astro-integration" }}{{ fail "astro: unexpected kind" }}{{ end }}pnpm run astro -- add {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  bin:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "bin-app" }}{{ fail (printf "bin: unknown kind %s" .ITEM.kind) }}{{ end }}bin install {{ .ITEM.name }}{{ if .ITEM.path }} {{ .ITEM.path }}{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  brew:install:
+    desc: "receive brew items (app/tap by kind)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "brew-app" }}brew install {{ .ITEM.name }}{{ else if eq .ITEM.kind "brew-tap" }}brew tap {{ .ITEM.name }}{{ else }}echo "brew: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  cargo:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "cargo-crate" }}{{ fail "cargo: unexpected kind" }}{{ end }}cargo install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  choco:install:
+    desc: "receive choco-package items (choco install)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "choco-package" }}choco install -y {{ .ITEM.name }}{{ else }}echo "choco: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  claude:add:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "claude-marketplace" }}{{ fail (printf "claude: unknown kind %s" .ITEM.kind) }}{{ end }}claude plugin marketplace add {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  codex:add:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "codex-marketplace" }}{{ fail (printf "codex: unknown kind %s" .ITEM.kind) }}{{ end }}codex plugin marketplace add {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  conda-create:create:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "conda-environment" }}{{ fail "conda-create: unexpected kind" }}{{ end }}micromamba create -y --channel {{ .ITEM.channel }} --name {{ .ITEM.name }}{{ range .ITEM.packages }} {{ . }}{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  dotnet-source:add:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "dotnet-source" }}{{ fail (printf "dotnet-source: unknown kind %s" .ITEM.kind) }}{{ end }}dotnet nuget add source {{ .ITEM.url }} -n {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  dotnet-tool:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "dotnet-tool" }}{{ fail (printf "dotnet-tool: unknown kind %s" .ITEM.kind) }}{{ end }}dotnet tool install -g {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  dsh:add:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "dsh-plugin" }}{{ fail (printf "dsh: unknown kind %s" .ITEM.kind) }}{{ end }}dsh plugin add {{ .ITEM.name }}{{ if .ITEM.profile }} --profile {{ .ITEM.profile }}{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  echo:replay:
+    desc: "replay receiver for dispatch fixtures: echo item evidence, fail on fail: true"
+    internal: true
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _CMD: '{{ if .ITEM.fail }}false{{ else }}echo ''item={{ .ITEM.name }} kind={{ .ITEM.kind }} flag={{ if .ITEM.flag }}true{{ else }}false{{ end }} json={{ toJson .ITEM }}''{{ end }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ .ITEM.name }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  go:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "go-package" }}{{ fail "go: unexpected kind" }}{{ end }}go install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  k8s-helm-repo:add:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "k8s-helm-repo" }}{{ fail (printf "k8s-helm-repo: unknown kind %s" .ITEM.kind) }}{{ end }}helm repo add {{ .ITEM.name }} {{ .ITEM.url }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  k8s-krew:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "k8s-krew" }}{{ fail (printf "k8s-krew: unknown kind %s" .ITEM.kind) }}{{ end }}kubectl krew install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  npm:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "npm-package" }}{{ fail "npm: unexpected kind" }}{{ end }}npm install -g {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  omp:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "omp-marketplace" }}omp plugin marketplace add {{ .ITEM.name }}{{ else if eq .ITEM.kind "omp-plugin" }}omp plugin install {{ .ITEM.name }}{{ else }}{{ fail (printf "omp: unknown kind %s" .ITEM.kind) }}{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  pi:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "pi-package" }}{{ fail "pi: unexpected kind" }}{{ end }}pi install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  pipx:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "pipx-package" }}{{ fail "pipx: unexpected kind" }}{{ end }}pipx install{{ if eq (.ITEM.include_deps | default false) true }} --include-deps{{ end }}{{ range .ITEM.preinstall }} --preinstall {{ . }}{{ end }} {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  playnite:start:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "playnite-addon" }}{{ fail (printf "playnite: unknown kind %s" .ITEM.kind) }}{{ end }}start {{ .ITEM.uri }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  rclone:copy:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "rclone-copy" }}{{ fail (printf "rclone: unknown kind %s" .ITEM.kind) }}{{ end }}rclone copy --progress -v --immutable --ignore-existing --size-only --ignore-checksum --ignore-times --filter "- desktop.ini" --fast-list ''{{ .ITEM.src }}'' ''{{ .ITEM.dst }}'''
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  rye:fetch:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "rye-toolchain" }}{{ fail "rye: unexpected kind" }}{{ end }}rye toolchain fetch {{ .ITEM.version }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  scoop:install:
+    desc: "receive scoop items (app/bucket/config by kind)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "scoop-app" }}{{ if eq (.ITEM.elevated | default false) true }}sudo {{ end }}scoop install {{ .ITEM.name }}{{ else if eq .ITEM.kind "scoop-bucket" }}scoop bucket add {{ .ITEM.name }}{{ if .ITEM.url }} {{ .ITEM.url }}{{ end }}{{ else if eq .ITEM.kind "scoop-config" }}scoop config {{ .ITEM.key }} {{ .ITEM.value }}{{ else }}echo "scoop: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  shell:run:
+    desc: "dispatch shell item"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      _ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: "{{ ._ITEM.cmd }}"
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+      _CONTINUE: '{{ if hasKey ._ITEM "continue_on_error" }}{{ if eq ._ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+    cmds:
+      - cmd: '{{ if eq (._CONTINUE | default "") "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  skills:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "openskills-skill" }}{{ fail (printf "skills: unknown kind %s" .ITEM.kind) }}{{ end }}openskills install -g -u {{ .ITEM.repo }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  stack:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "stack-package" }}{{ fail "stack: unexpected kind" }}{{ end }}stack install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  vfox-globalize:use:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "vfox-sdk" }}{{ fail "vfox-globalize: unexpected kind" }}{{ end }}vfox use --global {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  vfox-plugin:add:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "vfox-plugin" }}{{ fail "vfox-plugin: unexpected kind" }}{{ end }}vfox add {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  vfox-sdk:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "vfox-sdk" }}{{ fail "vfox-sdk: unexpected kind" }}{{ end }}vfox install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  volta:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "volta-tool" }}{{ fail "volta: unexpected kind" }}{{ end }}volta install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  w2:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "w2-plugin" }}{{ fail (printf "w2: unknown kind %s" .ITEM.kind) }}{{ end }}w2 install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  windows-feature:set:
+    desc: "receive windows-feature items (dism enable/disable by state)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq (.ITEM.state | default "enabled") "enabled" }}dism /online /enable-feature /featurename:{{ .ITEM.feature }} /all /norestart{{ else if eq .ITEM.state "disabled" }}dism /online /disable-feature /featurename:{{ .ITEM.feature }} /norestart{{ else }}echo "windows-feature: unknown state {{ .ITEM.state }} for {{ .ITEM.feature }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  winget:install:
+    desc: "receive winget items (app by kind)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "winget-app" }}winget install --source {{ .ITEM.source | default "winget" }} --id {{ .ITEM.id }}{{ if .ITEM.version }} --version {{ .ITEM.version }}{{ end }}{{ else }}echo "winget: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  wsl:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "wsl-distro" }}{{ fail (printf "wsl: unknown kind %s" .ITEM.kind) }}{{ end }}wsl --install -d {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  x-cmd:install:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "x-cmd-package" }}{{ fail "x-cmd: unexpected kind" }}{{ end }}x install {{ .ITEM.name }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  yum:install:
+    desc: "receive yum-package items (yum groupinstall)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "yum-package" }}yum groupinstall {{ .ITEM.name }}{{ else }}echo "yum: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'

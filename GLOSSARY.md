@@ -19,3 +19,7 @@ _Avoid_: type, preset
 **Group**:
 Manifest 中 `groups.<name>` 下的 item 列表，仅作组织与复用，无自身顺序语义。`items` 中的引用条目（`{ group: <name> }`）展开为该列表，不允许嵌套。
 _Avoid_: category, tag
+
+**Receiver**:
+接收引擎透传的单个 item 并就地决定其执行语义（命令拼装、容错、提权）的 task。新 manager 只需新增一个 receiver，manifest 与引擎不变。
+_Avoid_: apply task, handler, runner

@@ -32,8 +32,9 @@ def dry(task, *args, success=True):
     return output
 
 
+VERBS = {"vfox-plugin": "add", "vfox-globalize": "use", "conda-create": "create", "rye": "fetch", "astro": "add"}
 for family, item, command in CASES:
-    task = f"manifest:runtime:{family}:apply"
+    task = f"manifest:{family}:{VERBS.get(family, 'install')}"
     def render(value, *args):
         return dry(task, "ITEM_JSON=" + json.dumps(value), *args)
     assert command in render({**item, "unknown_field": {"flag": False}})
@@ -48,10 +49,11 @@ wrappers = Path("taskfile.yaml").read_text(encoding="utf-8")
 for name in names:
     manifest = Path(f"manifests/{name}.yaml").read_text(encoding="utf-8")
     assert not re.search(r"^(run|presets):", manifest, re.M), name
-    block = re.search(rf"^  manifest:{name}:\n(.*?)(?=^  \S|\Z)", wrappers, re.M | re.S).group(1)
+    verb = "install" if name.endswith("-unix") else VERBS.get(name, "install")
+    block = re.search(rf"^  manifests:{name}:{verb}:\n(.*?)(?=^  \S|\Z)", wrappers, re.M | re.S).group(1)
     assert "manifest:run" not in block, name
     assert "manifest:dispatch" in block and "CALL:" in block, name
-    dry(f"manifest:{name}")
+    dry(f"manifests:{name}:{verb}")
     if name.endswith("-unix"):
         assert "platforms: [linux, darwin]" in manifest
 print("PASS: 14 receivers x 6 cases; 17 wrapper dry runs; batch double-zero checks")

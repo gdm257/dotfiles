@@ -6,7 +6,7 @@ output=''
 code=0
 capture() {
   code=0
-  output=$(task --silent manifest:dispatch "MANIFEST=fixtures/manifest-dispatch/$1.yaml" "CALL=${3:-echo:apply}" "CONTINUE_ON_ERROR=${2:-true}" 2>&1) || code=$?
+  output=$(task --silent manifest:dispatch "MANIFEST=fixtures/manifest-dispatch/$1.yaml" "CALL=${3:-echo:replay}" "CONTINUE_ON_ERROR=${2:-true}" 2>&1) || code=$?
 }
 check() {
   if ! "$@"; then
@@ -103,7 +103,7 @@ capture bool-fidelity false no-such-task
 check test "$code" = 200
 check test "${output#*'manifest:no-such-task'}" != "$output"
 code=0
-output=$(task --silent manifest:echo:apply 'ITEM_JSON={"kind":"echo","name":"x"}' 2>&1) || code=$?
+output=$(task --silent manifest:echo:replay 'ITEM_JSON={"kind":"echo","name":"x"}' 2>&1) || code=$?
 check test "$code" = 202
 check test "${output#*'is internal'}" != "$output"
 

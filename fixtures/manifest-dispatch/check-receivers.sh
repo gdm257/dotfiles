@@ -19,14 +19,14 @@ check() {
   fi
 }
 
-capture manifest:dispatch MANIFEST=fixtures/manifest-dispatch/group-coe-propagation.yaml CALL=echo:apply CONTINUE_ON_ERROR=true
+capture manifest:dispatch MANIFEST=fixtures/manifest-dispatch/group-coe-propagation.yaml CALL=echo:replay CONTINUE_ON_ERROR=true
 check test "$code" = 201
 check test "${output#*item=prop-2 }" != "$output"
 check test "${output#*item=never-reached }" = "$output"
 check test "${output#*item=after-group }" = "$output"
 printf 'PASS: explicit false stops group with global true\n'
 
-capture manifest:dispatch MANIFEST=fixtures/manifest-dispatch/fail-fast.yaml CALL=echo:apply CONTINUE_ON_ERROR=true
+capture manifest:dispatch MANIFEST=fixtures/manifest-dispatch/fail-fast.yaml CALL=echo:replay CONTINUE_ON_ERROR=true
 check test "$code" = 201
 check test "${output#*item=never }" != "$output"
 check test "${output#*failed: boom}" != "$output"
@@ -45,20 +45,20 @@ check test "$code" = 0
 check test "$output" = 'failed: false'
 printf 'PASS: standalone shell and incoming FAIL_LOG with spaces\n'
 
-for receiver in windows-feature scoop winget apt yum choco; do
-  case "$receiver" in
+for receiver in windows-feature:set scoop:install winget:install apt:install yum:install choco:install; do
+  case "${receiver%%:*}" in
     windows-feature) item='"kind":"windows-feature","feature":"fixture"' ;;
     scoop) item='"kind":"scoop-app","name":"fixture"' ;;
     winget) item='"kind":"winget-app","id":"fixture"' ;;
     *) item="\"kind\":\"$receiver-package\",\"name\":\"fixture\"" ;;
   esac
-  capture --dry "manifest:$receiver:apply" "ITEM_JSON={$item,\"continue_on_error\":false}" CONTINUE_ON_ERROR=true
+  capture --dry "manifest:$receiver" "ITEM_JSON={$item,\"continue_on_error\":false}" CONTINUE_ON_ERROR=true
   check test "$code" = 0
   check test "${output#*'|| {'}" = "$output"
-  capture --dry "manifest:$receiver:apply" "ITEM_JSON={$item,\"continue_on_error\":true}" CONTINUE_ON_ERROR=false 'FAIL_LOG=fixture log'
+  capture --dry "manifest:$receiver" "ITEM_JSON={$item,\"continue_on_error\":true}" CONTINUE_ON_ERROR=false 'FAIL_LOG=fixture log'
   check test "$code" = 0
   check test "${output#*'>> "fixture log"'}" != "$output"
-  capture --dry "manifest:$receiver:apply" "ITEM_JSON={$item}" CONTINUE_ON_ERROR=true
+  capture --dry "manifest:$receiver" "ITEM_JSON={$item}" CONTINUE_ON_ERROR=true
   check test "$code" = 0
   check test "${output#*manifest-dispatch-faillog}" != "$output"
   printf 'PASS: %s precedence and FAIL_LOG dry-run only\n' "$receiver"
