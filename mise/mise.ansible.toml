@@ -1,2 +1,0 @@
-[tools]
-"pipx:ansible-core" = {version="latest", uvx_args="--with ansible", os=["linux", "macos"]}

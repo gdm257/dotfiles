@@ -1,4 +1,0 @@
-[tools]
-"npm:eslint" = "latest"
-"npm:prettier" = "latest"
-"npm:@openapitools/openapi-generator-cli" = "latest"
