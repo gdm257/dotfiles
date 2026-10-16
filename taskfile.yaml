@@ -156,7 +156,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/apt.yaml"
-        task: manifest:run:manifest
+          CALL: "apt:apply"
+        task: manifest:dispatch
 
   manifest:ansible-collection:
     platforms: [linux, darwin]
@@ -327,7 +328,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/choco.yaml"
-        task: manifest:run:manifest
+          CALL: "choco:apply"
+        task: manifest:dispatch
 
   manifest:conda-create:
     cmds:
@@ -625,7 +627,8 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/winget.yaml"
-        task: manifest:run:manifest
+          CALL: "winget:apply"
+        task: manifest:dispatch
 
   manifest:wsl:
     platforms: [windows]
@@ -645,4 +648,5 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/yum.yaml"
-        task: manifest:run:manifest
+          CALL: "yum:apply"
+        task: manifest:dispatch

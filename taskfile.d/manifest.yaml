@@ -233,3 +233,59 @@ tasks:
       _CMD: '{{ if .ITEM.fail }}false{{ else }}echo ''item={{ .ITEM.name }} kind={{ .ITEM.kind }} flag={{ if .ITEM.flag }}true{{ else }}false{{ end }} json={{ toJson .ITEM }}''{{ end }}'
     cmds:
       - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ .ITEM.name }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  winget:apply:
+    desc: "receive winget items (app by kind)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "winget-app" }}winget install --source {{ .ITEM.source | default "winget" }} --id {{ .ITEM.id }}{{ if .ITEM.version }} --version {{ .ITEM.version }}{{ end }}{{ else }}echo "winget: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _FAIL_LOG:
+        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+    cmds:
+      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  apt:apply:
+    desc: "receive apt-package items (apt install)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "apt-package" }}apt install -y {{ .ITEM.name }}{{ else }}echo "apt: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _FAIL_LOG:
+        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+    cmds:
+      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  yum:apply:
+    desc: "receive yum-package items (yum groupinstall)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "yum-package" }}yum groupinstall {{ .ITEM.name }}{{ else }}echo "yum: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _FAIL_LOG:
+        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+    cmds:
+      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  choco:apply:
+    desc: "receive choco-package items (choco install)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "choco-package" }}choco install -y {{ .ITEM.name }}{{ else }}echo "choco: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _FAIL_LOG:
+        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+    cmds:
+      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
