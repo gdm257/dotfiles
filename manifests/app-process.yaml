@@ -1,54 +1,49 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-
 groups:
   ps:
-  # - { preset: scoop-install, args: gdm257/task-explorer}
-  - { preset: scoop-install, args: systeminformer }
-  # - { preset: scoop-install, args: systeminformer-nightly_hu3rror}
-  # - { preset: scoop-install, args: procexp}
-  - { preset: scoop-install, args: main/witr }
-  # - { preset: scoop-install, args: bottom}
-  - { preset: scoop-install, args: btop }
-  # - { preset: scoop-install, args: ntop}
-  # - { preset: scoop-install, args: procs}
-  # - { preset: scoop-install, args: gotop}
-  - { preset: scoop-install, args: gdm257/lite-monitor }
-  - { preset: scoop-install, args: memreduct }
-  # - { preset: scoop-install, args: winmemorycleaner}
-  # - { preset: scoop-install, args: PowerToys-Portable}
+  # - { kind: scoop-app, name: gdm257/task-explorer}
+  - { kind: scoop-app, name: systeminformer }
+  # - { kind: scoop-app, name: systeminformer-nightly_hu3rror}
+  # - { kind: scoop-app, name: procexp}
+  - { kind: scoop-app, name: main/witr }
+  # - { kind: scoop-app, name: bottom}
+  - { kind: scoop-app, name: btop }
+  # - { kind: scoop-app, name: ntop}
+  # - { kind: scoop-app, name: procs}
+  # - { kind: scoop-app, name: gotop}
+  - { kind: scoop-app, name: gdm257/lite-monitor }
+  - { kind: scoop-app, name: memreduct }
+  # - { kind: scoop-app, name: winmemorycleaner}
+  # - { kind: scoop-app, name: PowerToys-Portable}
 
   service-manager:
-  # - { preset: scoop-install, args: commandtrayhost}
-  # - { preset: scoop-install, args: gdm257/dsc}
-  # - { preset: scoop-install, args: fleetctl}
-  # - { preset: scoop-install, args: main/winsw}
-  # - { preset: scoop-install, args: winsw-alpha}
-  - { preset: scoop-install, args: gdm257/winswctl }
-  - { preset: scoop-install, args: gdm257/winstctl }
-  # - { preset: scoop-install, args: nssm}
-  # - { preset: scoop-install, args: supervisord-go}
+  # - { kind: scoop-app, name: commandtrayhost}
+  # - { kind: scoop-app, name: gdm257/dsc}
+  # - { kind: scoop-app, name: fleetctl}
+  # - { kind: scoop-app, name: main/winsw}
+  # - { kind: scoop-app, name: winsw-alpha}
+  - { kind: scoop-app, name: gdm257/winswctl }
+  - { kind: scoop-app, name: gdm257/winstctl }
+  # - { kind: scoop-app, name: nssm}
+  # - { kind: scoop-app, name: supervisord-go}
 
   time-tracker:
-  # - { preset: scoop-install, args: activitywatch}
-  # - { preset: scoop-install, args: activitywatch_chawyehsu}
-  - { preset: scoop-install, args: main/wakatime-cli }
-  # - { preset: scoop-install, args: gdm257/wakatime }
-  # - { preset: scoop-install, args: tai }
-  - { preset: scoop-install, args: gdm257/patina }
+  # - { kind: scoop-app, name: activitywatch}
+  # - { kind: scoop-app, name: activitywatch_chawyehsu}
+  - { kind: scoop-app, name: main/wakatime-cli }
+  # - { kind: scoop-app, name: gdm257/wakatime }
+  # - { kind: scoop-app, name: tai }
+  - { kind: scoop-app, name: gdm257/patina }
 
   watch:
-  # - { preset: scoop-install, args: watch}
-  # - { preset: scoop-install, args: noti}
+  # - { kind: scoop-app, name: watch}
+  # - { kind: scoop-app, name: noti}
 
   window-manager:
-  # - { preset: scoop-install, args: komorebi}
-  # - { preset: scoop-install, args: glazewm}
+  # - { kind: scoop-app, name: komorebi}
+  # - { kind: scoop-app, name: glazewm}
 
 
-run:
+items:
   - { group: ps }
   - { group: service-manager }
   - { group: time-tracker }

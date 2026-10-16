@@ -191,3 +191,17 @@ tasks:
       _CONTINUE: '{{ if hasKey ._ITEM "continue_on_error" }}{{ if eq ._ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
     cmds:
       - cmd: '{{ if eq (._CONTINUE | default "") "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> {{ .FAIL_LOG }}; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  scoop:apply:
+    desc: "receive scoop items (app/bucket/config by kind)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "scoop-app" }}{{ if eq (.ITEM.elevated | default false) true }}sudo {{ end }}scoop install {{ .ITEM.name }}{{ else if eq .ITEM.kind "scoop-bucket" }}scoop bucket add {{ .ITEM.name }}{{ if .ITEM.url }} {{ .ITEM.url }}{{ end }}{{ else if eq .ITEM.kind "scoop-config" }}scoop config {{ .ITEM.key }} {{ .ITEM.value }}{{ else }}echo "scoop: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _FAIL_LOG:
+        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+    cmds:
+      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'

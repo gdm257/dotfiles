@@ -1,129 +1,124 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-
 groups:
   archive:
-  - { preset: scoop-install, args: unar }
-  - { preset: scoop-install, args: lessmsi }
-  # - { preset: scoop-install, args: main/7zip}
-  - { preset: scoop-install, args: main/nanazip }
-  # - { preset: scoop-install, args: nanazip_DoveBoy}
-  # - { preset: scoop-install, args: bandizip6}
-  - { preset: scoop-install, args: winrar }
-  - { preset: scoop-install, args: anyburn }
+  - { kind: scoop-app, name: unar }
+  - { kind: scoop-app, name: lessmsi }
+  # - { kind: scoop-app, name: main/7zip}
+  - { kind: scoop-app, name: main/nanazip }
+  # - { kind: scoop-app, name: nanazip_DoveBoy}
+  # - { kind: scoop-app, name: bandizip6}
+  - { kind: scoop-app, name: winrar }
+  - { kind: scoop-app, name: anyburn }
 
   disk:
-  - { preset: scoop-install, args: dirhash }
-  # - { preset: scoop-install, args: file}
-  # - { preset: scoop-install, args: code2prompt}
-  # - { preset: scoop-install, args: orange}
-  # - { preset: scoop-install, args: fluentcleaner_naderi}
-  # - { preset: scoop-install, args: alldup}
-  - { preset: scoop-install, args: diskgenius }
-  - { preset: scoop-install, args: testdisk }
-  # - { preset: scoop-install, args: diskinfo}
-  - { preset: scoop-install, args: as-ssd }
-  - { preset: scoop-install, args: crystaldiskmark }
-  - { preset: scoop-install, args: crystaldiskmark-shizuku-edition }
-  - { preset: scoop-install, args: crystaldiskmark-aoi-edition }
-  # - { preset: scoop-install, args: CrystalDiskMark-TsukumoTokka}
-  - { preset: scoop-install, args: crystaldiskinfo-shizuku-edition }
-  # - { preset: scoop-install, args: hdtune}
-  # - { preset: scoop-install, args: ssdlife}
-  - { preset: scoop-install, args: smartmontools }
+  - { kind: scoop-app, name: dirhash }
+  # - { kind: scoop-app, name: file}
+  # - { kind: scoop-app, name: code2prompt}
+  # - { kind: scoop-app, name: orange}
+  # - { kind: scoop-app, name: fluentcleaner_naderi}
+  # - { kind: scoop-app, name: alldup}
+  - { kind: scoop-app, name: diskgenius }
+  - { kind: scoop-app, name: testdisk }
+  # - { kind: scoop-app, name: diskinfo}
+  - { kind: scoop-app, name: as-ssd }
+  - { kind: scoop-app, name: crystaldiskmark }
+  - { kind: scoop-app, name: crystaldiskmark-shizuku-edition }
+  - { kind: scoop-app, name: crystaldiskmark-aoi-edition }
+  # - { kind: scoop-app, name: CrystalDiskMark-TsukumoTokka}
+  - { kind: scoop-app, name: crystaldiskinfo-shizuku-edition }
+  # - { kind: scoop-app, name: hdtune}
+  # - { kind: scoop-app, name: ssdlife}
+  - { kind: scoop-app, name: smartmontools }
 
   diff:
-  # - { preset: scoop-install, args: winmerge}
-  - { preset: scoop-install, args: meld }
+  # - { kind: scoop-app, name: winmerge}
+  - { kind: scoop-app, name: meld }
 
   dotfiles:
-  # - { preset: scoop-install, args: chezmoi}
+  # - { kind: scoop-app, name: chezmoi}
 
   encrypt:
-  # - { preset: scoop-install, args: gpg}
-  # - { preset: scoop-install, args: gpg4win}
-  - { preset: scoop-install, args: age }
-  - { preset: scoop-install, args: enc }
-  - { preset: scoop-install, args: vault }
-  # - { preset: scoop-install, args: keeweb}
-  # - { preset: scoop-install, args: keepass}
-  # - { preset: scoop-install, args: keepass-plugin-kpenhentryview}
-  # - { preset: scoop-install, args: keepass-plugin-webautotype}
-  # - { preset: scoop-install, args: keepass-plugin-keeanywhere}
-  # - { preset: scoop-install, args: keepass-plugin-keepasshttp}
-  # - { preset: scoop-install, args: keepass-plugin-keepassnatmsg}
-  # - { preset: scoop-install, args: keepass-plugin-keeagent}
-  # - { preset: scoop-install, args: bitwarden}
-  # - { preset: scoop-install, args: bitwarden-cli}
-  # - { preset: scoop-install, args: authme}
-  # - { preset: scoop-install, args: infisical}
-  # - { preset: scoop-install, args: restic}
-  # - { preset: scoop-install, args: resticprofile}
-  # - { preset: scoop-install, args: restic-browser}
-  # - { preset: scoop-install, args: backrest}
-  # - { preset: scoop-install, args: redu}
-  # - { preset: scoop-install, args: duplicati}
-  - { preset: scoop-install, args: kopiaui }
-  # - { preset: scoop-install, args: cryptomator}
-  # - { preset: scoop-install, args: VeraCrypt-Portable}
-  - { preset: scoop-install, args: VeraCryptPortable }
-  # - { preset: scoop-install, args: DriveSnapShot}
+  # - { kind: scoop-app, name: gpg}
+  # - { kind: scoop-app, name: gpg4win}
+  - { kind: scoop-app, name: age }
+  - { kind: scoop-app, name: enc }
+  - { kind: scoop-app, name: vault }
+  # - { kind: scoop-app, name: keeweb}
+  # - { kind: scoop-app, name: keepass}
+  # - { kind: scoop-app, name: keepass-plugin-kpenhentryview}
+  # - { kind: scoop-app, name: keepass-plugin-webautotype}
+  # - { kind: scoop-app, name: keepass-plugin-keeanywhere}
+  # - { kind: scoop-app, name: keepass-plugin-keepasshttp}
+  # - { kind: scoop-app, name: keepass-plugin-keepassnatmsg}
+  # - { kind: scoop-app, name: keepass-plugin-keeagent}
+  # - { kind: scoop-app, name: bitwarden}
+  # - { kind: scoop-app, name: bitwarden-cli}
+  # - { kind: scoop-app, name: authme}
+  # - { kind: scoop-app, name: infisical}
+  # - { kind: scoop-app, name: restic}
+  # - { kind: scoop-app, name: resticprofile}
+  # - { kind: scoop-app, name: restic-browser}
+  # - { kind: scoop-app, name: backrest}
+  # - { kind: scoop-app, name: redu}
+  # - { kind: scoop-app, name: duplicati}
+  - { kind: scoop-app, name: kopiaui }
+  # - { kind: scoop-app, name: cryptomator}
+  # - { kind: scoop-app, name: VeraCrypt-Portable}
+  - { kind: scoop-app, name: VeraCryptPortable }
+  # - { kind: scoop-app, name: DriveSnapShot}
 
   file-manager:
-  - { preset: scoop-install, args: eza }
-  - { preset: scoop-install, args: gdm257/shim-ll }
-  # - { preset: scoop-install, args: lsd}
-  - { preset: scoop-install, args: gdu }
-  - { preset: scoop-install, args: dust }
-  - { preset: scoop-install, args: duf }
-  - { preset: scoop-install, args: fd }
-  # - { preset: scoop-install, args: fselect}
-  - { preset: scoop-install, args: fzf }
-  # - { preset: scoop-install, args: tre-command}
-  - { preset: scoop-install, args: zoxide }
-  - { preset: scoop-install, args: yazi }
-  # - { preset: scoop-install, args: superfile}
-  # - { preset: scoop-install, args: broot}
-  # - { preset: scoop-install, args: lf}
-  # - { preset: scoop-install, args: spacesniffer}
-  - { preset: scoop-install, args: wiztree }
-  # - { preset: scoop-install, args: squirreldisk}
-  # - { preset: scoop-install, args: tagspaces}
-  # - { preset: scoop-install, args: gdm257/tagstudio}
-  - { preset: scoop-install, args: doublecmd }
-  # - { preset: scoop-install, args: freecommander}
-  # - { preset: scoop-install, args: xplorer}
-  # - { preset: scoop-install, args: onecommander}
-  # - { preset: scoop-install, args: mucommander}
-  # - { preset: scoop-install, args: mc}
-  - { preset: scoop-install, args: SymlinkCreator }
-  - { preset: scoop-install, args: Snap2HTML }
-  # - { preset: scoop-install, args: HashTools}
+  - { kind: scoop-app, name: eza }
+  - { kind: scoop-app, name: gdm257/shim-ll }
+  # - { kind: scoop-app, name: lsd}
+  - { kind: scoop-app, name: gdu }
+  - { kind: scoop-app, name: dust }
+  - { kind: scoop-app, name: duf }
+  - { kind: scoop-app, name: fd }
+  # - { kind: scoop-app, name: fselect}
+  - { kind: scoop-app, name: fzf }
+  # - { kind: scoop-app, name: tre-command}
+  - { kind: scoop-app, name: zoxide }
+  - { kind: scoop-app, name: yazi }
+  # - { kind: scoop-app, name: superfile}
+  # - { kind: scoop-app, name: broot}
+  # - { kind: scoop-app, name: lf}
+  # - { kind: scoop-app, name: spacesniffer}
+  - { kind: scoop-app, name: wiztree }
+  # - { kind: scoop-app, name: squirreldisk}
+  # - { kind: scoop-app, name: tagspaces}
+  # - { kind: scoop-app, name: gdm257/tagstudio}
+  - { kind: scoop-app, name: doublecmd }
+  # - { kind: scoop-app, name: freecommander}
+  # - { kind: scoop-app, name: xplorer}
+  # - { kind: scoop-app, name: onecommander}
+  # - { kind: scoop-app, name: mucommander}
+  # - { kind: scoop-app, name: mc}
+  - { kind: scoop-app, name: SymlinkCreator }
+  - { kind: scoop-app, name: Snap2HTML }
+  # - { kind: scoop-app, name: HashTools}
 
   fs:
-  # - { preset: scoop-install, args: ntfs2btrfs}
+  # - { kind: scoop-app, name: ntfs2btrfs}
 
   renamer:
-  # - { preset: scoop-install, args: AntRenamer}
-  # - { preset: scoop-install, args: ReNamerLite}
-  # - { preset: scoop-install, args: Bulk-Rename-Utility_dodorz}
-  - { preset: scoop-install, args: renamer_fixed }
-  # - { preset: scoop-install, args: flut-renamer}
-  # - { preset: scoop-install, args: advancedrenamer}
+  # - { kind: scoop-app, name: AntRenamer}
+  # - { kind: scoop-app, name: ReNamerLite}
+  # - { kind: scoop-app, name: Bulk-Rename-Utility_dodorz}
+  - { kind: scoop-app, name: renamer_fixed }
+  # - { kind: scoop-app, name: flut-renamer}
+  # - { kind: scoop-app, name: advancedrenamer}
 
   search:
-  - { preset: scoop-install, args: everything }
-  # - { preset: scoop-install, args: gdm257/listary5}
-  # - { preset: scoop-install, args: listary}
+  - { kind: scoop-app, name: everything }
+  # - { kind: scoop-app, name: gdm257/listary5}
+  # - { kind: scoop-app, name: listary}
 
   watch:
-  # - { preset: scoop-install, args: watchexec}
-  - { preset: scoop-install, args: watchman }
+  # - { kind: scoop-app, name: watchexec}
+  - { kind: scoop-app, name: watchman }
 
 
-run:
+items:
   - { group: archive }
   - { group: disk }
   - { group: diff }

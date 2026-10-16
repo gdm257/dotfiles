@@ -1,111 +1,103 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-  scoop-install-sudo:
-    entrypoint: sudo scoop
-    command: install
-
 groups:
   cheetsheet:
-  # - { preset: scoop-install, args: navi}
-  # - { preset: scoop-install, args: cheat}
-  # - { preset: scoop-install, args: tldr}
-  - { preset: scoop-install, args: tealdeer }
-  # - { preset: scoop-install, args: cht.sh}
+  # - { kind: scoop-app, name: navi}
+  # - { kind: scoop-app, name: cheat}
+  # - { kind: scoop-app, name: tldr}
+  - { kind: scoop-app, name: tealdeer }
+  # - { kind: scoop-app, name: cht.sh}
 
   dotenv:
-  # - { preset: scoop-install, args: gdm257/dotenvx}
-  # - { preset: scoop-install, args: ps-dotenv}
-  # - { preset: scoop-install, args: direnv}
+  # - { kind: scoop-app, name: gdm257/dotenvx}
+  # - { kind: scoop-app, name: ps-dotenv}
+  # - { kind: scoop-app, name: direnv}
 
   keybinding:
-  # - { preset: scoop-install, args: spc/capslock-plus}
-  # - { preset: scoop-install, args: keymouse}
-  # - { preset: scoop-install, args: vim-ahk}
-  # - { preset: scoop-install, args: vimdesktop}
-  # - { preset: scoop-install, args: hunt-and-peck}
-  # - { preset: scoop-install, args: whkd}
-  # - { preset: scoop-install, args: Quicker_dodorz}
-  # - { preset: scoop-install, args: keymousego}
-  # - { preset: scoop-install, args: kanata}
-  # - { preset: scoop-install, args: kanata-tray}
-  - { preset: scoop-install, args: gdm257/mykeymap }
-  - { preset: scoop-install, args: gdm257/mousemaster }
-  - { preset: scoop-install, args: gdm257/starpie }
-  # - { preset: scoop-install, args: komokana}
+  # - { kind: scoop-app, name: spc/capslock-plus}
+  # - { kind: scoop-app, name: keymouse}
+  # - { kind: scoop-app, name: vim-ahk}
+  # - { kind: scoop-app, name: vimdesktop}
+  # - { kind: scoop-app, name: hunt-and-peck}
+  # - { kind: scoop-app, name: whkd}
+  # - { kind: scoop-app, name: Quicker_dodorz}
+  # - { kind: scoop-app, name: keymousego}
+  # - { kind: scoop-app, name: kanata}
+  # - { kind: scoop-app, name: kanata-tray}
+  - { kind: scoop-app, name: gdm257/mykeymap }
+  - { kind: scoop-app, name: gdm257/mousemaster }
+  - { kind: scoop-app, name: gdm257/starpie }
+  # - { kind: scoop-app, name: komokana}
 
   launcher:
-  # - { preset: scoop-install, args: flow-launcher}
-  # - { preset: scoop-install, args: rubick}
-  # - { preset: scoop-install, args: maye}
-  # - { preset: scoop-install, args: SilentCMD-Portable}
-  - { preset: scoop-install, args: runasdate }
-  - { preset: scoop-install, args: locale-emulator }
-  # - { preset: scoop-install, args: locale-remulator}
-  # - { preset: scoop-install, args: gdm257/onin }
-  - { preset: scoop-install, args: ztools }
-  # - { preset: scoop-install, args: geekdesk}
-  - { preset: scoop-install, args: main/scoop-shim }
-  - { preset: scoop-install, args: gdm257/command-wrapper }
-  # - { preset: scoop-install, args: pueue}
-  # - { preset: scoop-install, args: nirsoft/nircmd}
-  # - { preset: scoop-install, args: nircmd-both}
-  # - { preset: scoop-install, args: hyperfine}
+  # - { kind: scoop-app, name: flow-launcher}
+  # - { kind: scoop-app, name: rubick}
+  # - { kind: scoop-app, name: maye}
+  # - { kind: scoop-app, name: SilentCMD-Portable}
+  - { kind: scoop-app, name: runasdate }
+  - { kind: scoop-app, name: locale-emulator }
+  # - { kind: scoop-app, name: locale-remulator}
+  # - { kind: scoop-app, name: gdm257/onin }
+  - { kind: scoop-app, name: ztools }
+  # - { kind: scoop-app, name: geekdesk}
+  - { kind: scoop-app, name: main/scoop-shim }
+  - { kind: scoop-app, name: gdm257/command-wrapper }
+  # - { kind: scoop-app, name: pueue}
+  # - { kind: scoop-app, name: nirsoft/nircmd}
+  # - { kind: scoop-app, name: nircmd-both}
+  # - { kind: scoop-app, name: hyperfine}
 
   shell:
-  - { preset: scoop-install, args: powershell }
-  - { preset: scoop-install, args: main/powershelleditorservices }
-  # - { preset: scoop-install, args: PSWinUtil}
+  - { kind: scoop-app, name: powershell }
+  - { kind: scoop-app, name: main/powershelleditorservices }
+  # - { kind: scoop-app, name: PSWinUtil}
 
   sudo:
-  # - { preset: scoop-install, args: sudo}
-  - { preset: scoop-install, args: gsudo }
+  # - { kind: scoop-app, name: sudo}
+  - { kind: scoop-app, name: gsudo }
 
   terminal-emulator:
-  - { preset: scoop-install, args: windows-terminal }
-  # - { preset: scoop-install, args: rio}
-  # - { preset: scoop-install, args: wezterm}
-  # - { preset: scoop-install, args: ttyd}
-  # - { preset: scoop-install, args: olivetin}
-  # - { preset: scoop-install, args: cmder-full}
-  # - { preset: scoop-install, args: msys2}
-  # - { preset: scoop-install, args: oh-my-posh}
-  # - { preset: scoop-install, args: waveterm}
-  # - { preset: scoop-install, args: xpipe}
-  # - { preset: scoop-install, args: mobaxterm}
-  - { preset: scoop-install, args: gdm257/leepanel }
-  - { preset: scoop-install, args: gdm257/voltius }
-  # - { preset: scoop-install, args: electerm}
-  # - { preset: scoop-install, args: alacritty}
-  # - { preset: scoop-install, args: rio}
-  # - { preset: scoop-install, args: hyper-beta}
-  # - { preset: scoop-install, args: tabby-portable}
-  # - { preset: scoop-install, args: putty}
-  - { preset: scoop-install, args: openssh }
-  - { preset: scoop-install, args: opkssh }
-  # - { preset: scoop-install, args: mosh-client}
-  - { preset: scoop-install, args: main/charm-gum }
-  - { preset: scoop-install, args: chafa }
-  - { preset: scoop-install, args: resvg }
-  # - { preset: scoop-install, args: tgpt}
-  # - { preset: scoop-install, args: sgpt}
-  # - { preset: scoop-install, args: psfzf}
-  - { preset: scoop-install, args: starship }
-  # - { preset: scoop-install, args: oh-my-posh}
-  # - { preset: scoop-install, args: clink}
-  # - { preset: scoop-install, args: clink-portable}
-  # - { preset: scoop-install, args: genact}
-  # - { preset: scoop-install, args: zellij}
-  # - { preset: scoop-install, args: lrzsz}
-  # - { preset: scoop-install, args: tssh}
+  - { kind: scoop-app, name: windows-terminal }
+  # - { kind: scoop-app, name: rio}
+  # - { kind: scoop-app, name: wezterm}
+  # - { kind: scoop-app, name: ttyd}
+  # - { kind: scoop-app, name: olivetin}
+  # - { kind: scoop-app, name: cmder-full}
+  # - { kind: scoop-app, name: msys2}
+  # - { kind: scoop-app, name: oh-my-posh}
+  # - { kind: scoop-app, name: waveterm}
+  # - { kind: scoop-app, name: xpipe}
+  # - { kind: scoop-app, name: mobaxterm}
+  - { kind: scoop-app, name: gdm257/leepanel }
+  - { kind: scoop-app, name: gdm257/voltius }
+  # - { kind: scoop-app, name: electerm}
+  # - { kind: scoop-app, name: alacritty}
+  # - { kind: scoop-app, name: rio}
+  # - { kind: scoop-app, name: hyper-beta}
+  # - { kind: scoop-app, name: tabby-portable}
+  # - { kind: scoop-app, name: putty}
+  - { kind: scoop-app, name: openssh }
+  - { kind: scoop-app, name: opkssh }
+  # - { kind: scoop-app, name: mosh-client}
+  - { kind: scoop-app, name: main/charm-gum }
+  - { kind: scoop-app, name: chafa }
+  - { kind: scoop-app, name: resvg }
+  # - { kind: scoop-app, name: tgpt}
+  # - { kind: scoop-app, name: sgpt}
+  # - { kind: scoop-app, name: psfzf}
+  - { kind: scoop-app, name: starship }
+  # - { kind: scoop-app, name: oh-my-posh}
+  # - { kind: scoop-app, name: clink}
+  # - { kind: scoop-app, name: clink-portable}
+  # - { kind: scoop-app, name: genact}
+  # - { kind: scoop-app, name: zellij}
+  # - { kind: scoop-app, name: lrzsz}
+  # - { kind: scoop-app, name: tssh}
 
   x11:
-  # - { preset: scoop-install, args: ultravnc}
-  # - { preset: scoop-install, args: vcxsrv}
+  # - { kind: scoop-app, name: ultravnc}
+  # - { kind: scoop-app, name: vcxsrv}
 
 
-run:
+items:
   - { group: scoop-install-sudo }
   - { group: cheetsheet }
   - { group: dotenv }

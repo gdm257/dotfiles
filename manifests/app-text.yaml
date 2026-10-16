@@ -1,165 +1,160 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-
 groups:
   accounting:
-  - { preset: scoop-install, args: gnucash }
-  # - { preset: scoop-install, args: moneymanagerex}
+  - { kind: scoop-app, name: gnucash }
+  # - { kind: scoop-app, name: moneymanagerex}
 
   book:
-  # - { preset: scoop-install, args: calibre-web}
-  # - { preset: scoop-install, args: calibre}
+  # - { kind: scoop-app, name: calibre-web}
+  # - { kind: scoop-app, name: calibre}
 
   text:
-  - { preset: scoop-install, args: grex }
-  - { preset: scoop-install, args: ripgrep }
-  # - { preset: scoop-install, args: sig}
-  - { preset: scoop-install, args: ugrep }
-  # - { preset: scoop-install, args: gdm257/shim-grep}
-  - { preset: scoop-install, args: ag }
-  # - { preset: scoop-install, args: ack}
-  - { preset: scoop-install, args: main/sd }
-  # - { preset: scoop-install, args: sad}
-  # - { preset: scoop-install, args: ruplacer}
-  - { preset: scoop-install, args: bat }
-  # - { preset: scoop-install, args: miller}
-  # - { preset: scoop-install, args: tailspin}
-  # - { preset: scoop-install, args: logdy}
-  - { preset: scoop-install, args: sttr }
+  - { kind: scoop-app, name: grex }
+  - { kind: scoop-app, name: ripgrep }
+  # - { kind: scoop-app, name: sig}
+  - { kind: scoop-app, name: ugrep }
+  # - { kind: scoop-app, name: gdm257/shim-grep}
+  - { kind: scoop-app, name: ag }
+  # - { kind: scoop-app, name: ack}
+  - { kind: scoop-app, name: main/sd }
+  # - { kind: scoop-app, name: sad}
+  # - { kind: scoop-app, name: ruplacer}
+  - { kind: scoop-app, name: bat }
+  # - { kind: scoop-app, name: miller}
+  # - { kind: scoop-app, name: tailspin}
+  # - { kind: scoop-app, name: logdy}
+  - { kind: scoop-app, name: sttr }
 
   json:
-  # - { preset: scoop-install, args: fx}
-  # - { preset: scoop-install, args: jid}
-  # - { preset: scoop-install, args: csview}
-  - { preset: scoop-install, args: jq }
-  # - { preset: scoop-install, args: xq}
-  - { preset: scoop-install, args: yq }
-  # - { preset: scoop-install, args: fq}
-  # - { preset: scoop-install, args: dasel}
-  - { preset: scoop-install, args: xidel }
-  # - { preset: scoop-install, args: pup}
+  # - { kind: scoop-app, name: fx}
+  # - { kind: scoop-app, name: jid}
+  # - { kind: scoop-app, name: csview}
+  - { kind: scoop-app, name: jq }
+  # - { kind: scoop-app, name: xq}
+  - { kind: scoop-app, name: yq }
+  # - { kind: scoop-app, name: fq}
+  # - { kind: scoop-app, name: dasel}
+  - { kind: scoop-app, name: xidel }
+  # - { kind: scoop-app, name: pup}
 
   spreadsheet:
-  - { preset: scoop-install, args: csvlens }
-  # - { preset: scoop-install, args: dsq}
-  # - { preset: scoop-install, args: q}
-  - { preset: scoop-install, args: sq }
+  - { kind: scoop-app, name: csvlens }
+  # - { kind: scoop-app, name: dsq}
+  # - { kind: scoop-app, name: q}
+  - { kind: scoop-app, name: sq }
 
   openapi:
-  # - { preset: scoop-install, args: openapi-tui}
+  # - { kind: scoop-app, name: openapi-tui}
 
-  - { preset: scoop-install, args: hashcat }
-  - { preset: scoop-install, args: john-the-ripper }
-  - { preset: scoop-install, args: 7z2hashcat }
+  - { kind: scoop-app, name: hashcat }
+  - { kind: scoop-app, name: john-the-ripper }
+  - { kind: scoop-app, name: 7z2hashcat }
 
   doc:
-  - { preset: scoop-install, args: pandoc }
-  - { preset: scoop-install, args: main/officecli }
-  - { preset: scoop-install, args: poppler }
-  # - { preset: scoop-install, args: vosviewer}
-  - { preset: scoop-install, args: lfs/awesome-books }
-  # - { preset: scoop-install, args: zeal}
-  # - { preset: scoop-install, args: koodo-reader}
-  # - { preset: scoop-install, args: "mendeley mendeley-desktop"}
+  - { kind: scoop-app, name: pandoc }
+  - { kind: scoop-app, name: main/officecli }
+  - { kind: scoop-app, name: poppler }
+  # - { kind: scoop-app, name: vosviewer}
+  - { kind: scoop-app, name: lfs/awesome-books }
+  # - { kind: scoop-app, name: zeal}
+  # - { kind: scoop-app, name: koodo-reader}
+  # - { kind: scoop-app, name: "mendeley mendeley-desktop"}
 
   dict:
-  - { preset: scoop-install, args: eudic }
-  - { preset: scoop-install, args: gdm257/awesome-dict }
-  # - { preset: scoop-install, args: ting-en}
-  # - { preset: scoop-install, args: anki}
-  # - { preset: scoop-install, args: goldendict-ng}
+  - { kind: scoop-app, name: eudic }
+  - { kind: scoop-app, name: gdm257/awesome-dict }
+  # - { kind: scoop-app, name: ting-en}
+  # - { kind: scoop-app, name: anki}
+  # - { kind: scoop-app, name: goldendict-ng}
 
   clipboard:
-  - { preset: scoop-install, args: ditto }
-  # - { preset: scoop-install, args: gdm257/ecopastepro}
-  # - { preset: scoop-install, args: ecopaste}
-  # - { preset: scoop-install, args: copyq}
-  # - { preset: scoop-install, args: clipboard}
+  - { kind: scoop-app, name: ditto }
+  # - { kind: scoop-app, name: gdm257/ecopastepro}
+  # - { kind: scoop-app, name: ecopaste}
+  # - { kind: scoop-app, name: copyq}
+  # - { kind: scoop-app, name: clipboard}
 
   note:
-  # - { preset: scoop-install, args: zotero}
-  # - { preset: scoop-install, args: anytype}
-  - { preset: scoop-install, args: obsidian }
-  # - { preset: scoop-install, args: tolaria}
-  # - { preset: scoop-install, args: siyuan}
-  # - { preset: scoop-install, args: focalboard}
-  # - { preset: scoop-install, args: appflowy}
-  # - { preset: scoop-install, args: speedynote}
-  # - { preset: scoop-install, args: bookxnote}
-  - { preset: scoop-install, args: BookXNotePro }
-  # - { preset: scoop-install, args: xournalpp}
-  # - { preset: scoop-install, args: rendevoz}
-  # - { preset: scoop-install, args: logseq}
+  # - { kind: scoop-app, name: zotero}
+  # - { kind: scoop-app, name: anytype}
+  - { kind: scoop-app, name: obsidian }
+  # - { kind: scoop-app, name: tolaria}
+  # - { kind: scoop-app, name: siyuan}
+  # - { kind: scoop-app, name: focalboard}
+  # - { kind: scoop-app, name: appflowy}
+  # - { kind: scoop-app, name: speedynote}
+  # - { kind: scoop-app, name: bookxnote}
+  - { kind: scoop-app, name: BookXNotePro }
+  # - { kind: scoop-app, name: xournalpp}
+  # - { kind: scoop-app, name: rendevoz}
+  # - { kind: scoop-app, name: logseq}
 
   ime:
-  # - { preset: scoop-install, args: imewlconverter}
-  - { preset: scoop-install, args: gdm257/windinput }
+  # - { kind: scoop-app, name: imewlconverter}
+  - { kind: scoop-app, name: gdm257/windinput }
 
   markdown:
-  # - { preset: scoop-install, args: zettlr}
-  # - { preset: scoop-install, args: typora}
-  # - { preset: scoop-install, args: marktext}
-  # - { preset: scoop-install, args: gdm257/md-preview}
-  - { preset: scoop-install, args: gdm257/inknote }
-  # - { preset: scoop-install, args: gdm257/vividmark}
-  # - { preset: scoop-install, args: gdm257/markview}
+  # - { kind: scoop-app, name: zettlr}
+  # - { kind: scoop-app, name: typora}
+  # - { kind: scoop-app, name: marktext}
+  # - { kind: scoop-app, name: gdm257/md-preview}
+  - { kind: scoop-app, name: gdm257/inknote }
+  # - { kind: scoop-app, name: gdm257/vividmark}
+  # - { kind: scoop-app, name: gdm257/markview}
 
   tex:
-  # - { preset: scoop-install, args: texlive}
-  # - { preset: scoop-install, args: latex}
+  # - { kind: scoop-app, name: texlive}
+  # - { kind: scoop-app, name: latex}
 
   text-editor:
-  # - { preset: scoop-install, args: zed}
-  # - { preset: scoop-install, args: zed-opengl}
-  # - { preset: scoop-install, args: notepad4}
-  # - { preset: scoop-install, args: notepad--}
-  # - { preset: scoop-install, args: notepadnext}
-  # - { preset: scoop-install, args: notepadplusplus}
-  # - { preset: scoop-install, args: islide}
-  # - { preset: scoop-install, args: vscode-portable}
-  - { preset: scoop-install, args: emeditor }
-  # - { preset: scoop-install, args: sublime-text}
-  # - { preset: scoop-install, args: notepad2-mod}
-  # - { preset: scoop-install, args: notepad3}
-  # - { preset: scoop-install, args: geany}
+  # - { kind: scoop-app, name: zed}
+  # - { kind: scoop-app, name: zed-opengl}
+  # - { kind: scoop-app, name: notepad4}
+  # - { kind: scoop-app, name: notepad--}
+  # - { kind: scoop-app, name: notepadnext}
+  # - { kind: scoop-app, name: notepadplusplus}
+  # - { kind: scoop-app, name: islide}
+  # - { kind: scoop-app, name: vscode-portable}
+  - { kind: scoop-app, name: emeditor }
+  # - { kind: scoop-app, name: sublime-text}
+  # - { kind: scoop-app, name: notepad2-mod}
+  # - { kind: scoop-app, name: notepad3}
+  # - { kind: scoop-app, name: geany}
 
   pdf-cli:
-  - { preset: scoop-install, args: pdftk }
+  - { kind: scoop-app, name: pdftk }
 
   pdf-viewer:
-  # - { preset: scoop-install, args: SumatraPDF_dodorz }
-  - { preset: scoop-install, args: sumatrapdf-stable }
+  # - { kind: scoop-app, name: SumatraPDF_dodorz }
+  - { kind: scoop-app, name: sumatrapdf-stable }
 
   pdf-editor:
-  - { preset: scoop-install, args: gdm257/pdfcraft }
-  # - { preset: scoop-install, args: gdm257/killerpdf }
-  # - { preset: scoop-install, args: pdf-xchange-editor}
-  # - { preset: scoop-install, args: pdfpatcher_hu3rror}
-  # - { preset: scoop-install, args: pdfpatcher}
-  # - { preset: scoop-install, args: pdf-guru}
+  - { kind: scoop-app, name: gdm257/pdfcraft }
+  # - { kind: scoop-app, name: gdm257/killerpdf }
+  # - { kind: scoop-app, name: pdf-xchange-editor}
+  # - { kind: scoop-app, name: pdfpatcher_hu3rror}
+  # - { kind: scoop-app, name: pdfpatcher}
+  # - { kind: scoop-app, name: pdf-guru}
 
   font:
-  - { preset: scoop-install, args: fontforge }
-  - { preset: scoop-install, args: winfontsview }
+  - { kind: scoop-app, name: fontforge }
+  - { kind: scoop-app, name: winfontsview }
 
   read-it-later:
-  # - { preset: scoop-install, args: raindrop.io}
+  # - { kind: scoop-app, name: raindrop.io}
 
   office:
-  - { preset: scoop-install, args: onlyoffice-desktopeditors }
-  # - { preset: scoop-install, args: libreoffice}
-  - { preset: scoop-install, args: gdm257/wordcraft }
-  - { preset: scoop-install, args: gdm257/gridcraft }
-  - { preset: scoop-install, args: gdm257/deckcraft }
+  - { kind: scoop-app, name: onlyoffice-desktopeditors }
+  # - { kind: scoop-app, name: libreoffice}
+  - { kind: scoop-app, name: gdm257/wordcraft }
+  - { kind: scoop-app, name: gdm257/gridcraft }
+  - { kind: scoop-app, name: gdm257/deckcraft }
 
   rss:
-  - { preset: scoop-install, args: rssguard }
-  # - { preset: scoop-install, args: fluent-reader}
+  - { kind: scoop-app, name: rssguard }
+  # - { kind: scoop-app, name: fluent-reader}
 
 
-run:
+items:
   - { group: accounting }
   - { group: book }
   - { group: text }

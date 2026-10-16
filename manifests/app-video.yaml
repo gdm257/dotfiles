@@ -1,128 +1,123 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-
 groups:
   bilibili:
-  # - { preset: scoop-install, args: wiliwili}
-  - { preset: scoop-install, args: gdm257/bili-sync }
+  # - { kind: scoop-app, name: wiliwili}
+  - { kind: scoop-app, name: gdm257/bili-sync }
 
   cad:
-  - { preset: scoop-install, args: kicad }
-  - { preset: scoop-install, args: fritzing }
-  - { preset: scoop-install, args: librecad }
-  - { preset: scoop-install, args: FreeCAD_dodorz }
-  - { preset: scoop-install, args: gdm257/cadcraft }
+  - { kind: scoop-app, name: kicad }
+  - { kind: scoop-app, name: fritzing }
+  - { kind: scoop-app, name: librecad }
+  - { kind: scoop-app, name: FreeCAD_dodorz }
+  - { kind: scoop-app, name: gdm257/cadcraft }
 
   emby:
-  # - { preset: scoop-install, args: emby}
-  - { preset: scoop-install, args: tinymediamanager }
-  - { preset: scoop-install, args: tsukimi }
-  - { preset: scoop-install, args: jellyfin }
-  - { preset: scoop-install, args: jellyfin-mpv-shim }
-  - { preset: scoop-install, args: gdm257/EmbyToLocalPlayer }
-  # - { preset: scoop-install, args: EmbyTheater-Portable}
-  # - { preset: scoop-install, args: terminus-player}
-  # - { preset: scoop-install, args: onelist}
+  # - { kind: scoop-app, name: emby}
+  - { kind: scoop-app, name: tinymediamanager }
+  - { kind: scoop-app, name: tsukimi }
+  - { kind: scoop-app, name: jellyfin }
+  - { kind: scoop-app, name: jellyfin-mpv-shim }
+  - { kind: scoop-app, name: gdm257/EmbyToLocalPlayer }
+  # - { kind: scoop-app, name: EmbyTheater-Portable}
+  # - { kind: scoop-app, name: terminus-player}
+  # - { kind: scoop-app, name: onelist}
 
   mmd:
-  - { preset: scoop-install, args: miku-miku-model }
-  - { preset: scoop-install, args: mikumikudance }
-  # - { preset: scoop-install, args: Blender-Portable}
-  - { preset: scoop-install, args: blender }
-  - { preset: scoop-install, args: pixelorama }
-  - { preset: scoop-install, args: material-maker }
-  - { preset: scoop-install, args: makehuman }
-  - { preset: scoop-install, args: sweethome3d }
-  - { preset: scoop-install, args: pmx-editor }
-  # - { preset: scoop-install, args: opentoonz }
+  - { kind: scoop-app, name: miku-miku-model }
+  - { kind: scoop-app, name: mikumikudance }
+  # - { kind: scoop-app, name: Blender-Portable}
+  - { kind: scoop-app, name: blender }
+  - { kind: scoop-app, name: pixelorama }
+  - { kind: scoop-app, name: material-maker }
+  - { kind: scoop-app, name: makehuman }
+  - { kind: scoop-app, name: sweethome3d }
+  - { kind: scoop-app, name: pmx-editor }
+  # - { kind: scoop-app, name: opentoonz }
 
   recording:
-  - { preset: scoop-install, args: obs-studio }
-  # - { preset: scoop-install, args: screentogif}
-  # - { preset: scoop-install, args: captura}
-  # - { preset: scoop-install, args: sharex}
-  # - { preset: scoop-install, args: kmcounter}
+  - { kind: scoop-app, name: obs-studio }
+  # - { kind: scoop-app, name: screentogif}
+  # - { kind: scoop-app, name: captura}
+  # - { kind: scoop-app, name: sharex}
+  # - { kind: scoop-app, name: kmcounter}
 
   subtitle:
-  - { preset: scoop-install, args: DanmakuFactory }
-  # - { preset: scoop-install, args: AssFontSubset}
-  - { preset: scoop-install, args: videosubfinder }
-  - { preset: scoop-install, args: ChineseSubFinder }
-  - { preset: scoop-install, args: SubRenamer }
-  - { preset: scoop-install, args: fontloadersub }
-  - { preset: scoop-install, args: aegisub-arch }
-  - { preset: scoop-install, args: subtitleedit }
-  - { preset: scoop-install, args: video-srt }
-  - { preset: scoop-install, args: sushi }
-  # - { preset: scoop-install, args: aegisub}
-  # - { preset: scoop-install, args: ArctimePro_cc713}
+  - { kind: scoop-app, name: DanmakuFactory }
+  # - { kind: scoop-app, name: AssFontSubset}
+  - { kind: scoop-app, name: videosubfinder }
+  - { kind: scoop-app, name: ChineseSubFinder }
+  - { kind: scoop-app, name: SubRenamer }
+  - { kind: scoop-app, name: fontloadersub }
+  - { kind: scoop-app, name: aegisub-arch }
+  - { kind: scoop-app, name: subtitleedit }
+  - { kind: scoop-app, name: video-srt }
+  - { kind: scoop-app, name: sushi }
+  # - { kind: scoop-app, name: aegisub}
+  # - { kind: scoop-app, name: ArctimePro_cc713}
 
   upscale:
-  # - { preset: scoop-install, args: anime4kcpp-cli}
-  # - { preset: scoop-install, args: anime4kcpp-gui}
-  # - { preset: scoop-install, args: anime4k-glsl}
-  # - { preset: scoop-install, args: anime4kcpp-avisynthplus-plugin}
-  # - { preset: scoop-install, args: anime4kcpp-vapoursynth-plugin}
-  # - { preset: scoop-install, args: anime4kcpp-dsfilter}
-  # - { preset: scoop-install, args: acnet-glsl}
-  - { preset: scoop-install, args: gdm257/real-video-enhancer }
-  - { preset: scoop-install, args: video2x }
-  - { preset: scoop-install, args: magpie }
+  # - { kind: scoop-app, name: anime4kcpp-cli}
+  # - { kind: scoop-app, name: anime4kcpp-gui}
+  # - { kind: scoop-app, name: anime4k-glsl}
+  # - { kind: scoop-app, name: anime4kcpp-avisynthplus-plugin}
+  # - { kind: scoop-app, name: anime4kcpp-vapoursynth-plugin}
+  # - { kind: scoop-app, name: anime4kcpp-dsfilter}
+  # - { kind: scoop-app, name: acnet-glsl}
+  - { kind: scoop-app, name: gdm257/real-video-enhancer }
+  - { kind: scoop-app, name: video2x }
+  - { kind: scoop-app, name: magpie }
 
   video-explorer:
-  - { preset: scoop-install, args: digikam }
+  - { kind: scoop-app, name: digikam }
 
   video-player:
-  - { preset: scoop-install, args: mediainfo }
-  - { preset: scoop-install, args: mediainfo-gui }
-  # - { preset: scoop-install, args: streamlink}
-  - { preset: scoop-install, args: mpv-handler }
-  - { preset: scoop-install, args: mpv.net-dw }
-  # - { preset: scoop-install, args: mpv-lazy}
-  # - { preset: scoop-install, args: mpv-lazy_hu3rror}
-  # - { preset: scoop-install, args: gdm257/mpv-AnimeJaNai}
-  # - { preset: scoop-install, args: mpv-Portable}
-  # - { preset: scoop-install, args: "mpv.net implay mpv.net-cm mpv.net-dw"}
-  - { preset: scoop-install, args: potplayer }
-  # - { preset: scoop-install, args: kikoplay}
-  # - { preset: scoop-install, args: dandanplay}
-  # - { preset: scoop-install, args: lavfilters}
-  # - { preset: scoop-install, args: madvr}
-  # - { preset: scoop-install, args: mpc-be}
+  - { kind: scoop-app, name: mediainfo }
+  - { kind: scoop-app, name: mediainfo-gui }
+  # - { kind: scoop-app, name: streamlink}
+  - { kind: scoop-app, name: mpv-handler }
+  - { kind: scoop-app, name: mpv.net-dw }
+  # - { kind: scoop-app, name: mpv-lazy}
+  # - { kind: scoop-app, name: mpv-lazy_hu3rror}
+  # - { kind: scoop-app, name: gdm257/mpv-AnimeJaNai}
+  # - { kind: scoop-app, name: mpv-Portable}
+  # - { kind: scoop-app, name: "mpv.net implay mpv.net-cm mpv.net-dw"}
+  - { kind: scoop-app, name: potplayer }
+  # - { kind: scoop-app, name: kikoplay}
+  # - { kind: scoop-app, name: dandanplay}
+  # - { kind: scoop-app, name: lavfilters}
+  # - { kind: scoop-app, name: madvr}
+  # - { kind: scoop-app, name: mpc-be}
 
   video-editor:
-  - { preset: scoop-install, args: quickcut }
-  - { preset: scoop-install, args: natron }
-  # - { preset: scoop-install, args: olive-editor-nightly}
-  - { preset: scoop-install, args: olive-editor }
-  - { preset: scoop-install, args: kdenlive }
-  # - { preset: scoop-install, args: "shotcut losslesscut"}
-  - { preset: scoop-install, args: gyroflow }
-  - { preset: scoop-install, args: gdm257/filmcraft }
-  - { preset: scoop-install, args: gdm257/effectcraft }
-  - { preset: scoop-install, args: ZXPInstaller }
-  # - { preset: scoop-install, args: UAC.ZXPInstaller}
+  - { kind: scoop-app, name: quickcut }
+  - { kind: scoop-app, name: natron }
+  # - { kind: scoop-app, name: olive-editor-nightly}
+  - { kind: scoop-app, name: olive-editor }
+  - { kind: scoop-app, name: kdenlive }
+  # - { kind: scoop-app, name: "shotcut losslesscut"}
+  - { kind: scoop-app, name: gyroflow }
+  - { kind: scoop-app, name: gdm257/filmcraft }
+  - { kind: scoop-app, name: gdm257/effectcraft }
+  - { kind: scoop-app, name: ZXPInstaller }
+  # - { kind: scoop-app, name: UAC.ZXPInstaller}
 
   video-processor:
-  # - { preset: scoop-install, args: vidbatch}
-  # - { preset: scoop-install, args: megui-fixed@2896}
-  # - { preset: scoop-install, args: megui}
-  - { preset: scoop-install, args: megui_fixed }
-  # - { preset: scoop-install, args: gdm257/okegui}
-  - { preset: scoop-install, args: mkvtoolnix }
-  - { preset: scoop-install, args: gdm257/ffmpegfreeui }
-  - { preset: scoop-install, args: ffmpeg }
-  # - { preset: scoop-install, args: shanaencoder}
-  # - { preset: scoop-install, args: qwinff}
-  - { preset: scoop-install, args: shadered }
+  # - { kind: scoop-app, name: vidbatch}
+  # - { kind: scoop-app, name: megui-fixed@2896}
+  # - { kind: scoop-app, name: megui}
+  - { kind: scoop-app, name: megui_fixed }
+  # - { kind: scoop-app, name: gdm257/okegui}
+  - { kind: scoop-app, name: mkvtoolnix }
+  - { kind: scoop-app, name: gdm257/ffmpegfreeui }
+  - { kind: scoop-app, name: ffmpeg }
+  # - { kind: scoop-app, name: shanaencoder}
+  # - { kind: scoop-app, name: qwinff}
+  - { kind: scoop-app, name: shadered }
 
   youtube:
-  # - { preset: scoop-install, args: freetube}
+  # - { kind: scoop-app, name: freetube}
 
 
-run:
+items:
   - { group: bilibili }
   - { group: cad }
   - { group: emby }

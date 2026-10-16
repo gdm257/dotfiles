@@ -1,239 +1,234 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-
 groups:
   browser:
-  - { preset: scoop-install, args: catsxp }
-  - { preset: scoop-install, args: centbrowser }
-  # - { preset: scoop-install, args: gdm257/chrome-plus}
-  # - { preset: scoop-install, args: chromium}
-  # - { preset: scoop-install, args: brave}
-  # - { preset: scoop-install, args: Brave-Portable}
-  # - { preset: scoop-install, args: brave-beta}
-  - { preset: scoop-install, args: tor-browser }
-  # - { preset: scoop-install, args: HackBrowserData}
-  # - { preset: scoop-install, args: geckodriver}
-  # - { preset: scoop-install, args: chromedriver}
+  - { kind: scoop-app, name: catsxp }
+  - { kind: scoop-app, name: centbrowser }
+  # - { kind: scoop-app, name: gdm257/chrome-plus}
+  # - { kind: scoop-app, name: chromium}
+  # - { kind: scoop-app, name: brave}
+  # - { kind: scoop-app, name: Brave-Portable}
+  # - { kind: scoop-app, name: brave-beta}
+  - { kind: scoop-app, name: tor-browser }
+  # - { kind: scoop-app, name: HackBrowserData}
+  # - { kind: scoop-app, name: geckodriver}
+  # - { kind: scoop-app, name: chromedriver}
 
   curl:
-  - { preset: scoop-install, args: hurl }
-  # - { preset: scoop-install, args: xh}
-  - { preset: scoop-install, args: curlie }
+  - { kind: scoop-app, name: hurl }
+  # - { kind: scoop-app, name: xh}
+  - { kind: scoop-app, name: curlie }
 
   dns:
-  # - { preset: scoop-install, args: ddns-go}
-  - { preset: scoop-install, args: doggo }
-  # - { preset: scoop-install, args: dog}
-  - { preset: scoop-install, args: bind }
-  - { preset: scoop-install, args: whosip }
-  - { preset: scoop-install, args: tldx }
-  # - { preset: scoop-install, args: dns-jumper}
-  # - { preset: scoop-install, args: q-dns}
-  # - { preset: scoop-install, args: dnsx}
-  # - { preset: scoop-install, args: dnslookup}
-  # - { preset: scoop-install, args: dnsq-go}
-  # - { preset: scoop-install, args: quicksetdns}
-  # - { preset: scoop-install, args: DNSControlCLI-Portable}
-  # - { preset: scoop-install, args: sdns}
-  # - { preset: scoop-install, args: coredns}
+  # - { kind: scoop-app, name: ddns-go}
+  - { kind: scoop-app, name: doggo }
+  # - { kind: scoop-app, name: dog}
+  - { kind: scoop-app, name: bind }
+  - { kind: scoop-app, name: whosip }
+  - { kind: scoop-app, name: tldx }
+  # - { kind: scoop-app, name: dns-jumper}
+  # - { kind: scoop-app, name: q-dns}
+  # - { kind: scoop-app, name: dnsx}
+  # - { kind: scoop-app, name: dnslookup}
+  # - { kind: scoop-app, name: dnsq-go}
+  # - { kind: scoop-app, name: quicksetdns}
+  # - { kind: scoop-app, name: DNSControlCLI-Portable}
+  # - { kind: scoop-app, name: sdns}
+  # - { kind: scoop-app, name: coredns}
 
   db:
-  # - { preset: scoop-install, args: sqlitestudio}
-  # - { preset: scoop-install, args: mariadb103}
-  # - { preset: scoop-install, args: mongodb-compass-isolated}
+  # - { kind: scoop-app, name: sqlitestudio}
+  # - { kind: scoop-app, name: mariadb103}
+  # - { kind: scoop-app, name: mongodb-compass-isolated}
 
   im:
-  - { preset: scoop-install, args: telegram }
-  # - { preset: scoop-install, args: discord}
-  - { preset: scoop-install, args: wechat }
-  - { preset: scoop-install, args: wecom }
-  # - { preset: scoop-install, args: cleanmywechat}
-  # - { preset: scoop-install, args: wechat_ScoopInstaller}
-  # - { preset: scoop-install, args: wechat_akirco}
-  # - { preset: scoop-install, args: WechatExporter}
-  # - { preset: scoop-install, args: pywxdump}
-  # - { preset: scoop-install, args: memotrace}
-  # - { preset: scoop-install, args: WeChatMsg}
-  - { preset: scoop-install, args: element }
-  # - { preset: scoop-install, args: gomuks}
-  # - { preset: scoop-install, args: pidgin}
+  - { kind: scoop-app, name: telegram }
+  # - { kind: scoop-app, name: discord}
+  - { kind: scoop-app, name: wechat }
+  - { kind: scoop-app, name: wecom }
+  # - { kind: scoop-app, name: cleanmywechat}
+  # - { kind: scoop-app, name: wechat_ScoopInstaller}
+  # - { kind: scoop-app, name: wechat_akirco}
+  # - { kind: scoop-app, name: WechatExporter}
+  # - { kind: scoop-app, name: pywxdump}
+  # - { kind: scoop-app, name: memotrace}
+  # - { kind: scoop-app, name: WeChatMsg}
+  - { kind: scoop-app, name: element }
+  # - { kind: scoop-app, name: gomuks}
+  # - { kind: scoop-app, name: pidgin}
 
   remote:
-  - { preset: scoop-install, args: gdm257/moonlight }
-  - { preset: scoop-install, args: sunshine }
-  # - { preset: scoop-install, args: tencent-meeting}
-  # - { preset: scoop-install, args: remoteapptool}
-  # - { preset: scoop-install, args: rustdesk}
-  # - { preset: scoop-install, args: parsec}
-  # - { preset: scoop-install, args: scrcpy}
-  # - { preset: scoop-install, args: qtscrcpy}
-  - { preset: scoop-install, args: escrcpy }
-  # - { preset: scoop-install, args: deskreen}
-  # - { preset: scoop-install, args: wakemeonlan}
+  - { kind: scoop-app, name: gdm257/moonlight }
+  - { kind: scoop-app, name: sunshine }
+  # - { kind: scoop-app, name: tencent-meeting}
+  # - { kind: scoop-app, name: remoteapptool}
+  # - { kind: scoop-app, name: rustdesk}
+  # - { kind: scoop-app, name: parsec}
+  # - { kind: scoop-app, name: scrcpy}
+  # - { kind: scoop-app, name: qtscrcpy}
+  - { kind: scoop-app, name: escrcpy }
+  # - { kind: scoop-app, name: deskreen}
+  # - { kind: scoop-app, name: wakemeonlan}
 
   proxy:
-  # - { preset: scoop-install, args: main/tor}
-  # - { preset: scoop-install, args: simple-obfs}
-  # - { preset: scoop-install, args: proxychains}
-  # - { preset: scoop-install, args: gdm257/ghost-proxifier}
-  - { preset: scoop-install, args: gdm257/ghost-proxifier-257 }
-  # - { preset: scoop-install, args: clash}
-  # - { preset: scoop-install, args: mihomo}
-  # - { preset: scoop-install, args: clashtui}
-  # - { preset: scoop-install, args: clash-for-windows}
-  # - { preset: scoop-install, args: clash-for-windows-portable}
-  # - { preset: scoop-install, args: clashweb}
-  # - { preset: scoop-install, args: clashy}
-  - { preset: scoop-install, args: clash-party }
-  # - { preset: scoop-install, args: mihomo-party}
-  # - { preset: scoop-install, args: clash-verge-rev_chawyehsu}
-  # - { preset: scoop-install, args: clash-nyanpasu}
-  # - { preset: scoop-install, args: clash-verge}
-  # - { preset: scoop-install, args: geoip-country-mmdb}
-  # - { preset: scoop-install, args: v2ray}
-  # - { preset: scoop-install, args: v2ray-domain-list-community}
-  # - { preset: scoop-install, args: v2ray-geoip}
-  # - { preset: scoop-install, args: v2ray-rules-dat}
-  # - { preset: scoop-install, args: qv2ray}
-  # - { preset: scoop-install, args: qv2ray-plugin-command}
-  # - { preset: scoop-install, args: qv2ray-plugin-naiveproxy}
-  # - { preset: scoop-install, args: qv2ray-plugin-ss}
-  # - { preset: scoop-install, args: qv2ray-plugin-ssr}
-  # - { preset: scoop-install, args: qv2ray-plugin-trojan}
-  # - { preset: scoop-install, args: qv2ray-plugin-trojan-go}
-  # - { preset: scoop-install, args: v2rayA}
-  # - { preset: scoop-install, args: nekoray}
-  # - { preset: scoop-install, args: sing-box}
-  # - { preset: scoop-install, args: hysteria}
-  # - { preset: scoop-install, args: trojan}
-  # - { preset: scoop-install, args: trojan-go}
-  # - { preset: scoop-install, args: leaf}
-  # - { preset: scoop-install, args: hiddify-next}
-  # - { preset: scoop-install, args: hiddify-next_noql-net}
-  # - { preset: scoop-install, args: shadowsocks-uri-generator}
-  # - { preset: scoop-install, args: tuic}
-  # - { preset: scoop-install, args: naiveproxy}
+  # - { kind: scoop-app, name: main/tor}
+  # - { kind: scoop-app, name: simple-obfs}
+  # - { kind: scoop-app, name: proxychains}
+  # - { kind: scoop-app, name: gdm257/ghost-proxifier}
+  - { kind: scoop-app, name: gdm257/ghost-proxifier-257 }
+  # - { kind: scoop-app, name: clash}
+  # - { kind: scoop-app, name: mihomo}
+  # - { kind: scoop-app, name: clashtui}
+  # - { kind: scoop-app, name: clash-for-windows}
+  # - { kind: scoop-app, name: clash-for-windows-portable}
+  # - { kind: scoop-app, name: clashweb}
+  # - { kind: scoop-app, name: clashy}
+  - { kind: scoop-app, name: clash-party }
+  # - { kind: scoop-app, name: mihomo-party}
+  # - { kind: scoop-app, name: clash-verge-rev_chawyehsu}
+  # - { kind: scoop-app, name: clash-nyanpasu}
+  # - { kind: scoop-app, name: clash-verge}
+  # - { kind: scoop-app, name: geoip-country-mmdb}
+  # - { kind: scoop-app, name: v2ray}
+  # - { kind: scoop-app, name: v2ray-domain-list-community}
+  # - { kind: scoop-app, name: v2ray-geoip}
+  # - { kind: scoop-app, name: v2ray-rules-dat}
+  # - { kind: scoop-app, name: qv2ray}
+  # - { kind: scoop-app, name: qv2ray-plugin-command}
+  # - { kind: scoop-app, name: qv2ray-plugin-naiveproxy}
+  # - { kind: scoop-app, name: qv2ray-plugin-ss}
+  # - { kind: scoop-app, name: qv2ray-plugin-ssr}
+  # - { kind: scoop-app, name: qv2ray-plugin-trojan}
+  # - { kind: scoop-app, name: qv2ray-plugin-trojan-go}
+  # - { kind: scoop-app, name: v2rayA}
+  # - { kind: scoop-app, name: nekoray}
+  # - { kind: scoop-app, name: sing-box}
+  # - { kind: scoop-app, name: hysteria}
+  # - { kind: scoop-app, name: trojan}
+  # - { kind: scoop-app, name: trojan-go}
+  # - { kind: scoop-app, name: leaf}
+  # - { kind: scoop-app, name: hiddify-next}
+  # - { kind: scoop-app, name: hiddify-next_noql-net}
+  # - { kind: scoop-app, name: shadowsocks-uri-generator}
+  # - { kind: scoop-app, name: tuic}
+  # - { kind: scoop-app, name: naiveproxy}
 
   ping:
-  - { preset: scoop-install, args: gping }
-  # - { preset: scoop-install, args: nping}
+  - { kind: scoop-app, name: gping }
+  # - { kind: scoop-app, name: nping}
 
   port-scanner:
 
   trace:
-  - { preset: scoop-install, args: nexttrace }
-  # - { preset: scoop-install, args: trippy}
-  # - { preset: scoop-install, args: besttrace}
+  - { kind: scoop-app, name: nexttrace }
+  # - { kind: scoop-app, name: trippy}
+  # - { kind: scoop-app, name: besttrace}
 
   reverse-proxy:
-  - { preset: scoop-install, args: traefik }
-  - { preset: scoop-install, args: gdm257/zoraxy }
-  - { preset: scoop-install, args: gdm257/whoami }
-  # - { preset: scoop-install, args: lego}
-  # - { preset: scoop-install, args: apache}
-  # - { preset: scoop-install, args: nginx}
-  # - { preset: scoop-install, args: caddy}
-  # - { preset: scoop-install, args: xcaddy}
-  - { preset: scoop-install, args: mkcert }
+  - { kind: scoop-app, name: traefik }
+  - { kind: scoop-app, name: gdm257/zoraxy }
+  - { kind: scoop-app, name: gdm257/whoami }
+  # - { kind: scoop-app, name: lego}
+  # - { kind: scoop-app, name: apache}
+  # - { kind: scoop-app, name: nginx}
+  # - { kind: scoop-app, name: caddy}
+  # - { kind: scoop-app, name: xcaddy}
+  - { kind: scoop-app, name: mkcert }
 
   chatgpt:
-  # - { preset: scoop-install, args: chatgpt}
-  - { preset: scoop-install, args: gdm257/cherry-studio-v1 }
-  # - { preset: scoop-install, args: chatwise}
-  # - { preset: scoop-install, args: chatgpt-next-web}
-  # - { preset: scoop-install, args: binggpt-portable}
-  # - { preset: scoop-install, args: chatbox}
-  # - { preset: scoop-install, args: ChatALL-Portable}
-  - { preset: scoop-install, args: main/aichat }
-  # - { preset: scoop-install, args: mcp-linker}
-  # - { preset: scoop-install, args: rivet}
+  # - { kind: scoop-app, name: chatgpt}
+  - { kind: scoop-app, name: gdm257/cherry-studio-v1 }
+  # - { kind: scoop-app, name: chatwise}
+  # - { kind: scoop-app, name: chatgpt-next-web}
+  # - { kind: scoop-app, name: binggpt-portable}
+  # - { kind: scoop-app, name: chatbox}
+  # - { kind: scoop-app, name: ChatALL-Portable}
+  - { kind: scoop-app, name: main/aichat }
+  # - { kind: scoop-app, name: mcp-linker}
+  # - { kind: scoop-app, name: rivet}
 
   tunnel:
-  # - { preset: scoop-install, args: chisel}
-  - { preset: scoop-install, args: tcptunnel }
-  # - { preset: scoop-install, args: portforwarder}
-  - { preset: scoop-install, args: main/cloudflared }
-  - { preset: scoop-install, args: gdm257/ddnsto }
-  - { preset: scoop-install, args: frp }
-  - { preset: scoop-install, args: gdm257/frpmgr }
-  # - { preset: scoop-install, args: ZeroTier}
-  # - { preset: scoop-install, args: nps-server}
-  # - { preset: scoop-install, args: nps-client}
-  # - { preset: scoop-install, args: rathole}
-  # - { preset: scoop-install, args: tailscale}
-  - { preset: scoop-install, args: gdm257/astral }
+  # - { kind: scoop-app, name: chisel}
+  - { kind: scoop-app, name: tcptunnel }
+  # - { kind: scoop-app, name: portforwarder}
+  - { kind: scoop-app, name: main/cloudflared }
+  - { kind: scoop-app, name: gdm257/ddnsto }
+  - { kind: scoop-app, name: frp }
+  - { kind: scoop-app, name: gdm257/frpmgr }
+  # - { kind: scoop-app, name: ZeroTier}
+  # - { kind: scoop-app, name: nps-server}
+  # - { kind: scoop-app, name: nps-client}
+  # - { kind: scoop-app, name: rathole}
+  # - { kind: scoop-app, name: tailscale}
+  - { kind: scoop-app, name: gdm257/astral }
 
   irc:
-  - { preset: scoop-install, args: hexchat }
+  - { kind: scoop-app, name: hexchat }
 
   mail:
-  # - { preset: scoop-install, args: mailspring}
-  # - { preset: scoop-install, args: Thunderbird-Portable}
-  # - { preset: scoop-install, args: tutanota}
+  # - { kind: scoop-app, name: mailspring}
+  # - { kind: scoop-app, name: Thunderbird-Portable}
+  # - { kind: scoop-app, name: tutanota}
 
   benchmark:
-  - { preset: scoop-install, args: iperf3 }
-  # - { preset: scoop-install, args: jmeter}
-  # - { preset: scoop-install, args: ali}
-  # - { preset: scoop-install, args: packetsender}
-  - { preset: scoop-install, args: postman }
-  - { preset: scoop-install, args: bruno }
-  # - { preset: scoop-install, args: hoppscotch}
-  # - { preset: scoop-install, args: keploy}
+  - { kind: scoop-app, name: iperf3 }
+  # - { kind: scoop-app, name: jmeter}
+  # - { kind: scoop-app, name: ali}
+  # - { kind: scoop-app, name: packetsender}
+  - { kind: scoop-app, name: postman }
+  - { kind: scoop-app, name: bruno }
+  # - { kind: scoop-app, name: hoppscotch}
+  # - { kind: scoop-app, name: keploy}
 
   oauth:
-  - { preset: scoop-install, args: gdm257/oauth2l }
-  - { preset: scoop-install, args: main/oauth2c }
+  - { kind: scoop-app, name: gdm257/oauth2l }
+  - { kind: scoop-app, name: main/oauth2c }
 
   packet:
-  - { preset: scoop-install, args: gdm257/whistle }
-  - { preset: scoop-install, args: proxypin }
-  - { preset: scoop-install, args: wireshark }
-  # - { preset: scoop-install, args: charles}
-  # - { preset: scoop-install, args: termshark}
-  # - { preset: scoop-install, args: fiddler}
-  # - { preset: scoop-install, args: mitmproxy}
-  # - { preset: scoop-install, args: trafficmonitor}
-  - { preset: scoop-install, args: tproxy }
-  - { preset: scoop-install, args: winnfsd }
+  - { kind: scoop-app, name: gdm257/whistle }
+  - { kind: scoop-app, name: proxypin }
+  - { kind: scoop-app, name: wireshark }
+  # - { kind: scoop-app, name: charles}
+  # - { kind: scoop-app, name: termshark}
+  # - { kind: scoop-app, name: fiddler}
+  # - { kind: scoop-app, name: mitmproxy}
+  # - { kind: scoop-app, name: trafficmonitor}
+  - { kind: scoop-app, name: tproxy }
+  - { kind: scoop-app, name: winnfsd }
 
   network:
-  - { preset: scoop-install, args: gns3 }
-  # - { preset: scoop-install, args: dug}
-  # - { preset: scoop-install, args: zpscan}
-  # - { preset: scoop-install, args: teleport}
-  # - { preset: scoop-install, args: hostctl}
-  # - { preset: scoop-install, args: kscan_batkiz}
-  # - { preset: scoop-install, args: fscan}
+  - { kind: scoop-app, name: gns3 }
+  # - { kind: scoop-app, name: dug}
+  # - { kind: scoop-app, name: zpscan}
+  # - { kind: scoop-app, name: teleport}
+  # - { kind: scoop-app, name: hostctl}
+  # - { kind: scoop-app, name: kscan_batkiz}
+  # - { kind: scoop-app, name: fscan}
 
   tcp:
-  - { preset: scoop-install, args: bandwhich }
-  # - { preset: scoop-install, args: "npcap sniffnet"}
-  - { preset: scoop-install, args: clumsy }
-  - { preset: scoop-install, args: grpcurl }
-  - { preset: scoop-install, args: websocat }
-  - { preset: scoop-install, args: atac }
-  # - { preset: scoop-install, args: webhook}
+  - { kind: scoop-app, name: bandwhich }
+  # - { kind: scoop-app, name: "npcap sniffnet"}
+  - { kind: scoop-app, name: clumsy }
+  - { kind: scoop-app, name: grpcurl }
+  - { kind: scoop-app, name: websocat }
+  - { kind: scoop-app, name: atac }
+  # - { kind: scoop-app, name: webhook}
 
   ip:
-  # - { preset: scoop-install, args: asnmap}
-  - { preset: scoop-install, args: networkmanager }
-  - { preset: scoop-install, args: masscan }
-  - { preset: scoop-install, args: naabu }
-  - { preset: scoop-install, args: tlsx }
-  - { preset: scoop-install, args: subfinder }
-  - { preset: scoop-install, args: nmap-portable }
-  - { preset: scoop-install, args: nuclei }
-  # - { preset: scoop-install, args: ipscan}
+  # - { kind: scoop-app, name: asnmap}
+  - { kind: scoop-app, name: networkmanager }
+  - { kind: scoop-app, name: masscan }
+  - { kind: scoop-app, name: naabu }
+  - { kind: scoop-app, name: tlsx }
+  - { kind: scoop-app, name: subfinder }
+  - { kind: scoop-app, name: nmap-portable }
+  - { kind: scoop-app, name: nuclei }
+  # - { kind: scoop-app, name: ipscan}
 
   speedtest:
-  # - { preset: scoop-install, args: CloudflareSpeedTest}
-  # - { preset: scoop-install, args: stairspeedtest-reborn}
+  # - { kind: scoop-app, name: CloudflareSpeedTest}
+  # - { kind: scoop-app, name: stairspeedtest-reborn}
 
 
-run:
+items:
   - { group: browser }
   - { group: curl }
   - { group: dns }

@@ -1,102 +1,97 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-
 groups:
   bilibili:
-  # - { preset: scoop-install, args: annie}
-  # - { preset: scoop-install, args: lux}
-  # - { preset: scoop-install, args: bbdown-beta}
-  # - { preset: scoop-install, args: bbdown}
-  # - { preset: scoop-install, args: downkyi}
-  - { preset: scoop-install, args: gdm257/fav }
+  # - { kind: scoop-app, name: annie}
+  # - { kind: scoop-app, name: lux}
+  # - { kind: scoop-app, name: bbdown-beta}
+  # - { kind: scoop-app, name: bbdown}
+  # - { kind: scoop-app, name: downkyi}
+  - { kind: scoop-app, name: gdm257/fav }
 
   bt:
-  - { preset: scoop-install, args: qbittorrent-enhanced }
-  - { preset: scoop-install, args: gdm257/qbbanhelper }
-  # - { preset: scoop-install, args: qbittorrent-portable}
+  - { kind: scoop-app, name: qbittorrent-enhanced }
+  - { kind: scoop-app, name: gdm257/qbbanhelper }
+  # - { kind: scoop-app, name: qbittorrent-portable}
 
   downloader:
-  # - { preset: scoop-install, args: FileCentipede}
-  - { preset: scoop-install, args: gopeed }
-  # - { preset: scoop-install, args: ariang-native}
+  # - { kind: scoop-app, name: FileCentipede}
+  - { kind: scoop-app, name: gopeed }
+  # - { kind: scoop-app, name: ariang-native}
 
   driver:
-  - { preset: scoop-install, args: snappy-driver-installer-origin }
+  - { kind: scoop-app, name: snappy-driver-installer-origin }
 
   cloud-storage:
-  - { preset: scoop-install, args: rclone }
-  - { preset: scoop-install, args: rclone-browser }
-  # - { preset: scoop-install, args: rclone-ui}
-  - { preset: scoop-install, args: gdm257/clouddrive2 }
-  - { preset: scoop-install, args: gdm257/guangyapan }
-  # - { preset: scoop-install, args: winfsp-np-beta}
-  - { preset: scoop-install, args: winscp }
-  # - { preset: scoop-install, args: megasync}
-  # - { preset: scoop-install, args: 115}
-  - { preset: scoop-install, args: gdm257/115chrome }
-  # - { preset: scoop-install, args: BaiduNetdisk}
-  # - { preset: scoop-install, args: openlist}
-  - { preset: scoop-install, args: openlist-desktop }
-  # - { preset: scoop-install, args: alist-helper}
-  # - { preset: scoop-install, args: hfs}
-  # - { preset: scoop-install, args: sftpgo}
-  # - { preset: scoop-install, args: fake115uploader }
-  # - { preset: scoop-install, args: fake115-go }
-  # - { preset: scoop-install, args: BaiduPanFilesTransfers }
-  # - { preset: scoop-install, args: baidupcs-go }
-  - { preset: scoop-install, args: s3browser }
-  # - { preset: scoop-install, args: termscp}
+  - { kind: scoop-app, name: rclone }
+  - { kind: scoop-app, name: rclone-browser }
+  # - { kind: scoop-app, name: rclone-ui}
+  - { kind: scoop-app, name: gdm257/clouddrive2 }
+  - { kind: scoop-app, name: gdm257/guangyapan }
+  # - { kind: scoop-app, name: winfsp-np-beta}
+  - { kind: scoop-app, name: winscp }
+  # - { kind: scoop-app, name: megasync}
+  # - { kind: scoop-app, name: 115}
+  - { kind: scoop-app, name: gdm257/115chrome }
+  # - { kind: scoop-app, name: BaiduNetdisk}
+  # - { kind: scoop-app, name: openlist}
+  - { kind: scoop-app, name: openlist-desktop }
+  # - { kind: scoop-app, name: alist-helper}
+  # - { kind: scoop-app, name: hfs}
+  # - { kind: scoop-app, name: sftpgo}
+  # - { kind: scoop-app, name: fake115uploader }
+  # - { kind: scoop-app, name: fake115-go }
+  # - { kind: scoop-app, name: BaiduPanFilesTransfers }
+  # - { kind: scoop-app, name: baidupcs-go }
+  - { kind: scoop-app, name: s3browser }
+  # - { kind: scoop-app, name: termscp}
 
   file-transfer:
-  - { preset: scoop-install, args: croc }
-  # - { preset: scoop-install, args: landrop}
-  # - { preset: scoop-install, args: dukto}
-  # - { preset: scoop-install, args: dufs}
-  - { preset: scoop-install, args: localsend }
+  - { kind: scoop-app, name: croc }
+  # - { kind: scoop-app, name: landrop}
+  # - { kind: scoop-app, name: dukto}
+  # - { kind: scoop-app, name: dufs}
+  - { kind: scoop-app, name: localsend }
 
   ipfs:
-  # - { preset: scoop-install, args: ipfs-desktop}
-  - { preset: scoop-install, args: kubo }
+  # - { kind: scoop-app, name: ipfs-desktop}
+  - { kind: scoop-app, name: kubo }
 
   pixiv:
-  - { preset: scoop-install, args: pixivutil2 }
-  # - { preset: scoop-install, args: pixivbiu}
-  - { preset: scoop-install, args: gallery-dl }
+  - { kind: scoop-app, name: pixivutil2 }
+  # - { kind: scoop-app, name: pixivbiu}
+  - { kind: scoop-app, name: gallery-dl }
 
   package-manager:
-  - { preset: scoop-install, args: scoop-search }
-  - { preset: scoop-install, args: gdm257/scoop-checkver }
-  # - { preset: scoop-install, args: ss}
-  - { preset: scoop-install, args: winget }
-  # - { preset: scoop-install, args: winget-preview}
-  - { preset: scoop-install, args: wingetcreate }
-  # - { preset: scoop-install, args: wingetui}
-  - { preset: scoop-install, args: UniGetUI }
-  - { preset: scoop-install, args: pkgx }
-  # - { preset: scoop-install, args: eget}
-  - { preset: scoop-install, args: bin-manager }
-  # - { preset: scoop-install, args: stew}
-  # - { preset: scoop-install, args: Baulk_dodorz}
-  # - { preset: scoop-install, args: shovel}
-  # - { preset: scoop-install, args: npackd}
+  - { kind: scoop-app, name: scoop-search }
+  - { kind: scoop-app, name: gdm257/scoop-checkver }
+  # - { kind: scoop-app, name: ss}
+  - { kind: scoop-app, name: winget }
+  # - { kind: scoop-app, name: winget-preview}
+  - { kind: scoop-app, name: wingetcreate }
+  # - { kind: scoop-app, name: wingetui}
+  - { kind: scoop-app, name: UniGetUI }
+  - { kind: scoop-app, name: pkgx }
+  # - { kind: scoop-app, name: eget}
+  - { kind: scoop-app, name: bin-manager }
+  # - { kind: scoop-app, name: stew}
+  # - { kind: scoop-app, name: Baulk_dodorz}
+  # - { kind: scoop-app, name: shovel}
+  # - { kind: scoop-app, name: npackd}
 
   sync:
-  # - { preset: scoop-install, args: cwRsync}
-  # - { preset: scoop-install, args: synctrayzor}
+  # - { kind: scoop-app, name: cwRsync}
+  # - { kind: scoop-app, name: synctrayzor}
 
   windows:
-  # - { preset: scoop-install, args: windows-iso-downloader}
-  - { preset: scoop-install, args: officetoolplus }
-  # - { preset: scoop-install, args: lky-officetools}
+  # - { kind: scoop-app, name: windows-iso-downloader}
+  - { kind: scoop-app, name: officetoolplus }
+  # - { kind: scoop-app, name: lky-officetools}
 
   youtube:
-  # - { preset: scoop-install, args: youtube-dl}
-  # - { preset: scoop-install, args: youtube-dl-gui}
-  - { preset: scoop-install, args: yt-dlp }
+  # - { kind: scoop-app, name: youtube-dl}
+  # - { kind: scoop-app, name: youtube-dl-gui}
+  - { kind: scoop-app, name: yt-dlp }
 
-run:
+items:
   - { group: bilibili }
   - { group: bt }
   - { group: downloader }

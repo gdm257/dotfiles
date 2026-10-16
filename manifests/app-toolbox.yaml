@@ -1,78 +1,73 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-
 groups:
   go:
-  - { preset: scoop-install, args: golly }
-  - { preset: scoop-install, args: lizzieyzy }
-  - { preset: scoop-install, args: katrain }
-  # - { preset: scoop-install, args: ogatak}
-  # - { preset: scoop-install, args: q5go}
-  # - { preset: scoop-install, args: sabaki}
-  - { preset: scoop-install, args: pachi }
-  - { preset: scoop-install, args: leela-zero }
-  - { preset: scoop-install, args: leela-zero-network }
-  - { preset: scoop-install, args: katago }
-  - { preset: scoop-install, args: katago-tensorrt }
-  - { preset: scoop-install, args: ikatago }
+  - { kind: scoop-app, name: golly }
+  - { kind: scoop-app, name: lizzieyzy }
+  - { kind: scoop-app, name: katrain }
+  # - { kind: scoop-app, name: ogatak}
+  # - { kind: scoop-app, name: q5go}
+  # - { kind: scoop-app, name: sabaki}
+  - { kind: scoop-app, name: pachi }
+  - { kind: scoop-app, name: leela-zero }
+  - { kind: scoop-app, name: leela-zero-network }
+  - { kind: scoop-app, name: katago }
+  - { kind: scoop-app, name: katago-tensorrt }
+  - { kind: scoop-app, name: ikatago }
 
   toolbox:
-  - { preset: scoop-install, args: sysinternals }
-  # - { preset: scoop-install, args: sysinternals_ScoopInstaller}
-  - { preset: scoop-install, args: gdm257/tubatools }
-  # - { preset: scoop-install, args: gaojitools}
-  # - { preset: scoop-install, args: fufu-tools}
-  - { preset: scoop-install, args: officebox }
+  - { kind: scoop-app, name: sysinternals }
+  # - { kind: scoop-app, name: sysinternals_ScoopInstaller}
+  - { kind: scoop-app, name: gdm257/tubatools }
+  # - { kind: scoop-app, name: gaojitools}
+  # - { kind: scoop-app, name: fufu-tools}
+  - { kind: scoop-app, name: officebox }
 
   utils:
-  # - { preset: scoop-install, args: uutils-coreutils}
-  # - { preset: scoop-install, args: busybox}
-  # - { preset: scoop-install, args: vim}
-  - { preset: scoop-install, args: file }
-  - { preset: scoop-install, args: curl }
-  - { preset: scoop-install, args: wget }
+  # - { kind: scoop-app, name: uutils-coreutils}
+  # - { kind: scoop-app, name: busybox}
+  # - { kind: scoop-app, name: vim}
+  - { kind: scoop-app, name: file }
+  - { kind: scoop-app, name: curl }
+  - { kind: scoop-app, name: wget }
 
   games:
-  - { preset: scoop-install, args: gdm257/GriefSyndrome }
+  - { kind: scoop-app, name: gdm257/GriefSyndrome }
 
   game-manager:
-  - { preset: scoop-install, args: ludusavi }
-  - { preset: scoop-install, args: playnite }
-  # - { preset: scoop-install, args: steam-rom-manager}
-  - { preset: scoop-install, args: gdm257/ReinaManager }
-  # - { preset: scoop-install, args: gdm257/vnite}
-  # - { preset: scoop-install, args: gdm257/WinDeckHelper}
-  - { preset: scoop-install, args: thprac }
-  - { preset: scoop-install, args: steam }
-  - { preset: scoop-install, args: itch }
-  - { preset: scoop-install, args: gdm257/epic-games-launcher }
-  - { preset: scoop-install, args: SGDBoop }
-  # - { preset: scoop-install, args: steam-deck-tools}
-  # - { preset: scoop-install, args: HeroicGameLauncher-Portable}
-  # - { preset: scoop-install, args: EpicGamesLauncher-Portable}
-  # - { preset: scoop-install, args: GOGGalaxy-Portable}
-  - { preset: scoop-install, args: gog-galaxy }
-  # - { preset: scoop-install, args: watt-toolkit}
-  # - { preset: scoop-install, args: snap-hutao}
-  # - { preset: scoop-install, args: collapse}
-  - { preset: scoop-install, args: starward }
-  - { preset: scoop-install, args: game-cheats-manager }
+  - { kind: scoop-app, name: ludusavi }
+  - { kind: scoop-app, name: playnite }
+  # - { kind: scoop-app, name: steam-rom-manager}
+  - { kind: scoop-app, name: gdm257/ReinaManager }
+  # - { kind: scoop-app, name: gdm257/vnite}
+  # - { kind: scoop-app, name: gdm257/WinDeckHelper}
+  - { kind: scoop-app, name: thprac }
+  - { kind: scoop-app, name: steam }
+  - { kind: scoop-app, name: itch }
+  - { kind: scoop-app, name: gdm257/epic-games-launcher }
+  - { kind: scoop-app, name: SGDBoop }
+  # - { kind: scoop-app, name: steam-deck-tools}
+  # - { kind: scoop-app, name: HeroicGameLauncher-Portable}
+  # - { kind: scoop-app, name: EpicGamesLauncher-Portable}
+  # - { kind: scoop-app, name: GOGGalaxy-Portable}
+  - { kind: scoop-app, name: gog-galaxy }
+  # - { kind: scoop-app, name: watt-toolkit}
+  # - { kind: scoop-app, name: snap-hutao}
+  # - { kind: scoop-app, name: collapse}
+  - { kind: scoop-app, name: starward }
+  - { kind: scoop-app, name: game-cheats-manager }
 
   mod:
-  - { preset: scoop-install, args: mo2 }
-  - { preset: scoop-install, args: vortex }
+  - { kind: scoop-app, name: mo2 }
+  - { kind: scoop-app, name: vortex }
 
   controller:
-  # - { preset: scoop-install, args: joytokey}
-  - { preset: scoop-install, args: antimicrox }
-  - { preset: scoop-install, args: gdm257/sickeaseoverlay }
-  - { preset: scoop-install, args: gdm257/vomishield }
-  - { preset: scoop-install, args: gdm257/airi }
+  # - { kind: scoop-app, name: joytokey}
+  - { kind: scoop-app, name: antimicrox }
+  - { kind: scoop-app, name: gdm257/sickeaseoverlay }
+  - { kind: scoop-app, name: gdm257/vomishield }
+  - { kind: scoop-app, name: gdm257/airi }
 
 
-run:
+items:
   - { group: go }
   - { group: toolbox }
   - { group: utils }

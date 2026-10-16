@@ -1,89 +1,84 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-
 groups:
   osu:
-  - { preset: scoop-install, args: taisei }
-  - { preset: scoop-install, args: osulazer }
-  - { preset: scoop-install, args: collection-manager }
-  # - { preset: scoop-install, args: osuplayer}
-  # - { preset: scoop-install, args: danser-go}
-  # - { preset: scoop-install, args: rewind}
-  # - { preset: scoop-install, args: storybrew}
-  - { preset: scoop-install, args: OsuBeatmapDownloader }
-  # - { preset: scoop-install, args: gdm257/oszsave}
-  # - { preset: scoop-install, args: OsuRankedBeatmapDownloader}
+  - { kind: scoop-app, name: taisei }
+  - { kind: scoop-app, name: osulazer }
+  - { kind: scoop-app, name: collection-manager }
+  # - { kind: scoop-app, name: osuplayer}
+  # - { kind: scoop-app, name: danser-go}
+  # - { kind: scoop-app, name: rewind}
+  # - { kind: scoop-app, name: storybrew}
+  - { kind: scoop-app, name: OsuBeatmapDownloader }
+  # - { kind: scoop-app, name: gdm257/oszsave}
+  # - { kind: scoop-app, name: OsuRankedBeatmapDownloader}
 
   music-player:
-  - { preset: scoop-install, args: aimp }
-  # - { preset: scoop-install, args: "foobar2000 foobar2000-encoders foobar2000-foobox-en-pack"}
-  # - { preset: scoop-install, args: foobar2000-asion-cn-plus}
-  # - { preset: scoop-install, args: musicbee}
-  # - { preset: scoop-install, args: ampcast}
-  - { preset: scoop-install, args: yesplaymusic }
-  # - { preset: scoop-install, args: feeluown}
-  - { preset: scoop-install, args: feishin }
-  # - { preset: scoop-install, args: supersonic}
-  # - { preset: scoop-install, args: gdm257/nsmusics}
-  # - { preset: scoop-install, args: mp3tag-portable}
-  - { preset: scoop-install, args: cuetools }
-  # - { preset: scoop-install, args: eac}
-  # - { preset: scoop-install, args: picard}
-  # - { preset: scoop-install, args: balabolka}
-  - { preset: scoop-install, args: lfs/awesome-sf }
-  # - { preset: scoop-install, args: fluidsynth}
-  - { preset: scoop-install, args: gdm257/kiva }
-  - { preset: scoop-install, args: gdm257/zenith }
-  - { preset: scoop-install, args: gdm257/tmidi }
-  # - { preset: scoop-install, args: plmidi}
-  - { preset: scoop-install, args: gdm257/keppy-midi-converter }
-  # - { preset: scoop-install, args: miditrail}
-  - { preset: scoop-install, args: 163MusicLyrics }
+  - { kind: scoop-app, name: aimp }
+  # - { kind: scoop-app, name: "foobar2000 foobar2000-encoders foobar2000-foobox-en-pack"}
+  # - { kind: scoop-app, name: foobar2000-asion-cn-plus}
+  # - { kind: scoop-app, name: musicbee}
+  # - { kind: scoop-app, name: ampcast}
+  - { kind: scoop-app, name: yesplaymusic }
+  # - { kind: scoop-app, name: feeluown}
+  - { kind: scoop-app, name: feishin }
+  # - { kind: scoop-app, name: supersonic}
+  # - { kind: scoop-app, name: gdm257/nsmusics}
+  # - { kind: scoop-app, name: mp3tag-portable}
+  - { kind: scoop-app, name: cuetools }
+  # - { kind: scoop-app, name: eac}
+  # - { kind: scoop-app, name: picard}
+  # - { kind: scoop-app, name: balabolka}
+  - { kind: scoop-app, name: lfs/awesome-sf }
+  # - { kind: scoop-app, name: fluidsynth}
+  - { kind: scoop-app, name: gdm257/kiva }
+  - { kind: scoop-app, name: gdm257/zenith }
+  - { kind: scoop-app, name: gdm257/tmidi }
+  # - { kind: scoop-app, name: plmidi}
+  - { kind: scoop-app, name: gdm257/keppy-midi-converter }
+  # - { kind: scoop-app, name: miditrail}
+  - { kind: scoop-app, name: 163MusicLyrics }
 
   music-sheet:
-  - { preset: scoop-install, args: gdm257/awesome-scores }
-  - { preset: scoop-install, args: gdm257/keyfinder }
-  - { preset: scoop-install, args: gdm257/wavetone }
-  - { preset: scoop-install, args: musescore }
-  # - { preset: scoop-install, args: lilypond}
-  # - { preset: scoop-install, args: everyone-piano}
-  # - { preset: scoop-install, args: freepiano}
-  # - { preset: scoop-install, args: vgm2mid}
-  # - { preset: scoop-install, args: midnote}
-  # - { preset: scoop-install, args: smf-dsp}
-  # - { preset: scoop-install, args: infrarecorder}
-  # - { preset: scoop-install, args: InfrarecorderPortable}
-  # - { preset: scoop-install, args: strawberry}
-  # - { preset: scoop-install, args: clementine}
-  # - { preset: scoop-install, args: spleeter-gui}
-  # - { preset: scoop-install, args: polyglot}
-  # - { preset: scoop-install, args: keyfinder}
-  # - { preset: scoop-install, args: navidrome}
+  - { kind: scoop-app, name: gdm257/awesome-scores }
+  - { kind: scoop-app, name: gdm257/keyfinder }
+  - { kind: scoop-app, name: gdm257/wavetone }
+  - { kind: scoop-app, name: musescore }
+  # - { kind: scoop-app, name: lilypond}
+  # - { kind: scoop-app, name: everyone-piano}
+  # - { kind: scoop-app, name: freepiano}
+  # - { kind: scoop-app, name: vgm2mid}
+  # - { kind: scoop-app, name: midnote}
+  # - { kind: scoop-app, name: smf-dsp}
+  # - { kind: scoop-app, name: infrarecorder}
+  # - { kind: scoop-app, name: InfrarecorderPortable}
+  # - { kind: scoop-app, name: strawberry}
+  # - { kind: scoop-app, name: clementine}
+  # - { kind: scoop-app, name: spleeter-gui}
+  # - { kind: scoop-app, name: polyglot}
+  # - { kind: scoop-app, name: keyfinder}
+  # - { kind: scoop-app, name: navidrome}
 
   music-mixer:
-  - { preset: scoop-install, args: gdm257/viena }
-  - { preset: scoop-install, args: gdm257/polyphone }
-  # - { preset: scoop-install, args: reaper}
-  - { preset: scoop-install, args: lmms }
-  - { preset: scoop-install, args: audacity }
-  - { preset: scoop-install, args: gdm257/soundcraft }
-  - { preset: scoop-install, args: domino }
-  - { preset: scoop-install, args: helio }
-  - { preset: scoop-install, args: hydrogen }
-  - { preset: scoop-install, args: mixxx }
+  - { kind: scoop-app, name: gdm257/viena }
+  - { kind: scoop-app, name: gdm257/polyphone }
+  # - { kind: scoop-app, name: reaper}
+  - { kind: scoop-app, name: lmms }
+  - { kind: scoop-app, name: audacity }
+  - { kind: scoop-app, name: gdm257/soundcraft }
+  - { kind: scoop-app, name: domino }
+  - { kind: scoop-app, name: helio }
+  - { kind: scoop-app, name: hydrogen }
+  - { kind: scoop-app, name: mixxx }
 
   vocaloid:
-  - { preset: scoop-install, args: openutau }
-  - { preset: scoop-install, args: utsu }
+  - { kind: scoop-app, name: openutau }
+  - { kind: scoop-app, name: utsu }
 
   voice:
-  - { preset: scoop-install, args: gdm257/micyou }
-  - { preset: scoop-install, args: retrieval-based-voice-conversion-webui }
-  # - { preset: scoop-install, args: Buzz_dodorz}
+  - { kind: scoop-app, name: gdm257/micyou }
+  - { kind: scoop-app, name: retrieval-based-voice-conversion-webui }
+  # - { kind: scoop-app, name: Buzz_dodorz}
 
-run:
+items:
   - { group: osu }
   - { group: music-player }
   - { group: music-sheet }

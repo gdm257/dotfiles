@@ -1,350 +1,345 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-
 groups:
   _algorithm:
-  - { preset: scoop-install, args: openmodelica}
-  - { preset: scoop-install, args: scilab}
+  - { kind: scoop-app, name: openmodelica}
+  - { kind: scoop-app, name: scilab}
 
   _auth:
-  - { preset: scoop-install, args: ldap-admin}
+  - { kind: scoop-app, name: ldap-admin}
 
   _bash:
-  - { preset: scoop-install, args: shellcheck }
-  - { preset: scoop-install, args: shfmt }
+  - { kind: scoop-app, name: shellcheck }
+  - { kind: scoop-app, name: shfmt }
 
   _ci-cd:
-  # - { preset: scoop-install, args: teleport}
-  # - { preset: scoop-install, args: jenkins-lts}
-  # - { preset: scoop-install, args: nomad}
-  # - { preset: scoop-install, args: semaphore}
-  # - { preset: scoop-install, args: prometheus}
-  # - { preset: scoop-install, args: openobserve}
+  # - { kind: scoop-app, name: teleport}
+  # - { kind: scoop-app, name: jenkins-lts}
+  # - { kind: scoop-app, name: nomad}
+  # - { kind: scoop-app, name: semaphore}
+  # - { kind: scoop-app, name: prometheus}
+  # - { kind: scoop-app, name: openobserve}
 
   _cpp:
-  - { preset: scoop-install, args: qt-creator }
-  - { preset: scoop-install, args: xmake }
-  - { preset: scoop-install, args: conan }
-  - { preset: scoop-install, args: vcpkg }
-  - { preset: scoop-install, args: doxygen }
+  - { kind: scoop-app, name: qt-creator }
+  - { kind: scoop-app, name: xmake }
+  - { kind: scoop-app, name: conan }
+  - { kind: scoop-app, name: vcpkg }
+  - { kind: scoop-app, name: doxygen }
 
   _exe:
-  - { preset: scoop-install, args: upx }
-  - { preset: scoop-install, args: encrypto }
-  # - { preset: scoop-install, args: nfpm}
+  - { kind: scoop-app, name: upx }
+  - { kind: scoop-app, name: encrypto }
+  # - { kind: scoop-app, name: nfpm}
 
   _git-stats:
-  - { preset: scoop-install, args: onefetch }
-  - { preset: scoop-install, args: scc }
-  # - { preset: scoop-install, args: tokei}
-  # - { preset: scoop-install, args: cloc}
-  # - { preset: scoop-install, args: git-sizer}
-  # - { preset: scoop-install, args: git-quick-stats}
+  - { kind: scoop-app, name: onefetch }
+  - { kind: scoop-app, name: scc }
+  # - { kind: scoop-app, name: tokei}
+  # - { kind: scoop-app, name: cloc}
+  # - { kind: scoop-app, name: git-sizer}
+  # - { kind: scoop-app, name: git-quick-stats}
 
   _haskell:
-  - { preset: scoop-install, args: haskell }
-  # - { preset: scoop-install, args: stack}
-  - { preset: scoop-install, args: gdm257/stack }
+  - { kind: scoop-app, name: haskell }
+  # - { kind: scoop-app, name: stack}
+  - { kind: scoop-app, name: gdm257/stack }
 
   _macro:
-  - { preset: scoop-install, args: AutoHotkey-Portable_ACooper81}
-  - { preset: scoop-install, args: AutoHotkey2-Portable}
+  - { kind: scoop-app, name: AutoHotkey-Portable_ACooper81}
+  - { kind: scoop-app, name: AutoHotkey2-Portable}
 
   _mongodb:
-  - { preset: scoop-install, args: mongodb }
-  - { preset: scoop-install, args: mongodb-compass }
+  - { kind: scoop-app, name: mongodb }
+  - { kind: scoop-app, name: mongodb-compass }
 
   _mysql:
-  # - { preset: scoop-install, args: mysql57}
-  - { preset: scoop-install, args: mysql8}
-  # - { preset: scoop-install, args: dolt}
+  # - { kind: scoop-app, name: mysql57}
+  - { kind: scoop-app, name: mysql8}
+  # - { kind: scoop-app, name: dolt}
 
   _postgreql:
-  - { preset: scoop-install, args: postgresql14}
+  - { kind: scoop-app, name: postgresql14}
 
   _unity:
-  - { preset: scoop-install, args: unityhub}
+  - { kind: scoop-app, name: unityhub}
 
   coding-agent:
-  # - { preset: scoop-install, args: main/zeroclaw}
-  # - { preset: scoop-install, args: main/ironclaw}
-  # - { preset: scoop-install, args: picoclaw}
-  - { preset: scoop-install, args: gdm257/open-pencil }
-  # - { preset: scoop-install, args: gdm257/open-codesign}
-  - { preset: scoop-install, args: gdm257/codeg }
-  # - { preset: scoop-install, args: gdm257/mindfs}
-  # - { preset: scoop-install, args: gdm257/aionui}
-  # - { preset: scoop-install, args: gdm257/paseo}
-  # - { preset: scoop-install, args: gdm257/nezha}
-  # - { preset: scoop-install, args: gdm257/ccgui}
-  # - { preset: scoop-install, args: gdm257/vibe-around}
-  # - { preset: scoop-install, args: gdm257/deepchat}
-  # - { preset: scoop-install, args: gdm257/harnss}
-  # - { preset: scoop-install, args: opencode-desktop}
-  # - { preset: scoop-install, args: gdm257/claude-code-haha}
-  # - { preset: scoop-install, args: gdm257/opencode-worktree}
-  # - { preset: scoop-install, args: gdm257/ocx}
-  # - { preset: scoop-install, args: gdm257/memorph}
-  - { preset: scoop-install, args: gdm257/skillshare }
-  - { preset: scoop-install, args: gdm257/rulesync }
-  # - { preset: scoop-install, args: gdm257/iii}
-  # - { preset: scoop-install, args: idea-portable}
-  # - { preset: scoop-install, args: imhex}
-  # - { preset: scoop-install, args: vscode}
-  # - { preset: scoop-install, args: vscodium}
-  - { preset: scoop-install, args: zed }
-  # - { preset: scoop-install, args: void}
-  # - { preset: scoop-install, args: trae-cn}
-  # - { preset: scoop-install, args: trae}
-  # - { preset: scoop-install, args: cursor}
-  # - { preset: scoop-install, args: main/claude-code}
-  # - { preset: scoop-install, args: gdm257/shim-claude}
-  # - { preset: scoop-install, args: claurst}
-  # - { preset: scoop-install, args: crush}
-  # - { preset: scoop-install, args: codex}
-  # - { preset: scoop-install, args: opencode}
-  # - { preset: scoop-install, args: gdm257/peri}
-  - { preset: scoop-install, args: oh-my-pi }
-  # - { preset: scoop-install, args: gdm257/pi}
-  # - { preset: scoop-install, args: main/goose-cli}
-  # - { preset: scoop-install, args: gdm257/goose}
-  # - { preset: scoop-install, args: gdm257/goose-desktop}
-  # - { preset: scoop-install, args: zcode}
-  # - { preset: scoop-install, args: herdr}
-  # - { preset: scoop-install, args: gdm257/octopus}
-  - { preset: scoop-install, args: gdm257/octopus-257 }
-  # - { preset: scoop-install, args: main/cliproxyapi}
-  # - { preset: scoop-install, args: gdm257/cpa-manager-plus}
-  # - { preset: scoop-install, args: cc-switch}
-  # - { preset: scoop-install, args: gdm257/omniroute}
-  # - { preset: scoop-install, args: gdm257/claude-squad}
-  # - { preset: scoop-install, args: gdm257/sudocode}
-  # - { preset: scoop-install, args: gdm257/auto-claude}
-  # - { preset: scoop-install, args: beads}
-  # - { preset: scoop-install, args: beads-viewer}
-  # - { preset: scoop-install, args: gdm257/beads-plan}
-  - { preset: scoop-install, args: gdm257/open-code-review }
-  # - { preset: scoop-install, args: gdm257/archon }
-  - { preset: scoop-install, args: gdm257/codebase-memory-mcp }
-  - { preset: scoop-install, args: gdm257/codebase-memory-mcp-ui }
-  - { preset: scoop-install, args: deja-vu }
-  - { preset: scoop-install, args: llmfit }
-  - { preset: scoop-install, args: lmstudio }
+  # - { kind: scoop-app, name: main/zeroclaw}
+  # - { kind: scoop-app, name: main/ironclaw}
+  # - { kind: scoop-app, name: picoclaw}
+  - { kind: scoop-app, name: gdm257/open-pencil }
+  # - { kind: scoop-app, name: gdm257/open-codesign}
+  - { kind: scoop-app, name: gdm257/codeg }
+  # - { kind: scoop-app, name: gdm257/mindfs}
+  # - { kind: scoop-app, name: gdm257/aionui}
+  # - { kind: scoop-app, name: gdm257/paseo}
+  # - { kind: scoop-app, name: gdm257/nezha}
+  # - { kind: scoop-app, name: gdm257/ccgui}
+  # - { kind: scoop-app, name: gdm257/vibe-around}
+  # - { kind: scoop-app, name: gdm257/deepchat}
+  # - { kind: scoop-app, name: gdm257/harnss}
+  # - { kind: scoop-app, name: opencode-desktop}
+  # - { kind: scoop-app, name: gdm257/claude-code-haha}
+  # - { kind: scoop-app, name: gdm257/opencode-worktree}
+  # - { kind: scoop-app, name: gdm257/ocx}
+  # - { kind: scoop-app, name: gdm257/memorph}
+  - { kind: scoop-app, name: gdm257/skillshare }
+  - { kind: scoop-app, name: gdm257/rulesync }
+  # - { kind: scoop-app, name: gdm257/iii}
+  # - { kind: scoop-app, name: idea-portable}
+  # - { kind: scoop-app, name: imhex}
+  # - { kind: scoop-app, name: vscode}
+  # - { kind: scoop-app, name: vscodium}
+  - { kind: scoop-app, name: zed }
+  # - { kind: scoop-app, name: void}
+  # - { kind: scoop-app, name: trae-cn}
+  # - { kind: scoop-app, name: trae}
+  # - { kind: scoop-app, name: cursor}
+  # - { kind: scoop-app, name: main/claude-code}
+  # - { kind: scoop-app, name: gdm257/shim-claude}
+  # - { kind: scoop-app, name: claurst}
+  # - { kind: scoop-app, name: crush}
+  # - { kind: scoop-app, name: codex}
+  # - { kind: scoop-app, name: opencode}
+  # - { kind: scoop-app, name: gdm257/peri}
+  - { kind: scoop-app, name: oh-my-pi }
+  # - { kind: scoop-app, name: gdm257/pi}
+  # - { kind: scoop-app, name: main/goose-cli}
+  # - { kind: scoop-app, name: gdm257/goose}
+  # - { kind: scoop-app, name: gdm257/goose-desktop}
+  # - { kind: scoop-app, name: zcode}
+  # - { kind: scoop-app, name: herdr}
+  # - { kind: scoop-app, name: gdm257/octopus}
+  - { kind: scoop-app, name: gdm257/octopus-257 }
+  # - { kind: scoop-app, name: main/cliproxyapi}
+  # - { kind: scoop-app, name: gdm257/cpa-manager-plus}
+  # - { kind: scoop-app, name: cc-switch}
+  # - { kind: scoop-app, name: gdm257/omniroute}
+  # - { kind: scoop-app, name: gdm257/claude-squad}
+  # - { kind: scoop-app, name: gdm257/sudocode}
+  # - { kind: scoop-app, name: gdm257/auto-claude}
+  # - { kind: scoop-app, name: beads}
+  # - { kind: scoop-app, name: beads-viewer}
+  # - { kind: scoop-app, name: gdm257/beads-plan}
+  - { kind: scoop-app, name: gdm257/open-code-review }
+  # - { kind: scoop-app, name: gdm257/archon }
+  - { kind: scoop-app, name: gdm257/codebase-memory-mcp }
+  - { kind: scoop-app, name: gdm257/codebase-memory-mcp-ui }
+  - { kind: scoop-app, name: deja-vu }
+  - { kind: scoop-app, name: llmfit }
+  - { kind: scoop-app, name: lmstudio }
 
   csharp:
-  - { preset: scoop-install, args: nuget }
+  - { kind: scoop-app, name: nuget }
 
   gcc:
-  - { preset: scoop-install, args: mingw }
-  - { preset: scoop-install, args: llvm }
+  - { kind: scoop-app, name: mingw }
+  - { kind: scoop-app, name: llvm }
 
   git:
-  - { preset: scoop-install, args: jj }
-  - { preset: scoop-install, args: jjui }
-  # - { preset: scoop-install, args: vizjj}
-  - { preset: scoop-install, args: gdm257/gg }
-  # - { preset: scoop-install, args: lazyjj}
-  - { preset: scoop-install, args: git }
-  - { preset: scoop-install, args: gdm257/path-git }
-  # - { preset: scoop-install, args: bit}
-  - { preset: scoop-install, args: main/worktrunk }
-  - { preset: scoop-install, args: gitui }
-  # - { preset: scoop-install, args: gitu}
-  # - { preset: scoop-install, args: lazygit}
-  # - { preset: scoop-install, args: froggit}
-  # - { preset: scoop-install, args: legit}
-  # - { preset: scoop-install, args: git-branchless}
-  # - { preset: scoop-install, args: gitbutler}
-  # - { preset: scoop-install, args: git-town}
-  # - { preset: scoop-install, args: git-sync}
-  # - { preset: scoop-install, args: gdm257/gitea-mirror}
-  - { preset: scoop-install, args: gickup }
-  - { preset: scoop-install, args: git-lfs }
-  - { preset: scoop-install, args: lfs-dal }
-  - { preset: scoop-install, args: git-credential-manager }
-  # - { preset: scoop-install, args: git-credential-oauth}
-  - { preset: scoop-install, args: gdm257/git-ssh-sign }
-  # - { preset: scoop-install, args: gitleaks}
-  # - { preset: scoop-install, args: gptcommit}
-  # - { preset: scoop-install, args: gitql}
-  # - { preset: scoop-install, args: ungit}
-  # - { preset: scoop-install, args: gitleaks}
-  # - { preset: scoop-install, args: delta}
-  # - { preset: scoop-install, args: gix}
-  # - { preset: scoop-install, args: git-chglog}
-  - { preset: scoop-install, args: git-cliff }
-  # - { preset: scoop-install, args: gitea}
-  - { preset: scoop-install, args: act }
-  # - { preset: scoop-install, args: hub}
-  - { preset: scoop-install, args: gh }
-  # - { preset: scoop-install, args: ghq}
-  # - { preset: scoop-install, args: lepton}
-  # - { preset: scoop-install, args: glab}
-  # - { preset: scoop-install, args: sourcetree}
-  # - { preset: scoop-install, args: sourcetree_ScoopInstaller}
-  # - { preset: scoop-install, args: gisto}
+  - { kind: scoop-app, name: jj }
+  - { kind: scoop-app, name: jjui }
+  # - { kind: scoop-app, name: vizjj}
+  - { kind: scoop-app, name: gdm257/gg }
+  # - { kind: scoop-app, name: lazyjj}
+  - { kind: scoop-app, name: git }
+  - { kind: scoop-app, name: gdm257/path-git }
+  # - { kind: scoop-app, name: bit}
+  - { kind: scoop-app, name: main/worktrunk }
+  - { kind: scoop-app, name: gitui }
+  # - { kind: scoop-app, name: gitu}
+  # - { kind: scoop-app, name: lazygit}
+  # - { kind: scoop-app, name: froggit}
+  # - { kind: scoop-app, name: legit}
+  # - { kind: scoop-app, name: git-branchless}
+  # - { kind: scoop-app, name: gitbutler}
+  # - { kind: scoop-app, name: git-town}
+  # - { kind: scoop-app, name: git-sync}
+  # - { kind: scoop-app, name: gdm257/gitea-mirror}
+  - { kind: scoop-app, name: gickup }
+  - { kind: scoop-app, name: git-lfs }
+  - { kind: scoop-app, name: lfs-dal }
+  - { kind: scoop-app, name: git-credential-manager }
+  # - { kind: scoop-app, name: git-credential-oauth}
+  - { kind: scoop-app, name: gdm257/git-ssh-sign }
+  # - { kind: scoop-app, name: gitleaks}
+  # - { kind: scoop-app, name: gptcommit}
+  # - { kind: scoop-app, name: gitql}
+  # - { kind: scoop-app, name: ungit}
+  # - { kind: scoop-app, name: gitleaks}
+  # - { kind: scoop-app, name: delta}
+  # - { kind: scoop-app, name: gix}
+  # - { kind: scoop-app, name: git-chglog}
+  - { kind: scoop-app, name: git-cliff }
+  # - { kind: scoop-app, name: gitea}
+  - { kind: scoop-app, name: act }
+  # - { kind: scoop-app, name: hub}
+  - { kind: scoop-app, name: gh }
+  # - { kind: scoop-app, name: ghq}
+  # - { kind: scoop-app, name: lepton}
+  # - { kind: scoop-app, name: glab}
+  # - { kind: scoop-app, name: sourcetree}
+  # - { kind: scoop-app, name: sourcetree_ScoopInstaller}
+  # - { kind: scoop-app, name: gisto}
 
   go:
-  - { preset: scoop-install, args: go }
-  - { preset: scoop-install, args: golangci-lint }
-  - { preset: scoop-install, args: goreleaser }
-  # - { preset: scoop-install, args: gf}
-  # - { preset: scoop-install, args: gdm257/protoc-gen-go}
+  - { kind: scoop-app, name: go }
+  - { kind: scoop-app, name: golangci-lint }
+  - { kind: scoop-app, name: goreleaser }
+  # - { kind: scoop-app, name: gf}
+  # - { kind: scoop-app, name: gdm257/protoc-gen-go}
 
   ide:
-  - { preset: scoop-install, args: vim }
-  # - { preset: scoop-install, args: vimtutor}
-  - { preset: scoop-install, args: neovim }
-  - { preset: scoop-install, args: neovide }
-  # - { preset: scoop-install, args: helix}
-  # - { preset: scoop-install, args: ox}
-  # - { preset: scoop-install, args: emacs}
-  # - { preset: scoop-install, args: gdm257/path-user-doomemacs}
-  # - { preset: scoop-install, args: hexyl}
-  # - { preset: scoop-install, args: lapce}
-  # - { preset: scoop-install, args: jupyterlab-desktop}
-  # - { preset: scoop-install, args: android-studio}
-  # - { preset: scoop-install, args: recaf}
-  # - { preset: scoop-install, args: rstudio}
-  # - { preset: scoop-install, args: serial-studio}
-  # - { preset: scoop-install, args: spyder}
-  # - { preset: scoop-install, args: sourcetrail}
-  # - { preset: scoop-install, args: masscode}
-  # - { preset: scoop-install, args: texstudio}
+  - { kind: scoop-app, name: vim }
+  # - { kind: scoop-app, name: vimtutor}
+  - { kind: scoop-app, name: neovim }
+  - { kind: scoop-app, name: neovide }
+  # - { kind: scoop-app, name: helix}
+  # - { kind: scoop-app, name: ox}
+  # - { kind: scoop-app, name: emacs}
+  # - { kind: scoop-app, name: gdm257/path-user-doomemacs}
+  # - { kind: scoop-app, name: hexyl}
+  # - { kind: scoop-app, name: lapce}
+  # - { kind: scoop-app, name: jupyterlab-desktop}
+  # - { kind: scoop-app, name: android-studio}
+  # - { kind: scoop-app, name: recaf}
+  # - { kind: scoop-app, name: rstudio}
+  # - { kind: scoop-app, name: serial-studio}
+  # - { kind: scoop-app, name: spyder}
+  # - { kind: scoop-app, name: sourcetrail}
+  # - { kind: scoop-app, name: masscode}
+  # - { kind: scoop-app, name: texstudio}
 
   java:
-  - { preset: scoop-install, args: jbang }
-  - { preset: scoop-install, args: zulu21-jdk }
-  # - { preset: scoop-install, args: "openjdk9 openjdk8-redhat openjdk11 openjdk17"}
-  - { preset: scoop-install, args: maven }
-  - { preset: scoop-install, args: gradle }
-  - { preset: scoop-install, args: main/jdtls }
-  # - { preset: scoop-install, args: netbeans-portable}
+  - { kind: scoop-app, name: jbang }
+  - { kind: scoop-app, name: zulu21-jdk }
+  # - { kind: scoop-app, name: "openjdk9 openjdk8-redhat openjdk11 openjdk17"}
+  - { kind: scoop-app, name: maven }
+  - { kind: scoop-app, name: gradle }
+  - { kind: scoop-app, name: main/jdtls }
+  # - { kind: scoop-app, name: netbeans-portable}
 
   js:
-  # - { preset: scoop-install, args: volta}
-  - { preset: scoop-install, args: nodejs-lts }
-  - { preset: scoop-install, args: bun }
-  - { preset: scoop-install, args: pnpm_DoveBoy }
-  # - { preset: scoop-install, args: tailwindcss}
-  # - { preset: scoop-install, args: fnm}
-  # - { preset: scoop-install, args: nvm}
-  # - { preset: scoop-install, args: "yarn pnpm"}
+  # - { kind: scoop-app, name: volta}
+  - { kind: scoop-app, name: nodejs-lts }
+  - { kind: scoop-app, name: bun }
+  - { kind: scoop-app, name: pnpm_DoveBoy }
+  # - { kind: scoop-app, name: tailwindcss}
+  # - { kind: scoop-app, name: fnm}
+  # - { kind: scoop-app, name: nvm}
+  # - { kind: scoop-app, name: "yarn pnpm"}
 
   json:
-  - { preset: scoop-install, args: protobuf }
+  - { kind: scoop-app, name: protobuf }
 
   kotlin:
-  - { preset: scoop-install, args: main/android-cli }
-  - { preset: scoop-install, args: main/android-clt }
-  - { preset: scoop-install, args: adb }
-  # - { preset: scoop-install, args: kotlin}
-  - { preset: scoop-install, args: gdm257/kotlin-lsp }
-  - { preset: scoop-install, args: main/dart }
-  # - { preset: scoop-install, args: flutter}
-  - { preset: scoop-install, args: flutter-cn }
+  - { kind: scoop-app, name: main/android-cli }
+  - { kind: scoop-app, name: main/android-clt }
+  - { kind: scoop-app, name: adb }
+  # - { kind: scoop-app, name: kotlin}
+  - { kind: scoop-app, name: gdm257/kotlin-lsp }
+  - { kind: scoop-app, name: main/dart }
+  # - { kind: scoop-app, name: flutter}
+  - { kind: scoop-app, name: flutter-cn }
 
   lua:
-  - { preset: scoop-install, args: luajit }
-  - { preset: scoop-install, args: lua51 }
-  - { preset: scoop-install, args: luarocks }
-  - { preset: scoop-install, args: main/lua-language-server }
+  - { kind: scoop-app, name: luajit }
+  - { kind: scoop-app, name: lua51 }
+  - { kind: scoop-app, name: luarocks }
+  - { kind: scoop-app, name: main/lua-language-server }
 
   mirror:
-  - { preset: scoop-install, args: chsrc}
+  - { kind: scoop-app, name: chsrc}
 
   package-manager:
-  # - { preset: scoop-install, args: vfox}
-  - { preset: scoop-install, args: main/mise }
-  - { preset: scoop-install, args: gdm257/path-user-mise }
-  # - { preset: scoop-install, args: main/pixi}
+  # - { kind: scoop-app, name: vfox}
+  - { kind: scoop-app, name: main/mise }
+  - { kind: scoop-app, name: gdm257/path-user-mise }
+  # - { kind: scoop-app, name: main/pixi}
 
   php:
-  - { preset: scoop-install, args: php74 }
-  # - { preset: scoop-install, args: php74-xdebug}
-  - { preset: scoop-install, args: composer }
+  - { kind: scoop-app, name: php74 }
+  # - { kind: scoop-app, name: php74-xdebug}
+  - { kind: scoop-app, name: composer }
 
   python:
-  # - { preset: scoop-install, args: "python27 python37 python38 python39 python310 python311 micromamba_ShuguangSun micromamba"}
-  - { preset: scoop-install, args: gdm257/shim-python3 }
-  # - { preset: scoop-install, args: rye}
-  # - { preset: scoop-install, args: uv}
-  - { preset: scoop-install, args: gdm257/uv }
-  # - { preset: scoop-install, args: gdm257/micromamba}
-  # - { preset: scoop-install, args: gdm257/shim-mamba}
-  # - { preset: scoop-install, args: gdm257/shim-conda}
-  - { preset: scoop-install, args: ruff }
-  # - { preset: scoop-install, args: hatch}
+  # - { kind: scoop-app, name: "python27 python37 python38 python39 python310 python311 micromamba_ShuguangSun micromamba"}
+  - { kind: scoop-app, name: gdm257/shim-python3 }
+  # - { kind: scoop-app, name: rye}
+  # - { kind: scoop-app, name: uv}
+  - { kind: scoop-app, name: gdm257/uv }
+  # - { kind: scoop-app, name: gdm257/micromamba}
+  # - { kind: scoop-app, name: gdm257/shim-mamba}
+  # - { kind: scoop-app, name: gdm257/shim-conda}
+  - { kind: scoop-app, name: ruff }
+  # - { kind: scoop-app, name: hatch}
 
   re:
-  - { preset: scoop-install, args: x64dbg }
-  - { preset: scoop-install, args: reko }
-  - { preset: scoop-install, args: cutter }
-  - { preset: scoop-install, args: die }
-  - { preset: scoop-install, args: apktool }
-  - { preset: scoop-install, args: ilspy }
-  # - { preset: scoop-install, args: dnspy}
+  - { kind: scoop-app, name: x64dbg }
+  - { kind: scoop-app, name: reko }
+  - { kind: scoop-app, name: cutter }
+  - { kind: scoop-app, name: die }
+  - { kind: scoop-app, name: apktool }
+  - { kind: scoop-app, name: ilspy }
+  # - { kind: scoop-app, name: dnspy}
 
   redis:
-  - { preset: scoop-install, args: redis }
-  - { preset: scoop-install, args: another-redis-desktop-manager }
-  # - { preset: scoop-install, args: tiny-rdm}
+  - { kind: scoop-app, name: redis }
+  - { kind: scoop-app, name: another-redis-desktop-manager }
+  # - { kind: scoop-app, name: tiny-rdm}
 
   ruby:
-  - { preset: scoop-install, args: main/ruby }
+  - { kind: scoop-app, name: main/ruby }
 
   rust:
-  # - { preset: scoop-install, args: rustup-gnu}
-  - { preset: scoop-install, args: rustup-msvc }
-  - { preset: scoop-install, args: rust-analyzer }
-  - { preset: scoop-install, args: main/cargo-binstall }
-  - { preset: scoop-install, args: cargo-update }
+  # - { kind: scoop-app, name: rustup-gnu}
+  - { kind: scoop-app, name: rustup-msvc }
+  - { kind: scoop-app, name: rust-analyzer }
+  - { kind: scoop-app, name: main/cargo-binstall }
+  - { kind: scoop-app, name: cargo-update }
 
   scoop:
-  # - { preset: scoop-install, args: dark}
-  - { preset: scoop-install, args: wixtoolset }
-  - { preset: scoop-install, args: innoextract }
-  - { preset: scoop-install, args: innounp }
-  - { preset: scoop-install, args: innosetup-portapps }
-  # - { preset: scoop-install, args: InnoExtractor}
-  - { preset: scoop-install, args: nsis }
-  - { preset: scoop-install, args: msix }
+  # - { kind: scoop-app, name: dark}
+  - { kind: scoop-app, name: wixtoolset }
+  - { kind: scoop-app, name: innoextract }
+  - { kind: scoop-app, name: innounp }
+  - { kind: scoop-app, name: innosetup-portapps }
+  # - { kind: scoop-app, name: InnoExtractor}
+  - { kind: scoop-app, name: nsis }
+  - { kind: scoop-app, name: msix }
 
   sql:
-  - { preset: scoop-install, args: gdm257/dbgate }
-  # - { preset: scoop-install, args: chat2db}
-  # - { preset: scoop-install, args: jailer}
-  # - { preset: scoop-install, args: dbeaver}
-  # - { preset: scoop-install, args: dblab}
-  # - { preset: scoop-install, args: usql}
-  - { preset: scoop-install, args: gdm257/onedump }
-  - { preset: scoop-install, args: gdm257/dqex }
-  - { preset: scoop-install, args: atlas }
-  # - { preset: scoop-install, args: migrate}
-  # - { preset: scoop-install, args: dbmate}
-  # - { preset: scoop-install, args: goose}
-  # - { preset: scoop-install, args: datax}
-  # - { preset: scoop-install, args: zincsearch}
-  # - { preset: scoop-install, args: heidisql}
-  # - { preset: scoop-install, args: sqlyog-community}
-  # - { preset: scoop-install, args: falcon-sql-client}
-  # - { preset: scoop-install, args: beekeeper-studio}
-  - { preset: scoop-install, args: sqlitebrowser }
-  # - { preset: scoop-install, args: sqlitestudio}
-  - { preset: scoop-install, args: sqlite }
-  # - { preset: scoop-install, args: studio-3t}
-  # - { preset: scoop-install, args: robo3t}
-  # - { preset: scoop-install, args: NoSQLBooster-for-MongoDB}
+  - { kind: scoop-app, name: gdm257/dbgate }
+  # - { kind: scoop-app, name: chat2db}
+  # - { kind: scoop-app, name: jailer}
+  # - { kind: scoop-app, name: dbeaver}
+  # - { kind: scoop-app, name: dblab}
+  # - { kind: scoop-app, name: usql}
+  - { kind: scoop-app, name: gdm257/onedump }
+  - { kind: scoop-app, name: gdm257/dqex }
+  - { kind: scoop-app, name: atlas }
+  # - { kind: scoop-app, name: migrate}
+  # - { kind: scoop-app, name: dbmate}
+  # - { kind: scoop-app, name: goose}
+  # - { kind: scoop-app, name: datax}
+  # - { kind: scoop-app, name: zincsearch}
+  # - { kind: scoop-app, name: heidisql}
+  # - { kind: scoop-app, name: sqlyog-community}
+  # - { kind: scoop-app, name: falcon-sql-client}
+  # - { kind: scoop-app, name: beekeeper-studio}
+  - { kind: scoop-app, name: sqlitebrowser }
+  # - { kind: scoop-app, name: sqlitestudio}
+  - { kind: scoop-app, name: sqlite }
+  # - { kind: scoop-app, name: studio-3t}
+  # - { kind: scoop-app, name: robo3t}
+  # - { kind: scoop-app, name: NoSQLBooster-for-MongoDB}
 
   task-runner:
-  - { preset: scoop-install, args: cmake }
+  - { kind: scoop-app, name: cmake }
 
   templating:
-  - { preset: scoop-install, args: main/ytt }
+  - { kind: scoop-app, name: main/ytt }
 
-run:
+items:
   # - { group: _algorithm }
   # - { group: _auth }
   # - { group: _bash }

@@ -1,30 +1,22 @@
-presets:
-  scoop-install:
-    entrypoint: scoop
-    command: install
-  scoop-install-sudo:
-    entrypoint: sudo scoop
-    command: install
-
 groups:
   fonts:
-  - { preset: scoop-install, args: LXGWWenKai }
-  - { preset: scoop-install, args: LXGWWenKaiMono }
-  - { preset: scoop-install, args: LXGWWenKaiScreenR }
-  # - { preset: scoop-install, args: MicrosoftYaHeiMono}
-  - { preset: scoop-install, args: SarasaGothic-ttc }
-  # - { preset: scoop-install, args: SarasaGothic-SC}
-  - { preset: scoop-install, args: NerdFontsSymbolsOnly }
-  - { preset: scoop-install, args: DejaVuSansMono-NF-Mono }
-  - { preset: scoop-install, args: Hack-NF-Mono }
-  - { preset: scoop-install, args: JetBrainsMono-NF }
-  - { preset: scoop-install, args: CascadiaCode-NF-Mono }
-  # - { preset: scoop-install, args: SourceCodePro-NF-Mono}
-  # - { preset: scoop-install, args: MPlus-NF-Mono}
+  - { kind: scoop-app, name: LXGWWenKai }
+  - { kind: scoop-app, name: LXGWWenKaiMono }
+  - { kind: scoop-app, name: LXGWWenKaiScreenR }
+  # - { kind: scoop-app, name: MicrosoftYaHeiMono}
+  - { kind: scoop-app, name: SarasaGothic-ttc }
+  # - { kind: scoop-app, name: SarasaGothic-SC}
+  - { kind: scoop-app, name: NerdFontsSymbolsOnly }
+  - { kind: scoop-app, name: DejaVuSansMono-NF-Mono }
+  - { kind: scoop-app, name: Hack-NF-Mono }
+  - { kind: scoop-app, name: JetBrainsMono-NF }
+  - { kind: scoop-app, name: CascadiaCode-NF-Mono }
+  # - { kind: scoop-app, name: SourceCodePro-NF-Mono}
+  # - { kind: scoop-app, name: MPlus-NF-Mono}
 
   path:
-  - { preset: scoop-install, args: gdm257/path-user-local }
-  - { preset: scoop-install-sudo, args: gdm257/path-globolize-user-scoop }
+  - { kind: scoop-app, name: gdm257/path-user-local }
+  - { kind: scoop-app, name: gdm257/path-globolize-user-scoop, elevated: true }
 
-run:
+items:
   - { group: fonts }

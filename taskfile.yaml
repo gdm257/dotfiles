@@ -427,112 +427,128 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/app-audio.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:devops:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-devops.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:downloader:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-downloader.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:file:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-file.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:np:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-np.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:kernel:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-kernel.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:layer:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-layer.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:network:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-network.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:picture:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-picture.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:process:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-process.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:shell:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-shell.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:text:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-text.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:toolbox:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-toolbox.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:app:video:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/app-video.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:scoop-bucket:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/scoop-bucket.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:scoop-config:
     platforms: [windows]
     cmds:
       - vars:
           MANIFEST: "./manifests/scoop-config.yaml"
-        task: manifest:run:manifest
+          CALL: "scoop:apply"
+        task: manifest:dispatch
 
   manifest:skills:
     cmds:
