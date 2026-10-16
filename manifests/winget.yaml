@@ -135,6 +135,7 @@ items:
   # - { kind: winget-app, id: ONLYOFFICE.DesktopEditors}
   # - { kind: winget-app, id: ModOrganizer2.modorganizer}
   - { kind: winget-app, id: dorssel.usbipd-win}
+  - { kind: winget-app, id: namazso.PawnIO}
   # === user ===
   # - { kind: winget-app, id: XPDNH1FMW7NB40}
   # - { kind: winget-app, id: Microsoft.WindowsTerminal}

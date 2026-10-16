@@ -10,6 +10,6 @@ items:
   # - { kind: choco-package, name: krew }
   # - { kind: choco-package, name: virtualmidisynth }
   # - { kind: choco-package, name: imdisk }
-  - { kind: choco-package, name: imdisk-toolkit }
+  # - { kind: choco-package, name: imdisk-toolkit }
   # - { kind: choco-package, name: ssd-z.portable }
   # - { kind: choco-package, name: vb-cable }

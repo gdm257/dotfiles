@@ -77,6 +77,7 @@ groups:
   # - { kind: scoop-app, name: gdm257/vibe-around}
   # - { kind: scoop-app, name: gdm257/deepchat}
   # - { kind: scoop-app, name: gdm257/harnss}
+  - { kind: scoop-app, name: deepseek-harness }
   # - { kind: scoop-app, name: opencode-desktop}
   # - { kind: scoop-app, name: gdm257/claude-code-haha}
   # - { kind: scoop-app, name: gdm257/opencode-worktree}
