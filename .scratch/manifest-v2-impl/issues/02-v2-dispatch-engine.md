@@ -20,6 +20,6 @@
 
 - 实现 commit `2a46d33`（feat: add v2 dispatch engine，初始批）；engine key 缺陷（`manifest:dispatch` → `dispatch`）由 03/04 批修复（`6289826` / `835b3a7`）。
 - fixture 遗留切片 commit `4b88270`（test: add dispatch contract fixtures and replay receiver），fast-forward 并入集成分支（尖端 `3dd1ad1`）。交付：`fixtures/manifest-dispatch/`（README + 16 fixture，8 个结构错误型在 `structure/`；`v1-form.yaml` 刻意放 fixtures/ 避开票 11 对 `manifests/` 的 grep 判据）+ 重放接收方 `manifest:echo:apply`（`taskfile.d/manifest.yaml`，`internal: true` 仅经 dispatch 可达、CLI 不入列）。
-- 逐场景实跑证据（Windows / task 3.54.0，重放命令见 fixture README）：bool / 嵌套 / list 保真（`flag=false` 不字符串化）；enable / platforms 过滤与整组跳过；fail-fast exit 201；容错 FAIL_LOG 汇总 + exit 1；`continue_on_error` 组传播且显式 false 不被覆盖；空批 / 全过滤静默 exit 0；8 型结构错误消息含路径（item 级含 `#N`；未知顶层键 / 未知 group 类按 engine.md 定稿本就无 `#N`，票文措辞以此为准）；双向防呆（v1 形 → v2 报未知顶层键；v2 形 → v1 触发 `0e534f5` 守卫，均 exit 1）；CALL 未知名 exit 200；接收方独立调用不被 FAIL_LOG 绑死（story 18 实证）。
+- 逐场景实跑证据（Windows / task 3.54.0，重放命令见 fixture README）：bool / 嵌套 / list 保真（`flag=false` 不字符串化）；enable / platforms 过滤与整组跳过；fail-fast exit 201；容错 FAIL_LOG 汇总 + exit 1；`continue_on_error` 组传播且显式 false 不被覆盖；空批 / 全过滤静默 exit 0；8 型结构错误消息含路径。初始实现对未知顶层键及 group 错误未附 `#N`，最终 Spec review 确认为缺陷，以本票与 OpenSpec 的全型序号要求为准，不作契约豁免。双向防呆（v1 形 → v2 报未知顶层键；v2 形 → v1 触发 `0e534f5` 守卫，均 exit 1）；CALL 未知名 exit 200；接收方独立调用不被 FAIL_LOG 绑死（story 18 实证）。
 - 接收方失败原语用 `false` 而非 `exit 1`（mvdan/sh 下 `exit` 会杀死解释器、绕过 `||` 容错包装）——接收方设计修正，非引擎缺陷。
 - 环境观察（未动 v1）：TMPDIR 未设的 Windows shell 下 v1 引擎 `/tmp` faillog 路径被 mvdan/sh 解析到 cwd\tmp；v2 已有 TEMP 兜底不受影响。
