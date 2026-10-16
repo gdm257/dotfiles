@@ -1,18 +1,15 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: go-task }
-  - { args: just }
-  - { args: make }
-  - { args: cmake }
-  - { args: vfox }
-  - { args: gcc }
-  - { args: llvm }
-  - { args: go }
-  - { args: micromamba }
-  - { args: rust }
-  - { args: volta }
-  - { args: git }
-  - { args: gitui }
-  - { args: lazygit }
+items:
+  - { kind: brew-app, name: go-task }
+  - { kind: brew-app, name: just }
+  - { kind: brew-app, name: make }
+  - { kind: brew-app, name: cmake }
+  - { kind: brew-app, name: vfox }
+  - { kind: brew-app, name: gcc }
+  - { kind: brew-app, name: llvm }
+  - { kind: brew-app, name: go }
+  - { kind: brew-app, name: micromamba }
+  - { kind: brew-app, name: rust }
+  - { kind: brew-app, name: volta }
+  - { kind: brew-app, name: git }
+  - { kind: brew-app, name: gitui }
+  - { kind: brew-app, name: lazygit }

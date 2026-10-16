@@ -206,6 +206,20 @@ tasks:
     cmds:
       - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
+  brew:apply:
+    desc: "receive brew items (app/tap by kind)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "brew-app" }}brew install {{ .ITEM.name }}{{ else if eq .ITEM.kind "brew-tap" }}brew tap {{ .ITEM.name }}{{ else }}echo "brew: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
   echo:apply:
     desc: "replay receiver for dispatch fixtures: echo item evidence, fail on fail: true"
     internal: true

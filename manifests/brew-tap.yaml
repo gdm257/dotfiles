@@ -1,5 +1,2 @@
-entrypoint: brew
-command: tap
-
-run:
-  - {args: homebrew/cask-fonts}
+items:
+  - { kind: brew-tap, name: homebrew/cask-fonts}

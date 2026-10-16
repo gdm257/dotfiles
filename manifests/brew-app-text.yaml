@@ -1,21 +1,18 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: vim }
-  - { args: neovim }
-  # - {args: amp}
-  - { args: bat }
-  - { args: mdcat }
-  - { args: sad }
-  - { args: yq }
-  - { args: ag }
-  - { args: ripgrep }
-  - { args: ugrep }
-  - { args: grex }
-  - { args: grep }
-  - { args: gnu-sed }
-  - { args: awk }
-  - { args: fnt }
-  - { args: argon2 }
-  - { args: less }
+items:
+  - { kind: brew-app, name: vim }
+  - { kind: brew-app, name: neovim }
+  # - { kind: brew-app, name: amp}
+  - { kind: brew-app, name: bat }
+  - { kind: brew-app, name: mdcat }
+  - { kind: brew-app, name: sad }
+  - { kind: brew-app, name: yq }
+  - { kind: brew-app, name: ag }
+  - { kind: brew-app, name: ripgrep }
+  - { kind: brew-app, name: ugrep }
+  - { kind: brew-app, name: grex }
+  - { kind: brew-app, name: grep }
+  - { kind: brew-app, name: gnu-sed }
+  - { kind: brew-app, name: awk }
+  - { kind: brew-app, name: fnt }
+  - { kind: brew-app, name: argon2 }
+  - { kind: brew-app, name: less }

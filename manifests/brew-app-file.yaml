@@ -1,22 +1,19 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: file-formula }
-  - { args: unar }
-  - { args: unzip }
-  - { args: gnu-tar }
-  - { args: 7zip }
-  - { args: age }
-  - { args: ncdu }
-  - { args: tre }
-  - { args: duf }
-  - { args: dust }
-  - { args: yazi }
-  - { args: superfile }
-  - { args: eza }
-  - { args: fzf }
-  - { args: fd }
-  - { args: lsof }
-  - { args: rename }
-  - { args: trash }
+items:
+  - { kind: brew-app, name: file-formula }
+  - { kind: brew-app, name: unar }
+  - { kind: brew-app, name: unzip }
+  - { kind: brew-app, name: gnu-tar }
+  - { kind: brew-app, name: 7zip }
+  - { kind: brew-app, name: age }
+  - { kind: brew-app, name: ncdu }
+  - { kind: brew-app, name: tre }
+  - { kind: brew-app, name: duf }
+  - { kind: brew-app, name: dust }
+  - { kind: brew-app, name: yazi }
+  - { kind: brew-app, name: superfile }
+  - { kind: brew-app, name: eza }
+  - { kind: brew-app, name: fzf }
+  - { kind: brew-app, name: fd }
+  - { kind: brew-app, name: lsof }
+  - { kind: brew-app, name: rename }
+  - { kind: brew-app, name: trash }
