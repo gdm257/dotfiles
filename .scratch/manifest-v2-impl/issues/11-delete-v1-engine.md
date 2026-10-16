@@ -4,7 +4,7 @@
 
 **Blocked by:** 03: 试点批 debug; 04: 试点批 windows-features; 05: scoop 族迁移; 06: winget 族迁移; 07: brew 族迁移; 08: apt / yum / choco 系统包族; 09: 长尾批一; 10: 长尾批二.
 
-**Status:** ready-for-agent
+**Status:** claimed
 
 - [ ] 删除前判据复核：`manifests/` 顶层 `run:` / `presets:` grep 零命中；全仓 `manifest:run` grep 零命中
 - [ ] 单独 commit 删除 `run` 与 `run:manifest` 两 task，其余不动

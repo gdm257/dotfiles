@@ -6,10 +6,17 @@
 
 **Blocked by:** 05: scoop 族迁移（大头批）.
 
-**Status:** claimed
+**Status:** resolved
 
-- [ ] 各族接收方就绪（容错模式含）
-- [ ] 17 个 manifest 原地重写、wrapper 翻转，三件套同 commit
-- [ ] 全部 `task manifest:<name>` 用户面名字不变，经 dispatch 走通
-- [ ] 批内 grep 双清零
-- [ ] `CONTINUE_ON_ERROR` / item 级容错行为不变
+- [x] 各族接收方就绪（容错模式含）
+- [x] 17 个 manifest 原地重写、wrapper 翻转，三件套同 commit
+- [x] 全部 `task manifest:<name>` 用户面名字不变，经 dispatch 走通
+- [x] 批内 grep 双清零
+- [x] `CONTINUE_ON_ERROR` / item 级容错行为不变
+
+## Answer
+
+- 原子实现 `c3323a9` 包含 17 manifest、14 接收方及 17 wrapper，同 commit；集成合并 `aacc161`。
+- 对齐提交 `ea27795` 将 volta kind 统一为既有 `volta-tool`，保留原始资源内容与顺序，并清理 receiver 尾部空行。
+- 标准库 checker 通过 14 接收方 × 6 场景、17 wrapper dry-run 和批内双清零；覆盖未知字段、显式 false 优先、传入日志及 standalone 缺失日志。
+- merger 额外验证动态 `CALL=runtime:volta:apply` 渲染 node、npx、pnpm、yarn；`task --list` 与 diff whitespace 通过。未执行安装或原生 Unix 验证。
