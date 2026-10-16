@@ -1,49 +1,46 @@
-entrypoint: brew
-command: install
-
-run:
-  - { args: go-task }
-  - { args: just }
-  - { args: make }
-  - { args: cmake }
-  - { args: vfox }
-  - { args: asdf }
-  - { args: whalebrew }
-  - { args: croc }
-  - { args: eget }
-  - { args: apt }
-  - { args: dpkg }
-  - { args: volta }
-  # - {args: pipx}
-  # - {args: rye}
-  - { args: micromamba }
-  - { args: ruff }
-  - { args: gradle }
-  - { args: adb-enhanced }
-  - { args: apktool }
-  - { args: nuget }
-  - { args: gcc }
-  - { args: llvm }
-  - { args: xmake }
-  - { args: conan }
-  - { args: gdb }
-  - { args: upx }
-  - { args: doxygen }
-  - { args: shellcheck }
-  - { args: shfmt }
-  - { args: luajit }
-  - { args: luarocks }
-  # - {args: "lua@5.3"}
-  - { args: go }
-  - { args: golangci-lint }
-  - { args: goreleaser }
-  - { args: protoc-gen-go }
-  - { args: gf }
-  - { args: rust }
-  # - {args: rustup}
-  - { args: perl }
+items:
+  - { kind: brew-app, name: go-task }
+  - { kind: brew-app, name: just }
+  - { kind: brew-app, name: make }
+  - { kind: brew-app, name: cmake }
+  - { kind: brew-app, name: vfox }
+  - { kind: brew-app, name: asdf }
+  - { kind: brew-app, name: whalebrew }
+  - { kind: brew-app, name: croc }
+  - { kind: brew-app, name: eget }
+  - { kind: brew-app, name: apt }
+  - { kind: brew-app, name: dpkg }
+  - { kind: brew-app, name: volta }
+  # - { kind: brew-app, name: pipx}
+  # - { kind: brew-app, name: rye}
+  - { kind: brew-app, name: micromamba }
+  - { kind: brew-app, name: ruff }
+  - { kind: brew-app, name: gradle }
+  - { kind: brew-app, name: adb-enhanced }
+  - { kind: brew-app, name: apktool }
+  - { kind: brew-app, name: nuget }
+  - { kind: brew-app, name: gcc }
+  - { kind: brew-app, name: llvm }
+  - { kind: brew-app, name: xmake }
+  - { kind: brew-app, name: conan }
+  - { kind: brew-app, name: gdb }
+  - { kind: brew-app, name: upx }
+  - { kind: brew-app, name: doxygen }
+  - { kind: brew-app, name: shellcheck }
+  - { kind: brew-app, name: shfmt }
+  - { kind: brew-app, name: luajit }
+  - { kind: brew-app, name: luarocks }
+  # - { kind: brew-app, name: "lua@5.3"}
+  - { kind: brew-app, name: go }
+  - { kind: brew-app, name: golangci-lint }
+  - { kind: brew-app, name: goreleaser }
+  - { kind: brew-app, name: protoc-gen-go }
+  - { kind: brew-app, name: gf }
+  - { kind: brew-app, name: rust }
+  # - { kind: brew-app, name: rustup}
+  - { kind: brew-app, name: perl }
   # PHP
-  # - {args: "php@8.2"}
-  - { args: "shivammathur/php/php@8.2" }
+  # - { kind: brew-app, name: "php@8.2"}
+  - { kind: brew-app, name: "shivammathur/php/php@8.2" }
   # PHP extensions
-  - { args: "shivammathur/extensions/xdebug@8.2" }
+  - { kind: brew-app, name: "shivammathur/extensions/xdebug@8.2" }

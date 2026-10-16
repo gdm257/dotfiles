@@ -197,91 +197,104 @@ tasks:
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-devops.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:downloader:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-downloader.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:file:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-file.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:kernel:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-kernel.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:layer:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-layer.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:network:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-network.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:process:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-process.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:shell:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-shell.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:text:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-text.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:toolbox:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-toolbox.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:video:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-video.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-app:vps:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-app-vps.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:brew-tap:
     platforms: [linux, darwin]
     cmds:
       - vars:
           MANIFEST: "./manifests/brew-tap.yaml"
-        task: manifest:run:manifest
+          CALL: "brew:apply"
+        task: manifest:dispatch
 
   manifest:cargo:
     cmds:
