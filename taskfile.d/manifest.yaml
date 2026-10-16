@@ -164,7 +164,7 @@ tasks:
           FAIL_LOG: "{{ ._FAIL_LOG }}"
       - cmd: 'if [ -s "{{ ._FAIL_LOG }}" ]; then echo ''manifest:dispatch: failed items:''; while IFS= read -r l; do printf ''  %s\n'' "$l"; done < "{{ ._FAIL_LOG }}"; exit 1; fi'
 
-  dispatch:shell:
+  shell:apply:
     desc: "dispatch shell item"
     requires:
       vars:
