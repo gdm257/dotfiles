@@ -18,6 +18,9 @@
 | fail-fast | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/fail-fast.yaml CALL=echo:apply` | `ok-1` 后 `boom` 失败立即中止，`never` 不被调用；exit 201 |
 | 容错 + FAIL_LOG 汇总 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/fail-log-summary.yaml CALL=echo:apply` | `tolerated` 失败被记录、`ok-2` 继续；末尾打印 `manifest:dispatch: failed items:` + `  failed: tolerated`；exit 201 |
 | continue_on_error 组传播 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/group-coe-propagation.yaml CALL=echo:apply` | `prop-1` 被容错（传播生效，echo JSON 可见 `continue_on_error`:true）、`prop-2` 继续；`explicit-off` 显式 false 不被覆盖、硬失败中止；`after-group` / `never-reached` 不被调用；exit 201 |
+| 全局 true 下显式 false 优先 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/group-coe-propagation.yaml CALL=echo:apply CONTINUE_ON_ERROR=true` | `prop-2` 被调用；`explicit-off` 硬失败，`never-reached` / `after-group` 不被调用；exit 201，不能只断言退出码 |
+| 全局 false 下显式 true 优先 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/fail-log-summary.yaml CALL=echo:apply CONTINUE_ON_ERROR=false` | `tolerated` 仍被容错，`ok-2` 继续，末尾有失败汇总；exit 201 |
+| 独立 shell，无 FAIL_LOG | `task --taskfile fixtures/manifest-dispatch/receivers.taskfile.yaml shell ITEM_JSON='{"kind":"shell","cmd":"echo standalone-shell"}'` | 输出 `standalone-shell`；exit 0 |
 | items 空 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/empty.yaml CALL=echo:apply` | 不调 CALL；exit 0 |
 | 全部被过滤 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/all-filtered.yaml CALL=echo:apply` | 不调 CALL；exit 0 |
 | 未知顶层键 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/structure/unknown-top-key.yaml CALL=echo:apply` | fail：`unknown top-level key 'extra' in <path>`；exit 1 |
@@ -33,6 +36,12 @@
 | CALL 未知名 | `task manifest:dispatch MANIFEST=fixtures/manifest-dispatch/bool-fidelity.yaml CALL=no-such-task` | 干净报错 `task: Task "manifest:no-such-task" does not exist`；exit 200 |
 | internal CLI 直呼 | `task manifest:echo:apply ITEM_JSON='{"kind":"echo","name":"x"}'` | 拒绝：`task: Task "manifest:echo:apply" is internal`；exit 202 |
 | 接收方独立调用 | 任一非 dispatch task 以 `task:` 调 `manifest:echo:apply`，仅传 ITEM_JSON | 正常 echo、exit 0（FAIL_LOG 非必需，default 兜底） |
+
+## 最小接收方检查
+
+在仓库根运行 `bash fixtures/manifest-dispatch/check-receivers.sh`，Windows 使用 Git Bash，不使用 WSL 的 bash。检查只依赖 task CLI 与 bash builtins，不新增测试框架。
+
+`receivers.taskfile.yaml` 仅提供非 dispatch 调用 seam；检查断言实际输出与退出码，覆盖全局 true 的显式 false 反向覆盖、未声明字段继承全局、独立 shell 的成功与容错，以及带空格的传入 FAIL_LOG。只实跑 shell / echo；安装接收方仅用 `task --dry` 渲染，禁止执行安装。
 
 ## 书写规范
 

@@ -60,10 +60,10 @@ tasks:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
       _CMD: '{{ if eq (.ITEM.state | default "enabled") "enabled" }}dism /online /enable-feature /featurename:{{ .ITEM.feature }} /all /norestart{{ else if eq .ITEM.state "disabled" }}dism /online /disable-feature /featurename:{{ .ITEM.feature }} /norestart{{ else }}echo "windows-feature: unknown state {{ .ITEM.state }} for {{ .ITEM.feature }}" >&2 && exit 1{{ end }}'
-      _FAIL_LOG:
-        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
-      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   dispatch:
     desc: "dispatch manifest items to CALL task"
@@ -183,14 +183,14 @@ tasks:
     requires:
       vars:
         - ITEM_JSON
-        - FAIL_LOG
     vars:
       _ITEM:
         ref: 'fromJson .ITEM_JSON'
       _CMD: "{{ ._ITEM.cmd }}"
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
       _CONTINUE: '{{ if hasKey ._ITEM "continue_on_error" }}{{ if eq ._ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
     cmds:
-      - cmd: '{{ if eq (._CONTINUE | default "") "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> {{ .FAIL_LOG }}; }{{ else }}{{ ._CMD }}{{ end }}'
+      - cmd: '{{ if eq (._CONTINUE | default "") "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   scoop:apply:
     desc: "receive scoop items (app/bucket/config by kind)"
@@ -201,10 +201,10 @@ tasks:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
       _CMD: '{{ if eq .ITEM.kind "scoop-app" }}{{ if eq (.ITEM.elevated | default false) true }}sudo {{ end }}scoop install {{ .ITEM.name }}{{ else if eq .ITEM.kind "scoop-bucket" }}scoop bucket add {{ .ITEM.name }}{{ if .ITEM.url }} {{ .ITEM.url }}{{ end }}{{ else if eq .ITEM.kind "scoop-config" }}scoop config {{ .ITEM.key }} {{ .ITEM.value }}{{ else }}echo "scoop: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
-      _FAIL_LOG:
-        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
-      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   brew:apply:
     desc: "receive brew items (app/tap by kind)"
@@ -230,9 +230,10 @@ tasks:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
       _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
       _CMD: '{{ if .ITEM.fail }}false{{ else }}echo ''item={{ .ITEM.name }} kind={{ .ITEM.kind }} flag={{ if .ITEM.flag }}true{{ else }}false{{ end }} json={{ toJson .ITEM }}''{{ end }}'
     cmds:
-      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ .ITEM.name }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ .ITEM.name }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   winget:apply:
     desc: "receive winget items (app by kind)"
@@ -243,10 +244,10 @@ tasks:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
       _CMD: '{{ if eq .ITEM.kind "winget-app" }}winget install --source {{ .ITEM.source | default "winget" }} --id {{ .ITEM.id }}{{ if .ITEM.version }} --version {{ .ITEM.version }}{{ end }}{{ else }}echo "winget: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
-      _FAIL_LOG:
-        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
-      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   apt:apply:
     desc: "receive apt-package items (apt install)"
@@ -257,10 +258,10 @@ tasks:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
       _CMD: '{{ if eq .ITEM.kind "apt-package" }}apt install -y {{ .ITEM.name }}{{ else }}echo "apt: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
-      _FAIL_LOG:
-        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
-      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   yum:apply:
     desc: "receive yum-package items (yum groupinstall)"
@@ -271,10 +272,10 @@ tasks:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
       _CMD: '{{ if eq .ITEM.kind "yum-package" }}yum groupinstall {{ .ITEM.name }}{{ else }}echo "yum: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
-      _FAIL_LOG:
-        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
-      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   choco:apply:
     desc: "receive choco-package items (choco install)"
@@ -285,7 +286,7 @@ tasks:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
       _CMD: '{{ if eq .ITEM.kind "choco-package" }}choco install -y {{ .ITEM.name }}{{ else }}echo "choco: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
-      _FAIL_LOG:
-        sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
-      - cmd: '{{ if or (eq (.ITEM.continue_on_error | default false) true) (eq (.CONTINUE_ON_ERROR | default "") "true") }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
