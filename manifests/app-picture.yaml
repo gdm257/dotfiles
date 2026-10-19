@@ -110,8 +110,8 @@ groups:
   - { kind: scoop-app, name: gdm257/vectorcraft }
 
   screenshot:
-  - { kind: scoop-app, name: pixpin }
   - { kind: scoop-app, name: gdm257/snowshot }
+  # - { kind: scoop-app, name: pixpin }
   # - { kind: scoop-app, name: esearch}
   # - { kind: scoop-app, name: flameshot}
   # - { kind: scoop-app, name: Snipaste-Portable}
