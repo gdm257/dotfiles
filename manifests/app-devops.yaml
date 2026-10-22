@@ -84,7 +84,8 @@ groups:
   # - { kind: scoop-app, name: gdm257/ocx}
   # - { kind: scoop-app, name: gdm257/memorph}
   - { kind: scoop-app, name: gdm257/skillshare }
-  - { kind: scoop-app, name: gdm257/rulesync }
+  # - { kind: scoop-app, name: gdm257/rulesync}
+  - { kind: scoop-app, name: gdm257/rulesync-257 }
   # - { kind: scoop-app, name: gdm257/iii}
   # - { kind: scoop-app, name: idea-portable}
   # - { kind: scoop-app, name: imhex}
