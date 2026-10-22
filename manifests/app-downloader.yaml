@@ -28,6 +28,7 @@ groups:
   - { kind: scoop-app, name: gdm257/guangyapan }
   # - { kind: scoop-app, name: winfsp-np-beta}
   - { kind: scoop-app, name: winscp }
+  # - { kind: scoop-app, name: s3browser}
   # - { kind: scoop-app, name: megasync}
   # - { kind: scoop-app, name: 115}
   - { kind: scoop-app, name: gdm257/115chrome }
@@ -41,7 +42,6 @@ groups:
   # - { kind: scoop-app, name: fake115-go }
   # - { kind: scoop-app, name: BaiduPanFilesTransfers }
   # - { kind: scoop-app, name: baidupcs-go }
-  - { kind: scoop-app, name: s3browser }
   # - { kind: scoop-app, name: termscp}
 
   file-transfer:

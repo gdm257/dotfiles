@@ -68,7 +68,8 @@ groups:
   # - { kind: scoop-app, name: picoclaw}
   - { kind: scoop-app, name: gdm257/open-pencil }
   # - { kind: scoop-app, name: gdm257/open-codesign}
-  - { kind: scoop-app, name: gdm257/codeg }
+  # - { kind: scoop-app, name: gdm257/codeg }
+  - { kind: scoop-app, name: gdm257/codeg-257 }
   # - { kind: scoop-app, name: gdm257/mindfs}
   # - { kind: scoop-app, name: gdm257/aionui}
   # - { kind: scoop-app, name: gdm257/paseo}

@@ -130,8 +130,6 @@ groups:
 
   upscale:
   - { kind: scoop-app, name: upscayl }
-  # - { kind: scoop-app, name: sizer}
-  - { kind: scoop-app, name: WindowResizer }
 
   wallpaper:
   # - { kind: scoop-app, name: Lively-Wallpaper}

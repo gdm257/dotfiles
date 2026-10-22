@@ -17,6 +17,7 @@ items:
   # - { kind: winget-app, id: Microsoft.VCRedist.2012.x86}
   # - { kind: winget-app, id: Microsoft.VCRedist.2013.x86}
   # - { kind: winget-app, id: Microsoft.VCRedist.2015+.x86}
+  # - { kind: winget-app, id: abbodi1406.vcredist}
   - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.3_1}
   - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.5}
   - { kind: winget-app, id: Microsoft.DotNet.DesktopRuntime.6}
@@ -68,7 +69,7 @@ items:
   # - { kind: winget-app, id: AOMEI.Backupper}
   # - { kind: winget-app, id: Dell.DisplayManager}
   - { kind: winget-app, id: Sandboxie.Plus}
-  - { kind: winget-app, id: Oracle.VirtualBox}
+  - { kind: winget-app, id: Oracle.VirtualBox, version: "7.2.22"}
   # - { kind: winget-app, id: SUSE.RancherDesktop}
   # - { kind: winget-app, id: Docker.DockerDesktop}
   # - { kind: winget-app, id: OpenShot.OpenShot}
@@ -117,7 +118,7 @@ items:
   # - { kind: winget-app, id: VB-Audio.Voicemeeter.Banana}
   # - { kind: winget-app, id: VB-Audio.Voicemeeter.Potato}
   # - { kind: winget-app, id: dechamps.FlexASIO}
-  - { kind: winget-app, id: BandLab.Cakewalk}
+  # - { kind: winget-app, id: BandLab.Cakewalk}
   # - { kind: winget-app, id: GnuPG.Gpg4win}
   # - { kind: winget-app, id: AOMEI.PartitionAssistant}
   # - { kind: winget-app, id: "*KeppySoftware.OmniMIDI*"}

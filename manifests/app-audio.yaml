@@ -37,11 +37,22 @@ groups:
   # - { kind: scoop-app, name: miditrail}
   - { kind: scoop-app, name: 163MusicLyrics }
 
+  soundfont-maker:
+  - { kind: scoop-app, name: gdm257/viena }
+  - { kind: scoop-app, name: gdm257/polyphone }
+
+  vocaloid:
+  - { kind: scoop-app, name: openutau }
+  - { kind: scoop-app, name: utsu }
+
   music-sheet:
   - { kind: scoop-app, name: gdm257/awesome-scores }
   - { kind: scoop-app, name: gdm257/keyfinder }
+  - { kind: scoop-app, name: mixxx }
   - { kind: scoop-app, name: gdm257/wavetone }
   - { kind: scoop-app, name: musescore }
+  - { kind: scoop-app, name: helio }
+  - { kind: scoop-app, name: hydrogen }
   # - { kind: scoop-app, name: lilypond}
   # - { kind: scoop-app, name: everyone-piano}
   # - { kind: scoop-app, name: freepiano}
@@ -57,31 +68,30 @@ groups:
   # - { kind: scoop-app, name: keyfinder}
   # - { kind: scoop-app, name: navidrome}
 
-  music-mixer:
-  - { kind: scoop-app, name: gdm257/viena }
-  - { kind: scoop-app, name: gdm257/polyphone }
-  # - { kind: scoop-app, name: reaper}
-  - { kind: scoop-app, name: lmms }
-  - { kind: scoop-app, name: audacity }
-  - { kind: scoop-app, name: gdm257/soundcraft }
+  black-midi-sheet:
   - { kind: scoop-app, name: domino }
-  - { kind: scoop-app, name: helio }
-  - { kind: scoop-app, name: hydrogen }
-  - { kind: scoop-app, name: mixxx }
 
-  vocaloid:
-  - { kind: scoop-app, name: openutau }
-  - { kind: scoop-app, name: utsu }
-
-  voice:
+  recording:
   - { kind: scoop-app, name: gdm257/micyou }
   - { kind: scoop-app, name: retrieval-based-voice-conversion-webui }
   # - { kind: scoop-app, name: Buzz_dodorz}
 
+  audio-editor:
+  - { kind: scoop-app, name: audacity }
+  - { kind: scoop-app, name: gdm257/soundcraft }
+
+  daw:
+  - { kind: scoop-app, name: reaper}
+  # - { kind: scoop-app, name: gdm257/zrythm }
+  # - { kind: scoop-app, name: lmms }
+
 items:
   - { group: osu }
   - { group: music-player }
-  - { group: music-sheet }
-  - { group: music-mixer }
+  - { group: soundfont-maker }
   - { group: vocaloid }
-  - { group: voice }
+  - { group: black-midi-sheet }
+  - { group: music-sheet }
+  - { group: recording }
+  - { group: audio-editor }
+  - { group: daw }

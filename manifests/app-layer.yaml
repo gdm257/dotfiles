@@ -6,24 +6,23 @@ groups:
   - { kind: scoop-app, name: balenaEtcher-Portable }
   # - { kind: scoop-app, name: unetbootin}
 
-  vm:
-  - { kind: scoop-app, name: virtualbox-extension }
-  - { kind: scoop-app, name: lxrunoffline }
-  - { kind: scoop-app, name: packer }
+  vm-manager:
   - { kind: scoop-app, name: vagrant }
-  - { kind: scoop-app, name: qemu }
+  # - { kind: scoop-app, name: qemu }
+  - { kind: scoop-app, name: wsl-dashboard }
+  - { kind: scoop-app, name: lxrunoffline }
   # - { kind: scoop-app, name: wsl2host}
-  # - { kind: scoop-app, name: virtualbox-with-extension-pack-np}
-  # - { kind: scoop-app, name: virtualbox-with-extension-pack-np_ScoopInstaller}
   # - { kind: scoop-app, name: WSABuildsWindows10}
   # - { kind: scoop-app, name: WSABuildsWindows11}
   # - { kind: scoop-app, name: wsl-centos-7}
   # - { kind: scoop-app, name: wsl-centos-8}
   # - { kind: scoop-app, name: nixos-wsl}
   # - { kind: scoop-app, name: wsl2-distro-manager}
-  - { kind: scoop-app, name: wsl-dashboard }
   # - { kind: scoop-app, name: WsaToolbox}
   # - { kind: scoop-app, name: wsldl}
+  # - { kind: scoop-app, name: virtualbox-with-extension-pack-np}
+  # - { kind: scoop-app, name: virtualbox-with-extension-pack-np_ScoopInstaller}
+  - { kind: scoop-app, name: virtualbox-extension, version: "7.2.22" }
 
   emulator:
   - { kind: scoop-app, name: gdm257/EmuDeck }
@@ -57,7 +56,12 @@ groups:
   - { kind: scoop-app, name: onscripter-ru }
   - { kind: scoop-app, name: ruffle-nightly }
 
-  # container
+  image-builder:
+  - { kind: scoop-app, name: nixpacks }
+  - { kind: scoop-app, name: packer }
+  - { kind: scoop-app, name: devpod }
+
+  container-manager:
   - { kind: scoop-app, name: docker }
   # - { kind: scoop-app, name: docker-compose}
   - { kind: scoop-app, name: lazydocker }
@@ -68,7 +72,6 @@ groups:
   # - { kind: scoop-app, name: hadolint}
   # - { kind: scoop-app, name: dive}
   # - { kind: scoop-app, name: portainer}
-  - { kind: scoop-app, name: nixpacks }
   - { kind: scoop-app, name: kompose }
   # - { kind: scoop-app, name: kustomize}
   - { kind: scoop-app, name: helm }
@@ -109,10 +112,9 @@ groups:
   # - { kind: scoop-app, name: cmctl}
   # - { kind: scoop-app, name: korb}
   # - { kind: scoop-app, name: sandboxie-plus-np}
-  - { kind: scoop-app, name: devpod }
-
 
 items:
   - { group: pe }
-  - { group: vm }
+  - { group: vm-manager }
+  - { group: container-manager }
   - { group: emulator }

@@ -7,10 +7,8 @@ groups:
   # - { kind: scoop-app, name: nanazip_DoveBoy}
   # - { kind: scoop-app, name: bandizip6}
   - { kind: scoop-app, name: winrar }
-  - { kind: scoop-app, name: anyburn }
 
   disk:
-  - { kind: scoop-app, name: dirhash }
   # - { kind: scoop-app, name: file}
   # - { kind: scoop-app, name: code2prompt}
   # - { kind: scoop-app, name: orange}
@@ -42,6 +40,7 @@ groups:
   - { kind: scoop-app, name: age }
   - { kind: scoop-app, name: enc }
   - { kind: scoop-app, name: vault }
+  - { kind: scoop-app, name: dirhash }
   # - { kind: scoop-app, name: keeweb}
   # - { kind: scoop-app, name: keepass}
   # - { kind: scoop-app, name: keepass-plugin-kpenhentryview}
@@ -73,9 +72,6 @@ groups:
   - { kind: scoop-app, name: gdu }
   - { kind: scoop-app, name: dust }
   - { kind: scoop-app, name: duf }
-  - { kind: scoop-app, name: fd }
-  # - { kind: scoop-app, name: fselect}
-  - { kind: scoop-app, name: fzf }
   # - { kind: scoop-app, name: tre-command}
   - { kind: scoop-app, name: zoxide }
   - { kind: scoop-app, name: yazi }
@@ -93,12 +89,20 @@ groups:
   # - { kind: scoop-app, name: onecommander}
   # - { kind: scoop-app, name: mucommander}
   # - { kind: scoop-app, name: mc}
-  - { kind: scoop-app, name: SymlinkCreator }
+  # - { kind: scoop-app, name: SymlinkCreator }
   - { kind: scoop-app, name: Snap2HTML }
   # - { kind: scoop-app, name: HashTools}
 
   fs:
   # - { kind: scoop-app, name: ntfs2btrfs}
+
+  image:
+  - { kind: scoop-app, name: anyburn }
+  - { kind: scoop-app, name: ultraiso }
+  - { kind: scoop-app, name: wincdemu }
+  # - { kind: scoop-app, name: ntlite}
+  # - { kind: scoop-app, name: ntlite-portable}
+  # - { kind: scoop-app, name: ntlite_FlawlessCasual17}
 
   renamer:
   # - { kind: scoop-app, name: AntRenamer}
@@ -109,6 +113,9 @@ groups:
   # - { kind: scoop-app, name: advancedrenamer}
 
   search:
+  - { kind: scoop-app, name: fd }
+  # - { kind: scoop-app, name: fselect}
+  - { kind: scoop-app, name: fzf }
   - { kind: scoop-app, name: everything }
   # - { kind: scoop-app, name: gdm257/listary5}
   # - { kind: scoop-app, name: listary}
@@ -126,6 +133,7 @@ items:
   - { group: encrypt }
   - { group: file-manager }
   - { group: fs }
+  - { group: image }
   - { group: renamer }
   - { group: search }
   - { group: watch }

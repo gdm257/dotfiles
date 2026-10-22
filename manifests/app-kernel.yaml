@@ -36,13 +36,6 @@ groups:
   - { kind: scoop-app, name: gpu-z }
   - { kind: scoop-app, name: ssd-z }
 
-  image:
-  - { kind: scoop-app, name: ultraiso }
-  - { kind: scoop-app, name: wincdemu }
-  # - { kind: scoop-app, name: ntlite}
-  # - { kind: scoop-app, name: ntlite-portable}
-  # - { kind: scoop-app, name: ntlite_FlawlessCasual17}
-
   os-info:
   # - { kind: scoop-app, name: osquery}
   - { kind: scoop-app, name: fastfetch }
@@ -55,7 +48,7 @@ groups:
   settings:
   # - { kind: scoop-app, name: WindowsUpdateBlocker}
   - { kind: scoop-app, name: context-menu-manager }
-  - { kind: scoop-app, name: universal-watermark-disabler }
+  # - { kind: scoop-app, name: universal-watermark-disabler }
   - { kind: scoop-app, name: dismplusplus }
   - { kind: scoop-app, name: Bootice_kkzzhizhou }
   # - { kind: scoop-app, name: optimizer}
@@ -85,13 +78,12 @@ groups:
 
 items:
   - { group: activation }
-  - { group: boot }
+  - { group: boot, enable: false }
   - { group: driver }
   - { group: envvars }
-  - { group: hardware }
-  - { group: image }
+  - { group: hardware, enable: false }
   - { group: os-info }
   - { group: registry }
   - { group: settings }
-  - { group: uninstaller }
-  - { group: vcpp }
+  - { group: uninstaller, enable: false }
+  - { group: vcpp, enable: false }
