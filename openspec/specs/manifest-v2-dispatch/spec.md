@@ -12,8 +12,8 @@
 
 #### Scenario: 标准调用
 
-- **WHEN** 执行 `task manifest:dispatch MANIFEST=app-np.yaml CALLS="scoop-app=scoop:install, choco-app=choco:install"`
-- **THEN** manifest 中 kind 为 `scoop-app` / `choco-app` 的幸存 items 分别逐个调用对应 task
+- **WHEN** 执行 `task manifest:dispatch MANIFEST=<manifest> CALLS="<kind-a>=<task-a>, <kind-b>=<task-b>"`
+- **THEN** manifest 中 kind 为 `<kind-a>` / `<kind-b>` 的幸存 items 分别逐个调用对应 task
 
 #### Scenario: CALL 指向未知名
 
@@ -96,7 +96,7 @@
 
 #### Scenario: 重复认领重复执行
 
-- **WHEN** `CALLS="scoop-app=scoop:install, scoop-app=echo:replay"` 且有一个 `scoop-app` item
+- **WHEN** `CALLS` 中同一 kind 映射到两个 task 且有一个该 kind 的 item
 - **THEN** 两个接收方各执行该 item 一次，共两次
 
 #### Scenario: 接收方收到异 kind 仍 fail
