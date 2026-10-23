@@ -1,66 +1,4 @@
 groups:
-  pe:
-  - { kind: scoop-app, name: ventoy }
-  # - { kind: scoop-app, name: wepe}
-  - { kind: scoop-app, name: rufus }
-  - { kind: scoop-app, name: balenaEtcher-Portable }
-  # - { kind: scoop-app, name: unetbootin}
-
-  vm-manager:
-  - { kind: scoop-app, name: vagrant }
-  # - { kind: scoop-app, name: qemu }
-  - { kind: scoop-app, name: wsl-dashboard }
-  - { kind: scoop-app, name: lxrunoffline }
-  # - { kind: scoop-app, name: wsl2host}
-  # - { kind: scoop-app, name: WSABuildsWindows10}
-  # - { kind: scoop-app, name: WSABuildsWindows11}
-  # - { kind: scoop-app, name: wsl-centos-7}
-  # - { kind: scoop-app, name: wsl-centos-8}
-  # - { kind: scoop-app, name: nixos-wsl}
-  # - { kind: scoop-app, name: wsl2-distro-manager}
-  # - { kind: scoop-app, name: WsaToolbox}
-  # - { kind: scoop-app, name: wsldl}
-  # - { kind: scoop-app, name: virtualbox-with-extension-pack-np}
-  # - { kind: scoop-app, name: virtualbox-with-extension-pack-np_ScoopInstaller}
-  - { kind: scoop-app, name: virtualbox-extension, version: "7.2.22" }
-
-  emulator:
-  - { kind: scoop-app, name: gdm257/EmuDeck }
-  # - { kind: scoop-app, name: pegasus}
-  # - { kind: scoop-app, name: cemu-dev}
-  # - { kind: scoop-app, name: xemu}
-  # - { kind: scoop-app, name: yuzu}
-  # - { kind: scoop-app, name: azahar}
-  # - { kind: scoop-app, name: citra-nightly}
-  # - { kind: scoop-app, name: citra}
-  # - { kind: scoop-app, name: dolphin-dev}
-  # - { kind: scoop-app, name: duckstation}
-  # - { kind: scoop-app, name: flycast}
-  # - { kind: scoop-app, name: mgba}
-  # - { kind: scoop-app, name: melonDS}
-  # - { kind: scoop-app, name: mame}
-  # - { kind: scoop-app, name: ppsspp}
-  # - { kind: scoop-app, name: pcsx2}
-  # - { kind: scoop-app, name: rpcs3}
-  # - { kind: scoop-app, name: ryujinx}
-  # - { kind: scoop-app, name: retroarch}
-  # - { kind: scoop-app, name: vita3k}
-  # - { kind: scoop-app, name: shadps4}
-  # - { kind: scoop-app, name: supermodel}
-  # - { kind: scoop-app, name: ScummVM}
-  # - { kind: scoop-app, name: xenia}
-  - { kind: scoop-app, name: LDPlayer-Portable }
-  - { kind: scoop-app, name: onscripteryuri }
-  - { kind: scoop-app, name: onscripter-w }
-  - { kind: scoop-app, name: onscripter-jh }
-  - { kind: scoop-app, name: onscripter-ru }
-  - { kind: scoop-app, name: ruffle-nightly }
-
-  image-builder:
-  - { kind: scoop-app, name: nixpacks }
-  - { kind: scoop-app, name: packer }
-  - { kind: scoop-app, name: devpod }
-
   container-manager:
   - { kind: scoop-app, name: docker }
   # - { kind: scoop-app, name: docker-compose}
@@ -112,6 +50,68 @@ groups:
   # - { kind: scoop-app, name: cmctl}
   # - { kind: scoop-app, name: korb}
   # - { kind: scoop-app, name: sandboxie-plus-np}
+
+  emulator:
+  - { kind: scoop-app, name: gdm257/EmuDeck }
+  # - { kind: scoop-app, name: pegasus}
+  # - { kind: scoop-app, name: cemu-dev}
+  # - { kind: scoop-app, name: xemu}
+  # - { kind: scoop-app, name: yuzu}
+  # - { kind: scoop-app, name: azahar}
+  # - { kind: scoop-app, name: citra-nightly}
+  # - { kind: scoop-app, name: citra}
+  # - { kind: scoop-app, name: dolphin-dev}
+  # - { kind: scoop-app, name: duckstation}
+  # - { kind: scoop-app, name: flycast}
+  # - { kind: scoop-app, name: mgba}
+  # - { kind: scoop-app, name: melonDS}
+  # - { kind: scoop-app, name: mame}
+  # - { kind: scoop-app, name: ppsspp}
+  # - { kind: scoop-app, name: pcsx2}
+  # - { kind: scoop-app, name: rpcs3}
+  # - { kind: scoop-app, name: ryujinx}
+  # - { kind: scoop-app, name: retroarch}
+  # - { kind: scoop-app, name: vita3k}
+  # - { kind: scoop-app, name: shadps4}
+  # - { kind: scoop-app, name: supermodel}
+  # - { kind: scoop-app, name: ScummVM}
+  # - { kind: scoop-app, name: xenia}
+  - { kind: scoop-app, name: LDPlayer-Portable }
+  - { kind: scoop-app, name: onscripteryuri }
+  - { kind: scoop-app, name: onscripter-w }
+  - { kind: scoop-app, name: onscripter-jh }
+  - { kind: scoop-app, name: onscripter-ru }
+  - { kind: scoop-app, name: ruffle-nightly }
+
+  image-builder:
+  - { kind: scoop-app, name: nixpacks }
+  - { kind: scoop-app, name: packer }
+  - { kind: scoop-app, name: devpod }
+
+  pe:
+  - { kind: scoop-app, name: ventoy }
+  # - { kind: scoop-app, name: wepe}
+  - { kind: scoop-app, name: rufus }
+  - { kind: scoop-app, name: balenaEtcher-Portable }
+  # - { kind: scoop-app, name: unetbootin}
+
+  vm-manager:
+  - { kind: scoop-app, name: vagrant }
+  # - { kind: scoop-app, name: qemu }
+  - { kind: scoop-app, name: wsl-dashboard }
+  - { kind: scoop-app, name: lxrunoffline }
+  # - { kind: scoop-app, name: wsl2host}
+  # - { kind: scoop-app, name: WSABuildsWindows10}
+  # - { kind: scoop-app, name: WSABuildsWindows11}
+  # - { kind: scoop-app, name: wsl-centos-7}
+  # - { kind: scoop-app, name: wsl-centos-8}
+  # - { kind: scoop-app, name: nixos-wsl}
+  # - { kind: scoop-app, name: wsl2-distro-manager}
+  # - { kind: scoop-app, name: WsaToolbox}
+  # - { kind: scoop-app, name: wsldl}
+  # - { kind: scoop-app, name: virtualbox-with-extension-pack-np}
+  # - { kind: scoop-app, name: virtualbox-with-extension-pack-np_ScoopInstaller}
+  - { kind: scoop-app, name: virtualbox-extension, version: "7.2.22" }
 
 items:
   - { group: pe }

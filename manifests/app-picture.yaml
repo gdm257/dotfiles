@@ -2,6 +2,14 @@ groups:
   book:
   # - { kind: scoop-app, name: kavita}
 
+  geo:
+  - { kind: scoop-app, name: qgis }
+  - { kind: scoop-app, name: geogebra }
+  - { kind: scoop-app, name: stellarium }
+  - { kind: scoop-app, name: umbrello }
+  - { kind: scoop-app, name: CelestiaPortable }
+  # - { kind: scoop-app, name: StellariumPortable}
+
   graph:
   - { kind: scoop-app, name: lunacy }
   # - { kind: scoop-app, name: umlet}
@@ -16,19 +24,15 @@ groups:
   # - { kind: scoop-app, name: xmind}
   # - { kind: scoop-app, name: revezone}
 
-  geo:
-  - { kind: scoop-app, name: qgis }
-  - { kind: scoop-app, name: geogebra }
-  - { kind: scoop-app, name: stellarium }
-  - { kind: scoop-app, name: umbrello }
-  - { kind: scoop-app, name: CelestiaPortable }
-  # - { kind: scoop-app, name: StellariumPortable}
-
   image-explorer:
   - { kind: scoop-app, name: fsviewer }
   # - { kind: scoop-app, name: shutter-image-browser}
   # - { kind: scoop-app, name: darktable}
   - { kind: scoop-app, name: gdm257/lightcraft }
+
+  image-hosting:
+  # - { kind: scoop-app, name: picgo}
+  - { kind: scoop-app, name: piclist }
 
   image-viewer:
   - { kind: scoop-app, name: exiftool }
@@ -45,10 +49,6 @@ groups:
   - { kind: scoop-app, name: gdm257/aiviewer }
   - { kind: scoop-app, name: gdm257/cdrviewer }
   - { kind: scoop-app, name: icat }
-
-  image-hosting:
-  # - { kind: scoop-app, name: picgo}
-  - { kind: scoop-app, name: piclist }
 
   manga:
   # - { kind: scoop-app, name: venera}
@@ -81,6 +81,12 @@ groups:
   # - { kind: scoop-app, name: capture2text}
   - { kind: scoop-app, name: pot-desktop }
 
+  paint:
+  - { kind: scoop-app, name: Krita-Portable }
+  # - { kind: scoop-app, name: StylePix}
+  - { kind: scoop-app, name: paint.net }
+  - { kind: scoop-app, name: gdm257/designcraft }
+
   picture-processor:
   - { kind: scoop-app, name: affinity }
   - { kind: scoop-app, name: gimp }
@@ -95,19 +101,8 @@ groups:
   # - { kind: scoop-app, name: ascii-image-converter}
   # - { kind: scoop-app, name: stegify}
 
-  paint:
-  - { kind: scoop-app, name: Krita-Portable }
-  # - { kind: scoop-app, name: StylePix}
-  - { kind: scoop-app, name: paint.net }
-  - { kind: scoop-app, name: gdm257/designcraft }
-
   raw-editor:
   - { kind: scoop-app, name: gdm257/rapidraw }
-
-  svg:
-  - { kind: scoop-app, name: inkscape }
-  - { kind: scoop-app, name: pixieditor }
-  - { kind: scoop-app, name: gdm257/vectorcraft }
 
   screenshot:
   - { kind: scoop-app, name: gdm257/snowshot }
@@ -127,6 +122,11 @@ groups:
   # - { kind: scoop-app, name: drawpen}
   # - { kind: scoop-app, name: greenshot}
   - { kind: scoop-app, name: papertodo }
+
+  svg:
+  - { kind: scoop-app, name: inkscape }
+  - { kind: scoop-app, name: pixieditor }
+  - { kind: scoop-app, name: gdm257/vectorcraft }
 
   upscale:
   - { kind: scoop-app, name: upscayl }

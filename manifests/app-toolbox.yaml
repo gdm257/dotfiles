@@ -1,36 +1,10 @@
 groups:
-  go:
-  - { kind: scoop-app, name: golly }
-  - { kind: scoop-app, name: lizzieyzy }
-  - { kind: scoop-app, name: katrain }
-  # - { kind: scoop-app, name: ogatak}
-  # - { kind: scoop-app, name: q5go}
-  # - { kind: scoop-app, name: sabaki}
-  - { kind: scoop-app, name: pachi }
-  - { kind: scoop-app, name: leela-zero }
-  - { kind: scoop-app, name: leela-zero-network }
-  - { kind: scoop-app, name: katago }
-  - { kind: scoop-app, name: katago-tensorrt }
-  - { kind: scoop-app, name: ikatago }
-
-  toolbox:
-  - { kind: scoop-app, name: sysinternals }
-  # - { kind: scoop-app, name: sysinternals_ScoopInstaller}
-  - { kind: scoop-app, name: gdm257/tubatools }
-  # - { kind: scoop-app, name: gaojitools}
-  # - { kind: scoop-app, name: fufu-tools}
-  - { kind: scoop-app, name: officebox }
-
-  utils:
-  # - { kind: scoop-app, name: uutils-coreutils}
-  # - { kind: scoop-app, name: busybox}
-  # - { kind: scoop-app, name: vim}
-  - { kind: scoop-app, name: file }
-  - { kind: scoop-app, name: curl }
-  - { kind: scoop-app, name: wget }
-
-  games:
-  - { kind: scoop-app, name: gdm257/GriefSyndrome }
+  controller:
+  # - { kind: scoop-app, name: joytokey}
+  - { kind: scoop-app, name: antimicrox }
+  - { kind: scoop-app, name: gdm257/sickeaseoverlay }
+  - { kind: scoop-app, name: gdm257/vomishield }
+  - { kind: scoop-app, name: gdm257/airi }
 
   game-manager:
   - { kind: scoop-app, name: ludusavi }
@@ -55,16 +29,42 @@ groups:
   - { kind: scoop-app, name: starward }
   - { kind: scoop-app, name: game-cheats-manager }
 
+  games:
+  - { kind: scoop-app, name: gdm257/GriefSyndrome }
+
+  go:
+  - { kind: scoop-app, name: golly }
+  - { kind: scoop-app, name: lizzieyzy }
+  - { kind: scoop-app, name: katrain }
+  # - { kind: scoop-app, name: ogatak}
+  # - { kind: scoop-app, name: q5go}
+  # - { kind: scoop-app, name: sabaki}
+  - { kind: scoop-app, name: pachi }
+  - { kind: scoop-app, name: leela-zero }
+  - { kind: scoop-app, name: leela-zero-network }
+  - { kind: scoop-app, name: katago }
+  - { kind: scoop-app, name: katago-tensorrt }
+  - { kind: scoop-app, name: ikatago }
+
   mod:
   - { kind: scoop-app, name: mo2 }
   - { kind: scoop-app, name: vortex }
 
-  controller:
-  # - { kind: scoop-app, name: joytokey}
-  - { kind: scoop-app, name: antimicrox }
-  - { kind: scoop-app, name: gdm257/sickeaseoverlay }
-  - { kind: scoop-app, name: gdm257/vomishield }
-  - { kind: scoop-app, name: gdm257/airi }
+  toolbox:
+  - { kind: scoop-app, name: sysinternals }
+  # - { kind: scoop-app, name: sysinternals_ScoopInstaller}
+  - { kind: scoop-app, name: gdm257/tubatools }
+  # - { kind: scoop-app, name: gaojitools}
+  # - { kind: scoop-app, name: fufu-tools}
+  - { kind: scoop-app, name: officebox }
+
+  utils:
+  # - { kind: scoop-app, name: uutils-coreutils}
+  # - { kind: scoop-app, name: busybox}
+  # - { kind: scoop-app, name: vim}
+  - { kind: scoop-app, name: file }
+  - { kind: scoop-app, name: curl }
+  - { kind: scoop-app, name: wget }
 
 
 items:

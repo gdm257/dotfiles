@@ -1,15 +1,15 @@
 groups:
-  osu:
-  - { kind: scoop-app, name: taisei }
-  - { kind: scoop-app, name: osulazer }
-  - { kind: scoop-app, name: collection-manager }
-  # - { kind: scoop-app, name: osuplayer}
-  # - { kind: scoop-app, name: danser-go}
-  # - { kind: scoop-app, name: rewind}
-  # - { kind: scoop-app, name: storybrew}
-  - { kind: scoop-app, name: OsuBeatmapDownloader }
-  # - { kind: scoop-app, name: gdm257/oszsave}
-  # - { kind: scoop-app, name: OsuRankedBeatmapDownloader}
+  audio-editor:
+  - { kind: scoop-app, name: audacity }
+  - { kind: scoop-app, name: gdm257/soundcraft }
+
+  black-midi-sheet:
+  - { kind: scoop-app, name: domino }
+
+  daw:
+  - { kind: scoop-app, name: reaper}
+  # - { kind: scoop-app, name: gdm257/zrythm }
+  # - { kind: scoop-app, name: lmms }
 
   music-player:
   - { kind: scoop-app, name: aimp }
@@ -37,14 +37,6 @@ groups:
   # - { kind: scoop-app, name: miditrail}
   - { kind: scoop-app, name: 163MusicLyrics }
 
-  soundfont-maker:
-  - { kind: scoop-app, name: gdm257/viena }
-  - { kind: scoop-app, name: gdm257/polyphone }
-
-  vocaloid:
-  - { kind: scoop-app, name: openutau }
-  - { kind: scoop-app, name: utsu }
-
   music-sheet:
   - { kind: scoop-app, name: gdm257/awesome-scores }
   - { kind: scoop-app, name: gdm257/keyfinder }
@@ -68,22 +60,30 @@ groups:
   # - { kind: scoop-app, name: keyfinder}
   # - { kind: scoop-app, name: navidrome}
 
-  black-midi-sheet:
-  - { kind: scoop-app, name: domino }
+  osu:
+  - { kind: scoop-app, name: taisei }
+  - { kind: scoop-app, name: osulazer }
+  - { kind: scoop-app, name: collection-manager }
+  # - { kind: scoop-app, name: osuplayer}
+  # - { kind: scoop-app, name: danser-go}
+  # - { kind: scoop-app, name: rewind}
+  # - { kind: scoop-app, name: storybrew}
+  - { kind: scoop-app, name: OsuBeatmapDownloader }
+  # - { kind: scoop-app, name: gdm257/oszsave}
+  # - { kind: scoop-app, name: OsuRankedBeatmapDownloader}
 
   recording:
   - { kind: scoop-app, name: gdm257/micyou }
   - { kind: scoop-app, name: retrieval-based-voice-conversion-webui }
   # - { kind: scoop-app, name: Buzz_dodorz}
 
-  audio-editor:
-  - { kind: scoop-app, name: audacity }
-  - { kind: scoop-app, name: gdm257/soundcraft }
+  soundfont-maker:
+  - { kind: scoop-app, name: gdm257/viena }
+  - { kind: scoop-app, name: gdm257/polyphone }
 
-  daw:
-  - { kind: scoop-app, name: reaper}
-  # - { kind: scoop-app, name: gdm257/zrythm }
-  # - { kind: scoop-app, name: lmms }
+  vocaloid:
+  - { kind: scoop-app, name: openutau }
+  - { kind: scoop-app, name: utsu }
 
 items:
   - { group: osu }

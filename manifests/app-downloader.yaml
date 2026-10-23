@@ -12,14 +12,6 @@ groups:
   - { kind: scoop-app, name: gdm257/qbbanhelper }
   # - { kind: scoop-app, name: qbittorrent-portable}
 
-  downloader:
-  # - { kind: scoop-app, name: FileCentipede}
-  - { kind: scoop-app, name: gopeed }
-  # - { kind: scoop-app, name: ariang-native}
-
-  driver:
-  - { kind: scoop-app, name: snappy-driver-installer-origin }
-
   cloud-storage:
   - { kind: scoop-app, name: rclone }
   - { kind: scoop-app, name: rclone-browser }
@@ -44,6 +36,14 @@ groups:
   # - { kind: scoop-app, name: baidupcs-go }
   # - { kind: scoop-app, name: termscp}
 
+  downloader:
+  # - { kind: scoop-app, name: FileCentipede}
+  - { kind: scoop-app, name: gopeed }
+  # - { kind: scoop-app, name: ariang-native}
+
+  driver:
+  - { kind: scoop-app, name: snappy-driver-installer-origin }
+
   file-transfer:
   - { kind: scoop-app, name: croc }
   # - { kind: scoop-app, name: landrop}
@@ -54,11 +54,6 @@ groups:
   ipfs:
   # - { kind: scoop-app, name: ipfs-desktop}
   - { kind: scoop-app, name: kubo }
-
-  pixiv:
-  - { kind: scoop-app, name: pixivutil2 }
-  # - { kind: scoop-app, name: pixivbiu}
-  - { kind: scoop-app, name: gallery-dl }
 
   package-manager:
   - { kind: scoop-app, name: scoop-search }
@@ -76,6 +71,11 @@ groups:
   # - { kind: scoop-app, name: Baulk_dodorz}
   # - { kind: scoop-app, name: shovel}
   # - { kind: scoop-app, name: npackd}
+
+  pixiv:
+  - { kind: scoop-app, name: pixivutil2 }
+  # - { kind: scoop-app, name: pixivbiu}
+  - { kind: scoop-app, name: gallery-dl }
 
   sync:
   # - { kind: scoop-app, name: cwRsync}

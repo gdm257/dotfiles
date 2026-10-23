@@ -8,6 +8,10 @@ groups:
   # - { kind: scoop-app, name: bandizip6}
   - { kind: scoop-app, name: winrar }
 
+  diff:
+  # - { kind: scoop-app, name: winmerge}
+  - { kind: scoop-app, name: meld }
+
   disk:
   # - { kind: scoop-app, name: file}
   # - { kind: scoop-app, name: code2prompt}
@@ -26,10 +30,6 @@ groups:
   # - { kind: scoop-app, name: hdtune}
   # - { kind: scoop-app, name: ssdlife}
   - { kind: scoop-app, name: smartmontools }
-
-  diff:
-  # - { kind: scoop-app, name: winmerge}
-  - { kind: scoop-app, name: meld }
 
   dotfiles:
   # - { kind: scoop-app, name: chezmoi}

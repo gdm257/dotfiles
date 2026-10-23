@@ -7,6 +7,120 @@ groups:
   # - { kind: scoop-app, name: calibre-web}
   # - { kind: scoop-app, name: calibre}
 
+  clipboard:
+  - { kind: scoop-app, name: ditto }
+  # - { kind: scoop-app, name: gdm257/ecopastepro}
+  # - { kind: scoop-app, name: ecopaste}
+  # - { kind: scoop-app, name: copyq}
+  # - { kind: scoop-app, name: clipboard}
+
+  dict:
+  - { kind: scoop-app, name: eudic }
+  - { kind: scoop-app, name: gdm257/awesome-dict }
+  # - { kind: scoop-app, name: ting-en}
+  # - { kind: scoop-app, name: anki}
+  # - { kind: scoop-app, name: goldendict-ng}
+
+  doc:
+  - { kind: scoop-app, name: pandoc }
+  - { kind: scoop-app, name: main/officecli }
+  - { kind: scoop-app, name: poppler }
+  # - { kind: scoop-app, name: vosviewer}
+  - { kind: scoop-app, name: lfs/awesome-books }
+  # - { kind: scoop-app, name: zeal}
+  # - { kind: scoop-app, name: koodo-reader}
+  # - { kind: scoop-app, name: "mendeley mendeley-desktop"}
+
+  font:
+  - { kind: scoop-app, name: fontforge }
+  - { kind: scoop-app, name: winfontsview }
+
+  ime:
+  # - { kind: scoop-app, name: imewlconverter}
+  - { kind: scoop-app, name: gdm257/windinput }
+
+  json:
+  # - { kind: scoop-app, name: fx}
+  # - { kind: scoop-app, name: jid}
+  # - { kind: scoop-app, name: csview}
+  - { kind: scoop-app, name: jq }
+  # - { kind: scoop-app, name: xq}
+  - { kind: scoop-app, name: yq }
+  # - { kind: scoop-app, name: fq}
+  # - { kind: scoop-app, name: dasel}
+  - { kind: scoop-app, name: xidel }
+  # - { kind: scoop-app, name: pup}
+
+  markdown:
+  # - { kind: scoop-app, name: zettlr}
+  # - { kind: scoop-app, name: typora}
+  # - { kind: scoop-app, name: marktext}
+  # - { kind: scoop-app, name: gdm257/md-preview}
+  - { kind: scoop-app, name: gdm257/inknote }
+  # - { kind: scoop-app, name: gdm257/vividmark}
+  # - { kind: scoop-app, name: gdm257/markview}
+
+  note:
+  # - { kind: scoop-app, name: zotero}
+  # - { kind: scoop-app, name: anytype}
+  - { kind: scoop-app, name: obsidian }
+  # - { kind: scoop-app, name: tolaria}
+  # - { kind: scoop-app, name: siyuan}
+  # - { kind: scoop-app, name: focalboard}
+  # - { kind: scoop-app, name: appflowy}
+  # - { kind: scoop-app, name: speedynote}
+  # - { kind: scoop-app, name: bookxnote}
+  - { kind: scoop-app, name: BookXNotePro }
+  # - { kind: scoop-app, name: xournalpp}
+  # - { kind: scoop-app, name: rendevoz}
+  # - { kind: scoop-app, name: logseq}
+
+  office:
+  - { kind: scoop-app, name: onlyoffice-desktopeditors }
+  # - { kind: scoop-app, name: libreoffice}
+  - { kind: scoop-app, name: gdm257/wordcraft }
+  - { kind: scoop-app, name: gdm257/gridcraft }
+  - { kind: scoop-app, name: gdm257/deckcraft }
+
+  openapi:
+  # - { kind: scoop-app, name: openapi-tui}
+
+  - { kind: scoop-app, name: hashcat }
+  - { kind: scoop-app, name: john-the-ripper }
+  - { kind: scoop-app, name: 7z2hashcat }
+
+  pdf-cli:
+  - { kind: scoop-app, name: pdftk }
+
+  pdf-editor:
+  - { kind: scoop-app, name: gdm257/pdfcraft }
+  # - { kind: scoop-app, name: gdm257/killerpdf }
+  # - { kind: scoop-app, name: pdf-xchange-editor}
+  # - { kind: scoop-app, name: pdfpatcher_hu3rror}
+  # - { kind: scoop-app, name: pdfpatcher}
+  # - { kind: scoop-app, name: pdf-guru}
+
+  pdf-viewer:
+  # - { kind: scoop-app, name: SumatraPDF_dodorz }
+  - { kind: scoop-app, name: sumatrapdf-stable }
+
+  read-it-later:
+  # - { kind: scoop-app, name: raindrop.io}
+
+  rss:
+  - { kind: scoop-app, name: rssguard }
+  # - { kind: scoop-app, name: fluent-reader}
+
+  spreadsheet:
+  - { kind: scoop-app, name: csvlens }
+  # - { kind: scoop-app, name: dsq}
+  # - { kind: scoop-app, name: q}
+  - { kind: scoop-app, name: sq }
+
+  tex:
+  # - { kind: scoop-app, name: texlive}
+  # - { kind: scoop-app, name: latex}
+
   text:
   - { kind: scoop-app, name: grex }
   - { kind: scoop-app, name: ripgrep }
@@ -24,87 +138,6 @@ groups:
   # - { kind: scoop-app, name: logdy}
   - { kind: scoop-app, name: sttr }
 
-  json:
-  # - { kind: scoop-app, name: fx}
-  # - { kind: scoop-app, name: jid}
-  # - { kind: scoop-app, name: csview}
-  - { kind: scoop-app, name: jq }
-  # - { kind: scoop-app, name: xq}
-  - { kind: scoop-app, name: yq }
-  # - { kind: scoop-app, name: fq}
-  # - { kind: scoop-app, name: dasel}
-  - { kind: scoop-app, name: xidel }
-  # - { kind: scoop-app, name: pup}
-
-  spreadsheet:
-  - { kind: scoop-app, name: csvlens }
-  # - { kind: scoop-app, name: dsq}
-  # - { kind: scoop-app, name: q}
-  - { kind: scoop-app, name: sq }
-
-  openapi:
-  # - { kind: scoop-app, name: openapi-tui}
-
-  - { kind: scoop-app, name: hashcat }
-  - { kind: scoop-app, name: john-the-ripper }
-  - { kind: scoop-app, name: 7z2hashcat }
-
-  doc:
-  - { kind: scoop-app, name: pandoc }
-  - { kind: scoop-app, name: main/officecli }
-  - { kind: scoop-app, name: poppler }
-  # - { kind: scoop-app, name: vosviewer}
-  - { kind: scoop-app, name: lfs/awesome-books }
-  # - { kind: scoop-app, name: zeal}
-  # - { kind: scoop-app, name: koodo-reader}
-  # - { kind: scoop-app, name: "mendeley mendeley-desktop"}
-
-  dict:
-  - { kind: scoop-app, name: eudic }
-  - { kind: scoop-app, name: gdm257/awesome-dict }
-  # - { kind: scoop-app, name: ting-en}
-  # - { kind: scoop-app, name: anki}
-  # - { kind: scoop-app, name: goldendict-ng}
-
-  clipboard:
-  - { kind: scoop-app, name: ditto }
-  # - { kind: scoop-app, name: gdm257/ecopastepro}
-  # - { kind: scoop-app, name: ecopaste}
-  # - { kind: scoop-app, name: copyq}
-  # - { kind: scoop-app, name: clipboard}
-
-  note:
-  # - { kind: scoop-app, name: zotero}
-  # - { kind: scoop-app, name: anytype}
-  - { kind: scoop-app, name: obsidian }
-  # - { kind: scoop-app, name: tolaria}
-  # - { kind: scoop-app, name: siyuan}
-  # - { kind: scoop-app, name: focalboard}
-  # - { kind: scoop-app, name: appflowy}
-  # - { kind: scoop-app, name: speedynote}
-  # - { kind: scoop-app, name: bookxnote}
-  - { kind: scoop-app, name: BookXNotePro }
-  # - { kind: scoop-app, name: xournalpp}
-  # - { kind: scoop-app, name: rendevoz}
-  # - { kind: scoop-app, name: logseq}
-
-  ime:
-  # - { kind: scoop-app, name: imewlconverter}
-  - { kind: scoop-app, name: gdm257/windinput }
-
-  markdown:
-  # - { kind: scoop-app, name: zettlr}
-  # - { kind: scoop-app, name: typora}
-  # - { kind: scoop-app, name: marktext}
-  # - { kind: scoop-app, name: gdm257/md-preview}
-  - { kind: scoop-app, name: gdm257/inknote }
-  # - { kind: scoop-app, name: gdm257/vividmark}
-  # - { kind: scoop-app, name: gdm257/markview}
-
-  tex:
-  # - { kind: scoop-app, name: texlive}
-  # - { kind: scoop-app, name: latex}
-
   text-editor:
   # - { kind: scoop-app, name: zed}
   # - { kind: scoop-app, name: zed-opengl}
@@ -119,39 +152,6 @@ groups:
   # - { kind: scoop-app, name: notepad2-mod}
   # - { kind: scoop-app, name: notepad3}
   # - { kind: scoop-app, name: geany}
-
-  pdf-cli:
-  - { kind: scoop-app, name: pdftk }
-
-  pdf-viewer:
-  # - { kind: scoop-app, name: SumatraPDF_dodorz }
-  - { kind: scoop-app, name: sumatrapdf-stable }
-
-  pdf-editor:
-  - { kind: scoop-app, name: gdm257/pdfcraft }
-  # - { kind: scoop-app, name: gdm257/killerpdf }
-  # - { kind: scoop-app, name: pdf-xchange-editor}
-  # - { kind: scoop-app, name: pdfpatcher_hu3rror}
-  # - { kind: scoop-app, name: pdfpatcher}
-  # - { kind: scoop-app, name: pdf-guru}
-
-  font:
-  - { kind: scoop-app, name: fontforge }
-  - { kind: scoop-app, name: winfontsview }
-
-  read-it-later:
-  # - { kind: scoop-app, name: raindrop.io}
-
-  office:
-  - { kind: scoop-app, name: onlyoffice-desktopeditors }
-  # - { kind: scoop-app, name: libreoffice}
-  - { kind: scoop-app, name: gdm257/wordcraft }
-  - { kind: scoop-app, name: gdm257/gridcraft }
-  - { kind: scoop-app, name: gdm257/deckcraft }
-
-  rss:
-  - { kind: scoop-app, name: rssguard }
-  # - { kind: scoop-app, name: fluent-reader}
 
 
 items:

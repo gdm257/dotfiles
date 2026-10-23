@@ -1,4 +1,14 @@
 groups:
+  benchmark:
+  - { kind: scoop-app, name: iperf3 }
+  # - { kind: scoop-app, name: jmeter}
+  # - { kind: scoop-app, name: ali}
+  # - { kind: scoop-app, name: packetsender}
+  - { kind: scoop-app, name: postman }
+  - { kind: scoop-app, name: bruno }
+  # - { kind: scoop-app, name: hoppscotch}
+  # - { kind: scoop-app, name: keploy}
+
   browser:
   - { kind: scoop-app, name: catsxp }
   - { kind: scoop-app, name: centbrowser }
@@ -12,10 +22,27 @@ groups:
   # - { kind: scoop-app, name: geckodriver}
   # - { kind: scoop-app, name: chromedriver}
 
+  chatgpt:
+  # - { kind: scoop-app, name: chatgpt}
+  - { kind: scoop-app, name: gdm257/cherry-studio-v1 }
+  # - { kind: scoop-app, name: chatwise}
+  # - { kind: scoop-app, name: chatgpt-next-web}
+  # - { kind: scoop-app, name: binggpt-portable}
+  # - { kind: scoop-app, name: chatbox}
+  # - { kind: scoop-app, name: ChatALL-Portable}
+  - { kind: scoop-app, name: main/aichat }
+  # - { kind: scoop-app, name: mcp-linker}
+  # - { kind: scoop-app, name: rivet}
+
   curl:
   - { kind: scoop-app, name: hurl }
   # - { kind: scoop-app, name: xh}
   - { kind: scoop-app, name: curlie }
+
+  db:
+  # - { kind: scoop-app, name: sqlitestudio}
+  # - { kind: scoop-app, name: mariadb103}
+  # - { kind: scoop-app, name: mongodb-compass-isolated}
 
   dns:
   # - { kind: scoop-app, name: ddns-go}
@@ -34,11 +61,6 @@ groups:
   # - { kind: scoop-app, name: sdns}
   # - { kind: scoop-app, name: coredns}
 
-  db:
-  # - { kind: scoop-app, name: sqlitestudio}
-  # - { kind: scoop-app, name: mariadb103}
-  # - { kind: scoop-app, name: mongodb-compass-isolated}
-
   im:
   - { kind: scoop-app, name: telegram }
   # - { kind: scoop-app, name: discord}
@@ -55,18 +77,55 @@ groups:
   # - { kind: scoop-app, name: gomuks}
   # - { kind: scoop-app, name: pidgin}
 
-  remote:
-  - { kind: scoop-app, name: gdm257/moonlight }
-  - { kind: scoop-app, name: sunshine }
-  # - { kind: scoop-app, name: tencent-meeting}
-  # - { kind: scoop-app, name: remoteapptool}
-  # - { kind: scoop-app, name: rustdesk}
-  # - { kind: scoop-app, name: parsec}
-  # - { kind: scoop-app, name: scrcpy}
-  # - { kind: scoop-app, name: qtscrcpy}
-  - { kind: scoop-app, name: escrcpy }
-  # - { kind: scoop-app, name: deskreen}
-  # - { kind: scoop-app, name: wakemeonlan}
+  ip:
+  # - { kind: scoop-app, name: asnmap}
+  - { kind: scoop-app, name: networkmanager }
+  - { kind: scoop-app, name: masscan }
+  - { kind: scoop-app, name: naabu }
+  - { kind: scoop-app, name: tlsx }
+  - { kind: scoop-app, name: subfinder }
+  - { kind: scoop-app, name: nmap-portable }
+  - { kind: scoop-app, name: nuclei }
+  # - { kind: scoop-app, name: ipscan}
+
+  irc:
+  - { kind: scoop-app, name: hexchat }
+
+  mail:
+  # - { kind: scoop-app, name: mailspring}
+  # - { kind: scoop-app, name: Thunderbird-Portable}
+  # - { kind: scoop-app, name: tutanota}
+
+  network:
+  - { kind: scoop-app, name: gns3 }
+  # - { kind: scoop-app, name: dug}
+  # - { kind: scoop-app, name: zpscan}
+  # - { kind: scoop-app, name: teleport}
+  # - { kind: scoop-app, name: hostctl}
+  # - { kind: scoop-app, name: kscan_batkiz}
+  # - { kind: scoop-app, name: fscan}
+
+  oauth:
+  - { kind: scoop-app, name: gdm257/oauth2l }
+  - { kind: scoop-app, name: main/oauth2c }
+
+  packet:
+  - { kind: scoop-app, name: gdm257/whistle }
+  - { kind: scoop-app, name: proxypin }
+  - { kind: scoop-app, name: wireshark }
+  # - { kind: scoop-app, name: charles}
+  # - { kind: scoop-app, name: termshark}
+  # - { kind: scoop-app, name: fiddler}
+  # - { kind: scoop-app, name: mitmproxy}
+  # - { kind: scoop-app, name: trafficmonitor}
+  - { kind: scoop-app, name: tproxy }
+  - { kind: scoop-app, name: winnfsd }
+
+  ping:
+  - { kind: scoop-app, name: gping }
+  # - { kind: scoop-app, name: nping}
+
+  port-scanner:
 
   proxy:
   # - { kind: scoop-app, name: main/tor}
@@ -111,16 +170,18 @@ groups:
   # - { kind: scoop-app, name: tuic}
   # - { kind: scoop-app, name: naiveproxy}
 
-  ping:
-  - { kind: scoop-app, name: gping }
-  # - { kind: scoop-app, name: nping}
-
-  port-scanner:
-
-  trace:
-  - { kind: scoop-app, name: nexttrace }
-  # - { kind: scoop-app, name: trippy}
-  # - { kind: scoop-app, name: besttrace}
+  remote:
+  - { kind: scoop-app, name: gdm257/moonlight }
+  - { kind: scoop-app, name: sunshine }
+  # - { kind: scoop-app, name: tencent-meeting}
+  # - { kind: scoop-app, name: remoteapptool}
+  # - { kind: scoop-app, name: rustdesk}
+  # - { kind: scoop-app, name: parsec}
+  # - { kind: scoop-app, name: scrcpy}
+  # - { kind: scoop-app, name: qtscrcpy}
+  - { kind: scoop-app, name: escrcpy }
+  # - { kind: scoop-app, name: deskreen}
+  # - { kind: scoop-app, name: wakemeonlan}
 
   reverse-proxy:
   - { kind: scoop-app, name: traefik }
@@ -133,17 +194,23 @@ groups:
   # - { kind: scoop-app, name: xcaddy}
   - { kind: scoop-app, name: mkcert }
 
-  chatgpt:
-  # - { kind: scoop-app, name: chatgpt}
-  - { kind: scoop-app, name: gdm257/cherry-studio-v1 }
-  # - { kind: scoop-app, name: chatwise}
-  # - { kind: scoop-app, name: chatgpt-next-web}
-  # - { kind: scoop-app, name: binggpt-portable}
-  # - { kind: scoop-app, name: chatbox}
-  # - { kind: scoop-app, name: ChatALL-Portable}
-  - { kind: scoop-app, name: main/aichat }
-  # - { kind: scoop-app, name: mcp-linker}
-  # - { kind: scoop-app, name: rivet}
+  speedtest:
+  # - { kind: scoop-app, name: CloudflareSpeedTest}
+  # - { kind: scoop-app, name: stairspeedtest-reborn}
+
+  tcp:
+  - { kind: scoop-app, name: bandwhich }
+  # - { kind: scoop-app, name: "npcap sniffnet"}
+  - { kind: scoop-app, name: clumsy }
+  - { kind: scoop-app, name: grpcurl }
+  - { kind: scoop-app, name: websocat }
+  - { kind: scoop-app, name: atac }
+  # - { kind: scoop-app, name: webhook}
+
+  trace:
+  - { kind: scoop-app, name: nexttrace }
+  # - { kind: scoop-app, name: trippy}
+  # - { kind: scoop-app, name: besttrace}
 
   tunnel:
   # - { kind: scoop-app, name: chisel}
@@ -159,73 +226,6 @@ groups:
   # - { kind: scoop-app, name: rathole}
   # - { kind: scoop-app, name: tailscale}
   - { kind: scoop-app, name: gdm257/astral }
-
-  irc:
-  - { kind: scoop-app, name: hexchat }
-
-  mail:
-  # - { kind: scoop-app, name: mailspring}
-  # - { kind: scoop-app, name: Thunderbird-Portable}
-  # - { kind: scoop-app, name: tutanota}
-
-  benchmark:
-  - { kind: scoop-app, name: iperf3 }
-  # - { kind: scoop-app, name: jmeter}
-  # - { kind: scoop-app, name: ali}
-  # - { kind: scoop-app, name: packetsender}
-  - { kind: scoop-app, name: postman }
-  - { kind: scoop-app, name: bruno }
-  # - { kind: scoop-app, name: hoppscotch}
-  # - { kind: scoop-app, name: keploy}
-
-  oauth:
-  - { kind: scoop-app, name: gdm257/oauth2l }
-  - { kind: scoop-app, name: main/oauth2c }
-
-  packet:
-  - { kind: scoop-app, name: gdm257/whistle }
-  - { kind: scoop-app, name: proxypin }
-  - { kind: scoop-app, name: wireshark }
-  # - { kind: scoop-app, name: charles}
-  # - { kind: scoop-app, name: termshark}
-  # - { kind: scoop-app, name: fiddler}
-  # - { kind: scoop-app, name: mitmproxy}
-  # - { kind: scoop-app, name: trafficmonitor}
-  - { kind: scoop-app, name: tproxy }
-  - { kind: scoop-app, name: winnfsd }
-
-  network:
-  - { kind: scoop-app, name: gns3 }
-  # - { kind: scoop-app, name: dug}
-  # - { kind: scoop-app, name: zpscan}
-  # - { kind: scoop-app, name: teleport}
-  # - { kind: scoop-app, name: hostctl}
-  # - { kind: scoop-app, name: kscan_batkiz}
-  # - { kind: scoop-app, name: fscan}
-
-  tcp:
-  - { kind: scoop-app, name: bandwhich }
-  # - { kind: scoop-app, name: "npcap sniffnet"}
-  - { kind: scoop-app, name: clumsy }
-  - { kind: scoop-app, name: grpcurl }
-  - { kind: scoop-app, name: websocat }
-  - { kind: scoop-app, name: atac }
-  # - { kind: scoop-app, name: webhook}
-
-  ip:
-  # - { kind: scoop-app, name: asnmap}
-  - { kind: scoop-app, name: networkmanager }
-  - { kind: scoop-app, name: masscan }
-  - { kind: scoop-app, name: naabu }
-  - { kind: scoop-app, name: tlsx }
-  - { kind: scoop-app, name: subfinder }
-  - { kind: scoop-app, name: nmap-portable }
-  - { kind: scoop-app, name: nuclei }
-  # - { kind: scoop-app, name: ipscan}
-
-  speedtest:
-  # - { kind: scoop-app, name: CloudflareSpeedTest}
-  # - { kind: scoop-app, name: stairspeedtest-reborn}
 
 
 items:

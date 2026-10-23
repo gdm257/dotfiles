@@ -33,14 +33,6 @@ groups:
   - { kind: scoop-app, name: pmx-editor }
   # - { kind: scoop-app, name: opentoonz }
 
-  video-recording:
-  - { kind: scoop-app, name: obs-studio }
-  # - { kind: scoop-app, name: screentogif}
-  # - { kind: scoop-app, name: captura}
-  # - { kind: scoop-app, name: sharex}
-  # - { kind: scoop-app, name: kmcounter}
-  - { kind: scoop-app, name: gdm257/frameview }
-
   subtitle:
   - { kind: scoop-app, name: DanmakuFactory }
   # - { kind: scoop-app, name: AssFontSubset}
@@ -69,6 +61,19 @@ groups:
   # - { kind: scoop-app, name: WindowResizer }
   # - { kind: scoop-app, name: sizer}
 
+  video-editor:
+  - { kind: scoop-app, name: quickcut }
+  - { kind: scoop-app, name: natron }
+  # - { kind: scoop-app, name: olive-editor-nightly}
+  - { kind: scoop-app, name: olive-editor }
+  - { kind: scoop-app, name: kdenlive }
+  # - { kind: scoop-app, name: "shotcut losslesscut"}
+  - { kind: scoop-app, name: gyroflow }
+  - { kind: scoop-app, name: gdm257/filmcraft }
+  - { kind: scoop-app, name: gdm257/effectcraft }
+  - { kind: scoop-app, name: ZXPInstaller }
+  # - { kind: scoop-app, name: UAC.ZXPInstaller}
+
   video-explorer:
   - { kind: scoop-app, name: digikam }
 
@@ -90,19 +95,6 @@ groups:
   # - { kind: scoop-app, name: madvr}
   # - { kind: scoop-app, name: mpc-be}
 
-  video-editor:
-  - { kind: scoop-app, name: quickcut }
-  - { kind: scoop-app, name: natron }
-  # - { kind: scoop-app, name: olive-editor-nightly}
-  - { kind: scoop-app, name: olive-editor }
-  - { kind: scoop-app, name: kdenlive }
-  # - { kind: scoop-app, name: "shotcut losslesscut"}
-  - { kind: scoop-app, name: gyroflow }
-  - { kind: scoop-app, name: gdm257/filmcraft }
-  - { kind: scoop-app, name: gdm257/effectcraft }
-  - { kind: scoop-app, name: ZXPInstaller }
-  # - { kind: scoop-app, name: UAC.ZXPInstaller}
-
   video-processor:
   # - { kind: scoop-app, name: vidbatch}
   # - { kind: scoop-app, name: megui-fixed@2896}
@@ -115,6 +107,14 @@ groups:
   # - { kind: scoop-app, name: shanaencoder}
   # - { kind: scoop-app, name: qwinff}
   - { kind: scoop-app, name: shadered }
+
+  video-recording:
+  - { kind: scoop-app, name: obs-studio }
+  # - { kind: scoop-app, name: screentogif}
+  # - { kind: scoop-app, name: captura}
+  # - { kind: scoop-app, name: sharex}
+  # - { kind: scoop-app, name: kmcounter}
+  - { kind: scoop-app, name: gdm257/frameview }
 
   youtube:
   # - { kind: scoop-app, name: freetube}
