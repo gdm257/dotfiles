@@ -4,7 +4,7 @@
 
 ## Considered Options
 
-- receiver 自跳过（dispatch 透传全部 item，receiver 对异 kind 静默跳过）：被否决——需改写全部 receiver 模板，且"异 kind 即 fail"的自验证降级后，路由错误从响亮失败变为静默漏装。
+- receiver 自跳过（dispatch 透传全部 item，receiver 对异 kind 静默跳过）：被否决——需改写每个 receiver 模板，且"异 kind 即 fail"的自验证降级后，路由错误从响亮失败变为静默漏装。
 - fallback 语义（按序尝试、首个成功生效）：被否决——与 kind 自认领模型冲突，dotfiles 场景无此需求。
 
 ## Consequences
