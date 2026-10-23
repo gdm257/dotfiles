@@ -8,7 +8,7 @@
 
 ### Requirement: 入口与 required vars
 
-入口 task SHALL 为 `manifest:dispatch`，required vars 恰为 `MANIFEST`（manifest 文件路径）与 `CALLS`（kind→接收方 task 的路由映射，string，逗号分隔的 `<kind>=<task>` 条目；task 名可含 namespace）。`CALLS` 中各 task SHALL 运行期经 `task: '<task>'` 解析，指向不存在的 task 时干净报错。单 receiver 的旧 var `CALL` 废除（breaking change，调用方直接迁移）。入口名 MUST NOT 与 v1 `manifest:run` / `manifest:run:manifest` 碰撞（并存期 v1 任务名不动）。
+入口 task SHALL 为 `manifest:dispatch`，required vars 恰为 `MANIFEST`（manifest 文件路径）与 `CALLS`（kind→接收方 task 的路由映射，string，逗号分隔的 `<kind>=<task>` 条目；task 名可含 namespace）。`CALLS` 中各 task SHALL 运行期经 `task: '<task>'` 解析，指向不存在的 task 时干净报错。单 receiver 的旧 var `CALL` 废除（breaking change，调用方直接迁移）。
 
 #### Scenario: 标准调用
 

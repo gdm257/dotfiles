@@ -8,17 +8,12 @@
 
 ### Requirement: 顶层结构仅 items 与 groups
 
-manifest 顶层 SHALL 仅含 `items`（有序列表）与 `groups`（`<name>` → item 列表的 map，仅作组织与复用）。未知顶层键 SHALL 使引擎 fail，错误信息 MUST 含 manifest 路径——v1 manifest（`run:` / `presets:` 等）误入 v2 引擎响亮报错，不静默空跑。
+manifest 顶层 SHALL 仅含 `items`（有序列表）与 `groups`（`<name>` → item 列表的 map，仅作组织与复用）。未知顶层键 SHALL 使引擎 fail，错误信息 MUST 含 manifest 路径，不静默空跑。
 
 #### Scenario: 未知顶层键报错
 
 - **WHEN** manifest 顶层声明了 `items` / `groups` 之外的键
-- **THEN** 引擎 fail，错误信息含该键名与 manifest 路径
-
-#### Scenario: v1 manifest 误入 v2 引擎
-
-- **WHEN** 含顶层 `run:` / `presets:` 的 v1 manifest 被交给 v2 引擎
-- **THEN** 因未知顶层键 fail，而非静默空跑 exit 0
+- **THEN** 引擎 fail，错误信息含该键名与 manifest 路径，而非静默空跑 exit 0
 
 ### Requirement: item 必含恰一个 kind
 
