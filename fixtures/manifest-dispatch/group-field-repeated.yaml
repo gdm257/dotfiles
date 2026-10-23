@@ -1,0 +1,7 @@
+# 重复引用带/不带下传字段 MUST 互不污染：第二次展开的成员不带 tier。
+items:
+  - {group: shared, tier: gold}
+  - group: shared
+groups:
+  shared:
+    - {kind: echo, name: repeated}

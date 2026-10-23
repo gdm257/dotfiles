@@ -29,10 +29,10 @@ tasks:
         {{-   if hasKey . "group" }}
         {{-     $grp := .group }}
         {{-     if not (hasKey $g $grp) }}{{ fail (printf "item #%d unknown group '%s' in %s" (add $n 1) $grp $.MANIFEST) }}{{ end }}
-        {{-     $coe := .continue_on_error }}
-        {{-     $hasCoe := hasKey . "continue_on_error" }}
-        {{-     $refPass := true }}
-        {{-     if not (ne .enable false) }}{{ $refPass = false }}{{ end }}
+        {{-     $defaults := dict }}
+        {{-     range $k, $v := . }}
+        {{-       if not (or (eq $k "group") (eq $k "platforms") (eq $k "kind")) }}{{ $defaults = merge (dict $k $v) $defaults }}{{ end }}
+        {{-     end }}
         {{-     $refPMatch := true }}
         {{-     if hasKey . "platforms" }}
         {{-       $refPMatch = false }}
@@ -49,16 +49,13 @@ tasks:
         {{-         if $refM }}{{ $refPMatch = true }}{{ end }}
         {{-       end }}
         {{-     end }}
-        {{-     $refPass = and $refPass $refPMatch }}
-        {{-     if $refPass }}
+        {{-     if $refPMatch }}
         {{-       range index $g $grp }}
         {{-         $n = add $n 1 }}
         {{-         if not (eq (printf "%T" .) "map[string]interface {}") }}{{ fail (printf "item #%d not a map in %s" $n $.MANIFEST) }}{{ end }}
         {{-         if hasKey . "group" }}{{ fail (printf "item #%d nested group '%s' in %s" $n .group $.MANIFEST) }}{{ end }}
         {{-         if not (hasKey . "kind") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
         {{-         if not (eq (printf "%T" .kind) "string") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
-        {{-         $pass := true }}
-        {{-         if not (ne .enable false) }}{{ $pass = false }}{{ end }}
         {{-         $pMatch := true }}
         {{-         if hasKey . "platforms" }}
         {{-           $pMatch = false }}
@@ -75,18 +72,17 @@ tasks:
         {{-             if $pm }}{{ $pMatch = true }}{{ end }}
         {{-           end }}
         {{-         end }}
-        {{-         $pass = and $pass $pMatch }}
         {{-         $item := . }}
-        {{-         if and $hasCoe (not (hasKey . "continue_on_error")) }}{{ $item = merge (dict "continue_on_error" $coe) . }}{{ end }}
-        {{-         if $pass }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson $item }}{{ end }}
+        {{-         range $k, $v := $defaults }}
+        {{-           if not (hasKey $item $k) }}{{ $item = merge (dict $k $v) $item }}{{ end }}
+        {{-         end }}
+        {{-         if $pMatch }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson $item }}{{ end }}
         {{-       end }}
         {{-     end }}
         {{-   else }}
         {{-     $n = add $n 1 }}
         {{-     if not (hasKey . "kind") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
         {{-     if not (eq (printf "%T" .kind) "string") }}{{ fail (printf "item #%d missing or non-scalar kind in %s" $n $.MANIFEST) }}{{ end }}
-        {{-     $pass := true }}
-        {{-     if not (ne .enable false) }}{{ $pass = false }}{{ end }}
         {{-     $pMatch := true }}
         {{-     if hasKey . "platforms" }}
         {{-       $pMatch = false }}
@@ -103,8 +99,7 @@ tasks:
         {{-             if $pm }}{{ $pMatch = true }}{{ end }}
         {{-       end }}
         {{-     end }}
-        {{-     $pass = and $pass $pMatch }}
-        {{-     if $pass }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}
+        {{-     if $pMatch }}{{ if not $first }},{{ end }}{{ $first = false }}{{ toJson . }}{{ end }}
         {{-   end }}
         {{- end }}]
       _DISPATCH:

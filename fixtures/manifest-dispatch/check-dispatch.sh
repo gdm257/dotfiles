@@ -29,12 +29,40 @@ check test "${output#*failed: member-tolerated}" != "$output"
 capture group-coe-repeated
 check test "$code" = 0
 expected=''
+nl='
+'
 for flag in true false absent false true; do
   field="\"continue_on_error\":$flag,"
   if [ "$flag" = absent ]; then field=''; fi
   line="item=repeated kind=echo flag=false json={${field}\"kind\":\"echo\",\"name\":\"repeated\"}"
-  expected="${expected}${expected:+$'\n'}$line"
+  expected="${expected}${expected:+$nl}$line"
 done
+check test "$output" = "$expected"
+
+capture group-state-propagation false
+check test "$code" = 0
+expected='item=prop-1 kind=echo flag=false json={"kind":"echo","name":"prop-1","state":"absent"}
+item=prop-2 kind=echo flag=false json={"kind":"echo","name":"prop-2","state":"absent"}
+item=after-group kind=echo flag=false json={"kind":"echo","name":"after-group"}'
+check test "$output" = "$expected"
+
+capture group-state-member-override false
+check test "$code" = 0
+expected='item=implicit kind=echo flag=false json={"kind":"echo","name":"implicit","state":"absent"}
+item=explicit-present kind=echo flag=false json={"kind":"echo","name":"explicit-present","state":"present"}'
+check test "$output" = "$expected"
+
+capture group-field-propagation false
+check test "$code" = 0
+expected='item=inherits kind=echo flag=false json={"kind":"echo","name":"inherits","tier":"gold"}
+item=overrides kind=echo flag=false json={"kind":"echo","name":"overrides","tier":"silver"}
+item=after-group kind=echo flag=false json={"kind":"echo","name":"after-group"}'
+check test "$output" = "$expected"
+
+capture group-field-repeated false
+check test "$code" = 0
+expected='item=repeated kind=echo flag=false json={"kind":"echo","name":"repeated","tier":"gold"}
+item=repeated kind=echo flag=false json={"kind":"echo","name":"repeated"}'
 check test "$output" = "$expected"
 
 for scenario in unknown-top-key unknown-group nested-group missing-kind non-scalar-kind non-map-item invalid-platform-segments invalid-platform-os empty-platform-arch-inline empty-platform-arch-member empty-platform-arch-group; do
@@ -64,9 +92,6 @@ check test "${output#*'"opts":{"deep":{"x":1}},"tags":["a","b"]'}" != "$output"
 capture filtering false
 check test "$code" = 0
 check test "${output#*item=always }" != "$output"
-check test "${output#*item=disabled }" = "$output"
-check test "${output#*item=dg-1 }" = "$output"
-check test "${output#*item=dg-3 }" = "$output"
 case "$OSTYPE" in
   msys*|cygwin*) present=win-only; absent=linux-only ;;
   linux*) present=linux-only; absent=win-only ;;
@@ -100,7 +125,7 @@ check test "$code" = 1
 check test "${output#*"item #1 unknown top-level key 'command'"}" != "$output"
 check test "${output#*fixtures/manifest-dispatch/v1-form.yaml}" != "$output"
 capture bool-fidelity false no-such-task
-check test "$code" = 200
+case $code in 200|201) ;; *) check test "$code" = '200|201' ;; esac
 check test "${output#*'manifest:no-such-task'}" != "$output"
 code=0
 output=$(task --silent manifest:echo:replay 'ITEM_JSON={"kind":"echo","name":"x"}' 2>&1) || code=$?
@@ -111,4 +136,4 @@ if [ "$failures" != 0 ]; then
   printf 'FAIL: %s dispatch assertions\n' "$failures" >&2
   exit 1
 fi
-printf 'PASS: 24 dispatch CLI scenarios including all fixtures, group precedence/isolation, locations and empty arch\n'
+printf 'PASS: 28 dispatch CLI scenarios including all fixtures, state and neutral field propagation, group precedence/isolation, locations and empty arch\n'

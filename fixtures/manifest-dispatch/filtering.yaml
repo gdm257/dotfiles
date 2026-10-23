@@ -1,17 +1,12 @@
-# enable / platforms 过滤（内联 item 与组引用条目）
+# platforms 过滤（内联 item 与组引用条目）
 # 期望：仅 always + 与当前 OS 匹配的 *-only item 被调用；组引用不匹配 = 整组跳过
 items:
   - {kind: echo, name: always}
-  - {kind: echo, name: disabled, enable: false}
   - {kind: echo, name: win-only, platforms: [windows]}
   - {kind: echo, name: linux-only, platforms: [linux]}
-  - group: disabled-group
-    enable: false
   - group: darwin-only
     platforms: [darwin]
 groups:
-  disabled-group:
-    - {kind: echo, name: dg-1}
   darwin-only:
     - {kind: echo, name: dg-2}
-    - {kind: echo, name: dg-3, enable: false}
+    - {kind: echo, name: dg-3}

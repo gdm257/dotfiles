@@ -1,0 +1,9 @@
+# 组引用条目任意非保留字段向未声明该字段的 item 逐键下传，成员显式值优先。
+items:
+  - group: tiered
+    tier: gold
+  - {kind: echo, name: after-group}
+groups:
+  tiered:
+    - {kind: echo, name: inherits}
+    - {kind: echo, name: overrides, tier: silver}

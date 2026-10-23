@@ -12,27 +12,13 @@
 
 #### Scenario: 标准调用
 
-- **WHEN** 执行 `task manifest:dispatch MANIFEST=app-np.yaml CALL=scoop:install`
-- **THEN** manifest 幸存 items 逐个调用 `scoop:install`
+- **WHEN** 执行 `task manifest:dispatch MANIFEST=app-np.yaml CALL=<task>`
+- **THEN** manifest 幸存 items 逐个调用该 task
 
 #### Scenario: CALL 指向未知名
 
 - **WHEN** `CALL` 为不存在的 task 名
 - **THEN** 报错指明未知名，而非静默跳过
-
-### Requirement: 引擎职责恰好四步
-
-引擎 SHALL 恰好执行解析（未知顶层键 fail）、展开（`items` 声明序、group 展开、`continue_on_error` 传播）、过滤（`enable` / `platforms` 三层一致）、透传（幸存 item 整 map 原样交 `CALL`）。`enable: false` 静默跳过；引用条目不匹配即整组跳过。引擎 MUST NOT 持有动词知识或解释字段语义：kind 值域、字段含义、命令拼装一概不碰。
-
-#### Scenario: 迭代严格串行按展开序
-
-- **WHEN** 展开后幸存 items 为 [a, b, c]
-- **THEN** 按此顺序逐个调用 `CALL`，无并发
-
-#### Scenario: enable false 静默跳过
-
-- **WHEN** 某 item 声明 `enable: false`
-- **THEN** 该 item 不调用 `CALL`，也不报错
 
 ### Requirement: ITEM_JSON 唯一透传通道
 
@@ -40,17 +26,17 @@
 
 #### Scenario: bool 类型保真
 
-- **WHEN** item 声明 `elevated: true`，接收方 `fromJson` 还原后访问 `.ITEM.elevated`
+- **WHEN** item 声明某声明字段 `k: true`，接收方 `fromJson` 还原后访问 `.ITEM.k`
 - **THEN** 得到 bool true，可直接用于模板判断
 
 #### Scenario: 未声明键由接收方自理
 
-- **WHEN** item 未声明 `version`，接收方模板访问 `.ITEM.version`
+- **WHEN** item 未声明 `k`，接收方模板访问 `.ITEM.k`
 - **THEN** 得 `<no value>`，接收方以 `default` / `hasKey` 兜底，引擎不介入
 
 ### Requirement: FAIL_LOG 失败语义
 
-引擎 SHALL 向 `CALL` 传基础设施 var `FAIL_LOG`（固定路径复用文件，每次 dispatch 开头 truncate）。接收方 cmd 失败不吞时 `CALL` 失败、迭代立即中止（fail-fast）。引擎 MUST NOT 消费 `continue_on_error`：容忍失败与批量级开关归接收方自行包装（写 `FAIL_LOG` 并吞退出码）。dispatch 收尾 `FAIL_LOG` 非空 SHALL 打印 failed items 汇总并 exit 1。接收方不经 dispatch 独立调用时无 `FAIL_LOG`，MUST 自行降级。
+引擎 SHALL 向 `CALL` 传基础设施 var `FAIL_LOG`（固定路径复用文件，每次 dispatch 开头 truncate）。接收方 cmd 失败不吞时 `CALL` 失败、迭代立即中止（fail-fast）。引擎 MUST NOT 消费任何声明字段：容忍失败与批量级开关归接收方自行包装（写 `FAIL_LOG` 并吞退出码）。dispatch 收尾 `FAIL_LOG` 非空 SHALL 打印 failed items 汇总并 exit 1。接收方不经 dispatch 独立调用时无 `FAIL_LOG`，MUST 自行降级。
 
 #### Scenario: 未容忍的失败立即中止
 
@@ -78,9 +64,23 @@
 
 ### Requirement: 边界行为与零依赖
 
-`items` 为空或全部被过滤时 SHALL 静默 exit 0、不调用 `CALL`。实现 SHALL 零依赖（ADR-0001 全额适用：bash builtins + Windows 自带命令 + Task 进程内模板）。
+`items` 为空或全部被 platforms 过滤时 SHALL 静默 exit 0、不调用 `CALL`。实现 SHALL 零依赖（ADR-0001 全额适用：bash builtins + Windows 自带命令 + Task 进程内模板）。
 
 #### Scenario: 空批静默通过
 
-- **WHEN** manifest 的 `items` 为空，或所有 item 被 `enable` / `platforms` 过滤
+- **WHEN** manifest 的 `items` 为空，或所有 item 被 `platforms` 过滤
 - **THEN** dispatch 不调用 `CALL`，exit 0
+
+### Requirement: 引擎职责四步与传播
+
+引擎 SHALL 恰好执行解析（未知顶层键 fail）、展开（`items` 声明序、group 展开、引用条目非保留字段通用下传）、过滤（仅 `platforms`，三层一致）、透传（幸存 item 整 map 原样交 `CALL`）。引用条目 platforms 不匹配即整组跳过。引擎 MUST NOT 持有动词知识、解释字段语义或点名任何声明字段：kind 值域与字段语义一概不碰。
+
+#### Scenario: 迭代严格串行按展开序
+
+- **WHEN** 展开后幸存 items 为 [a, b, c]
+- **THEN** 按此顺序逐个调用 `CALL`，无并发
+
+#### Scenario: 下传字段照常透传
+
+- **WHEN** 引用条目声明某非保留字段且组内成员未声明该字段
+- **THEN** 成员透传时携带该字段值，接收方自行解释

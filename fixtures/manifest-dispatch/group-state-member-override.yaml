@@ -1,0 +1,7 @@
+# 成员显式 state MUST 优先于引用条目传播值。
+items:
+  - {group: offboard, state: absent}
+groups:
+  offboard:
+    - {kind: echo, name: implicit}
+    - {kind: echo, name: explicit-present, state: present}

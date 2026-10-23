@@ -90,14 +90,28 @@ tasks:
       - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   choco:install:
-    desc: "receive choco-package items (choco install)"
+    desc: "receive choco-package items (install; absent belongs to choco:uninstall)"
     requires:
       vars:
         - ITEM_JSON
     vars:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
-      _CMD: '{{ if eq .ITEM.kind "choco-package" }}choco install -y {{ .ITEM.name }}{{ else }}echo "choco: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CMD: '{{ if eq .ITEM.kind "choco-package" }}{{ if eq (.ITEM.state | default "present") "present" }}choco install -y {{ .ITEM.name }}{{ else }}echo "choco:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else }}echo "choco:install: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  choco:uninstall:
+    desc: "receive choco-package items (uninstall; absent direction)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "choco-package" }}{{ if eq .ITEM.state "absent" }}if choco list --exact {{ .ITEM.name }} >/dev/null 2>&1; then choco uninstall -y {{ .ITEM.name }}; fi{{ else }}echo "choco:uninstall: unexpected state {{ .ITEM.state | default "present" }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else }}echo "choco:uninstall: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
       _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
       _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
@@ -311,14 +325,28 @@ tasks:
       - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   scoop:install:
-    desc: "receive scoop items (app/bucket/config by kind)"
+    desc: "receive scoop items (app install, bucket/config; absent belongs to scoop:uninstall)"
     requires:
       vars:
         - ITEM_JSON
     vars:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
-      _CMD: '{{ if eq .ITEM.kind "scoop-app" }}{{ if eq (.ITEM.elevated | default false) true }}sudo {{ end }}scoop install {{ .ITEM.name }}{{ else if eq .ITEM.kind "scoop-bucket" }}scoop bucket add {{ .ITEM.name }}{{ if .ITEM.url }} {{ .ITEM.url }}{{ end }}{{ else if eq .ITEM.kind "scoop-config" }}scoop config {{ .ITEM.key }} {{ .ITEM.value }}{{ else }}echo "scoop: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CMD: '{{ if eq .ITEM.kind "scoop-app" }}{{ if eq (.ITEM.state | default "present") "present" }}{{ if eq (.ITEM.elevated | default false) true }}sudo {{ end }}scoop install {{ .ITEM.name }}{{ else }}echo "scoop:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else if eq .ITEM.kind "scoop-bucket" }}{{ if hasKey .ITEM "state" }}echo "scoop:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ else }}scoop bucket add {{ .ITEM.name }}{{ if .ITEM.url }} {{ .ITEM.url }}{{ end }}{{ end }}{{ else if eq .ITEM.kind "scoop-config" }}{{ if hasKey .ITEM "state" }}echo "scoop:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ else }}scoop config {{ .ITEM.key }} {{ .ITEM.value }}{{ end }}{{ else }}echo "scoop:install: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  scoop:uninstall:
+    desc: "receive scoop-app items (uninstall; absent direction)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "scoop-app" }}{{ if eq .ITEM.state "absent" }}if scoop list {{ .ITEM.name }} >/dev/null 2>&1; then {{ if eq (.ITEM.elevated | default false) true }}sudo {{ end }}scoop uninstall {{ .ITEM.name }}; fi{{ else }}echo "scoop:uninstall: unexpected state {{ .ITEM.state | default "present" }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else }}echo "scoop:uninstall: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
       _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
       _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
@@ -437,14 +465,28 @@ tasks:
       - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
   winget:install:
-    desc: "receive winget items (app by kind)"
+    desc: "receive winget items (install; absent belongs to winget:uninstall)"
     requires:
       vars:
         - ITEM_JSON
     vars:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
-      _CMD: '{{ if eq .ITEM.kind "winget-app" }}winget install --source {{ .ITEM.source | default "winget" }} --id {{ .ITEM.id }}{{ if .ITEM.version }} --version {{ .ITEM.version }}{{ end }}{{ else }}echo "winget: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CMD: '{{ if eq .ITEM.kind "winget-app" }}{{ if eq (.ITEM.state | default "present") "present" }}winget install --source {{ .ITEM.source | default "winget" }} --id {{ .ITEM.id }}{{ if .ITEM.version }} --version {{ .ITEM.version }}{{ end }}{{ else }}echo "winget:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else }}echo "winget:install: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  winget:uninstall:
+    desc: "receive winget-app items (uninstall; absent direction)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if eq .ITEM.kind "winget-app" }}{{ if eq .ITEM.state "absent" }}if winget list --source {{ .ITEM.source | default "winget" }} --id {{ .ITEM.id }} >/dev/null 2>&1; then winget uninstall --source {{ .ITEM.source | default "winget" }} --id {{ .ITEM.id }}; fi{{ else }}echo "winget:uninstall: unexpected state {{ .ITEM.state | default "present" }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else }}echo "winget:uninstall: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
       _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
       _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:

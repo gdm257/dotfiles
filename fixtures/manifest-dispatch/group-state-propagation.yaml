@@ -1,0 +1,9 @@
+# 组引用条目 state 向未声明该字段的 item 传播（引擎只搬运不解释，接收方自行消费）
+items:
+  - group: offboard
+    state: absent
+  - {kind: echo, name: after-group}
+groups:
+  offboard:
+    - {kind: echo, name: prop-1}
+    - {kind: echo, name: prop-2}

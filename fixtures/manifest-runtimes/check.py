@@ -1,9 +1,11 @@
 """Safe Task CLI rendering checks. Run from the repository root; never installs."""
 import json
+import os
 from pathlib import Path
 import re
 import shutil
 import subprocess
+import tempfile
 
 TASK = shutil.which("task")
 assert TASK, "task is required"
@@ -41,8 +43,49 @@ for family, item, command in CASES:
     assert "||" not in render({**item, "continue_on_error": False}, "CONTINUE_ON_ERROR=true")
     assert '>> "custom-fail.log"' in render({**item, "continue_on_error": True}, "FAIL_LOG=custom-fail.log")
     assert '>> "custom-fail.log"' in render(item, "CONTINUE_ON_ERROR=true", "FAIL_LOG=custom-fail.log")
-    assert ">&2" in render({**item, "continue_on_error": True})
+    assert '>> "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"' in render({**item, "continue_on_error": True})
     dry(task, 'ITEM_JSON={"kind":"unknown"}', success=False)
+
+PKGS = [
+    ("manifest:winget:install", "manifest:winget:uninstall", {"kind": "winget-app", "id": "stub-app"}, "winget install --source winget --id stub-app", "winget install --source winget --id stub-app --version 1.2.3", "winget uninstall --source winget --id stub-app"),
+    ("manifest:scoop:install", "manifest:scoop:uninstall", {"kind": "scoop-app", "name": "stub-app"}, "scoop install stub-app", "scoop install stub-app", "scoop uninstall stub-app"),
+    ("manifest:choco:install", "manifest:choco:uninstall", {"kind": "choco-package", "name": "stub-app"}, "choco install -y stub-app", "choco install -y stub-app", "choco uninstall -y stub-app"),
+]
+STUBS = Path(__file__).with_name("stubs")
+
+
+def live(task, value):
+    log = Path(tempfile.gettempdir()) / "manifest-runtimes-stub.log"
+    fail = Path(tempfile.gettempdir()) / "manifest-runtimes-faillog"
+    log.write_text("", encoding="utf-8")
+    fail.write_text("", encoding="utf-8")
+    env = {**os.environ, "PATH": str(STUBS) + os.pathsep + os.environ["PATH"], "STUB_LOG": str(log)}
+    result = subprocess.run([TASK, "--silent", task, "ITEM_JSON=" + json.dumps(value), f"FAIL_LOG={fail}"], capture_output=True, text=True, encoding="utf-8", env=env)
+    return result.returncode, result.stdout + result.stderr, log.read_text(encoding="utf-8").splitlines(), fail.read_text(encoding="utf-8")
+
+
+for install_task, uninstall_task, item, install, install_version, uninstall in PKGS:
+    key = "id" if "id" in item else "name"
+    code, output, lines, failed = live(install_task, item)
+    assert code == 0 and lines == [install], output
+    code, output, lines, failed = live(install_task, {**item, "state": "present", "version": "1.2.3"})
+    assert code == 0 and lines == [install_version], output
+    code, output, lines, failed = live(install_task, {**item, "state": "absent"})
+    assert code != 0 and lines == [] and "absent" in output and item["kind"] in output, output
+    code, output, lines, failed = live(uninstall_task, {**item, "state": "absent", "version": "1.2.3"})
+    assert code == 0 and lines == [uninstall], output
+    code, output, lines, failed = live(uninstall_task, {**item, key: "missing-app", "state": "absent"})
+    assert code == 0 and lines == [] and failed == "", output
+    code, output, lines, failed = live(uninstall_task, {**item, key: "failing-app", "state": "absent", "continue_on_error": True})
+    assert code == 0 and lines == [uninstall.replace("stub-app", "failing-app")] and uninstall.replace("stub-app", "failing-app") in failed, output
+    code, output, lines, failed = live(uninstall_task, {**item})
+    assert code != 0 and lines == [] and "present" in output and item["kind"] in output, output
+    code, output, lines, failed = live(uninstall_task, {**item, "state": "removed"})
+    assert code != 0 and lines == [] and "removed" in output and item["kind"] in output, output
+
+for item in ({"kind": "scoop-bucket", "name": "main", "state": "absent"}, {"kind": "scoop-config", "key": "use_lessmsi", "value": "true", "state": "present"}):
+    code, output, lines, failed = live("manifest:scoop:install", item)
+    assert code != 0 and lines == [] and item["state"] in output and item["kind"] in output, output
 
 names = [case[0] for case in CASES] + ["volta-unix", "pipx-unix", "cargo-unix"]
 wrappers = Path("taskfile.yaml").read_text(encoding="utf-8")
@@ -56,4 +99,4 @@ for name in names:
     dry(f"manifests:{name}:{verb}")
     if name.endswith("-unix"):
         assert "platforms: [linux, darwin]" in manifest
-print("PASS: 14 receivers x 6 cases; 17 wrapper dry runs; batch double-zero checks")
+print("PASS: 14 receivers x 6 cases; 3 package install receivers x 3 cases + 3 uninstall receivers x 6 cases via PATH stubs; 2 no-removal kinds; 17 wrapper dry runs; batch double-zero checks")

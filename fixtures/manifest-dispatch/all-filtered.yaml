@@ -1,8 +1,8 @@
-# 全部被过滤（含整组）：不调 CALL，静默 exit 0
+# 全部被 platforms 过滤（含整组，arch 恒不匹配）：不调 CALL，静默 exit 0
 items:
-  - {kind: echo, name: a, enable: false}
+  - {kind: echo, name: a, platforms: [windows/bogus, linux/bogus, darwin/bogus]}
   - group: off
-    enable: false
+    platforms: [windows/bogus, linux/bogus, darwin/bogus]
 groups:
   off:
     - {kind: echo, name: b}

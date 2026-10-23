@@ -78,12 +78,12 @@ groups:
 
 items:
   - { group: activation }
-  - { group: boot, enable: false }
+  # - { group: boot }
   - { group: driver }
   - { group: envvars }
-  - { group: hardware, enable: false }
+  # - { group: hardware }
   - { group: os-info }
   - { group: registry }
   - { group: settings }
-  - { group: uninstaller, enable: false }
-  - { group: vcpp, enable: false }
+  # - { group: uninstaller }
+  # - { group: vcpp }

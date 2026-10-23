@@ -121,10 +121,10 @@ groups:
 
 
 items:
-  - { group: bilibili, enable: false }
-  - { group: cad, enable: false }
+  # - { group: bilibili }
+  # - { group: cad }
   - { group: emby }
-  - { group: mmd, enable: false }
+  # - { group: mmd }
   - { group: video-recording }
   - { group: subtitle }
   - { group: upscale }
