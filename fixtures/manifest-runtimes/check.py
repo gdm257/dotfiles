@@ -48,8 +48,8 @@ for family, item, command in CASES:
 
 PKGS = [
     ("manifest:winget:install", "manifest:winget:uninstall", {"kind": "winget-app", "id": "stub-app"}, "winget install --source winget --id stub-app", "winget install --source winget --id stub-app --version 1.2.3", "winget uninstall --source winget --id stub-app"),
-    ("manifest:scoop:install", "manifest:scoop:uninstall", {"kind": "scoop-app", "name": "stub-app"}, "scoop install stub-app", "scoop install stub-app", "scoop uninstall stub-app"),
-    ("manifest:choco:install", "manifest:choco:uninstall", {"kind": "choco-package", "name": "stub-app"}, "choco install -y stub-app", "choco install -y stub-app", "choco uninstall -y stub-app"),
+    ("manifest:scoop:install", "manifest:scoop:uninstall", {"kind": "scoop-app", "name": "stub-app"}, "scoop install stub-app", "scoop install stub-app@1.2.3", "scoop uninstall stub-app"),
+    ("manifest:choco:install", "manifest:choco:uninstall", {"kind": "choco-package", "name": "stub-app"}, "choco install -y stub-app", "choco install -y stub-app --version 1.2.3", "choco uninstall -y stub-app"),
 ]
 STUBS = Path(__file__).with_name("stubs")
 

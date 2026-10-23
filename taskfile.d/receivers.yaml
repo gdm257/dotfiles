@@ -97,7 +97,7 @@ tasks:
     vars:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
-      _CMD: '{{ if eq .ITEM.kind "choco-package" }}{{ if eq (.ITEM.state | default "present") "present" }}choco install -y {{ .ITEM.name }}{{ else }}echo "choco:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else }}echo "choco:install: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CMD: '{{ if eq .ITEM.kind "choco-package" }}{{ if eq (.ITEM.state | default "present") "present" }}choco install -y {{ .ITEM.name }}{{ if .ITEM.version }} --version {{ .ITEM.version }}{{ end }}{{ else }}echo "choco:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else }}echo "choco:install: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
       _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
       _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
@@ -332,7 +332,7 @@ tasks:
     vars:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
-      _CMD: '{{ if eq .ITEM.kind "scoop-app" }}{{ if eq (.ITEM.state | default "present") "present" }}{{ if eq (.ITEM.elevated | default false) true }}sudo {{ end }}scoop install {{ .ITEM.name }}{{ else }}echo "scoop:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else if eq .ITEM.kind "scoop-bucket" }}{{ if hasKey .ITEM "state" }}echo "scoop:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ else }}scoop bucket add {{ .ITEM.name }}{{ if .ITEM.url }} {{ .ITEM.url }}{{ end }}{{ end }}{{ else if eq .ITEM.kind "scoop-config" }}{{ if hasKey .ITEM "state" }}echo "scoop:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ else }}scoop config {{ .ITEM.key }} {{ .ITEM.value }}{{ end }}{{ else }}echo "scoop:install: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CMD: '{{ if eq .ITEM.kind "scoop-app" }}{{ if eq (.ITEM.state | default "present") "present" }}{{ if eq (.ITEM.elevated | default false) true }}sudo {{ end }}scoop install {{ .ITEM.name }}{{ if .ITEM.version }}@{{ .ITEM.version }}{{ end }}{{ else }}echo "scoop:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else if eq .ITEM.kind "scoop-bucket" }}{{ if hasKey .ITEM "state" }}echo "scoop:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ else }}scoop bucket add {{ .ITEM.name }}{{ if .ITEM.url }} {{ .ITEM.url }}{{ end }}{{ end }}{{ else if eq .ITEM.kind "scoop-config" }}{{ if hasKey .ITEM "state" }}echo "scoop:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ else }}scoop config {{ .ITEM.key }} {{ .ITEM.value }}{{ end }}{{ else }}echo "scoop:install: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
       _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
       _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
