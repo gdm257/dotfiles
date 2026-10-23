@@ -1,0 +1,4 @@
+# kind 含单引号时 unclaimed 行必须原样进入失败汇总 exit 1
+items:
+  - {kind: alpha, name: ok-1}
+  - {kind: qu'ote, name: orphan}

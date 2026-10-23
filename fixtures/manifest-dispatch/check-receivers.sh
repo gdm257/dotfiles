@@ -19,14 +19,14 @@ check() {
   fi
 }
 
-capture manifest:dispatch MANIFEST=fixtures/manifest-dispatch/group-coe-propagation.yaml CALL=echo:replay CONTINUE_ON_ERROR=true
+capture manifest:dispatch MANIFEST=fixtures/manifest-dispatch/group-coe-propagation.yaml CALLS=echo=echo:replay CONTINUE_ON_ERROR=true
 check test "$code" = 201
 check test "${output#*item=prop-2 }" != "$output"
 check test "${output#*item=never-reached }" = "$output"
 check test "${output#*item=after-group }" = "$output"
 printf 'PASS: explicit false stops group with global true\n'
 
-capture manifest:dispatch MANIFEST=fixtures/manifest-dispatch/fail-fast.yaml CALL=echo:replay CONTINUE_ON_ERROR=true
+capture manifest:dispatch MANIFEST=fixtures/manifest-dispatch/fail-fast.yaml CALLS=echo=echo:replay CONTINUE_ON_ERROR=true
 check test "$code" = 201
 check test "${output#*item=never }" != "$output"
 check test "${output#*failed: boom}" != "$output"

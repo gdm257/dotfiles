@@ -1,0 +1,4 @@
+# 映射表外的 kind 计路由错误：gamma 不分发、计入失败汇总 exit 1，alpha 照常分发
+items:
+  - {kind: alpha, name: ok-1}
+  - {kind: gamma, name: orphan}

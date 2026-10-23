@@ -1,0 +1,5 @@
+# 混合 kind 一次 dispatch：按 CALLS 映射声明序分组路由，组内保持 items 展开序
+items:
+  - {kind: alpha, name: a1}
+  - {kind: beta, name: b1}
+  - {kind: alpha, name: a2}

@@ -6,7 +6,7 @@ output=''
 code=0
 capture() {
   code=0
-  output=$(task --silent manifest:dispatch "MANIFEST=fixtures/manifest-dispatch/$1.yaml" "CALL=${3:-echo:replay}" "CONTINUE_ON_ERROR=${2:-true}" 2>&1) || code=$?
+  output=$(task --silent manifest:dispatch "MANIFEST=fixtures/manifest-dispatch/$1.yaml" "CALLS=${3:-echo=echo:replay}" "CONTINUE_ON_ERROR=${2:-true}" 2>&1) || code=$?
 }
 check() {
   if ! "$@"; then
@@ -124,7 +124,42 @@ capture v1-form false
 check test "$code" = 1
 check test "${output#*"item #1 unknown top-level key 'command'"}" != "$output"
 check test "${output#*fixtures/manifest-dispatch/v1-form.yaml}" != "$output"
-capture bool-fidelity false no-such-task
+capture routing-mixed false 'alpha=echo:replay, beta=echo:replay'
+check test "$code" = 0
+expected='item=a1 kind=alpha flag=false json={"kind":"alpha","name":"a1"}
+item=a2 kind=alpha flag=false json={"kind":"alpha","name":"a2"}
+item=b1 kind=beta flag=false json={"kind":"beta","name":"b1"}'
+check test "$output" = "$expected"
+
+capture routing-unclaimed false 'alpha=echo:replay'
+check test "$code" = 201
+check test "${output#*item=ok-1 }" != "$output"
+check test "${output#*item=orphan }" = "$output"
+check test "${output#*'manifest:dispatch: failed items:'}" != "$output"
+check test "${output#*"item #2 unclaimed kind gamma in fixtures/manifest-dispatch/routing-unclaimed.yaml"}" != "$output"
+
+capture routing-unclaimed-quote false 'alpha=echo:replay'
+check test "$code" = 201
+check test "${output#*item=ok-1 }" != "$output"
+check test "${output#*item=orphan }" = "$output"
+check test "${output#*'manifest:dispatch: failed items:'}" != "$output"
+check test "${output#*"item #2 unclaimed kind qu'ote in fixtures/manifest-dispatch/routing-unclaimed-quote.yaml"}" != "$output"
+
+capture routing-duplicate false 'echo=echo:replay, echo=echo:replay'
+check test "$code" = 0
+check test "${output#*item=dup-1 }" != "$output"
+lines=0
+rest="$output"
+while [ -n "$rest" ]; do
+  case "$rest" in
+    *$nl*) rest="${rest#*$nl}" ;;
+    *) rest='' ;;
+  esac
+  lines=$((lines + 1))
+done
+check test "$lines" = 4
+
+capture bool-fidelity false 'echo=no-such-task'
 case $code in 200|201) ;; *) check test "$code" = '200|201' ;; esac
 check test "${output#*'manifest:no-such-task'}" != "$output"
 code=0
@@ -136,4 +171,4 @@ if [ "$failures" != 0 ]; then
   printf 'FAIL: %s dispatch assertions\n' "$failures" >&2
   exit 1
 fi
-printf 'PASS: 28 dispatch CLI scenarios including all fixtures, state and neutral field propagation, group precedence/isolation, locations and empty arch\n'
+printf 'PASS: 29 dispatch CLI scenarios including all fixtures, state and neutral field propagation, group precedence/isolation, locations and empty arch\n'

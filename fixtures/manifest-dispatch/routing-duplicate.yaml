@@ -1,0 +1,4 @@
+# 同一 kind 多条映射：item 对每个认领 receiver 各执行一次，不去重
+items:
+  - {kind: echo, name: dup-1}
+  - {kind: echo, name: dup-2}

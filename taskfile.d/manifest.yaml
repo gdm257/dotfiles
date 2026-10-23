@@ -7,11 +7,11 @@ includes:
 
 tasks:
   dispatch:
-    desc: "dispatch manifest items to CALL task"
+    desc: "dispatch manifest items to CALLS kind=task receivers"
     requires:
       vars:
         - MANIFEST
-        - CALL
+        - CALLS
     vars:
       _YAML:
         sh: 'printf "%s" "$(< "{{.MANIFEST}}")"'
@@ -104,13 +104,25 @@ tasks:
         {{- end }}]
       _DISPATCH:
         ref: 'fromJson ._DISPATCH_JSON'
+      _CALLS_LIST: >-
+        {{ $calls := splitList "," (.CALLS | toString) }}{{ range $c := $calls }}{{ $e := trimAll " " $c }}{{ if eq $e "" }}{{ fail (printf "invalid CALLS entry '%s'" $c) }}{{ end }}{{ $kv := splitList "=" $e }}{{ if ne (len $kv) 2 }}{{ fail (printf "invalid CALLS entry '%s'" $c) }}{{ end }}{{ if or (eq (trimAll " " (index $kv 0)) "") (eq (trimAll " " (index $kv 1)) "") }}{{ fail (printf "invalid CALLS entry '%s'" $c) }}{{ end }}{{ end }}{{ toJson $calls }}
+      _ROUTES_JSON: >-
+        {{ $items := ._DISPATCH }}{{ $calls := fromJson ._CALLS_LIST }}{{ $first := true }}[{{ range $c := $calls }}{{ $e := trimAll " " $c }}{{ $kv := splitList "=" $e }}{{ $kind := trimAll " " (index $kv 0) }}{{ $task := trimAll " " (index $kv 1) }}{{ range $it := $items }}{{ if eq (index $it "kind") $kind }}{{ if not $first }},{{ end }}{{ $first = false }}{{ printf "{\"task\":%s,\"item\":%s}" (toJson $task) (toJson $it) }}{{ end }}{{ end }}{{ end }}]
+      _ROUTES:
+        ref: 'fromJson ._ROUTES_JSON'
+      _UNCLAIMED: >-
+        {{ $items := ._DISPATCH }}{{ $calls := fromJson ._CALLS_LIST }}{{ $claimed := dict }}{{ range $c := $calls }}{{ $kv := splitList "=" (trimAll " " $c) }}{{ $claimed = merge (dict (trimAll " " (index $kv 0)) true) $claimed }}{{ end }}{{ range $i, $it := $items }}{{ if not (hasKey $claimed (index $it "kind")) }}{{ printf "item #%d unclaimed kind %s in %s\n" (add $i 1) (index $it "kind") $.MANIFEST }}{{ end }}{{ end }}
       _FAIL_LOG:
         sh: 'printf "%s" "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog"'
+    # kind 可能含单引号，unclaimed 行经 env 双引号展开避免破坏 shell 引用
+    env:
+      _UNCLAIMED_TXT: '{{ ._UNCLAIMED }}'
     cmds:
       - cmd: ': > "{{ ._FAIL_LOG }}"'
-      - for: { var: _DISPATCH, as: _ITEM }
-        task: '{{.CALL}}'
+      - cmd: 'if [ -n "$_UNCLAIMED_TXT" ]; then printf ''%s'' "$_UNCLAIMED_TXT" >> "{{ ._FAIL_LOG }}"; fi'
+      - for: { var: _ROUTES, as: _R }
+        task: '{{ ._R.task }}'
         vars:
-          ITEM_JSON: "{{toJson ._ITEM}}"
+          ITEM_JSON: '{{ toJson ._R.item }}'
           FAIL_LOG: "{{ ._FAIL_LOG }}"
       - cmd: 'if [ -s "{{ ._FAIL_LOG }}" ]; then echo ''manifest:dispatch: failed items:''; while IFS= read -r l; do printf ''  %s\n'' "$l"; done < "{{ ._FAIL_LOG }}"; exit 1; fi'

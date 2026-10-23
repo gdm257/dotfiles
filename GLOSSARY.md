@@ -5,7 +5,7 @@
 ## Language
 
 **Manifest**:
-一个声明式 YAML 文件，声明机器的期望资源状态：应存在与应不存在的资源（item）。只声明「有什么 / 不要什么」，不声明命令如何拼装与执行。
+一个声明式 YAML 文件，声明机器的期望资源状态：应存在与应不存在的资源（item）。可包含任意 kind 的 item，由 dispatch 按 kind 路由到 receivers。只声明「有什么 / 不要什么」，不声明命令如何拼装与执行。
 _Avoid_: taskfile, playbook
 
 **Item**:
