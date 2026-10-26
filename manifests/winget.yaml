@@ -61,10 +61,11 @@ items:
   # - { kind: winget-app, id: Rime.Weasel}
   # - { kind: winget-app, id: luolangaga.tubatools}
   # - { kind: winget-app, id: Brave.Brave}
+  # - { kind: winget-app, id: Tencent.TencentMeeting}
   # - { kind: winget-app, id: AnyDeskSoftwareGmbH.AnyDesk}
   # - { kind: winget-app, id: Youqu.ToDesk}
   # - { kind: winget-app, id: RustDesk.RustDesk}
-  # - { kind: winget-app, id: Tencent.TencentMeeting}
+  - { kind: winget-app, id: NetEase.UURemote}
   # - { kind: winget-app, id: AlekseyHoffman.Sigma-File-Manager}
   # - { kind: winget-app, id: AOMEI.Backupper}
   # - { kind: winget-app, id: Dell.DisplayManager}
@@ -140,7 +141,6 @@ items:
   # === user ===
   # - { kind: winget-app, id: XPDNH1FMW7NB40}
   # - { kind: winget-app, id: Microsoft.WindowsTerminal}
-  - { kind: winget-app, id: NetEase.UURemote}
   # - { kind: winget-app, id: Mozilla.SOPS}
   # - { kind: winget-app, id: commercialhaskell.stack}
   # - { kind: winget-app, id: JRSoftware.InnoSetup}
@@ -161,7 +161,7 @@ items:
   # - { kind: winget-app, id: Python.PythonInstallManager}
   # - { kind: winget-app, id: Anaconda.Miniconda3}
   # - { kind: winget-app, id: Mamba.Micromamba}
-  - { kind: winget-app, id: Python.Python.3.13}
+  # - { kind: winget-app, id: Python.Python.3.13}
   # - { kind: winget-app, id: Canonical.Ubuntu.2204}
   # - { kind: winget-app, id: jtroo.kanata_gui}
   # - { kind: winget-app, id: Xmarmalade.AlistHelper}

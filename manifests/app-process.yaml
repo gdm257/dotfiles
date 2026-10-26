@@ -1,4 +1,10 @@
 groups:
+  defender:
+  - { kind: scoop-app, name: gdm257/pyas }
+
+  file-unlocker:
+  - { kind: scoop-app, name: gdm257/deadlock }
+
   ps:
   # - { kind: scoop-app, name: gdm257/task-explorer}
   - { kind: scoop-app, name: systeminformer }

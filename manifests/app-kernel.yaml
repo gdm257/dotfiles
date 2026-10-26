@@ -40,6 +40,7 @@ groups:
   # - { kind: scoop-app, name: osquery}
   - { kind: scoop-app, name: fastfetch }
   - { kind: scoop-app, name: urlprotocolview }
+  - { kind: scoop-app, name: shellexview }
 
   registry:
   # - { kind: scoop-app, name: registry-explorer}
