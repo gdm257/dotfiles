@@ -37,7 +37,7 @@ groups:
   image-viewer:
   - { kind: scoop-app, name: exiftool }
   # - { kind: scoop-app, name: jexiftoolgui}
-  - { kind: scoop-app, name: honeyview}
+  # - { kind: scoop-app, name: honeyview}
   - { kind: scoop-app, name: gdm257/guoheview }
   # - { kind: scoop-app, name: picview}
   # - { kind: scoop-app, name: jarkviewer}
