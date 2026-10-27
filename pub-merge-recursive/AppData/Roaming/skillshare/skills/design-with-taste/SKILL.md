@@ -38,7 +38,7 @@ Ordered by priority. You cannot have Delight without Fluidity, and you cannot ha
 - **Trays can launch full-screen flows.** A compact tray is a valid entry point for a multi-step full-screen experience — don't force a binary choice between "tray" and "page."
 - **Use trays for transient actions; full screens for persistent destinations.** Confirmations, warnings, and contextual info = tray. Settings, core content = full screen.
 
-```jsx
+```javascript
 // GOOD: Progressive tray — compact, focused, context-aware
 <Sheet>
   <SheetTrigger>Confirm Send</SheetTrigger>
@@ -77,7 +77,7 @@ Ordered by priority. You cannot have Delight without Fluidity, and you cannot ha
 - **Micro-directional cues.** Chevrons, arrows, and carets should animate to reflect the action taken. A `→` becomes a `←` on back-navigation. An accordion chevron rotates on expand.
 - **Unified interpolation.** All visual elements driven by the same data should share the same lerp/easing. This makes the interface feel like *one thing breathing* rather than a bunch of parts updating independently. When the value changes, the line, the label, the axis, and the badge should all move as one.
 
-```jsx
+```javascript
 // Text morphing — use torph
 import { TextMorph } from 'torph/react';
 <TextMorph>{label}</TextMorph>  // handles shared-letter animation automatically
@@ -139,7 +139,7 @@ Delight ↑
 **Delight pattern library** — concrete moments proven to work:
 
 | Feature | Frequency | Delight Level | Pattern |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Number input | Daily | Subtle | Commas shift position as digits are typed |
 | Tab/chart navigation | Daily | Subtle | Arrow icon flips direction with value change |
 | Empty state | First visit | Medium | Animated arrow + floating illustration |
@@ -149,7 +149,7 @@ Delight ↑
 | Critical completion (backup, onboarding) | Once | Theatrical | Confetti explosion + celebratory sound |
 | Easter egg (QR, hidden gesture) | Rare | Theatrical | Ripple on tap → sequin effect on swipe |
 
-```jsx
+```javascript
 // Animated number with smooth comma shifting
 function AnimatedNumber({ value }) {
   const spring = useSpring(value, { stiffness: 80, damping: 20 });
@@ -265,7 +265,7 @@ Run before considering any UI "done":
 ## Easing & Timing Reference
 
 | Use Case | Easing | Duration |
-|---|---|---|
+| --- | --- | --- |
 | Element entering | `cubic-bezier(0.16, 1, 0.3, 1)` | 300–400ms |
 | Element exiting | `cubic-bezier(0.4, 0, 1, 1)` | 200–250ms |
 | Shared element morph | `cubic-bezier(0.16, 1, 0.3, 1)` | 350–500ms |
