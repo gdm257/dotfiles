@@ -18,7 +18,10 @@
 !/apps/scoop/persist/mykeymap
 !/apps/scoop/persist/mykeymap-beta
 !/apps/scoop/persist/windinput
+/apps/scoop/persist/windinput/userdata/data
+/apps/scoop/persist/windinput/userdata/meta.toml
 *.redb
+*.redb.*
 !/apps/scoop/persist/winswctl
 /apps/scoop/persist/winswctl/shims/*.log
 /apps/scoop/persist/winswctl/shims/*.exe
