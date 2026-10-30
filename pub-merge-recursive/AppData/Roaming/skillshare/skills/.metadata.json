@@ -1657,6 +1657,19 @@
         "SKILL.md": "sha256:b932a341bcb6e59d6a069b9bb262ad170ecdf9615fbd1e67894651f48bd809a7"
       }
     },
+    "semble": {
+      "source": "https://github.com/gdm257/cc-plugins.git/plugins/semble/skills/semble",
+      "type": "github-subdir",
+      "installed_at": "2026-10-31T06:18:34.3766735+08:00",
+      "repo_url": "https://github.com/gdm257/cc-plugins.git",
+      "subdir": "plugins/semble/skills/semble",
+      "version": "2a2cc4a",
+      "tree_hash": "5b3ad83397f1a363e166c08c15c0d187dcb66574",
+      "commit": "2a2cc4ad6fee24a86d0314b35e201fd02f0a9fd3",
+      "file_hashes": {
+        "SKILL.md": "sha256:3d00a7b20ef632236fe431f563ecc9634c1f9d492525a46446ebf59d05dcd908"
+      }
+    },
     "session-history": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/session-history",
       "type": "github-subdir",
