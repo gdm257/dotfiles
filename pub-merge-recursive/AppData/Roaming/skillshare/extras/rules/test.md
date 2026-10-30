@@ -1,4 +1,5 @@
 ---
+enable: false
 outputs:
   - ~/.claude/rules/test.md
   - ~/.codex/AGENTS.md

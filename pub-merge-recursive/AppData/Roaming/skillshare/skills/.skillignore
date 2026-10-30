@@ -73,3 +73,5 @@ trellis-before-dev
 trellis-finish-work
 open-pencil
 what-context-needed
+trellis-break-loop
+trellis-update-spec
