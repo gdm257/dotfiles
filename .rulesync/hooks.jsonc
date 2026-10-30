@@ -24,12 +24,12 @@
         }
       ],
       "preToolUse": [
-        {
-          "matcher": "Grep|Glob",
-          "type": "command",
-          "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0",
-          "timeout": 5
-        },
+        // {
+        //   "matcher": "Grep|Glob",
+        //   "type": "command",
+        //   "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0",
+        //   "timeout": 5
+        // },
         {
           "matcher": "Task",
           "type": "command",
@@ -105,12 +105,12 @@
         }
       ],
       "preToolUse": [
-        {
-          "matcher": "Grep|Glob",
-          "type": "command",
-          "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0",
-          "timeout": 5
-        },
+        // {
+        //   "matcher": "Grep|Glob",
+        //   "type": "command",
+        //   "command": "command -v codebase-memory-mcp &>/dev/null || exit 0; codebase-memory-mcp hook-augment 2>/dev/null; exit 0",
+        //   "timeout": 5
+        // },
         {
           "matcher": "Task",
           "type": "command",

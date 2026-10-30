@@ -14,4 +14,5 @@ outputs:
 name: semble-user
 ---
 
+- Use the semble skill for code search instead of Grep or Glob.
 - semble also supports git URL as path, not just local path: `semble search "save model to disk" https://github.com/owner/repo.git --top-k 10`

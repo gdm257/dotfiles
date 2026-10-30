@@ -2,7 +2,7 @@
   "$schema": "https://github.com/dyoshikawa/rulesync/releases/latest/download/mcp-schema.json",
   "mcpServers": {
     "codebase-memory": {
-      "enabled": true,
+      "enabled": false,
       "command": "codebase-memory-mcp",
       "default_tools_approval_mode": "approve",  // codex
     },

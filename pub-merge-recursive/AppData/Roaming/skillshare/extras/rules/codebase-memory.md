@@ -1,5 +1,5 @@
 ---
-enable: true
+enable: false
 urls:
   - name: codebase-memory
     url: https://raw.githubusercontent.com/gdm257/cc-plugins/refs/heads/main/plugins/codebase-memory/rules/codebase-memory.md
