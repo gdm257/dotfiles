@@ -4,6 +4,7 @@
     <URI>\mousemaster</URI>
   </RegistrationInfo>
   <Settings>
+    <Enabled>false</Enabled>
     <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
     <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
     <ExecutionTimeLimit>PT0S</ExecutionTimeLimit>
