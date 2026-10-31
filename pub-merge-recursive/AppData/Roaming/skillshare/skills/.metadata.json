@@ -1455,47 +1455,6 @@
         "SKILL.md": "sha256:2d7ca4b5cb6684b81ebb943e9b489d052c97df1ee5ad6ef8c795f53e3343f5af"
       }
     },
-    "rea-changelog-update": {
-      "source": "https://github.com/morluto/rea.git/.agents/skills/rea-changelog-update",
-      "type": "github-subdir",
-      "installed_at": "2026-10-31T02:05:00.6559542+08:00",
-      "repo_url": "https://github.com/morluto/rea.git",
-      "subdir": ".agents/skills/rea-changelog-update",
-      "version": "69bf61f",
-      "tree_hash": "311f225f976a4c205c0b270b33a1228d156b7628",
-      "commit": "69bf61f7c72740b2eb9cfbd1474bcd61771d688b",
-      "file_hashes": {
-        "SKILL.md": "sha256:aee993507425266051e82e4c65b22ca546a6a85374571f54fbc2f6c51c9a8393"
-      }
-    },
-    "rea-ci-tests-audit": {
-      "source": "https://github.com/morluto/rea/.agents/skills/rea-ci-tests-audit",
-      "type": "github-subdir",
-      "installed_at": "2026-10-15T07:38:01.0393595+09:00",
-      "repo_url": "https://github.com/morluto/rea.git",
-      "subdir": ".agents/skills/rea-ci-tests-audit",
-      "version": "69bf61f",
-      "tree_hash": "40116d60d40cf1fa1560642a2a644ec2addfd042",
-      "commit": "3d2846f2371bc3e73b7069f713f6daa80f4db78c",
-      "file_hashes": {
-        "SKILL.md": "sha256:997f3717eacb261247b43805a75db9cbd6bd29eb88a5639b592b9705abac98ef",
-        "agents/openai.yaml": "sha256:389cac55e7a6faf9b22e871b18adcdfd3bd89bdd00aa9e6636de07ca913ec916",
-        "references/measurement-and-ci.md": "sha256:691eb55373b24b8276dce5abcf94d9011b6ebeb7bdd9c23fb371654c5e52a583"
-      }
-    },
-    "rea-tool-design": {
-      "source": "https://github.com/morluto/rea/.agents/skills/rea-tool-design",
-      "type": "github-subdir",
-      "installed_at": "2026-10-15T07:38:01.2492993+09:00",
-      "repo_url": "https://github.com/morluto/rea.git",
-      "subdir": ".agents/skills/rea-tool-design",
-      "version": "69bf61f",
-      "tree_hash": "23d6a0f4cee737e4414313a4eeb105c1f20b074d",
-      "commit": "3d2846f2371bc3e73b7069f713f6daa80f4db78c",
-      "file_hashes": {
-        "SKILL.md": "sha256:6023df0f1cdbe9944963469a3f2a1365d55eebdf1a7f4adb33430851f9ee5f14"
-      }
-    },
     "recall": {
       "source": "https://github.com/rohitg00/agentmemory.git/plugin/skills/recall",
       "type": "github-subdir",
