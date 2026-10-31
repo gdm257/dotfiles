@@ -33,7 +33,7 @@ g = "grid"
 "q p esc" = "idle"
 
 [pointer]
-initial_speed = 1300.0
+initial_speed = 1200.0
 
 [ui_hint]
 hint_characters = "sdfwegrta"
