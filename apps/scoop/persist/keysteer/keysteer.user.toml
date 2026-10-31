@@ -40,3 +40,18 @@ scan_scope = "active"
 
 [recursive_grid]
 keys = "wersdfxcv"
+
+[bisect.bindings]
+e = "bisect_up"
+d = "bisect_down"
+s = "bisect_left"
+f = "bisect_right"
+enter = "confirm_selection"
+esc = "cancel_selection"
+"tab backspace" = "previous_level"
+space = "first_level"
+"`" = "follow"
+"primary+q" = "normal"
+
+[text_select]
+hint_characters = "trsdwegf"
