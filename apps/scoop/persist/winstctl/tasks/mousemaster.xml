@@ -3,12 +3,6 @@
   <RegistrationInfo>
     <URI>\mousemaster</URI>
   </RegistrationInfo>
-  <Principals>
-    <Principal id="Author">
-      <UserId>S-1-5-21-534801098-2857816400-3472280067-1000</UserId>
-      <LogonType>InteractiveToken</LogonType>
-    </Principal>
-  </Principals>
   <Settings>
     <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
     <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
