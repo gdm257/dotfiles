@@ -52,13 +52,6 @@
     "reserved": 80000
   },
   "mcp": {
-    "codebase-memory": {
-      "type": "local",
-      "command": [
-        "codebase-memory-mcp"
-      ],
-      "enabled": true
-    },
     "semble": {
       "type": "local",
       "command": [
