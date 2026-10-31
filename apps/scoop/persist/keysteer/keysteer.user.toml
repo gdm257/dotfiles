@@ -33,3 +33,7 @@ g = "grid"
 
 [pointer]
 initial_speed = 1300.0
+
+[ui_hint]
+hint_characters = "sdfwegrta"
+scan_scope = "active"
