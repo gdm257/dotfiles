@@ -24,6 +24,7 @@ groups:
   # - { kind: scoop-app, name: kanata-tray}
   - { kind: scoop-app, name: gdm257/mykeymap }
   - { kind: scoop-app, name: gdm257/mousemaster }
+  - { kind: scoop-app, name: gdm257/keysteer }
   - { kind: scoop-app, name: gdm257/starpie }
   # - { kind: scoop-app, name: komokana}
 
