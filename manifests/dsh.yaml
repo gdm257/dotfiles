@@ -1,5 +1,14 @@
-items:
+groups:
+  dsektop:
   - { kind: dsh-plugin, profile: desktop, name: dshmarket }
   - { kind: dsh-plugin, profile: desktop, name: dsh-notify-me }
+  - { kind: dsh-plugin, profile: desktop, name: @dingyi222666/dsh-wakatime }
   # - { kind: dsh-plugin, profile: desktop, name: dsh-git-worktree }
   - { kind: dsh-plugin, profile: desktop, name: dsh-worktree-space }
+
+  acp:
+  - { kind: dsh-plugin, profile: acp, name: @dingyi222666/dsh-wakatime }
+
+items:
+  - { group: acp }
+  - { group: desktop }
