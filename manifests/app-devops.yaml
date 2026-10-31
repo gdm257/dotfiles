@@ -125,9 +125,9 @@ groups:
   # - { kind: scoop-app, name: gdm257/beads-plan}
   - { kind: scoop-app, name: gdm257/open-code-review }
   # - { kind: scoop-app, name: gdm257/archon }
-  - { kind: scoop-app, name: deja-vu }
   # - { kind: scoop-app, name: gdm257/codebase-memory-mcp }
   # - { kind: scoop-app, name: gdm257/codebase-memory-mcp-ui }
+  # - { kind: scoop-app, name: deja-vu}
   - { kind: scoop-app, name: llmfit }
   - { kind: scoop-app, name: lmstudio }
 
