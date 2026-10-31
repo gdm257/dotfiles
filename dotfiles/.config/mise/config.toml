@@ -16,10 +16,4 @@ python.uv_venv_auto = true
 [tools]
 "npm:@fission-ai/openspec" = { version = "latest", os = ["windows"] }
 
-"pipx:git+https://github.com/SilentSnowSoul/tachibk-converter.git" = { version = "main", os = ["windows"] }
-"pipx:git+https://github.com/SilentSnowSoul/magnetizer.git" = { version = "main", os = ["windows"] }
-"pipx:httpie" = { version = "latest", os = ["windows"] }
-"pipx:marimo" = { version = "latest", extras = "recommended", os = ["windows"] }
-"pipx:ptpython" = { version = "latest", os = ["windows"] }
-"pipx:pyright" = { version = "latest", os = ["windows"] }
 "pipx:browser-harness" = { version = "latest", os = ["windows"] }

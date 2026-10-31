@@ -126,7 +126,7 @@ groups:
   - { kind: scoop-app, name: grex }
   - { kind: scoop-app, name: ripgrep }
   # - { kind: scoop-app, name: sig}
-  - { kind: scoop-app, name: ugrep }
+  # - { kind: scoop-app, name: ugrep }
   # - { kind: scoop-app, name: gdm257/shim-grep}
   - { kind: scoop-app, name: ag }
   # - { kind: scoop-app, name: ack}

@@ -9,3 +9,4 @@ outputs:
 ---
 
 - To press output, redirect stdout/stderr to `/dev/null` (try unix style first) or `$null` (powershell). Do NOT redirect to `nul`! Correct: `echo foo > /dev/null`; Wrong: `echo hello >nul`
+- Use `rg` for command-line search; substitute `rg` for `grep` commands only when `grep` is unavailable.

@@ -35,9 +35,9 @@ groups:
   # - { kind: scoop-app, name: rivet}
 
   curl:
-  - { kind: scoop-app, name: hurl }
-  # - { kind: scoop-app, name: xh}
-  - { kind: scoop-app, name: curlie }
+  # - { kind: scoop-app, name: hurl }
+  - { kind: scoop-app, name: xh}
+  # - { kind: scoop-app, name: curlie }
 
   db:
   # - { kind: scoop-app, name: sqlitestudio}

@@ -66,7 +66,7 @@ groups:
   # - { kind: scoop-app, name: main/zeroclaw}
   # - { kind: scoop-app, name: main/ironclaw}
   # - { kind: scoop-app, name: picoclaw}
-  - { kind: scoop-app, name: gdm257/open-pencil }
+  # - { kind: scoop-app, name: gdm257/open-pencil }
   # - { kind: scoop-app, name: gdm257/open-codesign}
   # - { kind: scoop-app, name: gdm257/codeg }
   - { kind: scoop-app, name: gdm257/codeg-257 }
