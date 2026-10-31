@@ -2,6 +2,7 @@
 # A bindings table replaces that mode's defaults; keep the keys you need.
 
 [hotkeys]
+"primary+w" = "window"
 "primary+q" = "normal"
 
 [normal.bindings]
@@ -55,3 +56,37 @@ space = "first_level"
 
 [text_select]
 hint_characters = "trsdwegf"
+
+[window.bindings]
+"?" = "key_help"
+q = "idle"
+"primary+q" = "idle"
+g = "grid"
+"primary+g" = "recursive_grid"
+"primary+f" = "bisect"
+tab = "window_select"
+"shift+tab" = "window_select_previous"
+"ctrl" = "window_multi_select"
+"ctrl+x" = "window_multi_clear"
+"e i arrow_up" = "window_up"
+"d k arrow_down" = "window_down"
+"s j arrow_left" = "window_left"
+"f l arrow_right" = "window_right"
+a = "window_center"
+r = "window_undo"
+"shift+r" = "window_redo"
+"shift+c" = "window_reset_initial"
+v = "window_size"
+z = "window_minimize"
+x = "window_maximize"
+c = "window_close"
+"v+d v+k v+arrow_down" = "window_volume_down"
+"v+e v+i v+arrow_up" = "window_volume_up"
+"v+m" = "window_volume_mute"
+"shift+v+m" = "window_system_volume_mute"
+"v+s v+j v+arrow_left" = "window_audio_previous"
+"v+f v+l v+arrow_right" = "window_audio_next"
+"shift+v+d shift+v+k shift+v+arrow_down" = "window_system_volume_down"
+"shift+v+e shift+v+i shift+v+arrow_up" = "window_system_volume_up"
+"shift+v+s shift+v+j shift+v+arrow_left" = "window_system_audio_previous"
+"shift+v+f shift+v+l shift+v+arrow_right" = "window_system_audio_next"
