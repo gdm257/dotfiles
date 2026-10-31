@@ -195,7 +195,7 @@ groups:
   - { kind: scoop-app, name: vim }
   # - { kind: scoop-app, name: vimtutor}
   - { kind: scoop-app, name: neovim }
-  - { kind: scoop-app, name: neovide }
+  # - { kind: scoop-app, name: neovide }
   # - { kind: scoop-app, name: helix}
   # - { kind: scoop-app, name: ox}
   # - { kind: scoop-app, name: emacs}
