@@ -56,9 +56,10 @@ groups:
   # - { kind: scoop-app, name: typora}
   # - { kind: scoop-app, name: marktext}
   # - { kind: scoop-app, name: gdm257/md-preview}
-  - { kind: scoop-app, name: gdm257/inknote }
+  # - { kind: scoop-app, name: gdm257/inknote }
   # - { kind: scoop-app, name: gdm257/vividmark}
   # - { kind: scoop-app, name: gdm257/markview}
+  - { kind: scoop-app, name: gdm257/open-typora }
 
   note:
   # - { kind: scoop-app, name: zotero}
