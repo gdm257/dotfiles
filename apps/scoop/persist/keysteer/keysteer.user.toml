@@ -1,6 +1,9 @@
 # KeySteer user overrides. Full defaults: keysteer --dump-config
 # A bindings table replaces that mode's defaults; keep the keys you need.
 
+[pointer]
+initial_speed = 1200.0
+
 [hotkeys]
 "primary+w" = "window"
 "primary+q" = "normal"
@@ -32,12 +35,9 @@ g = "grid"
 "primary+w" = "window"
 "q p esc" = "idle"
 
-[pointer]
-initial_speed = 1200.0
-
 [ui_hint]
 hint_characters = "sdfwegrta"
-scan_scope = "active"
+# scan_scope = "active"
 
 [recursive_grid]
 keys = "wersdfxcv"
@@ -59,8 +59,9 @@ hint_characters = "trsdwegf"
 
 [window.bindings]
 "?" = "key_help"
-q = "idle"
-"primary+q" = "idle"
+"primary+q q p esc" = "idle"
+"t y" = "window_editor"
+"w o" = "window_quick"
 g = "grid"
 "primary+g" = "recursive_grid"
 "primary+f" = "bisect"
@@ -90,3 +91,65 @@ c = "window_close"
 "shift+v+e shift+v+i shift+v+arrow_up" = "window_system_volume_up"
 "shift+v+s shift+v+j shift+v+arrow_left" = "window_system_audio_previous"
 "shift+v+f shift+v+l shift+v+arrow_right" = "window_system_audio_next"
+
+[window_quick.bindings]
+"?" = "key_help"
+"primary+q" = "idle"
+"q p esc" = "window"
+"primary+e" = "window_editor"
+"e i arrow_up" = "window_layout_up"
+"d k arrow_down" = "window_layout_down"
+"s j arrow_left" = "window_layout_left"
+"f l arrow_right" = "window_layout_right"
+c = "window_reset_initial"
+"shift+c" = "window_restore"
+r = "window_undo"
+"shift+r" = "window_redo"
+tab = "window_select"
+"shift+tab" = "window_select_previous"
+"v+j" = "window_volume_down"
+"v+k" = "window_volume_up"
+"v+m" = "window_volume_mute"
+"shift+v+m" = "window_system_volume_mute"
+"v+h" = "window_audio_previous"
+"v+l" = "window_audio_next"
+"shift+v+j" = "window_system_volume_down"
+"shift+v+k" = "window_system_volume_up"
+"shift+v+h" = "window_system_audio_previous"
+"shift+v+l" = "window_system_audio_next"
+
+[window_editor.bindings]
+"?" = "key_help"
+"primary+q" = "idle"
+"q p esc" = "window"
+"e i arrow_up" = "window_layout_up"
+"d k arrow_down" = "window_layout_down"
+"s j arrow_left" = "window_layout_left"
+"f l arrow_right" = "window_layout_right"
+"shift+e shift+i shift+arrow_up" = "window_split_up"
+"shift+d shift+k shift+arrow_down" = "window_split_down"
+"shift+s shift+j shift+arrow_left" = "window_split_left"
+"shift+f shift+l shift+arrow_right" = "window_split_right"
+"ctrl+e ctrl+i ctrl+arrow_up" = "window_ratio_up"
+"ctrl+d ctrl+k ctrl+arrow_down" = "window_ratio_down"
+"ctrl+s ctrl+j ctrl+arrow_left" = "window_ratio_left"
+"ctrl+f ctrl+l ctrl+arrow_right" = "window_ratio_right"
+tab = "window_select"
+"shift+tab" = "window_select_previous"
+"`" = "window_area_number"
+r = "window_undo"
+"shift+r" = "window_redo"
+c = "window_reset_initial"
+x = "window_remove_region"
+"shift+c" = "window_restore"
+"ctrl+shift+s" = "window_save_layout"
+"v+j" = "window_volume_down"
+"v+k" = "window_volume_up"
+"v+m" = "window_volume_mute"
+"shift+v+m" = "window_system_volume_mute"
+"v+h" = "window_audio_previous"
+"v+l" = "window_audio_next"
+"shift+v+j" = "window_system_volume_down"
+"shift+v+k" = "window_system_volume_up"
+"shift+v+h" = "window_system_audio_previous"
+"shift+v+l" = "window_system_audio_next"
