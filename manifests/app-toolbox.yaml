@@ -2,6 +2,7 @@ groups:
   controller:
   # - { kind: scoop-app, name: joytokey}
   - { kind: scoop-app, name: antimicrox }
+  - { kind: scoop-app, name: gdm257/gamepadstudio }
   - { kind: scoop-app, name: gdm257/sickeaseoverlay }
   - { kind: scoop-app, name: gdm257/vomishield }
   - { kind: scoop-app, name: gdm257/airi }
