@@ -35,6 +35,11 @@ groups:
   - { kind: scoop-app, name: fontforge }
   - { kind: scoop-app, name: winfontsview }
 
+  hash:
+  - { kind: scoop-app, name: hashcat }
+  - { kind: scoop-app, name: john-the-ripper }
+  - { kind: scoop-app, name: 7z2hashcat }
+
   ime:
   # - { kind: scoop-app, name: imewlconverter}
   - { kind: scoop-app, name: gdm257/windinput }
@@ -85,10 +90,6 @@ groups:
 
   openapi:
   # - { kind: scoop-app, name: openapi-tui}
-
-  - { kind: scoop-app, name: hashcat }
-  - { kind: scoop-app, name: john-the-ripper }
-  - { kind: scoop-app, name: 7z2hashcat }
 
   pdf-cli:
   - { kind: scoop-app, name: pdftk }
@@ -156,24 +157,25 @@ groups:
 
 
 items:
-  - { group: accounting }
-  - { group: book }
+  - { group: accounting, state: absent }
+  - { group: book, state: absent }
   - { group: text }
   - { group: json }
-  - { group: spreadsheet }
-  - { group: openapi }
+  - { group: spreadsheet, state: absent }
+  - { group: openapi, state: absent }
   - { group: doc }
+  - { group: hash, state: absent }
   - { group: dict }
   - { group: clipboard }
   - { group: note }
   - { group: ime }
   - { group: markdown }
-  - { group: tex }
+  - { group: tex, state: absent }
   - { group: text-editor }
-  - { group: pdf-cli }
+  - { group: pdf-cli, state: absent }
   - { group: pdf-viewer }
-  - { group: pdf-editor }
-  - { group: font }
-  - { group: read-it-later }
-  - { group: office }
-  - { group: rss }
+  - { group: pdf-editor, state: absent }
+  - { group: font, state: absent }
+  - { group: read-it-later, state: absent }
+  - { group: office, state: absent }
+  - { group: rss, state: absent }

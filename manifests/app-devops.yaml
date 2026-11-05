@@ -1,16 +1,26 @@
 groups:
-  _algorithm:
+  ai-gateway:
+  # - { kind: scoop-app, name: gdm257/octopus}
+  - { kind: scoop-app, name: gdm257/octopus-257 }
+  # - { kind: scoop-app, name: main/cliproxyapi}
+  # - { kind: scoop-app, name: gdm257/cpa-manager-plus}
+  # - { kind: scoop-app, name: cc-switch}
+  # - { kind: scoop-app, name: gdm257/omniroute}
+  - { kind: scoop-app, name: lmstudio }
+  - { kind: scoop-app, name: llmfit }
+
+  algorithm:
   - { kind: scoop-app, name: openmodelica}
   - { kind: scoop-app, name: scilab}
 
-  _auth:
+  auth:
   - { kind: scoop-app, name: ldap-admin}
 
-  _bash:
+  bash:
   - { kind: scoop-app, name: shellcheck }
   - { kind: scoop-app, name: shfmt }
 
-  _ci-cd:
+  ci-cd:
   # - { kind: scoop-app, name: teleport}
   # - { kind: scoop-app, name: jenkins-lts}
   # - { kind: scoop-app, name: nomad}
@@ -18,19 +28,19 @@ groups:
   # - { kind: scoop-app, name: prometheus}
   # - { kind: scoop-app, name: openobserve}
 
-  _cpp:
-  - { kind: scoop-app, name: qt-creator }
+  cpp:
+  # - { kind: scoop-app, name: qt-creator }
   - { kind: scoop-app, name: xmake }
   - { kind: scoop-app, name: conan }
   - { kind: scoop-app, name: vcpkg }
   - { kind: scoop-app, name: doxygen }
 
-  _exe:
+  exe:
   - { kind: scoop-app, name: upx }
   - { kind: scoop-app, name: encrypto }
   # - { kind: scoop-app, name: nfpm}
 
-  _git-stats:
+  git-stats:
   - { kind: scoop-app, name: onefetch }
   - { kind: scoop-app, name: scc }
   # - { kind: scoop-app, name: tokei}
@@ -38,28 +48,28 @@ groups:
   # - { kind: scoop-app, name: git-sizer}
   # - { kind: scoop-app, name: git-quick-stats}
 
-  _haskell:
+  haskell:
   - { kind: scoop-app, name: haskell }
   # - { kind: scoop-app, name: stack}
   - { kind: scoop-app, name: gdm257/stack }
 
-  _macro:
+  macro:
   - { kind: scoop-app, name: AutoHotkey-Portable_ACooper81}
   - { kind: scoop-app, name: AutoHotkey2-Portable}
 
-  _mongodb:
+  mongodb:
   - { kind: scoop-app, name: mongodb }
   - { kind: scoop-app, name: mongodb-compass }
 
-  _mysql:
+  mysql:
   # - { kind: scoop-app, name: mysql57}
-  - { kind: scoop-app, name: mysql8}
+  - { kind: scoop-app, name: mysql8 }
   # - { kind: scoop-app, name: dolt}
 
-  _postgreql:
-  - { kind: scoop-app, name: postgresql14}
+  postgreql:
+  - { kind: scoop-app, name: postgresql14 }
 
-  _unity:
+  unity:
   - { kind: scoop-app, name: unityhub}
 
   coding-agent:
@@ -92,11 +102,27 @@ groups:
   # - { kind: scoop-app, name: imhex}
   # - { kind: scoop-app, name: vscode}
   # - { kind: scoop-app, name: vscodium}
-  - { kind: scoop-app, name: zed }
   # - { kind: scoop-app, name: void}
   # - { kind: scoop-app, name: trae-cn}
   # - { kind: scoop-app, name: trae}
   # - { kind: scoop-app, name: cursor}
+  # - { kind: scoop-app, name: gdm257/goose-desktop}
+  # - { kind: scoop-app, name: zcode}
+  # - { kind: scoop-app, name: herdr}
+  # - { kind: scoop-app, name: gdm257/claude-squad}
+  # - { kind: scoop-app, name: gdm257/sudocode}
+  # - { kind: scoop-app, name: gdm257/auto-claude}
+  # - { kind: scoop-app, name: beads}
+  # - { kind: scoop-app, name: beads-viewer}
+  # - { kind: scoop-app, name: gdm257/beads-plan}
+  # - { kind: scoop-app, name: gdm257/open-code-review }
+  # - { kind: scoop-app, name: gdm257/archon }
+  # - { kind: scoop-app, name: gdm257/codebase-memory-mcp }
+  # - { kind: scoop-app, name: gdm257/codebase-memory-mcp-ui }
+  # - { kind: scoop-app, name: deja-vu}
+
+  coding-agent-tui:
+  - { kind: scoop-app, name: oh-my-pi }
   # - { kind: scoop-app, name: main/claude-code}
   # - { kind: scoop-app, name: gdm257/shim-claude}
   # - { kind: scoop-app, name: claurst}
@@ -104,32 +130,9 @@ groups:
   # - { kind: scoop-app, name: codex}
   # - { kind: scoop-app, name: opencode}
   # - { kind: scoop-app, name: gdm257/peri}
-  - { kind: scoop-app, name: oh-my-pi }
   # - { kind: scoop-app, name: gdm257/pi}
   # - { kind: scoop-app, name: main/goose-cli}
   # - { kind: scoop-app, name: gdm257/goose}
-  # - { kind: scoop-app, name: gdm257/goose-desktop}
-  # - { kind: scoop-app, name: zcode}
-  # - { kind: scoop-app, name: herdr}
-  # - { kind: scoop-app, name: gdm257/octopus}
-  - { kind: scoop-app, name: gdm257/octopus-257 }
-  # - { kind: scoop-app, name: main/cliproxyapi}
-  # - { kind: scoop-app, name: gdm257/cpa-manager-plus}
-  # - { kind: scoop-app, name: cc-switch}
-  # - { kind: scoop-app, name: gdm257/omniroute}
-  # - { kind: scoop-app, name: gdm257/claude-squad}
-  # - { kind: scoop-app, name: gdm257/sudocode}
-  # - { kind: scoop-app, name: gdm257/auto-claude}
-  # - { kind: scoop-app, name: beads}
-  # - { kind: scoop-app, name: beads-viewer}
-  # - { kind: scoop-app, name: gdm257/beads-plan}
-  - { kind: scoop-app, name: gdm257/open-code-review }
-  # - { kind: scoop-app, name: gdm257/archon }
-  # - { kind: scoop-app, name: gdm257/codebase-memory-mcp }
-  # - { kind: scoop-app, name: gdm257/codebase-memory-mcp-ui }
-  # - { kind: scoop-app, name: deja-vu}
-  - { kind: scoop-app, name: llmfit }
-  - { kind: scoop-app, name: lmstudio }
 
   csharp:
   - { kind: scoop-app, name: nuget }
@@ -156,9 +159,6 @@ groups:
   # - { kind: scoop-app, name: git-branchless}
   # - { kind: scoop-app, name: gitbutler}
   # - { kind: scoop-app, name: git-town}
-  # - { kind: scoop-app, name: git-sync}
-  # - { kind: scoop-app, name: gdm257/gitea-mirror}
-  - { kind: scoop-app, name: gickup }
   - { kind: scoop-app, name: git-lfs }
   - { kind: scoop-app, name: lfs-dal }
   - { kind: scoop-app, name: git-credential-manager }
@@ -171,8 +171,6 @@ groups:
   # - { kind: scoop-app, name: gitleaks}
   # - { kind: scoop-app, name: delta}
   # - { kind: scoop-app, name: gix}
-  # - { kind: scoop-app, name: git-chglog}
-  - { kind: scoop-app, name: git-cliff }
   # - { kind: scoop-app, name: gitea}
   - { kind: scoop-app, name: act }
   # - { kind: scoop-app, name: hub}
@@ -184,6 +182,15 @@ groups:
   # - { kind: scoop-app, name: sourcetree_ScoopInstaller}
   # - { kind: scoop-app, name: gisto}
 
+  git-changelog:
+  # - { kind: scoop-app, name: git-chglog}
+  - { kind: scoop-app, name: git-cliff }
+
+  git-mirror:
+  # - { kind: scoop-app, name: git-sync}
+  # - { kind: scoop-app, name: gdm257/gitea-mirror}
+  - { kind: scoop-app, name: gickup }
+
   go:
   - { kind: scoop-app, name: go }
   - { kind: scoop-app, name: golangci-lint }
@@ -192,6 +199,7 @@ groups:
   # - { kind: scoop-app, name: gdm257/protoc-gen-go}
 
   ide:
+  - { kind: scoop-app, name: zed }
   - { kind: scoop-app, name: vim }
   # - { kind: scoop-app, name: vimtutor}
   - { kind: scoop-app, name: neovim }
@@ -239,7 +247,7 @@ groups:
   - { kind: scoop-app, name: main/android-clt }
   - { kind: scoop-app, name: adb }
   # - { kind: scoop-app, name: kotlin}
-  - { kind: scoop-app, name: gdm257/kotlin-lsp }
+  # - { kind: scoop-app, name: gdm257/kotlin-lsp }
   - { kind: scoop-app, name: main/dart }
   # - { kind: scoop-app, name: flutter}
   - { kind: scoop-app, name: flutter-cn }
@@ -248,10 +256,10 @@ groups:
   - { kind: scoop-app, name: luajit }
   - { kind: scoop-app, name: lua51 }
   - { kind: scoop-app, name: luarocks }
-  - { kind: scoop-app, name: main/lua-language-server }
+  # - { kind: scoop-app, name: main/lua-language-server }
 
   mirror:
-  - { kind: scoop-app, name: chsrc}
+  - { kind: scoop-app, name: chsrc }
 
   package-manager:
   # - { kind: scoop-app, name: vfox}
@@ -296,7 +304,7 @@ groups:
   rust:
   # - { kind: scoop-app, name: rustup-gnu}
   - { kind: scoop-app, name: rustup-msvc }
-  - { kind: scoop-app, name: rust-analyzer }
+  # - { kind: scoop-app, name: rust-analyzer }
   - { kind: scoop-app, name: main/cargo-binstall }
   - { kind: scoop-app, name: cargo-update }
 
@@ -310,17 +318,13 @@ groups:
   - { kind: scoop-app, name: nsis }
   - { kind: scoop-app, name: msix }
 
-  sql:
+  sql-client:
   - { kind: scoop-app, name: gdm257/dbgate }
   # - { kind: scoop-app, name: chat2db}
   # - { kind: scoop-app, name: jailer}
   # - { kind: scoop-app, name: dbeaver}
   # - { kind: scoop-app, name: dblab}
   # - { kind: scoop-app, name: usql}
-  - { kind: scoop-app, name: gdm257/onedump }
-  - { kind: scoop-app, name: gdm257/dqex }
-  - { kind: scoop-app, name: atlas }
-  # - { kind: scoop-app, name: migrate}
   # - { kind: scoop-app, name: dbmate}
   # - { kind: scoop-app, name: goose}
   # - { kind: scoop-app, name: datax}
@@ -336,6 +340,14 @@ groups:
   # - { kind: scoop-app, name: robo3t}
   # - { kind: scoop-app, name: NoSQLBooster-for-MongoDB}
 
+  sql-dump:
+  - { kind: scoop-app, name: gdm257/onedump }
+  - { kind: scoop-app, name: gdm257/dqex }
+
+  sql-migrations:
+  - { kind: scoop-app, name: atlas }
+  # - { kind: scoop-app, name: migrate}
+
   task-runner:
   - { kind: scoop-app, name: cmake }
 
@@ -343,19 +355,25 @@ groups:
   - { kind: scoop-app, name: main/ytt }
 
 items:
-  # - { group: _algorithm }
-  # - { group: _auth }
-  # - { group: _bash }
-  # - { group: _ci-cd }
-  # - { group: _cpp }
-  # - { group: _exe }
-  # - { group: _git-stats }
-  # - { group: _haskell }
-  # - { group: _macro }
-  # - { group: _mongodb }
-  # - { group: _mysql }
-  # - { group: _postgreql }
-  # - { group: _unity }
+  - { state: absent, group: algorithm }
+  - { state: absent, group: auth }
+  - { state: absent, group: bash }
+  - { state: absent, group: ci-cd }
+  - { state: absent, group: coding-agent-tui }
+  - { state: absent, group: cpp }
+  - { state: absent, group: exe }
+  - { state: absent, group: git-stats }
+  - { state: absent, group: git-mirror }
+  - { state: absent, group: git-changelog }
+  - { state: absent, group: haskell }
+  - { state: absent, group: json }
+  - { state: absent, group: macro }
+  - { state: absent, group: mirror }
+  - { state: absent, group: mongodb }
+  - { state: absent, group: re }
+  - { state: absent, group: sql-dump }
+  - { state: absent, group: unity }
+  - { group: ai-gateway }
   - { group: coding-agent }
   - { group: csharp }
   - { group: gcc }
@@ -364,18 +382,18 @@ items:
   - { group: ide }
   - { group: java }
   - { group: js }
-  - { group: json }
   - { group: kotlin }
   - { group: lua }
-  - { group: mirror }
   - { group: package-manager }
   - { group: php }
   - { group: python }
-  - { group: re }
   - { group: redis }
   - { group: ruby }
   - { group: rust }
-  - { group: scoop }
-  - { group: sql }
+  # - { group: scoop }
+  - { group: sql-client }
+  - { group: sql-migrations }
+  - { group: mysql }
+  - { group: postgreql }
   - { group: task-runner }
   - { group: templating }

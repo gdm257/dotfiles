@@ -32,6 +32,7 @@ groups:
 
   games:
   - { kind: scoop-app, name: gdm257/GriefSyndrome }
+  - { kind: scoop-app, name: taisei }
 
   go:
   - { kind: scoop-app, name: golly }
@@ -57,7 +58,7 @@ groups:
   - { kind: scoop-app, name: gdm257/tubatools }
   # - { kind: scoop-app, name: gaojitools}
   # - { kind: scoop-app, name: fufu-tools}
-  - { kind: scoop-app, name: officebox }
+  # - { kind: scoop-app, name: officebox }
 
   utils:
   # - { kind: scoop-app, name: uutils-coreutils}
@@ -74,5 +75,5 @@ items:
   - { group: utils }
   - { group: games }
   - { group: game-manager }
-  - { group: mod }
-  - { group: controller }
+  - { group: mod, state: absent }
+  - { group: controller, state: absent }

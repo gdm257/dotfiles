@@ -11,6 +11,12 @@ groups:
   # - { kind: scoop-app, name: gdm257/zrythm }
   # - { kind: scoop-app, name: lmms }
 
+  daw-dj:
+  - { kind: scoop-app, name: mixxx }
+
+  daw-drum-kit:
+  - { kind: scoop-app, name: hydrogen }
+
   music-player:
   - { kind: scoop-app, name: aimp }
   # - { kind: scoop-app, name: "foobar2000 foobar2000-encoders foobar2000-foobox-en-pack"}
@@ -39,12 +45,8 @@ groups:
 
   music-sheet:
   - { kind: scoop-app, name: gdm257/awesome-scores }
-  - { kind: scoop-app, name: gdm257/keyfinder }
-  - { kind: scoop-app, name: mixxx }
-  - { kind: scoop-app, name: gdm257/wavetone }
   - { kind: scoop-app, name: musescore }
-  - { kind: scoop-app, name: helio }
-  - { kind: scoop-app, name: hydrogen }
+  # - { kind: scoop-app, name: helio }
   # - { kind: scoop-app, name: lilypond}
   # - { kind: scoop-app, name: everyone-piano}
   # - { kind: scoop-app, name: freepiano}
@@ -61,25 +63,30 @@ groups:
   # - { kind: scoop-app, name: navidrome}
 
   osu:
-  - { kind: scoop-app, name: taisei }
   - { kind: scoop-app, name: osulazer }
   - { kind: scoop-app, name: collection-manager }
   # - { kind: scoop-app, name: osuplayer}
   # - { kind: scoop-app, name: danser-go}
   # - { kind: scoop-app, name: rewind}
   # - { kind: scoop-app, name: storybrew}
-  - { kind: scoop-app, name: OsuBeatmapDownloader }
+  # - { kind: scoop-app, name: OsuBeatmapDownloader }
   # - { kind: scoop-app, name: gdm257/oszsave}
   # - { kind: scoop-app, name: OsuRankedBeatmapDownloader}
 
   recording:
   - { kind: scoop-app, name: gdm257/micyou }
-  - { kind: scoop-app, name: retrieval-based-voice-conversion-webui }
-  # - { kind: scoop-app, name: Buzz_dodorz}
 
   soundfont-maker:
   - { kind: scoop-app, name: gdm257/viena }
   - { kind: scoop-app, name: gdm257/polyphone }
+
+  transcription:
+  - { kind: scoop-app, name: gdm257/keyfinder }
+  - { kind: scoop-app, name: gdm257/wavetone }
+
+  voice-converter:
+  - { kind: scoop-app, name: retrieval-based-voice-conversion-webui }
+  # - { kind: scoop-app, name: Buzz_dodorz}
 
   vocaloid:
   - { kind: scoop-app, name: openutau }
@@ -87,11 +94,15 @@ groups:
 
 items:
   - { group: osu }
-  - { group: music-player }
-  - { group: soundfont-maker }
-  - { group: vocaloid }
-  - { group: black-midi-sheet }
-  - { group: music-sheet }
-  - { group: recording }
-  - { group: audio-editor }
-  - { group: daw }
+  # - { group: music-player }
+  - { state: absent, group: soundfont-maker }
+  - { state: absent, group: vocaloid }
+  - { state: absent, group: black-midi-sheet }
+  # - { group: music-sheet }
+  # - { group: transcription }
+  - { state: absent, group: recording }
+  - { state: absent, group: voice-converter }
+  - { state: absent, group: audio-editor }
+  - { state: absent, group: daw-dj }
+  - { state: absent, group: daw-drum-kit }
+  # - { group: daw }

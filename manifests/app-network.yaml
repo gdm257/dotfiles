@@ -17,10 +17,13 @@ groups:
   # - { kind: scoop-app, name: brave}
   # - { kind: scoop-app, name: Brave-Portable}
   # - { kind: scoop-app, name: brave-beta}
-  - { kind: scoop-app, name: tor-browser }
+  # - { kind: scoop-app, name: tor-browser }
   # - { kind: scoop-app, name: HackBrowserData}
   # - { kind: scoop-app, name: geckodriver}
   # - { kind: scoop-app, name: chromedriver}
+
+  cert:
+  - { kind: scoop-app, name: mkcert }
 
   chatgpt:
   # - { kind: scoop-app, name: chatgpt}
@@ -49,7 +52,7 @@ groups:
   - { kind: scoop-app, name: doggo }
   # - { kind: scoop-app, name: dog}
   - { kind: scoop-app, name: bind }
-  - { kind: scoop-app, name: whosip }
+  # - { kind: scoop-app, name: whosip }
   - { kind: scoop-app, name: tldx }
   # - { kind: scoop-app, name: dns-jumper}
   # - { kind: scoop-app, name: q-dns}
@@ -112,6 +115,7 @@ groups:
   packet:
   - { kind: scoop-app, name: gdm257/whistle }
   - { kind: scoop-app, name: proxypin }
+  - { kind: scoop-app, name: gdm257/proxycrab }
   - { kind: scoop-app, name: wireshark }
   # - { kind: scoop-app, name: charles}
   # - { kind: scoop-app, name: termshark}
@@ -126,6 +130,10 @@ groups:
   # - { kind: scoop-app, name: nping}
 
   port-scanner:
+
+  port-forward:
+  - { kind: scoop-app, name: tcptunnel }
+  # - { kind: scoop-app, name: portforwarder}
 
   proxy:
   # - { kind: scoop-app, name: main/tor}
@@ -192,7 +200,6 @@ groups:
   # - { kind: scoop-app, name: nginx}
   # - { kind: scoop-app, name: caddy}
   # - { kind: scoop-app, name: xcaddy}
-  - { kind: scoop-app, name: mkcert }
 
   speedtest:
   # - { kind: scoop-app, name: CloudflareSpeedTest}
@@ -214,17 +221,21 @@ groups:
 
   tunnel:
   # - { kind: scoop-app, name: chisel}
-  - { kind: scoop-app, name: tcptunnel }
-  # - { kind: scoop-app, name: portforwarder}
   - { kind: scoop-app, name: main/cloudflared }
   - { kind: scoop-app, name: gdm257/ddnsto }
-  - { kind: scoop-app, name: frp }
-  - { kind: scoop-app, name: gdm257/frpmgr }
-  # - { kind: scoop-app, name: ZeroTier}
+  # - { kind: scoop-app, name: frp }
+  # - { kind: scoop-app, name: gdm257/frpmgr }
+  - { kind: scoop-app, name: frpc-desktop }
   # - { kind: scoop-app, name: nps-server}
   # - { kind: scoop-app, name: nps-client}
   # - { kind: scoop-app, name: rathole}
+
+  vlan-nas:
+  # - { kind: scoop-app, name: ZeroTier}
   # - { kind: scoop-app, name: tailscale}
+  # - { kind: scoop-app, name: netbird}
+
+  vlan-game:
   - { kind: scoop-app, name: gdm257/astral }
 
 
@@ -232,22 +243,26 @@ items:
   - { group: browser }
   - { group: curl }
   - { group: dns }
-  - { group: db }
+  - { group: db, state: absent }
   - { group: im }
   - { group: remote }
   - { group: proxy }
-  - { group: ping }
-  - { group: port-scanner }
-  - { group: trace }
+  - { group: ping, state: absent }
+  - { group: port-scanner, state: absent }
+  - { group: trace, state: absent }
   - { group: reverse-proxy }
+  - { group: cert, state: absent }
   - { group: chatgpt }
+  - { group: port-forward, state: absent }
   - { group: tunnel }
-  - { group: irc }
-  - { group: mail }
-  - { group: benchmark }
-  - { group: oauth }
+  - { group: vlan-nas, state: absent }
+  - { group: vlan-game, state: absent }
+  - { group: irc, state: absent }
+  - { group: mail, state: absent }
+  - { group: benchmark, state: absent }
+  - { group: oauth, state: absent }
   - { group: packet }
   - { group: network }
-  - { group: tcp }
-  - { group: ip }
-  - { group: speedtest }
+  - { group: tcp, state: absent }
+  - { group: ip, state: absent }
+  - { group: speedtest, state: absent }

@@ -39,8 +39,6 @@ groups:
   os-info:
   # - { kind: scoop-app, name: osquery}
   - { kind: scoop-app, name: fastfetch }
-  - { kind: scoop-app, name: urlprotocolview }
-  - { kind: scoop-app, name: shellexview }
 
   registry:
   # - { kind: scoop-app, name: registry-explorer}
@@ -49,6 +47,8 @@ groups:
   settings:
   # - { kind: scoop-app, name: WindowsUpdateBlocker}
   - { kind: scoop-app, name: context-menu-manager }
+  - { kind: scoop-app, name: urlprotocolview }
+  - { kind: scoop-app, name: shellexview }
   # - { kind: scoop-app, name: universal-watermark-disabler }
   - { kind: scoop-app, name: dismplusplus }
   - { kind: scoop-app, name: Bootice_kkzzhizhou }
@@ -65,7 +65,7 @@ groups:
   # - { kind: scoop-app, name: pchunter}
 
   uninstaller:
-  # - { kind: scoop-app, name: hibit-uninstaller-portable}
+  - { kind: scoop-app, name: hibit-uninstaller-portable}
   # - { kind: scoop-app, name: BulkCrapUninstaller}
   # - { kind: scoop-app, name: BulkCrapUninstaller-Portable}
   # - { kind: scoop-app, name: bulk-crap-uninstaller}
@@ -79,12 +79,12 @@ groups:
 
 items:
   - { group: activation }
-  # - { group: boot }
-  - { group: driver }
+  - { group: boot, state: absent }
+  - { group: driver, state: absent }
   - { group: envvars }
-  # - { group: hardware }
-  - { group: os-info }
+  - { group: hardware, state: absent }
+  - { group: os-info, state: absent }
   - { group: registry }
   - { group: settings }
-  # - { group: uninstaller }
-  # - { group: vcpp }
+  - { group: uninstaller, state: absent }
+  - { group: vcpp, state: absent }

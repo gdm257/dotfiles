@@ -41,11 +41,10 @@ groups:
   - { kind: scoop-app, name: gopeed }
   # - { kind: scoop-app, name: ariang-native}
 
-  driver:
+  driver-downloader:
   - { kind: scoop-app, name: snappy-driver-installer-origin }
 
   file-transfer:
-  - { kind: scoop-app, name: croc }
   # - { kind: scoop-app, name: landrop}
   # - { kind: scoop-app, name: dukto}
   # - { kind: scoop-app, name: dufs}
@@ -78,6 +77,7 @@ groups:
   - { kind: scoop-app, name: gallery-dl }
 
   sync:
+  - { kind: scoop-app, name: croc }
   # - { kind: scoop-app, name: cwRsync}
   # - { kind: scoop-app, name: synctrayzor}
 
@@ -92,15 +92,15 @@ groups:
   - { kind: scoop-app, name: yt-dlp }
 
 items:
-  - { group: bilibili }
+  - { state: absent, group: bilibili }
   - { group: bt }
-  - { group: downloader }
-  - { group: driver }
+  - { state: absent, group: downloader }
+  - { group: driver-downloader }
   - { group: cloud-storage }
   - { group: file-transfer }
-  - { group: ipfs }
-  - { group: pixiv }
+  - { state: absent, group: ipfs }
+  - { state: absent, group: pixiv }
   - { group: package-manager }
-  - { group: sync }
-  - { group: windows }
-  - { group: youtube }
+  - { state: absent, group: sync }
+  - { state: absent, group: windows }
+  - { state: absent, group: youtube }

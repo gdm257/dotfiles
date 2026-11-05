@@ -100,11 +100,11 @@ groups:
 
 items:
   - { group: scoop-install-sudo }
-  - { group: cheetsheet }
-  - { group: dotenv }
+  - { group: cheetsheet, state: absent }
+  - { group: dotenv, state: absent }
   - { group: keybinding }
   - { group: launcher }
   - { group: shell }
   - { group: sudo }
   - { group: terminal-emulator }
-  - { group: x11 }
+  - { group: x11, state: absent }

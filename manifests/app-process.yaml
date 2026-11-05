@@ -12,12 +12,12 @@ groups:
   # - { kind: scoop-app, name: procexp}
   - { kind: scoop-app, name: main/witr }
   # - { kind: scoop-app, name: bottom}
-  - { kind: scoop-app, name: btop }
+  # - { kind: scoop-app, name: btop }
   # - { kind: scoop-app, name: ntop}
   # - { kind: scoop-app, name: procs}
   # - { kind: scoop-app, name: gotop}
   - { kind: scoop-app, name: gdm257/lite-monitor }
-  - { kind: scoop-app, name: memreduct }
+  # - { kind: scoop-app, name: memreduct }
   # - { kind: scoop-app, name: winmemorycleaner}
   # - { kind: scoop-app, name: PowerToys-Portable}
 
@@ -50,8 +50,10 @@ groups:
 
 
 items:
+  - { group: defender, state: absent }
+  - { group: file-unlocker }
   - { group: ps }
   - { group: service-manager }
   - { group: time-tracker }
-  - { group: watch }
-  - { group: window-manager }
+  - { group: watch, state: absent }
+  - { group: window-manager, state: absent }

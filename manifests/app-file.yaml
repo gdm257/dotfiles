@@ -39,8 +39,8 @@ groups:
   # - { kind: scoop-app, name: gpg4win}
   - { kind: scoop-app, name: age }
   - { kind: scoop-app, name: enc }
-  - { kind: scoop-app, name: vault }
-  - { kind: scoop-app, name: dirhash }
+  # - { kind: scoop-app, name: vault }
+  # - { kind: scoop-app, name: dirhash }
   # - { kind: scoop-app, name: keeweb}
   # - { kind: scoop-app, name: keepass}
   # - { kind: scoop-app, name: keepass-plugin-kpenhentryview}
@@ -49,8 +49,8 @@ groups:
   # - { kind: scoop-app, name: keepass-plugin-keepasshttp}
   # - { kind: scoop-app, name: keepass-plugin-keepassnatmsg}
   # - { kind: scoop-app, name: keepass-plugin-keeagent}
-  # - { kind: scoop-app, name: bitwarden}
-  # - { kind: scoop-app, name: bitwarden-cli}
+  - { kind: scoop-app, name: bitwarden }
+  - { kind: scoop-app, name: bitwarden-cli }
   # - { kind: scoop-app, name: authme}
   # - { kind: scoop-app, name: infisical}
   # - { kind: scoop-app, name: restic}
@@ -127,13 +127,13 @@ groups:
 
 items:
   - { group: archive }
-  - { group: disk }
-  - { group: diff }
-  - { group: dotfiles }
+  - { group: disk, state: absent }
+  - { group: diff, state: absent }
+  - { group: dotfiles, state: absent }
   - { group: encrypt }
   - { group: file-manager }
-  - { group: fs }
-  - { group: image }
-  - { group: renamer }
+  - { group: fs, state: absent }
+  - { group: image, state: absent }
+  - { group: renamer, state: absent }
   - { group: search }
-  - { group: watch }
+  - { group: watch, state: absent }

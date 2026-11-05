@@ -121,15 +121,15 @@ groups:
 
 
 items:
-  # - { group: bilibili }
-  # - { group: cad }
-  - { group: emby }
-  # - { group: mmd }
-  - { group: video-recording }
-  - { group: subtitle }
-  - { group: upscale }
-  - { group: video-explorer }
+  - { group: bilibili, state: absent }
+  - { group: cad, state: absent }
+  - { group: emby, state: absent }
+  - { group: mmd, state: absent }
+  - { group: video-recording, state: absent }
+  - { group: subtitle, state: absent }
+  - { group: upscale, state: absent }
+  - { group: video-explorer, state: absent }
   - { group: video-player }
-  - { group: video-editor }
-  - { group: video-processor }
-  - { group: youtube }
+  - { group: video-editor, state: absent }
+  - { group: video-processor, state: absent }
+  - { group: youtube, state: absent }

@@ -28,7 +28,7 @@ groups:
   - { kind: scoop-app, name: fsviewer }
   # - { kind: scoop-app, name: shutter-image-browser}
   # - { kind: scoop-app, name: darktable}
-  - { kind: scoop-app, name: gdm257/lightcraft }
+  # - { kind: scoop-app, name: gdm257/lightcraft }
 
   image-hosting:
   # - { kind: scoop-app, name: picgo}
@@ -121,7 +121,7 @@ groups:
   - { kind: scoop-app, name: gdm257/livedraw }
   # - { kind: scoop-app, name: drawpen}
   # - { kind: scoop-app, name: greenshot}
-  - { kind: scoop-app, name: papertodo }
+  # - { kind: scoop-app, name: papertodo }
 
   svg:
   - { kind: scoop-app, name: inkscape }
@@ -137,19 +137,19 @@ groups:
 
 
 items:
-  - { group: book }
-  - { group: graph }
-  - { group: geo }
+  - { group: book, state: absent }
+  - { group: graph, state: absent }
+  - { group: geo, state: absent }
   - { group: image-explorer }
   - { group: image-viewer }
-  - { group: image-hosting }
-  - { group: manga }
+  - { group: image-hosting, state: absent }
+  - { group: manga, state: absent }
   - { group: monitor }
-  - { group: ocr }
+  - { group: ocr, state: absent }
   - { group: picture-processor }
-  - { group: paint }
-  - { group: raw-editor }
-  - { group: svg }
+  - { group: paint, state: absent }
+  - { group: raw-editor, state: absent }
+  - { group: svg, state: absent }
   - { group: screenshot }
   - { group: upscale }
-  - { group: wallpaper }
+  - { group: wallpaper, state: absent }

@@ -20,3 +20,4 @@ groups:
 
 items:
   - { group: fonts }
+  - { group: path }
