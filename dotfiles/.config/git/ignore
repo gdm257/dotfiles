@@ -11,6 +11,7 @@ CLAUDE.md
 CLAUDE.local.md
 /.claude/rules/local
 /.claude/settings.local.json
+/.claude/worktrees
 /.mcp.json
 age.key
 key.txt
