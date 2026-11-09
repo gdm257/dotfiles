@@ -42,11 +42,6 @@ groups:
   - { kind: scoop-app, name: xh}
   # - { kind: scoop-app, name: curlie }
 
-  db:
-  # - { kind: scoop-app, name: sqlitestudio}
-  # - { kind: scoop-app, name: mariadb103}
-  # - { kind: scoop-app, name: mongodb-compass-isolated}
-
   dns:
   # - { kind: scoop-app, name: ddns-go}
   - { kind: scoop-app, name: doggo }
@@ -243,7 +238,6 @@ items:
   - { group: browser }
   - { group: curl }
   - { group: dns }
-  - { group: db, state: absent }
   - { group: im }
   - { group: remote }
   - { group: proxy }

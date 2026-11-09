@@ -60,8 +60,10 @@ groups:
   mongodb:
   - { kind: scoop-app, name: mongodb }
   - { kind: scoop-app, name: mongodb-compass }
+  # - { kind: scoop-app, name: mongodb-compass-isolated}
 
   mysql:
+  # - { kind: scoop-app, name: mariadb103}
   # - { kind: scoop-app, name: mysql57}
   - { kind: scoop-app, name: mysql8 }
   # - { kind: scoop-app, name: dolt}
@@ -199,17 +201,6 @@ groups:
   # - { kind: scoop-app, name: gdm257/protoc-gen-go}
 
   ide:
-  - { kind: scoop-app, name: zed }
-  - { kind: scoop-app, name: vim }
-  # - { kind: scoop-app, name: vimtutor}
-  - { kind: scoop-app, name: neovim }
-  # - { kind: scoop-app, name: neovide }
-  # - { kind: scoop-app, name: helix}
-  # - { kind: scoop-app, name: ox}
-  # - { kind: scoop-app, name: emacs}
-  # - { kind: scoop-app, name: gdm257/path-user-doomemacs}
-  # - { kind: scoop-app, name: hexyl}
-  # - { kind: scoop-app, name: lapce}
   # - { kind: scoop-app, name: jupyterlab-desktop}
   # - { kind: scoop-app, name: android-studio}
   # - { kind: scoop-app, name: recaf}
@@ -361,11 +352,13 @@ items:
   - { state: absent, group: ci-cd }
   - { state: absent, group: coding-agent-tui }
   - { state: absent, group: cpp }
+  - { state: absent, group: db }
   - { state: absent, group: exe }
   - { state: absent, group: git-stats }
   - { state: absent, group: git-mirror }
   - { state: absent, group: git-changelog }
   - { state: absent, group: haskell }
+  - { state: absent, group: ide }
   - { state: absent, group: json }
   - { state: absent, group: macro }
   - { state: absent, group: mirror }
@@ -379,7 +372,6 @@ items:
   - { group: gcc }
   - { group: git }
   - { group: go }
-  - { group: ide }
   - { group: java }
   - { group: js }
   - { group: kotlin }

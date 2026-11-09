@@ -141,15 +141,26 @@ groups:
   - { kind: scoop-app, name: sttr }
 
   text-editor:
-  # - { kind: scoop-app, name: zed}
+  # - { kind: scoop-app, name: zed, alternative: gvim }
   # - { kind: scoop-app, name: zed-opengl}
+  - { kind: scoop-app, name: vim }
+  # - { kind: scoop-app, name: vimtutor}
+  - { kind: scoop-app, name: neovim, optional-deps: [main/tree-sitter] }
+  # - { kind: scoop-app, name: neovide, alternative: zed }
+  # - { kind: scoop-app, name: helix}
+  # - { kind: scoop-app, name: ox}
+  # - { kind: scoop-app, name: emacs}
+  # - { kind: scoop-app, name: gdm257/path-user-doomemacs}
+  # - { kind: scoop-app, name: hexyl}
+  # - { kind: scoop-app, name: lapce}
   # - { kind: scoop-app, name: notepad4}
   # - { kind: scoop-app, name: notepad--}
   # - { kind: scoop-app, name: notepadnext}
   # - { kind: scoop-app, name: notepadplusplus}
   # - { kind: scoop-app, name: islide}
   # - { kind: scoop-app, name: vscode-portable}
-  - { kind: scoop-app, name: emeditor }
+  # - { kind: scoop-app, name: emeditor, alternative: gvim }
+  # - { kind: scoop-app, name: winc, alternative: gvim }
   # - { kind: scoop-app, name: sublime-text}
   # - { kind: scoop-app, name: notepad2-mod}
   # - { kind: scoop-app, name: notepad3}
