@@ -8,6 +8,9 @@ initial_speed = 1200.0
 "primary+w" = "window"
 "primary+q" = "normal"
 
+[key_help]
+window_key_help = false
+
 [normal.bindings]
 "?" = "key_help"
 '\' = "text_input"
