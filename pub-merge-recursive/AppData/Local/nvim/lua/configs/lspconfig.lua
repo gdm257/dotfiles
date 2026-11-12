@@ -1,3 +1,5 @@
+if true then return {} end -- no LSP
+
 require("nvchad.configs.lspconfig").defaults()
 
 local servers = { "html", "cssls" }
