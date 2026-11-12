@@ -1,0 +1,34 @@
+" Theme
+" colorscheme evening
+colorscheme retrobox
+
+" Window size and position（只记窗口，不恢复文件）
+let g:save_window_file = expand('~/vimfiles/.vimwinpos')
+function! s:save_window()
+  let options = [
+    \ 'set columns=' . &columns,
+    \ 'set lines=' . &lines,
+    \ 'winpos ' . getwinposx() . ' ' . getwinposy(),
+    \ ]
+  call writefile(options, g:save_window_file)
+endfunction
+augroup SaveWindow
+  autocmd!
+  autocmd VimLeavePre * call s:save_window()
+augroup END
+if filereadable(g:save_window_file)
+  execute 'source' g:save_window_file
+endif
+
+" Font
+if has("gui_running")
+  set guifont=Consolas:h18
+  set guifontwide=NSimSun:h18
+endif
+
+set guicursor=a:blinkon0 " 光标不闪烁
+set nowrap
+set number
+
+" Insert 模式 Ctrl-V 粘贴剪贴板
+inoremap <C-v> <C-r>+

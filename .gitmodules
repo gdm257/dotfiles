@@ -4,9 +4,6 @@
 [submodule "pub-merge-recursive/AppData/Roaming/.emacs.d"]
 	path = pub-merge-recursive/AppData/Roaming/.emacs.d
 	url = https://github.com/hlissner/doom-emacs.git
-[submodule "dotfiles/vimfiles"]
-	path = dotfiles/vimfiles
-	url = https://github.com/gdm257/vimfiles.git
 [submodule "dotbot-plugins/dotbot-windows"]
 	path = dotbot-plugins/dotbot-windows
 	url = https://github.com/kurtmckee/dotbot-windows.git
