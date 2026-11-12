@@ -6,6 +6,8 @@
 set fileformat=unix
 set fileformats=unix,dos
 set jumpoptions=stack
+set laststatus=2
+set timeoutlen=400
 set termencoding=utf-8
 set encoding=utf8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,euc-jp,cp932,sjis,euc-kr
@@ -14,8 +16,6 @@ language messages en_US.utf-8
 if has("win32") || has("win64")
   " 取消光标闪烁（貌似没用）
   set novisualbell
-
-
   " Set cursor shape and color
   let &t_SI = "\<Esc>[6 q"
   let &t_SR = "\<Esc>[6 q"
@@ -59,27 +59,26 @@ endif
 
 " vim-plug
 call plug#begin()
+Plug 'wakatime/vim-wakatime'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'itchyny/lightline.vim'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'wakatime/vim-wakatime'
+Plug 'justinmk/vim-sneak'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 " `:PlugInstall` to install plugins
 call plug#end()
 
+let g:sneak#label = 1
+
 
 " Key bindings
 let g:mapleader = "\<space>"
-let g:maplocalleader = ','
+inoremap jj <Esc>
+inoremap jk <Esc>:w<CR>
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
-
-
-" Options
-set laststatus=2
-set timeoutlen=150
