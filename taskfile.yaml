@@ -178,6 +178,118 @@ tasks:
           CALLS: "scoop-app=scoop:install"
           MANIFEST: "./manifests/app-video.yaml"
 
+  manifests:app:audio:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-audio.yaml"
+
+  manifests:app:devops:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-devops.yaml"
+
+  manifests:app:downloader:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-downloader.yaml"
+
+  manifests:app:file:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-file.yaml"
+
+  manifests:app:kernel:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-kernel.yaml"
+
+  manifests:app:layer:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-layer.yaml"
+
+  manifests:app:network:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-network.yaml"
+
+  manifests:app:np:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-np.yaml"
+
+  manifests:app:picture:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-picture.yaml"
+
+  manifests:app:process:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-process.yaml"
+
+  manifests:app:shell:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-shell.yaml"
+
+  manifests:app:text:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-text.yaml"
+
+  manifests:app:toolbox:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-toolbox.yaml"
+
+  manifests:app:video:uninstall:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "scoop-app=scoop:uninstall"
+          MANIFEST: "./manifests/app-video.yaml"
+
   manifests:apt:install:
     cmds:
       - task: manifest:dispatch

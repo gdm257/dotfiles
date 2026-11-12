@@ -79,7 +79,10 @@ for install_task, uninstall_task, item, install, install_version, uninstall in P
     code, output, lines, failed = live(uninstall_task, {**item, key: "failing-app", "state": "absent", "continue_on_error": True})
     assert code == 0 and lines == [uninstall.replace("stub-app", "failing-app")] and uninstall.replace("stub-app", "failing-app") in failed, output
     code, output, lines, failed = live(uninstall_task, {**item})
-    assert code != 0 and lines == [] and "present" in output and item["kind"] in output, output
+    if item["kind"] == "scoop-app":  # only scoop:uninstall skips present items
+        assert code == 0 and lines == [] and failed == "" and "skip" in output, output
+    else:
+        assert code != 0 and lines == [] and "present" in output and item["kind"] in output, output
     code, output, lines, failed = live(uninstall_task, {**item, "state": "removed"})
     assert code != 0 and lines == [] and "removed" in output and item["kind"] in output, output
 
