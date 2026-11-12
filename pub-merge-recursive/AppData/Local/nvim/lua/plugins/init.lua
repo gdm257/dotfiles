@@ -8,6 +8,24 @@ return {
   { "wakatime/vim-wakatime" },
 
   {
+    "milanglacier/minuet-ai.nvim",
+    event = "InsertEnter",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      provider = "openai_compatible",
+      provider_options = {
+        openai_compatible = {
+          name = "ai-gateway",
+          end_point = "http://localhost:8080/v1/chat/completions",
+          model = "claude-haiku-4-5",
+          api_key = "OPENAI_API_KEY",
+          system = "You are a completion engine: given context with a gap, output only the text that fills or continues it.",
+        },
+      },
+    },
+  },
+
+  {
     "loctvl842/monokai-pro.nvim",
     lazy = false,
     priority = 1000,
