@@ -1619,14 +1619,14 @@
     "semble": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/semble/skills/semble",
       "type": "github-subdir",
-      "installed_at": "2026-10-31T06:18:34.3766735+08:00",
+      "installed_at": "2026-11-14T04:16:43.9758041+08:00",
       "repo_url": "https://github.com/gdm257/cc-plugins.git",
       "subdir": "plugins/semble/skills/semble",
-      "version": "2a2cc4a",
-      "tree_hash": "5b3ad83397f1a363e166c08c15c0d187dcb66574",
-      "commit": "2a2cc4ad6fee24a86d0314b35e201fd02f0a9fd3",
+      "version": "d7236db",
+      "tree_hash": "df3b1a9f32e5fc6c25cc00b08873cc8328436881",
+      "commit": "d7236db3b24fa5a5c997d7d83d96c822320dac74",
       "file_hashes": {
-        "SKILL.md": "sha256:3d00a7b20ef632236fe431f563ecc9634c1f9d492525a46446ebf59d05dcd908"
+        "SKILL.md": "sha256:f88721dd0c61b4e5a03e62f5b96f006a18e834f29524b16d2902f3e20ccdbfb0"
       }
     },
     "session-history": {
