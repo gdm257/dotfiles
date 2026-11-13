@@ -1,0 +1,6 @@
+items:
+  # BuildTools 本体见 manifests/winget.yaml
+  - kind: vs-workload
+    workload: Microsoft.VisualStudio.Workload.VCTools
+    include_recommended: true
+    install_path: C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools

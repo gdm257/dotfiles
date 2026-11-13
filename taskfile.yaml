@@ -650,6 +650,14 @@ tasks:
           CALLS: "volta-tool=volta:install"
           MANIFEST: "./manifests/volta.yaml"
 
+  manifests:vs:modify:
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "vs-workload=vs:modify"
+          MANIFEST: "./manifests/vs.yaml"
+
   manifests:w2:install:
     cmds:
       - task: manifest:dispatch

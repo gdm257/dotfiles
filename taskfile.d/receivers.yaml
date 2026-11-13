@@ -438,6 +438,18 @@ tasks:
     cmds:
       - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
+  vs:modify:
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "vs-workload" }}{{ fail (printf "vs: unknown kind %s" .ITEM.kind) }}{{ end }}"C:/Program Files (x86)/Microsoft Visual Studio/Installer/vs_installer.exe" modify --installPath "{{ .ITEM.install_path }}" --add {{ .ITEM.workload }}{{ if not (and (hasKey .ITEM "include_recommended") (eq .ITEM.include_recommended false)) }} --includeRecommended{{ end }} --passive'
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
   w2:install:
     requires:
       vars: [ITEM_JSON]
