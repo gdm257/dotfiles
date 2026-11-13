@@ -2,8 +2,8 @@
 
 --when.repositories = [
   'C:/Users/demo/codebase',
-  'D:/home/libraries/Documents/repos/git',
   'D:/home/apps/scoop/buckets',
+  'D:/home/codebase',
   'D:/home',
 ]
 
