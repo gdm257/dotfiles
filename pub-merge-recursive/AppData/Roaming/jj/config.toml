@@ -19,6 +19,7 @@ auto-track = '''
     | root-glob:"*.bak" | root-glob:".*/*.bak"
     | root-glob:"opencode.json"
     | CLAUDE.md | CLAUDE.local.md | root-glob:".claude/rules/local" | root-glob:".claude/settings.local.json" | root-glob:".mcp.json" | root-glob:".claude/worktrees"
+    | root-glob:".agents/worktrees"
     | age.key | key.txt
     | .mindfs
     | *.swp
