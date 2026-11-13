@@ -3,34 +3,29 @@
 "   source ./defaults.vim
 " endif
 
+
+" ======== Encoding ========
 set fileformat=unix
 set fileformats=unix,dos
-set jumpoptions=stack
-set laststatus=2
-set timeoutlen=400
 set termencoding=utf-8
 set encoding=utf8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,euc-jp,cp932,sjis,euc-kr
 language messages en_US.utf-8
 
+
+" ======== UI/UX ========
+set timeoutlen=400
+set jumpoptions=stack
+set laststatus=2
+" set cursorline
+highlight CursorLine cterm=NONE ctermbg=17 ctermfg=NONE
 if has("win32") || has("win64")
   " 取消光标闪烁（貌似没用）
   set novisualbell
   " Set cursor shape and color
-  let &t_SI = "\<Esc>[6 q"
-  let &t_SR = "\<Esc>[6 q"
-  let &t_EI = "\<Esc>[6 q"
-  " if &term =~ "xterm"
-  "     " INSERT mode
-  "     " let &t_SI = "\<Esc>[6 q" . "\<Esc>]12;blue\x7"
-  "     let &t_SI = "\<Esc>[6 q"
-  "     " REPLACE mode
-  "     " let &t_SR = "\<Esc>[6 q" . "\<Esc>]12;black\x7"
-  "     let &t_SR = "\<Esc>[6 q"
-  "     " NORMAL mode
-  "     " let &t_EI = "\<Esc>[2 q" . "\<Esc>]12;green\x7"
-  "     let &t_EI = "\<Esc>[2 q"
-  " endif
+  let &t_SI = "\<Esc>[6 q" " INSERT mode
+  let &t_SR = "\<Esc>[6 q" " REPLACE mode
+  let &t_EI = "\<Esc>[2 q" " NORMAL mode
   " 1 -> blinking block  闪烁的方块
   " 2 -> solid block  不闪烁的方块
   " 3 -> blinking underscore  闪烁的下划线
@@ -40,24 +35,7 @@ if has("win32") || has("win64")
 endif
 
 
-" Raw oscyank Start
-" autocmd TextYankPost * echo v:event
-" function! s:raw_echo(str)
-"   if has('win32') && has('nvim')
-"     call chansend(v:stderr, a:str)
-"   else
-"     if filewritable('/dev/fd/2')
-"       call writefile([a:str], '/dev/fd/2', 'b')
-"     else
-"       exec("silent! !echo " . shellescape(a:str))
-"       redraw!
-"     endif
-"   endif
-" endfunction
-" Raw oscyank End
-
-
-" vim-plug
+" ======== vim-plug ========
 call plug#begin()
 Plug 'wakatime/vim-wakatime'
 Plug 'itchyny/lightline.vim'
@@ -77,7 +55,7 @@ call plug#end()
 let g:sneak#label = 1
 
 
-" Key bindings
+" ======== Key bindings ========
 let g:mapleader = "\<space>"
 inoremap jj <Esc>
 inoremap jk <Esc>:w<CR>
