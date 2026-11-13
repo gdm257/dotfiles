@@ -16,6 +16,7 @@ language messages en_US.utf-8
 " ======== UI/UX ========
 set timeoutlen=400
 set jumpoptions=stack
+set ignorecase smartcase
 set laststatus=2
 " set cursorline
 highlight CursorLine cterm=NONE ctermbg=17 ctermfg=NONE
