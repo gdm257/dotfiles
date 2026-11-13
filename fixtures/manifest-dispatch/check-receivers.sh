@@ -33,6 +33,12 @@ check test "${output#*failed: boom}" != "$output"
 printf 'PASS: absent item flag inherits global true\n'
 
 fixture=fixtures/manifest-dispatch/receivers.taskfile.yaml
+capture --dry manifest:scoop:uninstall 'ITEM_JSON={"kind":"scoop-app","name":"gdm257/starpie","state":"absent"}'
+check test "$code" = 0
+check test "${output#*scoop list starpie }" != "$output"
+check test "${output#*scoop list gdm257/starpie}" = "$output"
+printf 'PASS: scoop:uninstall probes installed list by bare name\n'
+
 capture --taskfile "$fixture" shell 'ITEM_JSON={"kind":"shell","cmd":"echo standalone-shell"}'
 check test "$code" = 0
 check test "$output" = standalone-shell
