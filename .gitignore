@@ -14,7 +14,11 @@
 /apps/scoop/persist/doublecmd/settings/history.xml
 /apps/scoop/persist/doublecmd/settings/tabs.xml
 !/apps/scoop/persist/keysteer
-#!/apps/scoop/persist/mpv.net-dw
+!/apps/scoop/persist/mpv.net-dw
+**/portable_config/cache
+**/portable_config/danmaku-history.json
+**/portable_config/history.txt
+**/portable_config/watch_later
 !/apps/scoop/persist/mousemaster
 !/apps/scoop/persist/mykeymap
 !/apps/scoop/persist/mykeymap-beta

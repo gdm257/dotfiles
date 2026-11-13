@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <InputDefaultBindingsFixApplied>true</InputDefaultBindingsFixApplied>
+    <ShowMenuFixApplied>true</ShowMenuFixApplied>
+    <Volume>100</Volume>
+    <RecentFiles>
+        <string>C:\Users\demo\Downloads\[Nekomoe kissaten&amp;VCB-Studio] Kaminaki Sekai no Kamisama Katsudou [05][Ma10p_1080p][x265_flac].mkv</string>
+        <string>C:\Users\demo\Downloads\[Nekomoe kissaten&amp;VCB-Studio] Kaminaki Sekai no Kamisama Katsudou [04][Ma10p_1080p][x265_flac].mkv</string>
+        <string>C:\Users\demo\Downloads\[Nekomoe kissaten&amp;VCB-Studio] Kaminaki Sekai no Kamisama Katsudou [03][Ma10p_1080p][x265_flac].mkv</string>
+        <string>C:\Users\demo\Downloads\[Nekomoe kissaten&amp;VCB-Studio] Kaminaki Sekai no Kamisama Katsudou [02][Ma10p_1080p][x265_flac].mkv</string>
+        <string>http://localhost:2584/d/ACG/anime/%5BVCB-Studio%5D/%5BNekomoe%20kissaten%26VCB-Studio%5D%20Kaminaki%20Sekai%20no%20Kamisama%20Katsudou%20%5BMa10p_1080p%5D/%5BNekomoe%20kissaten%26VCB-Studio%5D%20Kaminaki%20Sekai%20no%20Kamisama%20Katsudou%20%5B02%5D%5BMa10p_1080p%5D%5Bx265_flac%5D.mkv|[Nekomoe kissaten&amp;VCB-Studio] Kaminaki Sekai no Kamisama Katsudou [02][Ma10p_1080p][x265_flac].mkv</string>
+        <string>https://shenmi.link/emby/videos/1497299/original.mkv?DeviceId=5f93dd9d-00af-4fae-8edd-aabd6de2b583&amp;MediaSourceId=7b9659568d42fa60cf3be5cacbd8b1d0&amp;PlaySessionId=cd2989bc89934b868d7f19116fe86fc4&amp;api_key=3219c14b4b6e40da86b9e9c1c8ad70a5&amp;Static=true|街角魔族 S2:E1 - 再次对决！魔法少女的新形象！？  |  [Magic-Raws] Machikado Mazoku 2Choume S02E01 (BD 1920x1080 x265-10Bit Flac)-Skadi@JMS.mkv</string>
+        <string>https://shenmi.link/emby/videos/1497299/original.mkv?DeviceId=5f93dd9d-00af-4fae-8edd-aabd6de2b583&amp;MediaSourceId=7b9659568d42fa60cf3be5cacbd8b1d0&amp;PlaySessionId=f9e89d66a33a44c1afe6179af3e0c9f6&amp;api_key=3219c14b4b6e40da86b9e9c1c8ad70a5&amp;Static=true|街角魔族 S2:E1 - 再次对决！魔法少女的新形象！？  |  [Magic-Raws] Machikado Mazoku 2Choume S02E01 (BD 1920x1080 x265-10Bit Flac)-Skadi@JMS.mkv</string>
+        <string>C:\Users\demo\Videos\ffmpeg\4K\【cycles 4k60FPS mmd】fufu. ロキROKI_超清 4K.mp4</string>
+        <string>R:\anime\[VCB-Studio]\[SweetSub&amp;LoliHouse&amp;VCB-Studio] Shelter [Ma10p_1080p]\[SweetSub&amp;LoliHouse&amp;VCB-Studio] Shelter [Ma10p_1080p][x265_flac].mkv</string>
+        <string>C:\Users\demo\Videos\ffmpeg\2K\【MMD】ストロボナイツ【Strobe Nights】8K(UHD) - YouTube.mkv</string>
+        <string>C:\Users\demo\Videos\ffmpeg\4K\【4k 120fps MMD】我很清楚自己不过是片空白罢了--ゴーストルール P1 017_x264.mp4</string>
+        <string>C:\Users\demo\Videos\ffmpeg\4K\【4k 120fps MMD】我找不到逃脱的办法   现在只想   沉睡--Lil’ Goldfish P1 029_x264.mp4</string>
+        <string>C:\Users\demo\Videos\ffmpeg\2K\Tda式改変ミクさんで”リバーシブルキャンペーン” [IDt1XmDq6bs].mkv</string>
+        <string>C:\Users\demo\Videos\ffmpeg\360\[里MAD2013夏季战宣传PV2]F  K UP！[才人君][720P]_流畅 360P.mp4</string>
+        <string>C:\Users\demo\Videos\ffmpeg\720\[MMD] Everglow - Dun Dun [LWCzyIB1Igk].mp4</string>
+    </RecentFiles>
+    <WindowLocation>
+        <X>0</X>
+        <Y>0</Y>
+    </WindowLocation>
+    <WindowPosition>
+        <X>972</X>
+        <Y>568</Y>
+    </WindowPosition>
+    <WindowSize>
+        <Width>1152</Width>
+        <Height>648</Height>
+    </WindowSize>
+    <ConfigEditorSearch>OSD:</ConfigEditorSearch>
+    <Mute>no</Mute>
+</AppSettings>
