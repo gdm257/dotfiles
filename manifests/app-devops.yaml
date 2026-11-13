@@ -352,7 +352,6 @@ items:
   - { state: absent, group: ci-cd }
   - { state: absent, group: coding-agent-tui }
   - { state: absent, group: cpp }
-  - { state: absent, group: db }
   - { state: absent, group: exe }
   - { state: absent, group: git-stats }
   - { state: absent, group: git-mirror }

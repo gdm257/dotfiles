@@ -44,9 +44,9 @@ groups:
   docker:
   - { kind: scoop-app, name: docker }
   # - { kind: scoop-app, name: docker-compose}
-  - { kind: scoop-app, name: lazydocker }
+  # - { kind: scoop-app, name: lazydocker, alternatives: [lazywslc] }
   - { kind: scoop-app, name: gdm257/lazywslc }
-  - { kind: scoop-app, name: ctop }
+  # - { kind: scoop-app, name: ctop, alternatives: [lazywslc] }
   # - { kind: scoop-app, name: dockle}
   # - { kind: scoop-app, name: diun}
   # - { kind: scoop-app, name: hadolint}
@@ -78,12 +78,12 @@ groups:
   # - { kind: scoop-app, name: supermodel}
   # - { kind: scoop-app, name: ScummVM}
   # - { kind: scoop-app, name: xenia}
-  - { kind: scoop-app, name: LDPlayer-Portable }
+  # - { kind: scoop-app, name: ruffle-nightly }
+  - { kind: scoop-app, name: LDPlayer-Portable, state: absent }
   - { kind: scoop-app, name: onscripteryuri }
   - { kind: scoop-app, name: onscripter-w }
   - { kind: scoop-app, name: onscripter-jh }
   - { kind: scoop-app, name: onscripter-ru }
-  - { kind: scoop-app, name: ruffle-nightly }
 
   image-builder:
   - { kind: scoop-app, name: nixpacks }
@@ -91,10 +91,10 @@ groups:
   - { kind: scoop-app, name: devpod }
 
   pe:
-  - { kind: scoop-app, name: ventoy }
+  # - { kind: scoop-app, name: ventoy, alternatives: [firpe] }
   # - { kind: scoop-app, name: wepe}
   - { kind: scoop-app, name: rufus }
-  - { kind: scoop-app, name: balenaEtcher-Portable }
+  # - { kind: scoop-app, name: balenaEtcher-Portable }
   # - { kind: scoop-app, name: unetbootin}
 
   vm-manager:

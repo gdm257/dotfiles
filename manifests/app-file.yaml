@@ -1,6 +1,6 @@
 groups:
   archive:
-  - { kind: scoop-app, name: unar }
+  # - { kind: scoop-app, name: unar, alternatives: [winrar] }
   - { kind: scoop-app, name: lessmsi }
   # - { kind: scoop-app, name: main/7zip}
   - { kind: scoop-app, name: main/nanazip }
@@ -13,7 +13,7 @@ groups:
   - { kind: scoop-app, name: meld }
 
   disk:
-  # - { kind: scoop-app, name: file}
+  # - { kind: scoop-app, name: file, alternatives: [git] }
   # - { kind: scoop-app, name: code2prompt}
   # - { kind: scoop-app, name: orange}
   # - { kind: scoop-app, name: fluentcleaner_naderi}
@@ -71,7 +71,7 @@ groups:
   # - { kind: scoop-app, name: lsd}
   - { kind: scoop-app, name: gdu }
   - { kind: scoop-app, name: dust }
-  - { kind: scoop-app, name: duf }
+  # - { kind: scoop-app, name: duf }
   # - { kind: scoop-app, name: tre-command}
   - { kind: scoop-app, name: zoxide }
   - { kind: scoop-app, name: yazi }
@@ -95,6 +95,7 @@ groups:
 
   fs:
   # - { kind: scoop-app, name: ntfs2btrfs}
+  - { kind: scoop-app, name: winnfsd }
 
   image:
   - { kind: scoop-app, name: anyburn }

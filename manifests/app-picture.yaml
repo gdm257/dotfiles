@@ -35,7 +35,6 @@ groups:
   - { kind: scoop-app, name: piclist }
 
   image-viewer:
-  - { kind: scoop-app, name: exiftool }
   # - { kind: scoop-app, name: jexiftoolgui}
   # - { kind: scoop-app, name: honeyview}
   - { kind: scoop-app, name: gdm257/guoheview }
@@ -48,7 +47,7 @@ groups:
   # - { kind: scoop-app, name: imageglass}
   # - { kind: scoop-app, name: gdm257/aiviewer}
   # - { kind: scoop-app, name: gdm257/cdrviewer}
-  - { kind: scoop-app, name: icat }
+  - { kind: scoop-app, name: icat, state: absent }
 
   manga:
   # - { kind: scoop-app, name: venera}
@@ -96,6 +95,7 @@ groups:
   - { kind: scoop-app, name: hugin }
   # - { kind: scoop-app, name: kumoworks}
   - { kind: scoop-app, name: snap2img }
+  - { kind: scoop-app, name: exiftool }
   - { kind: scoop-app, name: imagemagick-lean }
   # - { kind: scoop-app, name: caesium-image-compressor}
   # - { kind: scoop-app, name: ascii-image-converter}
@@ -112,13 +112,13 @@ groups:
   # - { kind: scoop-app, name: Snipaste-Portable}
   # - { kind: scoop-app, name: gdm257/kiri}
   # - { kind: scoop-app, name: ScreenToGif}
-  - { kind: scoop-app, name: clickshow }
+  # - { kind: scoop-app, name: clickshow, alternatives: [snowshot] }
   # - { kind: scoop-app, name: gink}
-  - { kind: scoop-app, name: carnac }
+  # - { kind: scoop-app, name: carnac, alternatives: [snowshot] }
   # - { kind: scoop-app, name: keyviz}
   # - { kind: scoop-app, name: keycastow}
   # - { kind: scoop-app, name: nohboard}
-  - { kind: scoop-app, name: gdm257/livedraw }
+  # - { kind: scoop-app, name: gdm257/livedraw, alternatives: [snowshot] }
   # - { kind: scoop-app, name: drawpen}
   # - { kind: scoop-app, name: greenshot}
   # - { kind: scoop-app, name: papertodo }

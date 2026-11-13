@@ -25,7 +25,7 @@ groups:
   - { kind: scoop-app, name: gdm257/mykeymap }
   # - { kind: scoop-app, name: gdm257/mousemaster }
   - { kind: scoop-app, name: gdm257/keysteer }
-  - { kind: scoop-app, name: gdm257/starpie }
+  - { kind: scoop-app, name: gdm257/starpie, state: absent }
   # - { kind: scoop-app, name: komokana}
 
   launcher:
@@ -33,13 +33,13 @@ groups:
   # - { kind: scoop-app, name: rubick}
   # - { kind: scoop-app, name: maye}
   # - { kind: scoop-app, name: SilentCMD-Portable}
-  - { kind: scoop-app, name: runasdate }
+  - { kind: scoop-app, name: runasdate, state: absent }
   - { kind: scoop-app, name: locale-emulator }
   # - { kind: scoop-app, name: locale-remulator}
   # - { kind: scoop-app, name: gdm257/onin }
   - { kind: scoop-app, name: ztools }
   # - { kind: scoop-app, name: geekdesk}
-  - { kind: scoop-app, name: main/scoop-shim }
+  - { kind: scoop-app, name: main/scoop-shim, state: absent }
   - { kind: scoop-app, name: gdm257/command-wrapper }
   # - { kind: scoop-app, name: pueue}
   # - { kind: scoop-app, name: nirsoft/nircmd}
@@ -48,12 +48,25 @@ groups:
 
   shell:
   - { kind: scoop-app, name: powershell }
-  - { kind: scoop-app, name: main/powershelleditorservices }
-  # - { kind: scoop-app, name: PSWinUtil}
 
   sudo:
   # - { kind: scoop-app, name: sudo}
   - { kind: scoop-app, name: gsudo }
+
+  ssh-client:
+  # - { kind: scoop-app, name: putty}
+  - { kind: scoop-app, name: openssh }
+  - { kind: scoop-app, name: opkssh }
+  # - { kind: scoop-app, name: mosh-client}
+  - { kind: scoop-app, name: main/charm-gum }
+  - { kind: scoop-app, name: chafa }
+  - { kind: scoop-app, name: resvg }
+  # - { kind: scoop-app, name: lrzsz}
+  # - { kind: scoop-app, name: tssh}
+  # - { kind: scoop-app, name: xpipe}
+  # - { kind: scoop-app, name: mobaxterm}
+  # - { kind: scoop-app, name: gdm257/leepanel, alternatives: [voltius] }
+  - { kind: scoop-app, name: gdm257/voltius }
 
   terminal-emulator:
   - { kind: scoop-app, name: windows-terminal }
@@ -65,22 +78,11 @@ groups:
   # - { kind: scoop-app, name: msys2}
   # - { kind: scoop-app, name: oh-my-posh}
   # - { kind: scoop-app, name: waveterm}
-  # - { kind: scoop-app, name: xpipe}
-  # - { kind: scoop-app, name: mobaxterm}
-  - { kind: scoop-app, name: gdm257/leepanel }
-  - { kind: scoop-app, name: gdm257/voltius }
   # - { kind: scoop-app, name: electerm}
   # - { kind: scoop-app, name: alacritty}
   # - { kind: scoop-app, name: rio}
   # - { kind: scoop-app, name: hyper-beta}
   # - { kind: scoop-app, name: tabby-portable}
-  # - { kind: scoop-app, name: putty}
-  - { kind: scoop-app, name: openssh }
-  - { kind: scoop-app, name: opkssh }
-  # - { kind: scoop-app, name: mosh-client}
-  - { kind: scoop-app, name: main/charm-gum }
-  - { kind: scoop-app, name: chafa }
-  - { kind: scoop-app, name: resvg }
   # - { kind: scoop-app, name: tgpt}
   # - { kind: scoop-app, name: sgpt}
   # - { kind: scoop-app, name: psfzf}
@@ -90,8 +92,8 @@ groups:
   # - { kind: scoop-app, name: clink-portable}
   # - { kind: scoop-app, name: genact}
   # - { kind: scoop-app, name: zellij}
-  # - { kind: scoop-app, name: lrzsz}
-  # - { kind: scoop-app, name: tssh}
+  - { kind: scoop-app, name: main/powershelleditorservices }
+  # - { kind: scoop-app, name: PSWinUtil}
 
   x11:
   # - { kind: scoop-app, name: ultravnc}
@@ -99,12 +101,12 @@ groups:
 
 
 items:
-  - { group: scoop-install-sudo }
+  - { group: sudo }
   - { group: cheetsheet, state: absent }
   - { group: dotenv, state: absent }
   - { group: keybinding }
   - { group: launcher }
   - { group: shell }
-  - { group: sudo }
+  - { group: ssh-client }
   - { group: terminal-emulator }
   - { group: x11, state: absent }

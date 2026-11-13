@@ -6,6 +6,7 @@ groups:
   book:
   # - { kind: scoop-app, name: calibre-web}
   # - { kind: scoop-app, name: calibre}
+  # - { kind: scoop-app, name: lfs/awesome-books }
 
   clipboard:
   - { kind: scoop-app, name: ditto }
@@ -20,16 +21,6 @@ groups:
   # - { kind: scoop-app, name: ting-en}
   # - { kind: scoop-app, name: anki}
   # - { kind: scoop-app, name: goldendict-ng}
-
-  doc:
-  - { kind: scoop-app, name: pandoc }
-  - { kind: scoop-app, name: main/officecli }
-  - { kind: scoop-app, name: poppler }
-  # - { kind: scoop-app, name: vosviewer}
-  - { kind: scoop-app, name: lfs/awesome-books }
-  # - { kind: scoop-app, name: zeal}
-  # - { kind: scoop-app, name: koodo-reader}
-  # - { kind: scoop-app, name: "mendeley mendeley-desktop"}
 
   font:
   - { kind: scoop-app, name: fontforge }
@@ -64,7 +55,7 @@ groups:
   # - { kind: scoop-app, name: gdm257/inknote }
   # - { kind: scoop-app, name: gdm257/vividmark}
   # - { kind: scoop-app, name: gdm257/markview}
-  - { kind: scoop-app, name: gdm257/open-typora }
+  - { kind: scoop-app, name: gdm257/open-markdown-lane }
 
   note:
   # - { kind: scoop-app, name: zotero}
@@ -80,6 +71,11 @@ groups:
   # - { kind: scoop-app, name: xournalpp}
   # - { kind: scoop-app, name: rendevoz}
   # - { kind: scoop-app, name: logseq}
+  # - { kind: scoop-app, name: koodo-reader}
+  # - { kind: scoop-app, name: mendeley}
+  # - { kind: scoop-app, name: mendeley-desktop}
+  # - { kind: scoop-app, name: vosviewer}
+  # - { kind: scoop-app, name: zeal}
 
   office:
   - { kind: scoop-app, name: onlyoffice-desktopeditors }
@@ -88,11 +84,16 @@ groups:
   - { kind: scoop-app, name: gdm257/gridcraft }
   - { kind: scoop-app, name: gdm257/deckcraft }
 
+  office-cli:
+  - { kind: scoop-app, name: pandoc }
+  - { kind: scoop-app, name: main/officecli }
+
   openapi:
   # - { kind: scoop-app, name: openapi-tui}
 
   pdf-cli:
   - { kind: scoop-app, name: pdftk }
+  - { kind: scoop-app, name: poppler }
 
   pdf-editor:
   - { kind: scoop-app, name: gdm257/pdfcraft }
@@ -123,30 +124,32 @@ groups:
   # - { kind: scoop-app, name: texlive}
   # - { kind: scoop-app, name: latex}
 
-  text:
-  - { kind: scoop-app, name: grex }
+  text-processing:
+  - { kind: scoop-app, name: grex, state: absent }
   - { kind: scoop-app, name: ripgrep }
   # - { kind: scoop-app, name: sig}
   - { kind: scoop-app, name: ugrep }
   # - { kind: scoop-app, name: gdm257/shim-grep}
-  - { kind: scoop-app, name: ag }
+  # - { kind: scoop-app, name: ag, alternatives: [ripgrep] }
   # - { kind: scoop-app, name: ack}
   - { kind: scoop-app, name: main/sd }
   # - { kind: scoop-app, name: sad}
   # - { kind: scoop-app, name: ruplacer}
-  - { kind: scoop-app, name: bat }
   # - { kind: scoop-app, name: miller}
-  # - { kind: scoop-app, name: tailspin}
-  # - { kind: scoop-app, name: logdy}
   - { kind: scoop-app, name: sttr }
 
+  text-viewer:
+  # - { kind: scoop-app, name: tailspin}
+  # - { kind: scoop-app, name: logdy}
+  - { kind: scoop-app, name: bat }
+
   text-editor:
-  # - { kind: scoop-app, name: zed, alternative: gvim }
+  # - { kind: scoop-app, name: zed, alternatives: [gvim] }
   # - { kind: scoop-app, name: zed-opengl}
-  - { kind: scoop-app, name: vim }
+  - { kind: scoop-app, name: vim, hold: true }
   # - { kind: scoop-app, name: vimtutor}
-  # - { kind: scoop-app, name: neovim, optional-deps: [main/tree-sitter], alternative: vim }
-  # - { kind: scoop-app, name: neovide, alternative: zed }
+  # - { kind: scoop-app, name: neovim, optional-deps: [main/tree-sitter], alternatives: [vim] }
+  # - { kind: scoop-app, name: neovide, alternatives: [zed] }
   # - { kind: scoop-app, name: helix}
   # - { kind: scoop-app, name: ox}
   # - { kind: scoop-app, name: emacs}
@@ -159,8 +162,8 @@ groups:
   # - { kind: scoop-app, name: notepadplusplus}
   # - { kind: scoop-app, name: islide}
   # - { kind: scoop-app, name: vscode-portable}
-  # - { kind: scoop-app, name: emeditor, alternative: gvim }
-  # - { kind: scoop-app, name: winc, alternative: gvim }
+  # - { kind: scoop-app, name: emeditor, alternatives: [gvim] }
+  # - { kind: scoop-app, name: winc, alternatives: [gvim] }
   # - { kind: scoop-app, name: sublime-text}
   # - { kind: scoop-app, name: notepad2-mod}
   # - { kind: scoop-app, name: notepad3}
@@ -170,18 +173,18 @@ groups:
 items:
   - { group: accounting, state: absent }
   - { group: book, state: absent }
-  - { group: text }
+  - { group: text-processing }
   - { group: json }
   - { group: spreadsheet, state: absent }
   - { group: openapi, state: absent }
-  - { group: doc }
   - { group: hash, state: absent }
   - { group: dict }
   - { group: clipboard }
   - { group: note }
   - { group: ime }
-  - { group: markdown }
+  - { group: markdown, state: absent }
   - { group: tex, state: absent }
+  - { group: text-viewer, state: absent }
   - { group: text-editor }
   - { group: pdf-cli, state: absent }
   - { group: pdf-viewer }
@@ -189,4 +192,5 @@ items:
   - { group: font, state: absent }
   - { group: read-it-later, state: absent }
   - { group: office, state: absent }
+  - { group: office-cli }
   - { group: rss, state: absent }

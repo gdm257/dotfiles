@@ -1,10 +1,10 @@
 groups:
-  dsektop:
+  desktop:
   - { kind: dsh-plugin, profile: desktop, name: dshmarket }
   - { kind: dsh-plugin, profile: desktop, name: dsh-notify-me }
   - { kind: dsh-plugin, profile: desktop, name: @dingyi222666/dsh-wakatime }
-  - { kind: dsh-plugin, profile: desktop, name: dsh-git-worktree, state: absent, alternative: dsh-worktree-space }
-  - { kind: dsh-plugin, profile: desktop, name: dsh-worktree-space, state: absent, alternative: @deepseek-ai/dsh-experimental-forge-bundle }
+  - { kind: dsh-plugin, profile: desktop, name: dsh-git-worktree, state: absent, alternatives: [dsh-worktree-space] }
+  - { kind: dsh-plugin, profile: desktop, name: dsh-worktree-space, state: absent, alternatives: ['@deepseek-ai/dsh-experimental-forge-bundle'] }
 
   acp:
   - { kind: dsh-plugin, profile: acp, name: @dingyi222666/dsh-wakatime }

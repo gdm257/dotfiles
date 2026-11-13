@@ -41,6 +41,8 @@ groups:
   # - { kind: scoop-app, name: hurl }
   - { kind: scoop-app, name: xh}
   # - { kind: scoop-app, name: curlie }
+  # - { kind: scoop-app, name: curl, alternatives: [windows-curl] }
+  - { kind: scoop-app, name: wget }
 
   dns:
   # - { kind: scoop-app, name: ddns-go}
@@ -71,7 +73,7 @@ groups:
   # - { kind: scoop-app, name: pywxdump}
   # - { kind: scoop-app, name: memotrace}
   # - { kind: scoop-app, name: WeChatMsg}
-  - { kind: scoop-app, name: element }
+  - { kind: scoop-app, name: element, state: absent }
   # - { kind: scoop-app, name: gomuks}
   # - { kind: scoop-app, name: pidgin}
 
@@ -118,7 +120,6 @@ groups:
   # - { kind: scoop-app, name: mitmproxy}
   # - { kind: scoop-app, name: trafficmonitor}
   - { kind: scoop-app, name: tproxy }
-  - { kind: scoop-app, name: winnfsd }
 
   ping:
   - { kind: scoop-app, name: gping }
@@ -135,7 +136,7 @@ groups:
   # - { kind: scoop-app, name: simple-obfs}
   # - { kind: scoop-app, name: proxychains}
   # - { kind: scoop-app, name: gdm257/ghost-proxifier}
-  - { kind: scoop-app, name: gdm257/ghost-proxifier-257 }
+  # - { kind: scoop-app, name: gdm257/ghost-proxifier-257, alternatives: [clash-party] }
   # - { kind: scoop-app, name: clash}
   # - { kind: scoop-app, name: mihomo}
   # - { kind: scoop-app, name: clashtui}
@@ -181,14 +182,14 @@ groups:
   # - { kind: scoop-app, name: rustdesk}
   # - { kind: scoop-app, name: parsec}
   # - { kind: scoop-app, name: scrcpy}
-  # - { kind: scoop-app, name: qtscrcpy}
-  - { kind: scoop-app, name: escrcpy }
+  # - { kind: scoop-app, name: qtscrcpy, alternatives: [escrcpy] }
+  # - { kind: scoop-app, name: escrcpy }
   # - { kind: scoop-app, name: deskreen}
   # - { kind: scoop-app, name: wakemeonlan}
 
   reverse-proxy:
   - { kind: scoop-app, name: traefik }
-  - { kind: scoop-app, name: gdm257/zoraxy }
+  # - { kind: scoop-app, name: gdm257/zoraxy }
   - { kind: scoop-app, name: gdm257/whoami }
   # - { kind: scoop-app, name: lego}
   # - { kind: scoop-app, name: apache}
@@ -237,7 +238,7 @@ groups:
 items:
   - { group: browser }
   - { group: curl }
-  - { group: dns }
+  - { group: dns, state: absent }
   - { group: im }
   - { group: remote }
   - { group: proxy }

@@ -78,8 +78,6 @@ groups:
   - { kind: scoop-app, name: digikam }
 
   video-player:
-  - { kind: scoop-app, name: mediainfo }
-  - { kind: scoop-app, name: mediainfo-gui }
   # - { kind: scoop-app, name: streamlink}
   - { kind: scoop-app, name: mpv-handler }
   - { kind: scoop-app, name: mpv.net-dw }
@@ -96,6 +94,8 @@ groups:
   # - { kind: scoop-app, name: mpc-be}
 
   video-processor:
+  - { kind: scoop-app, name: mediainfo }
+  - { kind: scoop-app, name: mediainfo-gui }
   # - { kind: scoop-app, name: vidbatch}
   # - { kind: scoop-app, name: megui-fixed@2896}
   # - { kind: scoop-app, name: megui}
