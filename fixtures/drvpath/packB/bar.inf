@@ -1,0 +1,20 @@
+; Dummy driver fixture, not a real driver.
+[Version]
+Signature="$WINDOWS NT$"
+Class=Display
+ClassGuid={4D36E968-E325-11CE-BFC1-08002BE10318}
+Provider=Fixture
+DriverVer=01/01/2026,2.0.0.0
+CatalogFile=bar.cat
+
+[Manufacturer]
+%Bar%=Bar,NT$ARCH$
+
+[Bar]
+BarDevice=Bar_Install,ROOT\FIXTURE\0001
+
+[Bar_Install]
+CopyFiles=@bar.sys
+
+[Strings]
+Bar="Fixture Display Device"

@@ -1,0 +1,20 @@
+; Dummy driver fixture, not a real driver.
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=Fixture
+DriverVer=01/01/2026,1.0.0.0
+CatalogFile=foo.cat
+
+[Manufacturer]
+%Foo%=Foo,NT$ARCH$
+
+[Foo]
+FooDevice=Foo_Install,ROOT\FIXTURE\0000
+
+[Foo_Install]
+CopyFiles=@foo.sys
+
+[Strings]
+Foo="Fixture Device"
