@@ -40,6 +40,9 @@ groups:
   # - { kind: scoop-app, name: osquery}
   - { kind: scoop-app, name: fastfetch }
 
+  oobe:
+  - { kind: scoop-app, name: flyoobe }
+
   registry:
   # - { kind: scoop-app, name: registry-explorer}
   - { kind: scoop-app, name: registry-finder }
