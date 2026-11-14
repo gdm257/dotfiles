@@ -6,8 +6,8 @@
 	longpaths = true
 	quotepath = false
 	symlinks = true
-	safecrlf = false
-	autocrlf = false
+	safecrlf = warn
+	autocrlf = input
 	eol = lf
 	editor = vim
 	paper = delta
