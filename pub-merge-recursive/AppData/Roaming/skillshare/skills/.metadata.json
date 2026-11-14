@@ -53,6 +53,19 @@
         "SKILL.md": "sha256:fffbaac8597f07679e9d87145533567658aedba3b5eca6f16a7075a333048caa"
       }
     },
+    "claude-repath": {
+      "source": "https://github.com/peipei-labs/claude-repath.git/skills/claude-repath",
+      "type": "github-subdir",
+      "installed_at": "2026-11-14T20:54:21.6549525+08:00",
+      "repo_url": "https://github.com/peipei-labs/claude-repath.git",
+      "subdir": "skills/claude-repath",
+      "version": "2978eb5",
+      "tree_hash": "0e3be096377bd0a9e967cc47f23b2560abb67d3e",
+      "commit": "2978eb5ece307acd78da6cdee2b609f42d166654",
+      "file_hashes": {
+        "SKILL.md": "sha256:39f3816d03758199082d2a78a453bc4002c01a53b960e3dc44d50fe71c5cd780"
+      }
+    },
     "code-review": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/code-review",
       "type": "github-subdir",
