@@ -19,38 +19,47 @@ includes:
   manifest:
     taskfile: "./taskfile.d/manifest.yaml"
     optional: false
+    internal: true
 
 tasks:
   default:
+    desc: "list all tasks"
     silent: true
     cmds:
-      - cmd: task --list-all
+      - cmd: task --list
 
   dotbot:age:
+    desc: "run dotbot with age config"
     cmds:
       - dotbot -v -d . -c ./dotbot-configs/age.yaml
 
   dotbot:libs:
+    desc: "run dotbot with once.lib config"
     cmds:
       - dotbot -v -d . -c ./dotbot-configs/once.lib.yaml
 
   dotbot:links:
+    desc: "run dotbot with links config"
     cmds:
       - dotbot -v -d . -c ./dotbot-configs/links.yaml
 
   dotbot:registry:
+    desc: "run dotbot with registry config"
     cmds:
       - dotbot -v -d . -c ./dotbot-configs/registry.yaml
 
   dotbot:scoop:
+    desc: "run dotbot with scoop config"
     cmds:
       - dotbot -v -d . -c ./dotbot-configs/scoop.yaml
 
   dotbot:test-plugins:
+    desc: "run dotbot with test-plugins config"
     cmds:
       - dotbot -v -d . -c ./dotbot-configs/test-plugins.yaml
 
   manifests:ansible-collection:install:
+    desc: "install ansible collections"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -59,6 +68,7 @@ tasks:
           MANIFEST: "./manifests/ansible-collection.yaml"
 
   manifests:ansible-role:install:
+    desc: "install ansible roles"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -67,6 +77,7 @@ tasks:
           MANIFEST: "./manifests/ansible-role.yaml"
 
   manifests:app:audio:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -75,6 +86,7 @@ tasks:
           MANIFEST: "./manifests/app-audio.yaml"
 
   manifests:app:devops:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -83,6 +95,7 @@ tasks:
           MANIFEST: "./manifests/app-devops.yaml"
 
   manifests:app:downloader:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -91,6 +104,7 @@ tasks:
           MANIFEST: "./manifests/app-downloader.yaml"
 
   manifests:app:file:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -99,6 +113,7 @@ tasks:
           MANIFEST: "./manifests/app-file.yaml"
 
   manifests:app:kernel:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -107,6 +122,7 @@ tasks:
           MANIFEST: "./manifests/app-kernel.yaml"
 
   manifests:app:layer:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -115,6 +131,7 @@ tasks:
           MANIFEST: "./manifests/app-layer.yaml"
 
   manifests:app:network:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -123,6 +140,7 @@ tasks:
           MANIFEST: "./manifests/app-network.yaml"
 
   manifests:app:np:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -131,6 +149,7 @@ tasks:
           MANIFEST: "./manifests/app-np.yaml"
 
   manifests:app:picture:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -139,6 +158,7 @@ tasks:
           MANIFEST: "./manifests/app-picture.yaml"
 
   manifests:app:process:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -147,6 +167,7 @@ tasks:
           MANIFEST: "./manifests/app-process.yaml"
 
   manifests:app:shell:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -155,6 +176,7 @@ tasks:
           MANIFEST: "./manifests/app-shell.yaml"
 
   manifests:app:text:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -163,6 +185,7 @@ tasks:
           MANIFEST: "./manifests/app-text.yaml"
 
   manifests:app:toolbox:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -171,6 +194,7 @@ tasks:
           MANIFEST: "./manifests/app-toolbox.yaml"
 
   manifests:app:video:install:
+    desc: "install scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -179,6 +203,7 @@ tasks:
           MANIFEST: "./manifests/app-video.yaml"
 
   manifests:app:audio:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -187,6 +212,7 @@ tasks:
           MANIFEST: "./manifests/app-audio.yaml"
 
   manifests:app:devops:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -195,6 +221,7 @@ tasks:
           MANIFEST: "./manifests/app-devops.yaml"
 
   manifests:app:downloader:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -203,6 +230,7 @@ tasks:
           MANIFEST: "./manifests/app-downloader.yaml"
 
   manifests:app:file:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -211,6 +239,7 @@ tasks:
           MANIFEST: "./manifests/app-file.yaml"
 
   manifests:app:kernel:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -219,6 +248,7 @@ tasks:
           MANIFEST: "./manifests/app-kernel.yaml"
 
   manifests:app:layer:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -227,6 +257,7 @@ tasks:
           MANIFEST: "./manifests/app-layer.yaml"
 
   manifests:app:network:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -235,6 +266,7 @@ tasks:
           MANIFEST: "./manifests/app-network.yaml"
 
   manifests:app:np:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -243,6 +275,7 @@ tasks:
           MANIFEST: "./manifests/app-np.yaml"
 
   manifests:app:picture:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -251,6 +284,7 @@ tasks:
           MANIFEST: "./manifests/app-picture.yaml"
 
   manifests:app:process:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -259,6 +293,7 @@ tasks:
           MANIFEST: "./manifests/app-process.yaml"
 
   manifests:app:shell:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -267,6 +302,7 @@ tasks:
           MANIFEST: "./manifests/app-shell.yaml"
 
   manifests:app:text:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -275,6 +311,7 @@ tasks:
           MANIFEST: "./manifests/app-text.yaml"
 
   manifests:app:toolbox:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -283,6 +320,7 @@ tasks:
           MANIFEST: "./manifests/app-toolbox.yaml"
 
   manifests:app:video:uninstall:
+    desc: "uninstall scoop apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -291,6 +329,7 @@ tasks:
           MANIFEST: "./manifests/app-video.yaml"
 
   manifests:apt:install:
+    desc: "install apt packages"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -298,6 +337,7 @@ tasks:
           MANIFEST: "./manifests/apt.yaml"
 
   manifests:astro:add:
+    desc: "add astro integrations"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -305,6 +345,7 @@ tasks:
           MANIFEST: "./manifests/astro.yaml"
 
   manifests:bin-linux:install:
+    desc: "install bin apps"
     platforms: [linux]
     cmds:
       - task: manifest:dispatch
@@ -313,6 +354,7 @@ tasks:
           MANIFEST: "./manifests/bin-linux.yaml"
 
   manifests:bin:install:
+    desc: "install bin apps"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -320,6 +362,7 @@ tasks:
           MANIFEST: "./manifests/bin.yaml"
 
   manifests:brew-app:devops:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -328,6 +371,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-devops.yaml"
 
   manifests:brew-app:downloader:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -336,6 +380,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-downloader.yaml"
 
   manifests:brew-app:file:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -344,6 +389,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-file.yaml"
 
   manifests:brew-app:kernel:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -352,6 +398,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-kernel.yaml"
 
   manifests:brew-app:layer:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -360,6 +407,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-layer.yaml"
 
   manifests:brew-app:network:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -368,6 +416,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-network.yaml"
 
   manifests:brew-app:process:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -376,6 +425,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-process.yaml"
 
   manifests:brew-app:shell:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -384,6 +434,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-shell.yaml"
 
   manifests:brew-app:text:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -392,6 +443,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-text.yaml"
 
   manifests:brew-app:toolbox:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -400,6 +452,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-toolbox.yaml"
 
   manifests:brew-app:video:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -408,6 +461,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-video.yaml"
 
   manifests:brew-app:vps:install:
+    desc: "install brew apps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -416,6 +470,7 @@ tasks:
           MANIFEST: "./manifests/brew-app-vps.yaml"
 
   manifests:brew-tap:install:
+    desc: "add brew taps"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -424,6 +479,7 @@ tasks:
           MANIFEST: "./manifests/brew-tap.yaml"
 
   manifests:cargo-unix:install:
+    desc: "install cargo crates"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -432,6 +488,7 @@ tasks:
           MANIFEST: "./manifests/cargo-unix.yaml"
 
   manifests:cargo:install:
+    desc: "install cargo crates"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -439,6 +496,7 @@ tasks:
           MANIFEST: "./manifests/cargo.yaml"
 
   manifests:choco:install:
+    desc: "install chocolatey packages"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -447,6 +505,7 @@ tasks:
           MANIFEST: "./manifests/choco.yaml"
 
   manifests:claude:add:
+    desc: "add claude marketplaces"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -455,6 +514,7 @@ tasks:
           MANIFEST: "./manifests/claude.yaml"
 
   manifests:codex:add:
+    desc: "add codex marketplaces"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -463,6 +523,7 @@ tasks:
           MANIFEST: "./manifests/codex.yaml"
 
   manifests:conda-create:create:
+    desc: "create conda environments"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -470,6 +531,7 @@ tasks:
           MANIFEST: "./manifests/conda-create.yaml"
 
   manifests:debug:run:
+    desc: "run debug shell commands"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -477,6 +539,7 @@ tasks:
           MANIFEST: "./manifests/debug.yaml"
 
   manifests:dotnet-source:add:
+    desc: "add dotnet nuget sources"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -484,6 +547,7 @@ tasks:
           MANIFEST: "./manifests/dotnet-source.yaml"
 
   manifests:dotnet-tool:install:
+    desc: "install dotnet tools"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -491,6 +555,7 @@ tasks:
           MANIFEST: "./manifests/dotnet-tool.yaml"
 
   manifests:dsh:add:
+    desc: "add dsh plugins"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -498,6 +563,7 @@ tasks:
           MANIFEST: "./manifests/dsh.yaml"
 
   manifests:go:install:
+    desc: "install go packages"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -505,6 +571,7 @@ tasks:
           MANIFEST: "./manifests/go.yaml"
 
   manifests:k8s-helm-repo:add:
+    desc: "add helm repos"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -512,6 +579,7 @@ tasks:
           MANIFEST: "./manifests/k8s-helm-repo.yaml"
 
   manifests:k8s-krew-unix:install:
+    desc: "install krew plugins"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -520,6 +588,7 @@ tasks:
           MANIFEST: "./manifests/k8s-krew-unix.yaml"
 
   manifests:k8s-krew:install:
+    desc: "install krew plugins"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -527,6 +596,7 @@ tasks:
           MANIFEST: "./manifests/k8s-krew.yaml"
 
   manifests:npm:install:
+    desc: "install npm packages"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -534,6 +604,7 @@ tasks:
           MANIFEST: "./manifests/npm.yaml"
 
   manifests:omp:install:
+    desc: "install omp plugins and marketplaces"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -541,6 +612,7 @@ tasks:
           MANIFEST: "./manifests/omp.yaml"
 
   manifests:pi:install:
+    desc: "install pi packages"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -548,6 +620,7 @@ tasks:
           MANIFEST: "./manifests/pi.yaml"
 
   manifests:pipx-unix:install:
+    desc: "install pipx packages"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -556,6 +629,7 @@ tasks:
           MANIFEST: "./manifests/pipx-unix.yaml"
 
   manifests:pipx:install:
+    desc: "install pipx packages"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -563,6 +637,7 @@ tasks:
           MANIFEST: "./manifests/pipx.yaml"
 
   manifests:playnite:start:
+    desc: "install playnite addons via uris"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -571,6 +646,7 @@ tasks:
           MANIFEST: "./manifests/playnite.yaml"
 
   manifests:rclone:copy:
+    desc: "copy files via rclone"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -578,6 +654,7 @@ tasks:
           MANIFEST: "./manifests/rclone.yaml"
 
   manifests:rye:fetch:
+    desc: "fetch rye toolchains"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -585,6 +662,7 @@ tasks:
           MANIFEST: "./manifests/rye.yaml"
 
   manifests:scoop-bucket:install:
+    desc: "add scoop buckets"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -593,6 +671,7 @@ tasks:
           MANIFEST: "./manifests/scoop-bucket.yaml"
 
   manifests:scoop-config:install:
+    desc: "set scoop config values"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -601,6 +680,7 @@ tasks:
           MANIFEST: "./manifests/scoop-config.yaml"
 
   manifests:skills:install:
+    desc: "install skills from openskills repos"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -608,6 +688,7 @@ tasks:
           MANIFEST: "./manifests/skills.yaml"
 
   manifests:stack:install:
+    desc: "install stack packages"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -615,6 +696,7 @@ tasks:
           MANIFEST: "./manifests/stack.yaml"
 
   manifests:vfox-globalize:use:
+    desc: "use vfox sdks globally"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -622,6 +704,7 @@ tasks:
           MANIFEST: "./manifests/vfox-globalize.yaml"
 
   manifests:vfox-plugin:add:
+    desc: "add vfox plugins"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -629,6 +712,7 @@ tasks:
           MANIFEST: "./manifests/vfox-plugin.yaml"
 
   manifests:vfox-sdk:install:
+    desc: "install vfox sdks"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -636,6 +720,7 @@ tasks:
           MANIFEST: "./manifests/vfox-sdk.yaml"
 
   manifests:volta-unix:install:
+    desc: "install volta tools"
     platforms: [linux, darwin]
     cmds:
       - task: manifest:dispatch
@@ -644,6 +729,7 @@ tasks:
           MANIFEST: "./manifests/volta-unix.yaml"
 
   manifests:volta:install:
+    desc: "install volta tools"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -651,6 +737,7 @@ tasks:
           MANIFEST: "./manifests/volta.yaml"
 
   manifests:vs:modify:
+    desc: "modify visual studio workloads"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -659,6 +746,7 @@ tasks:
           MANIFEST: "./manifests/vs.yaml"
 
   manifests:w2:install:
+    desc: "install w2 plugins"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -666,6 +754,7 @@ tasks:
           MANIFEST: "./manifests/w2.yaml"
 
   manifests:windows-features:set:
+    desc: "set windows features via dism"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -674,6 +763,7 @@ tasks:
           MANIFEST: "./manifests/windows-features.yaml"
 
   manifests:winget:install:
+    desc: "install winget apps"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -682,6 +772,7 @@ tasks:
           MANIFEST: "./manifests/winget.yaml"
 
   manifests:wsl:install:
+    desc: "install wsl distros"
     platforms: [windows]
     cmds:
       - task: manifest:dispatch
@@ -690,6 +781,7 @@ tasks:
           MANIFEST: "./manifests/wsl.yaml"
 
   manifests:x-cmd:install:
+    desc: "install x-cmd packages"
     cmds:
       - task: manifest:dispatch
         vars:
@@ -697,6 +789,7 @@ tasks:
           MANIFEST: "./manifests/x-cmd.yaml"
 
   manifests:yum:install:
+    desc: "install yum package groups"
     platforms: [linux]
     cmds:
       - task: manifest:dispatch
