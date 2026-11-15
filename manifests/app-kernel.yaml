@@ -41,7 +41,7 @@ groups:
   - { kind: scoop-app, name: fastfetch }
 
   oobe:
-  - { kind: scoop-app, name: flyoobe }
+  - { kind: scoop-app, name: gdm257/flyoobe }
 
   registry:
   # - { kind: scoop-app, name: registry-explorer}
