@@ -28,7 +28,7 @@ auto-track = '''
 '''
 
 [working-copy]
-eol-conversion = "none" # none, input, input-output (Similar to core.autocrlf)
+eol-conversion = "input" # none, input, input-output (Similar to core.autocrlf)
 
 [remotes."origin"]
 auto-track-bookmarks = "glob:*"
