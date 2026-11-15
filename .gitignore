@@ -27,6 +27,10 @@
 /apps/scoop/persist/windinput/userdata/meta.toml
 *.redb
 *.redb.*
+!/apps/scoop/persist/windows-terminal
+/apps/scoop/persist/windows-terminal/settings/state.json
+/apps/scoop/persist/windows-terminal/settings/elevated-state.json
+/apps/scoop/persist/windows-terminal/settings/*.backup
 !/apps/scoop/persist/winswctl
 /apps/scoop/persist/winswctl/shims/*.log
 /apps/scoop/persist/winswctl/shims/*.exe
