@@ -31,6 +31,8 @@
 /apps/scoop/persist/windows-terminal/settings/state.json
 /apps/scoop/persist/windows-terminal/settings/elevated-state.json
 /apps/scoop/persist/windows-terminal/settings/*.backup
+!/apps/scoop/persist/winrar
+/apps/scoop/persist/winrar/WinRar.ini
 !/apps/scoop/persist/winswctl
 /apps/scoop/persist/winswctl/shims/*.log
 /apps/scoop/persist/winswctl/shims/*.exe
