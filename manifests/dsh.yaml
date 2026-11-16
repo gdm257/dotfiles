@@ -11,19 +11,22 @@ groups:
   - { kind: dsh-plugin, profile: desktop, name: dsh-git-worktree, state: absent, alternatives: [dsh-worktree-space] }
   - { kind: dsh-plugin, profile: desktop, name: dsh-worktree-space, state: absent, alternatives: [@deepseek-ai/dsh-experimental-forge-bundle] }
   - { kind: dsh-plugin, profile: desktop, name: @norman-else/dsh-claude, state: absent, alternatives: [codeg] }
+  - { kind: dsh-plugin, profile: desktop, name: 'https://github.com/gdm257/cc-plugins.git#path:plugins/dsh-browser-use-browser-harness-bundle' }
 
   acp:
   - { kind: dsh-plugin, profile: acp, name: @dingyi222666/dsh-wakatime }
   - { kind: dsh-plugin, profile: acp, name: 'https://github.com/gdm257/cc-plugins.git#path:plugins/dsh-cc-prompt' }
   - { kind: dsh-plugin, profile: acp, name: dsh-cc-ecosystem }
+  - { kind: dsh-plugin, profile: desktop, name: 'https://github.com/gdm257/cc-plugins.git#path:plugins/dsh-browser-use-browser-harness-bundle' }
 
   acp-enhanced:
   - { kind: dsh-plugin, profile: acp-enhanced, name: @dingyi222666/dsh-wakatime }
   - { kind: dsh-plugin, profile: acp-enhanced, name: dsh-acp-enhanced }
   - { kind: dsh-plugin, profile: acp-enhanced, name: 'https://github.com/gdm257/cc-plugins.git#path:plugins/dsh-cc-prompt' }
   - { kind: dsh-plugin, profile: acp-enhanced, name: dsh-cc-ecosystem }
+  - { kind: dsh-plugin, profile: desktop, name: 'https://github.com/gdm257/cc-plugins.git#path:plugins/dsh-browser-use-browser-harness-bundle' }
 
 items:
   - { group: acp }
-  - { group: acp-enhanced }
+  - { group: acp-enhanced, state: absent }
   - { group: desktop, state: absent } # install in the GUI
