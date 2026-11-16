@@ -5,4 +5,9 @@ items:
   - { kind: sym-link, src: "pub-merge-recursive/AppData/Roaming/*", dst: "~/AppData/Roaming/" }
   - { kind: sym-link, src: "pub-merge-recursive/AppData/Local/*", dst: "~/AppData/Local/" }
   - { kind: sym-link, src: "pub-merge-recursive/AppData/LocalLow/*", dst: "~/AppData/LocalLow/" }
+  - { kind: sym-link, src: "libraries/Documents/*", dst: "~/Documents/" }
+  - { kind: sym-link, src: "libraries/Music/*", dst: "~/Music/" }
+  - { kind: sym-link, src: "libraries/Pictures/*", dst: "~/Pictures/" }
+  - { kind: sym-link, src: "libraries/Saved Games/*", dst: "~/Saved Games/" }
+  - { kind: sym-link, src: "libraries/Videos/*", dst: "~/Videos/" }
   - { kind: sym-link, src: "libraries/Documents/PowerShell/ConsoleHost_history.txt", dst: "~/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt" }
