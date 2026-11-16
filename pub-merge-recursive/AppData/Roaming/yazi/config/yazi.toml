@@ -10,13 +10,14 @@ ratio = [1, 3, 3]
 
 [open]
 prepend_rules = [
-	{ url = "*.md", use = ["md", "edit"] },
+	# { url = "*.md", use = ["md", "edit"] },
 ]
 
 [opener]
 md = [
   # ==== Windows ====
-  { run = 'inknote %s1', orphan = true, desc = "inknote", for = "windows" },
+  { run = 'open-markdown-lane %s1', orphan = true, desc = "open-markdown-lane", for = "windows" },
+  # { run = 'inknote %s1', orphan = true, desc = "inknote", for = "windows" },
   # { run = 'md-preview %s1', orphan = true, desc = "md-preview", for = "windows" },
   # { run = 'marktext %s1', orphan = true, desc = "marktext", for = "windows" },
 ]
