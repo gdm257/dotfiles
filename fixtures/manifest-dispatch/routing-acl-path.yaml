@@ -1,0 +1,4 @@
+# acl-path item 按 CALLS 声明路由，混合 echo kind 互不影响
+items:
+  - {kind: echo, name: plain}
+  - {kind: acl-path, path: .scratch, grants: ["S-1-5-32-545:(OI)(CI)RX"]}

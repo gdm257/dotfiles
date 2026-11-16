@@ -6,7 +6,7 @@ output=''
 code=0
 capture() {
   code=0
-  output=$(task --silent manifest:dispatch "MANIFEST=fixtures/manifest-dispatch/$1.yaml" "CALLS=${3:-echo=echo:replay}" "CONTINUE_ON_ERROR=${2:-true}" 2>&1) || code=$?
+  output=$(task --silent --taskfile taskfile.d/manifest.yaml --dir . dispatch "MANIFEST=fixtures/manifest-dispatch/$1.yaml" "CALLS=${3:-echo=echo:replay}" "CONTINUE_ON_ERROR=${2:-true}" 2>&1) || code=$?
 }
 check() {
   if ! "$@"; then
@@ -145,6 +145,12 @@ check test "${output#*item=orphan }" = "$output"
 check test "${output#*'manifest:dispatch: failed items:'}" != "$output"
 check test "${output#*"item #2 unclaimed kind qu'ote in fixtures/manifest-dispatch/routing-unclaimed-quote.yaml"}" != "$output"
 
+capture routing-acl-path false 'acl-path=echo:replay, echo=echo:replay'
+check test "$code" = 0
+expected='item= kind=acl-path flag=false json={"grants":["S-1-5-32-545:(OI)(CI)RX"],"kind":"acl-path","path":".scratch"}
+item=plain kind=echo flag=false json={"kind":"echo","name":"plain"}'
+check test "$output" = "$expected"
+
 capture routing-duplicate false 'echo=echo:replay, echo=echo:replay'
 check test "$code" = 0
 check test "${output#*item=dup-1 }" != "$output"
@@ -161,9 +167,9 @@ check test "$lines" = 4
 
 capture bool-fidelity false 'echo=no-such-task'
 case $code in 200|201) ;; *) check test "$code" = '200|201' ;; esac
-check test "${output#*'manifest:no-such-task'}" != "$output"
+check test "${output#*Task \"no-such-task\" does not exist}" != "$output"
 code=0
-output=$(task --silent manifest:echo:replay 'ITEM_JSON={"kind":"echo","name":"x"}' 2>&1) || code=$?
+output=$(task --silent --taskfile taskfile.d/manifest.yaml --dir . echo:replay 'ITEM_JSON={"kind":"echo","name":"x"}' 2>&1) || code=$?
 check test "$code" = 202
 check test "${output#*'is internal'}" != "$output"
 
@@ -171,4 +177,4 @@ if [ "$failures" != 0 ]; then
   printf 'FAIL: %s dispatch assertions\n' "$failures" >&2
   exit 1
 fi
-printf 'PASS: 29 dispatch CLI scenarios including all fixtures, state and neutral field propagation, group precedence/isolation, locations and empty arch\n'
+printf 'PASS: 30 dispatch CLI scenarios including all fixtures, state and neutral field propagation, group precedence/isolation, acl-path routing, locations and empty arch\n'

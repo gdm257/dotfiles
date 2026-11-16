@@ -1,0 +1,10 @@
+GLOSSARY.md
+docs/adr/0001-manifest-engine-zero-dependency.md
+docs/adr/0002-manifest-resource-model.md
+docs/adr/0003-multi-receiver-dispatch.md
+openspec/specs/manifest-v2-schema/spec.md
+openspec/specs/manifest-v2-dispatch/spec.md
+openspec/specs/manifest-item-state/spec.md
+taskfile.d/receivers.yaml
+taskfile.d/manifest.yaml
+fixtures/manifest-dispatch/check-receivers.sh
