@@ -3,6 +3,7 @@ groups:
   - { kind: dsh-plugin, profile: desktop, name: dshmarket }
   - { kind: dsh-plugin, profile: desktop, name: dsh-notify-me }
   - { kind: dsh-plugin, profile: desktop, name: @jiyr0119/dsh-workspace-explorer }
+  - { kind: dsh-plugin, profile: desktop, name: dsh-better-sidebar }
   - { kind: dsh-plugin, profile: desktop, name: @xmanrui/dsh-im }
   - { kind: dsh-plugin, profile: desktop, name: @dingyi222666/dsh-wakatime }
   - { kind: dsh-plugin, profile: desktop, name: 'https://github.com/gdm257/cc-plugins.git#path:plugins/dsh-cc-prompt' }
