@@ -641,6 +641,15 @@ tasks:
           CALLS: "pipx-package=pipx:install"
           MANIFEST: "./manifests/pipx.yaml"
 
+  manifests:lockdown:apply:
+    desc: "lock down rogue-software directories"
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "acl-lock=acl:lock"
+          MANIFEST: "./manifests/lockdown.yaml"
+
   manifests:permissions:apply:
     desc: "apply acl-path grants"
     platforms: [windows]

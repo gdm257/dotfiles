@@ -143,6 +143,37 @@ check read -r logged < "$faillog"
 check test "${logged#failed: }" != "$logged"
 printf 'PASS: acl:apply missing path with continue_on_error logs FAIL_LOG and continues\n'
 
+capture --dry manifest:acl:lock 'ITEM_JSON={"kind":"acl-lock","path":"fixture dir"}'
+check test "$code" = 0
+check test "${output#*'if ! net session'}" != "$output"
+check test "${output#*'acl:lock: administrator required, rerun from an elevated terminal'}" != "$output"
+check test "${output#*'acl:lock: path not found: fixture dir'}" != "$output"
+check test "${output#*powershell -NoProfile -Command}" != "$output"
+check test "${output#*'$p="fixture dir"'}" != "$output"
+check test "${output#*'$acl.SetAccessRuleProtection($true, $false)'}" != "$output"
+check test "${output#*'$acl.RemoveAccessRule($_)'}" != "$output"
+check test "${output#*'@("S-1-5-18","S-1-5-32-544")'}" != "$output"
+check test "${output#*ReadAndExecute}" != "$output"
+check test "${output#*ContainerInherit,ObjectInherit}" != "$output"
+check test "${output#*'$acl.SetOwner'}" != "$output"
+check test "${output#*'Set-Acl -LiteralPath $p -AclObject $acl'}" != "$output"
+check test "${output#*'$converged=$false'}" != "$output"
+check test "${output#*'AreAccessRulesProtected'}" != "$output"
+printf 'PASS: acl:lock assembles fixed lockdown recipe with guards and converge skip\n'
+
+capture --dry manifest:acl:lock 'ITEM_JSON={"kind":"acl-path","path":"fixture dir"}'
+check test "$code" != 0
+check test "${output#*'acl:lock: unknown kind acl-path'}" != "$output"
+printf 'PASS: acl:lock self-validates kind\n'
+
+faillog="${TMPDIR:-${TEMP:-/tmp}}/acl-lock-receiver-faillog"
+rm -f "$faillog"
+capture manifest:acl:lock 'ITEM_JSON={"kind":"acl-lock","path":"fixture-dir-missing","continue_on_error":true}' "FAIL_LOG=$faillog"
+check test "$code" = 0
+check read -r logged < "$faillog"
+check test "${logged#failed: }" != "$logged"
+printf 'PASS: acl:lock missing path with continue_on_error logs FAIL_LOG and continues\n'
+
 capture --dry manifest:link:apply 'ITEM_JSON={"kind":"sym-link","src":"apps/*","dst":"~/AppData/Roaming/"}'
 check test "$code" = 0
 check test "${output#*pwsh -NoProfile -Command}" != "$output"
@@ -186,13 +217,14 @@ check test "$code" != 0
 check test "${output#*Get-ChildItem}" != "$output"
 printf 'PASS: link:apply fails loudly on missing exact-path src\n'
 
-for receiver in windows-feature:set scoop:install winget:install apt:install yum:install choco:install acl:apply link:apply; do
-  case "${receiver%%:*}" in
-    windows-feature) item='"kind":"windows-feature","feature":"fixture"' ;;
-    acl) item='"kind":"acl-path","path":"fixture-dir"' ;;
-    link) item='"kind":"sym-link","src":"fixture/*"' ;;
-    scoop) item='"kind":"scoop-app","name":"fixture"' ;;
-    winget) item='"kind":"winget-app","id":"fixture"' ;;
+for receiver in windows-feature:set scoop:install winget:install apt:install yum:install choco:install acl:apply acl:lock link:apply; do
+  case "$receiver" in
+    windows-feature:set) item='"kind":"windows-feature","feature":"fixture"' ;;
+    acl:apply) item='"kind":"acl-path","path":"fixture-dir"' ;;
+    acl:lock) item='"kind":"acl-lock","path":"fixture-dir"' ;;
+    link:apply) item='"kind":"sym-link","src":"fixture/*"' ;;
+    scoop:install) item='"kind":"scoop-app","name":"fixture"' ;;
+    winget:install) item='"kind":"winget-app","id":"fixture"' ;;
     *) item="\"kind\":\"$receiver-package\",\"name\":\"fixture\"" ;;
   esac
   capture --dry "manifest:$receiver" "ITEM_JSON={$item,\"continue_on_error\":false}" CONTINUE_ON_ERROR=true
