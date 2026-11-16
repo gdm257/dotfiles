@@ -18,6 +18,7 @@ dotenv:
 includes:
   manifest:
     taskfile: "./taskfile.d/manifest.yaml"
+    dir: "."
     optional: false
     internal: true
 
@@ -37,11 +38,6 @@ tasks:
     desc: "run dotbot with once.lib config"
     cmds:
       - dotbot -v -d . -c ./dotbot-configs/once.lib.yaml
-
-  dotbot:links:
-    desc: "run dotbot with links config"
-    cmds:
-      - dotbot -v -d . -c ./dotbot-configs/links.yaml
 
   dotbot:registry:
     desc: "run dotbot with registry config"
@@ -594,6 +590,15 @@ tasks:
         vars:
           CALLS: "k8s-krew=k8s-krew:install"
           MANIFEST: "./manifests/k8s-krew.yaml"
+
+  manifests:links:apply:
+    desc: "receive sym-link items (home layout symbolic links)"
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "sym-link=link:apply"
+          MANIFEST: "./manifests/links.yaml"
 
   manifests:npm:install:
     desc: "install npm packages"

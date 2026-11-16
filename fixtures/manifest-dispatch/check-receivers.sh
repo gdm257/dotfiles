@@ -143,10 +143,54 @@ check read -r logged < "$faillog"
 check test "${logged#failed: }" != "$logged"
 printf 'PASS: acl:apply missing path with continue_on_error logs FAIL_LOG and continues\n'
 
-for receiver in windows-feature:set scoop:install winget:install apt:install yum:install choco:install acl:apply; do
+capture --dry manifest:link:apply 'ITEM_JSON={"kind":"sym-link","src":"apps/*","dst":"~/AppData/Roaming/"}'
+check test "$code" = 0
+check test "${output#*pwsh -NoProfile -Command}" != "$output"
+check test "${output#*\$src=\"apps/*\"}" != "$output"
+check test "${output#*'Get-ChildItem -Path $src -Force'}" != "$output"
+check test "${output#*'ErrorActionPreference="Stop"'}" != "$output"
+check test "${output#*'New-Item -ItemType SymbolicLink -Path $t -Value $m.FullName'}" != "$output"
+check test "${output#*'Join-Path $dst $m.Name'}" != "$output"
+check test "${output#*'$dst.EndsWith("/")'}" != "$output"
+check test "${output#*'-replace "^~", $env:USERPROFILE'}" != "$output"
+check test "${output#*'link:apply: exists and is not a symbolic link: $t'}" != "$output"
+check test "${output#*'Remove-Item -LiteralPath $t -Force'}" != "$output"
+check test "${output#*'New-Item -ItemType Directory -Path $pp -Force'}" != "$output"
+check test "${output#*'link:apply: dst must be ~/-anchored'}" != "$output"
+check test "${output#*'[IO.Path]::GetFullPath($cur) -ieq [IO.Path]::GetFullPath($m.FullName)'}" != "$output"
+printf 'PASS: link:apply assembles dotglob symlink convergence\n'
+
+capture --dry manifest:link:apply 'ITEM_JSON={"kind":"sym-link","src":"dotfiles/*"}'
+check test "$code" = 0
+check test "${output#*\$src=\"dotfiles/*\"}" != "$output"
+check test "${output#*\$dst=\"~/\"}" != "$output"
+printf 'PASS: link:apply defaults dst to home directory\n'
+
+capture --dry manifest:link:apply 'ITEM_JSON={"kind":"scoop-app","name":"fixture"}'
+check test "$code" != 0
+check test "${output#*'link: unknown kind scoop-app'}" != "$output"
+printf 'PASS: link:apply self-validates kind\n'
+
+capture --dry manifest:link:apply 'ITEM_JSON={"kind":"sym-link","src":"x","state":"absent"}'
+check test "$code" != 0
+check test "${output#*'link:apply: unexpected state absent'}" != "$output"
+printf 'PASS: link:apply rejects absent state\n'
+
+capture manifest:link:apply 'ITEM_JSON={"kind":"sym-link","src":"fixtures/*.no-such-glob","dst":"~/no-such-dir/"}'
+check test "$code" = 0
+check test -z "$output"
+printf 'PASS: link:apply zero-match glob succeeds silently\n'
+
+capture manifest:link:apply 'ITEM_JSON={"kind":"sym-link","src":"fixtures/no-such-file","dst":"~/no-such-file"}'
+check test "$code" != 0
+check test "${output#*Get-ChildItem}" != "$output"
+printf 'PASS: link:apply fails loudly on missing exact-path src\n'
+
+for receiver in windows-feature:set scoop:install winget:install apt:install yum:install choco:install acl:apply link:apply; do
   case "${receiver%%:*}" in
     windows-feature) item='"kind":"windows-feature","feature":"fixture"' ;;
     acl) item='"kind":"acl-path","path":"fixture-dir"' ;;
+    link) item='"kind":"sym-link","src":"fixture/*"' ;;
     scoop) item='"kind":"scoop-app","name":"fixture"' ;;
     winget) item='"kind":"winget-app","id":"fixture"' ;;
     *) item="\"kind\":\"$receiver-package\",\"name\":\"fixture\"" ;;

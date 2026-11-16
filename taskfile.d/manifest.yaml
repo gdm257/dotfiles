@@ -4,6 +4,7 @@ includes:
   receivers:
     taskfile: "./receivers.yaml"
     flatten: true
+    dir: ".." # {{.ROOT_DIR}} resolves to taskfile.d in this nested include; .. is repo root in every context
 
 tasks:
   dispatch:

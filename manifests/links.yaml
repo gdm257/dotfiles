@@ -1,0 +1,8 @@
+items:
+  - { kind: sym-link, src: "apps/*", dst: "~/" }
+  - { kind: sym-link, src: "dotfiles/*", dst: "~/" }
+  - { kind: sym-link, src: "state/*", dst: "~/" }
+  - { kind: sym-link, src: "pub-merge-recursive/AppData/Roaming/*", dst: "~/AppData/Roaming/" }
+  - { kind: sym-link, src: "pub-merge-recursive/AppData/Local/*", dst: "~/AppData/Local/" }
+  - { kind: sym-link, src: "pub-merge-recursive/AppData/LocalLow/*", dst: "~/AppData/LocalLow/" }
+  - { kind: sym-link, src: "libraries/Documents/PowerShell/ConsoleHost_history.txt", dst: "~/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt" }

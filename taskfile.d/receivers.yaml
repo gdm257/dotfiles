@@ -253,6 +253,19 @@ tasks:
     cmds:
       - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
+  link:apply:
+    desc: "receive sym-link items (dotglob one-level expand, idempotent SymbolicLink converge with relink, parent create; zero-match glob skips)"
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "sym-link" }}{{ fail (printf "link: unknown kind %s" .ITEM.kind) }}{{ end }}{{ if and (hasKey .ITEM "state") (ne .ITEM.state "present") }}{{ fail (printf "link:apply: unexpected state %s" .ITEM.state) }}{{ end }}pwsh -NoProfile -Command ''$ErrorActionPreference="Stop"; $src="{{ .ITEM.src }}"; $dst="{{ .ITEM.dst | default "~/" }}"; if (-not $dst.StartsWith("~/")) { throw "link:apply: dst must be ~/-anchored: $dst" }; $dst = $dst -replace "^~", $env:USERPROFILE; foreach ($m in @(Get-ChildItem -Path $src -Force)) { $t = if ($dst.EndsWith("/")) { Join-Path $dst $m.Name } else { $dst }; $ex = Get-Item -LiteralPath $t -Force -ErrorAction SilentlyContinue; if ($ex -and $ex.LinkType -ne "SymbolicLink") { throw "link:apply: exists and is not a symbolic link: $t" }; if ($ex) { $cur = @($ex.Target)[0]; if ($cur -and [IO.Path]::GetFullPath($cur) -ieq [IO.Path]::GetFullPath($m.FullName)) { continue }; Remove-Item -LiteralPath $t -Force }; $pp = Split-Path $t -Parent; if (-not (Test-Path -LiteralPath $pp)) { New-Item -ItemType Directory -Path $pp -Force | Out-Null }; New-Item -ItemType SymbolicLink -Path $t -Value $m.FullName | Out-Null }'''
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
   npm:install:
     requires:
       vars: [ITEM_JSON]
