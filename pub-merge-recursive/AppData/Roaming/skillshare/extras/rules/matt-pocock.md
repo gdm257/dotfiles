@@ -23,3 +23,4 @@ name: matt-pocock-user
 - Use default triage lables if `docs/agents/triage-labels.md` does not exist.
 - `.scratch/<issue>/` 是草稿，只有当前会话正在进行的 issues、及其显式引用的 other issue (files) 才能参与决策。You MUST ignore 其余未提及的 issues。否则可能会给 codebase 引入错误的或过时的决策。
 - Multi-context MAY be in any descendant directory, which generally keeps same with monorepo like `src/<context>/` `packages/<context>/`.
+- When creating an OpenSpec change (/openspec-new-change or openspec new change), default to --schema matt-pocock; if the user explicitly names another schema, follow the user.
