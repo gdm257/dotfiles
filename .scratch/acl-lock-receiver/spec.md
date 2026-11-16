@@ -15,7 +15,7 @@ Status: implemented
 1. As a 重装系统的用户, I want 在 manifest 中声明要锁死的目录路径, so that 重装后一条命令重建防线。
 2. As a 用户, I want 锁定配方固定不可配置（清空 ACE + SYSTEM/Admins 只读 + owner SYSTEM）, so that 行为可预测、fixture 可验证。
 3. As a 用户, I want receiver 幂等（已锁定的目录重复运行静默跳过）, so that 我可以放心反复运行。
-4. As a 用户, I want 非管理员或路径缺失时响亮失败, so that 静默失效不被掩盖。
+4. As a 用户, I want 非管理员或路径缺失（不存在或非目录）时响亮失败, so that 静默失效不被掩盖。
 
 ## Implementation Decisions
 
@@ -26,7 +26,7 @@ Status: implemented
   - 移除全部现有 ACE；
   - 加 `S-1-5-18`（SYSTEM）与 `S-1-5-32-544`（Administrators）的 ReadAndExecute（ContainerInherit,ObjectInherit）；
   - owner 改 `S-1-5-18`。
-- 幂等方式：读-比-跳过——目录已收敛（protected + owner SYSTEM + 全部 ACE 均为 ReadAndExecute Allow）时静默跳过；否则应用配方。与 acl:apply 的无条件执行不同：锁定后无人有 WRITE_DAC，重复 Set-Acl 必失败，读-比-跳过是幂等的唯一可行路径。
+- 幂等方式：读-比-跳过——目录已收敛（protected + owner SYSTEM + ACE 恰为 SYSTEM/Admins 两条 ReadAndExecute Allow）时静默跳过；否则应用配方。与 acl:apply 的无条件执行不同：锁定后无人有 WRITE_DAC，重复 Set-Acl 必失败，读-比-跳过是幂等的唯一可行路径。
 - 仅顶层应用：子项靠 OI/CI 继承传播；已有 protected 的后代不受影响。
 - 清单文件 `manifests/lockdown.yaml`；顶层 wrapper 任务 `manifests:lockdown:apply`，platforms 限 windows，CALLS 路由 `acl-lock=acl:lock`。
 - receiver 完全对齐既有 receiver 模板：`ITEM_JSON` 单通道输入、kind 自验证、FAIL_LOG 与 continue_on_error 包装。

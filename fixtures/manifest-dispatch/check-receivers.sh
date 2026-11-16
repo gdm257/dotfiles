@@ -157,8 +157,10 @@ check test "${output#*ReadAndExecute}" != "$output"
 check test "${output#*ContainerInherit,ObjectInherit}" != "$output"
 check test "${output#*'$acl.SetOwner'}" != "$output"
 check test "${output#*'Set-Acl -LiteralPath $p -AclObject $acl'}" != "$output"
+check test "${output#*'[ -d "fixture dir" ]'}" != "$output"
 check test "${output#*'$converged=$false'}" != "$output"
 check test "${output#*'AreAccessRulesProtected'}" != "$output"
+check test "${output#*'$good.Count -eq 2'}" != "$output"
 printf 'PASS: acl:lock assembles fixed lockdown recipe with guards and converge skip\n'
 
 capture --dry manifest:acl:lock 'ITEM_JSON={"kind":"acl-path","path":"fixture dir"}'

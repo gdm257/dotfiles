@@ -13,3 +13,8 @@ Status: resolved
 ## Answer
 
 receiver/manifest/wrapper/fixture 全部落地；check-receivers.sh 34 项 PASS、check-dispatch.sh 30 场景 PASS。powershell 配方经 PSParser 语法校验零错误；真实 ACL 生效（管理员 + 真实目录锁定与重复运行跳过）留作一次性手工验收。
+
+## Comments
+
+- code-review 后收紧：converge 校验 ACE 主体与数量（恰为 SYSTEM/Admins 两条），路径守卫 `-e` 改 `-d`。
+
