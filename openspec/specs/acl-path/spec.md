@@ -59,7 +59,7 @@ item 声明 `recursive: true` 时操作 SHALL 覆盖整棵子树，且子树中 
 
 ### Requirement: 继承控制
 
-item 的 `inheritance` 字段 SHALL 支持 `reset`（顶层路径重置为从父目录继承）与缺省 no-op；其他值 MUST 响亮失败。顶层路径自身为 protected 且未声明 reset 时，SHALL 正常处理 owner/grants 但不动继承。
+item 的 `inheritance` 字段 SHALL 支持 `reset`（顶层路径重置为从父目录继承）与 `disable`（顶层路径显式禁用继承，保留已有显式 ACE）及缺省 no-op；其他值 MUST 响亮失败。顶层路径自身为 protected 且未声明 reset 时，SHALL 正常处理 owner/grants 但不动继承。
 
 #### Scenario: 声明 reset
 

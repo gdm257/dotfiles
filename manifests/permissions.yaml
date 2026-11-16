@@ -1,2 +1,2 @@
 items:
-  - { kind: acl-path, path: .scratch, grants: ["S-1-5-32-545:(OI)(CI)RX"] }
+  - { kind: acl-path, path: state/.ssh, inheritance: disable, continue_on_error: true, grants: ["demo:(OI)(CI)F", "SYSTEM:(OI)(CI)F", "S-1-5-32-544:(OI)(CI)F"] }

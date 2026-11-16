@@ -119,6 +119,12 @@ check test "${output#*takeown}" = "$output"
 check test "${output#*/grant}" = "$output"
 printf 'PASS: acl:apply reset only runs icacls reset and nothing else\n'
 
+capture --dry manifest:acl:apply 'ITEM_JSON={"kind":"acl-path","path":"fixture dir","inheritance":"disable","grants":["user1:F"]}'
+check test "$code" = 0
+check test "${output#*icacls \"fixture dir\" /inheritance:d && icacls \"fixture dir\" /grant:r \"user1:F\"}" != "$output"
+check test "${output#*/reset}" = "$output"
+printf 'PASS: acl:apply inheritance disable precedes grants convergence\n'
+
 capture --dry manifest:acl:apply 'ITEM_JSON={"kind":"acl-path","path":"fixture dir","inheritance":"enforce"}'
 check test "$code" != 0
 check test "${output#*"acl:apply: unknown inheritance enforce"}" != "$output"
