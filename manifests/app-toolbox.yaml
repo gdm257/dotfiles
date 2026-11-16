@@ -61,8 +61,8 @@ groups:
   # - { kind: scoop-app, name: officebox }
 
   utils:
-  # - { kind: scoop-app, name: uutils-coreutils}
-  # - { kind: scoop-app, name: busybox}
+  # - { kind: scoop-app, name: uutils-coreutils, alternatives: [git] }
+  # - { kind: scoop-app, name: busybox, alternatives: [uutils-coreutils] }
 
 
 items:
