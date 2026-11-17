@@ -1,6 +1,7 @@
 groups:
   desktop:
   - { kind: dsh-plugin, profile: desktop, name: dshmarket }
+  - { kind: dsh-plugin, profile: desktop, name: dsh-lantern }
   - { kind: dsh-plugin, profile: desktop, name: dsh-notify-me }
   - { kind: dsh-plugin, profile: desktop, name: @jiyr0119/dsh-workspace-explorer }
   - { kind: dsh-plugin, profile: desktop, name: dsh-better-sidebar }
