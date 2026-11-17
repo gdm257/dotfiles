@@ -16,6 +16,7 @@ groups:
   - { kind: scoop-app, name: i4 }
   # - { kind: scoop-app, name: i4tool}
   # - { kind: scoop-app, name: windows-application-driver}
+  - { kind: scoop-app, name: snappy-driver-installer-origin }
   - { kind: scoop-app, name: driverstoreexplorer }
   - { kind: scoop-app, name: ddu }
   # - { kind: scoop-app, name: nvidia-geforce-experience}

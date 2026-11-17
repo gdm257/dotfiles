@@ -31,7 +31,7 @@ groups:
   # - { kind: scoop-app, name: gdm257/lightcraft }
 
   image-hosting:
-  # - { kind: scoop-app, name: picgo}
+  # - { kind: scoop-app, name: picgo, alternatives: [piclist] }
   - { kind: scoop-app, name: piclist }
 
   image-viewer:
@@ -119,6 +119,7 @@ groups:
   # - { kind: scoop-app, name: keycastow}
   # - { kind: scoop-app, name: nohboard}
   # - { kind: scoop-app, name: gdm257/livedraw, alternatives: [snowshot] }
+  # - { kind: scoop-app, name: gdm257/inkeys, alternatives: [snowshot] }
   # - { kind: scoop-app, name: drawpen}
   # - { kind: scoop-app, name: greenshot}
   # - { kind: scoop-app, name: papertodo }

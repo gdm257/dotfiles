@@ -106,6 +106,7 @@ groups:
   - { kind: scoop-app, name: ffmpeg }
   # - { kind: scoop-app, name: shanaencoder}
   # - { kind: scoop-app, name: qwinff}
+  - { kind: scoop-app, name: videocaptioner }
   - { kind: scoop-app, name: shadered }
 
   video-recording:

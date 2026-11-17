@@ -10,6 +10,7 @@ groups:
   bt:
   - { kind: scoop-app, name: qbittorrent-enhanced }
   - { kind: scoop-app, name: gdm257/qbbanhelper }
+  - { kind: scoop-app, name: peerbanhelper }
   # - { kind: scoop-app, name: qbittorrent-portable}
 
   cloud-storage:
@@ -35,6 +36,7 @@ groups:
   # - { kind: scoop-app, name: BaiduPanFilesTransfers }
   # - { kind: scoop-app, name: baidupcs-go }
   # - { kind: scoop-app, name: termscp}
+  - { kind: scoop-app, name: ente-photos }
 
   downloader:
   # - { kind: scoop-app, name: FileCentipede}
@@ -80,6 +82,7 @@ groups:
   - { kind: scoop-app, name: croc }
   # - { kind: scoop-app, name: cwRsync}
   # - { kind: scoop-app, name: synctrayzor}
+  # - { kind: scoop-app, name: syncthing}
 
   windows:
   # - { kind: scoop-app, name: windows-iso-downloader}

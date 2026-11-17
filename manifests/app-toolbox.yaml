@@ -29,11 +29,14 @@ groups:
   # - { kind: scoop-app, name: collapse}
   - { kind: scoop-app, name: starward }
   - { kind: scoop-app, name: game-cheats-manager }
+  - { kind: scoop-app, name: gdm257/bethini-pie }
 
   games:
   - { kind: scoop-app, name: gdm257/GriefSyndrome }
+  - { kind: scoop-app, name: gdm257/project-86 }
   - { kind: scoop-app, name: taisei }
   - { kind: scoop-app, name: golly }
+  - { kind: scoop-app, name: lfs/galgame-ttloli-a001 }
 
   go:
   - { kind: scoop-app, name: lizzieyzy }

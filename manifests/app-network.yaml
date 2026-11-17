@@ -1,5 +1,8 @@
 groups:
   benchmark:
+  - { kind: scoop-app, name: goecs }
+
+  benchmark-api:
   - { kind: scoop-app, name: iperf3 }
   # - { kind: scoop-app, name: jmeter}
   # - { kind: scoop-app, name: ali}
@@ -42,7 +45,7 @@ groups:
   - { kind: scoop-app, name: xh}
   # - { kind: scoop-app, name: curlie }
   # - { kind: scoop-app, name: curl, alternatives: [windows-curl] }
-  - { kind: scoop-app, name: wget }
+  - { kind: scoop-app, name: wget, deps: [main/cacert] }
 
   dns:
   # - { kind: scoop-app, name: ddns-go}
@@ -66,6 +69,7 @@ groups:
   # - { kind: scoop-app, name: discord}
   - { kind: scoop-app, name: wechat }
   - { kind: scoop-app, name: wecom }
+  - { kind: scoop-app, name: qq-nt }
   # - { kind: scoop-app, name: cleanmywechat}
   # - { kind: scoop-app, name: wechat_ScoopInstaller}
   # - { kind: scoop-app, name: wechat_akirco}
@@ -255,6 +259,7 @@ items:
   - { group: irc, state: absent }
   - { group: mail, state: absent }
   - { group: benchmark, state: absent }
+  - { group: benchmark-api, state: absent }
   - { group: oauth, state: absent }
   - { group: packet }
   - { group: network }

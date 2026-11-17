@@ -197,6 +197,7 @@ groups:
   - { kind: scoop-app, name: go }
   - { kind: scoop-app, name: golangci-lint }
   - { kind: scoop-app, name: goreleaser }
+  # - { kind: scoop-app, name: gopls  }
   # - { kind: scoop-app, name: gf}
   # - { kind: scoop-app, name: gdm257/protoc-gen-go}
 
@@ -246,7 +247,7 @@ groups:
   lua:
   - { kind: scoop-app, name: luajit }
   - { kind: scoop-app, name: lua51 }
-  - { kind: scoop-app, name: luarocks }
+  - { kind: scoop-app, name: luarocks, deps: [main/lua] }
   # - { kind: scoop-app, name: main/lua-language-server }
 
   mirror:
@@ -265,6 +266,7 @@ groups:
 
   python:
   # - { kind: scoop-app, name: "python27 python37 python38 python39 python310 python311 micromamba_ShuguangSun micromamba"}
+  - { kind: scoop-app, name: gdm257/shim-python }
   - { kind: scoop-app, name: gdm257/shim-python3 }
   # - { kind: scoop-app, name: rye}
   # - { kind: scoop-app, name: uv}
@@ -341,6 +343,7 @@ groups:
 
   task-runner:
   - { kind: scoop-app, name: cmake }
+  - { kind: scoop-app, name: main/task }
 
   templating:
   - { kind: scoop-app, name: main/ytt }
