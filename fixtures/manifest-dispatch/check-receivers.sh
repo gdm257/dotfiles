@@ -161,7 +161,15 @@ check test "${output#*'[ -d "fixture dir" ]'}" != "$output"
 check test "${output#*'$converged=$false'}" != "$output"
 check test "${output#*'AreAccessRulesProtected'}" != "$output"
 check test "${output#*'$good.Count -eq 2'}" != "$output"
+check test "${output#*'CreateDirectory'}" = "$output"
 printf 'PASS: acl:lock assembles fixed lockdown recipe with guards and converge skip\n'
+
+capture --dry manifest:acl:lock 'ITEM_JSON={"kind":"acl-lock","path":"fixture dir","create":true}'
+check test "$code" = 0
+check test "${output#*'[System.IO.Directory]::CreateDirectory($p)'}" != "$output"
+check test "${output#*'acl:lock: path not found'}" = "$output"
+check test "${output#*'[ -d "fixture dir" ]'}" = "$output"
+printf 'PASS: acl:lock declared create skips not-found guard and pre-creates via powershell\n'
 
 capture --dry manifest:acl:lock 'ITEM_JSON={"kind":"acl-path","path":"fixture dir"}'
 check test "$code" != 0
@@ -174,6 +182,7 @@ capture manifest:acl:lock 'ITEM_JSON={"kind":"acl-lock","path":"fixture-dir-miss
 check test "$code" = 0
 check read -r logged < "$faillog"
 check test "${logged#failed: }" != "$logged"
+check test "${logged#*'failed: acl:lock '}" != "$logged"
 printf 'PASS: acl:lock missing path with continue_on_error logs FAIL_LOG and continues\n'
 
 capture --dry manifest:link:apply 'ITEM_JSON={"kind":"sym-link","src":"apps/*","dst":"~/AppData/Roaming/"}'

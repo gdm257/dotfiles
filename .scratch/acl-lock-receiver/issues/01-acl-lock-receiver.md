@@ -17,4 +17,6 @@ receiver/manifest/wrapper/fixture 全部落地；check-receivers.sh 34 项 PASS�
 ## Comments
 
 - code-review 后收紧：converge 校验 ACE 主体与数量（恰为 SYSTEM/Admins 两条），路径守卫 `-e` 改 `-d`。
+- 新增 `create` 字段（声明式逐层建目录，跳过路径守卫）；manifest 首条填充 AlibabaProtect（`create: true`，无 continue_on_error）。
+- 修复 continue_on_error 包装行解析崩溃：faillog 只记 `failed: acl:lock <path>`，不内嵌全量 cmd（嵌套引用错位致括号落入命令位）。该隐患在共享模板中仍影响其他 receiver，未在本次处理。
 
