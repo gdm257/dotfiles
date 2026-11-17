@@ -1,3 +1,4 @@
 # 流氓软件目录锁定清单，配方固定于 acl:lock receiver；解锁走管理员手工 takeown + icacls /reset
 items:
   - { kind: acl-lock, path: "C:/Program Files (x86)/AlibabaProtect", create: true }
+  - { kind: acl-lock, path: "C:/ProgramData/Alibaba/AlibabaProtectDT", create: true }
