@@ -5,7 +5,7 @@ rem Self-check for build-drivers.cmd and pe-deploy.cmd. Builds fixture
 rem payloads from fixtures/drvpath, runs the scripts, asserts behavior.
 
 set "ROOT=%~dp0"
-set "FIXTURES=%ROOT%..\fixtures\drvpath"
+set "FIXTURES=%ROOT%..\..\fixtures\drvpath"
 set "SZ=%ROOT%bin\7zr.exe"
 set "WORK=%TEMP%\pdi-selfcheck"
 set /a FAILED=0
@@ -39,6 +39,8 @@ call :check_deploy_no_unattend
 call :check_deploy_dism_missing
 call :check_deploy_unattend_fail
 call :check_deploy_unattend_fresh
+call :check_deploy_preflight_old
+call :check_deploy_preflight_ok
 call :deploy_teardown
 
 echo.
@@ -212,11 +214,12 @@ set /a FAILED+=1
 exit /b 0
 
 :check_deploy_unattend
-call :deploy_payload "%WORK%\payload-ua"
-copy /y "%ROOT%unattend.xml" "%WORK%\payload-ua\" >nul
+mkdir "%WORK%\sys-ua"
+call :deploy_payload "%WORK%\sys-ua\payload"
+copy /y "%ROOT%..\unattend.xml" "%WORK%\sys-ua\" >nul
 mkdir "%ROOTS%\UA\Windows\Panther"
 del "%STUBLOG%" 2>nul
-call "%WORK%\payload-ua\pe-deploy.cmd" "%ROOTS%\UA" >nul
+call "%WORK%\sys-ua\payload\pe-deploy.cmd" "%ROOTS%\UA" >nul
 if not "%errorlevel%"=="0" goto :fail_unattend
 if not exist "%ROOTS%\UA\Windows\Panther\unattend.xml" goto :fail_unattend
 echo PASS [10] unattend hook: copied into target Panther
@@ -261,15 +264,16 @@ set /a FAILED+=1
 exit /b 0
 
 :check_deploy_unattend_fail
-call :deploy_payload "%WORK%\payload-uf"
-copy /y "%ROOT%unattend.xml" "%WORK%\payload-uf\" >nul
+mkdir "%WORK%\sys-uf"
+call :deploy_payload "%WORK%\sys-uf\payload"
+copy /y "%ROOT%..\unattend.xml" "%WORK%\sys-uf\" >nul
 mkdir "%ROOTS%\UF\Windows"
 echo blocked > "%ROOTS%\UF\Windows\Panther"
 del "%STUBLOG%" 2>nul
-call "%WORK%\payload-uf\pe-deploy.cmd" "%ROOTS%\UF" >nul
+call "%WORK%\sys-uf\payload\pe-deploy.cmd" "%ROOTS%\UF" >nul
 if not "%errorlevel%"=="206" goto :fail_unattend_fail
-findstr /c:"ERROR: unattend copy failed" "%WORK%\payload-uf\deploy-*.log" >nul || goto :fail_unattend_fail
-findstr /c:"OK: foo.inf" "%WORK%\payload-uf\deploy-*.log" >nul || goto :fail_unattend_fail
+findstr /c:"ERROR: unattend copy failed" "%WORK%\sys-uf\payload\deploy-*.log" >nul || goto :fail_unattend_fail
+findstr /c:"OK: foo.inf" "%WORK%\sys-uf\payload\deploy-*.log" >nul || goto :fail_unattend_fail
 echo PASS [13] unattend copy fail: exit 206, error logged, injection results intact
 exit /b 0
 
@@ -279,11 +283,12 @@ set /a FAILED+=1
 exit /b 0
 
 :check_deploy_unattend_fresh
-call :deploy_payload "%WORK%\payload-un"
-copy /y "%ROOT%unattend.xml" "%WORK%\payload-un\" >nul
+mkdir "%WORK%\sys-un"
+call :deploy_payload "%WORK%\sys-un\payload"
+copy /y "%ROOT%..\unattend.xml" "%WORK%\sys-un\" >nul
 mkdir "%ROOTS%\UN\Windows"
 del "%STUBLOG%" 2>nul
-call "%WORK%\payload-un\pe-deploy.cmd" "%ROOTS%\UN" >nul
+call "%WORK%\sys-un\payload\pe-deploy.cmd" "%ROOTS%\UN" >nul
 if not "%errorlevel%"=="0" goto :fail_unattend_fresh
 if not exist "%ROOTS%\UN\Windows\Panther" goto :fail_unattend_fresh
 if not exist "%ROOTS%\UN\Windows\Panther\unattend.xml" goto :fail_unattend_fresh
@@ -292,5 +297,50 @@ exit /b 0
 
 :fail_unattend_fresh
 echo FAIL [14] unattend fresh image: expected Panther dir created with unattend.xml inside
+set /a FAILED+=1
+exit /b 0
+
+:check_deploy_preflight_old
+call :deploy_payload "%WORK%\payload-pfo"
+set "PIDRV_DISM_BUILD=19045"
+set "PIDRV_TARGET_BUILD=26100"
+mkdir "%ROOTS%\PF\Windows"
+del "%STUBLOG%" 2>nul
+call "%WORK%\payload-pfo\pe-deploy.cmd" "%ROOTS%\PF" >nul
+set "RC=%errorlevel%"
+set "PIDRV_DISM_BUILD="
+set "PIDRV_TARGET_BUILD="
+if not "%RC%"=="207" goto :fail_pf_old
+if exist "%STUBLOG%" goto :fail_pf_old
+if exist "%WORK%\payload-pfo\deploy-*.log" goto :fail_pf_old
+if exist "%ROOTS%\PF\Windows\Panther" goto :fail_pf_old
+echo PASS [15] preflight old PE: exit 207, stub not invoked, no writes
+exit /b 0
+
+:fail_pf_old
+set "PIDRV_DISM_BUILD="
+set "PIDRV_TARGET_BUILD="
+echo FAIL [15] preflight old PE: expected exit 207 without stub invocation or writes
+set /a FAILED+=1
+exit /b 0
+
+:check_deploy_preflight_ok
+call :deploy_payload "%WORK%\payload-pfo2"
+set "PIDRV_DISM_BUILD=26100"
+set "PIDRV_TARGET_BUILD=26100"
+del "%STUBLOG%" 2>nul
+call "%WORK%\payload-pfo2\pe-deploy.cmd" "%ROOTS%\PF" >nul
+set "RC=%errorlevel%"
+set "PIDRV_DISM_BUILD="
+set "PIDRV_TARGET_BUILD="
+if not "%RC%"=="0" goto :fail_pf_ok
+findstr /c:"foo.inf" "%STUBLOG%" >nul || goto :fail_pf_ok
+echo PASS [16] preflight PE current: exit 0, injection proceeds
+exit /b 0
+
+:fail_pf_ok
+set "PIDRV_DISM_BUILD="
+set "PIDRV_TARGET_BUILD="
+echo FAIL [16] preflight PE current: expected exit 0 with foo.inf handed to dism
 set /a FAILED+=1
 exit /b 0

@@ -1,0 +1,20 @@
+version: "3"
+
+# fixture alias: receivers live inside an internal include, unreachable from
+# the CLI; this thin taskfile exposes registry:set for the self-check
+includes:
+  receivers:
+    taskfile: "../../taskfile.d/receivers.yaml"
+    flatten: true
+    dir: "../.."
+
+tasks:
+  registry-set:
+    desc: "drive the registry:set receiver with one item"
+    requires:
+      vars: [ITEM_JSON]
+    cmds:
+      - task: registry:set
+        vars:
+          ITEM_JSON: "{{.ITEM_JSON}}"
+          FAIL_LOG: "{{.FAIL_LOG}}"

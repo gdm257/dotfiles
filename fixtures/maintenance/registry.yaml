@@ -1,0 +1,2 @@
+items:
+  - { kind: registry-value, path: HKLM\SOFTWARE\Fixtures\Maintenance, name: Drill, value: declared }

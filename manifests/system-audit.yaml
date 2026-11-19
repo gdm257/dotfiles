@@ -1,0 +1,4 @@
+# 镜像内稳定基础件（低频更新），audit 阶段装进镜像；`scope: machine` 约束避免产生 per-user MSIX 包（sysprep KB2769827）
+items:
+  - { kind: winget-app, id: abbodi1406.vcredist, scope: machine}
+  - { kind: winget-app, id: ViGEm.ViGEmBus, scope: machine}

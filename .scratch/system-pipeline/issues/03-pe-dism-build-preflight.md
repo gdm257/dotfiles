@@ -4,8 +4,8 @@
 
 **Blocked by:** 01
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] stub dism 版本低于目标 build 时退出 207 且不写任何盘
-- [ ] 版本满足时照常注入，现有断言不回归
-- [ ] README 退出码表补充 207
+- [x] stub dism 版本低于目标 build 时退出 207 且不写任何盘
+- [x] 版本满足时照常注入，现有断言不回归
+- [x] README 退出码表补充 207

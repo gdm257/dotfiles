@@ -228,14 +228,94 @@ check test "$code" != 0
 check test "${output#*Get-ChildItem}" != "$output"
 printf 'PASS: link:apply fails loudly on missing exact-path src\n'
 
-for receiver in windows-feature:set scoop:install winget:install apt:install yum:install choco:install acl:apply acl:lock link:apply; do
+capture --dry manifest:logon-task:register 'ITEM_JSON={"kind":"logon-task","name":"fixture task","cmd":"C:/home/system/oobe/per-user.cmd","args":"--quiet"}'
+check test "$code" = 0
+check test "${output#*powershell -NoProfile -Command}" != "$output"
+check test "${output#*'Get-CimClass -Namespace Root/Microsoft/Windows/TaskScheduler -ClassName MSFT_TaskLogonTrigger'}" != "$output"
+check test "${output#*'New-ScheduledTaskPrincipal -GroupId "S-1-5-32-545" -LogonType Interactive'}" != "$output"
+check test "${output#*'-Execute "C:/home/system/oobe/per-user.cmd" -Argument "--quiet"'}" != "$output"
+check test "${output#*'Register-ScheduledTask -TaskName "fixture task"'}" != "$output"
+printf 'PASS: logon-task:register assembles any-user logon task with interactive group principal\n'
+
+capture --dry manifest:logon-task:register 'ITEM_JSON={"kind":"logon-task","name":"fixture","cmd":"C:/per-user.cmd"}'
+check test "$code" = 0
+check test "${output#*-Argument}" = "$output"
+printf 'PASS: logon-task:register omits argument without declared args\n'
+
+capture --dry manifest:logon-task:register 'ITEM_JSON={"kind":"logon-task","name":"fixture"}'
+check test "$code" != 0
+check test "${output#*'logon-task: missing cmd'}" != "$output"
+printf 'PASS: logon-task:register rejects item without cmd\n'
+
+capture --dry manifest:logon-task:register 'ITEM_JSON={"kind":"scoop-app","name":"fixture"}'
+check test "$code" != 0
+check test "${output#*'logon-task: unknown kind scoop-app'}" != "$output"
+printf 'PASS: logon-task:register self-validates kind\n'
+
+capture --dry manifest:registry:set 'ITEM_JSON={"kind":"registry-value","path":"HKLM\\SOFTWARE\\fixture","name":"FixtureValue","type":"REG_DWORD","value":"1"}'
+check test "$code" = 0
+check test "${output#*'/t REG_DWORD /d "1" /f'}" != "$output"
+printf 'PASS: registry:set assembles reg add with declared type and value\n'
+
+capture --dry manifest:registry:set 'ITEM_JSON={"kind":"registry-value","path":"HKLM\\SOFTWARE\\fixture","name":"FixtureValue"}'
+check test "$code" = 0
+check test "${output#*'/t REG_SZ '}" != "$output"
+printf 'PASS: registry:set defaults type to REG_SZ\n'
+
+capture --dry manifest:registry:set 'ITEM_JSON={"kind":"registry-value","path":"HKCU\\Software\\fixture","name":"v","value":"1"}'
+check test "$code" != 0
+check test "${output#*'registry:set: non-HKLM path rejected: HKCU'}" != "$output"
+printf 'PASS: registry:set rejects non-HKLM path\n'
+
+capture --dry manifest:registry:set 'ITEM_JSON={"kind":"registry-value","path":"HKLM\\SOFTWARE\\fixture","name":"v","type":"REG_BOGUS","value":"1"}'
+check test "$code" != 0
+check test "${output#*'registry:set: unknown type REG_BOGUS'}" != "$output"
+printf 'PASS: registry:set rejects unknown type\n'
+
+capture --dry manifest:registry:set 'ITEM_JSON={"kind":"scoop-app","name":"fixture"}'
+check test "$code" != 0
+check test "${output#*'registry: unknown kind scoop-app'}" != "$output"
+printf 'PASS: registry:set self-validates kind\n'
+
+# registry:set 收敛语义经 PATH stub reg（fixtures/manifest-runtimes/stubs）实跑，REG_STUB_STATE 文件即注册表
+regstate="${TMPDIR:-${TEMP:-/tmp}}/registry-receiver-state"
+export REG_STUB_STATE="$regstate"
+regitem='ITEM_JSON={"kind":"registry-value","path":"HKLM\\SOFTWARE\\home-fixture","name":"FixtureValue","type":"REG_DWORD","value":"1"}'
+: > "$regstate"
+PATH="$(pwd)/fixtures/manifest-runtimes/stubs:$PATH" capture manifest:registry:set "$regitem"
+check test "$code" = 0
+check test "$(cat "$regstate")" = 'HKLM\SOFTWARE\home-fixture|FixtureValue=1'
+PATH="$(pwd)/fixtures/manifest-runtimes/stubs:$PATH" capture manifest:registry:set "$regitem"
+check test "$code" = 0
+check test "$(cat "$regstate")" = 'HKLM\SOFTWARE\home-fixture|FixtureValue=1'
+printf 'PASS: registry:set writes value and rerun converges unchanged\n'
+
+printf 'HKLM\\SOFTWARE\\home-fixture|FixtureValue=99\n' > "$regstate"
+PATH="$(pwd)/fixtures/manifest-runtimes/stubs:$PATH" capture manifest:registry:set "$regitem"
+check test "$code" = 0
+check test "$(cat "$regstate")" = 'HKLM\SOFTWARE\home-fixture|FixtureValue=1'
+printf 'PASS: registry:set pulls drifted value back to declared\n'
+
+capture --dry manifest:winget:install 'ITEM_JSON={"kind":"winget-app","id":"fixture","scope":"machine"}'
+check test "$code" = 0
+check test "${output#*'--id fixture --scope machine'}" != "$output"
+printf 'PASS: winget:install appends declared scope\n'
+
+capture --dry manifest:winget:install 'ITEM_JSON={"kind":"winget-app","id":"fixture"}'
+check test "$code" = 0
+check test "${output#*--scope}" = "$output"
+printf 'PASS: winget:install without scope adds no flag\n'
+
+for receiver in windows-feature:set scoop:install winget:install apt:install yum:install choco:install acl:apply acl:lock link:apply logon-task:register registry:set; do
   case "$receiver" in
     windows-feature:set) item='"kind":"windows-feature","feature":"fixture"' ;;
     acl:apply) item='"kind":"acl-path","path":"fixture-dir"' ;;
     acl:lock) item='"kind":"acl-lock","path":"fixture-dir"' ;;
     link:apply) item='"kind":"sym-link","src":"fixture/*"' ;;
+    logon-task:register) item='"kind":"logon-task","name":"fixture","cmd":"fixture-cmd"' ;;
     scoop:install) item='"kind":"scoop-app","name":"fixture"' ;;
     winget:install) item='"kind":"winget-app","id":"fixture"' ;;
+    registry:set) item='"kind":"registry-value","path":"HKLM\\SOFTWARE\\fixture","name":"v","value":"1"' ;;
     *) item="\"kind\":\"$receiver-package\",\"name\":\"fixture\"" ;;
   esac
   capture --dry "manifest:$receiver" "ITEM_JSON={$item,\"continue_on_error\":false}" CONTINUE_ON_ERROR=true

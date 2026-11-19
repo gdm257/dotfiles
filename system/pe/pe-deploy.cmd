@@ -4,6 +4,7 @@ setlocal EnableExtensions
 rem Inject every INF under drivers\ into the offline Windows target
 rem PIDRV_DISM overrides the dism command
 rem PIDRV_SCAN_ROOTS replaces the scanned drive roots
+rem PIDRV_DISM_BUILD / PIDRV_TARGET_BUILD override the build comparison
 
 set "PAYLOAD=%~dp0"
 
@@ -47,6 +48,18 @@ if not "%TARGET:~-1%"=="\" set "TARGET=%TARGET%\"
 :payload_check
 dir /s /b "%PAYLOAD%drivers\*.inf" 2>nul | findstr "^" >nul || goto :no_inf
 
+set "DBUILD="
+if defined PIDRV_DISM_BUILD set "DBUILD=%PIDRV_DISM_BUILD%"
+if not defined DBUILD call :dism_file_build
+set "TBUILD="
+if defined PIDRV_TARGET_BUILD set "TBUILD=%PIDRV_TARGET_BUILD%"
+if not defined TBUILD call :target_file_build
+if not defined DBUILD goto :build_ok
+if not defined TBUILD goto :build_ok
+if %DBUILD% LSS %TBUILD% goto :build_fail
+
+:build_ok
+
 set "TS=%DATE%-%TIME%"
 set "TS=%TS:/=-%"
 set "TS=%TS::=-%"
@@ -61,13 +74,13 @@ set /a TOTAL=0
 set /a FAILED=0
 for /r "%PAYLOAD%drivers" %%I in (*.inf) do call :inject "%%~fI"
 
-if exist "%PAYLOAD%unattend.xml" goto :unattend
+if exist "%PAYLOAD%..\unattend.xml" goto :unattend
 call :log "unattend: absent in payload, skipped"
 goto :inventory
 
 :unattend
 if not exist "%TARGET%Windows\Panther" mkdir "%TARGET%Windows\Panther"
-copy /y "%PAYLOAD%unattend.xml" "%TARGET%Windows\Panther\unattend.xml" >nul
+copy /y "%PAYLOAD%..\unattend.xml" "%TARGET%Windows\Panther\unattend.xml" >nul
 if errorlevel 1 goto :unattend_fail
 call :log "unattend: hooked to %TARGET%Windows\Panther\unattend.xml"
 goto :inventory
@@ -132,6 +145,28 @@ echo ERROR: dism not resolvable, offline injection impossible
 echo ERROR: the PE dism version MUST be greater than or equal to the target Windows build
 echo ERROR: use a PE matching or exceeding the target OS build, newer PE for Win11 24H2+
 exit /b 201
+
+:build_fail
+echo ERROR: PE dism build %DBUILD% older than target build %TBUILD%, refusing injection
+echo ERROR: PE 过旧，请升级 PE
+exit /b 207
+
+:dism_file_build
+set "DISMPATH=%DISM%"
+if not exist "%DISMPATH%" for /f "delims=" %%I in ('where "%DISM%" 2^>nul') do set "DISMPATH=%%I"
+if not exist "%DISMPATH%" exit /b 0
+set "DFV="
+for /f "delims=" %%V in ('powershell -NoProfile -Command "(Get-Item -LiteralPath '%DISMPATH%').VersionInfo.FileVersion" 2^>nul') do set "DFV=%%V"
+if not defined DFV exit /b 0
+for /f "tokens=3 delims=." %%B in ("%DFV%") do set "DBUILD=%%B"
+exit /b 0
+
+:target_file_build
+reg load HKLM\PDI_TSYS "%TARGET%Windows\System32\config\SOFTWARE" >nul 2>nul
+if errorlevel 1 exit /b 0
+for /f "tokens=3" %%B in ('reg query "HKLM\PDI_TSYS\Microsoft\Windows NT\CurrentVersion" /v CurrentBuild 2^>nul ^| find "CurrentBuild"') do set "TBUILD=%%B"
+reg unload HKLM\PDI_TSYS >nul 2>nul
+exit /b 0
 
 :log
 echo(%~1

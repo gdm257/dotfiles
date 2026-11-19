@@ -4,9 +4,9 @@
 
 **Blocked by:** 04
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] 封装命令先断网再 generalize，参数与 unattend 挂钩正确
-- [ ] capture 产物命名带日期与 build 号，分区选择排除规则正确（stub 盘集合验证）
-- [ ] 拒绝级：已 generalize / 目标 wim 已存在时非零拒绝且无副作用
-- [ ] check 即拒绝级检测；self-check 断言全 PASS
+- [x] 封装命令先断网再 generalize，参数与 unattend 挂钩正确
+- [x] capture 产物命名带日期与 build 号，分区选择排除规则正确（stub 盘集合验证）
+- [x] 拒绝级：已 generalize / 目标 wim 已存在时非零拒绝且无副作用
+- [x] check 即拒绝级检测；self-check 断言全 PASS

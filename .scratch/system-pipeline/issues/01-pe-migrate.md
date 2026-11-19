@@ -4,9 +4,9 @@
 
 **Blocked by:** None (can start immediately).
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] `system/pe/` 下 build-drivers / pe-deploy / bin / self-check 就位，旧 `reinstall/` 路径清空
-- [ ] `system/unattend.xml` 为跨阶段唯一 unattend 载体，pe-deploy 挂钩路径正确
-- [ ] pe self-check 全部断言 PASS，退出码 0
-- [ ] README 与仓库内引用（含 fixtures 说明）不再出现 `reinstall/`
+- [x] `system/pe/` 下 build-drivers / pe-deploy / bin / self-check 就位，旧 `reinstall/` 路径清空
+- [x] `system/unattend.xml` 为跨阶段唯一 unattend 载体，pe-deploy 挂钩路径正确
+- [x] pe self-check 全部断言 PASS，退出码 0
+- [x] README 与仓库内引用（含 fixtures 说明）不再出现 `reinstall/`

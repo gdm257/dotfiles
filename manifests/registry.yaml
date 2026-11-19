@@ -1,0 +1,2 @@
+# 机器级 HKLM 系统设置清单，audit 阶段与日常维护共用；配方固定于 registry:set receiver（reg add 收敛，重跑拉回声明值）
+items: []

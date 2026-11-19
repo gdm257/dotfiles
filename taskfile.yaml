@@ -29,6 +29,12 @@ tasks:
     cmds:
       - cmd: task --list
 
+  system:oobe:check:
+    desc: "report OOBE stage drift (unattend sections, logon task item, per-user entry); 0 clean, 10 drift, 221 refusal"
+    platforms: [windows]
+    cmds:
+      - cmd: cmd /c 'system\oobe\check.cmd'
+
   dotbot:age:
     desc: "run dotbot with age config"
     cmds:
@@ -676,6 +682,15 @@ tasks:
           CALLS: "rclone-copy=rclone:copy"
           MANIFEST: "./manifests/rclone.yaml"
 
+  manifests:registry:set:
+    desc: "set HKLM registry values"
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "registry-value=registry:set"
+          MANIFEST: "./manifests/registry.yaml"
+
   manifests:rye:fetch:
     desc: "fetch rye toolchains"
     cmds:
@@ -701,6 +716,15 @@ tasks:
         vars:
           CALLS: "scoop-config=scoop:install"
           MANIFEST: "./manifests/scoop-config.yaml"
+
+  manifests:system-peruser:install:
+    desc: "install per-user apps and user-context links (OOBE logon task replay)"
+    platforms: [windows]
+    cmds:
+      - task: manifest:dispatch
+        vars:
+          CALLS: "winget-app=winget:install, sym-link=link:apply"
+          MANIFEST: "./manifests/system-peruser.yaml"
 
   manifests:skills:install:
     desc: "install skills from openskills repos"
@@ -811,6 +835,30 @@ tasks:
           CALLS: "x-cmd-package=x-cmd:install"
           MANIFEST: "./manifests/x-cmd.yaml"
 
+  system:maintenance:run:
+    desc: "replay all windows manifests install/apply/set tasks, converge machine-level drift"
+    platforms: [windows]
+    cmds:
+      - cmd: cmd /c 'system\maintenance\run.cmd'
+
+  system:maintenance:check:
+    desc: "report machine-level config drift (registry values, windows features), applies nothing (0 clean / 10 drift)"
+    platforms: [windows]
+    cmds:
+      - cmd: cmd /c 'system\maintenance\check.cmd'
+
+  system:sysprep:seal:
+    desc: "sysprep seal: disconnect network, sysprep /generalize /oobe with system/unattend.xml, shutdown (refuse-level: 241 already sealed, 247 unattend missing)"
+    platforms: [windows]
+    cmds:
+      - cmd: cmd /c 'system\sysprep\seal.cmd'
+
+  system:sysprep:check:
+    desc: "report seal state only (0 not sealed / 10 sealed capture pending / 247 unattend problem)"
+    platforms: [windows]
+    cmds:
+      - cmd: cmd /c 'system\sysprep\check.cmd'
+
   manifests:yum:install:
     desc: "install yum package groups"
     platforms: [linux]
@@ -819,3 +867,15 @@ tasks:
         vars:
           CALLS: "yum-package=yum:install"
           MANIFEST: "./manifests/yum.yaml"
+
+  system:audit:apply:
+    desc: "audit stage apply: winget bootstrap, machine-scope baseline, HKLM settings, default profile, MSIX self-check"
+    platforms: [windows]
+    cmds:
+      - cmd: cmd /c 'system\audit\apply.cmd'
+
+  system:audit:check:
+    desc: "audit stage check: report only (0 clean / 10 drift / 2xx refusal)"
+    platforms: [windows]
+    cmds:
+      - cmd: cmd /c 'system\audit\apply.cmd' check

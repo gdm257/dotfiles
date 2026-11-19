@@ -1,0 +1,3 @@
+# Default profile HKCU 预置：audit 阶段 reg load C:\Users\Default\NTUSER.DAT 到 HKLM\TMP_SYSAD_DP 后经 registry:set 收敛
+# 路径前缀固定为挂载键 HKLM\TMP_SYSAD_DP（即 Default 用户的 HKCU），文件布局种子见 system/audit/default-profile/
+items: []

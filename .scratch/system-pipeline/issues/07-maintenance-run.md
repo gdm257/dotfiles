@@ -4,9 +4,9 @@
 
 **Blocked by:** 02
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] run 重放全部 Windows manifests:*:install 任务，被改掉的 item 恢复声明值
-- [ ] check 不施加变更，退出码语义正确
-- [ ] 不含 update 语义、不含 per-user、不含 Windows Update/清理
-- [ ] self-check 断言全 PASS
+- [x] run 重放全部 Windows manifests:*:install 任务，被改掉的 item 恢复声明值
+- [x] check 不施加变更，退出码语义正确
+- [x] 不含 update 语义、不含 per-user、不含 Windows Update/清理
+- [x] self-check 断言全 PASS

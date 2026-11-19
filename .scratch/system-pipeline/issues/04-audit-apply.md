@@ -4,10 +4,10 @@
 
 **Blocked by:** 02
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] winget 未注册时被引导注册后安装继续；App Installer 缺失时 msixbundle 兜底路径可触发（stub 验证）
-- [ ] 全局应用 manifest item 带 `--scope machine` 约束落地
-- [ ] 末尾 MSIX 自检发现未预配 per-user 包时报错退出（audit 区间 211–219 内取码）
-- [ ] 重跑收敛，无重复安装副作用
-- [ ] check 命令只报告不施加变更（0=干净 / 10=漂移 / 2xx=拒绝）
+- [x] winget 未注册时被引导注册后安装继续；App Installer 缺失时 msixbundle 兜底路径可触发（stub 验证）
+- [x] 全局应用 manifest item 带 `--scope machine` 约束落地
+- [x] 末尾 MSIX 自检发现未预配 per-user 包时报错退出（audit 区间 211–219 内取码）
+- [x] 重跑收敛，无重复安装副作用
+- [x] check 命令只报告不施加变更（0=干净 / 10=漂移 / 2xx=拒绝）

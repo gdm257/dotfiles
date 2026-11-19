@@ -1,0 +1,5 @@
+# OOBE 阶段清单，audit 阶段经 manifest 装入（接线属 ticket 04）；cmd 为重装机上的 repo 路径占位（unattend.xml 同源）
+items:
+  - kind: logon-task
+    name: home-oobe-per-user
+    cmd: "%SystemDrive%\\home\\system\\oobe\\per-user.cmd"

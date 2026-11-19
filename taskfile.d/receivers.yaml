@@ -280,6 +280,19 @@ tasks:
     cmds:
       - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
 
+  logon-task:register:
+    desc: "receive logon-task items (machine-level any-user logon scheduled task via powershell: NULL UserId LogonTrigger, group principal S-1-5-32-545 Interactive, runs as logging-on user)"
+    requires:
+      vars: [ITEM_JSON]
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "logon-task" }}{{ fail (printf "logon-task: unknown kind %s" .ITEM.kind) }}{{ end }}{{ if not .ITEM.cmd }}{{ fail "logon-task: missing cmd" }}{{ end }}powershell -NoProfile -Command ''$ErrorActionPreference="Stop"; $c=Get-CimClass -Namespace Root/Microsoft/Windows/TaskScheduler -ClassName MSFT_TaskLogonTrigger; $t=New-CimInstance -CimClass $c -Property @{Enabled=$true} -ClientOnly; $p=New-ScheduledTaskPrincipal -GroupId "S-1-5-32-545" -LogonType Interactive; $a=New-ScheduledTaskAction -Execute "{{ .ITEM.cmd }}"{{ if .ITEM.args }} -Argument "{{ .ITEM.args }}"{{ end }}; Register-ScheduledTask -TaskName "{{ .ITEM.name }}" -Action $a -Trigger $t -Principal $p -Force | Out-Null'''
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
   npm:install:
     requires:
       vars: [ITEM_JSON]
@@ -347,6 +360,20 @@ tasks:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
       _CMD: '{{ if ne .ITEM.kind "rclone-copy" }}{{ fail (printf "rclone: unknown kind %s" .ITEM.kind) }}{{ end }}rclone copy --progress -v --immutable --ignore-existing --size-only --ignore-checksum --ignore-times --filter "- desktop.ini" --fast-list ''{{ .ITEM.src }}'' ''{{ .ITEM.dst }}'''
+      _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
+      _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
+    cmds:
+      - cmd: '{{ if eq ._CONTINUE "true" }}{{ ._CMD }} || { echo "failed: {{ ._CMD }}" >> "{{ ._FAIL_LOG }}"; }{{ else }}{{ ._CMD }}{{ end }}'
+
+  registry:set:
+    desc: "receive registry-value items (HKLM only, reg add converge to declared value)"
+    requires:
+      vars:
+        - ITEM_JSON
+    vars:
+      ITEM:
+        ref: 'fromJson .ITEM_JSON'
+      _CMD: '{{ if ne .ITEM.kind "registry-value" }}{{ fail (printf "registry: unknown kind %s" .ITEM.kind) }}{{ end }}{{ if not (hasPrefix (printf "HKLM%c" 92) (upper .ITEM.path)) }}{{ fail (printf "registry:set: non-HKLM path rejected: %s" .ITEM.path) }}{{ end }}{{ $t := .ITEM.type | default "REG_SZ" }}{{ if not (regexMatch "^(REG_SZ|REG_DWORD|REG_QWORD|REG_BINARY|REG_EXPAND_SZ|REG_MULTI_SZ)$" $t) }}{{ fail (printf "registry:set: unknown type %s" $t) }}{{ end }}reg add "{{ .ITEM.path }}" /v "{{ .ITEM.name }}" /t {{ $t }} /d "{{ .ITEM.value }}" /f'
       _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
       _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:
@@ -524,7 +551,7 @@ tasks:
     vars:
       ITEM:
         ref: 'fromJson .ITEM_JSON'
-      _CMD: '{{ if eq .ITEM.kind "winget-app" }}{{ if eq (.ITEM.state | default "present") "present" }}winget install --source {{ .ITEM.source | default "winget" }} --id {{ .ITEM.id }}{{ if .ITEM.version }} --version {{ .ITEM.version }}{{ end }}{{ else }}echo "winget:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else }}echo "winget:install: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
+      _CMD: '{{ if eq .ITEM.kind "winget-app" }}{{ if eq (.ITEM.state | default "present") "present" }}winget install --source {{ .ITEM.source | default "winget" }} --id {{ .ITEM.id }}{{ if .ITEM.version }} --version {{ .ITEM.version }}{{ end }}{{ if .ITEM.scope }} --scope {{ .ITEM.scope }}{{ end }}{{ else }}echo "winget:install: unexpected state {{ .ITEM.state }} for {{ .ITEM.kind }}" >&2 && exit 1{{ end }}{{ else }}echo "winget:install: unknown kind {{ .ITEM.kind }}" >&2 && exit 1{{ end }}'
       _CONTINUE: '{{ if hasKey .ITEM "continue_on_error" }}{{ if eq .ITEM.continue_on_error true }}true{{ end }}{{ else if eq (.CONTINUE_ON_ERROR | default "") "true" }}true{{ end }}'
       _FAIL_LOG: '{{ .FAIL_LOG | default "${TMPDIR:-${TEMP:-/tmp}}/manifest-dispatch-faillog" }}'
     cmds:

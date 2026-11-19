@@ -4,9 +4,9 @@
 
 **Blocked by:** None (can start immediately).
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] item 经 dispatch 路由到新 receiver，值写入生效
-- [ ] 重跑结果一致；手动改掉注册表值后重跑拉回声明值
-- [ ] 未知 kind 照旧被 dispatch 报 unclaimed
-- [ ] receiver self-check 断言全 PASS
+- [x] item 经 dispatch 路由到新 receiver，值写入生效
+- [x] 重跑结果一致；手动改掉注册表值后重跑拉回声明值
+- [x] 未知 kind 照旧被 dispatch 报 unclaimed
+- [x] receiver self-check 断言全 PASS

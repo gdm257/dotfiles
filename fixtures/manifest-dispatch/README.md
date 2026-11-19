@@ -49,7 +49,7 @@
 
 在仓库根运行 `bash fixtures/manifest-dispatch/check-receivers.sh`，Windows 使用 Git Bash，不使用 WSL 的 bash。检查只依赖 task CLI 与 bash builtins，不新增测试框架。
 
-`receivers.taskfile.yaml` 仅提供非 dispatch 调用 seam；检查断言实际输出与退出码，覆盖全局 true 的显式 false 反向覆盖、未声明字段继承全局、独立 shell 的成功与容错，以及带空格的传入 FAIL_LOG。只实跑 shell / echo；安装接收方仅用 `task --dry` 渲染，禁止执行安装。
+`receivers.taskfile.yaml` 仅提供非 dispatch 调用 seam；检查断言实际输出与退出码，覆盖全局 true 的显式 false 反向覆盖、未声明字段继承全局、独立 shell 的成功与容错，以及带空格的传入 FAIL_LOG。只实跑 shell / echo 与 registry:set（经 `fixtures/manifest-runtimes/stubs/reg.bat` PATH stub，`REG_STUB_STATE` 文件即注册表）；其余安装接收方仅用 `task --dry` 渲染，禁止执行安装。
 
 ## 书写规范
 
