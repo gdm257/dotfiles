@@ -13,6 +13,7 @@ outputs:
 - `GLOSSARY.md`、`docs/adr/`、`openspec/specs/` 等是固化决策的文档（如存在）：GLOSSARY 定语言，ADR 记录难逆的架构权衡，specs 像回归测试一样锁定行为契约、防止改坏 codebase。
 - 决策真身在 codebase；codebase 与固化文档不一致时，优先怀疑 codebase 被改坏（小概率是文档 drift），并报告这个分歧。
 - 固化文档只经各自工作流修改（specs 走 openspec，GLOSSARY / ADR 走 domain-modeling），实现改动里不顺手改；确认是 drift 时，单独走对应工作流更新。
+- Review 按 spec 的来源分轴（如 `/code-review`）：本次变更自己的 openspec change / issue 等是 spec source；已有的 `docs/adr/`、`openspec/specs/` 等固化文档是可能的 standards sources——两类都只是已知例子，仍按各 skill 的步骤找全，不以此穷举。
 
 **Skills**
 
