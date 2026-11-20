@@ -1,6 +1,19 @@
 {
   "version": 1,
   "entries": {
+    "arena": {
+      "source": "https://github.com/backnotprop/pstack.git/skills/arena",
+      "type": "github-subdir",
+      "installed_at": "2026-11-21T06:24:15.7956303+08:00",
+      "repo_url": "https://github.com/backnotprop/pstack.git",
+      "subdir": "skills/arena",
+      "version": "c3464c1",
+      "tree_hash": "95b350288808b6eb5576a9326dda0abd924afb4c",
+      "commit": "c3464c11c60b1352d5e8f5f0428a3a6943837568",
+      "file_hashes": {
+        "SKILL.md": "sha256:378f97354f4b8151f3e70c29e8828d0ca04275de1b3cfbba947e30aaa35a175d"
+      }
+    },
     "beads-plan": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/beads-plan-skills/skills/beads-plan",
       "type": "github-subdir",
@@ -863,6 +876,19 @@
         "HTML-REPORT.md": "sha256:581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528",
         "SKILL.md": "sha256:35b03a3db61e0f5aa333ea59b54963e45a3d2ace6649b2ef4f9576603e2582a6",
         "agents/openai.yaml": "sha256:c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1"
+      }
+    },
+    "interrogate": {
+      "source": "https://github.com/backnotprop/pstack.git/skills/interrogate",
+      "type": "github-subdir",
+      "installed_at": "2026-11-21T06:21:27.8066436+08:00",
+      "repo_url": "https://github.com/backnotprop/pstack.git",
+      "subdir": "skills/interrogate",
+      "version": "c3464c1",
+      "tree_hash": "10107039bb8ef3ac7e742d4f73fa8a58b1b0f153",
+      "commit": "c3464c11c60b1352d5e8f5f0428a3a6943837568",
+      "file_hashes": {
+        "SKILL.md": "sha256:ce9d4c1390657924f58daa8174abdc605d07cd134a736cd86e392a0309a405fb"
       }
     },
     "interview-me": {
