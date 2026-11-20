@@ -16,6 +16,6 @@ outputs:
 
 **Skills**
 
-- `skillshare` is a tool that manages agents skills by providing a single source of truth for all your AI agents.
-- Skillshare sets `.skillshare/skills/**` as single source of truth for project skills by default.
-- Do NOT edit target agents' skill files (`SKILL.md` and bundles) directly if `.skillshare/` exists. You should change skillshare files and run `skillshare sync` to deploy to target agents.
+- `skillshare` is the single source of truth (SSOT) for **remote** skills only.
+- Project-scoped skills use `.agents/skills/` as their SSOT: edit the skill files there directly.
+- For remote skills, do NOT edit target agents' skill files (`SKILL.md` and bundles) directly. Change skillshare files and run `skillshare sync` to deploy to target agents.
