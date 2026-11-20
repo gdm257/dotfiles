@@ -1737,6 +1737,19 @@
         "SKILL.md": "sha256:6aec3cfd96a3630fa9c7985f1db5b0049cafdb1d4b0726c5160928dcada41a0b"
       }
     },
+    "sharpen": {
+      "source": "https://github.com/backnotprop/pstack.git/skills/sharpen",
+      "type": "github-subdir",
+      "installed_at": "2026-11-21T06:24:45.7838633+08:00",
+      "repo_url": "https://github.com/backnotprop/pstack.git",
+      "subdir": "skills/sharpen",
+      "version": "c3464c1",
+      "tree_hash": "672ef555c7b4c24b4a5bd016647c5d836a1d6aa6",
+      "commit": "c3464c11c60b1352d5e8f5f0428a3a6943837568",
+      "file_hashes": {
+        "SKILL.md": "sha256:aac4f8e6a1ffd70e3763314db37d3c2eb0cfea08bc63e98907aca6dae0343031"
+      }
+    },
     "soft-skill": {
       "source": "https://github.com/Leonxlnx/taste-skill.git/skills/soft-skill",
       "type": "github-subdir",
