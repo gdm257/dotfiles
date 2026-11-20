@@ -150,6 +150,22 @@
         "SKILL.md": "sha256:69f1379cfbc86b66d6741c0bad297fb9a7cd02540d9a7656d0458e6af48dc804"
       }
     },
+    "create-verification-skill": {
+      "source": "https://github.com/backnotprop/pstack.git/skills/create-verification-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-11-21T05:01:12.8065551+08:00",
+      "repo_url": "https://github.com/backnotprop/pstack.git",
+      "subdir": "skills/create-verification-skill",
+      "version": "f9eb2cd",
+      "tree_hash": "97a20d3674c1befc5d51e4b8f60590903e23a134",
+      "commit": "f9eb2cd7a7786a2a898cd577ca471f9b8dbcfedf",
+      "file_hashes": {
+        "SKILL.md": "sha256:bba612e8b81a02df0f49e6f6911f3b543c8c7d9f1f3c13ae6c0e2d58cc8c3ad3",
+        "references/feature-map-example/README.md": "sha256:cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+        "references/feature-map-example/create-note.md": "sha256:644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+        "references/feature-map-example/search.md": "sha256:6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823"
+      }
+    },
     "debug-issue": {
       "source": "https://github.com/gdm257/cc-plugins.git/plugins/code-review-graph/skills/debug-issue",
       "type": "github-subdir",
@@ -1130,6 +1146,19 @@
       "file_hashes": {
         "SKILL.md": "sha256:389b056b47c9295df32787fec284a97f53b02555443bdd4343d3e61ac499efbb",
         "agents/openai.yaml": "sha256:05758a85e372d079199baadc94c392cddf24d1b85b4b7ee932bc40bbcf58ef9b"
+      }
+    },
+    "maintain-verification-skill": {
+      "source": "https://github.com/backnotprop/pstack.git/skills/maintain-verification-skill",
+      "type": "github-subdir",
+      "installed_at": "2026-11-21T05:01:23.5688662+08:00",
+      "repo_url": "https://github.com/backnotprop/pstack.git",
+      "subdir": "skills/maintain-verification-skill",
+      "version": "f9eb2cd",
+      "tree_hash": "35325a9f380b1dc6d79d7502b5667feba00b752b",
+      "commit": "f9eb2cd7a7786a2a898cd577ca471f9b8dbcfedf",
+      "file_hashes": {
+        "SKILL.md": "sha256:5943f7747da6aafcf5c1063c988e725c97e415866f5c7746279012f35cb49815"
       }
     },
     "mem-recall": {
