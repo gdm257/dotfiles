@@ -20,6 +20,8 @@ groups:
   - { kind: scoop-app, name: driverstoreexplorer }
   - { kind: scoop-app, name: ddu }
   # - { kind: scoop-app, name: nvidia-geforce-experience}
+  - { kind: scoop-app, name: gdm257/shortcut-aliworkbench }
+  - { kind: scoop-app, name: gdm257/shortcut-cnprintclient }
 
   envvars:
   - { kind: scoop-app, name: rapidee }

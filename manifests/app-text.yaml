@@ -39,6 +39,7 @@ groups:
   # - { kind: scoop-app, name: fx}
   # - { kind: scoop-app, name: jid}
   # - { kind: scoop-app, name: csview}
+  - { kind: scoop-app, name: main/gron, state: absent }
   - { kind: scoop-app, name: jq }
   # - { kind: scoop-app, name: xq}
   - { kind: scoop-app, name: yq }

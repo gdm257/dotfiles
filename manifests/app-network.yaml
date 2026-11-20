@@ -181,6 +181,7 @@ groups:
   remote:
   - { kind: scoop-app, name: gdm257/moonlight }
   - { kind: scoop-app, name: sunshine }
+  - { kind: scoop-app, name: gdm257/shortcut-uuremote }
   # - { kind: scoop-app, name: tencent-meeting}
   # - { kind: scoop-app, name: remoteapptool}
   # - { kind: scoop-app, name: rustdesk}
